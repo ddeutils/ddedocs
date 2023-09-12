@@ -3,7 +3,8 @@ default_language_version:
     python: python3.8
 
 ci:
-    skip: [pytest-check, commit-msg-hook]
+#    skip: [pytest-check, commit-msg-hook]
+    skip: [commit-msg-hook]
     autofix_commit_msg: |
         🚧 [pre-commit.ci] auto fixes from pre-commit.com hooks
     autofix_prs: true
