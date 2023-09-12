@@ -1,0 +1,73 @@
+default_install_hook_types: [pre-commit, commit-msg]
+default_language_version:
+    python: python3.8
+
+ci:
+    skip: [pytest-check, commit-msg-hook]
+    autofix_commit_msg: |
+        🚧 [pre-commit.ci] auto fixes from pre-commit.com hooks
+    autofix_prs: true
+    autoupdate_schedule: weekly
+    autoupdate_commit_msg: |
+        🚧 [pre-commit.ci] pre-commit autoupdate
+    submodules: false
+
+repos:
+-   repo: https://github.com/asottile/pyupgrade
+    rev:  v3.10.1
+    hooks:
+    -   id: pyupgrade
+        args: ["--py38-plus", "--keep-runtime-typing"]
+        stages: [commit]
+
+-   repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+    -   id: black
+        stages: [commit]
+
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev:  v0.0.288
+    hooks:
+    -   id: ruff
+        args:
+        - --fix
+        stages: [commit]
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev:  v4.4.0
+    hooks:
+    -   id: fix-byte-order-marker
+        stages: [commit]
+    -   id: trailing-whitespace
+        stages: [commit]
+        exclude: ".bumpversion.cfg"
+    -   id: end-of-file-fixer
+        stages: [commit]
+    -   id: check-yaml
+        stages: [commit]
+        args: ["--unsafe"]
+    -   id: check-toml
+        stages: [commit]
+
+-   repo: local
+    hooks:
+    -   id: commit-msg-hook
+        name: Prepare Commit Message
+        stages:
+            - commit-msg
+        types: [python]
+        entry: venv/Scripts/shelf.exe git cm -e -l -o
+        language: system
+        always_run: true
+
+#    -   id: pytest-check
+#        name: PyTest Runner
+#        stages:
+#            - commit
+#            - push
+#        types: [python]
+#        entry: venv/Scripts/pytest.exe -v
+#        language: system
+#        pass_filenames: false
+#        always_run: true
