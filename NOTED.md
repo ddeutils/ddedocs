@@ -7,7 +7,7 @@ mkdocs new .
 mkdocs serve
 ```
 
-> Note: \
+> **Note**: \
 > It will generate document to http://127.0.0.1:8000/
 
 ## Reference

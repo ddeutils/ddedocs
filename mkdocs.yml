@@ -2,12 +2,16 @@ site_name: Data Developer & Engineer
 theme:
   name: material
   features:
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
-    - navigation.top
+
     - search.suggest
     - search.highlight
+    - search.share
+
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
@@ -26,30 +30,91 @@ theme:
         name: Switch to light mode
       primary: teal
       accent: lime
+  font:
+    text: Roboto
+    code: Roboto Mono
   icon:
+    logo: material/library-shelves
     repo: fontawesome/brands/github-alt
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css: fontawesome/brands/css3
 
-repo_name: korwaica/ddedocs
+repo_name: korawica/ddedocs
 repo_url: https://github.com/korawica/ddedocs
 
 extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/korawica/ddedocs
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
+
+nav:
+  - Home:
+      - index.md
+  - Basics:
+      - basics/index.md
+      - Tools:
+          - Git:
+              - basics/git/index.md
+              - Commands: basics/git/git-cmd-common.md
+              - Scenarios: basics/git/git-common-scenarios.md
+              - Strategies:
+                  - basics/git/git-branching-strategies.md
+                  - basics/git/git-commit-release.md
+              - GitHub:
+                  - basics/git/github-actions.md
+      - Knowledge:
+          - Data:
+              - basics/data/index.md
+              - Data Warehouse:
+                  - basics/data/data_warehouse/index.md
+                  - Data Vault:
+                      - Model: basics/data/data_warehouse/dwh-data-vault-model.md
+                      - Implement: basics/data/data_warehouse/dwh-data-vault-model-implement.md
+#  - Advances:
+#      - advances/index.md
+#      - Tools:
+#          - Spark:
+#              - advances/spark/index.md
+#              - advances/spark/spark-bucketing.md
+#              - Pyspark:
+#                  - advances/spark/pyspark/pyspark-scd2.md
+#  - Services:
+#      - services/azure/index.md
+
+plugins:
+  - tags
+  - search
 
 markdown_extensions:
+  - attr_list
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.arithmatex:
       generic: true
-  - footnotes
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.mark
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

@@ -1,2 +1,2 @@
 clishelf
-mkdocs-material
+mkdocs-material==9.4.1
