@@ -1,0 +1,1 @@
+- https://stackoverflow.com/questions/3534280/how-can-i-pass-a-file-argument-to-my-bash-script-using-a-terminal-command-in-lin

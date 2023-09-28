@@ -1,31 +1,14 @@
 ---
-tags:
-  - HTML5
-  - JavaScript
-  - CSS
+hide:
+  - navigation
 ---
 
-# Welcome to Data Develop & Engineer
+# Welcome to **Data Develop & Engineer**
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+This project will deliver all knowledge from my experience and other
+sharing knowledge in Data Develop and Engineer field.
 
 ## Code Annotation Examples
-
-### Codeblocks
-
-Some `code` goes here.
 
 ### Plain codeblock
 
@@ -75,13 +58,3 @@ def bubble_sort(items):
             if items[j] > items[j + 1]:
                 items[j], items[j + 1] = items[j + 1], items[j]
 ```
-
-## Icons and Emojs
-
-:smile:
-
-:fontawesome-regular-face-laugh-wink:
-
-:fontawesome-brands-twitter:{ .twitter }
-
-:octicons-heart-fill-24:{ .heart }

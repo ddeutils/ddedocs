@@ -11,20 +11,6 @@ _Last update: 2023-03-27 (`Copy Edition`)_
 I will say that this is the latest model that serve to Data Science or Data Analytic
 for using to cube analysis process.
 
-**Table of Contents**:
-
-- [What is Data Dimensional Modelling?](#what-is-data-dimensional-modelling)
-- [Components of Dimensional Data Modelling](#components-of-dimensional-data-modelling)
-- [Types of Dimensions in Dimensional Data Modelling](#types-of-dimensions-in-dimensional-data-modelling)
-- [Types of Dimension Tables]
-- [Steps to Carry Out Dimensional Data Modelling](#steps-to-carry-out-dimensional-data-modelling)
-- [Types of Fact Tables](#types-of-fact-tables)
-- [Rules for Dimensional Modelling](#rules-for-dimensional-modelling)
-- [Benefits of Dimensional Data Modelling](#benefits-of-dimensional-data-modelling)
-- [What is Multi-Dimensional Data Model in Data Warehouse?](#what-is-multi-dimensional-data-model-in-data-warehouse)
-- [Limitations of Dimensional Data Modelling](#limitations-of-dimensional-data-modelling)
-- [Conclusion](#conclusion)
-
 In contrast, dimensional models or Kimball dimensional data models, data models
 based on the technique developed by _Ralph Kimball_, are denormalized structures designed
 to retrieve data from a data warehouse. They are optimized to perform the Select

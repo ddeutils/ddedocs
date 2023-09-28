@@ -1,9 +1,5 @@
 # Data Vault Implementation
 
-**Table of Contents**:
-
-- [Hubs](#hubs)
-
 ## Hubs
 
 ```sql

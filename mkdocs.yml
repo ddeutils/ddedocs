@@ -7,11 +7,11 @@ theme:
     - navigation.instant.prefetch
     - navigation.tabs
     - navigation.sections
-
+    - navigation.footer
+    - navigation.top
     - search.suggest
     - search.highlight
     - search.share
-
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
@@ -36,10 +36,6 @@ theme:
   icon:
     logo: material/library-shelves
     repo: fontawesome/brands/github-alt
-    tag:
-      html: fontawesome/brands/html5
-      js: fontawesome/brands/js
-      css: fontawesome/brands/css3
 
 repo_name: korawica/ddedocs
 repo_url: https://github.com/korawica/ddedocs
@@ -48,10 +44,6 @@ extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/korawica/ddedocs
-  tags:
-    HTML5: html
-    JavaScript: js
-    CSS: css
 
 nav:
   - Home:
@@ -64,11 +56,15 @@ nav:
               - Commands: basics/git/git-cmd-common.md
               - Scenarios: basics/git/git-common-scenarios.md
               - Strategies:
-                  - basics/git/git-branching-strategies.md
-                  - basics/git/git-commit-release.md
-              - GitHub:
-                  - basics/git/github-actions.md
+                  - Branching Strategies: basics/git/git-branching-strategies.md
+                  - Commit Release: basics/git/git-commit-release.md
+          - Docker:
+              - basics/docker/index.md
+          - ChatGPT:
+              - basics/chatgpt/index.md
       - Knowledge:
+          - Python:
+              - basics/python/index.md
           - Data:
               - basics/data/index.md
               - Data Warehouse:
@@ -76,16 +72,59 @@ nav:
                   - Data Vault:
                       - Model: basics/data/data_warehouse/dwh-data-vault-model.md
                       - Implement: basics/data/data_warehouse/dwh-data-vault-model-implement.md
-#  - Advances:
-#      - advances/index.md
-#      - Tools:
-#          - Spark:
-#              - advances/spark/index.md
+                  - Ralph Kimball:
+                      - Model: basics/data/data_warehouse/dwh-dimension-model.md
+                      - Implement: basics/data/data_warehouse/dwh-dimension-model-implement.md
+                  - Bill Inmon:
+                      - Model: basics/data/data_warehouse/dwh-3rd-normal-model.md
+      - Services:
+          - GitHub:
+              - basics/github/index.md
+              - Actions: basics/github/github-actions.md
+      - Connections:
+          - On Premise:
+              - basics/on-premise/index.md
+  - Advances:
+      - advances/index.md
+      - Tools:
+          - Spark:
+              - advances/spark/index.md
+              - Bucketing: advances/spark/spark-bucketing.md
 #              - advances/spark/spark-bucketing.md
 #              - Pyspark:
 #                  - advances/spark/pyspark/pyspark-scd2.md
-#  - Services:
-#      - services/azure/index.md
+          - Kubernetes:
+              - advances/k8s/index.md
+      - Knowledge:
+          - GO:
+              - advances/go/index.md
+      - Services:
+          - Azure:
+              - advances/azure/index.md
+              - Batch:
+                  - Auto Scalable: advances/azure/batch/az-btch-auto-scalable.md
+                  - Access Key Vault: advances/azure/batch/az-btch-access-key-vault.md
+              - Databricks:
+                  - Init Script: advances/azure/databricks/adb-init-script.md
+                  - Mount Storage: advances/azure/databricks/adb-mount-storage.md
+              - Synapse Analytic:
+                  - Authentication: advances/azure/synapse/asa-authentication.md
+                  - External Data: advances/azure/synapse/asa-external-data.md
+                  - Partition View: advances/azure/synapse/asa-partition-view.md
+                  - Operations: advances/azure/synapse/asa-operations.md
+              - DevOps:
+                  - Self Hosted:
+                      - Deploy Python App: advances/azure/devops/cicd-self-hosted-win-fastapi.md
+          - AWS:
+              - advances/aws/index.md
+#              - Glue:
+#                  - ??
+          - Google:
+              - advances/google/index.md
+#              - Big Query:
+#                  - ??
+  - Usecases:
+      - usecases/index.md
 
 plugins:
   - tags
@@ -118,6 +157,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - tables
+  - md_in_html
 
 copyright: |
   &copy; 2023 <a href="https://github.com/korawica/ddedocs"  target="_blank" rel="noopener">Korawich Anuttra</a>

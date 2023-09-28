@@ -1,11 +1,5 @@
 # Git Branching Strategies
 
-A successful Git branching strategies for develop some software.
-
-Another 3rd party, [git-flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/)
-
-_Reference: [Git Branch Model](https://nvie.com/posts/a-successful-git-branching-model/)_
-
 ## The Mainline branches
 
 It's the simplest but most effective way for small teams. Because of working
@@ -50,7 +44,8 @@ deployment/release.
 
 - **May branch off from:** `develop`
 - **Must merge back into:** `develop`
-- **Branch naming convention:** anything except `master`, `develop`, `release-*`, `support-*`, or `hotfix-*`
+- **Branch naming convention:** anything except `master`, `develop`, `release-*`,
+  `support-*`, or `hotfix-*`
 
 !!! warning
 
@@ -259,9 +254,7 @@ The bump version is the script that auto update `CHANGELOG.md` file with all
 commit messages after the latest bump version or first initial commit.
 
 General digit of version naming, like `v1.2.3`, will mean
-`v${Major}.${Minor}.${Patch}.${Support}`.
-
-Reference: [semver](https://semver.org/)
+`v${Major}.${Minor}.${Patch}.${Support}`, reference from [semver](https://semver.org/)
 
 Generate commit message:
 
@@ -280,8 +273,11 @@ $ git tag -a $(VERSION) -m "new release"
 $ git push origin $(VERSION)
 ```
 
-**Examples**:
+**Examples of Bump-version script**:
 
-- [BUMP-VERSION-python](https://github.com/peritus/bumpversion)
 - [BUMP-VERSION-shell](https://gist.github.com/Nomane/df017387aaa2d24cbacb5da3a55256cf)
 - [BUMP-VERSION-shell-v2](https://gist.github.com/jv-k/703e79306554c26a65a7cfdb9ca119c6)
+
+## References
+
+- [Successful Git Branch Model](https://nvie.com/posts/a-successful-git-branching-model/)
