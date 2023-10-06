@@ -51,9 +51,10 @@ Create dynamic parameters Azure SQL Database link service.
 }
 ```
 
-> **Note**: \
-> If you want to use `AutoResolveIntegrationRuntime`, you can delete key `connectVia`
-> from above json data.
+!!! note
+
+    If you want to use `AutoResolveIntegrationRuntime`, you can delete key `connectVia`
+    from above json data.
 
 ## References
 

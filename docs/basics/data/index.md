@@ -14,25 +14,6 @@ data that serve to who want to use.
 Hence, Data Engineer is who know how to manage data for any requirement from data
 user.
 
-**TOPICS**:
-
-- [Data Management]
-  - [Data Warehouse](data_warehouse/README.md)
-    - [3RD Normal Model]
-    - [Dimension Data Model]
-    - [Data Vault Model]
-  - [Data Governance]
-- [Data Ingestion]
-- [Data Orchestration]
-- [Data Exchange]
-- [Data Mesh]
-
-# Overviews about Data
-
-**Table of Contents**:
-
-- [Data Management](#data-management)
-
 ## Data Management
 
 **Data management** is the effective practice of collecting, storing, protecting, delivering,

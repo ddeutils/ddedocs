@@ -1,25 +1,24 @@
-# CI/CD to Azure Databricks
+# CI/CD: _Azure Databricks_
 
-**Update**: `2023-05-29` |
-**Tag**: `Cloud` `Azure` `Azure DevOps` `CICD` `Azure Databricks`
-
-**Table of Contents**:
-
-- [Get Started](#get-started)
-  - [Setup Databricks Repository](#setup-databricks-repository)
-  - [Deploy to other Databricks Workspace](#deploy-to-other-databricks-workspace)
-
-We want to deploy Databricks notebooks to any workspace.
-
-## Get Started
+## Getting Started
 
 ### Setup Databricks Repository
 
-We should setup our Databricks repository to **Azure DevOps**
+1.  Go to **Azure DevOps** :octicons-arrow-right-24: Click your Project
+    :octicons-arrow-right-24: Click bottom `Project setting`.
+
+2.  On `Repositories` :octicons-arrow-right-24: Click `Create` and create new
+    repository for Azure Databricks.
+
+3.  Go to **Azure Databricks** :octicons-arrow-right-24: On `Workspace`
+    :octicons-arrow-right-24: Click `Repos`
+
+4.  Click `Add repo` :octicons-arrow-right-24: Pass Git repository URL and
+    Select `Azure DevOps Services`
 
 ### Deploy to other Databricks Workspace
 
-For **CI pipeline**, it only pack the code to artifact server.
+#### Pipline
 
 ```yaml
 jobs:
@@ -28,14 +27,17 @@ jobs:
   pool:
     name: Azure Pipelines
   steps:
+  # Check out the notebooks from Repo
   - checkout: self
+
   - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: drop'
+    displayName: 'Publish Artifact: notebooks'
     inputs:
       PathtoPublish: notebooks
+      FileCopyOptions: ''
 ```
 
-For **CD pipeline**, we use Databricks deploy scripts from Azure DevOps marketplace.
+#### Release
 
 ```yaml
 jobs:
@@ -43,6 +45,7 @@ jobs:
   displayName: Agent job 1
   pool:
     name: Azure Pipelines
+
   variables:
     sp_client_id: '{service-principle-client-id}'
     sp_tenant_id: '{service-principle-tenant-id}'
@@ -51,6 +54,7 @@ jobs:
     workspace: '{workspace-name}'
     region: '{workspace-region-id}'
     notebook_root_path: '/DEV/'
+
   steps:
   - task: DataThirstLtd.databricksDeployScriptsTasks.databricksDeployScriptsTask.databricksDeployScripts@0
     displayName: 'Databricks Notebooks deployment'

@@ -1,14 +1,5 @@
 # CI/CD to Azure Function App
 
-**Update**: `2023-05-29` |
-**Tag**: `Cloud` `Azure` `Azure DevOps` `CICD` `Azure Function App`
-
-**Table of Contents**:
-
-- [Get Started]
-  - [Setup Application]
-  - [Deploy to Function App]
-
 ## Get Started
 
 ### Setup Application
@@ -22,6 +13,7 @@ parameters:
 - name: azfList
   type: object
   default: ["framework", "ingestion"]
+
 stages:
 - stage: Build
   displayName: Build Stage

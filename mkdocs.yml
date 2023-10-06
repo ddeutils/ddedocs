@@ -60,30 +60,42 @@ nav:
                   - Commit Release: basics/git/git-commit-release.md
           - Docker:
               - basics/docker/index.md
+          - Pandas:
+              - basics/pandas/index.md
+          - AirFlow:
+              - basics/airflow/index.md
           - ChatGPT:
               - basics/chatgpt/index.md
       - Knowledge:
+          - Shell:
+              - basics/shell/index.md
+          - PowerShell:
+              - basics/powershell/index.md
           - Python:
               - basics/python/index.md
+              - Wheel: basics/python/py-dependency-wheel.md
+              - Joblib: basics/python/py-joblib.md
           - Data:
               - basics/data/index.md
+              - Data Observability: basics/data/data-ops-data-observability.md
+              - Data Model:
+                  - Data Vault:
+                      - Model: basics/data/data_model/dml-data-vault-model.md
+                      - Implement: basics/data/data_model/dml-data-vault-model-implement.md
+                  - Ralph Kimball:
+                      - Model: basics/data/data_model/dml-dimension-model.md
+                      - Implement: basics/data/data_model/dml-dimension-model-implement.md
+                  - Bill Inmon:
+                      - Model: basics/data/data_warehouse/dml-3rd-normal-model.md
               - Data Warehouse:
                   - basics/data/data_warehouse/index.md
-                  - Data Vault:
-                      - Model: basics/data/data_warehouse/dwh-data-vault-model.md
-                      - Implement: basics/data/data_warehouse/dwh-data-vault-model-implement.md
-                  - Ralph Kimball:
-                      - Model: basics/data/data_warehouse/dwh-dimension-model.md
-                      - Implement: basics/data/data_warehouse/dwh-dimension-model-implement.md
-                  - Bill Inmon:
-                      - Model: basics/data/data_warehouse/dwh-3rd-normal-model.md
       - Services:
           - GitHub:
               - basics/github/index.md
               - Actions: basics/github/github-actions.md
       - Connections:
-          - On Premise:
-              - basics/on-premise/index.md
+          - Edge:
+              - basics/edge/index.md
   - Advances:
       - advances/index.md
       - Tools:
@@ -95,28 +107,56 @@ nav:
 #                  - advances/spark/pyspark/pyspark-scd2.md
           - Kubernetes:
               - advances/k8s/index.md
+          - Ansible:
+              - advances/ansible/index.md
+          - Terraform:
+              - advances/terraform/index.md
       - Knowledge:
           - GO:
               - advances/go/index.md
+              - Command: advances/go/go-command.md
+              - Unittest: advances/go/go-unittest.md
+              - Connect Database: advances/go/go-database.md
+              - Advances:
+                  - Connect Kafka: advances/go/go-connect-kafka.md
+                  - Connect Redis: advances/go/go-connect-redis.md
+                  - Hexagonal Architect: advances/go/go-hexagonal-architecture.md
       - Services:
           - Azure:
               - advances/azure/index.md
               - Batch:
                   - Auto Scalable: advances/azure/batch/az-btch-auto-scalable.md
                   - Access Key Vault: advances/azure/batch/az-btch-access-key-vault.md
+                  - Run Pyspark With Docker: advances/azure/batch/az-btch-run-pyspark-with-docker.md
+                  - Docker mode: advances/azure/batch/az-btch-run-docker.md
+                  - Docker inside Node: advances/azure/batch/az-btch-run-docker-inside.md
+              - Function App:
+                  - Access Key Vault: advances/azure/functions/azf-access-key-vault.md
+                  - Access Synapse SQL Pool: advances/azure/functions/azf-access-synapse-sql-pool.md
+                  - Access Service Bus: advances/azure/functions/azf-access-service-bus.md
               - Databricks:
                   - Init Script: advances/azure/databricks/adb-init-script.md
                   - Mount Storage: advances/azure/databricks/adb-mount-storage.md
+              - Data Factory:
+                  - Link MongoDB: advances/azure/data_factory/adf-lsv-mongodb.md
               - Synapse Analytic:
                   - Authentication: advances/azure/synapse/asa-authentication.md
                   - External Data: advances/azure/synapse/asa-external-data.md
                   - Partition View: advances/azure/synapse/asa-partition-view.md
                   - Operations: advances/azure/synapse/asa-operations.md
               - DevOps:
+#                  - CICD Batch:
+                  - CICD Function App: advances/azure/devops/devops-cicd-az-afn.md
+                  - CICD Databricks: advances/azure/devops/devops-cicd-az-adb.md
+                  - CICD Data Factory: advances/azure/devops/devops-cicd-az-adf.md
+#                  - CICD Synapse Analytic:
+                  - CICD Power BI: advances/azure/devops/devops-cicd-az-pbi.md
                   - Self Hosted:
-                      - Deploy Python App: advances/azure/devops/cicd-self-hosted-win-fastapi.md
+                      - Deploy Python App: advances/azure/devops/devops-cicd-self-hosted-win-fastapi.md
           - AWS:
               - advances/aws/index.md
+              - IoT Core:
+                  - Rule: advances/aws/iot_core/iotc_rule.md
 #              - Glue:
 #                  - ??
           - Google:
@@ -125,6 +165,11 @@ nav:
 #                  - ??
   - Usecases:
       - usecases/index.md
+      - Architect:
+          - AWS Serverless Data Analytic: usecases/architect/act-aws-serverless-data-analytics-pipeline.md
+          - Azure Modern Data Pipeline: usecases/architect/act-azure-modern-data-pipeline.md
+          - Azure Data Mesh: usecases/architect/act-data-mesh-with-azure.md
+          - Stream Processing: usecases/architect/act-open-source-stream-processing.md
 
 plugins:
   - tags
@@ -132,6 +177,8 @@ plugins:
 
 markdown_extensions:
   - attr_list
+  - md_in_html
+  - def_list
   - admonition
   - pymdownx.highlight:
       anchor_linenums: true
@@ -158,7 +205,6 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - tables
-  - md_in_html
 
 copyright: |
   &copy; 2023 <a href="https://github.com/korawica/ddedocs"  target="_blank" rel="noopener">Korawich Anuttra</a>

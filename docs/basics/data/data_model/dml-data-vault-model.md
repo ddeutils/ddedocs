@@ -93,13 +93,13 @@ to the hub gives us more context.
 > - Unique
 > - At the same level of granularity
 
-| Column       | Alias           | Description                                               | Constraints | Inclusion |
-| ------------ | --------------- | --------------------------------------------------------- | ----------- | --------- |
-| HashKey      | `HUB_{name}_HK` | HashKey generated from Business Key                       | PK          | Required  |
-| BusinessKey  | `{BS-name}_BK`  | Business defined business key                             | UQ          | Required  |
-| LoadDatetime | `LDTS`          | Load Datetime from Stage to Data Vault                    |             | Required  |
-| RecordSource | `RSCR`          | Specifics the source system from which the key originated |             | Required  |
-| LastSeenDate |                 | Date a record was last included on a data load            |             | Optional  |
+| Column        | Alias            | Description                                               | Constraints | Inclusion |
+|---------------|------------------|-----------------------------------------------------------|-------------|-----------|
+| HashKey       | `HUB_{name}_HK`  | HashKey generated from Business Key                       | PK          | Required  |
+| BusinessKey   | `{BS-name}_BK`   | Business defined business key                             | UQ          | Required  |
+| LoadDatetime  | `LDTS`           | Load Datetime from Stage to Data Vault                    |             | Required  |
+| RecordSource  | `RSCR`           | Specifics the source system from which the key originated |             | Required  |
+| LastSeenDate  |                  | Date a record was last included on a data load            |             | Optional  |
 
 **Loading Pattern**:
 
@@ -410,7 +410,7 @@ r reporting purposes.
 
 ## Data Vault Pipeline
 
-![Data Vault Pipeline](images/data-vault-pipeline.png)
+![Data Vault Pipeline](../data_warehouse/images/data-vault-pipeline.png)
 
 Let’s run through each stage of the pipeline
 
@@ -441,7 +441,7 @@ Let’s run through each stage of the pipeline
 
    - **PIT**
 
-     ![PIT Table](images/data-vault-pit-table.png)
+     ![PIT Table](../data_warehouse/images/data-vault-pit-table.png)
 
      A Point-in-Time (PIT) table is a physical collection of applicable surrogate
      keys and load dates for a snapshot period. It must be a table otherwise the
@@ -455,7 +455,7 @@ Let’s run through each stage of the pipeline
 
    - **AS_OF**
 
-     ![AS OF Table](images/data-vault-as-of-table.png)
+     ![AS OF Table](../data_warehouse/images/data-vault-as-of-table.png)
 
      AS_OF table controls the PIT snapshot in a combination of two ways
      - By Window: defining the start and end date of the AS_OF period, the window
@@ -521,7 +521,7 @@ Let’s run through each stage of the pipeline
   - Hubs and Links follow Top-down approach
   - Satellite follows Bottom-up approach
 
-![Data Vault Architecture](images/data_vault_architecture.png)
+![Data Vault Architecture](../data_warehouse/images/data_vault_architecture.png)
 
 ## Unit of Work
 

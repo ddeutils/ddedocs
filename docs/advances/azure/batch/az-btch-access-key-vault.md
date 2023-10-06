@@ -76,11 +76,10 @@ when we uploaded the certificate to the App Registration for Azure Batch Account
 Sometimes called a public key, a certificate is the recommended credential type
 because they're considered more secure than client secrets.
 
-- In the `Azure portal`, in `App registrations`, select your application.
-- Select `Certificates & secrets` > `Certificates` > Upload certificate.
-- Select the file you want to upload. It must be one of the following file
-  types: `.cer`, `.pem`, `.crt`.
-- Select `Add`.
+- Go to Azure App registrations :octicons-arrow-right-24: Select `Certificates & secrets` :octicons-arrow-right-24: Click `Certificates`
+- Upload the certificate that was created from above step. Select the file you
+  want to upload. It must be one of the following file types: `.cer`, `.pem`, `.crt`
+  :octicons-arrow-right-24: Select `Add`.
 
 !!! warning
 
@@ -116,7 +115,7 @@ If you are using the Azure SDK for python, unfortunately the pfx format is not c
 with the SDK, so we need to convert it:
 
 ```dotenv
-CERT_THUMBPRINT=<YOUR_CERT_THUMBPRINT>;
+CERT_THUMBPRINT=<your-cert-thumbprint>;
 CERT_IN="${AZ_BATCH_CERTIFICATES_DIR}/sha1-${CERT_THUMBPRINT}.pfx";
 CERT_OUT="${AZ_BATCH_CERTIFICATES_DIR}/cert.pem";
 CERT_PWD="${CERT_IN}.pw";
@@ -190,24 +189,21 @@ from azure.keyvault.secrets import SecretClient
 
 CERT_PATH: str = os.environ.get('AZ_BATCH_CERTIFICATES_DIR')
 
-def gen_secretClient(
-        keyvault_name,
-        tenant_id,
-        client_id
+def gen_secret_client(
+        keyvault_name: str,
+        tenant_id: str,
+        client_id: str
 ):
     keyvault_uri = f"https://{keyvault_name}.vault.azure.net"
-
     credential = CertificateCredential(
         tenant_id=tenant_id,
         client_id=client_id,
         certificate_path=f"{CERT_PATH}/cert.pem"
     )
-
-    _sc = SecretClient(
+    return SecretClient(
         vault_url=keyvault_uri,
         credential=credential
     )
-    return _sc
 ```
 
 ## Using Service Principle

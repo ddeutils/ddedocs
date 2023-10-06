@@ -1,12 +1,5 @@
 # Data Warehouse
 
-_Last update: 2023-03-30 (`Copy Edition`)_
-
-> **TODO**:
-> - [ ] Change: Summary document
-
----
-
 **Data Warehouse** (DW or DWH) is a centralized repository or digital storage system
 that integrates and stores data from various sources within an organization. It
 is designed to support business intelligence (BI) activities such as reporting,
@@ -876,7 +869,7 @@ involves creating a normalized data model that separates business entities and r
 into three types of tables (Hub, Link, and Satellite), which can then be used to
 build data marts that support specific business functions.
 
-See more, [Data Vault Model](dwh-data-vault-model.md)
+See more, [Data Vault Model](../data_model/dwh-data-vault-model.md)
 
 ### Summary
 

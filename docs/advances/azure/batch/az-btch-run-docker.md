@@ -1,17 +1,9 @@
-# Azure Batch run Docker
-
-**Update**: `2023-04-26` |
-**Type**: `Use-cases` |
-**Tag**: `Cloud` `Azure` `Batch Account` `Docker`
+# Azure Batch: _Docker_
 
 **Azure Batch** can be a great tool for instant batch processing as it creates and
 manages a pool of compute nodes (virtual machines), installs the applications you
 want to run, and schedules jobs to run on the nodes. Sometimes however a container
 could be a more appropriate solution for simplicity and scaling than a virtual machine.
-
-**Table of Contents**:
-
-- [Run with Python]()
 
 ## Run with Python
 

@@ -1,9 +1,5 @@
 # Dependencies Wheel
 
-**Table of Contents**:
-
-- [What Is a Python Wheel?](#what-is-a-python-wheel)
-
 ## Use-case: Deploy to On-premise
 
 This will use when you want to compress all dependencies from internet-able machine
@@ -31,9 +27,10 @@ A wheel is a type of [**built distribution**](https://packaging.python.org/en/la
 In this case, built means that the wheel comes in a ready-to-install format and
 allows you to skip the build stage required with source distributions.
 
-> **Note**: \
-> It’s worth mentioning that despite the use of the term built, a wheel doesn't
-> contain `.pyc` files, or compiled Python bytecode.
+!!! note
+
+    It’s worth mentioning that despite the use of the term built, a wheel doesn't
+    contain `.pyc` files, or compiled Python bytecode.
 
 A wheel filename is broken down into parts separated by hyphens:
 

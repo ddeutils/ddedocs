@@ -1,7 +1,4 @@
-# Azure Batch Account run Docker Container inside VM
-
-**Update**: `2023-04-26` |
-**Tag**: `Azure` `Batch Account` `Docker`
+# Azure Batch: _Docker inside Node_
 
 Azure Batch is a very useful service that you can manage VMs and run tasks among
 the VMs. It fits into my need naturally. To avoid the dependencies of running some
@@ -17,7 +14,7 @@ container could accept different parameters and run as much as we want.
 
 Create Ubuntu pool and set start task command line:
 
-```text
+```shell
 /bin/bash -c
 "sudo apt-get update &&
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common &&
@@ -32,9 +29,10 @@ sudo apt-get install dos2unix
 "
 ```
 
-> **Note**: \
-> We add `$USER` to docker group because we want to execute `docker` command without
-> `sudo`.
+!!! info
+
+    We add `$USER` to docker group because we want to execute `docker` command
+    without `sudo`.
 
 ## Create Dockerfile
 
@@ -112,4 +110,4 @@ exit $CONTAINER_RC;
 
 ## References
 
-- https://jilongliao.com/2018/05/28/container-ml-azure-batch/
+- [Container ML on Azure Batch](https://jilongliao.com/2018/05/28/container-ml-azure-batch/)

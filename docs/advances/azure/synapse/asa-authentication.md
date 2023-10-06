@@ -394,7 +394,7 @@ GRANT IMPERSONATE ON USER::<user-name> TO <user-name>;
 ## Workload
 
 ```sql
-CREATE WORKLOAD GROUP LoadData
+CREATE WORKLOAD GROUP <group-name>
 WITH (
     MIN_PERCENTAGE_RESOURCE = 100,
     CAP_PERCENTAGE_RESOURCE = 100,
@@ -402,10 +402,10 @@ WITH (
 );
 
 --classifies load_user with the workload group LoadData
-CREATE WORKLOAD CLASSIFIER [wclLoadData]
+CREATE WORKLOAD CLASSIFIER [<classifier-name>]
 WITH (
-WORKLOAD_GROUP = 'LoadData'
-    ,MEMBERNAME = 'load_user'
+    WORKLOAD_GROUP = '<group-name>',
+    MEMBERNAME = '<username>'
 );
 ```
 

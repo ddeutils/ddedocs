@@ -74,12 +74,8 @@ az functionapp create -n fn-with-go \
 
 ## Azure Services
 
-| Type           | Services                                                                               |
-|----------------|----------------------------------------------------------------------------------------|
-| Database       | [`Azure Server`](database_server/READMD.md) `Azure Database`                           |
-| Storage        | [`Azure Blob Storage`](storage_account/README.md)                                      |
-| Data Warehouse | [Azure Synapse Analytic](https://learn.microsoft.com/en-us/azure/synapse-analytics/)   |
-
-## References
-
--
+| Type           | Services                        |
+|----------------|---------------------------------|
+| Database       | `Azure Server` `Azure Database` |
+| Storage        | `Azure Blob Storage`            |
+| Data Warehouse | `Azure Synapse Analytic`        |

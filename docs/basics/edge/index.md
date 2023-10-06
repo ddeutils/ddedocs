@@ -2,4 +2,4 @@
 icon: material/server-network
 ---
 
-# On Premise
+# Edge Server

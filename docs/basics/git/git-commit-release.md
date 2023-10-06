@@ -16,71 +16,72 @@ $ git commit -am "<type>(<scope>): <short-summary-in-present-tense>
 <footer>"
 ```
 
-### `<short-summary>`
+`<short-summary>`
 
-- use the imperative, present tense: "change" not "changed" nor "changes"
-- don't capitalize first letter
-- no dot (.) at the end
+:   - use the imperative, present tense: "change" not "changed" nor "changes"
+    - don't capitalize first letter
+    - no dot (.) at the end
 
-### `<type>`
+`<type>`
 
-- `feat`: Features : A new feature.
-- `fix`: Bugfixes : A bug fix.
-- `docs`: Documents : Documentation changes.
-- `style`: Style : Changes that do not affect the meaning of the code
-  (white-space, formatting, missing semi-colons, etc).
-- `refactor`: Refactor : A code change that neither fixes a bug nor adds a feature.
-- `perf`: Improved performance : A code change that improves performance.
-- `test`: Testing : Changes to the test framework.
-- `build`: Build : Changes to the build process or tools.
-- `dep`: Dependencies and Removals : Changes or update dependencies
+:   - `feat`: Features : A new feature.
+    - `fix`: Bugfixes : A bug fix.
+    - `docs`: Documents : Documentation changes.
+    - `style`: Style : Changes that do not affect the meaning of the code
+      (white-space, formatting, missing semi-colons, etc).
+    - `refactor`: Refactor : A code change that neither fixes a bug nor adds a feature.
+    - `perf`: Improved performance : A code change that improves performance.
+    - `test`: Testing : Changes to the test framework.
+    - `build`: Build : Changes to the build process or tools.
+    - `dep`: Dependencies and Removals : Changes or update dependencies
 
-### `<scope>`:
+`<scope>`
 
-is an optional keyword that provides context for where the change was made.
-It can be anything relevant to your package or development workflow
-(e.g., it could be the module or function name affected by the change).
+:   An optional keyword that provides context for where the change was made.
+    It can be anything relevant to your package or development workflow
+    (e.g., it could be the module or function name affected by the change).
 
-Different text in the commit message will trigger PSR to make different kinds of releases:
+    Different text in the commit message will trigger PSR to make different
+    kinds of releases:
 
-A `<type>` of fix triggers a patch version bump, e.g.
+    A `<type>` of fix triggers a patch version bump, e.g.
 
-```shell
-git commit -m "fix(mod_plotting): fix confusing error message in plot_words"
-```
+    ```shell
+    git commit -m "fix(mod_plotting): fix confusing error message in plot_words"
+    ```
 
-A `<type>` of feat triggers a minor version bump, e.g.
+    A `<type>` of feat triggers a minor version bump, e.g.
 
-```shell
-git commit -m "feat(package): add example data and new module to package"
-```
+    ```shell
+    git commit -m "feat(package): add example data and new module to package"
+    ```
 
-The text `BREAKING CHANGE:` in the footer will trigger a major release, e.g.
+    The text `BREAKING CHANGE:` in the footer will trigger a major release, e.g.
 
-```shell
-git commit -m "feat(mod_plotting): move code from plotting module to pycounts module
+    ```shell
+    git commit -m "feat(mod_plotting): move code from plotting module to pycounts module
 
-BREAKING CHANGE: plotting module won't exist after this release."
-```
+    BREAKING CHANGE: plotting module won't exist after this release."
+    ```
 
-### `<body>`
+`<body>`
 
-Just as in the subject, use the imperative, present tense: "change" not "changed"
-nor "changes". The body should include the motivation for the change and
-contrast this with previous behavior.
+:   Just as in the subject, use the imperative, present tense: "change" not
+    "changed" nor "changes". The body should include the motivation for the
+    change and contrast this with previous behavior.
 
-### `<footer>`
+`<footer>`
 
-The footer should contain any information about **Breaking Changes** and is also the place to
-[reference GitHub issues that this commit closes](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
+:   The footer should contain any information about **Breaking Changes** and is
+    also the place to [reference GitHub issues that this commit closes](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
 
-**Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines.
+    **Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines.
 
-!!! note
+    !!! note
 
-    Any line of the commit message cannot be longer than 100 characters.
-    This allows the message to be easier to read on GitHub as well as in
-    various git tools.
+        Any line of the commit message cannot be longer than 100 characters.
+        This allows the message to be easier to read on GitHub as well as in
+        various git tools.
 
 ## Revert message
 

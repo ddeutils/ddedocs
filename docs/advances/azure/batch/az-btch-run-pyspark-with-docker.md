@@ -1,28 +1,9 @@
-# Azure Batch run Spark using Docker
+# Azure Batch: _Run PySpark with Docker_
 
-**Update**: `2023-05-03` |
-**Type**: `Use-cases` |
-**Tag**: `Cloud` `Azure` `Batch Account` `Spark` `Docker`
-
-You want to run spark jobs on Azure. But cost is a concern. So you’re looking
-into **Azure Batch** because you can use Low-Priority VMs, which are not available
-on **HDInsights** or **Azure Databricks Cloud**.
-
-This is where Azure Batch comes in. You simply wrap your Spark code in a Docker
-container, and schedule 100 of those containers on a pool of 20 Azure Batch nodes,
-and let them execute the 100 jobs in parallel. You get to use Low Priority VMs
-out of the box, and you only pay for what you need. No long-running Spark or
-Hadoop clusters.
-
-**Table of Contents**:
-
-- [Required Azure Setup to Start](#required-azure-setup-to-start)
-- [Create the Spark job script](#create-the-spark-job-script)
-- [Dockerize](#dockerize)
-- [Run on Azure Batch](#run-on-azure-batch)
-- [Next steps](#next-steps)
-
-## Required Azure Setup to Start
+You simply wrap your Spark code in a Docker container, and schedule 100 of those
+containers on a pool of 20 Azure Batch nodes, and let them execute the 100 jobs
+in parallel. You get to use Low Priority VMs out of the box, and you only pay
+for what you need. No long-running Spark or Hadoop clusters.
 
 In order to run this example, we need to set up:
 
@@ -30,11 +11,13 @@ In order to run this example, we need to set up:
 - **Azure Container Registry** to store the Docker container
 - **Azure Batch Accounts** to run your batch jobs in.
 
+## Getting Started
+
 Chances are you already have these running in Azure. If not, it’s simple click
 and install on the Azure Portal. For each of these 3 services, you need to get
 the Keys and add them to a `config.py`:
 
-```python
+```python titile="config.py"
 STORAGE_ACCOUNT_NAME = "<storage-account-name>"
 STORAGE_ACCOUNT_KEY = "****"
 
@@ -52,8 +35,7 @@ ACR_PASSWORD = "****"
 For this demo, we need a simple spark job. Any job will do, really, The only thing
 you need to be aware of, is that it has to be able to read from Blob Storage.
 
-```text
-# /requirements.txt
+```requirements.txt title="requirements.txt"
 azure
 azure-storage
 azure-storage-blob
@@ -121,7 +103,7 @@ We wrap this job in a Docker container and push it to the **Azure Container Regi
 
 A simple `Dockerfile` can be as follows:
 
-```dockerfile
+```dockerfile title="Dockerfile"
 FROM python:3.6
 
 # Install OpenJDK 8, and monitoring tooling
@@ -168,10 +150,11 @@ $ docker tag dataminded/spark_on_azure_batch_demo:latest <registry-name>.azurecr
 $ docker push <registry-name>.azurecr.io/<registry-name>/spark_on_azure_batch_demo:latest
 ```
 
-> **Note**: \
-> that the first time you push this Docker container, it will be huge, about 1GB:
-> it has an ubuntu image, a bunch of spark libraries, a JDK, etc.
-> The next push you do of this container, will only push your latest code changes.
+!!! note
+
+    That the first time you push this Docker container, it will be huge, about 1GB:
+    it has an ubuntu image, a bunch of spark libraries, a JDK, etc.
+    The next push you do of this container, will only push your latest code changes.
 
 ## Run on Azure Batch
 
@@ -214,7 +197,7 @@ def create_pool(
         pool_id,
         pool_vm_size,
         pool_node_count,
-        skip_if_exists=True
+        skip_if_exists = True
 ):
   print(f'Creating pool [{pool_id}]...')
 
@@ -227,14 +210,16 @@ def create_pool(
     publisher='microsoft-azure-batch',
     offer='ubuntu-server-container',
     sku='16-04-lts',
-    version='latest')
+    version='latest',
+  )
 
   new_pool = batch.models.PoolAddParameter(
     id=pool_id,
     virtual_machine_configuration=batch.models.VirtualMachineConfiguration(
       image_reference=image_ref_to_use,
       container_configuration=container_conf,
-      node_agent_sku_id='batch.node.ubuntu 16.04'),
+      node_agent_sku_id='batch.node.ubuntu 16.04',
+    ),
     vm_size=pool_vm_size,
     target_low_priority_nodes=pool_node_count)
 
@@ -252,12 +237,20 @@ def create_job(batch_service_client, job_id, pool_id):
   batch_service_client.job.add(job)
 
 
-def add_task(batch_service_client, image_name, image_version, job_id, command,
-             name):
+def add_task(
+    batch_service_client,
+    image_name,
+    image_version,
+    job_id,
+    command,
+    name
+):
   user = batchmodels.UserIdentity(
-    auto_user=batchmodels.AutoUserSpecification(
-      elevation_level=batchmodels.ElevationLevel.admin,
-      scope=batchmodels.AutoUserScope.task))
+      auto_user=batchmodels.AutoUserSpecification(
+        elevation_level=batchmodels.ElevationLevel.admin,
+        scope=batchmodels.AutoUserScope.task,
+      )
+  )
 
   task_id = name
   task_container_settings = batch.models.TaskContainerSettings(
@@ -380,29 +373,38 @@ if __name__ == '__main__':
 
 And finally, you will see your jobs run on Azure Batch:
 
-![Monitor Pool in Batch Explorer](../images/az-btch-run-spark-monitor.png)
+![Monitor Pool in Batch Explorer](./images/az-btch-run-spark-monitor.png)
 
-![Monitor Tasks in Batch Explorer](../images/az-btch-run-spark-monitor-01.png)
+![Monitor Tasks in Batch Explorer](./images/az-btch-run-spark-monitor-01.png)
 
-> **Warning**: \
-> that all nodes in a pool are completely separate. This is not a one big Spark
-> cluster concept.
+!!! warning
+
+    That all nodes in a pool are completely separate. This is not a one big Spark
+    cluster concept.
 
 ## Next steps
 
 This solves 90% of the needs of a project we’re working on. However,
 there are always next steps:
 
-- **Security**: \
-  Account keys are everywhere here. Maybe not in the git repo. But you are going to fill them in and put them in a docker image. Which is a big No No. Better would be to work with some sort of Role Based Access Control and a Vault, where this job is allowed to access the vault for certain keys, and it is allowed to read and write certain data from Blob storage
+- **Security**:
 
-- **Monitoring**: \
+  Account keys are everywhere here. Maybe not in the git repo. But you are going
+  to fill them in and put them in a docker image. Which is a big No No. Better
+  would be to work with some sort of Role Based Access Control and a Vault,
+  where this job is allowed to access the vault for certain keys, and it is allowed
+  to read and write certain data from Blob storage
+
+- **Monitoring**:
+
   The htop monitoring is nice, and you sure do look like a hardcore hacker with that CLI dashboard. But you would just like to see the Spark UI, really. Just like any normal human being.
 
-- **Scaling**: \
+- **Scaling**:
+
   Not all jobs fit on a single node. Although you can get up to 64 cores and 432GB (for not even $1 per hour in Low Prio), there might be use cases where you need more. Although, honestly, we all talk about big data a lot, but 99% of jobs that I’ve seen, really don’t need 432GB of RAM. But anyway, in those cases, AZTK is the way to go if you want to stick with Azure Batch.
 
-- **Auto scaling**:- \
+- **Auto scaling**:
+
   Even better than scaling, we would also like to auto-scale our pool. Now it’s just a fixed size, which you have to turn off manually. Don’t forget, or your “It’s cheap!” claim won’t survive for long. Ideally, you want to autoscale to dozens or even hundreds of nodes, if you have a large workload. And then you want them to automatically be turned off when they are idle for a couple of minutes.
 
 - **Kubernetes**: \
@@ -410,5 +412,5 @@ there are always next steps:
 
 ## References
 
-- https://medium.com/datamindedbe/run-spark-jobs-on-azure-batch-using-azure-container-registry-and-blob-storage-10a60bd78f90
-- https://github.com/datamindedbe/spark_on_azure_batch_demo
+- [Medium: Run Spark on Azure Batch using Azure Container Registry](https://medium.com/datamindedbe/run-spark-jobs-on-azure-batch-using-azure-container-registry-and-blob-storage-10a60bd78f90)
+- [GitHub: Spark on Azure Batch Demo](https://github.com/datamindedbe/spark_on_azure_batch_demo)

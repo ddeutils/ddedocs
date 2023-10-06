@@ -8,26 +8,11 @@ hide:
 This project will deliver all knowledge from my experience and other
 sharing knowledge in Data Develop and Engineer field.
 
-## Code Annotation Examples
+* [The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
+
+## Coding
 
 ### Plain codeblock
-
-A plain codeblock:
-
-```
-Some code here
-def myfunction()
-// some comment
-```
-
-#### Code for a specific language
-
-Some more code with the `py` at the start:
-
-``` py
-import tensorflow as tf
-def whatever()
-```
 
 #### With a title
 
