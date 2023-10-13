@@ -71,3 +71,4 @@
 
 - [User Permission in Serverless SQL Pools](https://www.serverlesssql.com/user-permissions-in-serverless-sql-pools-external-tables-vs-views/)
 - [](https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types)
+- https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types

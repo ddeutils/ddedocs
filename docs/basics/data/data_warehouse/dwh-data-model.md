@@ -1,12 +1,5 @@
 # Data Model
 
-_Last update: 2023-03-28 (`Copy Edition`)_
-
-> **TODO**:
-> - [ ] Change: Summary document
-
----
-
 Data modeling is the process of creating a visual representation of either a whole
 information system or parts of it to communicate connections between data points
 and structures. The goal is to illustrate the types of data used and stored within
@@ -22,15 +15,6 @@ It is the technique of documenting complex software system designs in the form o
 an easily understandable graphic. To describe how the data will flow, the diagram
 will be made using text and symbols. It is often referred to as the blueprint for
 developing new software or reengineering existing applications.
-
-**Table of Contents**:
-
-- [Types of data models](#types-of-data-models)
-- [Data modeling process](#data-modeling-process)
-- [Types of data modeling](#types-of-data-modeling)
-- [How Can We Define a Good Data Model?](#how-can-we-define-a-good-data-model)
-- [Benefits of data modeling](#benefits-of-data-modeling)
-- [Why Create a Data Model?](#why-create-a-data-model)
 
 **Key Features of Data Modeling**:
 

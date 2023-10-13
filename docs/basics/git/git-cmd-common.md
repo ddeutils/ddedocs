@@ -4,15 +4,16 @@
 
 Git have build-in hash function that use for create file name in Git.
 
-```shell
-git hash-object <filname>.<file-extension>
+```console
+$ git hash-object <filname>.<file-extension>
 af5b63bf238bc06de68f6a2ac63f3ec8c7a0dfef
 ```
 
 Or, you can create hash value with yourself
 
-```shell
-$ echo -n "<type:[blob, tree, commit]> <content-length>\0<content-information>" | shasum
+```console
+$ echo -n "<type:[blob, tree, commit]> <content-length>\0<content-information>" \
+  | shasum
 af5b63bf238bc06de68f6a2ac63f3ec8c7a0dfef
 ```
 
@@ -21,7 +22,7 @@ filename, but it uses content information in the file.
 
 ## Git Config
 
-```shell
+```console
 $ git config --global user.name "username"
 $ git config --global user.email "username@email.com"
 $ git config --list
@@ -35,24 +36,30 @@ Configuration in Git can use: `git config` command line. The simple way to edit
 Git configuration is using editor like **VS Code**, **Atom**, or **Vim** by Git
 default.
 
-```shell
+```console
 # Set Editor in Git config when you use -e option.
 $ git config --global core.editor "code -w"
 $ git config --global -e
 hint: Waiting for your editor to close the file...
 ```
 
-> **Note**: \
-> If you want to set Atom editor, use `git config --global core.editor "atom --wait"`
+!!! note
 
-> **Note**: \
-> The `git config` will override config values in local from global configuration
-> ```shell
-> ...
-> username$ git config "key" "value"
-> username$ git config --get "key"
-> ...
-> ```
+    If you want to set Atom editor, use
+
+    ```console
+    $ git config --global core.editor "atom --wait"
+    ```
+
+!!! note
+
+    The `git config` will override config values in local from global
+    configuration.
+
+    ```console
+    $ git config "key" "value"
+    $ git config --get "key"
+    ```
 
 ## Git Workflow
 
@@ -64,8 +71,8 @@ Initial ---> Working ---> Index/Staging ---> Repository
 
 When you want to create `.git` file in your local project, you can use:
 
-```shell
-git init
+```console
+$ git init
 ```
 
 ```text
@@ -81,13 +88,14 @@ git init
 |---> index
 ```
 
-> **Note**: \
-> Another command, `git init –bare` will create and keep only configuration values
-> of version control without source code.
+!!! note
+
+    Another command, `git init –bare` will create and keep only configuration
+    values of version control without source code.
 
 ### Working
 
-```shell
+```console
 $ echo -e "Hello World" > demo.txt
 $ git hash-object demo.txt
 1910283f238bc06de68f6a2ac63f3ec8c7a0dfef
@@ -106,7 +114,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ### Index/Staging
 
-```shell
+```console
 $ git add .
 $ git status
 On branch main
@@ -129,38 +137,43 @@ Changes to be committed:
 |---> ...
 ```
 
-```shell
+```console
 $ git ls-files
 demo.txt
 ```
 
-> **Note**: \
-> The file in `object/` was compressed, and you will see value in this file when you
-> use `zlib` like: `blob 11<nil>Hello World`.
+!!! note
 
-> **Note**: \
-> `git add -p <file>`, this command will split changed file to hunks of code for
-> review and what to do with that hunk, \
-> such as `y n q a d / j J g e ?`.
-> - `-y`: (yes) for add that hunk to staged zone
-> - `-n`: (no) ignore to add this hunk
-> - `-q`: (quit) quit this interactive with mode `git add -p`
-> - `-s`: (split) divide this hunk to smaller hunks
+    The file in `object/` was compressed, and you will see value in this file
+    when you use `zlib` like: `blob 11<nil>Hello World`.
 
-> **Note**: \
-> This command, `git add :/`, using when you stay in sub-folder of working area and want to add all
-> changed files include outside to staged status.
+!!! note
+
+    `git add -p <file>`, this command will split changed file to hunks of code for
+    review and what to do with that hunk,
+
+    such as `y n q a d / j J g e ?`.
+
+    * `-y`: (yes) for add that hunk to staged zone
+    * `-n`: (no) ignore to add this hunk
+    * `-q`: (quit) quit this interactive with mode `git add -p`
+    * `-s`: (split) divide this hunk to smaller hunks
+
+!!! note
+
+    This command, `git add :/`, using when you stay in sub-folder of working area
+    and want to add all changed files include outside to staged status.
 
 ### Repository
 
-```shell
+```console
 $ git commit -m "initial"
 [main (root-commit) 3c6d5a4] initial
 1 file changed, 1 insertion(+)
 create mode 100644 demo.txt
 ```
 
-```shell
+```console
 # Set Disable Git Log pager
 $ git config --globlal pager.log false
 $ git log
@@ -182,7 +195,7 @@ Author: ...
 |---> ...
 ```
 
-```shell
+```console
 # Get type of Git file
 $ git cat-file -t 3c6d
 commit
@@ -197,27 +210,32 @@ $ git cat-file -p a611
 100644 blob 1910283f238bc06de68f6a2ac63f3ec8c7a0dfef    demo.txt
 ```
 
-> **Note**: \
-> In commit hash file, Git will add `parent` information if you add new commit
-> after first commit.
-> ```shell
-> $ git cat-file -p 463f
-> tree 9f3dc...
-> parent 3c6d5a4...
-> ...
-> ```
+!!! note
 
-> **Note**: \
-> The `git commit --amend` or `git commit --amend -m "YOUR MESSAGE"` command use
-> for create new commit replace the latest commit.
-> ```shell
-> $ git commit -am "<message>"
-> $ git add .
-> $ git commit --amend
-> ```
-> This solution use only local repository, before push branch to remote repository.
-> If it is not any changed file to Staged, this command will allow you to edit
-> the latest Commit Message.
+    In commit hash file, Git will add `parent` information if you add new commit
+    after first commit.
+
+    ```console
+    $ git cat-file -p 463f
+    tree 9f3dc...
+    parent 3c6d5a4...
+    ...
+    ```
+
+!!! note
+
+    The `git commit --amend` or `git commit --amend -m "YOUR MESSAGE"` command use
+    for create new commit replace the latest commit.
+
+    ```console
+    $ git commit -am "<message>"
+    $ git add .
+    $ git commit --amend
+    ```
+
+    This solution use only local repository, before push branch to remote repository.
+    If it is not any changed file to Staged, this command will allow you to edit
+    the latest Commit Message.
 
 > **Note**: \
 > `git ldm` for list history commits that you do in local repository before daily
@@ -225,7 +243,7 @@ $ git cat-file -p a611
 
 ## Git Edit Workflow
 
-```shell
+```console
 # Remove all files that was created in working
 $ git clean -f
 
@@ -245,16 +263,19 @@ $ git restore <filename>
 $ git retore --staged <filename>
 ```
 
-> **Note**: \
-> `git rm -r --cached "<folder>"` or `git rm --cached <file>` to stop tracking a
-> file you need to remove it from the index.
+!!! note
 
-> **Note**: \
-> `git clean` - for delete untracked file with options,
-> - `-f`: Force delete
-> - `-n`: Dry-run, that mean git will pop up the cleaned file
+    `git rm -r --cached "<folder>"` or `git rm --cached <file>` to stop tracking a
+    file you need to remove it from the index.
 
-```shell
+!!! note
+
+    `git clean` - for delete untracked file with options,
+
+    * `-f`: Force delete
+    * `-n`: Dry-run, that mean git will pop up the cleaned file
+
+```console
 # Delete files and auto add this files to staging
 $ git rm <filename>
 
@@ -278,7 +299,7 @@ $ git prune
 
 Create new file, <filename>, in your local Git staging area.
 
-```shell
+```console
 $ git add <filename>
 $ git diff --staged
 diff --git a/<filename> b/<filename>
@@ -295,7 +316,7 @@ $ git commit -m "add <filename>"
 
 If you edit <filename> again and run `git diff` command:
 
-```shell
+```console
 $ git diff
 diff --git a/<filename> b/<filename>
 index 2a3ee71..84f5955 100644
@@ -310,7 +331,7 @@ index 2a3ee71..84f5955 100644
 ...
 ```
 
-```shell
+```console
 $ git diff 073c head
 ...
 index 2a3ee71..84f5955 100644
@@ -319,7 +340,7 @@ index 2a3ee71..84f5955 100644
 
 Use `difftool` if you want to editable the diff files
 
-```shell
+```console
 $ git config --global diff.tool vscode
 $ git config --global difftool.vscode.cmd "code -w -d \$LOCAL \$REMOTE"
 $ git difftool --staged
@@ -333,8 +354,9 @@ $ git difftool --staged
 
 ## Git Branch
 
-```shell
-# List all branches
+List all branches:
+
+```console
 $ git branch
 * main
 ```
@@ -374,7 +396,7 @@ $ git prune
 
 ### Merge
 
-```shell
+```console
 # Merge change from dev branch to current main branch
 $ git log main --oneline
 $ git switch main
@@ -411,18 +433,19 @@ $ git merge --squash develop
 $ git commit -m "squash develop"
 ```
 
-> **Note**:
-> - **Merge commits**:
->   - Will keep all commits history of the feature branch and move them into the master branch
->   - Will add extra dummy commit.
-> - **Rebase and merge**:\
->   - Will append all commits history of the feature branch in the front of the master branch
->   - Will NOT add extra dummy commit.
-> - **Squash and merge**:\
->   - Will group all feature branch commits into one commit then append it in the front of the master branch
->   - Will add extra dummy commit.
->
-> Read More: [What is the difference between squash and rebase](https://stackoverflow.com/questions/2427238/what-is-the-difference-between-merge-squash-and-rebase/2427520#2427520)
+!!! note
+
+    - **Merge commits**:
+      - Will keep all commits history of the feature branch and move them into the master branch
+      - Will add extra dummy commit.
+    - **Rebase and merge**:\
+      - Will append all commits history of the feature branch in the front of the master branch
+      - Will NOT add extra dummy commit.
+    - **Squash and merge**:\
+      - Will group all feature branch commits into one commit then append it in the front of the master branch
+      - Will add extra dummy commit.
+
+    Read More: [What is the difference between squash and rebase](https://stackoverflow.com/questions/2427238/what-is-the-difference-between-merge-squash-and-rebase/2427520#2427520)
 
 ## Git Cherry Pick
 
@@ -651,7 +674,7 @@ env:
 >>>>>>> origin/master
 ```
 
-```shell
+```console
 $ git mergetool
 # Display in terminal
 # ╔═══════╦══════╦════════╗
@@ -678,11 +701,12 @@ $ :diffg RE
 $ :wqa
 ```
 
-> **Note**:
-> - `LOCAL` – this is file from the current branch
-> - `BASE` – common ancestor, how file looked before both changes
-> - `REMOTE` – file you are merging into your branch
-> - `MERGED` – merge result, this is what gets saved in the repo
+!!! note
+
+    * `LOCAL` – this is file from the current branch
+    * `BASE` – common ancestor, how file looked before both changes
+    * `REMOTE` – file you are merging into your branch
+    * `MERGED` – merge result, this is what gets saved in the repo
 
 > **Note**:
 > - `diffg RE` - remote change
@@ -698,7 +722,7 @@ Removing config.yaml.orig
 
 #### CASE: `git push` to Remote Repository
 
-```shell
+```console
 $ git push
 To https://github.com/username/myproject.git.git
  ! [rejected]        master -> master (non-fast-forward)

@@ -25,21 +25,6 @@ and levels of detail. A data warehouse also ensures data quality, consistency,
 and accuracy by applying standard rules and transformations during the data integration
 process
 
-**Table of Contents**:
-
-- [Types of Data Warehouse](#types-of-data-warehouse)
-  - [Enterprise Data Warehouse](#enterprise-data-warehouse)
-    - [Advantages of Using Enterprise Data Warehouses](#advantages-of-using-enterprise-data-warehouses)
-    - [Enterprise Data Warehouse Architecture](#enterprise-data-warehouse-architecture)
-    - [Types of Enterprise Data Warehouses](#types-of-enterprise-data-warehouses)
-  - [Operational Data Store](#operational-data-store)
-  - [Data Mart](#data-mart)
-- [General stages of Data Warehouse]
-- [Components of Data Warehouse]
-- [Data Warehouse Architecture](#data-warehouse-architecture)
-- [Data Warehouse Design Models](#data-warehouse-design-models)
-- [Benefits of a data warehouse](#benefits-of-a-data-warehouse)
-
 ## Types of Data Warehouse
 
 There are three main types of data warehouses:

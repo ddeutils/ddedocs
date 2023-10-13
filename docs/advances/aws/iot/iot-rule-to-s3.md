@@ -12,7 +12,7 @@
 
       * Create Connect Policy
 
-        ```json
+        ```json linenums="1"
         {
           "Version": "2012-10-17",
           "Statement": [
@@ -39,3 +39,6 @@
 
 - https://docs.aws.amazon.com/solutions/latest/constructs/aws-iot-s3.html
 - https://github.com/awslabs/aws-solutions-constructs/tree/main/source/patterns/@aws-solutions-constructs/aws-iot-s3
+
+- https://www.youtube.com/watch?v=SN4_2ua6_Ko
+- https://www.youtube.com/watch?v=kGqbqYMjAIE

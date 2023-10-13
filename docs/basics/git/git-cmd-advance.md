@@ -1,27 +1,6 @@
-Advance Git
-===========
+# Git Commands Advance
 
-> TOPICS:
-> - [Checkout and Revert](#git-checkout-and-revert)
->   - [Checkout](#checkout)
->   - [Revert](#revert)
-> - [Reset Scenarios](#reset-scenarios)
->   - [Scenario: Working Area](#scenario-1-delete-file-in-working-area)
->   - [Scenario: Staged Area](#scenario-2-delete-file-and-add-to-staged-area)
->   - [Scenario: Local Repository](#scenario-3-delete-file-and-commit-to-local-repository)
-> - [Reset `master` Branch](#reset-master-branch)
-> - [Rebase](#git-rebase)
-> - [Search and Find](#search-and-find)
-> - [submodules](#git-submodules)
-> - [Cherry Picking](#cherry-picking)
-> - [The Reflog](#the-reflog)
-> - [](#git-blame)
-> - [Git Bisect](#git-bisect)
-
----
-
-Git Checkout and Revert
------------------------
+## Git Checkout and Revert
 
 ### Checkout
 

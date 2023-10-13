@@ -8,17 +8,6 @@ to queries by reducing the number of joins needed to satisfy user needs.
 
 - De-normalization is commonly used with read-intensive systems such as Data Warehouses
 
-**Table of Contents**:
-
-- [De-Normalization Techniques](#de-normalization-techniques)
-  - [Adding Redundant columns]()
-  - [Coming tables]
-  - [Adding Derived column]
-  - [Partitioning Relation]
-- [Materialized Views](#materialized-views)
-- [Drawbacks of De-Normalization]
-- [De-Normalization and Data Warehouses]
-
 > **Note**: \
 > Read-intensive = low number of updates + high number of read queries.
 

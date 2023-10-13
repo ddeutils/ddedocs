@@ -53,7 +53,9 @@ nav:
       - Tools:
           - Git:
               - basics/git/index.md
-              - Commands: basics/git/git-cmd-common.md
+              - Commands:
+                  - Common: basics/git/git-cmd-common.md
+                  - Advance: basics/git/git-cmd-advance.md
               - Scenarios: basics/git/git-common-scenarios.md
               - Strategies:
                   - Branching Strategies: basics/git/git-branching-strategies.md
@@ -86,9 +88,13 @@ nav:
                       - Model: basics/data/data_model/dml-dimension-model.md
                       - Implement: basics/data/data_model/dml-dimension-model-implement.md
                   - Bill Inmon:
-                      - Model: basics/data/data_warehouse/dml-3rd-normal-model.md
+                      - Model: basics/data/data_model/dml-3rd-normal-model.md
               - Data Warehouse:
                   - basics/data/data_warehouse/index.md
+                  - Normalization: basics/data/data_warehouse/dwh-db-normalization.md
+                  - De-Normalization: basics/data/data_warehouse/dwh-db-de-normalization.md
+          - Analytic:
+              - basics/analytic/index.md
       - Services:
           - GitHub:
               - basics/github/index.md
@@ -155,8 +161,9 @@ nav:
                       - Deploy Python App: advances/azure/devops/devops-cicd-self-hosted-win-fastapi.md
           - AWS:
               - advances/aws/index.md
-              - IoT Core:
-                  - Rule: advances/aws/iot_core/iotc_rule.md
+              - IoT:
+                  - Rule to S3: advances/aws/iot_core/iot-rule-to-s3.md
+                  - Rule to Kinesis: advances/aws/iot_core/iot-rule-to-kinesis.md
 #              - Glue:
 #                  - ??
           - Google:
