@@ -62,6 +62,8 @@ nav:
                   - Commit Release: basics/git/git-commit-release.md
           - Docker:
               - basics/docker/index.md
+              - Commands:
+                  - Management: basics/docker/docker-cmd-management.md
           - Pandas:
               - basics/pandas/index.md
           - AirFlow:
@@ -80,19 +82,19 @@ nav:
           - Data:
               - basics/data/index.md
               - Data Observability: basics/data/data-ops-data-observability.md
+              - Data Warehouse:
+                  - basics/data/data_warehouse/index.md
               - Data Model:
+                  - Bill Inmon:
+                      - Normalization: basics/data/data_model/dml-normalization-form.md
+                      - Model: basics/data/data_model/dml-3rd-normal-model.md
+                  - Ralph Kimball:
+                      - De-Normalization: basics/data/data_model/dml-denormalization-form.md
+                      - Model: basics/data/data_model/dml-dimension-model.md
+                      - Implement: basics/data/data_model/dml-dimension-model-implement.md
                   - Data Vault:
                       - Model: basics/data/data_model/dml-data-vault-model.md
                       - Implement: basics/data/data_model/dml-data-vault-model-implement.md
-                  - Ralph Kimball:
-                      - Model: basics/data/data_model/dml-dimension-model.md
-                      - Implement: basics/data/data_model/dml-dimension-model-implement.md
-                  - Bill Inmon:
-                      - Model: basics/data/data_model/dml-3rd-normal-model.md
-              - Data Warehouse:
-                  - basics/data/data_warehouse/index.md
-                  - Normalization: basics/data/data_warehouse/dwh-db-normalization.md
-                  - De-Normalization: basics/data/data_warehouse/dwh-db-de-normalization.md
           - Analytic:
               - basics/analytic/index.md
       - Services:

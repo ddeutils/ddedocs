@@ -10,9 +10,10 @@ yet, so it still run on VM.
 
 Docker is not compatible manage the large resource such as 128 Core with 1 memory 1TB.
 
-> **Note**: \
-> The Production database should not run on Docker or any container services. You
-> able to go this way, but it has many problems, like maintain solution
+!!! note
+
+    The Production database should not run on Docker or any container services.
+    You able to go this way, but it has many problems, like maintain solution.
 
 ## Docker Concepts
 

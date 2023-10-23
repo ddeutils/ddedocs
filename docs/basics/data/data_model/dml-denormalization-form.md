@@ -8,6 +8,19 @@ to queries by reducing the number of joins needed to satisfy user needs.
 
 - De-normalization is commonly used with read-intensive systems such as Data Warehouses
 
+!!! quote
+
+    Denormalization is a strategy used on a previously-normalized database to
+    increase performance. In computing, denormalization is the process of trying
+    to improve the read performance of a database, at the expense of losing some
+    write performance, by adding redundant copies of data or by grouping data.
+    It is often motivated by performance or scalability in relational database
+    software needing to carry out very large numbers of read operations.
+    Denormalization should not be confused with Unnormalized form. Databases/tables
+    must first be normalized to efficiently denormalize them.
+
+    [By Wiki Denormalization](https://en.wikipedia.org/wiki/Denormalization)
+
 > **Note**: \
 > Read-intensive = low number of updates + high number of read queries.
 
