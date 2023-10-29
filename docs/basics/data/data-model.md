@@ -40,11 +40,12 @@ Data models can generally be divided into three categories, which vary according
 to their degree of abstraction. The process will start with a conceptual model,
 progress to a logical model and conclude with a physical model.
 
-![Types of Data Models](images/types-of-data-models.png)
+![Types of Data Models](../data_warehouse/images/types-of-data-models.png)
 
 Each type of data model is discussed in more detail below:
 
 ### Conceptual data models
+
 They are also referred to as domain models and offer a big-picture view of what
 the system will contain, how it will be organized, and which business rules are involved.
 Conceptual models are usually created as part of the process of gathering initial
@@ -55,9 +56,10 @@ important for the business to represent in the data model), their characteristic
 and constraints, the relationships between them and relevant security
 and data integrity requirements. Any notation is typically simple.
 
-![Conceptual Data Model](images/conceptual-data-model.png)
+![Conceptual Data Model](../data_warehouse/images/conceptual-data-model.png)
 
 ### Logical data models
+
 They are less abstract and provide greater detail about the concepts and relationships
 in the domain under consideration. One of several formal data modeling notation
 systems is followed. These indicate data attributes, such as data types and
@@ -69,9 +71,10 @@ Logical data models can be useful in highly procedural implementation environmen
 or for projects that are data-oriented by nature, such as data warehouse design
 or reporting system development.
 
-![Logical Data Model](images/logical-data-model.png)
+![Logical Data Model](../data_warehouse/images/logical-data-model.png)
 
 ### Physical data models
+
 They provide a schema for how the data will be physically stored within a database.
 As such, they're the least abstract of all. They offer a finalized design that
 can be implemented as a relational database, including associative tables that
@@ -81,7 +84,7 @@ foreign keys that will be used to maintain those relationships.
 Physical data models can include database management system (DBMS)-specific properties,
 including performance tuning.
 
-![Physical Data Model](images/physical-data-model.png)
+![Physical Data Model](../data_warehouse/images/physical-data-model.png)
 
 ## Data modeling process
 

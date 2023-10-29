@@ -1,14 +1,32 @@
-# Third Normal From Model
+# Data Warehouse: _Bill Inmon Approach_
 
-In the perspective of Bill Inmon, the first step should be to create a consolidated
-enterprise-wide data warehouse. This can be made by connecting numerous databases
-to the analytical needs of departments, which are later referred to as data marts.
-As a result, this method is known as the top-down approach.
+The Bill Inmon design approach uses the normalized form for building entity structure,
+avoiding data redundancy as much as possible. This results in clearly identifying
+business requirements and preventing any data update irregularities.
+Moreover, the advantage of this top-down approach in database design is that it
+is robust to business changes and contains a dimensional perspective of data across data mart.
+
+The Inmon methodology, also known as normalized modeling, is a top-down approach that focuses on designing the data warehouse around the data.
+
+It uses a 3NF (third normal form) schema to model the data and focuses on creating a single integrated data model that supports all of the organization’s reporting and analysis needs.
+
+The Inmon methodology is known for its data integrity, consistency, and accuracy.
+
+* Inmon’s model follows a top-down approach. The Data Warehouse (DWH) is sourced
+  from OLTP systems and is the central repository of data.
+
+* The Data Warehouse in Inmon’s model is in Third Normal Form (3NF).
+
+* The Data marts (DM) are provisioned out of the Data Warehouse as and when required.
+  Data marts in Inmon’s model are in 3NF from which the OLAP cubes are built.
+
+!!! quote
+
+    Single version of the truth
 
 ## Advantages of the Inmon
 
 The following are the main advantages of the Inmon method:
-
 
 - Because it is the only source for data marts and all data in the data warehouse is integrated, the data warehouse genuinely acts as the enterprise's single source of truth.
 

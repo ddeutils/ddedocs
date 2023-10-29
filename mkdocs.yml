@@ -81,20 +81,21 @@ nav:
               - Joblib: basics/python/py-joblib.md
           - Data:
               - basics/data/index.md
-              - Data Observability: basics/data/data-ops-data-observability.md
-              - Data Warehouse:
-                  - basics/data/data_warehouse/index.md
-              - Data Model:
-                  - Bill Inmon:
-                      - Normalization: basics/data/data_model/dml-normalization-form.md
-                      - Model: basics/data/data_model/dml-3rd-normal-model.md
-                  - Ralph Kimball:
-                      - De-Normalization: basics/data/data_model/dml-denormalization-form.md
-                      - Model: basics/data/data_model/dml-dimension-model.md
-                      - Implement: basics/data/data_model/dml-dimension-model-implement.md
-                  - Data Vault:
-                      - Model: basics/data/data_model/dml-data-vault-model.md
-                      - Implement: basics/data/data_model/dml-data-vault-model-implement.md
+              - Data Model: basics/data/data-model.md
+              - Data Quality: basics/data/data-quality.md
+          - Database:
+              - basics/database/index.md
+              - Normalization: basics/database/db-normalization-form.md
+              - De-Normalization: basics/database/db-denormalization-form.md
+          - Data Warehouse:
+              - basics/data_warehouse/index.md
+              - Inmon Approach: basics/data_warehouse/dwh-inmon-approach.md
+              - Kimball Approach: basics/data_warehouse/dwh-kimball-approach.md
+              - Data Vault Approach: basics/data_warehouse/dwh-data-vault-approach.md
+          - Data Governance:
+              - basics/data_governance/index.md
+          - Data Observability:
+              - basics/data_observability/index.md
           - Analytic:
               - basics/analytic/index.md
       - Services:

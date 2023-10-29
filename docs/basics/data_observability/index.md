@@ -1,3 +1,7 @@
+---
+icon: material/engine-outline
+---
+
 # Data Observability
 
 **Data observability** is an organization’s ability to fully understand the health of

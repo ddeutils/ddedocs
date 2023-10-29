@@ -1,12 +1,25 @@
-# Dimension Model
+# Data Warehouse: _Ralph Kimball Approach_
 
-_Last update: 2023-03-27 (`Copy Edition`)_
+The Kimball methodology, also known as dimensional modeling, is a bottom-up approach
+that focuses on designing the data warehouse around the business process or subject
+area.
 
-> **TODO**:
-> - [ ] Fix: Schemas chart
-> - [ ] Change: Summary document
+It uses a star schema or snowflake schema to model the data and focuses on creating dimension and fact tables to support analysis. The Kimball methodology is known for its simplicity, flexibility, and ease of use.
 
----
+In contrast, dimensional models or Kimball dimensional data models, data models
+based on the technique developed by _Ralph Kimball_, are denormalized structures designed
+to retrieve data from a data warehouse. They are optimized to perform the Select
+operation and are used in the basic design framework to build highly optimized
+and functional data warehouses.
+
+* Kimball’s model follows a bottom-up approach. The Data Warehouse (DW) is provisioned
+  from Datamarts (DM) as and when they are available or required.
+
+* The Datamarts are sourced from OLTP systems are usually relational databases in
+  Third normal form (3NF).
+
+* The Data Warehouse which is central to the model is a de-normalized star schema.
+  The OLAP cubes are built on this DWH.
 
 I will say that this is the latest model that serve to Data Science or Data Analytic
 for using to cube analysis process.

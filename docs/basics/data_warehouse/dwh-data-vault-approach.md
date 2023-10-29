@@ -1,4 +1,16 @@
-# Data Vault
+# Data Warehouse: Data Vault Approach
+
+In contrary to Inmon’s view, Linstedt assumes that all available data from the entire
+time period should be loaded into the warehouse. This is known as the
+"single version of the facts" approach. As with Kimball’s star schema, with the
+Data Vault Linstedt introduces some additional objects to organize the data warehouse
+structure. These objects are referred to as the hub, satellite and link.
+
+The Data Vault methodology is a hybrid approach that combines aspects of both the Kimball and Inmon methodologies.
+
+It uses a hub-and-spoke architecture to model the data and focuses on creating separate entities for business processes, data sources, and data types.
+
+The Data Vault methodology is known for its scalability, flexibility, and ability to handle complex data relationships.
 
 **Data Vault modeling** is a hybrid approach based on third normal form
 and dimensional modeling aimed at the logical Enterprise Data Warehouse (EDW).

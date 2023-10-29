@@ -1,5 +1,5 @@
 ---
-icon: material/home-analytics
+icon: material/elevation-rise
 ---
 
 # Analytic
