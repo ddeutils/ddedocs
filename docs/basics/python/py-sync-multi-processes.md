@@ -1,4 +1,4 @@
-# Synchronizing MutiProcesses
+# Synchronizing Multi-Processes
 
 ```python
 import multiprocessing

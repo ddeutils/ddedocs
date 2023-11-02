@@ -12,6 +12,10 @@ It uses a hub-and-spoke architecture to model the data and focuses on creating s
 
 The Data Vault methodology is known for its scalability, flexibility, and ability to handle complex data relationships.
 
+!!! quote
+
+    Single version of the facts
+
 **Data Vault modeling** is a hybrid approach based on third normal form
 and dimensional modeling aimed at the logical Enterprise Data Warehouse (EDW).
 The data vault model is built as a ground-up, incremental, and modular models
@@ -586,6 +590,12 @@ Let’s run through each stage of the pipeline
   A data vault architecture and model can be built on many platforms - both on premise
   and on cloud. Initial design for Data Vaults were to handle batch processing,
   but patterns also now exist for handling streaming data.
+
+Good fit for:
+
+* Enterprise teams where the ability to audit data is a primary concern
+* Teams that need flexibility and who want to make large structural changes to their data without causing delays in reporting
+* More technical data teams that can manage and govern the network-like growth of data vault models
 
 ## Disadvantages
 

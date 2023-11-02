@@ -1,20 +1,8 @@
 ---
-icon: material/book-open
+icon: material/sync-circle
 ---
 
-# Data Knowledge
-
-This is the main topic when we work in **Data Engineer** role. It the important
-knowledge the make you differ with software or backend developer.
-
-When you raise a Question like, _what I should to know about data?_, it is so difficult
-to explain all data knowledge but the answers will represent about how to manage your
-data that serve to who want to use.
-
-Hence, Data Engineer is who know how to manage data for any requirement from data
-user.
-
-## Data Management
+# Data Management
 
 **Data management** is the effective practice of collecting, storing, protecting, delivering,
 and processing data. In business, data is usually associated with customers, prospects,
@@ -30,37 +18,40 @@ and operations throughout an organization
 So, whether you’re researching big data or master data, you'll use many types of
 data management.
 
-- **Data processing**: \
-  Within this stage of the [data management lifecycle](https://www.ibm.com/topics/data-lifecycle-management),
-  raw data is ingested from a range of data sources, such as web APIs, mobile apps,
-  Internet of Things (IoT) devices, forms, surveys, and more. It is, then, usually
-  processed or loaded, via data integration techniques, such as [extract, transform,
-  load (ETL)](https://www.ibm.com/topics/etl) or [extract, load, transform (ELT)](https://www.ibm.com/topics/elt).
-  While ETL has historically been the standard method to integrate and organize
-  data across different datasets, ELT has been growing in popularity with the emergence
-  of cloud data platforms and the increasing demand for real-time data. Independently
-  of the [data integration](https://www.ibm.com/analytics/data-integration) technique
-  used, the data is usually filtered, merged,
-  or aggregated during the data processing stage to meet the requirements for its
-  intended purpose, which can range from a business intelligence dashboard to a
-  predictive machine learning algorithm.
+* **Data processing**:
 
-- **Data storage**: \
-  While data can be stored before or after data processing, the type of data and
-  purpose of it will usually dictate the storage repository that is leveraged.
-  For example, data warehousing requires a defined schema to meet specific data
-  analytics requirements for data outputs, such as dashboards, [data visualizations],
-  and other [business intelligence] tasks. These data requirements are usually directed
-  and documented by business users in partnership with data engineers, who will
-  ultimately execute against the defined [data model]. The underlying structure of
-  a [data warehouse] is typically organized as a relational system (i.e. in a structured data format),
-  sourcing data from transactional databases. However, other storage systems,
-  such as [data lakes], incorporate data from both relational and [non-relational systems],
-  becoming a sandbox for innovative data projects. Data lakes benefit data scientists
-  in particular, as they allow them to incorporate both structured and unstructured
-  data into their data science projects.
+    Within this stage of the [data management lifecycle](https://www.ibm.com/topics/data-lifecycle-management),
+    raw data is ingested from a range of data sources, such as web APIs, mobile apps,
+    Internet of Things (IoT) devices, forms, surveys, and more. It is, then, usually
+    processed or loaded, via data integration techniques, such as [extract, transform,
+    load (ETL)](https://www.ibm.com/topics/etl) or [extract, load, transform (ELT)](https://www.ibm.com/topics/elt).
+    While ETL has historically been the standard method to integrate and organize
+    data across different datasets, ELT has been growing in popularity with the emergence
+    of cloud data platforms and the increasing demand for real-time data. Independently
+    of the [data integration](https://www.ibm.com/analytics/data-integration) technique
+    used, the data is usually filtered, merged,
+    or aggregated during the data processing stage to meet the requirements for its
+    intended purpose, which can range from a business intelligence dashboard to a
+    predictive machine learning algorithm.
 
-- **Data governance**: \
+* **Data storage**:
+
+    While data can be stored before or after data processing, the type of data and
+    purpose of it will usually dictate the storage repository that is leveraged.
+    For example, data warehousing requires a defined schema to meet specific data
+    analytics requirements for data outputs, such as dashboards, [data visualizations],
+    and other [business intelligence] tasks. These data requirements are usually directed
+    and documented by business users in partnership with data engineers, who will
+    ultimately execute against the defined [data model]. The underlying structure of
+    a [data warehouse] is typically organized as a relational system (i.e. in a structured data format),
+    sourcing data from transactional databases. However, other storage systems,
+    such as [data lakes], incorporate data from both relational and [non-relational systems],
+    becoming a sandbox for innovative data projects. Data lakes benefit data scientists
+    in particular, as they allow them to incorporate both structured and unstructured
+    data into their data science projects.
+
+* **Data governance**:
+
   Data governance is a set of standards and business processes which ensure that
   data assets are leveraged effectively within an organization. This generally
   includes processes around data quality, data access, usability, and data security.

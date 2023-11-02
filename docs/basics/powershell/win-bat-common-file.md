@@ -1,9 +1,5 @@
 # Window with Common Batch File
 
-**Update**: `2023-05-09` |
-**Type**: `Use-Cases` |
-**Tag**: `Basic` `Shell` `Window` `Batch File`
-
 As others have already said, parameters passed through the command line can be
 accessed in batch files with the notation `%1` to `%9`. There are also two other
 tokens that you can use:

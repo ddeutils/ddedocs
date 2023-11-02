@@ -1,4 +1,4 @@
-# Spark Bucketing
+# Spark: _Bucketing_
 
 ## What is bucketing?
 

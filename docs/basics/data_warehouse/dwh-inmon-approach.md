@@ -1,30 +1,35 @@
 # Data Warehouse: _Bill Inmon Approach_
 
-The Bill Inmon design approach uses the normalized form for building entity structure,
+The Bill Inmon design approach uses the normalized form (3NF) for building entity structure,
 avoiding data redundancy as much as possible. This results in clearly identifying
 business requirements and preventing any data update irregularities.
-Moreover, the advantage of this top-down approach in database design is that it
-is robust to business changes and contains a dimensional perspective of data across data mart.
 
-The Inmon methodology, also known as normalized modeling, is a top-down approach that focuses on designing the data warehouse around the data.
+The Inmon approach, also known as normalized modeling, is known as the top-down
+or data-driven strategy, in which we start with the data warehouse and break it
+down into data marts. These data marts are then specialised to satisfy the demands
+of other departments inside the firm, such as finance, accounting, and human
+resources.
 
-It uses a 3NF (third normal form) schema to model the data and focuses on creating a single integrated data model that supports all of the organization’s reporting and analysis needs.
-
-The Inmon methodology is known for its data integrity, consistency, and accuracy.
-
-* Inmon’s model follows a top-down approach. The Data Warehouse (DWH) is sourced
-  from OLTP systems and is the central repository of data.
-
-* The Data Warehouse in Inmon’s model is in Third Normal Form (3NF).
-
-* The Data marts (DM) are provisioned out of the Data Warehouse as and when required.
-  Data marts in Inmon’s model are in 3NF from which the OLAP cubes are built.
+* Begin with the corporation's data model. Identify all of the data sources that
+  the company has access to.
+* Identify the essential entities (customer, product, order, etc.) and their respective
+  linkages based on the data and understanding of business needs.
+* Create a thorough, logical model using the entity structure. The logical model
+  includes all the properties of each entity, as well as their respective interactions
+  and co-dependencies, in great detail. According to data modelling terminology,
+  the logical model creates logical schemas for entity relationships.
+* Build the physical model from the logical one. Extract data from various sources,
+  alter it and integrate it into a normalised data model using ETL operations.
+  Each normalised data model stores data in the third normal form to avoid redundancy.
+  The data warehouse's core is the normalised data model.
+* Create data marts for different departments. For all reporting needs, data marts
+  are used to access data, and the data warehouse serves as a single source of truth.
 
 !!! quote
 
     Single version of the truth
 
-## Advantages of the Inmon
+## Advantages of the Inmon Approach
 
 The following are the main advantages of the Inmon method:
 
@@ -38,7 +43,18 @@ The following are the main advantages of the Inmon method:
 
 - Can handle a variety of reporting requirements within the organisation.
 
-## Disadvantages of the Inmon
+* Flexibility: Inmon's approach adapts faster to changing business needs and data source alterations. Inmon's architecture is more versatile due to the ETL process design that results in normalised data. The architects alter only a few normalised tables, communicating the modification downstream.
+* Single source of truth: Because of the normalised data model, the data warehouse serves as a single source of truth for the entire organisation.
+* Less prone to errors: Because normalisation minimises data redundancy, both engineering and analytical procedures are less susceptible to errors.
+* Completeness: Inmon's approach incorporates all Enterprise data, ensuring that all reporting requirements are met.
+
+Good fit for:
+
+* Low complexity data that connects neatly together
+* Simple, business-focused downstream use cases for the data
+* Central data teams that have deep knowledge of the facets of their data
+
+## Disadvantages of the Inmon Approach
 
 The following are some drawbacks of the Inmon method:
 
@@ -52,6 +68,10 @@ The following are some drawbacks of the Inmon method:
 
 - A vast team of professionals is required to manage the data environment efficiently.
 
+* Cost of initial setup and regular maintenance: The time and cost required to set up and maintain Inmon's architecture are far greater than the time and investment needed for Kimball's architecture. Normalised schemas are more challenging to build and maintain than their denormalised counterparts.
+* Skill requirement: Highly skilled engineers are required for Inmon's method, which is harder to come by and more expensive to maintain on the payroll.
+* Extra ETL is required: Separating data marts from the data warehouse necessitates the employment of more ETL processes to generate the data marts, resulting in increased engineering overhead.
+
 ## Reference
 
-- https://www.codingninjas.com/codestudio/library/inmon-approach-in-data-warehouse-designing
+- [Inmon Approach in DWH Designing](https://www.codingninjas.com/codestudio/library/inmon-approach-in-data-warehouse-designing)

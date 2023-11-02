@@ -1,9 +1,4 @@
-Deployment Flow with Git
-========================
-
-> TOPICS:
-> - [Jira with Git](#jira-with-git)
-> - [Deployment](#)
+# Deployment Flow with Git
 
 Jira with Git
 -------------

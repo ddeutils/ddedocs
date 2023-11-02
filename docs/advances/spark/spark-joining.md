@@ -1,4 +1,4 @@
-# Spark Joining
+# Spark: _Joining_
 
 ## SortMerge Joins
 

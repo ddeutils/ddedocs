@@ -7,7 +7,7 @@ collect data. These collections can be mutable or immutable. You can use them
 according to your requirement. `Scala.collection.mutable` package contains all the
 mutable collections. You can add, remove and update data while using this package.
 
-![](../images/scala-collection-tree.png)
+![](images/scala-collection-tree.png)
 
 `Scala.collection.immutable` contains all the immutable collections. It does not
 allow you to modify data. Scala imports this package by default. If you want

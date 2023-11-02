@@ -4,7 +4,9 @@ The Kimball methodology, also known as dimensional modeling, is a bottom-up appr
 that focuses on designing the data warehouse around the business process or subject
 area.
 
-It uses a star schema or snowflake schema to model the data and focuses on creating dimension and fact tables to support analysis. The Kimball methodology is known for its simplicity, flexibility, and ease of use.
+It uses a star schema or snowflake schema to model the data and focuses on creating
+dimension and fact tables to support analysis. The Kimball methodology is known for
+its simplicity, flexibility, and ease of use.
 
 In contrast, dimensional models or Kimball dimensional data models, data models
 based on the technique developed by _Ralph Kimball_, are denormalized structures designed
@@ -29,6 +31,20 @@ based on the technique developed by _Ralph Kimball_, are denormalized structures
 to retrieve data from a data warehouse. They are optimized to perform the Select
 operation and are used in the basic design framework to build highly optimized
 and functional data warehouses.
+
+The Kimball approach is called bottom-up because we start with user-specific data marts,
+which are the core building blocks of our conceptual data warehouse. It's critical
+to know which model best meets your needs from the start; so that it can be
+incorporated into the data warehouse structure.
+
+* Begin by identifying and documenting the most significant business operations,
+  demands, and queries that are being asked.
+* All data sources available across the organisation should be documented.
+* Create ETL pipelines that gather, modify, and load data into a de-normalised
+  data model from data sources. The dimensional model is constructed in the form
+  of either a star schema or a snowflake schema.
+* The dimensional model has frequently constructed around and within dimensional
+  data marts for specific departments.
 
 ## What is Data Dimensional Modelling?
 
@@ -548,6 +564,31 @@ the concept into their applications. Some of those limitations are given below:
 
 Despite these limitations, the DDM technique has proved to be one of the simplest
 and most efficient techniques to handle data in Data Warehouses to date.
+
+## Advantages
+
+Kimball's architecture has several advantages.
+
+* Simplicity and speed: Kimball's architecture is significantly easier and faster to construct and establish.
+* Understandable: Non-technical and technical staff both may understand the dimensional data model.
+* Relevancy: Kimball's bottom-up methodology, unlike Inmon's, makes all data linkages relevant to the business needs.
+* Engineering team needs: In comparison to Inmon's technique, Kimball requires fewer engineers with less specific technical abilities to set up and operate the data warehouse.
+
+Good fit for:
+
+* Medium-to-large number of data sources
+* Centralized data teams
+* End-use case for data is primarily around business intelligence and providing insights
+* Teams that want to create an easily navigable and predictable data warehouse design
+
+## Disadvantages
+
+Kimball's architecture has some drawbacks.
+
+* Data redundancy: There is more data redundancy and hence a higher likelihood of errors since data is fed into a dimensional model.
+* No single source of truth: Data marts are used to design and organise data in the data warehouse. When combined with data redundancy, Kimball's architecture prevents the company from having a single source of truth.
+* Less adaptable: Kimball's architecture is less flexible and adaptable to modifications when data demands change, business requirements vary, and incoming data sources alter their payloads.
+* Incomplete: The strategy taken begins (and concludes) with important business processes. As a result, it does not provide a complete 360-degree picture of business data. Instead, it helps report on particular subject areas in the corporate world.
 
 ## What is Multi-Dimensional Data Model in Data Warehouse?
 

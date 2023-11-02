@@ -15,7 +15,7 @@ data lineage and data health insights to detect, resolve, and prevent data anoma
 This leads to healthier pipelines, more productive teams, better data management,
 and happier customers.
 
-**The five pillars of data observability are**:
+**The 5 pillars of data observability**:
 
 1.  **Freshness**:
 

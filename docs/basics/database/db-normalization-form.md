@@ -1,4 +1,4 @@
-# Database Normalization
+# Database: _Normalization_
 
 **Normalization** is a database design technique that reduces data redundancy and
 eliminates undesirable characteristics like Insertion, Update and Deletion Anomalies.
@@ -141,21 +141,21 @@ R = (courseNo,  tutor,  lab, labSize){
 }
 ```
 
-### Insert anomaly
+=== "Insert"
 
-What if we built a new lab (e.g. `lab: A4`), but it’s not assigned to any courses
-or tutors yet, so we won’t be able to insert it to our table because (`lab`) comes
-with (`course`) and (`tutor`) because it does not have separated table.
+    What if we built a new lab (e.g. `lab: A4`), but it’s not assigned to any courses
+    or tutors yet, so we won’t be able to insert it to our table because (`lab`) comes
+    with (`course`) and (`tutor`) because it does not have separated table.
 
-### Delete anomaly
+=== "Delete"
 
-What if we need to delete (`courseNo: 300`) that means we will delete the details
-of (`lab: C3`) also and that’s not what we want.
+    What if we need to delete (`courseNo: 300`) that means we will delete the details
+    of (`lab: C3`) also and that’s not what we want.
 
-### Update anomaly
+=== "Update"
 
-What if we improved (`lab: C3`) and now it (`labSize: 250`), to update it we will
-have to update all other columns where (`lab: C3`).
+    What if we improved (`lab: C3`) and now it (`labSize: 250`), to update it we will
+    have to update all other columns where (`lab: C3`).
 
 ## Dependency Rules
 

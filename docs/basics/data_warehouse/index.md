@@ -616,30 +616,33 @@ Transform, Load) tools, which automate the process of moving and converting data
 
 Three types of OLAP models can be used in this tier, which are known as
 
-- **ROLAP**:
-  Relational online analytical processing is a model of online analytical processing
-  which carries out an active multidimensional breakdown of data stored in a relational database,
-  instead of redesigning a relational database into a multidimensional database.
+=== "ROLAP"
 
-  This is applied when the repository consists of only the relational database
-  system in it.
+    Relational online analytical processing is a model of online analytical processing
+    which carries out an active multidimensional breakdown of data stored in a relational database,
+    instead of redesigning a relational database into a multidimensional database.
 
-- **MOLAP**:
-  Multidimensional online analytical processing is another model of online analytical
-  processing that catalogs and comprises directories directly on its multidimensional
-  database system.
+    This is applied when the repository consists of only the relational database
+    system in it.
 
-  This is applied when the repository consists of only the multidimensional database
-  system in it.
+=== "MOLAP"
 
-- **HOLAP**:
-  Hybrid online analytical processing is a hybrid of both relational and multidimensional
-  online analytical processing models.
+    Multidimensional online analytical processing is another model of online analytical
+    processing that catalogs and comprises directories directly on its multidimensional
+    database system.
 
-  When the repository contains both the relational database management system and
-  the multidimensional database management system, HOLAP is the best solution for
-  a smooth functional flow between the database systems. HOLAP allows storing data
-  in both the relational and the multidimensional formats.
+    This is applied when the repository consists of only the multidimensional database
+    system in it.
+
+=== "HOLAP"
+
+    Hybrid online analytical processing is a hybrid of both relational and multidimensional
+    online analytical processing models.
+
+    When the repository contains both the relational database management system and
+    the multidimensional database management system, HOLAP is the best solution for
+    a smooth functional flow between the database systems. HOLAP allows storing data
+    in both the relational and the multidimensional formats.
 
 The type of OLAP model used is dependent on the type of database system that exists.
 
@@ -657,20 +660,20 @@ and dashboards based on the data in the data warehouse.
 
 Below are the few commonly used Top Tier tools.
 
-- IBM Cognos
-- Microsoft BI Platform
-- SAP Business Objects Web
-- Pentaho
-- Crystal Reports
-- SAP BW
-- SAS Business Intelligence
+* IBM Cognos
+* Microsoft BI Platform
+* SAP Business Objects Web
+* Pentaho
+* Crystal Reports
+* SAP BW
+* SAS Business Intelligence
 
 In addition to the three-tier architecture, some data warehouse architectures also
 include a metadata layer, which provides information about the data in the data
 warehouse, such as its origin, format, and meaning. The metadata layer can be used
 to help users understand and navigate the data.
 
-## Data Warehouse Design Model
+## Data Warehouse Design
 
 data warehouse design that can be applied within the framework of the design methods
 discussed earlier. Here is a brief overview of how each of these approaches relates
@@ -693,17 +696,18 @@ approach to data warehouse development. Bottom-up design is often associated wit
 dimensional modeling and may use hybrid modeling techniques to integrate the different
 data marts.
 
-**Example**:
+!!! example
 
-Dimensional Model (Ralph Kimball):
-The Dimensional Model, also known as the Kimball model, is a bottom-up design approach
-that emphasizes the importance of simplicity and ease of use. This model is designed
-to support ad-hoc querying and analysis and is often used for data warehouse implementations
-in smaller organizations. The Kimball model involves creating a denormalized data
-model, which is optimized for querying and analysis, and building a star or snowflake
-schema that supports specific business functions.
+    **Dimensional Model** (Ralph Kimball):
 
-See more, [Dimension Model](dwh-dimension-model.md)
+    The Dimensional Model, also known as the Kimball model, is a bottom-up design approach
+    that emphasizes the importance of simplicity and ease of use. This model is designed
+    to support ad-hoc querying and analysis and is often used for data warehouse implementations
+    in smaller organizations. The Kimball model involves creating a denormalized data
+    model, which is optimized for querying and analysis, and building a star or snowflake
+    schema that supports specific business functions.
+
+    See more, [Kimball Approach](./dwh-kimball-approach.md)
 
 ### Top-down design
 
@@ -714,15 +718,17 @@ and a clear understanding of the data sources and their relationships. Top-down 
 is often associated with data vault modeling and may use hybrid modeling techniques
 to accommodate the specific business requirements.
 
-**Example**:
+!!! example
 
-Third Normal Form Model (Bill Inmon):
-The 3NF Model, also known as the Inmon model, is a top-down design approach that
-emphasizes the importance of a comprehensive enterprise data model. This model is
-designed to support complex business processes and is often used for data warehouse
-implementations in large organizations. The Inmon model involves creating a normalized
-data model, which is then used to build data marts that support specific business
-functions.
+    **Third Normal Form Model** (Bill Inmon):
+    The 3NF Model, also known as the Inmon model, is a top-down design approach that
+    emphasizes the importance of a comprehensive enterprise data model. This model is
+    designed to support complex business processes and is often used for data warehouse
+    implementations in large organizations. The Inmon model involves creating a normalized
+    data model, which is then used to build data marts that support specific business
+    functions.
+
+    See more, [Inmon Approach](./dwh-inmon-approach.md)
 
 ### Hybrid design
 
@@ -734,26 +740,33 @@ a mix of top-down and bottom-up development. Hybrid design is often associated w
 modeling and may use a variety of design methods to create a flexible and adaptable
 data warehouse.
 
-**Example**:
+!!! example
 
-The Data Vault 2.0 Model is a hybrid design approach that combines elements of both
-the Inmon and Kimball models. This model is designed to support flexibility, scalability,
-and agility, and is often used for data warehouse implementations in organizations
-that need to handle large amounts of complex and varied data. The Data Vault 2.0 model
-involves creating a normalized data model that separates business entities and relationships
-into three types of tables (Hub, Link, and Satellite), which can then be used to
-build data marts that support specific business functions.
+    **Data Vault 2.0 Model**:
+    The DV 2.0 Model is a hybrid design approach that combines elements of both
+    the Inmon and Kimball models. This model is designed to support flexibility, scalability,
+    and agility, and is often used for data warehouse implementations in organizations
+    that need to handle large amounts of complex and varied data. The Data Vault 2.0 model
+    involves creating a normalized data model that separates business entities and relationships
+    into three types of tables (Hub, Link, and Satellite), which can then be used to
+    build data marts that support specific business functions.
 
-See more, [Data Vault Model](../data_model/dwh-data-vault-model.md)
+    See more, [Data Vault Model](./dwh-data-vault-approach.md)
 
-Differences between the three methodologies
+**Differences between the three designs**:
 
-* Approach: Kimball is bottom-up, Inmon is top-down, and Data Vault is a hybrid approach.
-* Schema: Kimball uses a star or snowflake schema, Inmon uses a 3NF schema, and Data Vault uses a hub-and-spoke schema.
-* Focus: Kimball focuses on the business process or subject area, Inmon focuses on the data, and Data Vault focuses on the relationships between the data.
-* Flexibility: Kimball is known for its flexibility, Inmon is known for its consistency, and Data Vault is known for its ability to handle complex data relationships.
-* Complexity: Kimball is relatively simple, Inmon is more complex, and Data Vault is the most complex of the three methodologies.
-* Each methodology has its own strengths and weaknesses, and the choice of methodology depends on the specific needs and requirements of the organization.
+* **Approach**: Kimball is bottom-up, Inmon is top-down, and Data Vault is a hybrid
+  approach.
+
+* **Schema**: Kimball uses a star or snowflake schema, Inmon uses a 3NF schema,
+  and Data Vault uses a hub-and-spoke schema.
+
+* **Focus**: Kimball focuses on the business process or subject area, Inmon focuses
+  on the data, and Data Vault focuses on the relationships between the data.
+* **Flexibility**: Kimball is known for its flexibility, Inmon is known for its
+  consistency, and Data Vault is known for its ability to handle complex data relationships.
+* **Complexity**: Kimball is relatively simple, Inmon is more complex, and
+  Data Vault is the most complex of the three methodologies.
 
 ### Summary
 
@@ -789,3 +802,5 @@ the Data Vault 2.0 model may be the best option.
 * [Guru99: Data Warehouse Architecture](https://www.guru99.com/data-warehouse-architecture.html#8)
 * [IBM: Data Warehouse](https://www.ibm.com/topics/data-warehouse/)
 * [A Complete Guide to Data Warehouse in 2022](https://www.analyticsvidhya.com/blog/2022/06/a-complete-guide-to-data-warehousing-in-2022/)
+* [CodingNinjas: Inmon vs Kimball Approaches in DWH](https://www.codingninjas.com/studio/library/inmon-vs-kimball-approach-in-data-warehousing)
+* [Nearshore: Data Warehouse Architecture](https://www.nearshore-it.eu/articles/technologies/data-warehouse-architecture/)

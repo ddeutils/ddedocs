@@ -1,3 +1,7 @@
+---
+icon: simple/scala
+---
+
 # Scala
 
 ## Installation

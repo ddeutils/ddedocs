@@ -13,8 +13,9 @@ git revert abc123
 git push origin staging
 ```
 
-> **Note**: \
-> for the last commit in the log you would write `git revert HEAD`.
+!!! note
+
+    for the last commit in the log you would write `git revert HEAD`.
 
 ## Revert commit with make it gone.
 
@@ -30,6 +31,7 @@ git push
 ```
 
 
-> **Note**: \
-> https://stackoverflow.com/questions/50473587/revert-a-commit-on-remote-branch \
-> https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit
+!!! note
+
+    * https://stackoverflow.com/questions/50473587/revert-a-commit-on-remote-branch
+    * https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit

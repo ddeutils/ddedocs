@@ -173,7 +173,7 @@ and hybrid. You can use single, multilevel and hierarchical in your class.
 Multiple and hybrid can only be achieved by using traits. Here, we are representing
 all types of inheritance by using pictorial form.
 
-![](../images/scala-inheritance-types.png)
+![](images/scala-inheritance-types.png)
 
 ```scala
 class Employee {

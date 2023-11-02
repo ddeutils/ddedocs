@@ -3,14 +3,15 @@
 De-normalization is an optimization technique to make our database respond faster
 to queries by reducing the number of joins needed to satisfy user needs.
 
-- In de-normalization, we mainly aim to reduce the number of tables that are needed
+* In de-normalization, we mainly aim to reduce the number of tables that are needed
   by re-joining these tables together and add redundant data.
 
-- De-normalization is commonly used with read-intensive systems such as Data Warehouses
+* De-normalization is commonly used with read-intensive, low number of updates and
+  high number of read queries, systems such as Data Warehouse (DWH).
 
 !!! quote
 
-    Denormalization is a strategy used on a previously-normalized database to
+    De-normalization is a strategy used on a previously-normalized database to
     increase performance. In computing, denormalization is the process of trying
     to improve the read performance of a database, at the expense of losing some
     write performance, by adding redundant copies of data or by grouping data.
@@ -21,28 +22,26 @@ to queries by reducing the number of joins needed to satisfy user needs.
 
     [By Wiki Denormalization](https://en.wikipedia.org/wiki/Denormalization)
 
-> **Note**: \
-> Read-intensive = low number of updates + high number of read queries.
+!!! note
 
-> **Warning**: \
-> De-normalization doesn't mean that we won't normalize our tables, It's like we
-> said before, an optimization technique that used after normalizing our table
-> to make it faster in some cases.
+    De-normalization doesn't mean that we won't normalize our tables, It's like we
+    said before, an optimization technique that used after normalizing our table
+    to make it faster in some cases.
 
 ## De-Normalization Techniques
 
 To de-normalize our normalized table, We will follow some methods that will be
 discussed below.
 
-> Before doing de-normalization you have to make sure of two things:
-> - The performance of the normalized system doesn't satisfy the user.
-> - De-normalization is the right solution for this performance issue.
+Before doing de-normalization you have to make sure of two things:
+* The performance of the normalized system doesn't satisfy the user.
+* De-normalization is the right solution for this performance issue.
 
 So briefly, De-normalization is used for:
 
-- Reduce the number and need for joins.
-- Reduce the number of needed tables.
-- Reduce foreign keys of your database.
+* Reduce the number and need for joins.
+* Reduce the number of needed tables.
+* Reduce foreign keys of your database.
 
 ### Adding Redundant columns
 
@@ -56,19 +55,25 @@ only (as a foreign key) that referenced to customers table, but It doesn't have 
 When we need to retrieve a list of all orders with the customer name, we will
 have to join these tables together.
 
-```postgres-sql
-SELECT C.CUSTOMER_NAME, O.ORDER_NAME
-FROM CUSTOMERS AS C
-JOIN ORDERS AS O
-ON C.CUSTOMER_ID = O.CUSTOMER_ID;
+```sql
+SELECT
+    C.CUSTOMER_NAME,
+    O.ORDER_NAME
+FROM CUSTOMERS  AS C
+JOIN ORDERS     AS O
+    ON C.CUSTOMER_ID = O.CUSTOMER_ID
+;
 ```
 
 To de-normalize this table, we will add a redundant customer_name column to Orders,
 Which will increase performance, and we won't need to join this table again.
 
-```postgres-sql
-SELECT O.CUSTOMER_NAME, O.ORDER_NAME
-FROM ORDERS O;
+```sql
+SELECT
+    O.CUSTOMER_NAME,
+    O.ORDER_NAME
+FROM ORDERS O
+;
 ```
 
 **Drawbacks of this method**:
@@ -152,8 +157,8 @@ have to read, which will impact the performance of operations in some meaningful
 
 #### Horizontal partitioning
 
-or **Row Splitting**. Split our main table rows into smaller partitions (tables) that
-will have the same columns.
+**Horizontal partitioning** or **Row Splitting**. Split our main table rows into
+smaller partitions (tables) that will have the same columns.
 
 This approach aims to make where clause more efficient by making it search in a
 smaller amount of data, Filter specify only a subset of the table that related to
@@ -161,26 +166,26 @@ the query, not the whole table, and reduced I/O overhead.
 
 #### Vertical partitioning
 
-or **Column Splitting**. In Vertical partitioning, We distribute table attributes across
-multiple partitions with primary key duplicated for each partition to make reconstructing
-of original table easier. We partition our table based on frequently used attributes
-and rarely used attributes.
+**Vertical partitioning** or **Column Splitting**. In Vertical partitioning, We
+distribute table attributes across multiple partitions with primary key duplicated
+for each partition to make reconstructing of original table easier. We partition
+our table based on frequently used attributes and rarely used attributes.
 
 We need to use this approach When some columns are frequently accessed more than
 other columns, To reduce table header size, And retrieve only the required attributes.
 
-> **Warning**: \
-> In case you have multiple requirements that needs the data combined you will
-> have to join the tables again which will cause performance problems.
+!!! warning
 
-## Materialized Views
+    In case you have multiple requirements that needs the data combined you will
+    have to join the tables again which will cause performance problems.
+
+### Materialized Views
 
 **Materialized Views** can improve performance and decrease time-consuming significantly,
 by using it to precomputing and store the result of costly queries like join and
 aggregation as **view** in your storage disk for future usage.
 
-> **Note**: \
-> Materialized View is all about run one time, and read many times.
+Materialized View is all about run one time, and read many times.
 
 When you need to use a query frequently, you can store it as materialized view,
 So in the future, you can retrieve the result of your query directly from the view
@@ -193,10 +198,10 @@ But you should to know that,
 
 ## Drawbacks of De-Normalization
 
-- De-normalization can slow updates, with many update overheads.
-- De-normalization can increase your table and database size.
-- De-normalization in some cases can make querying more complex instead of making it easier.
-- More storage will be needed for duplicated data.
+* De-normalization can slow updates, with many update overheads.
+* De-normalization can increase your table and database size.
+* De-normalization in some cases can make querying more complex instead of making it easier.
+* More storage will be needed for duplicated data.
 
 ## De-Normalization and Data Warehouses
 
@@ -227,25 +232,26 @@ it attributes rarely updated.
 
 ### Use Case: Star Schema
 
-> **Note**: \
-> **Dimensional Model**: It is a special model that is an alternative to an entity-relationship (ER)
-> model consisting of the ER information and itself, but combines the data in an
-> abbreviated form that makes the model more understandable to perform the queries
-> efficiently, and has the flexibility to change (Dimensional model is the modeling
-> approach of data warehouses).
+**Dimensional Model**: It is a special model that is an alternative to an
+entity-relationship (ER) model consisting of the ER information and itself, but
+combines the data in an abbreviated form that makes the model more understandable
+to perform the queries efficiently, and has the flexibility to change (Dimensional
+model is the modeling approach of data warehouses).
 
-Star schema is the simplest and easiest dimensional model for data warehouses,
+**Star schema** is the simplest and easiest dimensional model for data warehouses,
 because of that it's the most suitable schema for query processing, and it's highly
 de-normalized, but its drawback is its need for a large space to store data.
 
 Star schema consists of a fact table with a single table for each dimension.
-- A fact table in a pure star schema consists of multiple foreign keys, each paired with a primary key in a dimension, together with the facts containing the measurements.
-  - Typically, **normalized**.
-- Dimension tables not joined for each other.
-  - It joined using a fact table that does have a foreign key for each dimension.
-  - Typically, heavily **de-normalized**.
 
-## Conclusion
+* A fact table in a pure star schema consists of multiple foreign keys, each paired
+  with a primary key in a dimension, together with the facts containing the measurements.
+  * Typically, **normalized**.
+* Dimension tables not joined for each other.
+  * It joined using a fact table that does have a foreign key for each dimension.
+  * Typically, heavily **de-normalized**.
+
+## Summary
 
 De-normalization aims to add redundancy to your database for better performance,
 It also a great optimization technique that will help you to decrease query processing time.
@@ -254,4 +260,4 @@ and need more space for storing redundant data.
 
 ## References
 
-- https://datavalley.technology/denormalization-when-why-and-how/
+- [DataValley: De-normalization When, Why, and How](https://datavalley.technology/denormalization-when-why-and-how/)

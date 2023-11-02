@@ -1,3 +1,7 @@
+---
+icon: material/delta
+---
+
 # Delta Lake
 
 Delta Lake is the optimized storage layer that provides the foundation for storing
