@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+---
+hide:
+  - navigation
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Welcome to **Data Develop & Engineer**
 
-## Commands
+This project will deliver all knowledge from my experience and other
+sharing knowledge in Data Develop and Engineer field.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* [The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)

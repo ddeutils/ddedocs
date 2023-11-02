@@ -161,3 +161,6 @@ cython_debug/
 
 # ruff
 .ruff_cache/
+
+# Local Keeper
+.local/

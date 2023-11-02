@@ -2,12 +2,16 @@ site_name: Data Developer & Engineer
 theme:
   name: material
   features:
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
+    - navigation.footer
     - navigation.top
     - search.suggest
     - search.highlight
+    - search.share
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
@@ -26,10 +30,14 @@ theme:
         name: Switch to light mode
       primary: teal
       accent: lime
+  font:
+    text: Roboto
+    code: Roboto Mono
   icon:
+    logo: material/library-shelves
     repo: fontawesome/brands/github-alt
 
-repo_name: korwaica/ddedocs
+repo_name: korawica/ddedocs
 repo_url: https://github.com/korawica/ddedocs
 
 extra:
@@ -37,22 +45,242 @@ extra:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/korawica/ddedocs
 
+nav:
+  - Home:
+      - index.md
+  - Basics:
+      - basics/index.md
+      - Tools:
+          - Git:
+              - basics/git/index.md
+              - Commands:
+                  - Common: basics/git/git-cmd-common.md
+                  - Advance: basics/git/git-cmd-advance.md
+              - Scenarios:
+                  - basics/git/git-common-scenarios.md
+                  - Revert Commit: basics/git/git-revert-commit.md
+              - Strategies:
+                  - Branching Strategies: basics/git/git-branching-strategies.md
+                  - Commit Release: basics/git/git-commit-release.md
+                  - Deployment: basics/git/git-deployment.md
+          - Docker:
+              - basics/docker/index.md
+              - Commands:
+                  - Management: basics/docker/docker-cmd-management.md
+          - Pandas:
+              - basics/pandas/index.md
+              - SQL Conversion: basics/pandas/py_pd_convert_from_sql.md
+          - ChatGPT:
+              - basics/chatgpt/index.md
+      - Knowledge:
+          - Shell:
+              - basics/shell/index.md
+              - App: basics/shell/ubt-sh-common-file.md
+          - PowerShell:
+              - basics/powershell/index.md
+              - App: basics/powershell/win-bat-common-file.md
+          - Python:
+              - basics/python/index.md
+              - Wheel: basics/python/py-dependency-wheel.md
+              - Joblib: basics/python/py-joblib.md
+              - Sync Multi-processes: basics/python/py-sync-multi-processes.md
+          - Database:
+              - basics/database/index.md
+              - Data Modeling: basics/database/db-data-modeling.md
+              - Normalization: basics/database/db-normalization-form.md
+              - De-Normalization: basics/database/db-denormalization-form.md
+          - Data Management:
+              - basics/data_management/index.md
+              - Data Quality: basics/data_management/data-quality.md
+              - Data Transformation: basics/data_management/data-transformation.md
+          - Data Warehouse:
+              - basics/data_warehouse/index.md
+              - Inmon Approach:
+                  - Abstract: basics/data_warehouse/dwh-inmon-approach.md
+              - Kimball Approach:
+                  - Abstract: basics/data_warehouse/dwh-kimball-approach.md
+                  - Implement: basics/data_warehouse/dwh-dim-implement.md
+                  - Slowly Changing Dim: basics/data_warehouse/dwh-dim-slowly-changing-dimension.md
+                  - Rapidly Changing Dim: basics/data_warehouse/dwh-dim-rapidly-changing-dimension.md
+                  - Techniques: basics/data_warehouse/dwh-dim-techniques.md
+              - Data Vault Approach:
+                  - Abstract: basics/data_warehouse/dwh-data-vault-approach.md
+                  - Implement: basics/data_warehouse/dwh-data-vault-implement.md
+              - Anchor Approach: basics/data_warehouse/dwh-anchor-approach.md
+          - Data Governance:
+              - basics/data_governance/index.md
+              - Implement: basics/data_governance/dgn-data-quality-framework-for-scale.md
+              - Data Quality Framework: basics/data_governance/dgn-implement-process.md
+          - Data Observability:
+              - basics/data_observability/index.md
+              - Data Quality Metric: basics/data_observability/dobs-data-quality-metrics.md
+      - Services:
+          - GitHub:
+              - basics/github/index.md
+              - Actions: basics/github/github-actions.md
+      - Connections:
+          - Edge:
+              - basics/edge/index.md
+              - FTP: basics/edge/op-ftp.md
+              - SFTP: basics/edge/op-sftp.md
+  - Advances:
+      - advances/index.md
+      - Tools:
+          - AirFlow:
+              - advances/airflow/index.md
+          - DBT:
+              - advances/dbt/index.md
+              - Kimbal Modeling: advances/dbt/dbt-kimbal-data-modeling.md
+          - Spark:
+              - advances/spark/index.md
+              - Create with Docker: advances/spark/spark-create-cluster-with-docker.md
+              - Bucketing: advances/spark/spark-bucketing.md
+              - Joining: advances/spark/spark-joining.md
+              - Shuffle: advances/spark/spark-shuffle.md
+              - Repartitioning: advances/spark/spark-repartitioning.md
+              - Nested Datatypes: advances/spark/spark-nested-datatypes.md
+              - Pyspark:
+                  - SCD2: advances/spark/pyspark/pyspark-scd2.md
+                  - RegExp: advances/spark/pyspark/pyspark-regexp.md
+                  - Media Files: advances/spark/pyspark/pyspark-media-files.md
+          - Delta Lake:
+              - advances/delta_lake/index.md
+              - Pyspark:
+                  - Auto Schema Evolution: advances/delta_lake/pyspark/pyspark-delta-auto-schema-evolution.md
+                  - Image Files: advances/delta_lake/pyspark/pyspark-delta-image-files.md
+                  - SCD2: advances/delta_lake/pyspark/pyspark-delta-scd2.md
+                  - Star Schema: advances/delta_lake/pyspark/pyspark-delta-star-schema.md
+                  - Keeping Fast & Clean: advances/delta_lake/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
+                  - Best Practice: advances/delta_lake/pyspark/pyspark-delta-best-practice.md
+          - Kubernetes:
+              - advances/k8s/index.md
+          - Ansible:
+              - advances/ansible/index.md
+          - Terraform:
+              - advances/terraform/index.md
+      - Knowledge:
+          - GO:
+              - advances/go/index.md
+              - Command: advances/go/go-command.md
+              - Unittest: advances/go/go-unittest.md
+              - Connect Database: advances/go/go-database.md
+              - Advances:
+                  - Connect Kafka: advances/go/go-connect-kafka.md
+                  - Connect Redis: advances/go/go-connect-redis.md
+                  - Hexagonal Architect: advances/go/go-hexagonal-architecture.md
+          - Scala:
+              - advances/scala/index.md
+              - Command: advances/scala/scala-basic-command.md
+              - Advance Feature: advances/scala/scala-advance-feature.md
+              - Collection: advances/scala/scala-collection.md
+              - OOP Concept: advances/scala/scala-oop-concepts.md
+      - Services:
+          - Azure:
+              - advances/azure/index.md
+              - SQL Server:
+                  - Authentication: advances/azure/database_server/az-sql-grant-ad-user.md
+                  - Permission: advances/azure/database_server/az-sql-permission.md
+                  - Impersonate: advances/azure/database_server/az-sql-impersonate.md
+              - Batch:
+                  - Auto Scalable: advances/azure/batch/az-btch-auto-scalable.md
+                  - Access Key Vault: advances/azure/batch/az-btch-access-key-vault.md
+                  - Run Pyspark With Docker: advances/azure/batch/az-btch-run-pyspark-with-docker.md
+                  - Docker mode: advances/azure/batch/az-btch-run-docker.md
+                  - Docker inside Node: advances/azure/batch/az-btch-run-docker-inside.md
+              - Function App:
+                  - Access Key Vault: advances/azure/functions/azf-access-key-vault.md
+                  - Access Synapse SQL Pool: advances/azure/functions/azf-access-synapse-sql-pool.md
+                  - Access Service Bus: advances/azure/functions/azf-access-service-bus.md
+              - Databricks:
+                  - Init Script: advances/azure/databricks/adb-init-script.md
+                  - Mount Storage: advances/azure/databricks/adb-mount-storage.md
+                  - Access Azure SQL: advances/azure/databricks/adb-to-azure-sql.md
+                  - Access Synapse SQL Pool: advances/azure/databricks/adb-to-synapse-sql-pool.md
+              - Data Factory:
+                  - Link MongoDB: advances/azure/data_factory/adf-lsv-mongodb.md
+                  - Link Azure SQL Server: advances/azure/data_factory/adf-lsv-sql-server.md
+              - Synapse Analytic:
+                  - Authentication: advances/azure/synapse/asa-authentication.md
+                  - External Data: advances/azure/synapse/asa-external-data.md
+                  - Partition View: advances/azure/synapse/asa-partition-view.md
+                  - Operations: advances/azure/synapse/asa-operations.md
+                  - Low-Level Security: advances/azure/synapse/asa-low-level-security.md
+              - DevOps:
+#                  - CICD Batch:
+                  - CICD Function App: advances/azure/devops/devops-cicd-az-afn.md
+                  - CICD Databricks: advances/azure/devops/devops-cicd-az-adb.md
+                  - CICD Data Factory: advances/azure/devops/devops-cicd-az-adf.md
+#                  - CICD Synapse Analytic:
+                  - CICD Power BI: advances/azure/devops/devops-cicd-az-pbi.md
+                  - Self Hosted:
+                      - Deploy Python App: advances/azure/devops/devops-cicd-self-hosted-win-fastapi.md
+              - PowerBI:
+                  - RestAPI Refresh Dataset: advances/azure/powerbi/pbi-restapi-refresh-dataset.md
+          - AWS:
+              - advances/aws/index.md
+              - IoT:
+                  - Rule to S3: advances/aws/iot_core/iot-rule-to-s3.md
+                  - Rule to Kinesis: advances/aws/iot_core/iot-rule-to-kinesis.md
+                  - Rule to Timestream Grafana: advances/aws/iot_core/iot-rule-timestream-grafana.md
+              - S3:
+                  - Filter Content: advances/aws/s3/s3-filter-content.md
+              - Step Function:
+                  - Schedule: advances/aws/step_function/stfn-schedule-by-event-bridge.md
+          - Google:
+              - advances/google/index.md
+#              - Big Query:
+#                  - ??
+          - Databricks:
+              - advances/databricks/index.md
+          - Snowflake:
+              - advances/snowflake/index.md
+  - Usecases:
+      - usecases/index.md
+      - Architect:
+          - AWS Serverless Data Analytic: usecases/architect/act-aws-serverless-data-analytics-pipeline.md
+          - Azure Modern Data Pipeline: usecases/architect/act-azure-modern-data-pipeline.md
+          - Azure Data Mesh: usecases/architect/act-data-mesh-with-azure.md
+          - Stream Processing: usecases/architect/act-open-source-stream-processing.md
+  - Analytic:
+      - analytic/index.md
+      - Knowledge:
+          - Data Analytic:
+              - analytic/data_analytic/index.md
+
+plugins:
+  - tags
+  - search
+
 markdown_extensions:
+  - attr_list
+  - md_in_html
+  - def_list
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.arithmatex:
       generic: true
-  - footnotes
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.mark
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+#      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - tables
 
 copyright: |
   &copy; 2023 <a href="https://github.com/korawica/ddedocs"  target="_blank" rel="noopener">Korawich Anuttra</a>

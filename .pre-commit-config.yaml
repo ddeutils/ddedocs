@@ -3,7 +3,6 @@ default_language_version:
     python: python3.8
 
 ci:
-#    skip: [pytest-check, commit-msg-hook]
     skip: [commit-msg-hook]
     autofix_commit_msg: |
         🚧 [pre-commit.ci] auto fixes from pre-commit.com hooks
@@ -61,14 +60,3 @@ repos:
         entry: venv/Scripts/shelf.exe git cm -e -l -o
         language: system
         always_run: true
-
-#    -   id: pytest-check
-#        name: PyTest Runner
-#        stages:
-#            - commit
-#            - push
-#        types: [python]
-#        entry: venv/Scripts/pytest.exe -v
-#        language: system
-#        pass_filenames: false
-#        always_run: true
