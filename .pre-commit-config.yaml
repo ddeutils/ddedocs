@@ -14,20 +14,20 @@ ci:
 
 repos:
 -   repo: https://github.com/asottile/pyupgrade
-    rev:  v3.10.1
+    rev:  v3.15.0
     hooks:
     -   id: pyupgrade
         args: ["--py38-plus", "--keep-runtime-typing"]
         stages: [commit]
 
 -   repo: https://github.com/psf/black
-    rev: 23.9.1
+    rev: 23.10.1
     hooks:
     -   id: black
         stages: [commit]
 
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev:  v0.0.288
+    rev:  v0.1.3
     hooks:
     -   id: ruff
         args:
@@ -35,7 +35,7 @@ repos:
         stages: [commit]
 
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev:  v4.4.0
+    rev:  v4.5.0
     hooks:
     -   id: fix-byte-order-marker
         stages: [commit]
