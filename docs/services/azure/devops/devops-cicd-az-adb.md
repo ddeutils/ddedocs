@@ -1,6 +1,6 @@
 # CI/CD: _Azure Databricks_
 
-## Getting Started
+## Solution 01
 
 ### Setup Databricks Repository
 
@@ -70,3 +70,9 @@ jobs:
       localPath: '$(System.DefaultWorkingDirectory)/_DATA360-databricks-CI/drop'
       databricksPath: '$(notebook_root_path)'
 ```
+
+## Solution 02
+
+### Reference
+
+* https://medium.com/@yatin.kumar/ci-cd-on-databricks-using-azure-devops-3f8a4aabebaa

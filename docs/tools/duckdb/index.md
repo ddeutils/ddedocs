@@ -1,0 +1,5 @@
+---
+icon: simple/duckdb
+---
+
+# DuckDB

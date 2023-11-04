@@ -373,9 +373,9 @@ if __name__ == '__main__':
 
 And finally, you will see your jobs run on Azure Batch:
 
-![Monitor Pool in Batch Explorer](./images/az-btch-run-spark-monitor.png)
+![Monitor Pool in Batch Explorer](images/az-btch-run-spark-monitor.png)
 
-![Monitor Tasks in Batch Explorer](./images/az-btch-run-spark-monitor-01.png)
+![Monitor Tasks in Batch Explorer](images/az-btch-run-spark-monitor-01.png)
 
 !!! warning
 

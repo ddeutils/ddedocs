@@ -20,4 +20,5 @@ icon: material/shield-account-variant
 
 ## References
 
-- https://medium.com/hashmapinc/digging-into-data-governance-and-data-modeling-e2ddaeddef93
+* [Databricks: Data Governance](https://www.databricks.com/discover/data-governance)
+* [Digging into Data Governance and Data Modeling](https://medium.com/hashmapinc/digging-into-data-governance-and-data-modeling-e2ddaeddef93)
