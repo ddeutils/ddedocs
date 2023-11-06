@@ -48,6 +48,7 @@ extra:
 nav:
   - Home:
       - index.md
+      - SOLID Principles: dae-solid-principles.md
   - Base:
       - base/index.md
       - Data:
@@ -262,10 +263,12 @@ nav:
       - Knowledge:
           - Data Analytic:
               - analytics/data_analytic/index.md
+              - Design Thinking: analytics/data_analytic/da-design-thinking.md
       - Algorithm:
           - Linker:
               - analytics/linker/index.md
               - With Splink: analytics/linker/linker-with-splink.md
+              - With RecordLinkage: analytics/linker/linker-with-recordlinkage.md
 
 plugins:
   - tags

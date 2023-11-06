@@ -1,5 +1,5 @@
 ---
-icon: material/link
+icon: material/link-variant
 ---
 
 # Linker

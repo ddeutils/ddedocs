@@ -1,35 +1,29 @@
-# Azure SQL Database & Server
-
-**Table of Contents**:
-
-- [Users & Roles](#users--roles)
+# Azure Server: Authentication
 
 ## Users & Roles
 
-- [Select External Users](#select-external-users)
-
 ### Select External Users
 
-**Azure Server**:
+=== "Azure Server"
 
-```sql
-SELECT name, type_desc, type, is_disabled
-FROM sys.server_principals
-WHERE type_desc like 'external%'
-```
+    ```sql
+    SELECT name, type_desc, type, is_disabled
+    FROM sys.server_principals
+    WHERE type_desc like 'external%'
+    ```
 
-**Azure Database**:
+=== "Azure Database"
 
-```sql
-SELECT name, type_desc, type
-FROM sys.database_principals
-WHERE type_desc like 'external%'
-```
+    ```sql
+    SELECT name, type_desc, type
+    FROM sys.database_principals
+    WHERE type_desc like 'external%'
+    ```
 
-```sql
-CREATE USER [phuwasic@scg.com] FROM EXTERNAL PROVIDER
-GO
-```
+    ```sql
+    CREATE USER [username@email.com] FROM EXTERNAL PROVIDER
+    GO
+    ```
 
 ### Select Relationship of Users and Roles
 
@@ -57,6 +51,7 @@ GO
   ALTER ROLE [db_datareader] ADD MEMBER [de_trainer];
   ```
 
-  > **Note**: \
-  > If you want to remove user from role, you would use
-  > `ALTER ROLE [db_datareader] DROP MEMBER [de_trainer]`
+  !!! note
+
+      If you want to remove user from role, you would use
+      `ALTER ROLE [db_datareader] DROP MEMBER [de_trainer]`
