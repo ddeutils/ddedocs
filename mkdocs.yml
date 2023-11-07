@@ -188,9 +188,7 @@ nav:
           - Azure:
               - services/azure/index.md
               - SQL Server:
-                  - Authentication: services/azure/database_server/az-sql-grant-ad-user.md
-                  - Permission: services/azure/database_server/az-sql-permission.md
-                  - Impersonate: services/azure/database_server/az-sql-impersonate.md
+                  - Authentication: services/azure/database_server/az-sql-authentication.md
               - Batch:
                   - Auto Scalable: services/azure/batch/az-btch-auto-scalable.md
                   - Access Key Vault: services/azure/batch/az-btch-access-key-vault.md
@@ -204,11 +202,11 @@ nav:
               - Databricks:
                   - Init Script: services/azure/databricks/adb-init-script.md
                   - Mount Storage: services/azure/databricks/adb-mount-storage.md
-                  - Access Azure SQL: services/azure/databricks/adb-to-azure-sql.md
-                  - Access Synapse SQL Pool: services/azure/databricks/adb-to-synapse-sql-pool.md
+                  - To Azure SQL: services/azure/databricks/adb-to-azure-sql.md
+                  - To Synapse SQL Pool: services/azure/databricks/adb-to-synapse-sql-pool.md
               - Data Factory:
                   - Link MongoDB: services/azure/data_factory/adf-lsv-mongodb.md
-                  - Link Azure SQL Server: services/azure/data_factory/adf-lsv-sql-server.md
+                  - Link Azure SQL: services/azure/data_factory/adf-lsv-sql-server.md
               - Synapse Analytic:
                   - Authentication: services/azure/synapse/asa-authentication.md
                   - External Data Source: services/azure/synapse/asa-external-data-source.md

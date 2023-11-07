@@ -1,8 +1,4 @@
-# Azure Data Factory Link Service: _SQL Database_
-
-**Table of Contents**:
-
-- [Create Link Service for SQL Database](#create-link-service-for-sql-database)
+# Azure Data Factory: _Link Azure SQL_
 
 ## Create Link Service for SQL Database
 
@@ -10,7 +6,7 @@ Create dynamic parameters Azure SQL Database link service.
 
 ```json
 {
-    "name": "Dynamic_AzureSqlDatabase_Auto",
+    "name": "AzureSqlDatabaseAuto",
     "type": "Microsoft.DataFactory/factories/linkedservices",
     "properties": {
         "type": "AzureSqlDatabase",
@@ -58,4 +54,4 @@ Create dynamic parameters Azure SQL Database link service.
 
 ## References
 
-- https://www.tech-findings.com/2021/09/i-getting-started-with-adf-creating-and.html
+* (https://www.tech-findings.com/2021/09/i-getting-started-with-adf-creating-and.html)
