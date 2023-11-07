@@ -2,6 +2,18 @@
 
 ## Users & Roles
 
+### Getting Users
+
+=== "External Users"
+
+    ```sql
+    SELECT [name], type_desc, type
+    FROM [sys].[database_principals]
+    WHERE type_desc like 'external%'
+    ORDER BY [name]
+    ;
+    ```
+
 ### Getting Relations
 
 === ":octicons-code-review-16: List relate roles and users"

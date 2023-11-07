@@ -3,8 +3,8 @@
 When you want to read and write data on **Azure Synapse Analytic SQL Pool** via
 **Azure Databricks**, that has 2 types of Azure Synapse SQL Pool:
 
-* [Serverless SQL Pool](#connect-to-serverless-sql-pool)
-* [Dedicate SQL Pool](#connect-to-dedicate-sql-pool)
+* [Serverless SQL Pool](#access-serverless-sql-pool)
+* [Dedicate SQL Pool](#access-dedicate-sql-pool)
 
 !!! note
 
@@ -15,7 +15,7 @@ When you want to read and write data on **Azure Synapse Analytic SQL Pool** via
     leverage **PolyBase** to move the data, which staging storage is used to achieve
     high performance.
 
-## Connect to Serverless SQL Pool
+## Access Serverless SQL Pool
 
 ### 1) Create Database Scope
 
@@ -25,41 +25,6 @@ this command:
 ```sql
 SELECT * FROM [sys].[database_scoped_credentials];
 ```
-
-In an Azure Synapse Analytics serverless SQL pool, **Database Scoped Credentials**
-can specify workspace Managed Identity, Service Principal, or
-Shared Access Signature (SAS) token.
-
-=== "Managed Identity"
-
-    ```sql
-    CREATE DATABASE SCOPED CREDENTIAL [adb_cred]
-    WITH IDENTITY = 'Managed Identity';
-    GO
-    ```
-
-=== "Service Principal"
-
-    Service Principal should be assigned `Storage Blob Data Owner/Contributor/Reader`
-    role in order for the application to access the data.
-
-    ```sql
-    CREATE DATABASE SCOPED CREDENTIAL [adb_cred]
-    WITH IDENTITY = '<service-priciple-name>@https://login.microsoftonline.com/<directory-id>/oauth2/token',
-    SECRET = <service-priciple-secret>;
-    GO
-    ```
-
-!!! warning
-
-    Before creating a database scoped credential, the database must have a master
-    key to protect the credential.
-
-    ```sql
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'sGrZ8Tes7qMC';
-    SELECT * FROM [sys].[symmetric_keys];
-    GO
-    ```
 
 ### 2) Create External Data Source
 
@@ -150,7 +115,7 @@ Set Spark Config:
     )
     ```
 
-Make URL:
+**Make JDBC URL**:
 
 ```python
 URL = (
@@ -162,29 +127,29 @@ URL = (
 === "Azure Data Lake Gen 2"
 
     ```python
-    (
-    spark.read
-        .format("jdbc")
-        .option("url", URL)
-        .option("tempDir", "abfss://{curated}@{storage-account}.dfs.core.windows.net/<folder-for-temporary-data>")
-        .option("forwardSparkAzureStorageCredentials", "true")
-        .option("query", "SELECT * FROM [CURATED].[VW_DELTA_SALES]")
-        .load()
-    )
+    df = (
+      spark.read
+          .format("jdbc")
+          .option("url", URL)
+          .option("tempDir", "abfss://{curated}@{storage-account}.dfs.core.windows.net/<folder-for-temporary-data>")
+          .option("forwardSparkAzureStorageCredentials", "true")
+          .option("query", "SELECT * FROM [CURATED].[VW_DELTA_SALES]")
+          .load()
+      )
     ```
 
 === "Azure Blob Storage"
 
     ```python
-    (
-    spark.read
-        .format("jdbc")
-        .option("url", URL)
-        .option("tempDir", "wasbs://{curated}@{storage-account}.blob.core.windows.net/<folder-for-temporary-data>")
-        .option("forwardSparkAzureStorageCredentials", "true")
-        .option("query", "SELECT * FROM [CURATED].[VW_DELTA_SALES]")
-        .load()
-    )
+    df = (
+      spark.read
+          .format("jdbc")
+          .option("url", URL)
+          .option("tempDir", "wasbs://{curated}@{storage-account}.blob.core.windows.net/<folder-for-temporary-data>")
+          .option("forwardSparkAzureStorageCredentials", "true")
+          .option("query", "SELECT * FROM [CURATED].[VW_DELTA_SALES]")
+          .load()
+      )
     ```
 
 **Reference**:
@@ -199,46 +164,60 @@ can be further explored. First Install the Library using **Maven Coordinate** in
 the Data-bricks cluster, and then use the below code. **Recommended for Azure
 SQL DB or Sql Server Instance**
 
-Install driver on cluster `com.microsoft.azure:spark-mssql-connector_2.12:1.2.0` with `Maven`
+Install Driver on cluster:
+
+* **Maven**: `com.microsoft.azure:spark-mssql-connector_2.12:1.2.0`
+
+    | SPARK VERSION | MAVEN DEPENDENCY                                                                                 |
+    |---------------|--------------------------------------------------------------------------------------------------|
+    | Spark 2.4.x   | groupeId : com.microsoft.azure <br> artifactId : spark-mssql-connector <br> version : 1.0.2      |
+    | Spark 3.0.x   | groupeId : com.microsoft.azure <br> artifactId : spark-mssql-connector_2.12 <br> version : 1.1.0 |
+    | Spark 3.1.x   | groupeId : com.microsoft.azure <br> spark-mssql-connector_2.12 <br> version : 1.2.0              |
+
+    Read More [Supported Version](https://search.maven.org/search?q=spark-mssql-connector)
 
 ```python
 URL = f"jdbc:sqlserver://{server}:1433;database={database};"
 ```
 
-```python
-(
-  spark.read
-    .format("com.microsoft.sqlserver.jdbc.spark")
-    .option("url", URL)
-    .option("user", username)
-    .option("password", password)
-    .option("mssqlIsolationLevel", "READ_UNCOMMITTED")
-    .option("encrypt", "true")
-    .option("query", "SELECT * FROM [sys].[external_data_sources]")
-    .load()
-)
-```
+=== "Table"
 
-```python
-(
-  spark.read \
-    .format("com.microsoft.sqlserver.jdbc.spark")
-    .option("url", URL)
-    .option("user", username)
-    .option("password", password)
-    .option("mssqlIsolationLevel", "READ_UNCOMMITTED")
-    .option("encrypt", "true")
-    .option("dbTable", "[<schema>].[<table-or-view>]")
-    .load()
-)
-```
+    ```python
+    df = (
+      spark.read
+        .format("com.microsoft.sqlserver.jdbc.spark")
+        .option("url", URL)
+        .option("user", username)
+        .option("password", password)
+        .option("mssqlIsolationLevel", "READ_UNCOMMITTED")
+        .option("encrypt", "true")
+        .option("dbTable", "[<schema>].[<table-or-view>]")
+        .load()
+    )
+    ```
+
+=== "Custom Query"
+
+    ```python
+    df = (
+      spark.read
+        .format("com.microsoft.sqlserver.jdbc.spark")
+        .option("url", URL)
+        .option("user", username)
+        .option("password", password)
+        .option("mssqlIsolationLevel", "READ_UNCOMMITTED")
+        .option("encrypt", "true")
+        .option("query", "SELECT * FROM [sys].[external_data_sources]")
+        .load()
+    )
+    ```
 
 **Reference**:
 
 * [Microsoft SQL Spark Connector](https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver15)
 * [SQL Spark Connector](https://github.com/microsoft/sql-spark-connector)
 
-## Connect to Dedicate SQL Pool
+## Access Dedicate SQL Pool
 
 When connect to Azure Synapse Dedicated SQL Pool, we will use special spark connector,
 `com.databricks.spark.sqldw` method.
@@ -252,107 +231,134 @@ has improved performance. **Recommended for Azure Synapse**
     This connector is for use with **Synapse Dedicated Pool instances only**,
     and is not compatible with other Synapse components.
 
-#### Using SQL Authentication
+### SQL Authentication
 
-- Configuration
+**Configuration**:
 
-  ```python
-  spark.conf.set("spark.databricks.sqldw.writeSemantics", "copy")
+```python
+spark.conf.set("spark.databricks.sqldw.writeSemantics", "copy")
+```
 
-  URL = (
-      f"jdbc:sqlserver://{server}:1433;database={database};user={username};password={password};"
-      f"encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.sql.azuresynapse.net;loginTimeout=30;"
-  )
+**JDBC URL Pattern**:
+
+```python
+URL: str = (
+    f"jdbc:sqlserver://{server}:1433;database={database};"
+    f"user={username};password={password};"
+    f"encrypt=true;trustServerCertificate=true;"
+    f"hostNameInCertificate=*.sql.azuresynapse.net;"
+    f"loginTimeout=30;"
+)
+```
+
+```python
+df = (
+  spark.read
+    .format("com.databricks.spark.sqldw")
+    .option("url", f"jdbc:sqlserver://{server};database={database};")
+    .option("user", username)
+    .option("password", password)
+    .option("forwardSparkAzureStorageCredentials", "true")
+    .option("dbTable", "<your-table-name>")
+    .option("tempDir", "abfss://<container-name>@<storage-account-name>.dfs.core.windows.net/<directory-name>")
+    .load()
+)
+```
+
+**Reference**:
+
+* https://bennyaustin.com/2020/02/05/pysparkupsert/
+
+### Azure Service Principle
+
+#### 1) Create Service Principal
+
+* Go to `Azure Active Directory` :octicons-arrow-right-24: `App registrations`
+  :octicons-arrow-right-24: `New registration`
+* Add the information of this app like `name` is `adb_to_synapse`
+* Click register for create
+* Go to `App registrations` :octicons-arrow-right-24: `Certificates&secrets`
+  :octicons-arrow-right-24: `New Client Secret`
+* Save this value to `Azure Key Vaults`
+
+#### 2) Create User in Azure Synapse
+
+* Give it some permissions (On the Dedicated SQL pool, we can add a user and
+  assign it to the proper role),
+
+  ```sql
+  CREATE USER [adb_to_synapse] FROM EXTERNAL PROVIDER;
+  sp_addrolemember 'db_owner','adb_to_synapse';
+  GO
   ```
 
-  ```python
-  (
-    spark.read
-      .format("com.databricks.spark.sqldw")
-      .option("url", f"jdbc:sqlserver://{server};database={database};")
-      .option("user", username)
-      .option("password", password)
-      .option("forwardSparkAzureStorageCredentials", "true")
-      .option("dbTable", "<your-table-name>")
-      .option("tempDir", "abfss://<container-name>@<storage-account-name>.dfs.core.windows.net/<directory-name>")
-      .load()
-  )
-  ```
-> **Reference**:
-> - https://bennyaustin.com/2020/02/05/pysparkupsert/
+    !!! warning
 
-#### Using App Registration Authentication
+        The permission of the user should be owner of database because it is currently
+        required for Databricks to run `CREATE DATABASE SCOPED CREDENTIAL`.
 
-- **Azure App Registration**:
-  - Go to `App registrations` => `New registration`
-  - Add the information of this app like `name` is `databricks_to_synapse`
-  - Click register for create
-  - Go to `App registrations` => `Certificates&secrets` => `New Client Secret`
-  - Save this value to `Azure Key Vaults`
+    !!! note
 
-- **Azure Synapse**:
-  - Give it some permissions (On the dedicated SQL pool, we can add a user and
-    assign it to the proper role),
+          If you do not want to give owner permission to your Service Principle,
+          you can grant `CONTROL`.
 
-    ```sql
-    CREATE USER [databricks_to_synapse] FROM EXTERNAL PROVIDER;
-    sp_addrolemember 'db_owner','databricks_to_synapse';
-    ```
+          ```sql
+          CREATE ROLE [databricks_reader];
+          EXEC sp_addrolemember 'databricks_reader', 'adb_to_synapse';
+          GRANT CONTROL TO [adb_to_synapse];
+          ```
 
-  > **Warning**: \
-  > The permission of the user should be owner of database because it is currently
-  > required for Databricks to run `CREATE DATABASE SCOPED CREDENTIAL`.
+#### 3) Azure Storage Temp Account
 
-  > **Note**: \
-  > If you do not want to give owner permission to your SP, you can grant `CONTROL`;
-  > ```sql
-  > CREATE ROLE [databricks_reader];
-  > EXEC sp_addrolemember 'databricks_reader', 'databricks_to_synapse';
-  > GRANT CONTROL TO [databricks_to_synapse];
-  > ```
+* Go to `Storage account` :octicons-arrow-right-24: `Access Control (IAM)`
+  :octicons-arrow-right-24: `Add role assignment`
+* Select Role: `Storage Blob Data Contributor`
+* Select: `register application`
+* Click on save.
 
-- **Azure Storage temp account**:
-  - Go to `Storage account` => `Access Control (IAM)` => `Add role assignment`
-  - Select Role: `Storage Blob Data Contributor`
-  - Select: `register application`
-  - Click on save.
+#### 4) Connection Code
 
-- **Azure Databricks**:
-  - OAuth Configuration
+**OAuth Configuration**:
 
-    ```python
-    spark.conf.set("fs.azure.account.auth.type", "OAuth")
-    spark.conf.set("fs.azure.account.oauth.provider.type",  "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider")
-    spark.conf.set("fs.azure.account.oauth2.client.id", "<service-principal-id>")
-    spark.conf.set("fs.azure.account.oauth2.client.secret", "<service-principal-secret>")
-    spark.conf.set("fs.azure.account.oauth2.client.endpoint", "https://login.microsoftonline.com/<directory-id>/oauth2/token")
+```python
+spark.conf.set("fs.azure.account.auth.type", "OAuth")
+spark.conf.set("fs.azure.account.oauth.provider.type",  "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider")
+spark.conf.set("fs.azure.account.oauth2.client.id", "<service-principal-id>")
+spark.conf.set("fs.azure.account.oauth2.client.secret", "<service-principal-secret>")
+spark.conf.set("fs.azure.account.oauth2.client.endpoint", "https://login.microsoftonline.com/<directory-id>/oauth2/token")
 
-    spark.conf.set("spark.databricks.sqldw.jdbc.service.principal.client.id", "<service-principal-id>")
-    spark.conf.set("spark.databricks.sqldw.jdbc.service.principal.client.secret", "<service-principal-secret>")
-    ```
+spark.conf.set("spark.databricks.sqldw.jdbc.service.principal.client.id", "<service-principal-id>")
+spark.conf.set("spark.databricks.sqldw.jdbc.service.principal.client.secret", "<service-principal-secret>")
+```
 
-    JDBC URL Pattern:
+**JDBC URL Pattern**:
 
-    ```text
-    jdbc:sqlserver://<work-space-name>.sql.azuresynapse.net:1433;database=<database-name>;
-    encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.sql.azuresynapse.net;loginTimeout=30
-    ```
+```python
+URL: str = (
+    "jdbc:sqlserver://<work-space-name>.sql.azuresynapse.net:1433;"
+    "database=<database-name>;"
+    "encrypt=true;trustServerCertificate=true;"
+    "hostNameInCertificate=*.sql.azuresynapse.net;"
+    "loginTimeout=30"
+)
+```
 
-    ```python
-    (
-      spark.read
-        .format("com.databricks.spark.sqldw")
-        .option("url", URL)
-        .option("tempDir", "abfss://<container-name>@<storage-account-name>.dfs.core.windows.net/<directory-name>")
-        .option("enableServicePrincipalAuth", "true")
-        .option("dbTable", "[<schema>].[<table-name>]")
-        .load()
-    )
-    ```
+```python
+df = (
+  spark.read
+    .format("com.databricks.spark.sqldw")
+    .option("url", URL)
+    .option("tempDir", "abfss://<container-name>@<storage-account-name>.dfs.core.windows.net/<directory-name>")
+    .option("enableServicePrincipalAuth", "true")
+    .option("dbTable", "[<schema>].[<table-name>]")
+    .load()
+)
+```
 
-> **References**:
-> - https://pl.seequality.net/load-synapse-analytics-sql-pool-with-azure-databricks/
-> - https://learn.microsoft.com/en-us/answers/questions/327270/azure-databricks-to-azure-synapse-service-principa?orderby=newest
+**References**:
+
+* https://pl.seequality.net/load-synapse-analytics-sql-pool-with-azure-databricks/
+* https://learn.microsoft.com/en-us/answers/questions/327270/azure-databricks-to-azure-synapse-service-principa?orderby=newest
 
 ## Send DDL or DML to Azure Synapse SQL Pool
 
@@ -361,168 +367,172 @@ JDBC, and ODBC drivers.
 
 ### JDBC Driver
 
-- Create JDBC Connection
+#### 1) Create JDBC Connection
 
-  ```python
-  URL = f"jdbc:sqlserver://{server}:1433;database={database};"
+```python
+URL = f"jdbc:sqlserver://{server}:1433;database={database};"
 
-  props = spark._sc._gateway.jvm.java.util.Properties()
-  props.putAll({
+props = spark._sc._gateway.jvm.java.util.Properties()
+props.putAll({
     'username': username,
     'password': password,
     'Driver': "com.microsoft.sqlserver.jdbc.SQLServerDriver",
-  })
+})
 
-  Connection = spark._sc._gateway.jvm.java.sql.Connection
+Connection = spark._sc._gateway.jvm.java.sql.Connection
 
-  driver_manager = spark._sc._gateway.jvm.java.sql.DriverManager
-  connection: Connection = driver_manager.getConnection(URL, props)
-  ```
+driver_manager = spark._sc._gateway.jvm.java.sql.DriverManager
+connection: Connection = driver_manager.getConnection(URL, props)
+```
 
-- **Method 01**: Statement Execution
+#### 2) Connection Code
 
-  ```python
-  ResultSet = spark._sc._gateway.jvm.java.sql.ResultSet
-  ResultSetMetaData = spark._sc._gateway.jvm.java.sql.ResultSetMetaData
-  Connection = spark._sc._gateway.jvm.java.sql.Connection
-  Statement = spark._sc._gateway.jvm.java.sql.Statement
+=== "Statement Execution"
 
-  stmt: Statement = connection.createStatement()  # Statement
-  ```
+    ```python
+    ResultSet = spark._sc._gateway.jvm.java.sql.ResultSet
+    ResultSetMetaData = spark._sc._gateway.jvm.java.sql.ResultSetMetaData
+    Connection = spark._sc._gateway.jvm.java.sql.Connection
+    Statement = spark._sc._gateway.jvm.java.sql.Statement
 
-  ```python
-  query: str = f"""
-    SELECT * FROM [<schema>].[<table-name>]
-  """
+    stmt: Statement = connection.createStatement()  # Statement
+    ```
 
-  rs: ResultSet = stmt.executeQuery(query)  # ResultSet
-  metadata: ResultSetMetaData = rs.getMetaData()  # ResultSetMetaData
-  col_numbers = metadata.getColumnCount()
+    ```python
+    query: str = f"""
+      SELECT * FROM [<schema>].[<table-name>]
+    """
 
-  col_names: list = []
-  for i in range(1, col_numbers + 1):
-      if column:
-        col_names.append(metadata.getColumnName(i))
-      else:
-        col_names.append(f"col_{i}")
+    rs: ResultSet = stmt.executeQuery(query)  # ResultSet
+    metadata: ResultSetMetaData = rs.getMetaData()  # ResultSetMetaData
+    col_numbers = metadata.getColumnCount()
 
-  results: list = []
-  while rs.next():
-    result: dict = {}
-    for i in range(col_numbers):
-      name: str = col_names[i]
-      result[name] = rs.getString(name)
-    results.append(result)
-  ```
+    col_names: list = []
+    for i in range(1, col_numbers + 1):
+        if column:
+          col_names.append(metadata.getColumnName(i))
+        else:
+          col_names.append(f"col_{i}")
 
-  ```python
-  stmt.close()
-  connection.close()
-  ```
+    results: list = []
+    while rs.next():
+      result: dict = {}
+      for i in range(col_numbers):
+        name: str = col_names[i]
+        result[name] = rs.getString(name)
+      results.append(result)
+    ```
 
-- **Method 02**: Batch Execution
+    ```python
+    stmt.close()
+    connection.close()
+    ```
 
-  ```python
-  PreparedStatement = spark._sc._gateway.jvm.java.sql.PreparedStatement
+=== "Batch Execution"
 
-  preps: PreparedStatement = connection.prepareStatement(
-    "INSERT INTO [dev].[people]"
-    "VALUES (?, ?, ?);"
-  )
-  rows = [
-    ["Gandhi", "politics", 12],
-    ["Turing", "computers", 31],
-  ]
-  for row in rows:
-    for idx, data in enumerate(row, start=1):
-      if isinstance(data, int):
-        preps.setInt(idx, data)
-      else:
-        preps.setString(idx, data)
-    preps.addBatch()
+    ```python
+    PreparedStatement = spark._sc._gateway.jvm.java.sql.PreparedStatement
 
-  connection.setAutoCommit(False)
-  result_number: int = preps.executeBatch()
-  preps.clearBatch()
-  connection.setAutoCommit(True)
-  ```
+    preps: PreparedStatement = connection.prepareStatement(
+      "INSERT INTO [dev].[people]"
+      "VALUES (?, ?, ?);"
+    )
+    rows = [
+      ["Gandhi", "politics", 12],
+      ["Turing", "computers", 31],
+    ]
+    for row in rows:
+      for idx, data in enumerate(row, start=1):
+        if isinstance(data, int):
+          preps.setInt(idx, data)
+        else:
+          preps.setString(idx, data)
+      preps.addBatch()
 
-  > **Note**:
-  > Add parameter `rewriteBatchedStatements=true` to JDBC URL for improve execute
-  > performance from before add this parameter,
-  > ```sql
-  > INSERT INTO jdbc (`name`) VALUES ('Line 1: Lorem ipsum ...')
-  > INSERT INTO jdbc (`name`) VALUES ('Line 2: Lorem ipsum ...')
-  > ```
-  > Then, after add this parameter to JDBC URL,
-  > ```sql
-  > INSERT INTO jdbc (`name`) VALUES ('Line 1: Lorem ipsum ...'), ('Line 2: Lorem ipsum ...')
-  > ```
+    connection.setAutoCommit(False)
+    result_number: int = preps.executeBatch()
+    preps.clearBatch()
+    connection.setAutoCommit(True)
+    ```
+
+    > **Note**:
+    > Add parameter `rewriteBatchedStatements=true` to JDBC URL for improve execute
+    > performance from before add this parameter,
+    > ```sql
+    > INSERT INTO jdbc (`name`) VALUES ('Line 1: Lorem ipsum ...')
+    > INSERT INTO jdbc (`name`) VALUES ('Line 2: Lorem ipsum ...')
+    > ```
+    > Then, after add this parameter to JDBC URL,
+    > ```sql
+    > INSERT INTO jdbc (`name`) VALUES ('Line 1: Lorem ipsum ...'), ('Line 2: Lorem ipsum ...')
+    > ```
 
 
-- **Method 03**: Call Store Procedure
+=== "Call Store Procedure"
 
-  ```python
-  exec_statement = connection.prepareCall(
-      f"""{{CALL {schema}.usp_stored_procedure(
-        {master_id}, {parent_id}, {child_id}, '{table}', ?,
-        ?, ?, ?, ?
-      )}}"""
-  )
-  exec_statement.setString(5, 'data')
+    ```python
+    exec_statement = connection.prepareCall(
+        f"""{{CALL {schema}.usp_stored_procedure(
+          {master_id}, {parent_id}, {child_id}, '{table}', ?,
+          ?, ?, ?, ?
+        )}}"""
+    )
+    exec_statement.setString(5, 'data')
 
-  exec_statement.registerOutParameter(1, spark._sc._gateway.jvm.java.sql.Types.INTEGER)
-  exec_statement.registerOutParameter(2, spark._sc._gateway.jvm.java.sql.Types.VARCHAR)
-  exec_statement.registerOutParameter(3, spark._sc._gateway.jvm.java.sql.Types.VARCHAR)
-  exec_statement.registerOutParameter(4, spark._sc._gateway.jvm.java.sql.Types.VARCHAR)
+    exec_statement.registerOutParameter(1, spark._sc._gateway.jvm.java.sql.Types.INTEGER)
+    exec_statement.registerOutParameter(2, spark._sc._gateway.jvm.java.sql.Types.VARCHAR)
+    exec_statement.registerOutParameter(3, spark._sc._gateway.jvm.java.sql.Types.VARCHAR)
+    exec_statement.registerOutParameter(4, spark._sc._gateway.jvm.java.sql.Types.VARCHAR)
 
-  exec_statement.executeUpdate()
+    exec_statement.executeUpdate()
 
-  res1 = exec_statement.getInt(1)
-  res2 = exec_statement.getString(2)
-  res3 = exec_statement.getString(3)
-  res4 = exec_statement.getString(4)
+    res1 = exec_statement.getInt(1)
+    res2 = exec_statement.getString(2)
+    res3 = exec_statement.getString(3)
+    res4 = exec_statement.getString(4)
 
-  exec_statement.close()
-  connection.close()
-  ```
+    exec_statement.close()
+    connection.close()
+    ```
 
-  > **Reference**:
-  > - [How to Call MSSQL Stored Procedure](https://blog.devgenius.io/how-to-call-mssql-stored-procedure-pass-and-get-multiple-parameters-in-spark-using-aws-glue-f21b2f19657b)
+    **Reference**:
 
-#### ODBC Driver
+    * [How to Call MSSQL Stored Procedure](https://blog.devgenius.io/how-to-call-mssql-stored-procedure-pass-and-get-multiple-parameters-in-spark-using-aws-glue-f21b2f19657b)
 
-- Create Connection
+### ODBC Driver
 
-  ```text
-  %sh
-  curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-  curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-  sudo apt-get update
-  sudo ACCEPT_EULA=Y apt-get -q -y install msodbcsql17
-  ```
+#### 1) Create ODBC Connection
 
-  ```python
-  import pyodbc
-  server = '<server-name>'
-  database = '<database-name>'
-  username = '<username>'
-  password = '<password>'
+```text
+%sh
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+sudo apt-get update
+sudo ACCEPT_EULA=Y apt-get -q -y install msodbcsql17
+```
 
-  conn = pyodbc.connect(
-    f'DRIVER={{ODBC Driver 17 for SQL Server}};'
-    f'SERVER={server};DATABASE={database};UID={username};PWD={password}'
-  )
-  ```
+```python
+import pyodbc
+server = '<server-name>'
+database = '<database-name>'
+username = '<username>'
+password = '<password>'
 
-> **Reference**:
-> - [Using PyODBC in Azure Databricks for Connecting with MSSQL](https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server)
+conn = pyodbc.connect(
+  f'DRIVER={{ODBC Driver 17 for SQL Server}};'
+  f'SERVER={server};DATABASE={database};UID={username};PWD={password}'
+)
+```
+
+**Reference**:
+
+* [Using PyODBC in Azure Databricks for Connecting with MSSQL](https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server)
 
 ## References
 
-- https://docs.databricks.com/data/data-sources/azure/synapse-analytics.html
-- https://joeho.xyz/blog-posts/how-to-connect-to-azure-synapse-in-azure-databricks/
-- https://learn.microsoft.com/en-us/answers/questions/653154/databricks-packages-for-batch-loading-to-azure.html
-- https://stackoverflow.com/questions/55708079/spark-optimise-writing-a-dataframe-to-sql-server/55717234 (***)
-- https://docs.databricks.com/external-data/synapse-analytics.html
-- https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control
+* (https://docs.databricks.com/data/data-sources/azure/synapse-analytics.html)
+* (https://joeho.xyz/blog-posts/how-to-connect-to-azure-synapse-in-azure-databricks/)
+* (https://learn.microsoft.com/en-us/answers/questions/653154/databricks-packages-for-batch-loading-to-azure.html)
+* (https://stackoverflow.com/questions/55708079/spark-optimise-writing-a-dataframe-to-sql-server/55717234) (***)
+* (https://docs.databricks.com/external-data/synapse-analytics.html)
+* (https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control)

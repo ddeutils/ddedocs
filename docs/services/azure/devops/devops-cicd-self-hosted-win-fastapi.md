@@ -202,7 +202,7 @@ Finally, we set up a Python interpreter for running the Python application in th
 
 > **Note**: \
 > If your server set a proxy firwall rule, you can run self-hosted agent config by
-> `./config.cmd --proxyurl http://proxy.scg.co.th --proxyusername "CEMENTH/{user}" --proxypassword "*******"`,
+> `./config.cmd --proxyurl http://proxy.domain.co.th --proxyusername "CEMENTH/{user}" --proxypassword "*******"`,
 > it will save your password to `.proxycredentials` file for reuse this password for proxy mode configuration.
 
 ### Deploy to On-Premises Server

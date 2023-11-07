@@ -72,9 +72,10 @@ To connect to `Azure SQL`, you will need to install the [SQL Spark Connector](ht
 and the [Microsoft Azure Active Directory Authentication Library](https://pypi.org/project/adal/)
 (ADAL) for Python code.
 
-* Go to your cluster in Databricks and Install necessary packages
-  * `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` from `Maven`
-  * `adal` from `PYPI`
+* Go to your cluster in Databricks and Install necessary packages:
+
+    * **Maven**: `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha`
+    * **PYPI**: `adal`
 
 * Also, if you haven’t already, [Create a Secret Scope](https://learn.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes)
   to your `Azure Key Vault` where your `Client ID`, `Secret`, and `Tenant ID` have
@@ -85,70 +86,160 @@ and the [Microsoft Azure Active Directory Authentication Library](https://pypi.o
   ```python
   import adal
 
-  sp_id = dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId")
-  sp_secret = dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret")
-  tenant_id = dbutils.secrets.get(scope="defaultScope", key="TenantId")
-
-  context = adal.AuthenticationContext(f"https://login.windows.net/{tenant_id}")
+  context = adal.AuthenticationContext(
+      f"https://login.windows.net/{dbutils.secrets.get(scope='defaultScope', key='TenantId')}"
+  )
   token = context.acquire_token_with_client_credentials(
       "https://database.windows.net/",
-      sp_id,
-      sp_secret,
+      dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"),
+      dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"),
   )
   access_token = token["accessToken"]
   ```
 
-- Read a table from Azure SQL
+=== "Read Table"
 
-  ```python
-  df = (
-      spark.read
-          .format("com.microsoft.sqlserver.jdbc.spark")
-          .option("url", "jdbc:sqlserver://<server-instance-name>.database.windows.net")
-          .option("databaseName", "{dev}")
-          .option("accessToken", access_token)
-          .option("encrypt", "true")
-          .option("hostNameInCertificate", "*.database.windows.net")
-          .option("dbtable", "[dbo].[<table-name>]")
-          .load()
-  )
-  ```
+    ```python
+    df = (
+        spark.read
+            .format("com.microsoft.sqlserver.jdbc.spark")
+            .option("url", "jdbc:sqlserver://<server-instance-name>.database.windows.net")
+            .option("databaseName", "{dev}")
+            .option("accessToken", access_token)
+            .option("encrypt", "true")
+            .option("hostNameInCertificate", "*.database.windows.net")
+            .option("dbtable", "[dbo].[<table-name>]")
+            .option("batchsize", 2500)
+            .option("mssqlIsolationLevel", "READ_UNCOMMITTED")
+            .load()
+    )
+    ```
+
+    !!! note
+
+        This connector by default uses `READ_COMMITTED` isolation level when performing
+        the bulk insert into the database. If you wish to override the isolation
+        level, use the `mssqlIsolationLevel` option as show above.
+
+=== "Write Table"
+
+    ```python
+    (
+        df.write
+            .format("com.microsoft.sqlserver.jdbc.spark")
+            .mode("append")
+            .option("url", "jdbc:sqlserver://<server-instance-name>.database.windows.net")
+            .option("dbtable", "[dbo].[<table-name>]")
+            .option("accessToken", access_token)
+            .option("schemaCheckEnabled", "false")
+            .save()
+    )
+    ```
+
+    !!! note
+
+        When `schemaCheckEnabled` is `false`, we can write to the destination table
+        which has less column than dataframe.
+
+        [Read More](https://github.com/microsoft/sql-spark-connector/blob/master/samples/PySpark%20Connector%20with%20Big%20Data%20Clusters.ipynb)
 
 !!! note
 
     Executing custom SQL through the connector. The previous Azure SQL Connector
-    for Spark provided the ability to execute custom SQL code like DML or DDL statements
-    through the connector. This functionality is out-of-scope of this connector since
-    it is based on the DataSource APIs. This functionality is readily provided by
-    libraries like `pyodbc`, or you can use the standard java sql interfaces as well.
+    for Spark provided the ability to execute custom SQL code like **DML** or **DDL**
+    statements through the connector. This functionality is out-of-scope of this
+    connector since it is based on the DataSource APIs. This functionality is readily
+    provided by libraries like `pyodbc`, or you can use the standard java sql interfaces
+    as well.
 
 #### Method 02: JDBC Connector
 
+This method reads or writes the data **row by row**, resulting in performance issues.
+**Not Recommended**.
+
 More detail about [Microsoft JDBC Driver for SQL Server](https://learn.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16).
 
-```python
-jdbcHostname = "******.database.windows.net"
-jdbcPort = 1433
-jdbcDatabase = "******"
-jdbcTable = "******"
-dbr_PrincipalId = "******"
-dbr_PrincipalSecret = "******"
+=== "JDBC"
 
-jdbcUrl = f"jdbc:sqlserver://{jdbcHostname}:{jdbcPort};database={jdbcDatabase}"
+    ```python
+    connectionProperties = {
+        "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+        "authentication": "ActiveDirectoryServicePrincipal",
+        "UserName": dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"),
+        "Password": dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"),
+    }
 
-connectionProperties = {
-    "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
-    "authentication": "ActiveDirectoryServicePrincipal",
-    "UserName": dbr_PrincipalId ,
-    "Password": dbr_PrincipalSecret
-}
+    df = spark.read.jdbc(
+        url=f"jdbc:sqlserver://<host>:1433;database=<database>",
+        table=jdbcTable,
+        properties=connectionProperties,
+    )
+    ```
 
-df = spark.read.jdbc(
-    url=jdbcUrl,
-    table=jdbcTable,
-    properties=connectionProperties,
-)
-```
+=== "Format"
+
+    === "Read"
+
+        ```python
+        df = (
+            spark.read
+                .format("sqlserver")
+                .option("host", "<host:***.database.windows.net>")
+                .option("port", "1433")
+                .option("authentication", "ActiveDirectoryServicePrincipal")
+                .option("user", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"))
+                .option("password", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"))
+                .option("database", "<database-name>")
+                .option("dbtable", "<schema-name>.<table-name>")
+                .option("encrypt", "true")
+                .option("hostNameInCertificate", "*.database.windows.net")
+                .load()
+        )
+        ```
+
+    === "Write Append"
+
+        ```python
+        (
+            df.write
+                .mode("append")
+                .format("sqlserver")
+                .option("host", "<host:***.database.windows.net>")
+                .option("port", "1433")
+                .option("authentication", "ActiveDirectoryServicePrincipal")
+                .option("user", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"))
+                .option("password", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"))
+                .option("database", "<database-name>")
+                .option("dbtable", "<schema-name>.<table-name>")
+                .save()
+        )
+        ```
+
+    === "Write Overwrtie"
+
+        ```python
+        (
+            df.write
+                .mode("overwrite")
+                .format("sqlserver")
+                .option("host", "<host:***.database.windows.net>")
+                .option("port", "1433")
+                .option("authentication", "ActiveDirectoryServicePrincipal")
+                .option("user", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"))
+                .option("password", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"))
+                .option("database", "<database-name>")
+                .option("dbtable", "<schema-name>.<table-name>")
+                .option("truncate", true)
+                save()
+        )
+        ```
+
+        When using mode `overwrite` if you do not use the option truncate on recreation
+        of the table, indexes will be lost. , a columnstore table would now be a heap.
+        If you want to maintain existing indexing please also specify option truncate
+        with value true. For example, `.option("truncate","true")`.
+
+        [Microsoft: Spark - SQL Server Connector](https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver16#supported-features)
 
 ## SQL Authentication
 
@@ -164,7 +255,7 @@ CREATE USER [cnct-adb-dev] FOR LOGIN [cnct-adb-dev];
 GO
 ```
 
-**Permission**:
+**Grant Permission**:
 
 === "Read Only"
 
@@ -195,18 +286,18 @@ sudo ACCEPT_EULA=Y apt-get -q -y install msodbcsql17
 
 ```python
 import pyodbc
-server = '<Your_server_name>'
-database = '<database_name>'
-username = '[cnct-adb-dev]'
-password = '<password>'
 
 conn = pyodbc.connect(
-  f'DRIVER={{ODBC Driver 17 for SQL Server}};'
-  f'SERVER={server};DATABASE={database};UID={username};PWD={password}'
+    f'DRIVER={{ODBC Driver 17 for SQL Server}};'
+    f'SERVER=<host>;DATABASE=<database_name>;UID=[cnct-adb-dev];PWD=P@ssW0rd;'
+    f'Authentication=SqlPassword;Encrypt=yes;'
 )
 ```
 
-- https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server
+**Reference**:
+
+* [StackOverFlow: Using PyODBC in Azure Databricks for Connect to SQL Server](https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server)
+* [Microsoft: SQL ODBC - Using Azure AD](https://learn.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory?view=sql-server-ver16)
 
 #### Method 02: Use JDBC on Databricks
 
@@ -224,7 +315,7 @@ remote_table = (
 )
 ```
 
-#### Method 02: Use JDBC (Legacy)
+#### Method 03: Use JDBC (Legacy)
 
 ```python
 database_host = "<database-host-url>"

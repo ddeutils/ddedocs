@@ -47,7 +47,7 @@ GO
 
   ```sql
   CREATE ROLE de_trainer;
-  ALTER ROLE [de_trainer] ADD MEMBER [phuwasic@scg.com];
+  ALTER ROLE [de_trainer] ADD MEMBER [username@email.com];
   ALTER ROLE [db_datareader] ADD MEMBER [de_trainer];
   ```
 

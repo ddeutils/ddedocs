@@ -211,16 +211,14 @@ nav:
                   - Link Azure SQL Server: services/azure/data_factory/adf-lsv-sql-server.md
               - Synapse Analytic:
                   - Authentication: services/azure/synapse/asa-authentication.md
-                  - External Data: services/azure/synapse/asa-external-data.md
+                  - External Data Source: services/azure/synapse/asa-external-data-source.md
                   - Partition View: services/azure/synapse/asa-partition-view.md
                   - Operations: services/azure/synapse/asa-operations.md
                   - Low-Level Security: services/azure/synapse/asa-low-level-security.md
               - DevOps:
-                  #                  - CICD Batch:
                   - CICD Function App: services/azure/devops/devops-cicd-az-afn.md
                   - CICD Databricks: services/azure/devops/devops-cicd-az-adb.md
                   - CICD Data Factory: services/azure/devops/devops-cicd-az-adf.md
-                  #                  - CICD Synapse Analytic:
                   - CICD Power BI: services/azure/devops/devops-cicd-az-pbi.md
                   - Self Hosted:
                       - Deploy Python App: services/azure/devops/devops-cicd-self-hosted-win-fastapi.md
