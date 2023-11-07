@@ -4,6 +4,6 @@
 
 ## 0.0.1
 
-### Features
+### Initial
 
 * :package: init: Initialize this document project
