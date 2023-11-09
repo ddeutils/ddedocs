@@ -1,14 +1,18 @@
----
----
-hide:
-    - navigation
-
 # Welcome to **Data Develop & Engineer**
 
-This project will deliver all knowledge from my experience and other
-sharing knowledge in Data Develop and Engineer field.
+This project will deliver all knowledge from my experience and other sharing knowledge
+in Data Develop and Engineer field.
 
 * [Fundamentals of Data Engineer Book](https://blog.det.life/fundamentals-of-data-engineering-book-key-learning-points-35001380dda6)
-
 * [The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
+
+## Practice
+
 * [Data Engineer Best Practice](https://medium.com/@matt_weingarten/data-engineering-best-practices-2a02949b99c4)
+* [Medium: Data Engineering Best Practices](https://asrathore08.medium.com/data-engineering-best-practices-164c1e29969d)
+https://medium.com/@your_data_scientist_bestie/building-the-foundation-of-modern-data-a-deep-dive-into-data-engineering-5f12838d360c
+
+
+## Community
+
+* [Medium: Data Engineering](https://medium.com/tag/data-engineering)

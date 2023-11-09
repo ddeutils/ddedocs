@@ -1,6 +1,6 @@
-# Azure Function: _Access Azure Key Vault_
+# Azure Function: _To Azure Key Vault_
 
-## Using System Assign Manage Identity
+## System Assign Manage Identity
 
 ### 1) Enable MSI
 

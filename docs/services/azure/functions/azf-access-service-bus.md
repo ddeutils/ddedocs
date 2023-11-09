@@ -1,10 +1,11 @@
-# Azure Function: _Access Azure Service Bus_
+# Azure Function: _To Azure Service Bus_
 
 ```python
 import os
 import asyncio
 from aiohttp import ClientSession
 from azure.servicebus.aio import ServiceBusClient
+
 conn_str = os.environ['SERVICE_BUS_CONNECTION_STR']
 topic_name = os.environ['SERVICE_BUS_TOPIC_NAME']
 subscription_name = os.environ['SERVICE_BUS_SUBSCRIPTION_NAME']
