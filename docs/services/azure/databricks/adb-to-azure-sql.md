@@ -4,18 +4,15 @@
 
 ### 1) Create Service Principal
 
-To register your application and create your service principal
+To register your application and create your service principal:
 
 * Go to `Azure Active Directory` :octicons-arrow-right-24: `App registrations`
   :octicons-arrow-right-24: `New registration`
-* Add the information of this app like `name` is `cnct-adb-dev`
+* Add the information of this app like `name` is `cnct-adb-dev` (The name of app
+  should be formatted like `{app}-{resource-shortname}-{environment}`)
 * Click register for create
 
-!!! note
-
-    The name of app should be format, `{app}-{resource-shortname}-{environment}`
-
-You will then have to generate a secret
+You will then be required to generate a secret:
 
 * Go to `App registrations` :octicons-arrow-right-24: `Certificates&secrets`
   :octicons-arrow-right-24: `New Client Secret`
@@ -60,8 +57,8 @@ CREATE USER [cnct-adb-dev] FROM EXTERNAL PROVIDER;
     ```sql
     GRANT SELECT ON SCHEMA::dbo TO [cnct-adb-dev];
     GRANT INSERT ON SCHEMA::dbo TO [cnct-adb-dev];
-    GRANT CREATE TABLE TO [cnct-adb-dev];
     GRANT ALTER ON SCHEMA::dbo TO [cnct-adb-dev];
+    GRANT CREATE TABLE TO [cnct-adb-dev];
     ```
 
 ### 3) Connection Code
@@ -157,26 +154,84 @@ and the [Microsoft Azure Active Directory Authentication Library](https://pypi.o
 This method reads or writes the data **row by row**, resulting in performance issues.
 **Not Recommended**.
 
-More detail about [Microsoft JDBC Driver for SQL Server](https://learn.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16).
+In Databricks Runtime 11.3 LTS and above, you can use the sqlserver keyword to use
+the included driver for connecting to SQL server.
 
-=== "JDBC"
+=== "Format JDBC"
 
-    ```python
-    connectionProperties = {
-        "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
-        "authentication": "ActiveDirectoryServicePrincipal",
-        "UserName": dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"),
-        "Password": dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"),
-    }
+    === "Read"
 
-    df = spark.read.jdbc(
-        url=f"jdbc:sqlserver://<host>:1433;database=<database>",
-        table=jdbcTable,
-        properties=connectionProperties,
-    )
-    ```
+        ```python
+        df = (
+            spark.read
+                .format("jdbc")
+                .option("driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver")
+                .option("url", "jdbc:sqlserver://<host>:1433;")
+                .option("authentication", "ActiveDirectoryServicePrincipal")
+                .option("user", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"))
+                .option("password", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"))
+                .option("database", "<database-name>")
+                .option("dbtable", "<schema-name>.<table-name>")
+                .option("encrypt", "true")
+                .load()
+        )
+        ```
 
-=== "Format"
+    === "Read (Legacy)"
+
+        ```python
+        df = (
+            spark.read
+                .jdbc(
+                    url="jdbc:sqlserver://<host>:1433;database=<database>",
+                    table="<schema-name>.<table-name>",
+                    properties={
+                        "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+                        "authentication": "ActiveDirectoryServicePrincipal",
+                        "UserName": dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"),
+                        "Password": dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"),
+                    },
+                )
+        )
+        ```
+
+    === "Write Append"
+
+        ```python
+        (
+            df.write
+                .mode("append")
+                .format("jdbc")
+                .option("driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver")
+                .option("url", "jdbc:sqlserver://<host>:1433;")
+                .option("authentication", "ActiveDirectoryServicePrincipal")
+                .option("user", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"))
+                .option("password", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"))
+                .option("database", "<database-name>")
+                .option("dbtable", "<schema-name>.<table-name>")
+                .save()
+        )
+        ```
+
+    === "Write Overwrite"
+
+        ```python
+        (
+            df.write
+                .mode("overwrite")
+                .format("jdbc")
+                .option("driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver")
+                .option("url", "jdbc:sqlserver://<host>:1433;")
+                .option("authentication", "ActiveDirectoryServicePrincipal")
+                .option("user", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"))
+                .option("password", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnSecret"))
+                .option("database", "<database-name>")
+                .option("dbtable", "<schema-name>.<table-name>")
+                .save()
+        )
+        ```
+
+=== "Format SQLServer"
 
     === "Read"
 
@@ -184,7 +239,7 @@ More detail about [Microsoft JDBC Driver for SQL Server](https://learn.microsoft
         df = (
             spark.read
                 .format("sqlserver")
-                .option("host", "<host:***.database.windows.net>")
+                .option("host", "<host-name>.database.windows.net")
                 .option("port", "1433")
                 .option("authentication", "ActiveDirectoryServicePrincipal")
                 .option("user", dbutils.secrets.get(scope="defaultScope", key="DatabricksSpnId"))
@@ -241,6 +296,11 @@ More detail about [Microsoft JDBC Driver for SQL Server](https://learn.microsoft
 
         [Microsoft: Spark - SQL Server Connector](https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver16#supported-features)
 
+**References**:
+
+* [Databricks: External Data - SQL Server](https://docs.databricks.com/en/external-data/sql-server.html)
+* [Apache Spark: SQL Data Sources - JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
+
 ## SQL Authentication
 
 ### 1) Create SQL User & Password
@@ -274,7 +334,9 @@ GO
 
 ### 2) Connection Code
 
-#### Method 01: Use PyODBC
+#### Method 01: ODBC Connector
+
+Install ODBC Driver on cluster:
 
 ```text
 %sh
@@ -299,44 +361,42 @@ conn = pyodbc.connect(
 * [StackOverFlow: Using PyODBC in Azure Databricks for Connect to SQL Server](https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server)
 * [Microsoft: SQL ODBC - Using Azure AD](https://learn.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory?view=sql-server-ver16)
 
-#### Method 02: Use JDBC on Databricks
+#### Method 02: JDBC Connector
 
-```python
-remote_table = (
-    spark.read
-        .format("sqlserver")
-        .option("host", "hostName")
-        .option("port", "1433")
-        .option("user", "[cnct-adb-dev]")
-        .option("password", "password")
-        .option("database", "databaseName")
-        .option("dbtable", "schemaName.tableName") # (if schemaName not provided, default to "dbo")
-        .load()
-)
-```
+=== "Format SQLServer"
 
-#### Method 03: Use JDBC (Legacy)
+    ```python
+    df = (
+        spark.read
+            .format("sqlserver")
+            .option("host", "hostName")
+            .option("port", "1433")
+            .option("user", "[cnct-adb-dev]")
+            .option("password", "password")
+            .option("database", "databaseName")
+            .option("dbtable", "schemaName.tableName") # (if schemaName not provided, default to "dbo")
+            .load()
+    )
+    ```
 
-```python
-database_host = "<database-host-url>"
-database_port = "1433"
-database_name = "<database-name>"
-url = f"jdbc:sqlserver://{database_host}:{database_port};database={database_name}"
+=== "Format JDBC"
 
-remote_table = (
-    spark.read
-        .format("jdbc")
-        .option("driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver")
-        .option("url", url)
-        .option("dbtable", "tableName")
-        .option("user", "[cnct-adb-dev]")
-        .option("password", "password")
-        .load()
-)
-```
+    ```python
+    df = (
+        spark.read
+            .format("jdbc")
+            .option("driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver")
+            .option("url", "jdbc:sqlserver://<host-url>:1433;database=<database-name>")
+            .option("dbtable", "tableName")
+            .option("user", "[cnct-adb-dev]")
+            .option("password", "password")
+            .load()
+    )
+    ```
 
 ## References
 
 * [TheDataSwamp: Databricks](https://www.thedataswamp.com/blog/databricks-connect-to-azure-sql-with-service-principal)
 * [Databricks: External Data - SQL Server](https://docs.databricks.com/en/external-data/sql-server.html)
-* https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver16
+* [Microsoft](https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver16)
+* [Microsoft JDBC Driver for SQL Server](https://learn.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16)

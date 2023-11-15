@@ -14,6 +14,9 @@ SELECT * FROM [sys].[database_scoped_credentials];
 
 ### Create Master Key
 
+Create a new Master Key, `ENCRYPTION` to encrypt the credentials for the external
+data source.
+
 ```sql
 -- Optional: Create MASTER KEY if not exists in database:
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'P@ssW0rd'
@@ -76,9 +79,10 @@ CLOSE MASTER KEY;
     )
     ```
 
-And the permission of User, Managed Identity, or Service Principle that want to
-access data on target external data source should be any role in `Storage Blob Data Owner/Contributor/Reader`
-roles in order for the application to access the data.
+And the permission of **User**, **Managed Identity**, or **Service Principle** that want to
+access data on target external data source should be any role in
+`Storage Blob Data Owner/Contributor/Reader` roles in order for the application
+to access the data via RBAC in **Azure Portal**.
 
 !!! example
 
@@ -137,6 +141,7 @@ SELECT * FROM [sys].[external_data_sources]
     WITH(
         LOCATION = 'abfss://<container>@<storage-account>.dfs.core.windows.net',
         CREDENTIAL = <credential-name>,
+        PUSHDOWN = ON
         TYPE = HADOOP
     );
     ```
@@ -145,6 +150,9 @@ SELECT * FROM [sys].[external_data_sources]
 
         **PolyBase** data virtualization is used when the `EXTERNAL DATA SOURCE`
         is created with `TYPE=HADOOP`.
+
+        `PUSHDOWN = ON | OFF` is set to `ON` by default, meaning the ODBC Driver
+        can leverage server-side processing for complex queries.
 
 === "Serverless SQL Pool"
 
@@ -155,6 +163,9 @@ SELECT * FROM [sys].[external_data_sources]
         CREDENTIAL = <credential-name>
     );
     ```
+
+For the `LOCATION`, it provide the connectivity protocol and path to the external
+data source. See [More Supported Protocol](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=azure-sqldw-latest&preserve-view=true&tabs=serverless#location--prefixpath)
 
 !!! note
 
@@ -205,3 +216,4 @@ WITH (
 * [Microsoft: Develop Storage Files Access Control](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity)
 * [Microsoft: TSQL - Create External Data Source](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=azure-sqldw-latest&preserve-view=true&tabs=dedicated)
 * [Microsoft: TSQL - Create External File Format](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-file-format-transact-sql)
+* [Medium: Query Azure Data Lake via Synapse Serverless Security](https://medium.com/@diangermishuizen/query-azure-data-lake-via-synapse-serverless-security-credentials-setup-eedb5175d5da)

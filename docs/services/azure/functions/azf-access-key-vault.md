@@ -1,53 +1,55 @@
-# Azure Function: _Access Azure Key Vault_
+# Azure Function: _To Azure Key Vault_
 
-## Using System Assign Manage Identity
+## System Assign Manage Identity
 
-1.  Enable Managed Service Identity (MSI) on Azure Function App Protol.
+### 1) Enable MSI
 
-    * Go to **Azure Function App** :octicons-arrow-right-24: Select `Identity`
-      :octicons-arrow-right-24: Click nav `System Assigned`
+Enable Managed Service Identity (MSI) on Azure Function App Protol:
 
-    * On Status :octicons-arrow-right-24: Enable to `On` :octicons-arrow-right-24:
-      Click `Save`
+* Go to **Azure Function App** :octicons-arrow-right-24: Select `Identity`
+  :octicons-arrow-right-24: Click nav `System Assigned`
 
-2.  Add The Azure Function MSI User to the Azure Key Vault.
+* On Status :octicons-arrow-right-24: Enable to `On` :octicons-arrow-right-24:
+  Click `Save`
 
-    * Go to **Azure Key Vault** :octicons-arrow-right-24: Select `Access policies`
-      :octicons-arrow-right-24: Click nav `Create`
+### 2) Add Policy to MSI
 
-    * On `Configure from a template` :octicons-arrow-right-24: Select `Secret Management`
-      :octicons-arrow-right-24: Click `Next`
+Add The Azure Function MSI User to the Azure Key Vault.
 
-    * On `Principle` :octicons-arrow-right-24: Search the Azure Function name
-      :octicons-arrow-right-24: Click `Create`
+* Go to **Azure Key Vault** :octicons-arrow-right-24: Select `Access policies`
+  :octicons-arrow-right-24: Click nav `Create`
 
-3.  Add Secret to Azure Function
+* On `Configure from a template` :octicons-arrow-right-24: Select `Secret Management`
+  :octicons-arrow-right-24: Click `Next`
 
-    1.  Setting Configuration
+* On `Principle` :octicons-arrow-right-24: Search the Azure Function name
+  :octicons-arrow-right-24: Click `Create`
 
-        * Go **to Azure Key Vault** :octicons-arrow-right-24: Select `Secrets`
-          :octicons-arrow-right-24: Click nav `Generate/Import`
-        * Create your Secrets :octicons-arrow-right-24: Copy the `Secret Identifier`
-          uri
-        * Go to **Azure Function App** :octicons-arrow-right-24: Select `Configuration`
-          :octicons-arrow-right-24: Click `New application setting`
-        * Pass the name to environment variable with this value:
-          `@Microsoft.KeyVault(SecretUri=<secret-identifier-uri>)`
+### 3) Add Secret to Azure Function
 
-    2.  Develop Python Code
+* Go **to Azure Key Vault** :octicons-arrow-right-24: Select `Secrets`
+  :octicons-arrow-right-24: Click nav `Generate/Import`
+* Create your Secrets :octicons-arrow-right-24: Copy the `Secret Identifier`
+  uri
+* Go to **Azure Function App** :octicons-arrow-right-24: Select `Configuration`
+  :octicons-arrow-right-24: Click `New application setting`
+* Pass the name to environment variable with this value:
+  `@Microsoft.KeyVault(SecretUri=<secret-identifier-uri>)`
 
-        ```python
-        from azure.identity import ManagedIdentityCredential
-        from azure.keyvault.secrets import SecretClient
+### 4) Connection Code
 
-        credentials = ManagedIdentityCredential()
-        secret_client = SecretClient(
-            vault_url="https://<key-vault-name>.vault.azure.net",
-            credential=credentials
-        )
-        secret = secret_client.get_secret("secret-name")
-        ```
+```python
+from azure.identity import ManagedIdentityCredential
+from azure.keyvault.secrets import SecretClient
+
+credentials = ManagedIdentityCredential()
+secret_client = SecretClient(
+    vault_url="https://<key-vault-name>.vault.azure.net",
+    credential=credentials
+)
+secret = secret_client.get_secret("secret-name")
+```
 
 ## References
 
-- [Accessing Azure Key Vault from Python](https://servian.dev/accessing-azure-key-vault-from-python-functions-44d548b49b37)
+* [Accessing Azure Key Vault from Python](https://servian.dev/accessing-azure-key-vault-from-python-functions-44d548b49b37)

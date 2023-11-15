@@ -1,10 +1,23 @@
-# Azure Function: _Access Azure Service Bus_
+# Azure Function: _To Azure Service Bus_
+
+## Managed Identity
+
+```yaml
+ServiceBusConnection__clientID:<managedidenity client id>
+ServiceBusConnection__credential:managedidentity
+ServiceBusConnection__fullyQualifiedNamespace:<servicebusname>.servicebus.windows.net
+```
+
+## Connection String
+
+### 1) Connection Code
 
 ```python
 import os
 import asyncio
 from aiohttp import ClientSession
 from azure.servicebus.aio import ServiceBusClient
+
 conn_str = os.environ['SERVICE_BUS_CONNECTION_STR']
 topic_name = os.environ['SERVICE_BUS_TOPIC_NAME']
 subscription_name = os.environ['SERVICE_BUS_SUBSCRIPTION_NAME']
@@ -41,3 +54,4 @@ if __name__ == "__main__":
 ## References
 
 - https://stackoverflow.com/questions/63149310/azure-servicebus-using-async-await-in-python-seems-not-to-work
+- https://iqan.medium.com/how-to-use-managed-identity-in-azure-functions-for-service-bus-trigger-fc61fb828b90

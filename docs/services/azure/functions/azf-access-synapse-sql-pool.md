@@ -1,90 +1,91 @@
-# Azure Function App: _Access Azure Synapse SQL Pool_
+# Azure Function: _To Synapse SQL Pool_
 
-## Using ActiveDirectoryMSI
+## Managed Service Identity
 
-1.  Enable Managed Service Identity (MSI) on Azure Function App Protol.
+### 1) Enable MSI
 
-    * Go to Azure Function App :octicons-arrow-right-24: Select `Identity`
-      :octicons-arrow-right-24: Click nav `System Assigned`
-    * On Status :octicons-arrow-right-24: Enable to `On` :octicons-arrow-right-24:
-      Click `Save`
+Enable Managed Service Identity (MSI) on Azure Function App Protol.
 
-2.  Enable AAD integration for Azure Synapse Workspace.
+* Go to Azure Function App :octicons-arrow-right-24: Select `Identity`
+  :octicons-arrow-right-24: Click nav `System Assigned`
+* On Status :octicons-arrow-right-24: Enable to `On` :octicons-arrow-right-24:
+  Click `Save`
 
-    * Go to Azure Synapse Workspace :octicons-arrow-right-24: Select `Azure Active Directory`
-    * Click nav `Set admin` :octicons-arrow-right-24: Select your user :octicons-arrow-right-24: Click `Save`
+### 2) Enable AAD integration
 
-3.  Add The Azure Function MSI User to the Azure Synapse SQL Pool.
+Enable AAD integration for Azure Synapse Workspace.
 
-    * Connect to Azure Synapse SQL Pool on target database.
-    * Create MSI user that use the Azure Function name
+* Go to Azure Synapse Workspace :octicons-arrow-right-24: Select `Azure Active Directory`
+* Click nav `Set admin` :octicons-arrow-right-24: Select your user :octicons-arrow-right-24: Click `Save`
 
-      ```sql
-      CREATE USER <azure-function-name> FROM EXTERNAL PROVIDER
-      GO
-      ```
+### 3) Add user to Azure Synapse
 
-4.  Use `Authentication=ActiveDirectoryMsi` in the Python code.
+Add The Azure Function MSI User to the Azure Synapse SQL Pool.
 
-    ```python
-    import logging
-    import pyodbc
+* Connect to **Azure Synapse SQL Pool** on target database.
+* Create MSI user that use the Azure Function name
 
-    server = 'tcp:<server-name>.database.windows.net'
-    database = '<database-name>'
-    driver = '{ODBC Driver 17 for SQL Server}'
+  ```sql
+  CREATE USER <azure-function-name> FROM EXTERNAL PROVIDER
+  GO
+  ```
 
-    with pyodbc.connect(
-        (
-            f"Driver={driver};Server={server};PORT=1433;Database={database};"
-            f"Authentication=ActiveDirectoryMsi"
-        )
-    ) as conn:
-        logging.info("Successful connection to database")
-        with conn.cursor() as cursor:
-            cursor.execute("SELECT <column-name> FROM <table-name>;")
+### 4) Connection Code
+
+Use `Authentication=ActiveDirectoryMsi` in the Python code.
+
+```python
+import logging
+import pyodbc
+
+server = 'tcp:<server-name>.database.windows.net'
+database = '<database-name>'
+driver = '{ODBC Driver 17 for SQL Server}'
+
+with pyodbc.connect(
+    (
+        f"Driver={driver};Server={server};PORT=1433;Database={database};"
+        f"Authentication=ActiveDirectoryMsi;"
+    )
+) as conn:
+    logging.info("Successful connection to database")
+    with conn.cursor() as cursor:
+        cursor.execute("SELECT <column-name> FROM <table-name>;")
+        row = cursor.fetchone()
+        while row:
+            logging.info(str(row[0]).strip())
             row = cursor.fetchone()
-            while row:
-                logging.info(str(row[0]).strip())
-                row = cursor.fetchone()
-    ```
+```
 
-## Using SQL User
+## SQL Authentication
 
-1.  Enable AAD integration for Azure Synapse Workspace
+### 1) Connection Code
 
-    * Go to Azure Synapse Workspace :octicons-arrow-right-24: Select `Azure Active Directory`
-    * Click nav `Set admin` :octicons-arrow-right-24: Select your user :octicons-arrow-right-24: Click `Save`
+```python
+import logging
+import pyodbc
 
-2.  Create SQL User on Azure Synapse SQL Pool
+server = 'tcp:<server-name>.database.windows.net'
+database = '<database-name>'
+driver = '{ODBC Driver 17 for SQL Server}'
 
-3.  Use `UID` and `PWD` in the Python code.
+username = "<username>"
+password = "P@ssW0rd"
 
-    ```python
-    import logging
-    import pyodbc
-
-    server = 'tcp:<server-name>.database.windows.net'
-    database = '<database-name>'
-    driver = '{ODBC Driver 17 for SQL Server}'
-
-    username = "<username>"
-    password = "P@ssW0rd"
-
-    with pyodbc.connect(
-        (
-            f"Driver={driver};Server={server};PORT=1433;Database={database};"
-            f"UID={username};PWD={password}"
-        )
-    ) as conn:
-        logging.info("Successful connection to database")
-        with conn.cursor() as cursor:
-            cursor.execute("SELECT <column-name> FROM <table-name>;")
+with pyodbc.connect(
+    (
+        f"Driver={driver};Server={server};PORT=1433;Database={database};"
+        f"UID={username};PWD={password}"
+    )
+) as conn:
+    logging.info("Successful connection to database")
+    with conn.cursor() as cursor:
+        cursor.execute("SELECT <column-name> FROM <table-name>;")
+        row = cursor.fetchone()
+        while row:
+            logging.info(str(row[0]).strip())
             row = cursor.fetchone()
-            while row:
-                logging.info(str(row[0]).strip())
-                row = cursor.fetchone()
-    ```
+```
 
 ## Reference
 

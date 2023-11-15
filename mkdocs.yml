@@ -49,6 +49,9 @@ nav:
   - Home:
       - index.md
       - SOLID Principles: dae-solid-principles.md
+      - Role:
+          - Data Platform Engineer: dae-data-platform-engineer.md
+          - Data Operation Engineer: dae-dataops-engineer.md
   - Base:
       - base/index.md
       - Data:
@@ -61,6 +64,7 @@ nav:
               - base/data_management/index.md
               - Data Quality: base/data_management/data-quality.md
               - Data Transformation: base/data_management/data-transformation.md
+              - Driven: base/data_management/data-management-driven.md
           - Data Warehouse:
               - base/data_warehouse/index.md
               - Inmon Approach:
@@ -75,6 +79,8 @@ nav:
                   - Abstract: base/data_warehouse/dwh-data-vault-approach.md
                   - Implement: base/data_warehouse/dwh-data-vault-implement.md
               - Anchor Approach: base/data_warehouse/dwh-anchor-approach.md
+          - Data Lakehouse:
+              - base/data_lakehouse/index.md
           - Data Governance:
               - base/data_governance/index.md
               - Implement: base/data_governance/dgn-data-quality-framework-for-scale.md
@@ -83,12 +89,13 @@ nav:
               - base/data_observability/index.md
               - Data Quality Metric: base/data_observability/dobs-data-quality-metrics.md
               - Data CICD: base/data_observability/dobs-data-cicd.md
+              - Data Lineage: base/data_observability/dobs-data-lineage.md
       - News & Research:
           - ChatGPT:
               - base/chatgpt/index.md
   - Tools:
       - tools/index.md
-      - Language & System:
+      - Languages:
           - Git:
               - tools/git/index.md
               - Commands:
@@ -127,6 +134,7 @@ nav:
               - Advance Feature: tools/scala/scala-advance-feature.md
               - Collection: tools/scala/scala-collection.md
               - OOP Concept: tools/scala/scala-oop-concepts.md
+      - System & Network:
           - Edge:
               - tools/edge/index.md
               - FTP: tools/edge/op-ftp.md
@@ -140,7 +148,14 @@ nav:
       - Orchestration:
           - AirFlow:
               - tools/airflow/index.md
-      - Extract & Transform:
+              - Pydantic Validator: tools/airflow/airflow-pydantic-validator.md
+              - Repeatable DAGs: tools/airflow/airflow-repeatable-dags.md
+              - Cost Optimize: tools/airflow/airflow-cost-optimization.md
+      - Validation:
+          - Great Expectations:
+              - tools/great_expectations/index.md
+              - With Databricks: tools/great_expectations/gexp-with-databricks.md
+      - Extract & Transform & Load:
           - Pandas:
               - tools/pandas/index.md
               - SQL Conversion: tools/pandas/py_pd_convert_from_sql.md
@@ -155,13 +170,15 @@ nav:
               - Shuffle: tools/spark/spark-shuffle.md
               - Repartitioning: tools/spark/spark-repartitioning.md
               - Nested Datatypes: tools/spark/spark-nested-datatypes.md
+              - UDFs: tools/spark/spark-udf.md
               - Pyspark:
                   - SCD2: tools/spark/pyspark/pyspark-scd2.md
                   - RegExp: tools/spark/pyspark/pyspark-regexp.md
                   - Media Files: tools/spark/pyspark/pyspark-media-files.md
-          - Great Expectations:
-              - tools/great_expectations/index.md
-              - With Databricks: tools/great_expectations/gexp-with-databricks.md
+          - Kafka:
+              - tools/kafka/index.md
+              - Usecases:
+                  - Agoda: tools/kafka/kafka-agoda.md
       - Storage:
           - DuckDB:
               - tools/duckdb/index.md
@@ -188,27 +205,25 @@ nav:
           - Azure:
               - services/azure/index.md
               - SQL Server:
-                  - Authentication: services/azure/database_server/az-sql-grant-ad-user.md
-                  - Permission: services/azure/database_server/az-sql-permission.md
-                  - Impersonate: services/azure/database_server/az-sql-impersonate.md
+                  - Authentication: services/azure/database_server/az-sql-authentication.md
               - Batch:
                   - Auto Scalable: services/azure/batch/az-btch-auto-scalable.md
-                  - Access Key Vault: services/azure/batch/az-btch-access-key-vault.md
+                  - To Key Vault: services/azure/batch/az-btch-to-key-vault.md
                   - Run Pyspark With Docker: services/azure/batch/az-btch-run-pyspark-with-docker.md
                   - Docker mode: services/azure/batch/az-btch-run-docker.md
                   - Docker inside Node: services/azure/batch/az-btch-run-docker-inside.md
               - Function App:
-                  - Access Key Vault: services/azure/functions/azf-access-key-vault.md
-                  - Access Synapse SQL Pool: services/azure/functions/azf-access-synapse-sql-pool.md
-                  - Access Service Bus: services/azure/functions/azf-access-service-bus.md
+                  - To Key Vault: services/azure/functions/azf-access-key-vault.md
+                  - To Synapse SQL Pool: services/azure/functions/azf-access-synapse-sql-pool.md
+                  - To Service Bus: services/azure/functions/azf-access-service-bus.md
               - Databricks:
                   - Init Script: services/azure/databricks/adb-init-script.md
                   - Mount Storage: services/azure/databricks/adb-mount-storage.md
-                  - Access Azure SQL: services/azure/databricks/adb-to-azure-sql.md
-                  - Access Synapse SQL Pool: services/azure/databricks/adb-to-synapse-sql-pool.md
+                  - To Azure SQL: services/azure/databricks/adb-to-azure-sql.md
+                  - To Synapse SQL Pool: services/azure/databricks/adb-to-synapse-sql-pool.md
               - Data Factory:
                   - Link MongoDB: services/azure/data_factory/adf-lsv-mongodb.md
-                  - Link Azure SQL Server: services/azure/data_factory/adf-lsv-sql-server.md
+                  - Link Azure SQL: services/azure/data_factory/adf-lsv-sql-server.md
               - Synapse Analytic:
                   - Authentication: services/azure/synapse/asa-authentication.md
                   - External Data Source: services/azure/synapse/asa-external-data-source.md
@@ -216,11 +231,14 @@ nav:
                   - Operations: services/azure/synapse/asa-operations.md
                   - Low-Level Security: services/azure/synapse/asa-low-level-security.md
               - DevOps:
-                  - CICD Function App: services/azure/devops/devops-cicd-az-afn.md
-                  - CICD Databricks: services/azure/devops/devops-cicd-az-adb.md
-                  - CICD Data Factory: services/azure/devops/devops-cicd-az-adf.md
-                  - CICD Power BI: services/azure/devops/devops-cicd-az-pbi.md
-                  - Self Hosted:
+                  - For Loop: services/azure/devops/devops-for-loop.md
+                  - Multi Repo: services/azure/devops/devops-multi-repo.md
+                  - CICD:
+                      - Function App: services/azure/devops/devops-cicd-az-afn.md
+                      - Databricks: services/azure/devops/devops-cicd-az-adb.md
+                      - Data Factory: services/azure/devops/devops-cicd-az-adf.md
+                      - Power BI: services/azure/devops/devops-cicd-az-pbi.md
+                  - CICD (Self Hosted):
                       - Deploy Python App: services/azure/devops/devops-cicd-self-hosted-win-fastapi.md
               - PowerBI:
                   - RestAPI Refresh Dataset: services/azure/powerbi/pbi-restapi-refresh-dataset.md
@@ -232,15 +250,29 @@ nav:
                   - Rule to Timestream Grafana: services/aws/iot_core/iot-rule-timestream-grafana.md
               - S3:
                   - Filter Content: services/aws/s3/s3-filter-content.md
+                  - Trigger Lambda: services/aws/s3/s3-trigger-lambda.md
+                  - Transform Lambda: services/aws/s3/s3-transform-lambda.md
+              - EC2:
+                  - Domain with Route53: services/aws/ec2/ec2-domain-with-route53.md
               - Step Function:
+                  - State Machine Language: services/aws/step_function/stfn-state-machine-language.md
                   - Schedule: services/aws/step_function/stfn-schedule-by-event-bridge.md
+                  - Combine Parallel: services/aws/step_function/stfn-combine-data-parallel-state.md
+              - Glue:
+                  - Local Env: services/aws/glue/glue-local-env.md
           - Google:
               - services/google/index.md
+              - API Authentication: services/google/google-api-authenticate.md
+              - Cloud Functions:
+                  - To Managing Secrets: services/google/functions/gcf-to-managing-secrets.md
           - Databricks:
               - services/databricks/index.md
               - Dynamically Workflow: services/databricks/databricks-dynamically-workflow.md
               - With FastAPI to Serverless: services/databricks/databricks-fastapi-to-serverless.md
               - Migration Workspace: services/databricks/databricks-migration-workspace.md
+              - Custom Python Docker: services/databricks/databricks-custom-python-docker.md
+              - AWS Orchestration: services/databricks/databricks-aws-orchestration.md
+              - Deploy with AWS: services/databricks/databricks-deploy-with-aws.md
           - Snowflake:
               - services/snowflake/index.md
           - Ansible:
@@ -248,12 +280,15 @@ nav:
           - Terraform:
               - services/terraform/index.md
               - Manage Secret: services/terraform/tf-manage-secret.md
+              - Provider:
+                  Databricks: services/terraform/tf-databricks.md
   - Designs:
       - designs/index.md
       - Data Pipeline:
           - AWS Serverless Data Analytic: designs/architect/act-aws-serverless-data-analytics-pipeline.md
           - Azure Modern Data Pipeline: designs/architect/act-azure-modern-data-pipeline.md
           - Stream Processing: designs/architect/act-open-source-stream-processing.md
+          - Stream Kafka: designs/architect/act-kafka-stream-pipeline.md
       - Data Mesh:
           - Azure Data Mesh: designs/architect/act-data-mesh-with-azure.md
   - Analytics:
@@ -262,11 +297,16 @@ nav:
           - Data Analytic:
               - analytics/data_analytic/index.md
               - Design Thinking: analytics/data_analytic/da-design-thinking.md
+          - Analytic Engineer:
+              - analytics/analytic_engineer/index.md
       - Algorithm:
+          - ML Management Tool: analytics/analytic-ml-management-tools.md
           - Linker:
               - analytics/linker/index.md
               - With Splink: analytics/linker/linker-with-splink.md
               - With RecordLinkage: analytics/linker/linker-with-recordlinkage.md
+          - Forecast:
+              - analytics/forecast/index.md
 
 plugins:
   - tags

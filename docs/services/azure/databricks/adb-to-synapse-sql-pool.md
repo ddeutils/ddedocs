@@ -157,7 +157,7 @@ URL = (
 * [Microsoft Databricks JDBC](https://learn.microsoft.com/en-us/azure/databricks/external-data/jdbc)
 * [Spark SQL Data Source JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
 
-#### Method 02: Using Apache Spark Connector
+#### Method 02: Spark Connector
 
 This method uses bulk insert to read/write data. There are a lot more options that
 can be further explored. First Install the Library using **Maven Coordinate** in
@@ -176,17 +176,13 @@ Install Driver on cluster:
 
     Read More [Supported Version](https://search.maven.org/search?q=spark-mssql-connector)
 
-```python
-URL = f"jdbc:sqlserver://{server}:1433;database={database};"
-```
-
 === "Table"
 
     ```python
     df = (
       spark.read
         .format("com.microsoft.sqlserver.jdbc.spark")
-        .option("url", URL)
+        .option("url", "jdbc:sqlserver://<server-name>:1433;database=<database-name>;")
         .option("user", username)
         .option("password", password)
         .option("mssqlIsolationLevel", "READ_UNCOMMITTED")
@@ -202,7 +198,7 @@ URL = f"jdbc:sqlserver://{server}:1433;database={database};"
     df = (
       spark.read
         .format("com.microsoft.sqlserver.jdbc.spark")
-        .option("url", URL)
+        .option("url", "jdbc:sqlserver://<server-name>:1433;database=<database-name>;")
         .option("user", username)
         .option("password", password)
         .option("mssqlIsolationLevel", "READ_UNCOMMITTED")
@@ -233,35 +229,27 @@ has improved performance. **Recommended for Azure Synapse**
 
 ### SQL Authentication
 
-**Configuration**:
+#### 1) Connection Code
 
 ```python
 spark.conf.set("spark.databricks.sqldw.writeSemantics", "copy")
 ```
 
-**JDBC URL Pattern**:
-
-```python
-URL: str = (
-    f"jdbc:sqlserver://{server}:1433;database={database};"
-    f"user={username};password={password};"
-    f"encrypt=true;trustServerCertificate=true;"
-    f"hostNameInCertificate=*.sql.azuresynapse.net;"
-    f"loginTimeout=30;"
-)
-```
-
 ```python
 df = (
-  spark.read
-    .format("com.databricks.spark.sqldw")
-    .option("url", f"jdbc:sqlserver://{server};database={database};")
-    .option("user", username)
-    .option("password", password)
-    .option("forwardSparkAzureStorageCredentials", "true")
-    .option("dbTable", "<your-table-name>")
-    .option("tempDir", "abfss://<container-name>@<storage-account-name>.dfs.core.windows.net/<directory-name>")
-    .load()
+    spark.read
+        .format("com.databricks.spark.sqldw")
+        .option("url", f"jdbc:sqlserver://<work-space-name>;database=<database-name>;")
+        .option("user", "<username>")
+        .option("password", "<password>")
+        .option("forwardSparkAzureStorageCredentials", "true")
+        .option("dbTable", "<your-table-name>")
+        .option("tempDir", "abfss://<container-name>@<storage-account-name>.dfs.core.windows.net/<directory-name>")
+        .option("hostNameInCertificate", "*.sql.azuresynapse.net")
+        .option("loginTimeout", "30")
+        .option("encrypt", "true")
+        .option("trustServerCertificate", "true")
+        .load()
 )
 ```
 
@@ -347,7 +335,7 @@ URL: str = (
 df = (
   spark.read
     .format("com.databricks.spark.sqldw")
-    .option("url", URL)
+    .option("url", "jdbc:sqlserver://<work-space-name>.sql.azuresynapse.net:1433;")
     .option("tempDir", "abfss://<container-name>@<storage-account-name>.dfs.core.windows.net/<directory-name>")
     .option("enableServicePrincipalAuth", "true")
     .option("dbTable", "[<schema>].[<table-name>]")

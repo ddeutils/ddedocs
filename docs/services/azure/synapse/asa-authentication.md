@@ -7,9 +7,12 @@
 === "External Users"
 
     ```sql
-    SELECT [name], type_desc, type
+    SELECT
+        [name]
+        , [type_desc]
+        , [type]
     FROM [sys].[database_principals]
-    WHERE type_desc like 'external%'
+    WHERE [type_desc] like 'external%'
     ORDER BY [name]
     ;
     ```
