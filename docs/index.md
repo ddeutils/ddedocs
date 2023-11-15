@@ -8,10 +8,14 @@ in Data Develop and Engineer field.
 
 ## Practice
 
+* https://towardsdatascience.com/data-engineering-books-f373005d53fc
+
 * [Data Engineer Best Practice](https://medium.com/@matt_weingarten/data-engineering-best-practices-2a02949b99c4)
 * [Medium: Data Engineering Best Practices](https://asrathore08.medium.com/data-engineering-best-practices-164c1e29969d)
-https://medium.com/@your_data_scientist_bestie/building-the-foundation-of-modern-data-a-deep-dive-into-data-engineering-5f12838d360c
+* https://medium.com/@your_data_scientist_bestie/building-the-foundation-of-modern-data-a-deep-dive-into-data-engineering-5f12838d360c
+* https://medium.com/@seancoyne/data-engineering-practice-system-design-question-and-solution-streaming-ad32562ba954
 
+* https://towardsdatascience.com/how-we-think-about-data-pipelines-is-changing-51c3bf6f34dc
 
 ## Community
 

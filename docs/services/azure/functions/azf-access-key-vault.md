@@ -27,8 +27,6 @@ Add The Azure Function MSI User to the Azure Key Vault.
 
 ### 3) Add Secret to Azure Function
 
-#### Setting Configuration
-
 * Go **to Azure Key Vault** :octicons-arrow-right-24: Select `Secrets`
   :octicons-arrow-right-24: Click nav `Generate/Import`
 * Create your Secrets :octicons-arrow-right-24: Copy the `Secret Identifier`
@@ -38,7 +36,7 @@ Add The Azure Function MSI User to the Azure Key Vault.
 * Pass the name to environment variable with this value:
   `@Microsoft.KeyVault(SecretUri=<secret-identifier-uri>)`
 
-#### Develop Python Code
+### 4) Connection Code
 
 ```python
 from azure.identity import ManagedIdentityCredential

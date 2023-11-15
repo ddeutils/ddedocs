@@ -51,6 +51,7 @@ nav:
       - SOLID Principles: dae-solid-principles.md
       - Role:
           - Data Platform Engineer: dae-data-platform-engineer.md
+          - Data Operation Engineer: dae-dataops-engineer.md
   - Base:
       - base/index.md
       - Data:
@@ -148,6 +149,8 @@ nav:
           - AirFlow:
               - tools/airflow/index.md
               - Pydantic Validator: tools/airflow/airflow-pydantic-validator.md
+              - Repeatable DAGs: tools/airflow/airflow-repeatable-dags.md
+              - Cost Optimize: tools/airflow/airflow-cost-optimization.md
       - Validation:
           - Great Expectations:
               - tools/great_expectations/index.md
@@ -249,6 +252,8 @@ nav:
                   - Filter Content: services/aws/s3/s3-filter-content.md
                   - Trigger Lambda: services/aws/s3/s3-trigger-lambda.md
                   - Transform Lambda: services/aws/s3/s3-transform-lambda.md
+              - EC2:
+                  - Domain with Route53: services/aws/ec2/ec2-domain-with-route53.md
               - Step Function:
                   - State Machine Language: services/aws/step_function/stfn-state-machine-language.md
                   - Schedule: services/aws/step_function/stfn-schedule-by-event-bridge.md
@@ -257,6 +262,7 @@ nav:
                   - Local Env: services/aws/glue/glue-local-env.md
           - Google:
               - services/google/index.md
+              - API Authentication: services/google/google-api-authenticate.md
               - Cloud Functions:
                   - To Managing Secrets: services/google/functions/gcf-to-managing-secrets.md
           - Databricks:
@@ -265,6 +271,8 @@ nav:
               - With FastAPI to Serverless: services/databricks/databricks-fastapi-to-serverless.md
               - Migration Workspace: services/databricks/databricks-migration-workspace.md
               - Custom Python Docker: services/databricks/databricks-custom-python-docker.md
+              - AWS Orchestration: services/databricks/databricks-aws-orchestration.md
+              - Deploy with AWS: services/databricks/databricks-deploy-with-aws.md
           - Snowflake:
               - services/snowflake/index.md
           - Ansible:
@@ -272,12 +280,15 @@ nav:
           - Terraform:
               - services/terraform/index.md
               - Manage Secret: services/terraform/tf-manage-secret.md
+              - Provider:
+                  Databricks: services/terraform/tf-databricks.md
   - Designs:
       - designs/index.md
       - Data Pipeline:
           - AWS Serverless Data Analytic: designs/architect/act-aws-serverless-data-analytics-pipeline.md
           - Azure Modern Data Pipeline: designs/architect/act-azure-modern-data-pipeline.md
           - Stream Processing: designs/architect/act-open-source-stream-processing.md
+          - Stream Kafka: designs/architect/act-kafka-stream-pipeline.md
       - Data Mesh:
           - Azure Data Mesh: designs/architect/act-data-mesh-with-azure.md
   - Analytics:
@@ -289,6 +300,7 @@ nav:
           - Analytic Engineer:
               - analytics/analytic_engineer/index.md
       - Algorithm:
+          - ML Management Tool: analytics/analytic-ml-management-tools.md
           - Linker:
               - analytics/linker/index.md
               - With Splink: analytics/linker/linker-with-splink.md

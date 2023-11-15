@@ -2,35 +2,30 @@
 icon: material/microsoft-azure
 ---
 
-# Azure Cloud Service
+# Azure
 
 ## Azure CLI
 
-### Run Azure CLI on Local
+### Installation
 
-- Install
+#### On Local
 
-```shell
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+Install:
+
+```console
+$ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+$ az upgrade
 ```
 
-- Update & Test
+!!! note
+
+    If you want to remove all azure data from the CLI, you can use `rm -rf ~/.azure`.
+
+#### On Docker
 
 ```shell
-az upgrade
-```
-
-> **Note**: \
-> If you want to remove all azure data from the CLI, you can use `rm -rf ~/.azure`.
-
-### Run Azure CLI on Docker Container
-
-```shell
-docker pull mcr.microsoft.com/azure-cli
-```
-
-```shell
-docker run -it mcr.microsoft.com/azure-cli
+$ docker pull mcr.microsoft.com/azure-cli
+$ docker run -it mcr.microsoft.com/azure-cli
 ```
 
 > Note: \
@@ -71,11 +66,3 @@ az functionapp create -n fn-with-go \
 ### Certificate-based auth with Azure Service Principals
 
 - https://arsenvlad.medium.com/certificate-based-auth-with-azure-service-principals-from-linux-command-line-a440c4599cae
-
-## Azure Services
-
-| Type           | Services                        |
-|----------------|---------------------------------|
-| Database       | `Azure Server` `Azure Database` |
-| Storage        | `Azure Blob Storage`            |
-| Data Warehouse | `Azure Synapse Analytic`        |
