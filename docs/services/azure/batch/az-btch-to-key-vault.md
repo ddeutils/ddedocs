@@ -1,4 +1,57 @@
-# Azure Batch: _Access Azure Key Vault_
+# Azure Batch: _To Key Vault_
+
+On Bath Pool, it should install Python
+
+```console
+pip install azure-identity azure-keyvault-secrets
+```
+
+## Using Managed Identity
+
+!!! warning
+
+    The **system-assigned managed identity** created in a Batch account is only
+    used for retrieving customer-managed keys from the Key Vault. This identity
+    is not available on Batch pools.
+
+### Create Managed Identity
+
+* In the `Azure Portal` :octicons-arrow-right-24: Go to `Managed Identities`
+  :octicons-arrow-right-24: Click `Create`
+* Add your managed identity information :octicons-arrow-right-24: Select `Review + create`
+
+### Enable Azure Key Vault
+
+* Go to `Azure Key Vaults` :octicons-arrow-right-24: Select your key vault name
+* On `Access control (IAM)` :octicons-arrow-right-24: Click `Add` :octicons-arrow-right-24:
+  Assign `Key Vault Secrets User` to your managed identity
+
+!!! tip
+
+    Wait for at least 15 minutes for role to propagate and then try to access.
+
+### Enable Azure Batch Account
+
+* Go to `Azure Batch Accounts` :octicons-arrow-right-24: Go to `Pools`
+  :octicons-arrow-right-24: Select your Batch Pool
+* Go to `Identity` :octicons-arrow-right-24: Nav `User assigned` :octicons-arrow-right-24: Click `Add`
+* Select your managed identity that was created from above :octicons-arrow-right-24: Click `Add`
+
+### Connection Code
+
+```python
+from azure.identity import ManagedIdentityCredential
+from azure.keyvault.secrets import SecretClient
+
+
+def secret_client(keyvault_name: str):
+    """Return Secret Client from Managed Identity Authentication."""
+    msi_credential = ManagedIdentityCredential()
+    return SecretClient(
+        vault_url=f"https://{keyvault_name}.vault.azure.net",
+        credential=msi_credential
+    )
+```
 
 ## Using Certificate
 
@@ -109,7 +162,7 @@ ${AZ_BATCH_CERTIFICATES_DIR}/sha1-${THUMBPRINT}.pfx
 ${AZ_BATCH_CERTIFICATES_DIR}/sha1-${THUMBPRINT}.pfx.pw
 ```
 
-### Running a Python script on Batch Task
+### Connection Code
 
 If you are using the Azure SDK for python, unfortunately the pfx format is not compatible
 with the SDK, so we need to convert it:
@@ -205,79 +258,6 @@ def gen_secret_client(
         credential=credential
     )
 ```
-
-## Using Service Principle
-
-### Running a Python script on Batch Task
-
-```python
-import os
-from azure.identity import ClientSecretCredential
-
-sp_credential = ClientSecretCredential(
-    tenant_id=os.environ["AZURE_TENANT_ID"],
-    client_id = os.environ["AZURE_CLIENT_ID"],
-    client_secret = os.environ["AZURE_CLIENT_SECRET"],
-)
-```
-
-## Using Managed Identity
-
-!!! warning
-
-    The **system-assigned managed identity** created in a Batch account is only
-    used for retrieving customer-managed keys from the Key Vault. This identity
-    is not available on Batch pools.
-
-### Create Managed Identity
-
-- In the `Azure portal`, in `Managed Identities`, Select `Create`.
-- Add your managed identity information
-- Select `Review + create`
-
-Make sure the managed identity is granted proper role like `Contributor` or `Reader`
-to access the `Batch accounts` and `Key vaults`.
-
-### Enable Azure Batch Account
-
-Make sure to ENABLE managed identity in the Azure service before using.
-
-- Go to `Azure Batch Accounts`, select your batch account
-- Select `Identity` > Enable `User assigned`
-
-As you have you user-assigned managed identity with the `DefaultAzureCredential`,
-you need to provide the Client ID and make sure specify the Client ID in code
-by setting environment variables.
-
-```text
-AZURE_CLIENT_ID - service principal's app id
-AZURE_TENANT_ID - principal's Azure Active Directory tenantId
-AZURE_CLIENT_SECRET - service principal's client secrets
-```
-
-In the Azure portal, after the Key Vault is created, please add the Batch account
-access using managed identity in the Access Policy under Setting which is
-Under Key Permissions. select `Get`, `List`, `Create`, `Wrap Key` and `Unwrap Key` etc,
-which are needed
-
-```python
-from azure.identity import ChainedTokenCredential, ManagedIdentityCredential
-from azure.storage.filedatalake import DataLakeServiceClient
-
-msi_credential = ManagedIdentityCredential()
-credential_chain = ChainedTokenCredential(msi_credential)
-
-client = DataLakeServiceClient(
-    "https://<Azure Data Lake Gen2 account name>.dfs.core.windows.net",
-    credential=credential_chain
-)
-file_client = client.get_file_client("container name", "filename.txt")
-stream = file_client.download_file()
-```
-
-!!! tip
-
-    Wait for at least 15 minutes for role to propagate and then try to access.
 
 ## References
 

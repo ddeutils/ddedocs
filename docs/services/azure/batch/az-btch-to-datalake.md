@@ -1,0 +1,107 @@
+# Azure Batch: _To DataLake Storage_
+
+On Bath Pool, it should install Python
+
+```console
+pip install azure-identity azure-storage-file-datalake cffi
+```
+
+## Using Managed Identity
+
+### Connection Code
+
+```python
+import io
+import pathlib
+
+import pyarrow.parquet as pq
+import pandas as pd
+from azure.core.exceptions import ResourceNotFoundError
+from azure.storage.filedatalake import (
+    DataLakeServiceClient,
+    DataLakeFileClient,
+)
+
+
+def lake_client(storage_account_name) -> DataLakeServiceClient:
+    """Generate ADLS Client from input credential"""
+    msi_credential = ManagedIdentityCredential()
+    return DataLakeServiceClient(
+        account_url=f"https://{storage_account_name}.dfs.core.windows.net",
+        credential=msi_credential
+    )
+
+
+def exists(
+    client: DataLakeServiceClient,
+    container: str,
+    filepath: str,
+) -> bool:
+    """Return True if filepath on target container exists."""
+    try:
+        (
+            client
+                .get_file_system_client(file_system=container)
+                .get_file_client(filepath)
+                .get_file_properties()
+        )
+        return True
+    except ResourceNotFoundError:
+        return False
+
+def download(
+    client: DataLakeServiceClient,
+    container: str,
+    filepath: str,
+) -> pathlib.Path:
+    file_client: DataLakeFileClient = (
+        client
+            .get_file_system_client(file_system=container)
+            .get_file_client(filepath)
+    )
+    output_file = pathlib.Path(filepath)
+    output_file.parent.mkdir(exist_ok=True, parents=True)
+    with output_file.open(mode='wb') as local_file:
+        file_client.download_file().readinto(local_file)
+    return output_file
+
+
+def upload(
+    client: DataLakeServiceClient,
+    container: str,
+    dirpath: str,
+    file: str,
+    df: pd.DataFrame,
+) -> DataLakeFileClient:
+    dir_client: DataLakeFileClient = (
+        client
+            .get_file_system_client(file_system=container)
+            .get_directory_client(directory=dirpath)
+    )
+    file_client = dir_client.create_file(file)
+
+    # If Upload Parquet file
+    io_file = df.to_parquet()
+
+    # Or, file_client.append_data(data=df, offset=0, length=len(df))
+    file_client.upload_data(data=io_file, overwrite=True)
+    file_client.flush_data(len(io_file))
+    return file_client
+
+
+def to_pyarrow(
+    client: DataLakeServiceClient,
+    container: str,
+    filepath: str,
+) -> pq.Table:
+    file_client: DataLakeFileClient = (
+        client
+            .get_file_system_client(file_system=container)
+            .get_file_client(filepath)
+    )
+    data = file_client.download_file(0)
+    with io.BytesIO() as b:
+        data.readinto(b)
+        table = pq.read_table(b)
+    return table
+```

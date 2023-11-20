@@ -18,6 +18,12 @@ icon: simple/apacheairflow
 
 https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/operators/index.html
 
+
+## Bast Practice
+
+https://medium.com/@datasmiles/mastering-apache-airflow-myessential-best-practices-for-robust-data-orchestration-095460505843
+
+
 ## References
 
 - https://github.com/zkan/data-pipelines-with-airflow

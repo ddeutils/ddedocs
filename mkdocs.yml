@@ -207,11 +207,16 @@ nav:
               - SQL Server:
                   - Authentication: services/azure/database_server/az-sql-authentication.md
               - Batch:
+                  - Getting Started: services/azure/batch/az-btch-getting-started.md
+                  - Start Task: services/azure/batch/az-btch-start-task.md
                   - Auto Scalable: services/azure/batch/az-btch-auto-scalable.md
                   - To Key Vault: services/azure/batch/az-btch-to-key-vault.md
-                  - Run Pyspark With Docker: services/azure/batch/az-btch-run-pyspark-with-docker.md
-                  - Docker mode: services/azure/batch/az-btch-run-docker.md
-                  - Docker inside Node: services/azure/batch/az-btch-run-docker-inside.md
+                  - To DataLake: services/azure/batch/az-btch-to-datalake.md
+                  - To BigQuery: services/azure/batch/az-btch-to-bigquery.md
+                  - Docker:
+                      - Run Pyspark With Docker: services/azure/batch/az-btch-run-pyspark-with-docker.md
+                      - Docker mode: services/azure/batch/az-btch-run-docker.md
+                      - Docker inside Node: services/azure/batch/az-btch-run-docker-inside.md
               - Function App:
                   - To Key Vault: services/azure/functions/azf-access-key-vault.md
                   - To Synapse SQL Pool: services/azure/functions/azf-access-synapse-sql-pool.md
@@ -254,6 +259,8 @@ nav:
                   - Transform Lambda: services/aws/s3/s3-transform-lambda.md
               - EC2:
                   - Domain with Route53: services/aws/ec2/ec2-domain-with-route53.md
+              - Lambda:
+                  - Pros & Cons: services/aws/lambda/lambda-stop-using-for-everything.md
               - Step Function:
                   - State Machine Language: services/aws/step_function/stfn-state-machine-language.md
                   - Schedule: services/aws/step_function/stfn-schedule-by-event-bridge.md
@@ -269,10 +276,13 @@ nav:
               - services/databricks/index.md
               - Dynamically Workflow: services/databricks/databricks-dynamically-workflow.md
               - With FastAPI to Serverless: services/databricks/databricks-fastapi-to-serverless.md
-              - Migration Workspace: services/databricks/databricks-migration-workspace.md
               - Custom Python Docker: services/databricks/databricks-custom-python-docker.md
               - AWS Orchestration: services/databricks/databricks-aws-orchestration.md
               - Deploy with AWS: services/databricks/databricks-deploy-with-aws.md
+              - Row & Column Level Filter: services/databricks/databricks-row-and-column-level-filter.md
+              - Workspace:
+                  - Migration Workspace: services/databricks/databricks-migration-workspace.md
+                  - Functional Workspace Organization: services/databricks/databricks-func-workspace-organize.md
           - Snowflake:
               - services/snowflake/index.md
           - Ansible:
@@ -281,7 +291,7 @@ nav:
               - services/terraform/index.md
               - Manage Secret: services/terraform/tf-manage-secret.md
               - Provider:
-                  Databricks: services/terraform/tf-databricks.md
+                  - Databricks: services/terraform/tf-databricks.md
   - Designs:
       - designs/index.md
       - Data Pipeline:
