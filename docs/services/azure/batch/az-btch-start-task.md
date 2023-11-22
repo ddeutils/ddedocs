@@ -8,7 +8,20 @@
 
 ## Start Task File
 
-```shell titile="start_task.sh"
+=== "Python 3.8"
+
+    ```shell
+    echo 'Update Ubuntu' &&
+    sudo apt update &&
+    echo 'Import Python 3.8 PPA on Ubuntu' &&
+    sudo add-apt-repository ppa:deadsnakes/ppa -y &&
+    sudo apt update &&
+    sudo apt -y install python3.8 &&
+    sudo update-alternatives --set python3 /usr/bin/python3.8 &&
+    python3 --version
+    ```
+
+```shell title="start_task.sh"
 #!/bin/bash
 
 echo 'Set Python 3.10' &&
