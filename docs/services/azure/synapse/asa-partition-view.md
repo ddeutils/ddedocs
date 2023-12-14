@@ -63,7 +63,18 @@
             BULK 'data/delta_table/',
             DATA_SOURCE = '<external-storage-name>',
             FORMAT = 'DELTA'
-        ) AS temp
+        )
+    WITH (
+        [timestamp]       [datetime],
+        [edge_id]         [varchar](max),
+        [temperature]     [float],
+        [humidity]        [float],
+        [lqi]             [float],
+        [pm1.0]           [float],
+        [pm2.5]           [float],
+        [pm10.0]          [float],
+        [date]            [date]
+    ) AS temp
     GO
     ```
 

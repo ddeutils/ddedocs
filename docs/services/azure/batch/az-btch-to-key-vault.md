@@ -1,9 +1,9 @@
 # Azure Batch: _To Key Vault_
 
-On Bath Pool, it should install Python
+On Bath Pool, it should install Python package:
 
 ```console
-pip install azure-identity azure-keyvault-secrets
+$ pip install azure-identity azure-keyvault-secrets
 ```
 
 ## Using Managed Identity
@@ -14,13 +14,13 @@ pip install azure-identity azure-keyvault-secrets
     used for retrieving customer-managed keys from the Key Vault. This identity
     is not available on Batch pools.
 
-### Create Managed Identity
+### 1) Create Managed Identity
 
 * In the `Azure Portal` :octicons-arrow-right-24: Go to `Managed Identities`
   :octicons-arrow-right-24: Click `Create`
 * Add your managed identity information :octicons-arrow-right-24: Select `Review + create`
 
-### Enable Azure Key Vault
+### 2) Enable Azure Key Vault
 
 * Go to `Azure Key Vaults` :octicons-arrow-right-24: Select your key vault name
 * On `Access control (IAM)` :octicons-arrow-right-24: Click `Add` :octicons-arrow-right-24:
@@ -30,14 +30,14 @@ pip install azure-identity azure-keyvault-secrets
 
     Wait for at least 15 minutes for role to propagate and then try to access.
 
-### Enable Azure Batch Account
+### 3) Enable Azure Batch Account
 
 * Go to `Azure Batch Accounts` :octicons-arrow-right-24: Go to `Pools`
   :octicons-arrow-right-24: Select your Batch Pool
 * Go to `Identity` :octicons-arrow-right-24: Nav `User assigned` :octicons-arrow-right-24: Click `Add`
 * Select your managed identity that was created from above :octicons-arrow-right-24: Click `Add`
 
-### Connection Code
+### 4) Connection Code
 
 ```python
 from azure.identity import ManagedIdentityCredential
@@ -64,7 +64,7 @@ registered.
     the Azure Batch Account [Certificates](#using-certificate) feature will be
     retired on **February 29, 2024**.
 
-### Generate Certificate
+### 1) Generate Certificate
 
 Firstly we need to create a certificate which can be used for authentication.
 To do that we're going to generate a **Certificate Signing Request** (CSR) using
@@ -124,7 +124,7 @@ when we uploaded the certificate to the App Registration for Azure Batch Account
     $ tail -n+2 service-principal.csr | head -n-1
     ```
 
-### Assign Certificate to Service Principle
+### 2) Assign Certificate to Service Principle
 
 Sometimes called a public key, a certificate is the recommended credential type
 because they're considered more secure than client secrets.
@@ -138,7 +138,7 @@ because they're considered more secure than client secrets.
 
     This accepts the following file formats: `cer`, `pem` and `crt`.
 
-### Assign Certificate to Batch Account
+### 3) Assign Certificate to Batch Account
 
 Assigning the certificate to the account lets Batch assign it to the pools and then
 to the nodes.
@@ -162,7 +162,7 @@ ${AZ_BATCH_CERTIFICATES_DIR}/sha1-${THUMBPRINT}.pfx
 ${AZ_BATCH_CERTIFICATES_DIR}/sha1-${THUMBPRINT}.pfx.pw
 ```
 
-### Connection Code
+### 4) Connection Code
 
 If you are using the Azure SDK for python, unfortunately the pfx format is not compatible
 with the SDK, so we need to convert it:
@@ -197,7 +197,7 @@ certificate_credential = CertificateCredential(
 )
 ```
 
-#### Full Python scripts
+**Full Python scripts**:
 
 ```python
 import os

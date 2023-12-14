@@ -25,7 +25,7 @@ GO
 
 If the master key already exists on the database, you can use:
 
-```
+```sql
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'P@ssW0rd';
 ...
 CLOSE MASTER KEY;

@@ -1,4 +1,4 @@
-# Window with Common Batch File
+# PowerShell: _Batch File_
 
 As others have already said, parameters passed through the command line can be
 accessed in batch files with the notation `%1` to `%9`. There are also two other

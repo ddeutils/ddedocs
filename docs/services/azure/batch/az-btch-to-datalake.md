@@ -1,14 +1,26 @@
 # Azure Batch: _To DataLake Storage_
 
-On Bath Pool, it should install Python
+On Bath Pool, it should install Python package:
 
 ```console
-pip install azure-identity azure-storage-file-datalake cffi
+$ pip install azure-identity azure-storage-file-datalake cffi
 ```
 
 ## Using Managed Identity
 
-### Connection Code
+### 1) Create Managed Identity
+
+* In the `Azure Portal` :octicons-arrow-right-24: Go to `Managed Identities`
+  :octicons-arrow-right-24: Click `Create`
+* Add your managed identity information :octicons-arrow-right-24: Select `Review + create`
+
+### 2) Enable Azure DataLake Storage
+
+* Go to `Azure Storage Accounts` :octicons-arrow-right-24: Select your storage account name
+* On `Access control (IAM)` :octicons-arrow-right-24: Click `Add` :octicons-arrow-right-24:
+  Assign `Storage Blob Data Contributor` to your managed identity
+
+### 3) Connection Code
 
 ```python
 import io

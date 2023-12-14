@@ -113,7 +113,8 @@ nav:
                 - App: tools/shell/ubt-sh-common-file.md
             - PowerShell:
                 - tools/powershell/index.md
-                - App: tools/powershell/win-bat-common-file.md
+                - Batch File: tools/powershell/win-bat-file.md
+                - RestAPI: tools/powershell/win-bat-restapi.md
             - Python:
                 - tools/python/index.md
                 - Wheel: tools/python/py-dependency-wheel.md
@@ -212,10 +213,11 @@ nav:
                     - Getting Started: services/azure/batch/az-btch-getting-started.md
                     - Start Task: services/azure/batch/az-btch-start-task.md
                     - Auto Scalable: services/azure/batch/az-btch-auto-scalable.md
-                    - To Key Vault: services/azure/batch/az-btch-to-key-vault.md
-                    - To DataLake: services/azure/batch/az-btch-to-datalake.md
-                    - To BigQuery: services/azure/batch/az-btch-to-bigquery.md
-                    - Docker:
+                    - Connections:
+                        - To Key Vault: services/azure/batch/az-btch-to-key-vault.md
+                        - To DataLake: services/azure/batch/az-btch-to-datalake.md
+                        - To BigQuery: services/azure/batch/az-btch-to-bigquery.md
+                    - Dockerize:
                         - Run Pyspark With Docker: services/azure/batch/az-btch-run-pyspark-with-docker.md
                         - Docker mode: services/azure/batch/az-btch-run-docker.md
                         - Docker inside Node: services/azure/batch/az-btch-run-docker-inside.md
@@ -319,6 +321,8 @@ nav:
                 - With RecordLinkage: analytics/linker/linker-with-recordlinkage.md
             - Forecast:
                 - analytics/forecast/index.md
+    - Summary:
+        - summary/index.md
 
 plugins:
     - tags
