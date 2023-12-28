@@ -207,8 +207,8 @@ nav:
                     - To Databricks: services/github/github-actions-to-databricks.md
             - Azure:
                 - services/azure/index.md
-                - SQL Server:
-                    - Authentication: services/azure/database_server/az-sql-authentication.md
+                - Database:
+                    - Authentication: services/azure/database/az-db-authentication.md
                 - Batch:
                     - Getting Started: services/azure/batch/az-btch-getting-started.md
                     - Start Task: services/azure/batch/az-btch-start-task.md
@@ -233,7 +233,7 @@ nav:
                 - Data Factory:
                     - Link MongoDB: services/azure/data_factory/adf-lsv-mongodb.md
                     - Link Azure SQL: services/azure/data_factory/adf-lsv-sql-server.md
-                - Synapse Analytic:
+                - Synapse:
                     - Authentication: services/azure/synapse/asa-authentication.md
                     - External Data Source: services/azure/synapse/asa-external-data-source.md
                     - Partition View: services/azure/synapse/asa-partition-view.md

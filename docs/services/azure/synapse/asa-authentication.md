@@ -1,4 +1,4 @@
-# Azure Synapse Analytic: _Authentication_
+# Azure Synapse: _Authentication_
 
 ## Users & Roles
 

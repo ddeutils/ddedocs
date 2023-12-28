@@ -1,6 +1,6 @@
 # Azure Data Factory: _Link Azure SQL_
 
-## Create Link Service for SQL Database
+## Create Link Service
 
 Create dynamic parameters Azure SQL Database link service.
 

@@ -280,21 +280,21 @@ df = (
   GO
   ```
 
-    !!! warning
+!!! warning
 
-        The permission of the user should be owner of database because it is currently
-        required for Databricks to run `CREATE DATABASE SCOPED CREDENTIAL`.
+    The permission of the user should be owner of database because it is currently
+    required for Databricks to run `CREATE DATABASE SCOPED CREDENTIAL`.
 
-    !!! note
+!!! note
 
-          If you do not want to give owner permission to your Service Principle,
-          you can grant `CONTROL`.
+    If you do not want to give owner permission to your Service Principle,
+    you can grant `CONTROL`.
 
-          ```sql
-          CREATE ROLE [databricks_reader];
-          EXEC sp_addrolemember 'databricks_reader', 'adb_to_synapse';
-          GRANT CONTROL TO [adb_to_synapse];
-          ```
+    ```sql
+    CREATE ROLE [databricks_reader];
+    EXEC sp_addrolemember 'databricks_reader', 'adb_to_synapse';
+    GRANT CONTROL TO [adb_to_synapse];
+    ```
 
 #### 3) Azure Storage Temp Account
 
