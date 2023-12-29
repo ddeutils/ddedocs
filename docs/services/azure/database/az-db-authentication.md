@@ -1,4 +1,4 @@
-# Azure Server: Authentication
+# Azure Database: _Authentication_
 
 ## Users & Roles
 
@@ -176,25 +176,119 @@ GO
 
 ## Permissions
 
-https://sqlstudies.com/free-scripts/sp_dbpermissions/
-
 ### Grant
 
-```sql
-GRANT ALL PRIVILEGES ON DATABASE [database] TO [username@email.com];
-```
+=== "All"
 
-```sql
-GRANT USAGE ON SCHEMA [schemaname] TO [username@email.com];
-GRANT ALTER ON SCHEMA::[schemaname] TO [username@email.com];
-GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA [schemaname] TO [username@email.com];
-GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA [schemaname] TO [username@email.com];
-```
+    ```sql
+    GRANT ALL PRIVILEGES ON DATABASE [database] TO [username@email.com];
+    ```
 
-```sql
-ALTER AUTHORIZATION ON SCHEMA::[schemaname] to [username@email.com];
-GRANT CREATE TABLE, CREATE VIEW, CREATE PROCEDURE TO [username@email.com];
-```
+=== "Operation"
+
+    ```sql
+    USE [master];
+
+    -- Monitor the Appliance
+    GRANT VIEW SERVER STATE TO [username@email.com];
+
+    -- Terminate Connections
+    GRANT ALTER ANY CONNECTION TO [username@email.com];
+
+    GO
+    ```
+
+=== "Manage Database"
+
+    ```sql
+    USE [database];
+
+    -- Manage Databases
+    GRANT CONTROL ON DATABASE::[database] TO [username@email.com];
+
+    GO
+    ```
+
+=== "Manage Login"
+
+    ```sql
+    USE [master]
+
+    -- Manage and add logins
+    GRANT ALTER ANY LOGIN TO [username@email.com];
+
+    -- Grant permissions to view sessions and queries
+    GRANT VIEW SERVER STATE TO [username@email.com];
+
+    -- Grant permission to end sessions
+    GRANT ALTER ANY CONNECTION TO [username@email.com];
+    GO
+
+    USE [database];
+
+    -- Grant permissions to create and drop users
+    GRANT ALTER ANY USER TO [username@email.com];
+
+    -- Grant permissions to create and drop roles
+    GRANT ALTER ANY ROLE TO [username@email.com];
+
+    GO
+    ```
+
+=== "Load Data"
+
+    ```sql
+    USE [master];
+
+    -- Grant BULK Load permissions
+    GRANT ADMINISTER BULK OPERATIONS TO [username@email.com];
+
+    GO
+
+    USE [database];
+
+    GRANT CREATE TABLE ON DATABASE::[database] TO [username@email.com];
+
+    -- On Schema Usage
+    GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA [schemaname] TO [username@email.com];
+    GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA [schemaname] TO [username@email.com];
+
+    GO
+    ```
+
+=== "Schema"
+
+    ```sql
+    USE [database];
+
+    ALTER AUTHORIZATION ON SCHEMA::[schemaname] to [username@email.com];
+    GRANT USAGE ON SCHEMA [schemaname] TO [username@email.com];
+    GRANT ALTER ON SCHEMA::[schemaname] TO [username@email.com];
+
+    GO
+    ```
+
+=== "Creator"
+
+    ```sql
+    USE [database];
+
+    GRANT CREATE TABLE, CREATE VIEW, CREATE PROCEDURE TO [username@email.com];
+
+    GO
+    ```
+
+!!! note
+
+    If you want to revoke granted permission, you can use:
+
+    ```sql
+    REVOKE ...;
+    ```
+
+    The **REVOKE** statement can be used to remove granted permissions, and the **DENY**
+    statement can be used to prevent a principal from gaining a specific permission
+    through a **GRANT**
 
 ### Impersonate
 
@@ -251,3 +345,23 @@ FROM [sys].[database_permissions]
 WHERE
 	grantee_principal_id = USER_ID('username@email.com')
 ```
+
+```text
+permission_name |state_desc|securable     |grantor      |grantee           |
+----------------+----------+--------------+-------------+------------------+
+CREATE PROCEDURE|GRANT     |              |dbo          |username@email.com|
+CREATE VIEW     |GRANT     |              |dbo          |username@email.com|
+ALTER           |GRANT     |sysrowsets    |dbo          |username@email.com|
+ALTER           |GRANT     |sysclones     |dbo          |username@email.com|
+ALTER           |GRANT     |sysseobjvalues|OPRMNTR_ADMIN|username@email.com|
+```
+
+!!! note
+
+    For more detail, you can follew store procedure statement,
+    [sp_dbpermissions](https://sqlstudies.com/free-scripts/sp_dbpermissions/)
+
+
+## References
+
+* [SQL Server Create User and Grant Permission](https://copyprogramming.com/howto/sql-sql-server-create-user-and-grant-permission)

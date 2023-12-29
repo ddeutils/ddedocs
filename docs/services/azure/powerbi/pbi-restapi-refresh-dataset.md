@@ -1,4 +1,4 @@
-# Power BI: RestAPI for Refresh Dataset
+# Power BI: _RestAPI for Refresh Dataset_
 
 ## References
 

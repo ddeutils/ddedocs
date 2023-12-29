@@ -87,10 +87,13 @@ to access the data via RBAC in **Azure Portal**.
 !!! example
 
     ```sql
-    CREATE LOGIN <username> WITH PASSWORD = 'P@ssW0rd';
+    USE [master];
+    CREATE LOGIN [username] WITH PASSWORD = 'P@ssW0rd';
     GO
 
-    GRANT REFERENCES ON DATABASE SCOPED CREDENTIAL::<credential-name> TO <username>;
+    USE [database];
+    CREATE USER [username] FROM LOGIN [username];
+    GRANT REFERENCES ON DATABASE SCOPED CREDENTIAL::[credential-name] TO [username];
     GO
     ```
 
@@ -128,8 +131,7 @@ to access the data via RBAC in **Azure Portal**.
 ### List Data Source
 
 ```sql
-SELECT * FROM [sys].[external_data_sources]
-;
+SELECT * FROM [sys].[external_data_sources];
 ```
 
 ### Create Data Source
@@ -141,7 +143,7 @@ SELECT * FROM [sys].[external_data_sources]
     WITH(
         LOCATION = 'abfss://<container>@<storage-account>.dfs.core.windows.net',
         CREDENTIAL = <credential-name>,
-        PUSHDOWN = ON
+        PUSHDOWN = ON,
         TYPE = HADOOP
     );
     ```
@@ -204,12 +206,6 @@ WITH (
     )
 );
 ```
-
-## Examples
-
-### Copy data from Azure Blob to Table
-
-* [Loading Data in Azure Synapse using Copy](https://www.sqlservercentral.com/articles/loading-data-in-azure-synapse-using-copy)
 
 ## References
 
