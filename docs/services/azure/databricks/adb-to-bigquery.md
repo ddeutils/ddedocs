@@ -2,7 +2,21 @@
 
 ## Use JSON Encoding
 
-!!! warning
+```python
+credentials_json_str: str = dbutils.secrets.get(scope="<scope-name>", key="<secret-key-name>")
+
+df = (
+    spark.read
+        .format("bigquery")
+        .option("credentials", base64.b64encode(credentials_json_str.encode()).decode('utf-8'))
+        .option("parentProject", "<project-id>")
+        .option("table", "<dataset>.<table-name>")
+        .load()
+)
+df.show()
+```
+
+!!! bug
 
     https://github.com/GoogleCloudDataproc/spark-bigquery-connector/issues?q=is%3Aissue+Error+getting+access+token+from+metadata+server+at%3A+http%3A%2F%2F169.254.169.254%2FcomputeMetadata%2Fv1%2Finstance%2Fservice-accounts%2Fdefault%2Ftoken
 

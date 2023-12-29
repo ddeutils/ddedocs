@@ -1,6 +1,6 @@
 # Azure Function: _To Azure Service Bus_
 
-## Managed Identity
+## Using Managed Identity
 
 ```yaml
 ServiceBusConnection__clientID:<managedidenity client id>

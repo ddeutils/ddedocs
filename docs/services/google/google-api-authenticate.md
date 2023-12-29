@@ -76,9 +76,34 @@
     grant_type=refresh_token
     ```
 
+* Varify Access Token
+
+    ```console
+    GET /oauth2/v3/tokeninfo HTTP/1.1
+    Host: googleapis.com
+    Content-Type: application/x-www-form-urlencoded
+
+    access_token={access-token}
+    ```
+
+https://stackoverflow.com/questions/359472/how-can-i-verify-a-google-authentication-api-access-token
+
+!!! note
+
+    Revoke:
+
+    ```console
+    POST /o/oauth2/revoke HTTP/1.1
+    Host: accounts.google.com
+    Content-Type: application/x-www-form-urlencoded
+
+    token={refresh-token}
+    ```
+
 ## Playground
 
 https://developers.google.com/oauthplayground/
+
 
 ## References
 

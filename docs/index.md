@@ -17,6 +17,8 @@ in Data Develop and Engineer field.
 
 * https://towardsdatascience.com/how-we-think-about-data-pipelines-is-changing-51c3bf6f34dc
 
+* https://blog.devgenius.io/advance-data-structures-for-data-engineering-part-ii-71e9901f1b3d
+
 ## Community
 
 * [Medium: Data Engineering](https://medium.com/tag/data-engineering)

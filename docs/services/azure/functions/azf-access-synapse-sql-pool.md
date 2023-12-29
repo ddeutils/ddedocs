@@ -1,6 +1,6 @@
 # Azure Function: _To Synapse SQL Pool_
 
-## Managed Service Identity
+## Using Managed Service Identity
 
 ### 1) Enable MSI
 
@@ -57,7 +57,7 @@ with pyodbc.connect(
             row = cursor.fetchone()
 ```
 
-## SQL Authentication
+## Using SQL Authentication
 
 ### 1) Connection Code
 

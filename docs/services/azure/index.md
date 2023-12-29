@@ -8,53 +8,57 @@ icon: material/microsoft-azure
 
 ### Installation
 
-#### On Local
+=== "On Local"
 
-Install:
+    ```console
+    $ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+    $ az upgrade
+    ```
+
+    !!! note
+
+        If you want to remove all azure data from the CLI, you can use `rm -rf ~/.azure`.
+
+=== "On Docker"
+
+    ```shell
+    $ docker pull mcr.microsoft.com/azure-cli
+    $ docker run -it mcr.microsoft.com/azure-cli
+    ```
+
+    !!! note
+
+        If you want to pick up the SSH keys from your user environment:
+
+        ```console
+        $ docker run -it -v ${HOME}/.ssh:/root/.ssh mcr.microsoft.com/azure-cli
+        ```
+
+### Getting Started
+
+[Read More Azure CLI](https://github.com/Azure/azure-cli)
 
 ```console
-$ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-$ az upgrade
-```
-
-!!! note
-
-    If you want to remove all azure data from the CLI, you can use `rm -rf ~/.azure`.
-
-#### On Docker
-
-```shell
-$ docker pull mcr.microsoft.com/azure-cli
-$ docker run -it mcr.microsoft.com/azure-cli
-```
-
-> Note: \
-> If you want to pick up the SSH keys from your user environment, use
-> `docker run -it -v ${HOME}/.ssh:/root/.ssh mcr.microsoft.com/azure-cli`.
-
-### Get Start with Azure CLI
-
-```shell
 # login
-az login
+$ az login
 
 # list subscriptions
-az account list -o table
+$ az account list -o table
 
 # set active subscription
-az account set --subscription <SUBSCRIPTION_ID>
+$ az account set --subscription <SUBSCRIPTION_ID>
 
 # create an Azure Resource Group
-az group create -n rg-functions-with-go \
+$ az group create -n rg-functions-with-go \
   -l germanywestcentral
 
 # create an Azure Storage Account (required for Azure Functions App)
-az storage account create -n safnwithgo2021 \
+$ az storage account create -n safnwithgo2021 \
   -g rg-functions-with-go \
   -l germanywestcentral
 
 # create an Azure Functions App
-az functionapp create -n fn-with-go \
+$ az functionapp create -n fn-with-go \
   -g rg-functions-with-go \
   --consumption-plan-location germanywestcentral \
   --os-type Linux \

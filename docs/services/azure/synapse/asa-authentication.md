@@ -1,10 +1,10 @@
-# Azure Synapse Analytic: _Authentication_
+# Azure Synapse: _Authentication_
 
 ## Users & Roles
 
 ### Getting Users
 
-=== "External Users"
+=== ":octicons-code-review-16: All"
 
     ```sql
     SELECT
@@ -12,8 +12,136 @@
         , [type_desc]
         , [type]
     FROM [sys].[database_principals]
-    WHERE [type_desc] like 'external%'
-    ORDER BY [name]
+    ```
+
+=== ":octicons-code-review-16: AD User"
+
+    ```sql
+    SELECT
+        [name]
+    FROM [sys].[database_principals]
+    WHERE
+        [type] = 'E'
+        AND [name] = 'username@mail.com'
+    ;
+    ```
+
+=== ":octicons-code-review-16: AD Group"
+
+    ```sql
+    SELECT
+        [name]
+    FROM [sys].[database_principals]
+    WHERE
+        [type] = 'X'
+        AND [name] = 'username@mail.com'
+    ;
+    ```
+
+=== ":octicons-code-review-16: SQL User"
+
+    ```sql
+    SELECT
+        [name]
+    FROM [sys].[database_principals]
+    WHERE
+        [type] = 'S'
+        AND [name] = 'username@mail.com'
+    ;
+    ```
+
+=== ":octicons-code-review-16: SQL User without Login"
+
+    ```sql
+    SELECT
+        [name]
+    FROM [sys].[database_principals]
+    WHERE
+        [type] = 'S'
+        AND [name] = 'username@mail.com'
+    ;
+    ```
+
+### Create User
+
+=== ":octicons-code-review-16: AD User"
+
+    ```sql
+    USE [<database-name>];
+    CREATE USER [username@mail.com] FROM EXTERNAL PROVIDER
+    GO
+    ```
+
+=== ":octicons-code-review-16: AD Group"
+
+    ```sql
+    USE [<database-name>];
+    CREATE USER [group-name] FROM LOGIN [group-name];
+    GO
+    ```
+
+=== ":octicons-code-review-16: SQL User"
+
+    ```sql
+    USE [master];
+    CREATE LOGIN <username> WITH PASSWORD = 'P@ssW0rd'
+    GO
+    ```
+
+    ```sql
+    USE [<database-name>];
+    CREATE USER <username> FOR LOGIN <username>;
+    GO
+    ```
+
+=== ":octicons-code-review-16: SQL User without Login"
+
+    ```sql
+    USE [<database-name>];
+    CREATE USER <username> WITHOUT LOGIN;
+    GRANT IMPERSONATE ON USER::<username> TO [<another-username>];
+    GO
+    ```
+
+    ```sql
+    EXECUTE AS USER = '<username>';
+    GO
+    ...
+    REVERT;
+    GO
+    ```
+
+    !!! warning
+
+        Azure Synapse Serverless SQL Pool does not support for create this user type.
+
+**Getting User Example**:
+
+!!! note
+
+    If you want to drop user, you would use:
+
+    ```sql
+    DROP USER [username@mail.com]
+    GO
+    ```
+
+    If this user have login, you would use:
+
+    ```sql
+    DROP LOGIN [username@mail.com]
+    GO
+    ```
+
+    Generate drop statement with multi-users:
+
+    ```sql
+    SELECT CONCAT('DROP USER [', [name], '];')  AS remove_user
+    FROM
+        [sys].[database_principals]
+    WHERE
+        [type] = 'E'
+        AND LOWER([name]) IN ('username@mail.com', ...)
     ;
     ```
 
@@ -89,172 +217,21 @@
     db_datawriter|DATA ENGINEER   |2022-11-15 00:00:00.000|2022-11-15 00:00:00.000|
     ```
 
-### Users
-
-**Create Examples**:
-
-=== ":octicons-code-review-16: AD User"
-
-    ```sql
-    USE [<database-name>];
-    CREATE USER [username@mail.com] FROM EXTERNAL PROVIDER
-    GO
-    ```
-
-=== ":octicons-code-review-16: AD User from AD Group"
-
-    ```sql
-    USE [<database-name>];
-    CREATE USER [usernane@mail.com] FROM LOGIN [group-name];
-    GO
-    ```
-
-=== ":octicons-code-review-16: AD Group"
-
-    ```sql
-    USE [<database-name>];
-    CREATE USER [group-name] FROM LOGIN [group-name];
-    GO
-    ```
-
-=== ":octicons-code-review-16: SQL User"
-
-    ```sql
-    USE [master];
-    CREATE LOGIN <username> WITH PASSWORD = 'P@ssW0rd'
-    GO
-    ```
-
-    ```sql
-    USE [<database-name>];
-    CREATE USER <username> FOR LOGIN <username>;
-    GO
-    ```
-
-=== ":octicons-code-review-16: SQL User without Login"
-
-    ```sql
-    USE [<database-name>];
-    CREATE USER <username> WITHOUT LOGIN;
-    GRANT IMPERSONATE ON USER::<username> TO [<another-username>];
-    GO
-    ```
-
-    ```sql
-    EXECUTE AS USER = '<username>';
-    GO
-    ...
-    REVERT;
-    GO
-    ```
-
-**Getting User Example**:
-
-=== ":octicons-code-review-16: AD User"
-
-    ```sql
-    SELECT
-        [name]
-    FROM [sys].[database_principals]
-    WHERE
-        [type] = 'E'
-        AND [name] = 'username@mail.com'
-    ;
-    ```
-
-=== ":octicons-code-review-16: AD User from AD Group"
-
-    ```sql
-    SELECT
-        [name]
-    FROM [sys].[database_principals]
-    WHERE
-        [type] = 'E'
-        AND [name] = 'username@mail.com'
-    ;
-    ```
-
-=== ":octicons-code-review-16: AD Group"
-
-    ```sql
-    SELECT
-        [name]
-    FROM [sys].[database_principals]
-    WHERE
-        [type] = 'X'
-        AND [name] = 'username@mail.com'
-    ;
-    ```
-
-=== ":octicons-code-review-16: SQL User"
-
-    ```sql
-    SELECT
-        [name]
-    FROM [sys].[database_principals]
-    WHERE
-        [type] = 'S'
-        AND [name] = 'username@mail.com'
-    ;
-    ```
-
-=== ":octicons-code-review-16: SQL User without Login"
-
-    ```sql
-    SELECT
-        [name]
-    FROM [sys].[database_principals]
-    WHERE
-        [type] = 'S'
-        AND [name] = 'username@mail.com'
-    ;
-    ```
-
-!!! note
-
-    If you want to drop user, you would use:
-
-    ```sql
-    DROP USER [username@mail.com]
-    GO
-    ```
-
-    If this user have login, you would use:
-
-    ```sql
-    DROP LOGIN [username@mail.com]
-    GO
-    ```
-
-    Generate drop statement with multi-users:
-
-    ```sql
-    SELECT CONCAT('DROP USER [', [name], '];')  AS remove_user
-    FROM
-        [sys].[database_principals]
-    WHERE
-        [type] = 'E'
-        AND LOWER([name]) IN ('username@mail.com', ...)
-    ;
-    ```
-
 ### Roles
 
 === ":material-database-settings-outline: Dedicate SQL Pool"
 
     ```sql
-    CREATE ROLE <role-name>
-    GO
-    EXEC sp_addrolemember '<role-name>', [username@mail.com]
+    CREATE ROLE [rolename]
+    EXEC sp_addrolemember 'rolename', [username@mail.com]
     GO
     ```
 
 === ":material-database-off-outline: Serverless SQL Pool"
 
     ```sql
-    CREATE ROLE <role-name>
-    GO
-    ALTER ROLE [role-name] ADD MEMBER [username@mail.com]
+    CREATE ROLE [rolename]
+    ALTER ROLE [rolename] ADD MEMBER [username@mail.com]
     GO
     ```
 

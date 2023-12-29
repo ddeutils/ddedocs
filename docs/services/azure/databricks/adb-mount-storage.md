@@ -3,35 +3,17 @@
 ## Azure Blob Storage
 
 ```python
-configs: Dict[str, str] = {
-    "fs.azure.account.key.<storage-account-name>.blob.core.windows.net":
-        dbutils.secrets.get(scope="<scope-name>", key="adls-account-key"),
-}
-
 dbutils.fs.mount(
-  source = "wasbs://<container-name>@<storage-account-name>.blob.core.windows.net",
-  mount_point = "/mnt/<mount-path>",
-  extra_configs = configs
+    source = "wasbs://<container-name>@<storage-account-name>.blob.core.windows.net",
+    mount_point = "/mnt/<mount-path>",
+    extra_configs = {
+        "fs.azure.account.key.<storage-account-name>.blob.core.windows.net":
+        dbutils.secrets.get(scope="<scope-name>", key="adls-account-key"),
+    }
 )
 ```
 
-
 ## Azure Data Lake Storage Gen 2
-
-There are 3 different ways to access **Azure Data Lake Storage** (ADLS) Gen2
-in your workspace:
-
-- Using ADLS Gen2 storage account keys directly (highly not recommended for production workloads).
-- Using Service Principal directly
-- Mount an Azure Data Lake Storage Gen2 filesystem to DBFS using a service principal and OAuth 2.0.
-
-But for now let’s concentrate on mounting ADLS Gen2 to your DBFS. Below are the
-list of resources required for mounting:
-
-- Storage Account with ADLS Gen2 hierarchical namespace feature enabled.
-- Azure Key Vault Service
-- Azure Active Directory
-- Azure Databricks Workspace.
 
 Mounting a storage system to your Databricks File System is a one time activity,
 by this means, you will have to execute the code (code used for mounting) only
@@ -91,5 +73,5 @@ if any(
 
 ## References
 
-- https://vvin.medium.com/mount-adls-gen2-to-databricks-file-system-using-service-principal-oauth-2-0-47527e339178
-- https://docs.databricks.com/en/storage/azure-storage.html
+* https://vvin.medium.com/mount-adls-gen2-to-databricks-file-system-using-service-principal-oauth-2-0-47527e339178
+* https://docs.databricks.com/en/storage/azure-storage.html
