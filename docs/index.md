@@ -6,7 +6,7 @@ in Data Develop and Engineer field.
 * [Fundamentals of Data Engineer Book](https://blog.det.life/fundamentals-of-data-engineering-book-key-learning-points-35001380dda6)
 * [The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
 
-## Practice
+## Practices
 
 * https://towardsdatascience.com/data-engineering-books-f373005d53fc
 
@@ -19,6 +19,6 @@ in Data Develop and Engineer field.
 
 * https://blog.devgenius.io/advance-data-structures-for-data-engineering-part-ii-71e9901f1b3d
 
-## Community
+## Communities
 
 * [Medium: Data Engineering](https://medium.com/tag/data-engineering)
