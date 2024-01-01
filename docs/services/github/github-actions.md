@@ -1,16 +1,10 @@
-# GitHub Actions
+# GitHub Actions: _Common_
+
+GitHub provide the action marketplace.
 
 ```text
 Events ---( trigger )---> Workflows ---( use )---> Actions
 ```
-
-> **Note**: \
-> GitHub provide the action marketplace.
-
-Table of Contents:
-
-- [GitHub Action Components](#github-action-components)
-- [GitHub Action Examples]()
 
 ## GitHub Action Components
 
@@ -19,33 +13,37 @@ Table of Contents:
 GitHub triggered events: push, pull-request, public. If you use by scheduled
 events, you can use `schedule`.
 
-- Events
+#### Events
 
-```yaml
-...
-name: Event Job
-on: [push]
-...
-```
+=== "All Branches"
 
-```yaml
-...
-name: Event Job
-on:
-    push:
-        branches:
-            - '*'
-        tags:
-            - 'v[0-9]+.[0-9]+.[0-9]+'
-    pull_request:
-        branches: [ main ]
+    ```yaml
+    ...
+    name: Event Job
+    on: [push]
+    ...
+    ```
 
-    # Allows you to run this workflow manually from the Actions tab
-    workflow_dispatch:
-...
-```
+=== "Custom Branches"
 
-- Schedules
+    ```yaml
+    ...
+    name: Event Job
+    on:
+        push:
+            branches:
+                - '*'
+            tags:
+                - 'v[0-9]+.[0-9]+.[0-9]+'
+        pull_request:
+            branches: [ main ]
+
+        # Allows you to run this workflow manually from the Actions tab
+        workflow_dispatch:
+    ...
+    ```
+
+#### Schedules
 
 ```yaml
 ...
@@ -56,8 +54,9 @@ on:
 ...
 ```
 
-> **Note**: \
-> The manually triggered: `workflow_dispatch` (external systems)
+!!! note
+
+    The manually triggered: `workflow_dispatch` (external systems)
 
 ### Workflows
 
@@ -105,16 +104,22 @@ jobs:
         needs: [ build ]
 ```
 
-> **Note**: \
-> We can set condition for filter jobs like,
-> ```yaml
-> deploy-dev:
->     name: Deploy to Dev
->     if: github.event_name == 'pull_request'
->     needs: [ build ]
-> ```
-> Or another conditions can be:
-> - `github.event.ref == 'refs/heads/main`
+!!! note
+
+    We can set condition for filter jobs like,
+
+    ```yaml
+    deploy-dev:
+        name: Deploy to Dev
+        if: github.event_name == 'pull_request'
+        needs: [ build ]
+    ```
+
+    Or another conditions can be:
+
+    ```text
+    github.event.ref == 'refs/heads/main
+    ```
 
 ### Actions
 
@@ -162,7 +167,8 @@ jobs:
 
 ## Environments
 
-Go to your Repository > Click on `Settings` > Go to `Environments` > Click `New environment`
+* Go to your Repository > Click on `Settings`
+* Go to `Environments` > Click `New environment`
 
 ```yaml
 deploy-dev:
@@ -179,12 +185,13 @@ deploy-dev:
 
 Steps:
 
-- Download and extract the setup scripts
-- Configure and authenticate the runner with the token
-- Start listening for jobs
+* Download and extract the setup scripts
+* Configure and authenticate the runner with the token
+* Start listening for jobs
 
-> **Note**: \
-> GitHub recommends AGAINST self-hosted runners for public repositories
+!!! note
+
+    GitHub recommends AGAINST self-hosted runners for public repositories
 
 ## Runner Groups
 
@@ -195,8 +202,9 @@ Steps:
 
 ## Secrets
 
-> Warning: \
-> Secrets are limited to 64K so, use `gpg` to encrypt larger secrets on the repository.
+!!! warning
+
+    Secrets are limited to **64K** so, use `gpg` to encrypt larger secrets on the repository.
 
 ## Trigger Workflow
 
@@ -237,253 +245,254 @@ jobs:
 
 ### CI/CD Workflow
 
-CI - Merge Code In
+!!! abstract
 
-CD - Release Code Out
+    * **CI** - Merge Code In
+    * **CD** - Release Code Out
 
-- Deploy to AWS Serverless
+=== "AWS Serverless"
 
-```yaml
-name: Node CI
-on: [ push, pull_request ]
-jobs:
-    build:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [ 10.x ]
-        steps:
-            # Checkout is separate
-            - uses: actions/checkout@v2
+    ```yaml
+    name: Node CI
+    on: [ push, pull_request ]
+    jobs:
+        build:
+            runs-on: ubuntu-latest
+            strategy:
+                matrix:
+                    node-version: [ 10.x ]
+            steps:
+                # Checkout is separate
+                - uses: actions/checkout@v2
 
-            # Run Linter against code base
-            - name: Lint Code Base
-              uses: docker://github/super-linter:v3
-              env:
-                  VALIDATE_ALL_CODEBASE: false
-                  DEFAULT_BRANCH: master
+                # Run Linter against code base
+                - name: Lint Code Base
+                  uses: docker://github/super-linter:v3
+                  env:
+                      VALIDATE_ALL_CODEBASE: false
+                      DEFAULT_BRANCH: master
 
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v1
-              with:
-                  node-version: ${{ matrix.node-version }}
+                - name: Use Node.js ${{ matrix.node-version }}
+                  uses: actions/setup-node@v1
+                  with:
+                      node-version: ${{ matrix.node-version }}
 
-            # Run the npm by shell
-            - name: npm install, and test
-              run: |
-                  npm ci
-                  npm run build --if-present
-                  npm test -- -u
-              env:
-                  CI: true
+                # Run the npm by shell
+                - name: npm install, and test
+                  run: |
+                      npm ci
+                      npm run build --if-present
+                      npm test -- -u
+                  env:
+                      CI: true
 
-            # Artifact uploaded separately
-            - uses: actions/upload-artifact@master
-              with:
-                  name: webpack artifacts
-                  path: public/
+                # Artifact uploaded separately
+                - uses: actions/upload-artifact@master
+                  with:
+                      name: webpack artifacts
+                      path: public/
 
-    deploy:
-        runs-on: ubuntu-latest
-        needs: build
-        name: Deploy Node.js app to AWS
+        deploy:
+            runs-on: ubuntu-latest
+            needs: build
+            name: Deploy Node.js app to AWS
 
-        steps:
-            - uses: actions/checkout@v2
+            steps:
+                - uses: actions/checkout@v2
 
-            - name: Download build artifact
-              uses: actions/download-artifact@master
-              with:
-                  name: webpack artifacts
-                  path: public
+                - name: Download build artifact
+                  uses: actions/download-artifact@master
+                  with:
+                      name: webpack artifacts
+                      path: public
 
-            - name: Deploy to AWS
-              uses: github/deploy-nodejs@master
-              env:
-                  AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-                  AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
-                  AWS_REGION: us-west-2
-```
+                - name: Deploy to AWS
+                  uses: github/deploy-nodejs@master
+                  env:
+                      AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+                      AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+                      AWS_REGION: us-west-2
+    ```
 
-- Deploy to Azure
+=== "Azure"
 
-```yaml
-jobs:
-    build-docker-image:
-        runs-on: ubuntu-latest
-        steps:
-            - name: create image and store in Packages
-              uses: mattdavis0351/actions/docker-gpr@1.3.0
-              with:
-                  repo-token: ${{ secrets.GITHUB_TOKEN }}
-                  image-name: ${{ env.DOCKER_IMAGE_NAME }}
+    ```yaml
+    jobs:
+        build-docker-image:
+            runs-on: ubuntu-latest
+            steps:
+                - name: create image and store in Packages
+                  uses: mattdavis0351/actions/docker-gpr@1.3.0
+                  with:
+                      repo-token: ${{ secrets.GITHUB_TOKEN }}
+                      image-name: ${{ env.DOCKER_IMAGE_NAME }}
 
-    deploy-to-azure:
-        runs-on: ubuntu-latest
-        needs: build-docker-image
-        name: Deploy app container to Azure
-        steps:
-            - name: "Login via Azure CLI"
-              uses: azure/login@v1
-              with:
-                  creds: ${{ secrets.AZURE_CREDENTIALS }}
+        deploy-to-azure:
+            runs-on: ubuntu-latest
+            needs: build-docker-image
+            name: Deploy app container to Azure
+            steps:
+                - name: "Login via Azure CLI"
+                  uses: azure/login@v1
+                  with:
+                      creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-            - uses: azure/docker-login@v1
-              with:
-                  login-server: ${{ env.IMAGE_REGISTRY_URL }}
-                  username: ${{ github.actor }}
-                  password: ${{ secrets.GITHUB_TOKEN }}
+                - uses: azure/docker-login@v1
+                  with:
+                      login-server: ${{ env.IMAGE_REGISTRY_URL }}
+                      username: ${{ github.actor }}
+                      password: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Deploy web app container
-              uses: azure/webapps-container-deploy@v1
-              with:
-                  - app-name: ${{ env.AZURE_WEBAPP_NAME }}
-                  - images: ${{ env.IMAGE_REGISTRY_URL }}/${{ github.repository }}/${{ env.DOCKER_IMAGE_NAME }}
-```
+                - name: Deploy web app container
+                  uses: azure/webapps-container-deploy@v1
+                  with:
+                      - app-name: ${{ env.AZURE_WEBAPP_NAME }}
+                      - images: ${{ env.IMAGE_REGISTRY_URL }}/${{ github.repository }}/${{ env.DOCKER_IMAGE_NAME }}
+    ```
 
-- Deploy to AWS ECS
+=== "AWS ECS"
 
-```yaml
-jobs:
-    build-docker-image:
-        runs-on: ubuntu-latest
-        steps:
-            - name: create image and store in Packages
-              uses: mattdavis0351/actions/docker-gpr@1.3.0
-              with:
-                  repo-token: ${{ secrets.GITHUB_TOKEN }}
-                  image-name: ${{ env.DOCKER_IMAGE_NAME }}
+    ```yaml
+    jobs:
+        build-docker-image:
+            runs-on: ubuntu-latest
+            steps:
+                - name: create image and store in Packages
+                  uses: mattdavis0351/actions/docker-gpr@1.3.0
+                  with:
+                      repo-token: ${{ secrets.GITHUB_TOKEN }}
+                      image-name: ${{ env.DOCKER_IMAGE_NAME }}
 
-    deploy-to-azure:
-        runs-on: ubuntu-latest
-        needs: build-docker-image
-        name: Deploy app container to Azure
-        steps:
-            - uses: actions/checkout@v1
+        deploy-to-azure:
+            runs-on: ubuntu-latest
+            needs: build-docker-image
+            name: Deploy app container to Azure
+            steps:
+                - uses: actions/checkout@v1
 
-            - name: Download build artifact
-              uses: actions/download-artifact@master
-              with:
-                  name: webpack artifacts
-                  path: public
+                - name: Download build artifact
+                  uses: actions/download-artifact@master
+                  with:
+                      name: webpack artifacts
+                      path: public
 
-            - name: Render Amazon ECS task definition
-              id: render-web-container
-              uses: aws-actions/amazon-ecs-render-task-definition@1
-              with:
-                  task-definition: task-definition.json
-                  container-name: tic-tac-toe
-                  image: ${{ env.IMAGE_REGISTRY_URL }}/${{ github.repository }}/${{ env.DOCKER_IMAGE_NAME }}
+                - name: Render Amazon ECS task definition
+                  id: render-web-container
+                  uses: aws-actions/amazon-ecs-render-task-definition@1
+                  with:
+                      task-definition: task-definition.json
+                      container-name: tic-tac-toe
+                      image: ${{ env.IMAGE_REGISTRY_URL }}/${{ github.repository }}/${{ env.DOCKER_IMAGE_NAME }}
 
-            - name: Configure AWS Credentials
-              uses: aws-actions/configure-aws-credentials@v1
-              with:
-                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
-                  aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
-                  aws-region: us-west-2
+                - name: Configure AWS Credentials
+                  uses: aws-actions/configure-aws-credentials@v1
+                  with:
+                      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+                      aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+                      aws-region: us-west-2
 
-            - name: Deploy to Amazon ECS service
-              uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-              with:
-                  task-definition: ${{ steps.render-web-container.outputs.task-definition }}
-                  cluster: dev-cluster
-```
+                - name: Deploy to Amazon ECS service
+                  uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+                  with:
+                      task-definition: ${{ steps.render-web-container.outputs.task-definition }}
+                      cluster: dev-cluster
+    ```
 
-- Deploy to Kubernetes
+=== "Kubernetes"
 
-```yaml
-jobs:
-    build-docker-image:
-        runs-on: ubuntu-latest
-        steps:
-            - name: create image and store in Packages
-              uses: mattdavis0351/actions/docker-gpr@1.3.0
-              with:
-                  repo-token: ${{ secrets.GITHUB_TOKEN }}
-                  image-name: ${{ env.DOCKER_IMAGE_NAME }}
-    deploy-to-k8s:
-        runs-on: ubuntu-latest
-        name: Deploy to Kubernetes
-        needs: build-docker-image
-        steps:
-            - uses: azure/aks-set-context@v1
-              id: login
-              with:
-                  creds: '${{ secrets.AZURE_CREDENTIALS }}'
-                  resource-group: ${{ env.AZURE_RESOURCE_GROUP }}
-                  cluster-name: ${{ env.AZURE_AKS_CLUSTER }}
+    ```yaml
+    jobs:
+        build-docker-image:
+            runs-on: ubuntu-latest
+            steps:
+                - name: create image and store in Packages
+                  uses: mattdavis0351/actions/docker-gpr@1.3.0
+                  with:
+                      repo-token: ${{ secrets.GITHUB_TOKEN }}
+                      image-name: ${{ env.DOCKER_IMAGE_NAME }}
+        deploy-to-k8s:
+            runs-on: ubuntu-latest
+            name: Deploy to Kubernetes
+            needs: build-docker-image
+            steps:
+                - uses: azure/aks-set-context@v1
+                  id: login
+                  with:
+                      creds: '${{ secrets.AZURE_CREDENTIALS }}'
+                      resource-group: ${{ env.AZURE_RESOURCE_GROUP }}
+                      cluster-name: ${{ env.AZURE_AKS_CLUSTER }}
 
-            - name: Set imagePullSecret
-              id: create-secret
-              uses: azure/k8s-create-secret@v1
-              with:
-                  namespace: ${{ env.AZURE_AKS_NAMESPACE }}
-                  container-registry-url: ${{ env.IMAGE_REGISTRY_URL }}
-                  container-registry-username: ${{ github.actor }}
-                  container-registry-password: ${{ secrets.GITHUB_TOKEN }}
-                  secret-name: 'image-pull-secret'
+                - name: Set imagePullSecret
+                  id: create-secret
+                  uses: azure/k8s-create-secret@v1
+                  with:
+                      namespace: ${{ env.AZURE_AKS_NAMESPACE }}
+                      container-registry-url: ${{ env.IMAGE_REGISTRY_URL }}
+                      container-registry-username: ${{ github.actor }}
+                      container-registry-password: ${{ secrets.GITHUB_TOKEN }}
+                      secret-name: 'image-pull-secret'
 
-            - uses: azure/k8s-deploy@v1
-              with:
-                  namespace: ${{ env.AZURE_AKS_NAMESPACE }}
-                  manifests: |
-                            deployment.yaml
-                  images: ${{ env.IMAGE_REGISTRY_URL }}/${{ github.repository }}/${{ env.DOCKER_IMAGE_NAME }}
-                  imagepullsecrets: |
-                            image-pull-secret
+                - uses: azure/k8s-deploy@v1
+                  with:
+                      namespace: ${{ env.AZURE_AKS_NAMESPACE }}
+                      manifests: |
+                                deployment.yaml
+                      images: ${{ env.IMAGE_REGISTRY_URL }}/${{ github.repository }}/${{ env.DOCKER_IMAGE_NAME }}
+                      imagepullsecrets: |
+                                image-pull-secret
 
-```
+    ```
 
-- Build and publish Docker images
+=== "Docker"
 
-```yaml
-name: Docker image
-on:
-    push:
-        branches:
-            - '*'
-        tags:
-            - 'v[0-9]+.[0-9]+.[0-9]+'
-    pull_request:
-        branches:
-            - '*'
-jobs:
-    build:
-        name: Build & push docker image
-        runs-on: ubuntu-latest
-        env:
-            IMG_NAME: ${{ github.repository }}
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v3
+    ```yaml
+    name: Docker image
+    on:
+        push:
+            branches:
+                - '*'
+            tags:
+                - 'v[0-9]+.[0-9]+.[0-9]+'
+        pull_request:
+            branches:
+                - '*'
+    jobs:
+        build:
+            name: Build & push docker image
+            runs-on: ubuntu-latest
+            env:
+                IMG_NAME: ${{ github.repository }}
+            steps:
+                - name: Checkout
+                  uses: actions/checkout@v3
 
-            - name: Info
-              run: echo "Parameters. ${{ github.event.base_ref }}, ${{ github.ref_type }}, ${{ github.ref }}"
+                - name: Info
+                  run: echo "Parameters. ${{ github.event.base_ref }}, ${{ github.ref_type }}, ${{ github.ref }}"
 
-            - name: Docker metadata
-              id: metadata
-              uses: docker/metadata-action@v4
-              with:
-                images: ${{ env.IMG_NAME }}
-                tags: |
-                  type=semver,pattern={{version}}
-                  type=semver,pattern={{major}}.{{minor}}
-                  type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
-            - name: Log in to Docker Hub
-              uses: docker/login-action@v2
-              with:
-                username: ${{ secrets.DOCKER_USERNAME }}
-                password: ${{ secrets.DOCKER_PASSWORD }}
+                - name: Docker metadata
+                  id: metadata
+                  uses: docker/metadata-action@v4
+                  with:
+                    images: ${{ env.IMG_NAME }}
+                    tags: |
+                      type=semver,pattern={{version}}
+                      type=semver,pattern={{major}}.{{minor}}
+                      type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
+                - name: Log in to Docker Hub
+                  uses: docker/login-action@v2
+                  with:
+                    username: ${{ secrets.DOCKER_USERNAME }}
+                    password: ${{ secrets.DOCKER_PASSWORD }}
 
-            - name: Build and push Docker image
-              uses: docker/build-push-action@v3
-              with:
-                context: .
-                push: ${{ github.event.base_ref =='refs/heads/main' && github.ref_type == 'tag' && !startsWith(github.ref, 'refs/tags/v0.')}}
-                tags: ${{ steps.metadata.outputs.tags }}
-                labels: ${{ steps.metadata.outputs.labels }}
-```
+                - name: Build and push Docker image
+                  uses: docker/build-push-action@v3
+                  with:
+                    context: .
+                    push: ${{ github.event.base_ref =='refs/heads/main' && github.ref_type == 'tag' && !startsWith(github.ref, 'refs/tags/v0.')}}
+                    tags: ${{ steps.metadata.outputs.tags }}
+                    labels: ${{ steps.metadata.outputs.labels }}
+    ```
 
 ## References
 
-- https://josephrodriguezg.medium.com/build-and-publish-docker-images-with-github-actions-78be3b3fbb9b
+* [Jose Phrodriguezg: Build and Publish Docker Image with GitHub Actions](https://josephrodriguezg.medium.com/build-and-publish-docker-images-with-github-actions-78be3b3fbb9b)

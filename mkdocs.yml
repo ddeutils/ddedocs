@@ -203,7 +203,7 @@ nav:
             - GitHub:
                 - services/github/index.md
                 - Actions:
-                    - services/github/github-actions.md
+                    - Common: services/github/github-actions.md
                     - To Databricks: services/github/github-actions-to-databricks.md
             - Azure:
                 - services/azure/index.md
@@ -231,8 +231,8 @@ nav:
                     - To Azure SQL: services/azure/databricks/adb-to-azure-sql.md
                     - To Synapse SQL Pool: services/azure/databricks/adb-to-synapse-sql-pool.md
                 - Data Factory:
-                    - Link MongoDB: services/azure/data_factory/adf-lsv-mongodb.md
-                    - Link Azure SQL: services/azure/data_factory/adf-lsv-sql-server.md
+                    - Share IR: services/azure/data_factory/adf-ir-sharing.md
+                    - Link Services: services/azure/data_factory/adf-link-services.md
                 - Synapse:
                     - Authentication: services/azure/synapse/asa-authentication.md
                     - External Data Source: services/azure/synapse/asa-external-data-source.md
