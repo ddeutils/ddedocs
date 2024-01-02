@@ -68,18 +68,20 @@ nav:
                 - Driven: base/data_management/data-management-driven.md
             - Data Warehouse:
                 - base/data_warehouse/index.md
-                - Inmon Approach:
-                    - Abstract: base/data_warehouse/dwh-inmon-approach.md
-                - Kimball Approach:
-                    - Abstract: base/data_warehouse/dwh-kimball-approach.md
-                    - Implement: base/data_warehouse/dwh-dim-implement.md
-                    - Slowly Changing Dim: base/data_warehouse/dwh-dim-slowly-changing-dimension.md
-                    - Rapidly Changing Dim: base/data_warehouse/dwh-dim-rapidly-changing-dimension.md
-                    - Techniques: base/data_warehouse/dwh-dim-techniques.md
-                - Data Vault Approach:
-                    - Abstract: base/data_warehouse/dwh-data-vault-approach.md
-                    - Implement: base/data_warehouse/dwh-data-vault-implement.md
-                - Anchor Approach: base/data_warehouse/dwh-anchor-approach.md
+                - Modeling Technique:
+                    - base/data_warehouse/data_modeling/index.md
+                    - Inmon Approach:
+                        - Abstract: base/data_warehouse/data_modeling/dwh-inmon-approach.md
+                    - Kimball Approach:
+                        - Abstract: base/data_warehouse/data_modeling/dwh-kimball-approach.md
+                        - Implement: base/data_warehouse/data_modeling/dwh-dim-implement.md
+                        - Slowly Changing Dim: base/data_warehouse/data_modeling/dwh-dim-slowly-changing-dimension.md
+                        - Rapidly Changing Dim: base/data_warehouse/data_modeling/dwh-dim-rapidly-changing-dimension.md
+                        - Techniques: base/data_warehouse/data_modeling/dwh-dim-techniques.md
+                    - Data Vault Approach:
+                        - Abstract: base/data_warehouse/data_modeling/dwh-data-vault-approach.md
+                        - Implement: base/data_warehouse/data_modeling/dwh-data-vault-implement.md
+                    - Anchor Approach: base/data_warehouse/data_modeling/dwh-anchor-approach.md
             - Data Lakehouse:
                 - base/data_lakehouse/index.md
             - Data Governance:
@@ -132,6 +134,9 @@ nav:
                         - To Azure SQL: services/azure/databricks/adb-to-azure-sql.md
                         - To Synapse SQL Pool: services/azure/databricks/adb-to-synapse-sql-pool.md
                         - To BigQuery: services/azure/databricks/adb-to-bigquery.md
+                        - To Event Hubs: services/azure/databricks/adb-to-eventhubs.md
+                - Event Hubs:
+                    - Producer Data: services/azure/eventhubs/eventhubs-produce-data.md
                 - Data Factory:
                     - Share IR: services/azure/data_factory/adf-ir-sharing.md
                     - Link Services: services/azure/data_factory/adf-link-services.md
@@ -296,10 +301,13 @@ nav:
                         - SCD2: tools/spark/pyspark/pyspark-scd2.md
                         - RegExp: tools/spark/pyspark/pyspark-regexp.md
                         - Media Files: tools/spark/pyspark/pyspark-media-files.md
+                        - Unittest: tools/spark/pyspark/pyspark-unittest.md
             - Kafka:
                 - tools/kafka/index.md
                 - Usecases:
-                        - Agoda: tools/kafka/kafka-agoda.md
+                    - Agoda: tools/kafka/kafka-agoda.md
+            - Fugue:
+                - tools/fugue/index.md
         - Query:
             - DuckDB:
                 - tools/duckdb/index.md
