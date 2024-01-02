@@ -9,3 +9,4 @@ flexibility, and scalability to accommodate changes in business needs.
 ## References
 
 * [Medium: Data Modeling Techniques for Data Warehouse](https://medium.com/@mariusz_kujawski/data-modeling-techniques-for-data-warehouse-3edcb541e34e)
+* https://towardsdatascience.com/data-modelling-for-data-engineers-93d058efa302

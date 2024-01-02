@@ -94,6 +94,8 @@ nav:
                 - Data CICD: base/data_observability/dobs-data-cicd.md
                 - Data Lineage: base/data_observability/dobs-data-lineage.md
                 - Conductor: base/data_observability/dobs-conductor.md
+            - Data Mesh:
+                - base/data_mesh/index.md
         - News & Research:
             - ChatGPT:
                 - base/chatgpt/index.md
@@ -180,6 +182,8 @@ nav:
                     - Combine Parallel: services/aws/step_function/stfn-combine-data-parallel-state.md
                 - Glue:
                     - Local Env: services/aws/glue/glue-local-env.md
+                - Athena:
+                    - With DeltaLake: services/aws/athena/athena-with-delta-lake.md
                 - EMR:
                     - Compare Databricks: services/aws/emr/emr-compare-with-databricks.md
             - Google:
@@ -196,6 +200,7 @@ nav:
                 - Deploy with AWS: services/databricks/databricks-deploy-with-aws.md
                 - Custom Policy: services/databricks/databricks-custom-policy.md
                 - Row & Column Level Filter: services/databricks/databricks-row-and-column-level-filter.md
+                - Data Quality: services/databricks/databricks-data-quality.md
                 - Workspace:
                     - Migration Workspace: services/databricks/databricks-migration-workspace.md
                     - Functional Workspace Organization: services/databricks/databricks-func-workspace-organize.md
@@ -208,6 +213,10 @@ nav:
                 - Manage Secret: services/terraform/tf-manage-secret.md
                 - Provider:
                     - Databricks: services/terraform/tf-databricks.md
+        - Databases:
+            - Postgres:
+                - services/postgres/index.md
+                - Optimization Tricks: services/postgres/postgres-optimize-tricks.md
     - Tools:
         - tools/index.md
         - Languages:
@@ -230,6 +239,9 @@ nav:
                 - tools/powershell/index.md
                 - Batch File: tools/powershell/win-bat-file.md
                 - RestAPI: tools/powershell/win-bat-restapi.md
+            - SQL:
+                - tools/sql/index.md
+                - Optimizing SQL Queries: tools/sql/sql-optimizing-sql-queries.md
             - Python:
                 - tools/python/index.md
                 - Wheel: tools/python/py-dependency-wheel.md
@@ -277,15 +289,21 @@ nav:
             - Great Expectations:
                 - tools/great_expectations/index.md
                 - With Databricks: tools/great_expectations/gexp-with-databricks.md
+                - With Spark: tools/great_expectations/gexp-with-spark.md
         - Extract & Transform & Load:
             - Pandas:
                 - tools/pandas/index.md
                 - SQL Conversion: tools/pandas/py_pd_convert_from_sql.md
+            - Polars:
+                - tools/polars/index.md
             - DBT:
                 - tools/dbt/index.md
                 - Kimbal Modeling: tools/dbt/dbt-kimbal-data-modeling.md
+                - Lake House: tools/dbt/dbt-on-lake-house.md
                 - Connections:
                     - To Synapse: tools/dbt/dbt-to-synapse.md
+            - Arrow:
+                - tools/arrow/index.md
             - Spark:
                 - tools/spark/index.md
                 - Create with Docker: tools/spark/spark-create-cluster-with-docker.md
@@ -298,20 +316,32 @@ nav:
                 - UDFs: tools/spark/spark-udf.md
                 - API:
                     - Pyspark:
+                        - Data Wrangling Functions: tools/spark/pyspark/pyspark-data-wrangling-functions.md
                         - SCD2: tools/spark/pyspark/pyspark-scd2.md
                         - RegExp: tools/spark/pyspark/pyspark-regexp.md
                         - Media Files: tools/spark/pyspark/pyspark-media-files.md
                         - Unittest: tools/spark/pyspark/pyspark-unittest.md
+                        - Avoid These at Any Cost: tools/spark/pyspark/pyspark-avoid-these-at-any-cost.md
             - Kafka:
                 - tools/kafka/index.md
                 - Usecases:
                     - Agoda: tools/kafka/kafka-agoda.md
+            - Airbyte:
+                - tools/airbyte/index.md
+                - With Terraform: tools/airbyte/airbyte-with-terraform.md
             - Fugue:
                 - tools/fugue/index.md
+            - Sea Tunnel:
+                - tools/seatunnel/index.md
         - Query:
             - DuckDB:
                 - tools/duckdb/index.md
+        - File Format:
+            - Parquet:
+                - tools/parquet/index.md
         - Open Table Format:
+            - Hive:
+                - tools/hive/index.md
             - Delta Lake:
                 - tools/delta_lake/index.md
                 - Deletion Vector: tools/delta_lake/delta-lake-deletion-vector.md
@@ -325,6 +355,8 @@ nav:
                         - Star Schema: tools/delta_lake/pyspark/pyspark-delta-star-schema.md
                         - Keeping Fast & Clean: tools/delta_lake/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
                         - Best Practice: tools/delta_lake/pyspark/pyspark-delta-best-practice.md
+                        - Handling Concurrent Write: tools/delta_lake/pyspark/pyspark-delta-handling-concurrent-write.md
+                        - Stream Data: tools/delta_lake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
         - Storage:
             - LakeFS:
                 - tools/lakefs/index.md
@@ -337,8 +369,14 @@ nav:
             - Stream Kafka: designs/architect/act-kafka-stream-pipeline.md
         - Data Platform:
             - MDM: designs/architect/act-master-data-management.md
+            - Internal Analytics: designs/architect/act-internal-analytics.md
         - Data Mesh:
             - Azure Data Mesh: designs/architect/act-data-mesh-with-azure.md
+        - Lakehouse:
+            - On-Premise: designs/architect/act-on-premise-lake-house.md
+        - Architect:
+            - Projects:
+                - Project 01: designs/architect/projects/proj-01.md
         - Migration:
             - Lakehouse from DWH: designs/migration/mg-lakehouse-from-classic-dwh.md
     - Analytics:
@@ -359,6 +397,7 @@ nav:
                 - analytics/forecast/index.md
     - Summary:
         - summary/index.md
+        - Data File Format: summary/sum-data-file-format.md
 
 plugins:
     - tags
