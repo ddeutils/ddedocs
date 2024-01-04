@@ -1,3 +1,7 @@
+---
+icon: material/chat-question-outline
+---
+
 # Fugue
 
 [Fugue](https://github.com/fugue-project/fugue)

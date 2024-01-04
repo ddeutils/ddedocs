@@ -262,6 +262,9 @@ nav:
                 - Advance Feature: tools/scala/scala-advance-feature.md
                 - Collection: tools/scala/scala-collection.md
                 - OOP Concept: tools/scala/scala-oop-concepts.md
+            - Rust:
+                - tools/rust/index.md
+                - From Python: tools/rust/rust-from-python.md
         - System & Network:
             - Edge:
                 - tools/edge/index.md
@@ -300,6 +303,7 @@ nav:
                 - tools/dbt/index.md
                 - Kimbal Modeling: tools/dbt/dbt-kimbal-data-modeling.md
                 - Lake House: tools/dbt/dbt-on-lake-house.md
+                - DBT Loom: tools/dbt/dbt-loom.md
                 - Connections:
                     - To Synapse: tools/dbt/dbt-to-synapse.md
             - Arrow:
@@ -336,6 +340,8 @@ nav:
         - Query:
             - DuckDB:
                 - tools/duckdb/index.md
+            - Trino:
+                - tools/trino/index.md
         - File Format:
             - Parquet:
                 - tools/parquet/index.md

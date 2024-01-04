@@ -22,3 +22,4 @@ in Data Develop and Engineer field.
 ## Communities
 
 * [Medium: Data Engineering](https://medium.com/tag/data-engineering)
+* [Medium: ODDS Team](https://medium.com/odds-team)
