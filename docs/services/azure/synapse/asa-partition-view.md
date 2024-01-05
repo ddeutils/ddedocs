@@ -5,18 +5,20 @@
 1.  Remove bulk operations on master
 
     ```sql
-    USE master;
-    DENY ADMINISTER BULK OPERATIONS to <username>;
+    USE [master];
+    DENY ADMINISTER BULK OPERATIONS TO [username];
     DENY ADMINISTER BULK OPERATIONS TO [public];
+    GO
     ```
 
 2.  Grant bulk operations on the database level
 
     ```sql
-    USE <serverless-database>;
-    GRANT ADMINISTER DATABASE BULK OPERATIONS to <user-name>;
+    USE [database];
+    GRANT ADMINISTER DATABASE BULK OPERATIONS TO [username];
     GRANT ADMINISTER DATABASE BULK OPERATIONS TO [public];
     GRANT REFERENCES ON DATABASE SCOPED CREDENTIAL::[<credential-name>] TO [<user-name>];
+    GO
     ```
 
 ## Partition Pruning
@@ -81,5 +83,4 @@
 ## References
 
 - [User Permission in Serverless SQL Pools](https://www.serverlesssql.com/user-permissions-in-serverless-sql-pools-external-tables-vs-views/)
-- [](https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types)
-- https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types
+- [Serverless SQL: Partition Pruning Delta Tables in Azure Synapse Analytics](https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types)

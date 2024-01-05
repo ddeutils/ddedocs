@@ -165,7 +165,7 @@ CREATE OR REPLACE TABLE analytics.marts_credit_debit_transaction.fct_transaction
 );
 ```
 
-![](images/dim-example-01.png)
+![](../images/dim-example-01.png)
 
 ## References
 

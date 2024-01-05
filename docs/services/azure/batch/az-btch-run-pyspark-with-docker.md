@@ -17,7 +17,7 @@ Chances are you already have these running in Azure. If not, it’s simple click
 and install on the Azure Portal. For each of these 3 services, you need to get
 the Keys and add them to a `config.py`:
 
-```python titile="config.py"
+```python title="config.py"
 STORAGE_ACCOUNT_NAME = "<storage-account-name>"
 STORAGE_ACCOUNT_KEY = "****"
 
@@ -90,8 +90,10 @@ if __name__ == '__main__':
       GROUP BY Year, Month, DayOfMonth
     """)
     (
-        result.repartition(1)
-            .write.mode("overwrite")
+        result
+            .repartition(1)
+            .write
+            .mode("overwrite")
             .parquet(args.output)
     )
 ```
@@ -158,7 +160,7 @@ $ docker push <registry-name>.azurecr.io/<registry-name>/spark_on_azure_batch_de
 
 ## Run on Azure Batch
 
-Ok, so we’ve written a sample Spark application, with the right Azure libraries.
+We’ve written a sample Spark application, with the right Azure libraries.
 We’ve dockerized it and uploaded it to Azure Container Registry. Now we’re finally
 ready to run our code on Azure Batch. This is going to be quite a long python script,
 but it does a lot of things as well:

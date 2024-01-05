@@ -32,10 +32,12 @@ table is structured. Because all possible "joinable" rows are colocated, Spark
 won't shuffle the tables that are pre-bucketd (big savings!) and won't sort the
 rows within the partition of table that are pre-sorted.
 
-> **Warning**: \
-> Spark bucketing is incompatible with hive bucketing
+!!! warning
+
+    Spark bucketing is incompatible with hive bucketing
 
 - https://towardsdatascience.com/best-practices-for-bucketing-in-spark-sql-ea9f23f7dd53
+- https://subhamkharwal.medium.com/pyspark-optimize-joins-in-spark-804fb098d4ee
 
 ## References
 

@@ -4,6 +4,8 @@ icon: simple/scala
 
 # Scala
 
+https://medium.com/odds-team
+
 ## Installation
 
 We should to install 2 components for running scalar on local:

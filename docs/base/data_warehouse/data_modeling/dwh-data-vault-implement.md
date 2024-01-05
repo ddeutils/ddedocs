@@ -286,6 +286,10 @@ https://www.scalefree.com/scalefree-newsletter/insert-only-in-data-vault/
   Join strategy is automatically used. Use Join hints only if necessary.
   (for advanced performance tuning).
 
+## Implements
+
+* [Data Vault on Snowflake](https://patrickcuba.medium.com/data-vault-on-snowflake-expanding-to-dimensional-models-5eb67cbdcf4b)
+
 ## References
 
 - https://dbtvault.readthedocs.io/en/latest/

@@ -1,6 +1,6 @@
 # Databricks: _To BigQuery_
 
-## Use JSON Encoding
+## Using JSON Encoding
 
 ```python
 credentials_json_str: str = dbutils.secrets.get(scope="<scope-name>", key="<secret-key-name>")
@@ -18,9 +18,9 @@ df.show()
 
 !!! bug
 
-    https://github.com/GoogleCloudDataproc/spark-bigquery-connector/issues?q=is%3Aissue+Error+getting+access+token+from+metadata+server+at%3A+http%3A%2F%2F169.254.169.254%2FcomputeMetadata%2Fv1%2Finstance%2Fservice-accounts%2Fdefault%2Ftoken
+    [GitHub: Error getting access token from metadata server](https://github.com/GoogleCloudDataproc/spark-bigquery-connector/issues?q=is%3Aissue+Error+getting+access+token+from+metadata+server+at%3A+http%3A%2F%2F169.254.169.254%2FcomputeMetadata%2Fv1%2Finstance%2Fservice-accounts%2Fdefault%2Ftoken)
 
-## Use GOOGLE_APPLICATION_CREDENTIALS
+## Using GOOGLE_APPLICATION_CREDENTIALS
 
 ```python
 import os
@@ -28,7 +28,7 @@ import os
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "</path/to/key/file>"
 ```
 
-## Use Filepath
+## Using Filepath
 
 ```python
 df = (
@@ -45,8 +45,13 @@ df = (
 ```python
 # Globally
 spark.conf.set("gcpAccessToken", "<access-token>")
+
 # Per read/Write
-spark.read.format("bigquery").option("gcpAccessToken", "<acccess-token>")
+df = (
+    spark.read
+        .format("bigquery")
+        .option("gcpAccessToken", "<acccess-token>")
+)
 ```
 
 ## References
