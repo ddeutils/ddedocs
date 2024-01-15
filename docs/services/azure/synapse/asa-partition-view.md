@@ -80,7 +80,47 @@
     GO
     ```
 
+=== ":material-file-chart: CSV"
+
+    ```sql
+    CREATE VIEW [<schema-name>].[<view-name>]
+    AS
+    SELECT
+        *
+    FROM
+        OPENROWSET(
+            BULK 'data/delta_table/',
+            DATA_SOURCE = '<external-storage-name>',
+            FORMAT = 'CSV',
+            PARSER_VERSION ='2.0',
+            FIELDTERMINATOR =',',
+            ROWTERMINATOR = '\n',
+            HEADER_ROW = TRUE,
+            FIRSTROW = 1,
+            FIELDQUOTE = '"',
+            ESCAPECHAR = '\\',
+            ROWSET_OPTIONS = '{"READ_OPTIONS":["ALLOW_INCONSISTENT_READS"]}'
+        )
+    WITH (
+        [timestamp]       [datetime],
+        [edge_id]         [varchar](max),
+        [temperature]     [float],
+        [humidity]        [float],
+        [lqi]             [float],
+        [pm1.0]           [float],
+        [pm2.5]           [float],
+        [pm10.0]          [float],
+        [date]            [date]
+    ) AS temp
+    GO
+    ```
+
+=== ":material-file-code: Json"
+
+    ```sql
+    ```
+
 ## References
 
-- [User Permission in Serverless SQL Pools](https://www.serverlesssql.com/user-permissions-in-serverless-sql-pools-external-tables-vs-views/)
-- [Serverless SQL: Partition Pruning Delta Tables in Azure Synapse Analytics](https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types)
+* [User Permission in Serverless SQL Pools](https://www.serverlesssql.com/user-permissions-in-serverless-sql-pools-external-tables-vs-views/)
+* [Serverless SQL: Partition Pruning Delta Tables in Azure Synapse Analytics](https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types)

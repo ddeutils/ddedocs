@@ -381,6 +381,10 @@
 GRANT IMPERSONATE ON USER::<user-name> TO <user-name>;
 ```
 
+!!! warning
+
+    Impersonate can not use on the Synapse Serverless SQL Pool.
+
 [More Example for Grant Permissions](https://learn.microsoft.com/en-us/sql/t-sql/statements/grant-transact-sql?view=azure-sqldw-latest#examples)
 
 ## Workload

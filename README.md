@@ -10,7 +10,7 @@ with **GitHub** domain.
 
 ## Noted
 
-I will update this project by **Weekly frequency**. (Yes, this statement warn to me
+I will update this project by **Weekly frequency**. (This statement warn to me
 when I come back to develop this project again :sweat_smile:.)
 
 ## License

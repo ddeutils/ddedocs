@@ -1,5 +1,7 @@
 # Spark: _Joining_
 
+https://medium.com/@kerrache.massipssa/apache-spark-join-strategies-in-depth-171bf7fef4b0
+
 ## SortMerge Joins
 
  It consists of hashing each row on both table and shuffle the rows with the same

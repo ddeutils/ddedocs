@@ -6,6 +6,9 @@ an advanced technique that attempts to present data in a way that is intuitive
 and understandable for any user. It also allows for high-performance access,
 flexibility, and scalability to accommodate changes in business needs.
 
+* https://medium.com/@dnyanesh.bandbe88/the-3-brothers-of-data-modelling-kimball-inmon-data-vault-5788863e98c8
+* https://medium.com/@khedekarpratik123/data-vault-2-0-modern-data-modelling-methodology-part-1-ed91ed408d48
+
 ## References
 
 * [Medium: Data Modeling Techniques for Data Warehouse](https://medium.com/@mariusz_kujawski/data-modeling-techniques-for-data-warehouse-3edcb541e34e)

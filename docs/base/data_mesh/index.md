@@ -4,7 +4,7 @@ icon: simple/traefikmesh
 
 # Data Mesh
 
-**Data Mesh**
+[Data Mesh in Practice](https://medium.com/@axel.schwanke/data-mesh-in-practice-recommendations-from-roches-journey-e0e0d51c4a89)
 
 ## References
 

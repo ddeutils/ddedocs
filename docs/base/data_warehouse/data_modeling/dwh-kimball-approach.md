@@ -1,5 +1,7 @@
 # Data Warehouse: _Ralph Kimball Approach_
 
+https://towardsdatascience.com/data-modeling-for-mere-mortals-part-2-dimensional-modeling-fundamentals-ae2f53622321
+
 The Kimball methodology, also known as dimensional modeling, is a bottom-up approach
 that focuses on designing the data warehouse around the business process or subject
 area.
