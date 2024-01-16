@@ -262,7 +262,7 @@ GO
     USE [database];
 
     ALTER AUTHORIZATION ON SCHEMA::[schemaname] to [username@email.com];
-    GRANT USAGE ON SCHEMA [schemaname] TO [username@email.com];
+    GRANT USAGE ON SCHEMA::[schemaname] TO [username@email.com];
     GRANT ALTER ON SCHEMA::[schemaname] TO [username@email.com];
 
     GO
@@ -289,6 +289,38 @@ GO
     The **REVOKE** statement can be used to remove granted permissions, and the **DENY**
     statement can be used to prevent a principal from gaining a specific permission
     through a **GRANT**
+
+!!! example
+
+    ```sql
+    USE Adventureworks
+    DROP TABLE IF EXISTS dbo.mytable, dbo.mytable2, Sales.mytable, Sales.mytable2
+    DROP USER IF EXISTS TestRole
+
+    CREATE USER TestRole WITHOUT LOGIN
+    GRANT CREATE TABLE to TestRole
+
+    GRANT ALTER ON SCHEMA :: dbo To TestRole;
+    EXECUTE AS USER = 'TestRole'
+    --OK
+    CREATE TABLE dbo.mytable(c1 int)
+    GO
+    --Fails
+    CREATE TABLE Sales.mytable(c1 int)
+    GO
+    REVERT
+    REVOKE ALTER ON SCHEMA :: dbo To TestRole;
+
+    GRANT ALTER To TestRole;
+    EXECUTE AS USER = 'TestRole'
+    --OK
+    CREATE TABLE dbo.mytable2(c1 int)
+    GO
+    --OK
+    CREATE TABLE Sales.mytable2(c1 int)
+    GO
+    REVERT
+    ```
 
 ### Impersonate
 
@@ -334,27 +366,34 @@ username@scg.com |EXTERNAL_USER |                         |CONNECT   |GRANT     
 public           |DATABASE_ROLE |query_store_query_variant|SELECT    |GRANT           |
 ```
 
-```sql
-SELECT
-     permission_name,
-     state_desc,
-     object_name(major_id)                      AS securable,
-     user_name(grantor_principal_id)            AS grantor,
-     user_name(grantee_principal_id)            AS grantee
-FROM [sys].[database_permissions]
-WHERE
-	grantee_principal_id = USER_ID('username@email.com')
-```
+=== "On Schema"
 
-```text
-permission_name |state_desc|securable     |grantor      |grantee           |
-----------------+----------+--------------+-------------+------------------+
-CREATE PROCEDURE|GRANT     |              |dbo          |username@email.com|
-CREATE VIEW     |GRANT     |              |dbo          |username@email.com|
-ALTER           |GRANT     |sysrowsets    |dbo          |username@email.com|
-ALTER           |GRANT     |sysclones     |dbo          |username@email.com|
-ALTER           |GRANT     |sysseobjvalues|OPRMNTR_ADMIN|username@email.com|
-```
+    ```sql
+    SELECT
+        state_desc
+        ,permission_name
+        ,'ON'
+        ,class_desc
+        ,SCHEMA_NAME(major_id)
+        ,'TO'
+        ,USER_NAME(grantee_principal_id)
+    FROM [sys].[database_permissions]       AS PERM
+    JOIN [sys].[database_principals]        AS Prin
+        ON PERM.[major_ID] = Prin.[principal_id]
+        AND class_desc = 'SCHEMA'
+    WHERE
+        user_name(grantee_principal_id) = 'username@email.com'
+    ```
+
+    ```text
+    state_desc|permission_name|  |class_desc|             |  |                  |
+    ----------+---------------+--+----------+-------------+--+------------------+
+    GRANT     |EXECUTE        |ON|SCHEMA    |             |TO|public            |
+    GRANT     |SELECT         |ON|SCHEMA    |             |TO|public            |
+    GRANT     |ALTER          |ON|SCHEMA    |DWHCURATED   |TO|username@email.com|
+    GRANT     |EXECUTE        |ON|SCHEMA    |DWHMDL       |TO|username@email.com|
+    GRANT     |EXECUTE        |ON|SCHEMA    |DWHMDL       |TO|de_vendor         |
+    ```
 
 !!! note
 

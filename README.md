@@ -1,20 +1,17 @@
 # Document: _Data Developer & Engineer_
 
 This project will deliver about **Data Developer & Engineer Documents and
-Hands-On** from my experience only :warning: !!!
+Hands-On** from my experience and reference from blogs only :warning:.
 
-## Development
-
-I will use this project for co-pyrot to implement `mkdocs`, Python package,
-for generate document static web from a markdown file that easy to plug-in
+I will use this project for co-pyrot to implement `mkdocs` with
+[material extension](https://squidfunk.github.io/mkdocs-material/)
+for generate document static web from a markdown files that easy to plug-in
 with **GitHub** domain.
 
-[Read more about mkdocs](https://squidfunk.github.io/mkdocs-material/)
+## Noted
 
-## Updated
-
-I will update this project by weekly frequency. (Yes, this statement warn to me
-when I come back to develop this project again.)
+I will update this project by **Weekly frequency**. (This statement warn to me
+when I come back to develop this project again :sweat_smile:.)
 
 ## License
 

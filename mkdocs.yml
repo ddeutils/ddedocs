@@ -96,6 +96,8 @@ nav:
                 - Conductor: base/data_observability/dobs-conductor.md
             - Data Mesh:
                 - base/data_mesh/index.md
+        - Knowledge:
+            - CDC: base/data/data-cdc.md
         - News & Research:
             - ChatGPT:
                 - base/chatgpt/index.md
@@ -246,6 +248,7 @@ nav:
                 - tools/python/index.md
                 - Wheel: tools/python/py-dependency-wheel.md
                 - Joblib: tools/python/py-joblib.md
+                - Pydantic: tools/python/py-pydantic.md
                 - Sync Multi-processes: tools/python/py-sync-multi-processes.md
             - GO:
                 - tools/go/index.md
@@ -317,7 +320,7 @@ nav:
                 - Repartitioning: tools/spark/spark-repartitioning.md
                 - Nested Data Types: tools/spark/spark-nested-datatypes.md
                 - Data Skew: tools/spark/spark-data-skew.md
-                - UDFs: tools/spark/spark-udf.md
+                - UDFs: tools/spark/spark-udfs.md
                 - API:
                     - Pyspark:
                         - Data Wrangling Functions: tools/spark/pyspark/pyspark-data-wrangling-functions.md
