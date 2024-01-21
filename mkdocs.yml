@@ -113,6 +113,7 @@ nav:
                 - services/azure/index.md
                 - Database:
                     - Authentication: services/azure/database/az-db-authentication.md
+                    - Monitoring: services/azure/database/az-db-monitoring.md
                 - Batch:
                     - Getting Started: services/azure/batch/az-btch-getting-started.md
                     - Start Task: services/azure/batch/az-btch-start-task.md
@@ -223,152 +224,156 @@ nav:
         - tools/index.md
         - Languages:
             - Git:
-                - tools/git/index.md
+                - tools/lang/git/index.md
                 - Commands:
-                    - Common: tools/git/git-cmd-common.md
-                    - Advance: tools/git/git-cmd-advance.md
+                    - Common: tools/lang/git/git-cmd-common.md
+                    - Advance: tools/lang/git/git-cmd-advance.md
                 - Scenarios:
-                    - tools/git/git-common-scenarios.md
-                    - Revert Commit: tools/git/git-revert-commit.md
+                    - tools/lang/git/git-common-scenarios.md
+                    - Revert Commit: tools/lang/git/git-revert-commit.md
                 - Strategies:
-                    - Branching Strategies: tools/git/git-branching-strategies.md
-                    - Commit Release: tools/git/git-commit-release.md
-                    - Deployment: tools/git/git-deployment.md
+                    - Branching Strategies: tools/lang/git/git-branching-strategies.md
+                    - Commit Release: tools/lang/git/git-commit-release.md
+                    - Deployment: tools/lang/git/git-deployment.md
             - Shell:
-                - tools/shell/index.md
-                - App: tools/shell/ubt-sh-common-file.md
+                - tools/lang/shell/index.md
+                - App: tools/lang/shell/ubt-sh-common-file.md
             - PowerShell:
-                - tools/powershell/index.md
-                - Batch File: tools/powershell/win-bat-file.md
-                - RestAPI: tools/powershell/win-bat-restapi.md
+                - tools/lang/powershell/index.md
+                - Batch File: tools/lang/powershell/win-bat-file.md
+                - RestAPI: tools/lang/powershell/win-bat-restapi.md
             - SQL:
-                - tools/sql/index.md
-                - Optimizing SQL Queries: tools/sql/sql-optimizing-sql-queries.md
+                - tools/lang/sql/index.md
+                - Optimizing SQL Queries: tools/lang/sql/sql-optimizing-sql-queries.md
             - Python:
-                - tools/python/index.md
-                - Wheel: tools/python/py-dependency-wheel.md
-                - Joblib: tools/python/py-joblib.md
-                - Pydantic: tools/python/py-pydantic.md
-                - Sync Multi-processes: tools/python/py-sync-multi-processes.md
+                - tools/lang/python/index.md
+                - Wheel: tools/lang/python/py-dependency-wheel.md
+                - Joblib: tools/lang/python/py-joblib.md
+                - Pydantic: tools/lang/python/py-pydantic.md
+                - Sync Multi-processes: tools/lang/python/py-sync-multi-processes.md
             - GO:
-                - tools/go/index.md
-                - Command: tools/go/go-command.md
-                - Unittest: tools/go/go-unittest.md
-                - Connect Database: tools/go/go-database.md
+                - tools/lang/go/index.md
+                - Command: tools/lang/go/go-command.md
+                - Unittest: tools/lang/go/go-unittest.md
+                - Connect Database: tools/lang/go/go-database.md
                 - tools:
-                    - Connect Kafka: tools/go/go-connect-kafka.md
-                    - Connect Redis: tools/go/go-connect-redis.md
-                    - Hexagonal Architect: tools/go/go-hexagonal-architecture.md
+                    - Connect Kafka: tools/lang/go/go-connect-kafka.md
+                    - Connect Redis: tools/lang/go/go-connect-redis.md
+                    - Hexagonal Architect: tools/lang/go/go-hexagonal-architecture.md
             - Scala:
-                - tools/scala/index.md
-                - Command: tools/scala/scala-basic-command.md
-                - Advance Feature: tools/scala/scala-advance-feature.md
-                - Collection: tools/scala/scala-collection.md
-                - OOP Concept: tools/scala/scala-oop-concepts.md
+                - tools/lang/scala/index.md
+                - Command: tools/lang/scala/scala-basic-command.md
+                - Advance Feature: tools/lang/scala/scala-advance-feature.md
+                - Collection: tools/lang/scala/scala-collection.md
+                - OOP Concept: tools/lang/scala/scala-oop-concepts.md
             - Rust:
-                - tools/rust/index.md
-                - From Python: tools/rust/rust-from-python.md
+                - tools/lang/rust/index.md
+                - From Python: tools/lang/rust/rust-from-python.md
         - System & Network:
             - Edge:
-                - tools/edge/index.md
-                - FTP: tools/edge/op-ftp.md
-                - SFTP: tools/edge/op-sftp.md
+                - tools/sys/edge/index.md
+                - FTP: tools/sys/edge/op-ftp.md
+                - SFTP: tools/sys/edge/op-sftp.md
             - Docker:
-                - tools/docker/index.md
+                - tools/sys/docker/index.md
+                - Dockerfile: tools/sys/docker/docker-file.md
                 - Commands:
-                    - Management: tools/docker/docker-cmd-management.md
+                    - Management: tools/sys/docker/docker-cmd-management.md
                 - Compose:
-                    - Postgres: tools/docker/docker-compose-postgresql.md
+                    - Postgres: tools/sys/docker/docker-compose-postgresql.md
             - Kubernetes:
-                - tools/k8s/index.md
+                - tools/sys/k8s/index.md
         - Orchestration:
             - AirFlow:
-                - tools/airflow/index.md
-                - Pydantic Validator: tools/airflow/airflow-pydantic-validator.md
-                - Repeatable DAGs: tools/airflow/airflow-repeatable-dags.md
-                - Cost Optimize: tools/airflow/airflow-cost-optimization.md
-                - CICD: tools/airflow/airflow-cicd.md
+                - tools/orchestration/airflow/index.md
+                - Pydantic Validator: tools/orchestration/airflow/airflow-pydantic-validator.md
+                - Repeatable DAGs: tools/orchestration/airflow/airflow-repeatable-dags.md
+                - Cost Optimize: tools/orchestration/airflow/airflow-cost-optimization.md
+                - CICD: tools/orchestration/airflow/airflow-cicd.md
             - Dagster:
-                - tools/dagster/index.md
-                - Dynamic Partition: tools/dagster/dagster-dynamic-partition.md
-        - Validation:
+                - tools/orchestration/dagster/index.md
+                - Dynamic Partition: tools/orchestration/dagster/dagster-dynamic-partition.md
+        - Quality:
             - Great Expectations:
-                - tools/great_expectations/index.md
-                - With Databricks: tools/great_expectations/gexp-with-databricks.md
-                - With Spark: tools/great_expectations/gexp-with-spark.md
+                - tools/quality/great_expectations/index.md
+                - With Databricks: tools/quality/great_expectations/gexp-with-databricks.md
+                - With Spark: tools/quality/great_expectations/gexp-with-spark.md
         - Extract & Transform & Load:
             - Pandas:
-                - tools/pandas/index.md
-                - SQL Conversion: tools/pandas/py_pd_convert_from_sql.md
+                - tools/etl/pandas/index.md
+                - SQL Conversion: tools/etl/pandas/py_pd_convert_from_sql.md
             - Polars:
-                - tools/polars/index.md
+                - tools/etl/polars/index.md
             - DBT:
-                - tools/dbt/index.md
-                - Kimbal Modeling: tools/dbt/dbt-kimbal-data-modeling.md
-                - Lake House: tools/dbt/dbt-on-lake-house.md
-                - DBT Loom: tools/dbt/dbt-loom.md
+                - tools/etl/dbt/index.md
+                - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md
+                - Lake House: tools/etl/dbt/dbt-on-lake-house.md
+                - DBT Loom: tools/etl/dbt/dbt-loom.md
                 - Connections:
-                    - To Synapse: tools/dbt/dbt-to-synapse.md
+                    - To Synapse: tools/etl/dbt/dbt-to-synapse.md
             - Arrow:
-                - tools/arrow/index.md
+                - tools/etl/arrow/index.md
             - Spark:
-                - tools/spark/index.md
-                - Create with Docker: tools/spark/spark-create-cluster-with-docker.md
-                - Bucketing: tools/spark/spark-bucketing.md
-                - Joining: tools/spark/spark-joining.md
-                - Shuffle: tools/spark/spark-shuffle.md
-                - Repartitioning: tools/spark/spark-repartitioning.md
-                - Nested Data Types: tools/spark/spark-nested-datatypes.md
-                - Data Skew: tools/spark/spark-data-skew.md
-                - UDFs: tools/spark/spark-udfs.md
+                - tools/etl/spark/index.md
+                - Create with Docker: tools/etl/spark/spark-create-cluster-with-docker.md
+                - Bucketing: tools/etl/spark/spark-bucketing.md
+                - Joining: tools/etl/spark/spark-joining.md
+                - Shuffle: tools/etl/spark/spark-shuffle.md
+                - Repartitioning: tools/etl/spark/spark-repartitioning.md
+                - Nested Data Types: tools/etl/spark/spark-nested-datatypes.md
+                - Data Skew: tools/etl/spark/spark-data-skew.md
+                - UDFs: tools/etl/spark/spark-udfs.md
                 - API:
                     - Pyspark:
-                        - Data Wrangling Functions: tools/spark/pyspark/pyspark-data-wrangling-functions.md
-                        - SCD2: tools/spark/pyspark/pyspark-scd2.md
-                        - RegExp: tools/spark/pyspark/pyspark-regexp.md
-                        - Media Files: tools/spark/pyspark/pyspark-media-files.md
-                        - Unittest: tools/spark/pyspark/pyspark-unittest.md
-                        - Avoid These at Any Cost: tools/spark/pyspark/pyspark-avoid-these-at-any-cost.md
+                        - Data Wrangling Functions: tools/etl/spark/pyspark/pyspark-data-wrangling-functions.md
+                        - SCD2: tools/etl/spark/pyspark/pyspark-scd2.md
+                        - RegExp: tools/etl/spark/pyspark/pyspark-regexp.md
+                        - Media Files: tools/etl/spark/pyspark/pyspark-media-files.md
+                        - Unittest: tools/etl/spark/pyspark/pyspark-unittest.md
+                        - Avoid These at Any Cost: tools/etl/spark/pyspark/pyspark-avoid-these-at-any-cost.md
             - Kafka:
-                - tools/kafka/index.md
+                - tools/etl/kafka/index.md
                 - Usecases:
-                    - Agoda: tools/kafka/kafka-agoda.md
+                    - Agoda: tools/etl/kafka/kafka-agoda.md
             - Airbyte:
-                - tools/airbyte/index.md
-                - With Terraform: tools/airbyte/airbyte-with-terraform.md
+                - tools/etl/airbyte/index.md
+                - With Terraform: tools/etl/airbyte/airbyte-with-terraform.md
             - Fugue:
-                - tools/fugue/index.md
+                - tools/etl/fugue/index.md
             - Sea Tunnel:
-                - tools/seatunnel/index.md
+                - tools/etl/seatunnel/index.md
         - Query:
             - DuckDB:
-                - tools/duckdb/index.md
+                - tools/query/duckdb/index.md
             - Trino:
-                - tools/trino/index.md
+                - tools/query/trino/index.md
         - File Format:
             - Parquet:
-                - tools/parquet/index.md
+                - tools/files/parquet/index.md
         - Open Table Format:
             - Hive:
-                - tools/hive/index.md
+                - tools/open_table/hive/index.md
             - Delta Lake:
-                - tools/delta_lake/index.md
-                - Deletion Vector: tools/delta_lake/delta-lake-deletion-vector.md
-                - Liquid Clustering: tools/delta_lake/delta-lake-liquid-clustering.md
-                - Partition Z-Order Cluster: tools/delta_lake/delta-lake-partition-zorder-cluster.md
+                - tools/open_table/delta_lake/index.md
+                - Deletion Vector: tools/open_table/delta_lake/delta-lake-deletion-vector.md
+                - Liquid Clustering: tools/open_table/delta_lake/delta-lake-liquid-clustering.md
+                - Partition Z-Order Cluster: tools/open_table/delta_lake/delta-lake-partition-zorder-cluster.md
                 - API:
                     - Pyspark:
-                        - Auto Schema Evolution: tools/delta_lake/pyspark/pyspark-delta-auto-schema-evolution.md
-                        - Image Files: tools/delta_lake/pyspark/pyspark-delta-image-files.md
-                        - SCD2: tools/delta_lake/pyspark/pyspark-delta-scd2.md
-                        - Star Schema: tools/delta_lake/pyspark/pyspark-delta-star-schema.md
-                        - Keeping Fast & Clean: tools/delta_lake/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
-                        - Best Practice: tools/delta_lake/pyspark/pyspark-delta-best-practice.md
-                        - Handling Concurrent Write: tools/delta_lake/pyspark/pyspark-delta-handling-concurrent-write.md
-                        - Stream Data: tools/delta_lake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
+                        - Auto Schema Evolution: tools/open_table/delta_lake/pyspark/pyspark-delta-auto-schema-evolution.md
+                        - Image Files: tools/open_table/delta_lake/pyspark/pyspark-delta-image-files.md
+                        - SCD2: tools/open_table/delta_lake/pyspark/pyspark-delta-scd2.md
+                        - Star Schema: tools/open_table/delta_lake/pyspark/pyspark-delta-star-schema.md
+                        - Keeping Fast & Clean: tools/open_table/delta_lake/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
+                        - Best Practice: tools/open_table/delta_lake/pyspark/pyspark-delta-best-practice.md
+                        - Handling Concurrent Write: tools/open_table/delta_lake/pyspark/pyspark-delta-handling-concurrent-write.md
+                        - Stream Data: tools/open_table/delta_lake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
+            - Iceberg:
+                - tools/open_table/iceberg/index.md
+                - With Pyspark: tools/open_table/iceberg/icb-with-pyspark.md
         - Storage:
             - LakeFS:
-                - tools/lakefs/index.md
+                - tools/storage/lakefs/index.md
     - Designs:
         - designs/index.md
         - Data Pipeline:
