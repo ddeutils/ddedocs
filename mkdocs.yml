@@ -49,7 +49,7 @@ nav:
     - Home:
         - index.md
         - SOLID Principles: dae-solid-principles.md
-        - Role:
+        - Roles:
             - Data Platform Engineer: dae-data-platform-engineer.md
             - Data Operation Engineer: dae-dataops-engineer.md
     - Base:
@@ -269,6 +269,8 @@ nav:
             - Rust:
                 - tools/lang/rust/index.md
                 - From Python: tools/lang/rust/rust-from-python.md
+            - Mojo:
+                - tools/lang/mojo/index.md
         - System & Network:
             - Edge:
                 - tools/sys/edge/index.md
@@ -411,7 +413,6 @@ nav:
                 - analytics/forecast/index.md
     - Summary:
         - summary/index.md
-        - Data File Format: summary/sum-data-file-format.md
 
 plugins:
     - tags

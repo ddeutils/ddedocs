@@ -7,6 +7,7 @@ Data quality standards ensure that companies make decisions based on data to ach
 their business objectives.
 
 https://medium.com/@romina.elena.mendez/data-quality-f720fc56912a
+* [Layers of Data Quality](https://towardsdatascience.com/layers-of-data-quality-320bf3770db5)
 
 ## References:
 
