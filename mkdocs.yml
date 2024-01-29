@@ -215,6 +215,20 @@ nav:
                 - Manage Secret: services/terraform/tf-manage-secret.md
                 - Provider:
                     - Databricks: services/terraform/tf-databricks.md
+        - System & Network:
+            - Edge:
+                - services/sys/edge/index.md
+                - FTP: services/sys/edge/op-ftp.md
+                - SFTP: services/sys/edge/op-sftp.md
+            - Docker:
+                - services/sys/docker/index.md
+                - Dockerfile: services/sys/docker/docker-file.md
+                - Commands:
+                    - Management: services/sys/docker/docker-cmd-management.md
+                - Compose:
+                    - Postgres: services/sys/docker/docker-compose-postgresql.md
+            - Kubernetes:
+                - services/sys/k8s/index.md
         - Databases:
             - Postgres:
                 - services/postgres/index.md
@@ -270,20 +284,6 @@ nav:
                 - From Python: tools/lang/rust/rust-from-python.md
             - Mojo:
                 - tools/lang/mojo/index.md
-        - System & Network:
-            - Edge:
-                - tools/sys/edge/index.md
-                - FTP: tools/sys/edge/op-ftp.md
-                - SFTP: tools/sys/edge/op-sftp.md
-            - Docker:
-                - tools/sys/docker/index.md
-                - Dockerfile: tools/sys/docker/docker-file.md
-                - Commands:
-                    - Management: tools/sys/docker/docker-cmd-management.md
-                - Compose:
-                    - Postgres: tools/sys/docker/docker-compose-postgresql.md
-            - Kubernetes:
-                - tools/sys/k8s/index.md
         - Orchestration:
             - AirFlow:
                 - tools/orchestration/airflow/index.md
