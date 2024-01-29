@@ -48,59 +48,60 @@ extra:
 nav:
     - Home:
         - index.md
-        - SOLID Principles: dae-solid-principles.md
+        - Principles:
+            - SOLID Principles: dae-solid-principles.md
         - Roles:
             - Data Platform Engineer: dae-data-platform-engineer.md
             - Data Operation Engineer: dae-dataops-engineer.md
-    - Base:
-        - base/index.md
+    - Abstraction:
+        - abstract/index.md
         - Data:
             - Database:
-                - base/database/index.md
-                - Data Modeling: base/database/db-data-modeling.md
-                - Normalization: base/database/db-normalization-form.md
-                - De-Normalization: base/database/db-denormalization-form.md
+                - abstract/database/index.md
+                - Data Modeling: abstract/database/db-data-modeling.md
+                - Normalization: abstract/database/db-normalization-form.md
+                - De-Normalization: abstract/database/db-denormalization-form.md
             - Data Management:
-                - base/data_management/index.md
-                - Data Quality: base/data_management/data-quality.md
-                - Data Transformation: base/data_management/data-transformation.md
-                - Data Pipeline: base/data_management/data-pipeline.md
-                - Driven: base/data_management/data-management-driven.md
+                - abstract/data_management/index.md
+                - Data Quality: abstract/data_management/data-quality.md
+                - Data Transformation: abstract/data_management/data-transformation.md
+                - Data Pipeline: abstract/data_management/data-pipeline.md
+                - Driven: abstract/data_management/data-management-driven.md
             - Data Warehouse:
-                - base/data_warehouse/index.md
+                - abstract/data_warehouse/index.md
                 - Modeling Technique:
-                    - base/data_warehouse/data_modeling/index.md
+                    - abstract/data_warehouse/data_modeling/index.md
                     - Inmon Approach:
-                        - Abstract: base/data_warehouse/data_modeling/dwh-inmon-approach.md
+                        - Abstract: abstract/data_warehouse/data_modeling/dwh-inmon-approach.md
                     - Kimball Approach:
-                        - Abstract: base/data_warehouse/data_modeling/dwh-kimball-approach.md
-                        - Implement: base/data_warehouse/data_modeling/dwh-dim-implement.md
-                        - Slowly Changing Dim: base/data_warehouse/data_modeling/dwh-dim-slowly-changing-dimension.md
-                        - Rapidly Changing Dim: base/data_warehouse/data_modeling/dwh-dim-rapidly-changing-dimension.md
-                        - Techniques: base/data_warehouse/data_modeling/dwh-dim-techniques.md
+                        - Abstract: abstract/data_warehouse/data_modeling/dwh-kimball-approach.md
+                        - Implement: abstract/data_warehouse/data_modeling/dwh-dim-implement.md
+                        - Slowly Changing Dim: abstract/data_warehouse/data_modeling/dwh-dim-slowly-changing-dimension.md
+                        - Rapidly Changing Dim: abstract/data_warehouse/data_modeling/dwh-dim-rapidly-changing-dimension.md
+                        - Techniques: abstract/data_warehouse/data_modeling/dwh-dim-techniques.md
                     - Data Vault Approach:
-                        - Abstract: base/data_warehouse/data_modeling/dwh-data-vault-approach.md
-                        - Implement: base/data_warehouse/data_modeling/dwh-data-vault-implement.md
-                    - Anchor Approach: base/data_warehouse/data_modeling/dwh-anchor-approach.md
+                        - Abstract: abstract/data_warehouse/data_modeling/dwh-data-vault-approach.md
+                        - Implement: abstract/data_warehouse/data_modeling/dwh-data-vault-implement.md
+                    - Anchor Approach: abstract/data_warehouse/data_modeling/dwh-anchor-approach.md
             - Data Lakehouse:
-                - base/data_lakehouse/index.md
+                - abstract/data_lakehouse/index.md
             - Data Governance:
-                - base/data_governance/index.md
-                - Implement: base/data_governance/dgn-data-quality-framework-for-scale.md
-                - Data Quality Framework: base/data_governance/dgn-implement-process.md
+                - abstract/data_governance/index.md
+                - Implement: abstract/data_governance/dgn-data-quality-framework-for-scale.md
+                - Data Quality Framework: abstract/data_governance/dgn-implement-process.md
             - Data Observability:
-                - base/data_observability/index.md
-                - Data Quality Metric: base/data_observability/dobs-data-quality-metrics.md
-                - Data CICD: base/data_observability/dobs-data-cicd.md
-                - Data Lineage: base/data_observability/dobs-data-lineage.md
-                - Conductor: base/data_observability/dobs-conductor.md
+                - abstract/data_observability/index.md
+                - Data Quality Metric: abstract/data_observability/dobs-data-quality-metrics.md
+                - Data CICD: abstract/data_observability/dobs-data-cicd.md
+                - Data Lineage: abstract/data_observability/dobs-data-lineage.md
+                - Conductor: abstract/data_observability/dobs-conductor.md
             - Data Mesh:
-                - base/data_mesh/index.md
+                - abstract/data_mesh/index.md
         - Knowledge:
-            - CDC: base/data/data-cdc.md
+            - CDC: abstract/data/data-cdc.md
         - News & Research:
             - ChatGPT:
-                - base/chatgpt/index.md
+                - abstract/chatgpt/index.md
     - Services:
         - services/index.md
         - Provider:
@@ -411,8 +412,6 @@ nav:
                 - With RecordLinkage: analytics/linker/linker-with-recordlinkage.md
             - Forecast:
                 - analytics/forecast/index.md
-    - Summary:
-        - summary/index.md
 
 plugins:
     - tags
