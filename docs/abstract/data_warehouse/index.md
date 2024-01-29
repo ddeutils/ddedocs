@@ -1,7 +1,3 @@
----
-icon: material/warehouse
----
-
 # Data Warehouse
 
 **Data Warehouse** (DW or DWH) is a centralized repository or digital storage system

@@ -53,46 +53,44 @@ nav:
         - Roles:
             - Data Platform Engineer: dae-data-platform-engineer.md
             - Data Operation Engineer: dae-dataops-engineer.md
-    - Abstraction:
-        - abstract/index.md
-        - Data:
-            - Database:
-                - abstract/database/index.md
-                - Data Modeling: abstract/database/db-data-modeling.md
-                - Normalization: abstract/database/db-normalization-form.md
-                - De-Normalization: abstract/database/db-denormalization-form.md
+        - Abstraction:
             - Data Management:
                 - abstract/data_management/index.md
                 - Data Quality: abstract/data_management/data-quality.md
                 - Data Transformation: abstract/data_management/data-transformation.md
                 - Data Pipeline: abstract/data_management/data-pipeline.md
                 - Driven: abstract/data_management/data-management-driven.md
-            - Data Warehouse:
-                - abstract/data_warehouse/index.md
-                - Modeling Technique:
-                    - abstract/data_warehouse/data_modeling/index.md
-                    - Inmon Approach:
-                        - Abstract: abstract/data_warehouse/data_modeling/dwh-inmon-approach.md
-                    - Kimball Approach:
-                        - Abstract: abstract/data_warehouse/data_modeling/dwh-kimball-approach.md
-                        - Implement: abstract/data_warehouse/data_modeling/dwh-dim-implement.md
-                        - Slowly Changing Dim: abstract/data_warehouse/data_modeling/dwh-dim-slowly-changing-dimension.md
-                        - Rapidly Changing Dim: abstract/data_warehouse/data_modeling/dwh-dim-rapidly-changing-dimension.md
-                        - Techniques: abstract/data_warehouse/data_modeling/dwh-dim-techniques.md
-                    - Data Vault Approach:
-                        - Abstract: abstract/data_warehouse/data_modeling/dwh-data-vault-approach.md
-                        - Implement: abstract/data_warehouse/data_modeling/dwh-data-vault-implement.md
-                    - Anchor Approach: abstract/data_warehouse/data_modeling/dwh-anchor-approach.md
-            - Data Lakehouse:
-                - abstract/data_lakehouse/index.md
+                - Database:
+                    - abstract/data_management/database/index.md
+                    - Data Modeling: abstract/data_management/database/db-data-modeling.md
+                    - Normalization: abstract/data_management/database/db-normalization-form.md
+                    - De-Normalization: abstract/data_management/database/db-denormalization-form.md
+                - Data Warehouse:
+                    - abstract/data_warehouse/index.md
+                    - Modeling Technique:
+                        - abstract/data_warehouse/data_modeling/index.md
+                        - Inmon Approach:
+                            - Abstract: abstract/data_warehouse/data_modeling/dwh-inmon-approach.md
+                        - Kimball Approach:
+                            - Abstract: abstract/data_warehouse/data_modeling/dwh-kimball-approach.md
+                            - Implement: abstract/data_warehouse/data_modeling/dwh-dim-implement.md
+                            - Slowly Changing Dim: abstract/data_warehouse/data_modeling/dwh-dim-slowly-changing-dimension.md
+                            - Rapidly Changing Dim: abstract/data_warehouse/data_modeling/dwh-dim-rapidly-changing-dimension.md
+                            - Techniques: abstract/data_warehouse/data_modeling/dwh-dim-techniques.md
+                        - Data Vault Approach:
+                            - Abstract: abstract/data_warehouse/data_modeling/dwh-data-vault-approach.md
+                            - Implement: abstract/data_warehouse/data_modeling/dwh-data-vault-implement.md
+                        - Anchor Approach: abstract/data_warehouse/data_modeling/dwh-anchor-approach.md
+                - Data Lakehouse:
+                    - abstract/data_lakehouse/index.md
             - Data Governance:
                 - abstract/data_governance/index.md
                 - Implement: abstract/data_governance/dgn-data-quality-framework-for-scale.md
                 - Data Quality Framework: abstract/data_governance/dgn-implement-process.md
             - Data Observability:
                 - abstract/data_observability/index.md
-                - Data Quality Metric: abstract/data_observability/dobs-data-quality-metrics.md
                 - Data CICD: abstract/data_observability/dobs-data-cicd.md
+                - Data Quality Metric: abstract/data_observability/dobs-data-quality-metrics.md
                 - Data Lineage: abstract/data_observability/dobs-data-lineage.md
                 - Conductor: abstract/data_observability/dobs-conductor.md
             - Data Mesh:

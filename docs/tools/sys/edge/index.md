@@ -1,5 +1,5 @@
 ---
-icon: material/server-network
+icon: material/lan-pending
 ---
 
 # Edge Server
