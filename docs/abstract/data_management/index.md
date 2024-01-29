@@ -1,5 +1,5 @@
 ---
-icon: material/sync-circle
+icon: material/warehouse
 ---
 
 # Data Management

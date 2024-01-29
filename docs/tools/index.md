@@ -10,10 +10,12 @@
 ### File Format
 
 * [Comparing Performance of Big Data File Formats: A Practical Guide](https://towardsdatascience.com/comparing-performance-of-big-data-file-formats-a-practical-guide-ef366561b7d2)
+* https://medium.com/@turkelturk/data-file-formats-in-data-engineering-5ba0db8c2c16
 
 ### Ingestion
 
 [](https://jove.medium.com/airbyte-or-meltano-lazy-mans-guide-3b869c7d80f1)
+[Modern Data Stack: Reverse ETL](https://blog.stackademic.com/modern-data-stack-reverse-etl-e77c920887ae)
 
 ### Compute
 
