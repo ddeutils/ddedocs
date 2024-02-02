@@ -51,3 +51,5 @@ https://gsanjeewa1111.medium.com/pyspark-facts-b83366842ddf
 ## Optimization
 
 https://medium.com/plumbersofdatascience/7-key-strategies-to-optimize-your-spark-applications-948e7df607b
+* [PySpark Tips](https://towardsdev.com/pyspark-tip-d4614b013d6f)
+* [4 Examples to Take Your PySpark Skills to Next Level](https://towardsdatascience.com/4-examples-to-take-your-pyspark-skills-to-next-level-2a04cbe6e630)

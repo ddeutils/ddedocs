@@ -28,3 +28,7 @@
 ### Data Quality
 
 https://medium.com/@brunouy/a-guide-to-open-source-data-quality-tools-in-late-2023-f9dbadbc7948
+
+### Data Orchestration
+
+[Apache Airflow vs Mage.ai in Data Engineering](https://medium.com/odicis-data-engineering/apache-airflow-vs-mage-ai-in-data-engineering-745c040a05e8)
