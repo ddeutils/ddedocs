@@ -7,6 +7,8 @@ knowledge in Data Develop and Engineer field.
 * [The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
 * [Medium: My Predictions for Data Engineering](https://medium.com/art-of-data-engineering/my-predictions-for-data-engineering-in-2024-0723fa7a6e04)
 
+* https://towardsdatascience.com/data-engineering-a-formula-1-inspired-guide-for-beginners-5511488803ee
+
 ## Practices
 
 * [A Guide to Data Engineering Infrastructure](https://towardsdatascience.com/a-guide-to-data-engineering-infrastructure-cb074e0d3f99)
@@ -21,6 +23,7 @@ knowledge in Data Develop and Engineer field.
 * https://blog.devgenius.io/advance-data-structures-for-data-engineering-part-ii-71e9901f1b3d
 
 * [Cracking the Data Engineering Interview: The System Design Interview](https://medium.com/@seancoyne/cracking-the-data-engineering-interview-the-system-design-interview-fcda02d95c65)
+* [The (Not So Subtle) Art of Not Giving A Fuck About Data](https://svenbalnojan.medium.com/the-not-so-subtle-art-of-not-giving-a-fuck-about-data-c12a686987c9)
 
 ### Develop
 
