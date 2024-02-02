@@ -3,6 +3,7 @@
 * https://life.wongnai.com/get-to-know-data-platform-engineer-role-at-lmwn-4b43443eaca8
 * [Medium: Cloud Agnostic Data Platform](https://medium.com/@mariusz_kujawski/cloud-agnostic-data-platform-3aedd6d0eb3b)
 * [Modern Architecture for Emerging Data Infrastructures](https://premvishnoi.medium.com/modern-architecture-for-merging-data-infrastructures-8223a6dda911)
+* [Modern Architecture for Emerging Data Infrastructures](https://premvishnoi.medium.com/modern-architecture-for-merging-data-infrastructures-8223a6dda911)
 
 ## Use Cases
 

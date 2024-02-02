@@ -16,6 +16,10 @@ flexibility, and scalability to accommodate changes in business needs.
 
 * [What is One Big Table?](https://gbamezai.medium.com/what-is-one-big-table-exploring-when-to-use-it-when-not-to-use-it-and-my-personal-experience-3f740f56529d)
 
+### Data Vault
+
+https://patrickcuba.medium.com/data-vault-is-not-a-monolith-3ea2014ffedc
+
 ## References
 
 * [Medium: Data Modeling Techniques for Data Warehouse](https://medium.com/@mariusz_kujawski/data-modeling-techniques-for-data-warehouse-3edcb541e34e)

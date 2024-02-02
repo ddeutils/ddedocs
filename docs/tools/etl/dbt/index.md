@@ -11,6 +11,7 @@ workflows, using SQL scripts (.sql)and YAML scripts (.yml).
 
 [Mastering DBT from Zero to Hero](https://medium.com/@karim.faiz/mastering-dbt-from-zero-to-hero-76a8bc38ff9f)
 
+https://medium.com/@turkelturk/best-practices-for-workflows-a-guide-to-effective-dbt-use-fa925127647c
 
 ## CICD
 

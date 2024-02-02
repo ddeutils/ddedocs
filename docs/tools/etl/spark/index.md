@@ -37,6 +37,9 @@ https://blog.stackademic.com/apache-spark-101-understanding-spark-code-execution
 ## Most Common Use Cases
 
 https://towardsdatascience.com/fetch-failed-exception-in-apache-spark-decrypting-the-most-common-causes-b8dff21075c
+https://medium.com/art-of-data-engineering/distinct-and-dropduplicates-in-spark-real-project-example-9007954b49af
+https://medium.com/@vishalbarvaliya/coalesce-vs-repartition-58b12a0f0a3d
+https://medium.com/@vishalbarvaliya/apache-sparks-reducebykey-and-reduce-transformations-42b3bd80e32e
 
 ## Interview Questions
 
@@ -48,3 +51,5 @@ https://gsanjeewa1111.medium.com/pyspark-facts-b83366842ddf
 ## Optimization
 
 https://medium.com/plumbersofdatascience/7-key-strategies-to-optimize-your-spark-applications-948e7df607b
+* [PySpark Tips](https://towardsdev.com/pyspark-tip-d4614b013d6f)
+* [4 Examples to Take Your PySpark Skills to Next Level](https://towardsdatascience.com/4-examples-to-take-your-pyspark-skills-to-next-level-2a04cbe6e630)

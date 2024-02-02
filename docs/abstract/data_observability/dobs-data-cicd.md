@@ -1,5 +1,7 @@
 # Data CICD
 
+https://blog.stackademic.com/ci-cd-for-modern-data-engineering-b64d9e76393a
+
 ## The Data Lifecycle
 
 Application development starts with Ideation and product requirement and ends with

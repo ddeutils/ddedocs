@@ -215,6 +215,20 @@ nav:
                 - Manage Secret: services/terraform/tf-manage-secret.md
                 - Provider:
                     - Databricks: services/terraform/tf-databricks.md
+        - System & Network:
+            - Edge:
+                - services/sys/edge/index.md
+                - FTP: services/sys/edge/op-ftp.md
+                - SFTP: services/sys/edge/op-sftp.md
+            - Docker:
+                - services/sys/docker/index.md
+                - Dockerfile: services/sys/docker/docker-file.md
+                - Commands:
+                    - Management: services/sys/docker/docker-cmd-management.md
+                - Compose:
+                    - Postgres: services/sys/docker/docker-compose-postgresql.md
+            - Kubernetes:
+                - services/sys/k8s/index.md
         - Databases:
             - Postgres:
                 - services/postgres/index.md
@@ -270,20 +284,6 @@ nav:
                 - From Python: tools/lang/rust/rust-from-python.md
             - Mojo:
                 - tools/lang/mojo/index.md
-        - System & Network:
-            - Edge:
-                - tools/sys/edge/index.md
-                - FTP: tools/sys/edge/op-ftp.md
-                - SFTP: tools/sys/edge/op-sftp.md
-            - Docker:
-                - tools/sys/docker/index.md
-                - Dockerfile: tools/sys/docker/docker-file.md
-                - Commands:
-                    - Management: tools/sys/docker/docker-cmd-management.md
-                - Compose:
-                    - Postgres: tools/sys/docker/docker-compose-postgresql.md
-            - Kubernetes:
-                - tools/sys/k8s/index.md
         - Orchestration:
             - AirFlow:
                 - tools/orchestration/airflow/index.md
@@ -299,6 +299,8 @@ nav:
                 - tools/quality/great_expectations/index.md
                 - With Databricks: tools/quality/great_expectations/gexp-with-databricks.md
                 - With Spark: tools/quality/great_expectations/gexp-with-spark.md
+            - Deequ:
+                - tools/quality/deequ/index.md
         - Extract & Transform & Load:
             - Pandas:
                 - tools/etl/pandas/index.md
@@ -373,8 +375,14 @@ nav:
                 - tools/open_table/iceberg/index.md
                 - With Pyspark: tools/open_table/iceberg/icb-with-pyspark.md
         - Storage:
+            - Hadoop:
+                - tools/storage/hadoop/index.md
+                - On Mac: tools/storage/hadoop/hadoop-on-mac.md
             - LakeFS:
                 - tools/storage/lakefs/index.md
+        - CICD:
+            - Jenkins:
+                - tools/cicd/jenkins/index.md
     - Designs:
         - designs/index.md
         - Data Pipeline:
@@ -447,4 +455,4 @@ markdown_extensions:
     - tables
 
 copyright: |
-    &copy; 2023 <a href="https://github.com/korawica/ddedocs"  target="_blank" rel="noopener">Korawich Anuttra</a>
+    &copy; 2023 <a href="https://github.com/korawica/ddedocs" target="_blank" rel="noopener">Korawich Anuttra</a>

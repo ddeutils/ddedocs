@@ -1,5 +1,3 @@
-# Project: Reddit, Airflow, Celery, Postgres, S3, AWS Glue, Athena, Redshift
+# Project: Kafka, Spark, Airflow, Postgres, and Docker
 
-![Project 02](./images/project-02.png)
-
-https://aws.plainenglish.io/data-engineering-with-reddit-airflow-celery-postgres-s3-aws-glue-athena-redshift-96319d7a46bd
+https://towardsdev.com/end-to-end-data-engineering-system-on-real-data-with-kafka-spark-airflow-postgres-and-docker-a70e18df4090

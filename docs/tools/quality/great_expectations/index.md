@@ -10,6 +10,8 @@ icon: material/checkbox-multiple-marked-circle-outline
 pip install great_expectations
 ```
 
+https://medium.com/@pallavisinha12/create-data-quality-framework-with-great-expectations-911b42a5312f
+
 ## References
 
 * [IT Next: Getting Started with Great Expectations Part I](https://itnext.io/getting-started-with-great-expectations-part-1-0e48133b708a)
