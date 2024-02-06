@@ -152,7 +152,7 @@ dz.select('countries.capital').show(truncate=False)
 ```
 
 For another specific example of accessing elements in nested structs inside array
-see [this](https://stackoverflow.com/questions/57810876/how-to-check-if-a-spark-data-frame-struct-array-contains-a-specific-value/57812763#57812763)
+see [:fontawesome-brands-stack-overflow: This](https://stackoverflow.com/questions/57810876/how-to-check-if-a-spark-data-frame-struct-array-contains-a-specific-value/57812763#57812763)
 Stack Overflow question.
 
 ## Adding new elements

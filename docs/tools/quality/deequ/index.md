@@ -1,3 +1,7 @@
+---
+icon: material/chat-question-outline
+---
+
 # Deequ
 
 https://medium.com/codex/how-to-check-data-quality-in-pyspark-8a882e45bc95

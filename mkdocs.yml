@@ -53,6 +53,7 @@ nav:
         - Roles:
             - Data Platform Engineer: dae-data-platform-engineer.md
             - Data Operation Engineer: dae-dataops-engineer.md
+            - Lead of Data Engineer: dae-lead-data-engineer.md
         - Abstraction:
             - Data Management:
                 - abstract/data_management/index.md
@@ -290,10 +291,18 @@ nav:
                 - Pydantic Validator: tools/orchestration/airflow/airflow-pydantic-validator.md
                 - Repeatable DAGs: tools/orchestration/airflow/airflow-repeatable-dags.md
                 - Cost Optimize: tools/orchestration/airflow/airflow-cost-optimization.md
+                - Pool: tools/orchestration/airflow/airflow-pool.md
+                - Connections:
+                    - With Kafka: tools/orchestration/airflow/airflow-with-kafka.md
+                - Unittest: tools/orchestration/airflow/airflow-unittest.md
                 - CICD: tools/orchestration/airflow/airflow-cicd.md
             - Dagster:
                 - tools/orchestration/dagster/index.md
                 - Dynamic Partition: tools/orchestration/dagster/dagster-dynamic-partition.md
+            - Kedro:
+                - tools/orchestration/kedro/index.md
+            - Mage AI:
+                - tools/orchestration/mageai/index.md
         - Quality:
             - Great Expectations:
                 - tools/quality/great_expectations/index.md
@@ -307,25 +316,30 @@ nav:
                 - SQL Conversion: tools/etl/pandas/py_pd_convert_from_sql.md
             - Polars:
                 - tools/etl/polars/index.md
+                - Data Pipeline: tools/etl/polars/polars-data-pipeline.md
             - DBT:
                 - tools/etl/dbt/index.md
                 - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md
                 - Lake House: tools/etl/dbt/dbt-on-lake-house.md
                 - DBT Loom: tools/etl/dbt/dbt-loom.md
+                - DBT Mesh: tools/etl/dbt/dbt-mesh.md
                 - Connections:
                     - To Synapse: tools/etl/dbt/dbt-to-synapse.md
             - Arrow:
                 - tools/etl/arrow/index.md
             - Spark:
                 - tools/etl/spark/index.md
-                - Create with Docker: tools/etl/spark/spark-create-cluster-with-docker.md
-                - Bucketing: tools/etl/spark/spark-bucketing.md
-                - Joining: tools/etl/spark/spark-joining.md
-                - Shuffle: tools/etl/spark/spark-shuffle.md
-                - Repartitioning: tools/etl/spark/spark-repartitioning.md
-                - Nested Data Types: tools/etl/spark/spark-nested-datatypes.md
-                - Data Skew: tools/etl/spark/spark-data-skew.md
                 - UDFs: tools/etl/spark/spark-udfs.md
+                - Optimizations:
+                    - tools/etl/spark/optimizations/index.md
+                    - Bucketing: tools/etl/spark/spark-bucketing.md
+                    - Joining: tools/etl/spark/optimizations/spark-joining.md
+                    - Repartitioning: tools/etl/spark/spark-repartitioning.md
+                    - Nested Data Types: tools/etl/spark/spark-nested-datatypes.md
+                    - Serialization: tools/etl/spark/optimizations/spark-serialization.md
+                    - Data Skew: tools/etl/spark/optimizations/spark-data-skew.md
+                    - Data Spill: tools/etl/spark/optimizations/spark-data-spill.md
+                    - Shuffling: tools/etl/spark/optimizations/spark-shuffling.md
                 - API:
                     - Pyspark:
                         - Data Wrangling Functions: tools/etl/spark/pyspark/pyspark-data-wrangling-functions.md
@@ -334,9 +348,10 @@ nav:
                         - Media Files: tools/etl/spark/pyspark/pyspark-media-files.md
                         - Unittest: tools/etl/spark/pyspark/pyspark-unittest.md
                         - Avoid These at Any Cost: tools/etl/spark/pyspark/pyspark-avoid-these-at-any-cost.md
+                - With Docker: tools/etl/spark/spark-with-docker.md
             - Kafka:
                 - tools/etl/kafka/index.md
-                - Usecases:
+                - Use-Cases:
                     - Agoda: tools/etl/kafka/kafka-agoda.md
             - Airbyte:
                 - tools/etl/airbyte/index.md
@@ -373,6 +388,8 @@ nav:
                         - Stream Data: tools/open_table/delta_lake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
             - Iceberg:
                 - tools/open_table/iceberg/index.md
+                - Reduce Full Scan: tools/open_table/iceberg/icb-reduce-full-scan.md
+                - Small Files: tools/open_table/iceberg/icb-small-files.md
                 - With Pyspark: tools/open_table/iceberg/icb-with-pyspark.md
         - Storage:
             - Hadoop:
@@ -404,6 +421,9 @@ nav:
             - Lakehouse from DWH: designs/migration/mg-lakehouse-from-classic-dwh.md
     - Analytics:
         - analytics/index.md
+        - Role:
+            - Analytic Engineer:
+                - analytics/analytic_engineer/index.md
         - Knowledge:
             - Data Analytic:
                 - analytics/data_analytic/index.md
@@ -418,6 +438,8 @@ nav:
                 - With RecordLinkage: analytics/linker/linker-with-recordlinkage.md
             - Forecast:
                 - analytics/forecast/index.md
+            - Cluster:
+                - analytics/cluster/index.md
 
 plugins:
     - tags
