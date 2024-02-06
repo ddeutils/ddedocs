@@ -521,6 +521,6 @@ conn = pyodbc.connect(
 * (https://docs.databricks.com/data/data-sources/azure/synapse-analytics.html)
 * (https://joeho.xyz/blog-posts/how-to-connect-to-azure-synapse-in-azure-databricks/)
 * (https://learn.microsoft.com/en-us/answers/questions/653154/databricks-packages-for-batch-loading-to-azure.html)
-* (https://stackoverflow.com/questions/55708079/spark-optimise-writing-a-dataframe-to-sql-server/55717234) (***)
+* :fontawesome-brands-stack-overflow: (https://stackoverflow.com/questions/55708079/spark-optimise-writing-a-dataframe-to-sql-server/55717234) (***)
 * (https://docs.databricks.com/external-data/synapse-analytics.html)
 * (https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control)

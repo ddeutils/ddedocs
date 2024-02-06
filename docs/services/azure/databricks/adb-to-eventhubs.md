@@ -2,7 +2,6 @@
 
 ## Using Service Principal
 
-
 ### Connection Code
 
 === "Eventhub"

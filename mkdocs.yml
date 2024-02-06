@@ -291,10 +291,18 @@ nav:
                 - Pydantic Validator: tools/orchestration/airflow/airflow-pydantic-validator.md
                 - Repeatable DAGs: tools/orchestration/airflow/airflow-repeatable-dags.md
                 - Cost Optimize: tools/orchestration/airflow/airflow-cost-optimization.md
+                - Pool: tools/orchestration/airflow/airflow-pool.md
+                - Connections:
+                    - With Kafka: tools/orchestration/airflow/airflow-with-kafka.md
+                - Unittest: tools/orchestration/airflow/airflow-unittest.md
                 - CICD: tools/orchestration/airflow/airflow-cicd.md
             - Dagster:
                 - tools/orchestration/dagster/index.md
                 - Dynamic Partition: tools/orchestration/dagster/dagster-dynamic-partition.md
+            - Kedro:
+                - tools/orchestration/kedro/index.md
+            - Mage AI:
+                - tools/orchestration/mageai/index.md
         - Quality:
             - Great Expectations:
                 - tools/quality/great_expectations/index.md
@@ -308,6 +316,7 @@ nav:
                 - SQL Conversion: tools/etl/pandas/py_pd_convert_from_sql.md
             - Polars:
                 - tools/etl/polars/index.md
+                - Data Pipeline: tools/etl/polars/polars-data-pipeline.md
             - DBT:
                 - tools/etl/dbt/index.md
                 - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md
@@ -322,12 +331,15 @@ nav:
                 - tools/etl/spark/index.md
                 - UDFs: tools/etl/spark/spark-udfs.md
                 - Optimizations:
+                    - tools/etl/spark/optimizations/index.md
                     - Bucketing: tools/etl/spark/spark-bucketing.md
-                    - Joining: tools/etl/spark/spark-joining.md
-                    - Shuffle: tools/etl/spark/spark-shuffle.md
+                    - Joining: tools/etl/spark/optimizations/spark-joining.md
                     - Repartitioning: tools/etl/spark/spark-repartitioning.md
                     - Nested Data Types: tools/etl/spark/spark-nested-datatypes.md
-                    - Data Skew: tools/etl/spark/spark-data-skew.md
+                    - Serialization: tools/etl/spark/optimizations/spark-serialization.md
+                    - Data Skew: tools/etl/spark/optimizations/spark-data-skew.md
+                    - Data Spill: tools/etl/spark/optimizations/spark-data-spill.md
+                    - Shuffling: tools/etl/spark/optimizations/spark-shuffling.md
                 - API:
                     - Pyspark:
                         - Data Wrangling Functions: tools/etl/spark/pyspark/pyspark-data-wrangling-functions.md
@@ -376,6 +388,8 @@ nav:
                         - Stream Data: tools/open_table/delta_lake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
             - Iceberg:
                 - tools/open_table/iceberg/index.md
+                - Reduce Full Scan: tools/open_table/iceberg/icb-reduce-full-scan.md
+                - Small Files: tools/open_table/iceberg/icb-small-files.md
                 - With Pyspark: tools/open_table/iceberg/icb-with-pyspark.md
         - Storage:
             - Hadoop:
@@ -407,6 +421,9 @@ nav:
             - Lakehouse from DWH: designs/migration/mg-lakehouse-from-classic-dwh.md
     - Analytics:
         - analytics/index.md
+        - Role:
+            - Analytic Engineer:
+                - analytics/analytic_engineer/index.md
         - Knowledge:
             - Data Analytic:
                 - analytics/data_analytic/index.md
@@ -421,6 +438,8 @@ nav:
                 - With RecordLinkage: analytics/linker/linker-with-recordlinkage.md
             - Forecast:
                 - analytics/forecast/index.md
+            - Cluster:
+                - analytics/cluster/index.md
 
 plugins:
     - tags

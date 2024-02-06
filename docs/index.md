@@ -3,11 +3,10 @@
 This project will deliver all knowledge from my experience and other sharing
 knowledge in Data Develop and Engineer field.
 
-* [Fundamentals of Data Engineer Book](https://blog.det.life/fundamentals-of-data-engineering-book-key-learning-points-35001380dda6)
-* [The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
-* [Medium: My Predictions for Data Engineering](https://medium.com/art-of-data-engineering/my-predictions-for-data-engineering-in-2024-0723fa7a6e04)
-
-* https://towardsdatascience.com/data-engineering-a-formula-1-inspired-guide-for-beginners-5511488803ee
+* [:material-newspaper: Fundamentals of Data Engineer Book](https://blog.det.life/fundamentals-of-data-engineering-book-key-learning-points-35001380dda6)
+* [:simple-medium: The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
+* [:simple-medium: My Predictions for Data Engineering](https://medium.com/art-of-data-engineering/my-predictions-for-data-engineering-in-2024-0723fa7a6e04)
+* [:simple-medium: TowardDS - Data Engineering: A Formula 1-inspired Guide for Beginners](https://towardsdatascience.com/data-engineering-a-formula-1-inspired-guide-for-beginners-5511488803ee)
 
 ## Practices
 
@@ -27,11 +26,11 @@ knowledge in Data Develop and Engineer field.
 
 ### Develop
 
-* [Test Driven](https://testdriven.io/)
+* [:material-newspaper: Test Driven](https://testdriven.io/)
 
 ## Communities
 
 This below is the list of communities that must learn about coding and tools.
 
-* [Medium: Data Engineering](https://medium.com/tag/data-engineering)
-* [Medium: ODDS Team](https://medium.com/odds-team)
+* [:simple-medium: Data Engineering](https://medium.com/tag/data-engineering)
+* [:simple-medium: ODDS Team](https://medium.com/odds-team)

@@ -25,6 +25,12 @@ icon: simple/apachespark
 
 === "Spark Session"
 
+    Stop current spark session:
+
+    ```python
+    spark.sparkContext.stop()
+    ```
+
     ```python
     from pyspark.sql import SparkSession
 
@@ -42,12 +48,22 @@ icon: simple/apachespark
 
 === "Spark Context"
 
+    Get default config:
+
+    ```python
+    spark.sparkContext._conf.getAll()
+    ```
+
     ```python
     from pyspark.context import SparkContext
     from pyspark import SparkConf
 
+    SparkContext.stop(sc)
+
     sc = (
         SparkContext(
+            "local",
+            "YourAppName",
             conf=(
                 SparkConf()
                     .set("spark.executor.memory", "2g")
@@ -58,32 +74,43 @@ icon: simple/apachespark
     )
     ```
 
-* https://towardsdev.com/spark-context-vs-spark-session-97d87bd5ef9e
-
 ## Spark API
 
 Spark has two API types
 
-* Low-level API (unstructured)
-* High-level API (Spark’s structured API)
+* Low-level API (Unstructured)
+* High-level API (Spark’s Structured API)
+
+![Structured Spark API Execution plan](./images/spark-api-plan.png)
 
 ### Low-level API
 
-Resilient Distributed Datasets (RDDs) คือ collection ของ elements partitioned ที่กระจายไปตาม node ใน cluster ที่ทำงาน parallel กัน
+**Resilient Distributed Datasets** (RDDs) is collection of elements partitioned that
+distributes to each node in cluster and work parallel.
 
-RDDs นั้น support 2 operations
+```python
+rdd = spark.read.csv("file.csv", header=True).rdd
+```
 
-transformations — สร้าง dataset ใหม่
-actions — return value ไปหา driver program หลัง compute dataset เสร็จ
-ทุก transformations ใน spark จะ lazy คือมันจะไม่ compute ทันทีแต่จะจำไว้ว่า transformations นี้มันยุ่งกับ base dataset หรือไฟล์อะไร ถึงตอนที่มันจะ compute จริงๆ ถึงตอนนั้น action ค่อยเกิดขึ้นแล้ว return ค่าไปหา driver program ซึ่งเปรียบเทียบแล้ว transformations จึงเปรียบได้กับ map และ actions คือ reduce
+RDDs support 2 operations:
 
-หากมองในมุม End user เราจะไม่ได้ใช้ RDDs มากเท่าไร ยกเว้นในกรณีที่เราต้อง maintain old Spark code
+* **Transformations** — create new rdd but lazy meaning they don't execute until you
+  call an action on RDD.
+
+    Some transformations on RDDs are `flatMap()`, `map()`, `reduceByKey()`, `filter()`, `sortByKey()`
+    and all these return a new RDD instead of updating the current.
+
+* **Actions** — return value to driver program after compute dataset finish.
+
+    Some actions on RDDs are `count()`,  `collect()`,  `first()`,  `max()`,  `reduce()`  and more.
 
 ### High-level API
 
-Structured API เป็นเครื่องมือในการ manipulate all sorts of data ตั้งแต่ unstructured, semi-structured, structured data
+Structured API is tool for manipulate all sorts of data such as Unstructured, Semi-Structured,
+Structured data
 
-Structured API สามารถใช้ได้ทั้งกับ batch และ streaming computation ซึ่งคือ ฝั่ง Spark SQL, Dataframes, Datasets API ส่วนในฝั่ง streaming จะเป็น Spark Structured Streaming ซึ่งเราจะขออธิบายแค่ฝั่งแรก
+Structured API able to use with batch and streaming computation that is Spark SQL,
+Dataframes, Datasets API but for streaming, it be Spark Structured Streaming.
 
 ## Memory
 
@@ -95,10 +122,10 @@ https://blog.stackademic.com/apache-spark-101-understanding-spark-code-execution
 
 ## Most Common Use Cases
 
-https://towardsdatascience.com/fetch-failed-exception-in-apache-spark-decrypting-the-most-common-causes-b8dff21075c
-https://medium.com/art-of-data-engineering/distinct-and-dropduplicates-in-spark-real-project-example-9007954b49af
-https://medium.com/@vishalbarvaliya/coalesce-vs-repartition-58b12a0f0a3d
-https://medium.com/@vishalbarvaliya/apache-sparks-reducebykey-and-reduce-transformations-42b3bd80e32e
+* https://towardsdatascience.com/fetch-failed-exception-in-apache-spark-decrypting-the-most-common-causes-b8dff21075c
+* https://medium.com/art-of-data-engineering/distinct-and-dropduplicates-in-spark-real-project-example-9007954b49af
+* https://medium.com/@vishalbarvaliya/coalesce-vs-repartition-58b12a0f0a3d
+* https://medium.com/@vishalbarvaliya/apache-sparks-reducebykey-and-reduce-transformations-42b3bd80e32e
 
 ## Interview Questions
 
@@ -109,6 +136,6 @@ https://medium.com/@vishalbarvaliya/apache-sparks-reducebykey-and-reduce-transfo
 
 ## Optimization
 
-https://medium.com/plumbersofdatascience/7-key-strategies-to-optimize-your-spark-applications-948e7df607b
+* https://medium.com/plumbersofdatascience/7-key-strategies-to-optimize-your-spark-applications-948e7df607b
 * [PySpark Tips](https://towardsdev.com/pyspark-tip-d4614b013d6f)
 * [4 Examples to Take Your PySpark Skills to Next Level](https://towardsdatascience.com/4-examples-to-take-your-pyspark-skills-to-next-level-2a04cbe6e630)
