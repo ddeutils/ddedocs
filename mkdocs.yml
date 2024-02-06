@@ -53,6 +53,7 @@ nav:
         - Roles:
             - Data Platform Engineer: dae-data-platform-engineer.md
             - Data Operation Engineer: dae-dataops-engineer.md
+            - Lead of Data Engineer: dae-lead-data-engineer.md
         - Abstraction:
             - Data Management:
                 - abstract/data_management/index.md
@@ -312,20 +313,21 @@ nav:
                 - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md
                 - Lake House: tools/etl/dbt/dbt-on-lake-house.md
                 - DBT Loom: tools/etl/dbt/dbt-loom.md
+                - DBT Mesh: tools/etl/dbt/dbt-mesh.md
                 - Connections:
                     - To Synapse: tools/etl/dbt/dbt-to-synapse.md
             - Arrow:
                 - tools/etl/arrow/index.md
             - Spark:
                 - tools/etl/spark/index.md
-                - Create with Docker: tools/etl/spark/spark-create-cluster-with-docker.md
-                - Bucketing: tools/etl/spark/spark-bucketing.md
-                - Joining: tools/etl/spark/spark-joining.md
-                - Shuffle: tools/etl/spark/spark-shuffle.md
-                - Repartitioning: tools/etl/spark/spark-repartitioning.md
-                - Nested Data Types: tools/etl/spark/spark-nested-datatypes.md
-                - Data Skew: tools/etl/spark/spark-data-skew.md
                 - UDFs: tools/etl/spark/spark-udfs.md
+                - Optimizations:
+                    - Bucketing: tools/etl/spark/spark-bucketing.md
+                    - Joining: tools/etl/spark/spark-joining.md
+                    - Shuffle: tools/etl/spark/spark-shuffle.md
+                    - Repartitioning: tools/etl/spark/spark-repartitioning.md
+                    - Nested Data Types: tools/etl/spark/spark-nested-datatypes.md
+                    - Data Skew: tools/etl/spark/spark-data-skew.md
                 - API:
                     - Pyspark:
                         - Data Wrangling Functions: tools/etl/spark/pyspark/pyspark-data-wrangling-functions.md
@@ -334,9 +336,10 @@ nav:
                         - Media Files: tools/etl/spark/pyspark/pyspark-media-files.md
                         - Unittest: tools/etl/spark/pyspark/pyspark-unittest.md
                         - Avoid These at Any Cost: tools/etl/spark/pyspark/pyspark-avoid-these-at-any-cost.md
+                - With Docker: tools/etl/spark/spark-with-docker.md
             - Kafka:
                 - tools/etl/kafka/index.md
-                - Usecases:
+                - Use-Cases:
                     - Agoda: tools/etl/kafka/kafka-agoda.md
             - Airbyte:
                 - tools/etl/airbyte/index.md

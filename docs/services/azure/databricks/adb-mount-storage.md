@@ -1,5 +1,11 @@
 # Azure Databricks: _Mount Storage_
 
+**List of mounts**:
+
+```python
+display(dbutils.fs.mounts())
+```
+
 ## Azure Blob Storage
 
 ```python
