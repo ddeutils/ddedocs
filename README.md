@@ -3,10 +3,12 @@
 This project will deliver about **Data Developer & Engineer Documents and
 Hands-On** from my experience and reference from public blogs only :warning:
 
-I will use this project be a co-pyrot for implement and serve `mkdocs` with the
-[Material extension](https://squidfunk.github.io/mkdocs-material/)
+I will use this project be a co-pyrot for implement and serve [`MkDocs`](https://github.com/mkdocs/mkdocs)
+with the [Material Extension](https://squidfunk.github.io/mkdocs-material/)
 for generate documents with static web from a markdown files that easy to deploy
 and plug-in with **GitHub** action to GitHub domain.
+
+**Main project page**:
 
 ```url
 https://korawica.github.io/ddedocs/
@@ -16,6 +18,11 @@ https://korawica.github.io/ddedocs/
 
 I will update this project by **Weekly frequency**. (This statement warn to me
 when I come back to develop this project again :sweat_smile:)
+
+> **Note**:\
+> For more extension that I use for this project, able to research from
+> [MkDocs Catalogs](https://github.com/mkdocs/catalog).
+
 
 ## License
 

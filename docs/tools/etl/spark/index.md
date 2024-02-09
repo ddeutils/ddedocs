@@ -112,10 +112,6 @@ Structured data
 Structured API able to use with batch and streaming computation that is Spark SQL,
 Dataframes, Datasets API but for streaming, it be Spark Structured Streaming.
 
-## Memory
-
-* https://medium.com/@think-data/understanding-the-memory-components-of-spark-e3070f315d17
-
 ## Execution
 
 https://blog.stackademic.com/apache-spark-101-understanding-spark-code-execution-cbff49cb85ac

@@ -310,6 +310,8 @@ nav:
                 - With Spark: tools/quality/great_expectations/gexp-with-spark.md
             - Deequ:
                 - tools/quality/deequ/index.md
+            - Soda:
+                - tools/quality/soda/index.md
         - Extract & Transform & Load:
             - Pandas:
                 - tools/etl/pandas/index.md
