@@ -56,6 +56,10 @@ and complex data processing tasks effectively. As the demands for data processin
 continue to escalate, innovations in Spark’s memory management and optimization
 remain crucial in the realm of big data analytics.
 
+## Out of Memory
+
+[Spark Out Of Memory Error](https://goraidebashree7.medium.com/spark-out-of-memory-error-da89b242d435)
+
 ## References
 
 * [Apache Spark Memory Management: On-Heap vs Off-Heap in the Context of Tungsten Optimizer](https://medium.com/@skraghunandan11/apache-spark-memory-management-on-heap-vs-off-heap-in-the-context-of-tungsten-optimizer-df6f641a2d93)

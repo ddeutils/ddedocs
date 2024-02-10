@@ -4,4 +4,5 @@
 * https://medium.com/@midogax272/spark-submit-with-pyspark-and-aws-emr-serverless-6-9-0-aa451c3961e5
 
 
-https://medium.com/@karim.faiz/open-data-lakehouse-revolutionizing-data-management-2cecf94f95e3
+* https://medium.com/@karim.faiz/open-data-lakehouse-revolutionizing-data-management-2cecf94f95e3
+* [Data Lake 101: Architecture](https://aws.plainenglish.io/data-lake-101-architecture-5da905c2256c)

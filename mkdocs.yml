@@ -350,6 +350,8 @@ nav:
                         - Media Files: tools/etl/spark/pyspark/pyspark-media-files.md
                         - Unittest: tools/etl/spark/pyspark/pyspark-unittest.md
                         - Avoid These at Any Cost: tools/etl/spark/pyspark/pyspark-avoid-these-at-any-cost.md
+                - Structured Stream:
+                    - tools/etl/spark/stream/index.md
                 - With Docker: tools/etl/spark/spark-with-docker.md
             - Kafka:
                 - tools/etl/kafka/index.md
