@@ -57,6 +57,7 @@ nav:
         - Abstraction:
             - Data Management:
                 - abstract/data_management/index.md
+                - Data Ingestion: abstract/data_management/data-ingestion.md
                 - Data Quality: abstract/data_management/data-quality.md
                 - Data Transformation: abstract/data_management/data-transformation.md
                 - Data Pipeline: abstract/data_management/data-pipeline.md
@@ -66,6 +67,7 @@ nav:
                     - Data Modeling: abstract/data_management/database/db-data-modeling.md
                     - Normalization: abstract/data_management/database/db-normalization-form.md
                     - De-Normalization: abstract/data_management/database/db-denormalization-form.md
+                    - SCD2: abstract/data_management/database/db-scd.md
                 - Data Warehouse:
                     - abstract/data_warehouse/index.md
                     - Modeling Technique:
@@ -84,20 +86,24 @@ nav:
                         - Anchor Approach: abstract/data_warehouse/data_modeling/dwh-anchor-approach.md
                 - Data Lakehouse:
                     - abstract/data_lakehouse/index.md
+                    - PBAC: abstract/data_lakehouse/data-lakehouse-policy-based-access-control.md
             - Data Governance:
                 - abstract/data_governance/index.md
                 - Implement: abstract/data_governance/dgn-data-quality-framework-for-scale.md
                 - Data Quality Framework: abstract/data_governance/dgn-implement-process.md
+                - Modern Team: abstract/data_governance/dgn-with-modern-data-team.md
             - Data Observability:
                 - abstract/data_observability/index.md
                 - Data CICD: abstract/data_observability/dobs-data-cicd.md
                 - Data Quality Metric: abstract/data_observability/dobs-data-quality-metrics.md
                 - Data Lineage: abstract/data_observability/dobs-data-lineage.md
                 - Conductor: abstract/data_observability/dobs-conductor.md
+                - Viable Monitoring System: abstract/data_observability/dobs-maintaining-a-viable-monitoring-sys.md
             - Data Mesh:
                 - abstract/data_mesh/index.md
         - Knowledge:
             - CDC: abstract/data/data-cdc.md
+            - Data Structure: abstract/data/data-structure.md
         - News & Research:
             - ChatGPT:
                 - abstract/chatgpt/index.md
@@ -141,6 +147,7 @@ nav:
                         - To BigQuery: services/azure/databricks/adb-to-bigquery.md
                         - To Event Hubs: services/azure/databricks/adb-to-eventhubs.md
                 - Event Hubs:
+                    - Getting Started: services/azure/eventhubs/getting_started.md
                     - Producer Data: services/azure/eventhubs/eventhubs-produce-data.md
                 - Data Factory:
                     - Share IR: services/azure/data_factory/adf-ir-sharing.md
@@ -179,21 +186,27 @@ nav:
                     - Domain with Route53: services/aws/ec2/ec2-domain-with-route53.md
                 - Lambda:
                     - Pros & Cons: services/aws/lambda/lambda-stop-using-for-everything.md
+                    - With Docker: services/aws/lambda/lambda-with-docker.md
                 - Step Function:
                     - State Machine Language: services/aws/step_function/stfn-state-machine-language.md
                     - Schedule: services/aws/step_function/stfn-schedule-by-event-bridge.md
                     - Combine Parallel: services/aws/step_function/stfn-combine-data-parallel-state.md
                 - Glue:
+                    - Getting Started: services/aws/glue/glue-getting-started.md
                     - Local Env: services/aws/glue/glue-local-env.md
                 - Athena:
                     - With DeltaLake: services/aws/athena/athena-with-delta-lake.md
                 - EMR:
                     - Compare Databricks: services/aws/emr/emr-compare-with-databricks.md
+                - Kinesis:
+                    - Streaming: services/aws/kinesis/kinesis-streaming.md
             - Google:
                 - services/google/index.md
                 - API Authentication: services/google/google-api-authenticate.md
                 - Cloud Functions:
                     - To Managing Secrets: services/google/functions/gcf-to-managing-secrets.md
+                - BigQuery:
+                    - Getting Started: services/google/bigquery/getting-started.md
             - Databricks:
                 - services/databricks/index.md
                 - Dynamically Workflow: services/databricks/databricks-dynamically-workflow.md
@@ -216,6 +229,8 @@ nav:
                 - Manage Secret: services/terraform/tf-manage-secret.md
                 - Provider:
                     - Databricks: services/terraform/tf-databricks.md
+                    - Azure:
+                        - Databricks: services/terraform/tf-azure-databricks.md
         - System & Network:
             - Edge:
                 - services/sys/edge/index.md
@@ -234,21 +249,23 @@ nav:
             - Postgres:
                 - services/postgres/index.md
                 - Optimization Tricks: services/postgres/postgres-optimize-tricks.md
+                - With Kubernetes: services/postgres/postgres-with-k8s.md
     - Tools:
         - tools/index.md
-        - Languages:
+        - Version Control:
             - Git:
-                - tools/lang/git/index.md
+                - tools/vcs/git/index.md
                 - Commands:
-                    - Common: tools/lang/git/git-cmd-common.md
-                    - Advance: tools/lang/git/git-cmd-advance.md
+                    - Common: tools/vcs/git/git-cmd-common.md
+                    - Advance: tools/vcs/git/git-cmd-advance.md
                 - Scenarios:
-                    - tools/lang/git/git-common-scenarios.md
-                    - Revert Commit: tools/lang/git/git-revert-commit.md
+                    - tools/vcs/git/git-common-scenarios.md
+                    - Revert Commit: tools/vcs/git/git-revert-commit.md
                 - Strategies:
-                    - Branching Strategies: tools/lang/git/git-branching-strategies.md
-                    - Commit Release: tools/lang/git/git-commit-release.md
-                    - Deployment: tools/lang/git/git-deployment.md
+                    - Branching Strategies: tools/vcs/git/git-branching-strategies.md
+                    - Commit Release: tools/vcs/git/git-commit-release.md
+                    - Deployment: tools/vcs/git/git-deployment.md
+        - Languages:
             - Shell:
                 - tools/lang/shell/index.md
                 - App: tools/lang/shell/ubt-sh-common-file.md
@@ -265,6 +282,10 @@ nav:
                 - Joblib: tools/lang/python/py-joblib.md
                 - Pydantic: tools/lang/python/py-pydantic.md
                 - Sync Multi-processes: tools/lang/python/py-sync-multi-processes.md
+                - Data Structure for DE: tools/lang/python/py-data-structure-for-data-engineer.md
+                - Functional Programing:
+                    - Monad: tools/lang/python/functional/py-func-monad.md
+                    - Toolz: tools/lang/python/functional/py-func-toolz.md
             - GO:
                 - tools/lang/go/index.md
                 - Command: tools/lang/go/go-command.md
@@ -296,6 +317,7 @@ nav:
                     - With Kafka: tools/orchestration/airflow/airflow-with-kafka.md
                 - Unittest: tools/orchestration/airflow/airflow-unittest.md
                 - CICD: tools/orchestration/airflow/airflow-cicd.md
+                - On Kubernetes: tools/orchestration/airflow/airflow-on-k8s.md
             - Dagster:
                 - tools/orchestration/dagster/index.md
                 - Dynamic Partition: tools/orchestration/dagster/dagster-dynamic-partition.md
@@ -319,6 +341,7 @@ nav:
             - Polars:
                 - tools/etl/polars/index.md
                 - Data Pipeline: tools/etl/polars/polars-data-pipeline.md
+                - SCD2 on Delta Lake: tools/etl/polars/polars-scd2-on-delta-lake.md
             - DBT:
                 - tools/etl/dbt/index.md
                 - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md
@@ -331,7 +354,6 @@ nav:
                 - tools/etl/arrow/index.md
             - Spark:
                 - tools/etl/spark/index.md
-                - UDFs: tools/etl/spark/spark-udfs.md
                 - Optimizations:
                     - tools/etl/spark/optimizations/index.md
                     - Bucketing: tools/etl/spark/spark-bucketing.md
@@ -342,6 +364,12 @@ nav:
                     - Data Skew: tools/etl/spark/optimizations/spark-data-skew.md
                     - Data Spill: tools/etl/spark/optimizations/spark-data-spill.md
                     - Shuffling: tools/etl/spark/optimizations/spark-shuffling.md
+                    - Storage: tools/etl/spark/optimizations/spark-storage.md
+                - Common:
+                    - Read JSON: tools/etl/spark/spark-read-json.md
+                    - UDFs: tools/etl/spark/spark-udfs.md
+                    - Select & SelectExpr: tools/etl/spark/pyspark/pyspark-select-and-selectexpr.md
+                    - Why SUCCESS: tools/etl/spark/spark-why-success.md
                 - API:
                     - Pyspark:
                         - Data Wrangling Functions: tools/etl/spark/pyspark/pyspark-data-wrangling-functions.md
@@ -352,7 +380,16 @@ nav:
                         - Avoid These at Any Cost: tools/etl/spark/pyspark/pyspark-avoid-these-at-any-cost.md
                 - Structured Stream:
                     - tools/etl/spark/stream/index.md
+                    - Aggregate: tools/etl/spark/stream/spark-stream-aggregate.md
+                    - Read Files: tools/etl/spark/stream/spark-stream-read-files.md
+                    - Multi Query: tools/etl/spark/stream/spark-stream-multi-query.md
+                    - ForEach Batch: tools/etl/spark/stream/spark-stream-foreach-batch.md
+                - Local: tools/etl/spark/pyspark/pyspark-local.md
                 - With Docker: tools/etl/spark/spark-with-docker.md
+                - With DataProc Serverless: tools/etl/spark/pyspark/pyspark-local-with-dataproc-serverless.md
+                - Updated:
+                    - Spark3.4:
+                        - Parameterised SQL: tools/etl/spark/updated/spark-3-4-parameterised-sql.md
             - Kafka:
                 - tools/etl/kafka/index.md
                 - Use-Cases:
@@ -364,6 +401,8 @@ nav:
                 - tools/etl/fugue/index.md
             - Sea Tunnel:
                 - tools/etl/seatunnel/index.md
+            - Flink:
+                - tools/etl/flink/index.md
         - Query:
             - DuckDB:
                 - tools/query/duckdb/index.md
@@ -380,6 +419,7 @@ nav:
                 - Deletion Vector: tools/open_table/delta_lake/delta-lake-deletion-vector.md
                 - Liquid Clustering: tools/open_table/delta_lake/delta-lake-liquid-clustering.md
                 - Partition Z-Order Cluster: tools/open_table/delta_lake/delta-lake-partition-zorder-cluster.md
+                - Universal Format: tools/open_table/delta_lake/delta-lake-universal-format.md
                 - API:
                     - Pyspark:
                         - Auto Schema Evolution: tools/open_table/delta_lake/pyspark/pyspark-delta-auto-schema-evolution.md
@@ -401,6 +441,8 @@ nav:
                 - On Mac: tools/storage/hadoop/hadoop-on-mac.md
             - LakeFS:
                 - tools/storage/lakefs/index.md
+            - MinIO:
+                - tools/storage/minio/index.md
         - CICD:
             - Jenkins:
                 - tools/cicd/jenkins/index.md
