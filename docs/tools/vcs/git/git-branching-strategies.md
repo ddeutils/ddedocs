@@ -1,5 +1,7 @@
 # Git Branching Strategies
 
+[:material-youtube: Git - Branching Strategies Explained](https://www.youtube.com/watch?v=U_IFGpJDbeU)
+
 ## The Mainline branches
 
 It's the simplest but most effective way for small teams. Because of working

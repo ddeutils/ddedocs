@@ -12,4 +12,4 @@ It is the best version control tools for any developer, you can read the
 
 ## TODO
 
-https://levelup.gitconnected.com/git-commands-i-wish-i-knew-earlier-as-a-developer-a5f9f47d5644
+[:simple-medium: Git commands I wish I knew earlier as a developer](https://levelup.gitconnected.com/git-commands-i-wish-i-knew-earlier-as-a-developer-a5f9f47d5644)

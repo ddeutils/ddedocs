@@ -1,3 +1,7 @@
+---
+icon: material/newspaper-variant-multiple
+---
+
 # Data: Change Data Capture (CDC)
 
 ![Change Data Capture](./images/data-cdc-01.png)
