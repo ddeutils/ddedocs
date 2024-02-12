@@ -2,8 +2,6 @@
 
 ## Latest Changes
 
-## 0.0.1
-
-### Initial
+## Initial
 
 * :package: init: Initialize this document project
