@@ -2,6 +2,29 @@
 
 ## Latest Changes
 
+## 20240213
+
+### :book: Documents
+
+- :pencil: summary: update home page info for reformat ref lists. (_2024-02-13_)
+
+### :black_nib: Code Changes
+
+- :seedling: conf: update config for clishelf that make commit message better. (_2024-02-13_)
+- :construction: refactored: remove local repo on pre-commit conf file. (_2024-02-13_)
+
+### :bug: Fix Bugs
+
+- :gear: fixed: fix pre-commit skip hook id on ci workflow. (_2024-02-13_)
+
+### :package: Build & Workflow
+
+- :toolbox: build: change pre-commit hook from local to remote. (_2024-02-13_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update clishelf dependency that support for hook and commit group. (_2024-02-13_)
+
 ## 20230801.1
 
 ### Features
