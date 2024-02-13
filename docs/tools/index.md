@@ -11,6 +11,7 @@
 
 * [Comparing Performance of Big Data File Formats: A Practical Guide](https://towardsdatascience.com/comparing-performance-of-big-data-file-formats-a-practical-guide-ef366561b7d2)
 * https://medium.com/@turkelturk/data-file-formats-in-data-engineering-5ba0db8c2c16
+* [Compressing Your Data: A Comparison of Popular Algorithms](https://thedatasalesguy.medium.com/compressing-your-data-a-comparison-of-popular-algorithms-7a7dc341af94)
 
 ### Ingestion
 

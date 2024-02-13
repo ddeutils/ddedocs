@@ -147,7 +147,7 @@ nav:
                         - To BigQuery: services/azure/databricks/adb-to-bigquery.md
                         - To Event Hubs: services/azure/databricks/adb-to-eventhubs.md
                 - Event Hubs:
-                    - Getting Started: services/azure/eventhubs/getting_started.md
+                    - Getting Started: services/azure/eventhubs/eventhubs-getting-started.md
                     - Producer Data: services/azure/eventhubs/eventhubs-produce-data.md
                 - Data Factory:
                     - Share IR: services/azure/data_factory/adf-ir-sharing.md

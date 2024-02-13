@@ -9,10 +9,14 @@ icon: simple/apachespark
     **Apache Spark** is a unified computing engine and a set of libraries for parallel
     data processing on computer cluster
 
+[The Essential PySpark Cheat Sheet for Success!](https://pub.towardsai.net/simplify-your-data-engineering-journey-the-essential-pyspark-cheat-sheet-for-success-69db0c38b31e)
+
 ## Architecture
 
 ![Spark Cluster Overview](./images/spark-cluster-overview.png)
 
+* [Understanding Apache Spark Architecture](https://medium.com/@shobhittulshain/understanding-spark-architecture-6003184a12ec)
+* [A Deep Dive into Apache Spark Architecture](https://medium.com/@shaloomathew/a-deep-dive-into-apache-spark-architecture-fe01723b1aa6)
 * https://medium.com/@think-data/this-level-of-detail-in-spark-is-tackled-only-by-experts-2-975cfb41af50
 * [Partitioning & Bucketing](https://blog.det.life/apache-spark-partitioning-and-bucketing-1790586e8917)
 * [How does Adaptive Query Execution fix your Spark performance issues](https://medium.com/@kerrache.massipssa/how-does-adaptive-query-execution-fix-your-spark-performance-issues-029166e772b7)
@@ -115,6 +119,10 @@ Dataframes, Datasets API but for streaming, it be Spark Structured Streaming.
 ## Execution
 
 https://blog.stackademic.com/apache-spark-101-understanding-spark-code-execution-cbff49cb85ac
+
+## Practices
+
+* https://medium.com/@uzzaman.ahmed/list/pyspark-sql-basics101-d80bd574842d
 
 ## Most Common Use Cases
 

@@ -19,6 +19,10 @@ https://korawica.github.io/ddedocs/
 I will update this project by **Weekly frequency**. (This statement warn to me
 when I come back to develop this project again :sweat_smile:)
 
+This project will keep all good information for Data Engineering role, but you will
+see that has a lot of knowledge topics do not summarize to my opinion. Because of
+shifting of the DE's technologies so fast.
+
 > **Note**:\
 > For more extension that I use for this project, able to research from
 > [MkDocs Catalogs](https://github.com/mkdocs/catalog).
