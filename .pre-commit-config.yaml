@@ -51,7 +51,7 @@ repos:
         stages: [commit]
 
 -   repo: https://github.com/korawica/clishelf
-    rev: v0.1.5.a1
+    rev: v0.1.6
     hooks:
     -   id: shelf-commit-msg
 
