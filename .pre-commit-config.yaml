@@ -87,13 +87,18 @@ repos:
 #        -   .markdown-link-check.json
 #        stages: [commit]
 
--   repo: local
+#-   repo: local
+#    hooks:
+#    -   id: commit-msg-hook
+#        name: Prepare Commit Message
+#        stages:
+#            - commit-msg
+#        types: [python]
+#        entry: venv/Scripts/shelf.exe git cm -e -l -o
+#        language: system
+#        always_run: true
+-   repo: https://github.com/korawica/clishelf
+    rev: v0.1.5.a1
     hooks:
-    -   id: commit-msg-hook
-        name: Prepare Commit Message
-        stages:
-            - commit-msg
-        types: [python]
-        entry: venv/Scripts/shelf.exe git cm -e -l -o
-        language: system
-        always_run: true
+    -   id: shelf-commit-msg
+        stages: [commit-msg]
