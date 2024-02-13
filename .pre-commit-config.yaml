@@ -3,7 +3,7 @@ default_language_version:
     python: python3.8
 
 ci:
-    skip: [commit-msg-hook]
+    skip: [shelf-commit-msg]
     autofix_commit_msg: |
         🚧 [pre-commit.ci] auto fixes from pre-commit.com hooks
     autofix_prs: true
@@ -54,6 +54,8 @@ repos:
     rev: v0.1.6
     hooks:
     -   id: shelf-commit-msg
+        stages: [commit-msg]
+
 
 #-   repo: https://github.com/pre-commit/mirrors-prettier
 #    rev: v4.0.0-alpha.8
