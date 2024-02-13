@@ -6,3 +6,7 @@
 ## Type of Data Pipelines
 
 * https://hardiks.medium.com/types-of-data-pipelines-you-need-to-look-at-efa9eaac4a79
+
+## Optimization
+
+* [How we think about Data Pipelines is changing](https://towardsdatascience.com/how-we-think-about-data-pipelines-is-changing-51c3bf6f34dc)

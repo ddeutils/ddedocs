@@ -3,16 +3,47 @@
 This project will deliver all knowledge from my experience and other sharing
 knowledge in Data Develop and Engineer field.
 
+!!! warning
+
+    This project I am working on doesn't have much proper English grammar.
+    Because I'm in the middle of trying to practice writing and reading. Please
+    understand this issue before going deeper into it.
+
+First, I will start reading the popular Data Engineer books from worldwide.
+
 * [:material-newspaper: Fundamentals of Data Engineer Book](https://blog.det.life/fundamentals-of-data-engineering-book-key-learning-points-35001380dda6)
+* [:simple-medium: Data Engineer Books](https://towardsdatascience.com/data-engineering-books-f373005d53fc)
+* [:simple-medium: 4 Top Data Engineering Books That Shaped My Career](https://medium.com/towards-data-engineering/4-top-data-engineering-books-that-shaped-my-career-472a519dc34f)
+
+When I start reading, I raise the idea about the future of this my responsibility.
+I know the Data Engineering tools will shift so fast because last three year I
+start with the map-reduce processing on HDFS but nowadays, it changes to in-memory
+processing like Impala or Spark.
+
+!!! quote
+
+    **Data Engineer** is ...
+
+So I will drop the books to my bookcase and go to my laptop and start searching
+about trend of Data Engineering.
+
 * [:simple-medium: The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
 * [:simple-medium: My Predictions for Data Engineering](https://medium.com/art-of-data-engineering/my-predictions-for-data-engineering-in-2024-0723fa7a6e04)
-* [:simple-medium: TowardDS - Data Engineering: A Formula 1-inspired Guide for Beginners](https://towardsdatascience.com/data-engineering-a-formula-1-inspired-guide-for-beginners-5511488803ee)
-* [:simple-medium: 4 Top Data Engineering Books That Shaped My Career](https://medium.com/towards-data-engineering/4-top-data-engineering-books-that-shaped-my-career-472a519dc34f)
+
+In the future on my job path, if I do not in love with communication or business
+knowledge that make me be [Lead of Data Engineer](dae-lead-data-engineer.md), I
+will go to any specialize roles on technical data tools such as,
+
+* [DataOps Engineer](dae-dataops-engineer.md)
+* [Data Platform Engineer](dae-data-platform-engineer.md)
+* [MLOps Engineer]()
 
 ## Practices
 
+### Beginner
+
+* [:simple-medium: TowardDS - Data Engineering: A Formula 1-inspired Guide for Beginners](https://towardsdatascience.com/data-engineering-a-formula-1-inspired-guide-for-beginners-5511488803ee)
 * [:simple-medium: A Guide to Data Engineering Infrastructure](https://towardsdatascience.com/a-guide-to-data-engineering-infrastructure-cb074e0d3f99)
-* [:simple-medium: Data Engineer Books](https://towardsdatascience.com/data-engineering-books-f373005d53fc)
 * [:simple-medium: Data Engineer Best Practice](https://medium.com/@matt_weingarten/data-engineering-best-practices-2a02949b99c4)
 * [:simple-medium: Data Engineering Best Practices](https://asrathore08.medium.com/data-engineering-best-practices-164c1e29969d)
 * [:simple-medium: Building the Foundation of Modern Data: A Deep Dive into Data Engineering](https://medium.com/@your_data_scientist_bestie/building-the-foundation-of-modern-data-a-deep-dive-into-data-engineering-5f12838d360c)
@@ -29,7 +60,8 @@ knowledge in Data Develop and Engineer field.
 
 ## Communities
 
-This below is the list of communities that must learn about coding and tools.
+This below is the list of communities that must learn about coding knowledge and
+Data Engineering tools.
 
 * [:simple-medium: Data Engineering](https://medium.com/tag/data-engineering)
 * [:simple-medium: ODDS Team](https://medium.com/odds-team)
