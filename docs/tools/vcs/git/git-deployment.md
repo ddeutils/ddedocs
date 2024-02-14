@@ -101,6 +101,6 @@ fi
 
 Reference: [How to setup deployment with Git](https://myifew.com/3932/how-to-set-up-deployment-with-git/)
 
-https://engineerball.com/2014/05/05/%E0%B9%83%E0%B8%8A%E0%B9%89-git-hook-%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD-deploy-code.html
+https://engineerball.com/blog/2014/05/05/%e0%b9%83%e0%b8%8a%e0%b9%89-git-hook-%e0%b9%80%e0%b8%9e%e0%b8%b7%e0%b9%88%e0%b8%ad-deploy-code.html
 
 https://www.imooh.com/git-hook-trigger-jenkins-build-job
