@@ -74,13 +74,14 @@ repos:
         minimum_pre_commit_version: 2.9.0
         exclude: ^(locale|CHANGELOG)
         stages: [commit]
-#-   repo: https://github.com/tcort/markdown-link-check
+#  - repo: https://github.com/tcort/markdown-link-check
 #    rev: v3.11.2
 #    hooks:
-#    -   id: markdown-link-check
+#      - id: markdown-link-check
 #        name: markdown-link-check
-#        files: ^README\.md$
+#        files: \.md$
 #        args:
-#        -   --config
-#        -   .markdown-link-check.json
+#          - -q
+#          - --config
+#          - .md-link-check.json
 #        stages: [commit]
