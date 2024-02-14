@@ -12,4 +12,4 @@ personal data of users, if requested).
 
 ![Data Life Cycle](./images/data-life-cycle.png)
 
-* [BlogDetLeft; CICD for Data](https://blog.det.life/ci-cd-for-data-how-to-enhance-data-quality-and-increase-data-engineering-velocity-4b1123a770cc)
+- [BlogDetLeft; CICD for Data](https://blog.det.life/ci-cd-for-data-how-to-enhance-data-quality-and-increase-data-engineering-velocity-4b1123a770cc)

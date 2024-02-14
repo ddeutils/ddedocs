@@ -30,7 +30,6 @@ git reset --hard HEAD^
 git push
 ```
 
-
 !!! note
 
     * https://stackoverflow.com/questions/50473587/revert-a-commit-on-remote-branch

@@ -9,29 +9,28 @@
 ## Setup Kafka
 
 ```yaml
-version: '3.9'
+version: "3.9"
 services:
+  zookeeper:
+    image: zookeeper
+    container_name: zookeeper
+    volumes:
+      - ./zookeeper:/data
 
-    zookeeper:
-        image: zookeeper
-        container_name: zookeeper
-        volumes:
-            - ./zookeeper:/data
-
-    kafka:
-        image: bitnami/kafka
-        container_name: kafka
-        ports:
-            - "9092:9092"
-        volumes:
-            - ./kafka:/bitnami/kafka/data
-        environment:
-            - ALLOW_PLAINTEXT_LISTENER=yes
-            - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
-            - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
-            - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
-        depends_on:
-            - zookeeper
+  kafka:
+    image: bitnami/kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    volumes:
+      - ./kafka:/bitnami/kafka/data
+    environment:
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+    depends_on:
+      - zookeeper
 ```
 
 ```shell
@@ -264,17 +263,17 @@ type CloseAccountEvent struct {
 ```yaml
 ## config.yaml
 kafka:
-    servers:
-        - localhost:9092
-    group: accountConsumer
+  servers:
+    - localhost:9092
+  group: accountConsumer
 
 db:
-    driver: mysql
-    host: localhost
-    port: 3306
-    username: root
-    password: P@ssw0rd
-    database: demo
+  driver: mysql
+  host: localhost
+  port: 3306
+  username: root
+  password: P@ssw0rd
+  database: demo
 ```
 
 - Import `events` module from local
@@ -462,7 +461,6 @@ func (obj consumerHandler) ConsumeClaim(session sarama.ConsumerGroupSession, cla
 }
 ```
 
-
 ```go
 // main.go
 package main
@@ -555,8 +553,8 @@ $ kafka-console-consumer --bootstrap-server=localhost:9092 \
 ```yaml
 ## config.yaml
 kafka:
-    servers:
-        - localhost:9092
+  servers:
+    - localhost:9092
 ```
 
 - Import `events` module from local
@@ -633,7 +631,6 @@ func (obj eventProducer) Produce(event events.Event) error {
 ```shell
 $ go get github.com/google/uuid
 ```
-
 
 ```go
 // services/account.go

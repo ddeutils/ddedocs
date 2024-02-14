@@ -32,9 +32,7 @@ username/myproject$ git revert -m 1 "<commit>"
 username/myproject$ git reset --hard HEAD^
 ```
 
-
-Reset Scenarios
----------------
+## Reset Scenarios
 
 If you have accident, like `rm -r README.md`
 
@@ -72,6 +70,7 @@ username/myproject$ git status
 >   (use "git restore --staged <file>..." to unstage)
 >         deleted:    README.md
 ```
+
 ```shell
 username/myproject$ git restore --source=HEAD --staged --worktree README.md
 username/myproject$ git status
@@ -121,6 +120,7 @@ username/myproject$ git status
 >
 >     YOUR MESSAGE
 ```
+
 ### `--hard` option
 
 ```shell
@@ -141,8 +141,7 @@ username/myproject$ git status
 
 > `git remove --cached README.md`
 
-Reset `master` Branch
----------------------
+## Reset `master` Branch
 
 ### First Method
 
@@ -197,16 +196,16 @@ username/myproject$ git push -f origin master
 
 > NOTE: This will not keep our old commits history around. But if this doesn't work, try the next method below.
 
-Git Rebase
-----------
+## Git Rebase
 
 Instead, use it for cleaning up your local commit history before merging it into a shared team branch. `git rebase` will use for
- - Change a commit's message
- - Delete/Reorder commits
- - Combine multiple commits into one
- - Edit/Split an existing commit into multiple new ones
 
-> NOTE: Do __NOT__ use Interactive Rebase on commits that you've already pushed/shared on a remote repository.
+- Change a commit's message
+- Delete/Reorder commits
+- Combine multiple commits into one
+- Edit/Split an existing commit into multiple new ones
+
+> NOTE: Do **NOT** use Interactive Rebase on commits that you've already pushed/shared on a remote repository.
 
 ```shell
 username/project$ git rebase -i HEAD~3
@@ -258,10 +257,10 @@ username/project$ git log --oneline
 
 > NOTE: If you want to `squash` all commit together, you can use `git merge --squash "<branch>"` command. (Or `git rebase -i --autosquash`)
 
-Search and Find
----------------
+## Search and Find
 
 Filtering your commit history
+
 - by date - `--before` or `--after`
 - by message - `--grep`
 - by author - `--author`
@@ -274,8 +273,7 @@ $ git log --after="2021-7-1" --before="2021-6-5"
 $ git log --grep="refactor"
 ```
 
-Git Submodules
---------------
+## Git Submodules
 
 Git Submodule help you to develop main project together with sub-project and separate the commits of sub-project from main project.
 
@@ -308,7 +306,6 @@ username/myproject$ cat .gitmodules
 
 > NOTE: When you already push, you will see submodule in main project repository and the submodule does not keep the source code but it keep hash commit number of submodule.
 
-
 ### Clone Remote Repository which included submodules
 
 ```shell
@@ -335,6 +332,7 @@ username/myproject/sub-project$ git merge origin/master
 ```
 
 > NOTE: `git submodule update --remote` will auto fetch and merge with track branch. If you do not set trank, you will use
+>
 > ```shell
 > username/myproject$ git config -f .gitmodules submodule.sub-project.branch develop
 > username/myproject$ cat .gitmodules
@@ -343,6 +341,7 @@ username/myproject/sub-project$ git merge origin/master
 >  url = https://github.com/username/sub-project.git
 >  branch = develop
 > ```
+>
 > Optional, `git submodule update --remote --merge` or `git submodule update --remote --rebase`
 
 ### Push updated submodule to Remote
@@ -378,8 +377,7 @@ username/myproject$ git commit -am "REMOVED submodule"
 username/myproject$ git push origin master
 ```
 
-Cherry-Picking
---------------
+## Cherry-Picking
 
 If you want to take some commit (such as bug fix commit) from another branch to your branch (Allows you to select individual commits to be integrated).
 
@@ -389,8 +387,7 @@ username/myproject$ git cherry-pick "<commit>"
 
 > NOTE: git does not that delete commit from source branch and in your branch will be exists that commit in new id.
 
-The Reflog
-----------
+## The Reflog
 
 A protocol of HEAD Pointer movements. Reflog is a mechanism to record when the tip of branches are updated. This command is to manage the information recorded in it.
 
@@ -409,8 +406,7 @@ username/myproject$ git reflog --all
 > :
 ```
 
-Git Blame
----------
+## Git Blame
 
 ใช้ดูว่ามีใครที่เข้ามาเปลี่ยนแปลง อะไร และ เมื่อใด ใน my_file
 
@@ -422,8 +418,7 @@ username/myproject$ git blame config.yaml
 > 81529d32 (korawica    2022-03-07 11:19:06 +0700 4)   production: "/prod"
 ```
 
-Git Bisect
-----------
+## Git Bisect
 
 ### Start bisect
 
@@ -467,20 +462,20 @@ username/myproject$ git bisect reset
 
 > NOTE: `git bisect log` will show the log of bisect, should use this command before reset.
 
-HOOKS
------
+## HOOKS
 
 `git hooks` ชุดของคำสั่งที่ Git จะเรียก ก่อนหรือหลังคำสั่งหลักใดๆ เช่น commit, push
 
 Git hooks เป็นสิ่งที่ติดตัวมากับ Git อยู่แล้วไม่ต้องไปดาวโหลดอะไรมาลงเพิ่มและ Git hooks นั้นเป็นฟีเจอร์ที่จำทำงานแบบ local หรือเฉพาะเครื่องของคนๆนั้นเท่านั้น
 
 > NOTE:
+>
 > ```shell
 > $ git config --global core.hooksPath /path/to/my/centralized/hooks
 > $ git config --local core.hooksPath /path/to/my/centralized/hooks
 > ```
 
- Let’s have a look what kind of local hooks we have in our repository’s .git/hooks folder :
+Let’s have a look what kind of local hooks we have in our repository’s .git/hooks folder :
 ├── applypatch-msg.sample
 ├── commit-msg.sample
 ├── post-update.sample
@@ -489,7 +484,6 @@ Git hooks เป็นสิ่งที่ติดตัวมากับ Git
 ├── prepare-commit-msg.sample
 ├── pre-rebase.sample
 └── update.sample
-
 
 ### Post Receive
 

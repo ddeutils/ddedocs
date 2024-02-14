@@ -9,7 +9,7 @@
 ### Fixed Depth Positional Hierarchies
 
 A fixed depth hierarchy is a series of many-to-one relationships, such as product
-to brand to category to department.  When a fixed depth hierarchy is defined and
+to brand to category to department. When a fixed depth hierarchy is defined and
 the hierarchy levels have agreed upon names, the hierarchy levels should appear
 as separate positional attributes in a dimension table. A fixed depth hierarchy
 is by far the easiest to understand and navigate as long as the above criteria are met.
@@ -26,7 +26,6 @@ levels to six levels. Rather than using the complex machinery for unpredictably
 variable hierarchies, you can force-fit slightly ragged hierarchies into a fixed
 depth positional design with separate dimension attributes for the maximum number
 of levels, and then populate the attribute value based on rules from the business.
-
 
 ## References
 

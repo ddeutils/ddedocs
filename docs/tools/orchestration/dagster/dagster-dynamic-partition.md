@@ -2,4 +2,4 @@
 
 ## References
 
-* https://dagster.io/blog/dynamic-partitioning
+- https://dagster.io/blog/dynamic-partitioning

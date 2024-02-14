@@ -2,4 +2,4 @@
 
 ## References
 
-* https://www.montecarlodata.com/blog-data-quality-metrics/
+- https://www.montecarlodata.com/blog-data-quality-metrics/

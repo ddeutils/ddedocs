@@ -13,4 +13,4 @@ FROM ...
 
 ## References
 
-* [Microsoft: Data Types - Datetimeoffset](https://learn.microsoft.com/en-us/sql/t-sql/data-types/datetimeoffset-transact-sql?view=sql-server-ver16)
+- [Microsoft: Data Types - Datetimeoffset](https://learn.microsoft.com/en-us/sql/t-sql/data-types/datetimeoffset-transact-sql?view=sql-server-ver16)

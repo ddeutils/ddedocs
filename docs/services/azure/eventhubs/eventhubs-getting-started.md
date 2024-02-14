@@ -107,6 +107,6 @@
 
 ## References
 
-* [:material-microsoft: Azure Event Hubs Features](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features)
-* [:simple-pypi: PyPI: `azure-eventhub`](https://pypi.org/project/azure-eventhub/)
-* [:material-stack-overflow: Set startingPosition in Event Hub on Databricks](https://stackoverflow.com/questions/64028177/set-startingposition-in-event-hub-on-databricks)
+- [:material-microsoft: Azure Event Hubs Features](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features)
+- [:simple-pypi: PyPI: `azure-eventhub`](https://pypi.org/project/azure-eventhub/)
+- [:material-stack-overflow: Set startingPosition in Event Hub on Databricks](https://stackoverflow.com/questions/64028177/set-startingposition-in-event-hub-on-databricks)

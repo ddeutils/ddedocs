@@ -18,28 +18,18 @@ $ git commit -am "<type>(<scope>): <short-summary-in-present-tense>
 
 `<short-summary>`
 
-:   - use the imperative, present tense: "change" not "changed" nor "changes"
-    - don't capitalize first letter
-    - no dot (.) at the end
+: - use the imperative, present tense: "change" not "changed" nor "changes" - don't capitalize first letter - no dot (.) at the end
 
 `<type>`
 
-:   - `feat`: Features : A new feature.
-    - `fix`: Bugfixes : A bug fix.
-    - `docs`: Documents : Documentation changes.
-    - `style`: Style : Changes that do not affect the meaning of the code
-      (white-space, formatting, missing semi-colons, etc).
-    - `refactor`: Refactor : A code change that neither fixes a bug nor adds a feature.
-    - `perf`: Improved performance : A code change that improves performance.
-    - `test`: Testing : Changes to the test framework.
-    - `build`: Build : Changes to the build process or tools.
-    - `dep`: Dependencies and Removals : Changes or update dependencies
+: - `feat`: Features : A new feature. - `fix`: Bugfixes : A bug fix. - `docs`: Documents : Documentation changes. - `style`: Style : Changes that do not affect the meaning of the code
+(white-space, formatting, missing semi-colons, etc). - `refactor`: Refactor : A code change that neither fixes a bug nor adds a feature. - `perf`: Improved performance : A code change that improves performance. - `test`: Testing : Changes to the test framework. - `build`: Build : Changes to the build process or tools. - `dep`: Dependencies and Removals : Changes or update dependencies
 
 `<scope>`
 
-:   An optional keyword that provides context for where the change was made.
-    It can be anything relevant to your package or development workflow
-    (e.g., it could be the module or function name affected by the change).
+: An optional keyword that provides context for where the change was made.
+It can be anything relevant to your package or development workflow
+(e.g., it could be the module or function name affected by the change).
 
     Different text in the commit message will trigger PSR to make different
     kinds of releases:
@@ -66,14 +56,14 @@ $ git commit -am "<type>(<scope>): <short-summary-in-present-tense>
 
 `<body>`
 
-:   Just as in the subject, use the imperative, present tense: "change" not
-    "changed" nor "changes". The body should include the motivation for the
-    change and contrast this with previous behavior.
+: Just as in the subject, use the imperative, present tense: "change" not
+"changed" nor "changes". The body should include the motivation for the
+change and contrast this with previous behavior.
 
 `<footer>`
 
-:   The footer should contain any information about **Breaking Changes** and is
-    also the place to [reference GitHub issues that this commit closes](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
+: The footer should contain any information about **Breaking Changes** and is
+also the place to [reference GitHub issues that this commit closes](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
 
     **Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines.
 
@@ -127,55 +117,53 @@ sh change-log-builder.sh > CHANGELOG.md
 ```markdown title="CHANGELOG.md"
 ## v1.1.0 (2017-08-29)
 
-* Adds IPv6 support [View](http...)
-* Adds TreeMaker class and its test. [View](http...)
+- Adds IPv6 support [View](http...)
+- Adds TreeMaker class and its test. [View](http...)
 
 ## v1.0.9 (2017-08-22)
 
-* Updates composer.json.lock [View](http...)
+- Updates composer.json.lock [View](http...)
 
 ## v1.0.8 (2017-08-22)
 
-* Adds S3Gateway as substitute class [View](http...)
-* Remove files no more used [View](http...)
+- Adds S3Gateway as substitute class [View](http...)
+- Remove files no more used [View](http...)
 ```
 
 In the `CHANGELOG.md` file that will group by typing,
 
 ```markdown title="CHANGELOG.md"
-Version 0.1.0
----
+## Version 0.1.0
 
 ...
 
 **Features**
 
-  * `#2094 <https://github.com/<organize>/<project>/pull/2094>`_
-    Add ``response()`` method for closing a stream in a handler
-  * `#2097 <https://github.com/<organize>/<project>/pull/2097>`_
-    Allow case-insensitive HTTP Upgrade header
-  * `#2104 <https://github.com/<organize>/<project>/pull/2104>`_
-    Explicit usage of CIMultiDict getters
-  * `#2109 <https://github.com/<organize>/<project>/pull/2109>`_
-    Consistent use of error loggers
-  * `#2114 <https://github.com/<organize>/<project>/pull/2114>`_
-    New ``client_ip`` access of connection info instance
-  * `#2133 <https://github.com/<organize>/<project>/pull/2133>`_
-    Implement new version of AST router
+- `#2094 <https://github.com/<organize>/<project>/pull/2094>`\_
+  Add `response()` method for closing a stream in a handler
+- `#2097 <https://github.com/<organize>/<project>/pull/2097>`\_
+  Allow case-insensitive HTTP Upgrade header
+- `#2104 <https://github.com/<organize>/<project>/pull/2104>`\_
+  Explicit usage of CIMultiDict getters
+- `#2109 <https://github.com/<organize>/<project>/pull/2109>`\_
+  Consistent use of error loggers
+- `#2114 <https://github.com/<organize>/<project>/pull/2114>`\_
+  New `client_ip` access of connection info instance
+- `#2133 <https://github.com/<organize>/<project>/pull/2133>`\_
+  Implement new version of AST router
 
-      * Proper differentiation between ``alpha`` and ``string`` param types
-      * Adds a ``slug`` param type, example: ``<foo:slug>``
+  - Proper differentiation between `alpha` and `string` param types
+  - Adds a `slug` param type, example: `<foo:slug>`
 
 **Bugfixes**
 
-  * `#2119 <https://github.com/<organize>/<project>/pull/2119>`_
-    Fix classes on instantiation for ``Config``
+- `#2119 <https://github.com/<organize>/<project>/pull/2119>`\_
+  Fix classes on instantiation for `Config`
 
 ...
 ```
 
 ## References
-
 
 - [Angular Developers Commit](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
 - [Python Package: 07 Releasing Versioning](https://py-pkgs.org/07-releasing-versioning.html)

@@ -557,20 +557,20 @@ This can be tricky and depends on more circumstances. It is important to conside
 In practice, the situation is more complex and one has to face the following challenges:
 
 - the table is continuously appended and its size grows in time and so does the
-size of the buckets. In some cases, this may still be fine if the dataset is also
-partitioned by some date dimension (year and month for example) and the buckets
-are distributed uniformly across these partitions. If the typical query asks always
-only for recent data, for example, the last 6 months, we can design the buckets
-so the reasonable size corresponds to the 6 months of data. The total size of
-the bucket will grow, but it doesn’t matter, because we will never ask for the
-entire bucket.
+  size of the buckets. In some cases, this may still be fine if the dataset is also
+  partitioned by some date dimension (year and month for example) and the buckets
+  are distributed uniformly across these partitions. If the typical query asks always
+  only for recent data, for example, the last 6 months, we can design the buckets
+  so the reasonable size corresponds to the 6 months of data. The total size of
+  the bucket will grow, but it doesn’t matter, because we will never ask for the
+  entire bucket.
 
 - the data is skewed — this happens if there is a specific value of the bucketing
-key for which there are many more records than for other values of the key. For
-example, if the table is bucketed by user_id, there might be a specific user that
-has many more interactions/activities/purchases or whatever the dataset represents
-and this will lead to data skew — the task that will process this bigger bucket
-will take longer than the other.
+  key for which there are many more records than for other values of the key. For
+  example, if the table is bucketed by user_id, there might be a specific user that
+  has many more interactions/activities/purchases or whatever the dataset represents
+  and this will lead to data skew — the task that will process this bigger bucket
+  will take longer than the other.
 
 ## Evolution of the bucketing feature
 

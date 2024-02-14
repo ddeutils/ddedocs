@@ -6,4 +6,4 @@ icon: simple/jenkins
 
 ## Examples
 
-* [The Top 10 Jenkins Pipelines Examples](https://medium.com/cloud-believers/the-top-10-jenkins-pipelines-examples-843942ee9ff8)
+- [The Top 10 Jenkins Pipelines Examples](https://medium.com/cloud-believers/the-top-10-jenkins-pipelines-examples-843942ee9ff8)

@@ -9,7 +9,7 @@ rather to adjust the size of your pool gradually as you run a workload.
     compute nodes in the pool for the next interval of processing.
 
 Since we only evaluate the formula every ~15m it is not like your pool is going
-to immediately respond to new task pressure if left to its own devices.  On the
+to immediately respond to new task pressure if left to its own devices. On the
 other hand if you are running a long-lived pool, and you want to respond to
 changes over the course of a day (for example day/night discrepancies in task
 load) then autoscale is a good fit :partying_face:.

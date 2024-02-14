@@ -13,9 +13,9 @@ into the warehouse.
 
 There are three main types of data warehouses:
 
-* [Enterprise Data Warehouse (EDW)](#enterprise-data-warehouse)
-* [Operational Data Store (ODS)](#operational-data-store)
-* [Data Mart (DM)](#data-mart)
+- [Enterprise Data Warehouse (EDW)](#enterprise-data-warehouse)
+- [Operational Data Store (ODS)](#operational-data-store)
+- [Data Mart (DM)](#data-mart)
 
 Overall, the type of data warehouse an organization chooses depends on its specific
 needs and requirements. Some organizations may require a centralized, enterprise-wide
@@ -53,9 +53,9 @@ in one way or another, we will focus on the most essential ones. Without diving
 into too much technical detail, the whole data pipeline can be divided into three
 layers:
 
-* Raw data layer (data sources)
-* Warehouse and its ecosystem
-* User interface (analytical tools)
+- Raw data layer (data sources)
+- Warehouse and its ecosystem
+- User interface (analytical tools)
 
 The tooling that concerns data Extraction, Transformation, and Loading into a warehouse
 is a separate category of tools known as ETL. Also, under the ETL umbrella, data integration
@@ -81,9 +81,9 @@ One-tier architecture for EDW means that you have a database directly connected
 with the analytical interfaces where the end user can make queries. Setting the
 direct connection between an EDW and analytical tools brings several challenges:
 
-* Traditionally, you can consider your storage a warehouse starting from 100GB of data. Working with it directly may result in messy query results, as well as low processing speed.
-* Querying data right from the DW may require precise input so that the system will be able to filter out non-required data. Which makes dealing with presentation tools a little difficult.
-* Limited flexibility/analytical capabilities exist.
+- Traditionally, you can consider your storage a warehouse starting from 100GB of data. Working with it directly may result in messy query results, as well as low processing speed.
+- Querying data right from the DW may require precise input so that the system will be able to filter out non-required data. Which makes dealing with presentation tools a little difficult.
+- Limited flexibility/analytical capabilities exist.
 
 Additionally, the one-tier architecture sets some limits to reporting complexity.
 Such an approach is rarely used for large-scale data platforms, because of its
@@ -204,23 +204,23 @@ data warehouse may also face limitations in scalability, flexibility, and innova
 
 The advantages are as follows:
 
-* **Control**: The organization chooses the kind of hardware and software that will
+- **Control**: The organization chooses the kind of hardware and software that will
   be used to set up the Data Warehouse.
 
-* **Speed**: The Data Warehouse is On-premise and will hence have little to no
+- **Speed**: The Data Warehouse is On-premise and will hence have little to no
   network latency.
 
-* **Security**: Only someone who is connected to the organization's network
+- **Security**: Only someone who is connected to the organization's network
   can access the Data Warehouse.
 
 The disadvantage are as follows:
 
-* **High Cost of Investment**: The Data Warehouse would require high investment
+- **High Cost of Investment**: The Data Warehouse would require high investment
   to purchase and set up the initial software and hardware. Even then, as the
   volume of data with the organization increases, more hardware will have to
   be purchased to accommodate that data.
 
-* **Inability to Scale Resources**: On-premise Data Warehouses cannot scale resources
+- **Inability to Scale Resources**: On-premise Data Warehouses cannot scale resources
   up or down as per the requirements due to limited hardware.
 
 !!! note
@@ -256,31 +256,31 @@ such as machine learning, data lake, and streaming analytics.
 
 The advantages are as follows:
 
-* **Low Cost of Investment**: Organizations do not have to invest large amounts of
+- **Low Cost of Investment**: Organizations do not have to invest large amounts of
   money to purchase and set up hardware and software requirements of the Data Warehouse.
 
-* **Scalability**: Storage and Compute capabilities of your Data Warehouse can
+- **Scalability**: Storage and Compute capabilities of your Data Warehouse can
   scale up or down as per your business and data requirements automatically
   and hence, you only have to pay for what you use.
 
 The disadvantages are as follows:
 
-* **Security**: Since the Cloud-based Data Warehouses store data of many organizations
+- **Security**: Since the Cloud-based Data Warehouses store data of many organizations
   that can be accessed over the Internet, businesses feel some level of concern
   over the storage of confidential data.
 
-* **Accessibility**: Cloud-based Data Warehouses cannot be accessed in-case there
+- **Accessibility**: Cloud-based Data Warehouses cannot be accessed in-case there
   is no internet access.
 
-* **Latency**: Depending on where the Data Warehouse is located, businesses might
+- **Latency**: Depending on where the Data Warehouse is located, businesses might
   notice some network latency while accessing their data.
 
 **Examples**:
 
-* Amazon Redshift
-* Snowflake
-* Google BigQuery
-* Azure Synapse Analytic
+- Amazon Redshift
+- Snowflake
+- Google BigQuery
+- Azure Synapse Analytic
 
 !!! tip
 
@@ -302,20 +302,20 @@ is easily manageable as it is.
 
 However, such an approach has many drawbacks:
 
-* Multiple databases will require constant software and hardware maintenance and
+- Multiple databases will require constant software and hardware maintenance and
   costs.
 
-* The data stored in a virtual DW still requires transformation software to make
+- The data stored in a virtual DW still requires transformation software to make
   it digestible for the end users and reporting tools.
 
-* Complex data queries may take too much time, as the required pieces of data may
+- Complex data queries may take too much time, as the required pieces of data may
   be placed in two separate databases.
 
 **Example**:
 
-* Denodo
-* TIBCO Data Virtualization
-* Actifio.
+- Denodo
+- TIBCO Data Virtualization
+- Actifio.
 
 !!! tip
 
@@ -383,27 +383,27 @@ it should comply with the below principles:
 It is a beneficial database in comparison to a data warehouse system as a whole.
 Below are the justification for its advantageous nature:
 
-* An ODS provides access to only the current, finely crumbled, non-aggregated,
+- An ODS provides access to only the current, finely crumbled, non-aggregated,
   less complicated data, which can be queried in a well-fitted approach without
   using the operational systems.
 
-* When the Reporting & Analysis tools need data that are closer to real-time operations,
+- When the Reporting & Analysis tools need data that are closer to real-time operations,
   it can be queried from the Operational Data Store, as and when it is received
   from the respective source systems, instead of opting for more prolonging conversion
   and loading operations from the other database sources in the data warehouse systems.
 
-* ODS is a secure option as it does not contain all the historical data and operations,
+- ODS is a secure option as it does not contain all the historical data and operations,
   which makes it resilient for any cyber-attacks or hacking of data privacy.
 
-* It is a practically feasible structural design option when bearing in mind the
+- It is a practically feasible structural design option when bearing in mind the
   complex requirements provided by the business, in order to generate input for
   analysis and reporting processes that leads to business decision-making.
 
-* ODS facilitates considerably less total time for turnaround when in trouble,
+- ODS facilitates considerably less total time for turnaround when in trouble,
   like the environment failure or when a database needs a restart, which implicates
   less stress on the business or the stack holders of the application.
 
-* In order to fetch data from an ODS, querying need not be complex or with multi-level
+- In order to fetch data from an ODS, querying need not be complex or with multi-level
   joins and conditional Simple queries will be sufficient as it holds moderately
   detailed operational data.
 
@@ -492,34 +492,34 @@ that have multiple databases.
 
 1. **Designing**
 
-    This will be the first step in the implementation where all the required tasks
-    and sources identified to gather technical and business information. Later the
-    logical plan is implemented and upon review, this will be converted to a physical
-    plan. Also, the logical and physical structure of the data is decided here like
-    how to partition the data and field of partition like date or any other file.
+   This will be the first step in the implementation where all the required tasks
+   and sources identified to gather technical and business information. Later the
+   logical plan is implemented and upon review, this will be converted to a physical
+   plan. Also, the logical and physical structure of the data is decided here like
+   how to partition the data and field of partition like date or any other file.
 
 2. **Construction**
 
-    This is the second phase of implementation where physical databases were generated
-    with the help of RDBMS, which was determined as part of the design process and
-    logical structures. All the objects like schema, indexes, tables, views, etc
-    are created.
+   This is the second phase of implementation where physical databases were generated
+   with the help of RDBMS, which was determined as part of the design process and
+   logical structures. All the objects like schema, indexes, tables, views, etc
+   are created.
 
 3. **Populating**
 
-    This is the third phase and here data is populated in it upon sourcing the data.
-    All the required transformations are implemented prior to populating the data on it.
+   This is the third phase and here data is populated in it upon sourcing the data.
+   All the required transformations are implemented prior to populating the data on it.
 
 4. **Accessing**
 
-    This is the next step of implementation where we will use the populated data
-    to query upon for creating reports. End-user use this step to understand the data using queries.
+   This is the next step of implementation where we will use the populated data
+   to query upon for creating reports. End-user use this step to understand the data using queries.
 
 5. **Managing**
 
-    This is the last stage of implementation of the data mart and here various tasks
-    such as access management, system optimization, and tuning, managing and adding fresh
-    data to the data mart and planing recovery scenarios to handle any failure cases are taken care of.
+   This is the last stage of implementation of the data mart and here various tasks
+   such as access management, system optimization, and tuning, managing and adding fresh
+   data to the data mart and planing recovery scenarios to handle any failure cases are taken care of.
 
 #### Benefits
 
@@ -542,19 +542,19 @@ that have multiple databases.
 
 ### Summary
 
-|                      | EDW                                                     | ODS                                                  | DM                                                              |
-|----------------------|---------------------------------------------------------|------------------------------------------------------|-----------------------------------------------------------------|
-| Purpose              | Serves the entire organization                          | Supports operational reporting                       | Serves a specific business unit/department                      |
-| Data Integration     | Integrates data from multiple sources                   | Integrates real-time data from transactional systems | Integrates data from a specific subject area                    |
-| Data Model           | Top-down approach to design                             | Bottom-up approach to design                         | Designed based on specific business requirements                |
-| Complexity           | More complex and time-consuming to design and implement | Less complex and quicker to implement                | Less complex and quicker to implement                           |
-| Query and Analysis   | Supports complex queries and analytics                  | Supports operational reporting and simple analysis   | Optimized for querying and reporting on a specific subject area |
-| Data Volume          | Large volume of historical data                         | Real-time or near-real-time data                     | Smaller volume of data                                          |
-| Users                | Business analysts, executives, data scientists          | Operational staff, business analysts                 | Business analysts, departmental staff                           |
-| Cost                 | Higher cost due to complexity and scale                 | Lower cost due to simpler design and implementation  | Lower cost due to simpler design and implementation             |
+|                    | EDW                                                     | ODS                                                  | DM                                                              |
+| ------------------ | ------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- |
+| Purpose            | Serves the entire organization                          | Supports operational reporting                       | Serves a specific business unit/department                      |
+| Data Integration   | Integrates data from multiple sources                   | Integrates real-time data from transactional systems | Integrates data from a specific subject area                    |
+| Data Model         | Top-down approach to design                             | Bottom-up approach to design                         | Designed based on specific business requirements                |
+| Complexity         | More complex and time-consuming to design and implement | Less complex and quicker to implement                | Less complex and quicker to implement                           |
+| Query and Analysis | Supports complex queries and analytics                  | Supports operational reporting and simple analysis   | Optimized for querying and reporting on a specific subject area |
+| Data Volume        | Large volume of historical data                         | Real-time or near-real-time data                     | Smaller volume of data                                          |
+| Users              | Business analysts, executives, data scientists          | Operational staff, business analysts                 | Business analysts, departmental staff                           |
+| Cost               | Higher cost due to complexity and scale                 | Lower cost due to simpler design and implementation  | Lower cost due to simpler design and implementation             |
 
 | Criteria          | EDW                                                     | ODS                                                      | DM                                                     |
-|-------------------|---------------------------------------------------------|----------------------------------------------------------|--------------------------------------------------------|
+| ----------------- | ------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------ |
 | Scope             | Enterprise-wide                                         | Operational                                              | Departmental or functional                             |
 | Data sources      | Multiple internal and external sources                  | Multiple operational sources                             | EDW, ODS, or other sources                             |
 | Data integration  | High degree of integration and standardization          | Moderate degree of integration and standardization       | Low degree of integration and standardization          |
@@ -656,13 +656,13 @@ and dashboards based on the data in the data warehouse.
 
 Below are the few commonly used Top Tier tools.
 
-* IBM Cognos
-* Microsoft BI Platform
-* SAP Business Objects Web
-* Pentaho
-* Crystal Reports
-* SAP BW
-* SAS Business Intelligence
+- IBM Cognos
+- Microsoft BI Platform
+- SAP Business Objects Web
+- Pentaho
+- Crystal Reports
+- SAP BW
+- SAS Business Intelligence
 
 In addition to the three-tier architecture, some data warehouse architectures also
 include a metadata layer, which provides information about the data in the data
@@ -751,17 +751,17 @@ data warehouse.
 
 **Differences between the three designs**:
 
-* **Approach**: Kimball is bottom-up, Inmon is top-down, and Data Vault is a hybrid
+- **Approach**: Kimball is bottom-up, Inmon is top-down, and Data Vault is a hybrid
   approach.
 
-* **Schema**: Kimball uses a star or snowflake schema, Inmon uses a 3NF schema,
+- **Schema**: Kimball uses a star or snowflake schema, Inmon uses a 3NF schema,
   and Data Vault uses a hub-and-spoke schema.
 
-* **Focus**: Kimball focuses on the business process or subject area, Inmon focuses
+- **Focus**: Kimball focuses on the business process or subject area, Inmon focuses
   on the data, and Data Vault focuses on the relationships between the data.
-* **Flexibility**: Kimball is known for its flexibility, Inmon is known for its
+- **Flexibility**: Kimball is known for its flexibility, Inmon is known for its
   consistency, and Data Vault is known for its ability to handle complex data relationships.
-* **Complexity**: Kimball is relatively simple, Inmon is more complex, and
+- **Complexity**: Kimball is relatively simple, Inmon is more complex, and
   Data Vault is the most complex of the three methodologies.
 
 ### Summary
@@ -775,13 +775,12 @@ model may be a good choice for organizations that need a flexible and scalable
 data warehouse that can accommodate changing business requirements over time.
 
 | Design Method | 3NF Model (Inmon)                                                                                                                        | Dimensional Model (Kimball)                                                                                                                 | Data Vault 2.0 Model                                                                                                                                       |
-|---------------|------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Description   | Top-down design approach that emphasizes a comprehensive enterprise data model                                                           | Bottom-up design approach that emphasizes simplicity and ease of use                                                                        | Hybrid design approach that combines elements of the Inmon and Kimball models                                                                              |
 | Strengths     | Supports complex business processes, supports enterprise-wide integration, allows for data reuse                                         | Supports ad-hoc querying and analysis, easy to understand and use, can be quickly implemented                                               | Supports flexibility, scalability, and agility, accommodates changing business requirements, allows for data reuse                                         |
 | Weaknesses    | Can be time-consuming to design and build, may not be well-suited for ad-hoc querying and analysis                                       | May not be well-suited for complex business processes or enterprise-wide integration, may not support as much data reuse as the Inmon model | Can be more complex to design and build than the Inmon or Kimball models, may not be as well-suited for smaller organizations or simple business processes |
 | Focus         | Enterprise-wide integration                                                                                                              | Ad-hoc querying and analysis                                                                                                                | Ad-hoc querying and analysis                                                                                                                               |
 | Advantages    | Comprehensive data model supports complex business processes; Data is normalized, reducing data redundancy and ensuring data consistency | Easy to understand and use for ad-hoc querying and analysis; Denormalized data model optimized for querying and analysis                    | Separates business entities and relationships into three types of tables, providing flexibility and scalability; Supports complex and varied data sources  |
-
 
 As a Data Engineer, the choice of design method will depend on the specific needs
 and circumstances of your organization. If you work in a large organization with
@@ -794,9 +793,9 @@ the Data Vault 2.0 model may be the best option.
 
 ## References
 
-* [Guru99: Data Warehousing](https://www.guru99.com/data-warehousing.html)
-* [Guru99: Data Warehouse Architecture](https://www.guru99.com/data-warehouse-architecture.html#8)
-* [IBM: Data Warehouse](https://www.ibm.com/topics/data-warehouse/)
-* [A Complete Guide to Data Warehouse in 2022](https://www.analyticsvidhya.com/blog/2022/06/a-complete-guide-to-data-warehousing-in-2022/)
-* [CodingNinjas: Inmon vs Kimball Approaches in DWH](https://www.codingninjas.com/studio/library/inmon-vs-kimball-approach-in-data-warehousing)
-* [Nearshore: Data Warehouse Architecture](https://www.nearshore-it.eu/articles/technologies/data-warehouse-architecture/)
+- [Guru99: Data Warehousing](https://www.guru99.com/data-warehousing.html)
+- [Guru99: Data Warehouse Architecture](https://www.guru99.com/data-warehouse-architecture.html#8)
+- [IBM: Data Warehouse](https://www.ibm.com/topics/data-warehouse/)
+- [A Complete Guide to Data Warehouse in 2022](https://www.analyticsvidhya.com/blog/2022/06/a-complete-guide-to-data-warehousing-in-2022/)
+- [CodingNinjas: Inmon vs Kimball Approaches in DWH](https://www.codingninjas.com/studio/library/inmon-vs-kimball-approach-in-data-warehousing)
+- [Nearshore: Data Warehouse Architecture](https://www.nearshore-it.eu/articles/technologies/data-warehouse-architecture/)

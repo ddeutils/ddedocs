@@ -6,17 +6,17 @@
 
 To register your application and create your service principal:
 
-* Go to `Azure Active Directory` :octicons-arrow-right-24: `App registrations`
+- Go to `Azure Active Directory` :octicons-arrow-right-24: `App registrations`
   :octicons-arrow-right-24: `New registration`
-* Add the information of this app like `name` is `cnct-adb-dev` (The name of app
+- Add the information of this app like `name` is `cnct-adb-dev` (The name of app
   should be formatted like `{app}-{resource-shortname}-{environment}`)
-* Click register for create
+- Click register for create
 
 You will then be required to generate a secret:
 
-* Go to `App registrations` :octicons-arrow-right-24: `Certificates&secrets`
+- Go to `App registrations` :octicons-arrow-right-24: `Certificates&secrets`
   :octicons-arrow-right-24: `New Client Secret`
-* Save this value to `Azure Key Vaults`
+- Save this value to `Azure Key Vaults`
 
 !!! note
 
@@ -69,16 +69,16 @@ To connect to `Azure SQL`, you will need to install the [SQL Spark Connector](ht
 and the [Microsoft Azure Active Directory Authentication Library](https://pypi.org/project/adal/)
 (ADAL) for Python code.
 
-* Go to your cluster in Databricks and Install necessary packages:
+- Go to your cluster in Databricks and Install necessary packages:
 
-    * **Maven**: `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha`
-    * **PYPI**: `adal`
+  - **Maven**: `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha`
+  - **PYPI**: `adal`
 
-* Also, if you haven’t already, [Create a Secret Scope](https://learn.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes)
+- Also, if you haven’t already, [Create a Secret Scope](https://learn.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes)
   to your `Azure Key Vault` where your `Client ID`, `Secret`, and `Tenant ID` have
   been generated.
 
-* Get `Access Token` from Service Principle authentication request
+- Get `Access Token` from Service Principle authentication request
 
   ```python
   import adal
@@ -298,8 +298,8 @@ the included driver for connecting to SQL server.
 
 **References**:
 
-* [Databricks: External Data - SQL Server](https://docs.databricks.com/en/external-data/sql-server.html)
-* [Apache Spark: SQL Data Sources - JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
+- [Databricks: External Data - SQL Server](https://docs.databricks.com/en/external-data/sql-server.html)
+- [Apache Spark: SQL Data Sources - JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
 
 ## SQL Authentication
 
@@ -358,8 +358,8 @@ conn = pyodbc.connect(
 
 **Reference**:
 
-* [StackOverFlow: Using PyODBC in Azure Databricks for Connect to SQL Server](https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server)
-* [Microsoft: SQL ODBC - Using Azure AD](https://learn.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory?view=sql-server-ver16)
+- [StackOverFlow: Using PyODBC in Azure Databricks for Connect to SQL Server](https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server)
+- [Microsoft: SQL ODBC - Using Azure AD](https://learn.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory?view=sql-server-ver16)
 
 #### Method 02: JDBC Connector
 
@@ -396,7 +396,7 @@ conn = pyodbc.connect(
 
 ## References
 
-* [TheDataSwamp: Databricks](https://www.thedataswamp.com/blog/databricks-connect-to-azure-sql-with-service-principal)
-* [Databricks: External Data - SQL Server](https://docs.databricks.com/en/external-data/sql-server.html)
-* [Microsoft](https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver16)
-* [Microsoft JDBC Driver for SQL Server](https://learn.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16)
+- [TheDataSwamp: Databricks](https://www.thedataswamp.com/blog/databricks-connect-to-azure-sql-with-service-principal)
+- [Databricks: External Data - SQL Server](https://docs.databricks.com/en/external-data/sql-server.html)
+- [Microsoft](https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver16)
+- [Microsoft JDBC Driver for SQL Server](https://learn.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16)

@@ -31,7 +31,6 @@
     RUN pip install --no-cache /wheels/*
     ```
 
-
 ## References
 
-* [TestDriven: Tips - Docker multi-stage builds](https://testdriven.io/tips/6ef63d0e-f3b6-41f3-8127-ca5f0a55c43f/)
+- [TestDriven: Tips - Docker multi-stage builds](https://testdriven.io/tips/6ef63d0e-f3b6-41f3-8127-ca5f0a55c43f/)

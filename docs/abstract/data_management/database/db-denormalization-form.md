@@ -3,10 +3,10 @@
 De-normalization is an optimization technique to make our database respond faster
 to queries by reducing the number of joins needed to satisfy user needs.
 
-* In de-normalization, we mainly aim to reduce the number of tables that are needed
+- In de-normalization, we mainly aim to reduce the number of tables that are needed
   by re-joining these tables together and add redundant data.
 
-* De-normalization is commonly used with read-intensive, low number of updates and
+- De-normalization is commonly used with read-intensive, low number of updates and
   high number of read queries, systems such as Data Warehouse (DWH).
 
 !!! quote
@@ -34,14 +34,15 @@ To de-normalize our normalized table, We will follow some methods that will be
 discussed below.
 
 Before doing de-normalization you have to make sure of two things:
-* The performance of the normalized system doesn't satisfy the user.
-* De-normalization is the right solution for this performance issue.
+
+- The performance of the normalized system doesn't satisfy the user.
+- De-normalization is the right solution for this performance issue.
 
 So briefly, De-normalization is used for:
 
-* Reduce the number and need for joins.
-* Reduce the number of needed tables.
-* Reduce foreign keys of your database.
+- Reduce the number and need for joins.
+- Reduce the number of needed tables.
+- Reduce foreign keys of your database.
 
 ### Adding Redundant columns
 
@@ -192,16 +193,17 @@ So in the future, you can retrieve the result of your query directly from the vi
 stored in your disk, So you don't need to recompute query again.
 
 But you should to know that,
+
 - Data will be updated once, And to refresh you have to re-run the query again.
 - The unavailable source will block maintenance of view.
 - Data are replicated, And it needs more storage.
 
 ## Drawbacks of De-Normalization
 
-* De-normalization can slow updates, with many update overheads.
-* De-normalization can increase your table and database size.
-* De-normalization in some cases can make querying more complex instead of making it easier.
-* More storage will be needed for duplicated data.
+- De-normalization can slow updates, with many update overheads.
+- De-normalization can increase your table and database size.
+- De-normalization in some cases can make querying more complex instead of making it easier.
+- More storage will be needed for duplicated data.
 
 ## De-Normalization and Data Warehouses
 
@@ -244,12 +246,12 @@ de-normalized, but its drawback is its need for a large space to store data.
 
 Star schema consists of a fact table with a single table for each dimension.
 
-* A fact table in a pure star schema consists of multiple foreign keys, each paired
+- A fact table in a pure star schema consists of multiple foreign keys, each paired
   with a primary key in a dimension, together with the facts containing the measurements.
-  * Typically, **normalized**.
-* Dimension tables not joined for each other.
-  * It joined using a fact table that does have a foreign key for each dimension.
-  * Typically, heavily **de-normalized**.
+  - Typically, **normalized**.
+- Dimension tables not joined for each other.
+  - It joined using a fact table that does have a foreign key for each dimension.
+  - Typically, heavily **de-normalized**.
 
 ## Summary
 

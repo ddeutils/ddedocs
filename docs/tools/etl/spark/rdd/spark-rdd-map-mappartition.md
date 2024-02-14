@@ -89,4 +89,4 @@ required for each element or partition.
 
 ## References
 
-* [Understanding PySpark Transformations: Map and MapPartitions Explained](https://medium.com/@uzzaman.ahmed/understanding-pyspark-transformations-map-and-mappartitions-explained-db04931a93ef)
+- [Understanding PySpark Transformations: Map and MapPartitions Explained](https://medium.com/@uzzaman.ahmed/understanding-pyspark-transformations-map-and-mappartitions-explained-db04931a93ef)

@@ -10,8 +10,8 @@ https://medium.com/odds-team
 
 We should to install 2 components for running scalar on local:
 
-1) [Java JDK](https://www.oracle.com/java/technologies/downloads/)
-2) [Scalar](https://www.scala-lang.org/download/)
+1. [Java JDK](https://www.oracle.com/java/technologies/downloads/)
+2. [Scalar](https://www.scala-lang.org/download/)
 
 ```text
 project-directory

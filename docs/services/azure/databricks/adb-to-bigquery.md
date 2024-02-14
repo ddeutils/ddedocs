@@ -56,5 +56,5 @@ df = (
 
 ## References
 
-* (https://docs.databricks.com/en/external-data/bigquery.html#step-2-set-up-databricks)
-* https://github.com/GoogleCloudDataproc/spark-bigquery-connector
+- (https://docs.databricks.com/en/external-data/bigquery.html#step-2-set-up-databricks)
+- https://github.com/GoogleCloudDataproc/spark-bigquery-connector

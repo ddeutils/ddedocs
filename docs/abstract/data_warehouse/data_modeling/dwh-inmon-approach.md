@@ -10,19 +10,19 @@ down into data marts. These data marts are then specialised to satisfy the deman
 of other departments inside the firm, such as finance, accounting, and human
 resources.
 
-* Begin with the corporation's data model. Identify all of the data sources that
+- Begin with the corporation's data model. Identify all of the data sources that
   the company has access to.
-* Identify the essential entities (customer, product, order, etc.) and their respective
+- Identify the essential entities (customer, product, order, etc.) and their respective
   linkages based on the data and understanding of business needs.
-* Create a thorough, logical model using the entity structure. The logical model
+- Create a thorough, logical model using the entity structure. The logical model
   includes all the properties of each entity, as well as their respective interactions
   and co-dependencies, in great detail. According to data modelling terminology,
   the logical model creates logical schemas for entity relationships.
-* Build the physical model from the logical one. Extract data from various sources,
+- Build the physical model from the logical one. Extract data from various sources,
   alter it and integrate it into a normalised data model using ETL operations.
   Each normalised data model stores data in the third normal form to avoid redundancy.
   The data warehouse's core is the normalised data model.
-* Create data marts for different departments. For all reporting needs, data marts
+- Create data marts for different departments. For all reporting needs, data marts
   are used to access data, and the data warehouse serves as a single source of truth.
 
 !!! quote
@@ -50,9 +50,9 @@ The following are the main advantages of the Inmon method:
 
 Good fit for:
 
-* Low complexity data that connects neatly together
-* Simple, business-focused downstream use cases for the data
-* Central data teams that have deep knowledge of the facets of their data
+- Low complexity data that connects neatly together
+- Simple, business-focused downstream use cases for the data
+- Central data teams that have deep knowledge of the facets of their data
 
 ## Disadvantages of the Inmon Approach
 

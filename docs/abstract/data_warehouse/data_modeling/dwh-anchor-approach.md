@@ -7,10 +7,10 @@ and it becomes a K-V structural model.
 
 The Anchor Model consists of the following:
 
-* Anchors: Anchors are similar to Hubs in the Data Vault Model. They stand for business entities and have only primary keys.
-* Attributes: Attributes are similar to satellites in the Data Vault Model but are more normalized. They are in the K-V structure. Each table describes attributes of only one anchor.
-* Ties: Ties indicate the relationship between Anchors and get described using a table. Ties are similar to links in the Data Vault Model and can improve the general model expansion capability.
-* Knots: Knots stand for the attributes that may be shared by multiple anchors, for example, enumerated and public attributes such as gender and state.
+- Anchors: Anchors are similar to Hubs in the Data Vault Model. They stand for business entities and have only primary keys.
+- Attributes: Attributes are similar to satellites in the Data Vault Model but are more normalized. They are in the K-V structure. Each table describes attributes of only one anchor.
+- Ties: Ties indicate the relationship between Anchors and get described using a table. Ties are similar to links in the Data Vault Model and can improve the general model expansion capability.
+- Knots: Knots stand for the attributes that may be shared by multiple anchors, for example, enumerated and public attributes such as gender and state.
 
 We can further subdivide these four basic objects into historical and non-historical
 objects, where historical objects record changes in the data using timestamps and

@@ -2,4 +2,4 @@
 
 ## References
 
-* [GetDBT: Data Quality Framework](https://www.getdbt.com/blog/data-quality-framework)
+- [GetDBT: Data Quality Framework](https://www.getdbt.com/blog/data-quality-framework)

@@ -20,5 +20,5 @@ spark = (
 
 ## References
 
-* [Structured Streaming Read from Files](https://subhamkharwal.medium.com/pyspark-structured-streaming-read-from-files-c46fa0ce8888)
-* [Structured Streaming for multi format scalable Data Ingestion Workloads](https://medium.com/@prithvijit.guha245/pyspark-structured-streaming-for-multi-format-scalable-data-ingestion-workloads-9cdac4b7c912)
+- [Structured Streaming Read from Files](https://subhamkharwal.medium.com/pyspark-structured-streaming-read-from-files-c46fa0ce8888)
+- [Structured Streaming for multi format scalable Data Ingestion Workloads](https://medium.com/@prithvijit.guha245/pyspark-structured-streaming-for-multi-format-scalable-data-ingestion-workloads-9cdac4b7c912)

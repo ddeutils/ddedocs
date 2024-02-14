@@ -7,4 +7,4 @@ integrate seamlessly, but that is not quite the case.
 
 ## References
 
-* [How to Integrate Great Expectations with Databricks](https://medium.com/better-programming/how-to-integrate-great-expectations-with-databricks-e17740e2a97a)
+- [How to Integrate Great Expectations with Databricks](https://medium.com/better-programming/how-to-integrate-great-expectations-with-databricks-e17740e2a97a)

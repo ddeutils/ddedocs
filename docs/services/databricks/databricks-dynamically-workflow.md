@@ -2,4 +2,4 @@
 
 ## References
 
-* https://medium.com/@rishianand.nits/create-update-databricks-workflow-dynamically-abba4b0916b8
+- https://medium.com/@rishianand.nits/create-update-databricks-workflow-dynamically-abba4b0916b8

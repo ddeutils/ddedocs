@@ -72,17 +72,17 @@ Evaluation criteria can be tricky when you may not even have a strong answer to
 the basic question, "what are data observability tools?" A great data observability
 platform has the following features:
 
-* **It connects to your existing stack quickly and seamlessly** and does not require
+- **It connects to your existing stack quickly and seamlessly** and does not require
   modifying your data pipelines, writing new code, or using a particular programming
   language. This allows quick time to value and maximum testing coverage without
   having to make substantial investments.
 
-* **It monitors your data at-rest** and does not require extracting the data from where
+- **It monitors your data at-rest** and does not require extracting the data from where
   it is currently stored. This allows the data observability solution to be performant,
   scalable and cost-efficient. It also ensures that you meet the highest levels
   of security and compliance requirements.
 
-* **It requires minimal configuration** and practically no threshold-setting. Data
+- **It requires minimal configuration** and practically no threshold-setting. Data
   observability tools should use machine learning models to automatically learn
   your environment and your data. It uses anomaly detection techniques to let you
   know when things break. It minimizes false positives by taking into account not
@@ -90,24 +90,23 @@ platform has the following features:
   from any particular issue. You do not need to spend resources configuring and
   maintaining noisy rules within your data observability platform.
 
-* **It requires no prior mapping** of what needs to be monitored and in what way.
+- **It requires no prior mapping** of what needs to be monitored and in what way.
   It helps you identify key resources, key dependencies and key invariants so that
   you get broad data observability with little effort.
 
-* **It provides rich context** that enables rapid triage and troubleshooting, and
+- **It provides rich context** that enables rapid triage and troubleshooting, and
   effective communication with stakeholders impacted by data reliability issues.
   Data observability tools should not stop at “field X in table Y has values lower
   than Z today.”
 
-* **It prevents issues from happening in the first place** by exposing rich information
+- **It prevents issues from happening in the first place** by exposing rich information
   about data assets so that changes and modifications can be made responsibly and
   proactively.
 
-
 ## References
 
-* [MontecarloData: What is Data Observability](https://www.montecarlodata.com/blog-what-is-data-observability/)
-* https://www.montecarlodata.com/blog-data-observability-tools/
-* https://snowplow.io/blog/data-observability-dashboard/
-* https://www.youtube.com/watch?v=4K33fP46vDw
-* https://www.montecarlodata.com/blog-what-is-data-observability/
+- [MontecarloData: What is Data Observability](https://www.montecarlodata.com/blog-what-is-data-observability/)
+- https://www.montecarlodata.com/blog-data-observability-tools/
+- https://snowplow.io/blog/data-observability-dashboard/
+- https://www.youtube.com/watch?v=4K33fP46vDw
+- https://www.montecarlodata.com/blog-what-is-data-observability/

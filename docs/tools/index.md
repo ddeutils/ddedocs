@@ -2,16 +2,16 @@
 
 ## Noted
 
-* https://itnext.io/five-apache-projects-you-probably-didnt-know-about-13528e05765f
-* https://medium.com/geekculture/airflow-vs-prefect-vs-kestra-which-is-best-for-building-advanced-data-pipelines-40cfbddf9697
-* https://medium.com/@mariusz_kujawski/converting-csv-files-to-parquet-with-polars-pandas-dask-and-dackdb-52a77378349d
-* https://medium.com/@kywe665/hot-take-apache-hudi-delta-lake-apache-iceberg-are-divergent-7ca6a43d39fc
+- https://itnext.io/five-apache-projects-you-probably-didnt-know-about-13528e05765f
+- https://medium.com/geekculture/airflow-vs-prefect-vs-kestra-which-is-best-for-building-advanced-data-pipelines-40cfbddf9697
+- https://medium.com/@mariusz_kujawski/converting-csv-files-to-parquet-with-polars-pandas-dask-and-dackdb-52a77378349d
+- https://medium.com/@kywe665/hot-take-apache-hudi-delta-lake-apache-iceberg-are-divergent-7ca6a43d39fc
 
 ### File Format
 
-* [Comparing Performance of Big Data File Formats: A Practical Guide](https://towardsdatascience.com/comparing-performance-of-big-data-file-formats-a-practical-guide-ef366561b7d2)
-* https://medium.com/@turkelturk/data-file-formats-in-data-engineering-5ba0db8c2c16
-* [Compressing Your Data: A Comparison of Popular Algorithms](https://thedatasalesguy.medium.com/compressing-your-data-a-comparison-of-popular-algorithms-7a7dc341af94)
+- [Comparing Performance of Big Data File Formats: A Practical Guide](https://towardsdatascience.com/comparing-performance-of-big-data-file-formats-a-practical-guide-ef366561b7d2)
+- https://medium.com/@turkelturk/data-file-formats-in-data-engineering-5ba0db8c2c16
+- [Compressing Your Data: A Comparison of Popular Algorithms](https://thedatasalesguy.medium.com/compressing-your-data-a-comparison-of-popular-algorithms-7a7dc341af94)
 
 ### Ingestion
 
@@ -20,11 +20,11 @@
 
 ### Compute
 
-* [Trino vs StarRocks](https://blog.devgenius.io/comparison-of-the-open-source-query-engines-trino-and-starrocks-cf959049f9ab)
+- [Trino vs StarRocks](https://blog.devgenius.io/comparison-of-the-open-source-query-engines-trino-and-starrocks-cf959049f9ab)
 
 ### Dataframe API
 
-* [Polars, DuckDB, Pandas, Modin, Ponder, Fugue, Daft](https://rathoreaparna678.medium.com/polars-duckdb-pandas-modin-ponder-fugue-daft-which-one-is-the-best-dataframe-and-sql-tool-e8f7cba550cb)
+- [Polars, DuckDB, Pandas, Modin, Ponder, Fugue, Daft](https://rathoreaparna678.medium.com/polars-duckdb-pandas-modin-ponder-fugue-daft-which-one-is-the-best-dataframe-and-sql-tool-e8f7cba550cb)
 
 ### Data Quality
 

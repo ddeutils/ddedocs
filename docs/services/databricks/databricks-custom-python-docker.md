@@ -2,4 +2,4 @@
 
 ## References
 
-* https://towardsdatascience.com/running-python-wheel-tasks-in-custom-docker-containers-in-databricks-de3ff20f5c79
+- https://towardsdatascience.com/running-python-wheel-tasks-in-custom-docker-containers-in-databricks-de3ff20f5c79

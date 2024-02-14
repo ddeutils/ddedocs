@@ -1,87 +1,79 @@
 default_install_hook_types: [pre-commit, commit-msg]
 default_language_version:
-    python: python3.8
+  python: python3.8
 
 ci:
-    skip: [shelf-commit-msg]
-    autofix_commit_msg: |
-        🚧 [pre-commit.ci] auto fixes from pre-commit.com hooks
-    autofix_prs: true
-    autoupdate_schedule: weekly
-    autoupdate_commit_msg: |
-        🚧 [pre-commit.ci] pre-commit autoupdate
-    submodules: false
+  skip: [shelf-commit-msg]
+  autofix_commit_msg: |
+    🚧 [pre-commit.ci] auto fixes from pre-commit.com hooks
+  autofix_prs: true
+  autoupdate_schedule: weekly
+  autoupdate_commit_msg: |
+    🚧 [pre-commit.ci] pre-commit autoupdate
+  submodules: false
 
 repos:
--   repo: https://github.com/asottile/pyupgrade
-    rev:  v3.15.0
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.15.0
     hooks:
-    -   id: pyupgrade
+      - id: pyupgrade
         args: ["--py38-plus", "--keep-runtime-typing"]
         stages: [commit]
 
--   repo: https://github.com/psf/black
+  - repo: https://github.com/psf/black
     rev: 24.2.0
     hooks:
-    -   id: black
+      - id: black
         stages: [commit]
 
--   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev:  v0.2.1
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.2.1
     hooks:
-    -   id: ruff
+      - id: ruff
         args: ["--fix"]
         stages: [commit]
 
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev:  v4.5.0
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
     hooks:
-    -   id: fix-byte-order-marker
+      - id: fix-byte-order-marker
         stages: [commit]
-    -   id: trailing-whitespace
+      - id: trailing-whitespace
         stages: [commit]
         exclude: ".bumpversion.cfg"
-    -   id: end-of-file-fixer
+      - id: end-of-file-fixer
         stages: [commit]
-    -   id: check-yaml
+      - id: check-yaml
         stages: [commit]
         args: ["--unsafe"]
-    -   id: check-toml
+      - id: check-toml
+        stages: [commit]
+      - id: requirements-txt-fixer
         stages: [commit]
 
--   repo: https://github.com/korawica/clishelf
+  - repo: https://github.com/korawica/clishelf
     rev: v0.1.6
     hooks:
-    -   id: shelf-commit-msg
+      - id: shelf-commit-msg
         stages: [commit-msg]
 
-
-#-   repo: https://github.com/pre-commit/mirrors-prettier
-#    rev: v4.0.0-alpha.8
-#    hooks:
-#      - id: prettier
-#        types_or:
-#          - toml
-#          - css
-#          - json
-#          - json5
-#          - yaml
-#          - markdown
-#        additional_dependencies:
-#          - prettier
-#          - prettier-plugin-toml
-#        minimum_pre_commit_version: 2.9.0
-#        exclude: ^locale
-#        stages: [commit]
-#
-#-   repo: https://github.com/DavidAnson/markdownlint-cli2
-#    rev: v0.12.0
-#    hooks:
-#    -   id: markdownlint-cli2
-#        name: markdownlint-readme
-#        files: ^README.md
-#        stages: [commit]
-#
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        types_or:
+          - toml
+          - css
+          - json
+          - json5
+          - yaml
+          - markdown
+        additional_dependencies:
+          - prettier
+          - prettier-plugin-toml
+        minimum_pre_commit_version: 2.9.0
+        exclude: ^(locale|CHANGELOG)
+        stages: [commit]
 #-   repo: https://github.com/tcort/markdown-link-check
 #    rev: v3.11.2
 #    hooks:

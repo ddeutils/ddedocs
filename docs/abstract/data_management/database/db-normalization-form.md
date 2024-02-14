@@ -237,10 +237,10 @@ It usually a relationship consisting of 3 attributes (A, B, C). single value
 from (A) gives more than one value in (B), single value of (A) gives more than
 one value in (C), and (B) , (C) are independent of each other.
 
-* There are at least 3 attributes A, B, C in a relation and
-* For each value of A there is a well-defined set of values
+- There are at least 3 attributes A, B, C in a relation and
+- For each value of A there is a well-defined set of values
   for B, and a well-defined set of values for C,
-* But the set of values for B is independent on the set of
+- But the set of values for B is independent on the set of
   values for C
 
 !!! example
@@ -270,11 +270,11 @@ criteria of normal forms.
 **First Normal Form** (1NF) is the first step towards a full normalization of your
 data, to apply 1NF it should have the following criteria:
 
-* Each column or single cell contains atomic values
+- Each column or single cell contains atomic values
 
-* Each entity has a **primary key**
+- Each entity has a **primary key**
 
-* No duplicated rows or columns
+- No duplicated rows or columns
 
 In other words, each row in the table should have a unique identifier, and each
 value in the table should be indivisible.
@@ -300,9 +300,9 @@ value in the table should be indivisible.
 **Second Normal Form** (2NF) do more than the 1NF because 1NF only eliminates
 repeating groups, not redundancy.
 
-* It should be in 1NF.
+- It should be in 1NF.
 
-* It should not have **partial dependencies**. Each non-prime attribute is full
+- It should not have **partial dependencies**. Each non-prime attribute is full
   functionally dependent on the whole primary key (all prime attributes).
 
 !!! example
@@ -333,9 +333,9 @@ repeating groups, not redundancy.
 
 **Third Normal Form** (3NF)
 
-* It should be in 2NF.
+- It should be in 2NF.
 
-* It should not have **transitive dependencies**.
+- It should not have **transitive dependencies**.
 
 !!! example
 
@@ -364,9 +364,9 @@ repeating groups, not redundancy.
 
 **Boyce-Codd Normal Form** (BCNF) will remove all candidate key.
 
-* It should be in 3NF.
+- It should be in 3NF.
 
-* Any attribute in table depends only on super-key.
+- Any attribute in table depends only on super-key.
   A -> Z means (A) is super-key of (Z) (even (Z) is a prime attribute)
 
 !!! note
@@ -406,9 +406,9 @@ repeating groups, not redundancy.
 
 **Fourth Normal Form** (4NF)
 
-* It should be in BCNF.
+- It should be in BCNF.
 
-* It should not have multivalued dependencies.
+- It should not have multivalued dependencies.
 
 If no database table instance contains two or more, independent and multivalued
 data describing the relevant entity, then it is in 4th Normal Form.
@@ -501,22 +501,22 @@ tables into smaller tables that preserve the relationships between the attribute
 
 ## Why do we need to normalize our tables?
 
-* When (ACID compliant) is required
+- When (ACID compliant) is required
 
-    It improves integrity and consistency of your data.
-    (ACID = Atomicity Consistency Isolation Durability)
+  It improves integrity and consistency of your data.
+  (ACID = Atomicity Consistency Isolation Durability)
 
-* Fewer storage needed
+- Fewer storage needed
 
-    Since we eliminated repeated groups, and divided our tables, we reduced the
-    size of our tables and database.
+  Since we eliminated repeated groups, and divided our tables, we reduced the
+  size of our tables and database.
 
-* less logical I/O cost
+- less logical I/O cost
 
   When you need to retrieve data, you will retrieve smaller amount of data, and
   when you need to add or insert in tables, it will be easier, and more organized.
 
-* Queries become easier
+- Queries become easier
 
   If we have un-normalized table that has (location) attribute {City, Zip} as
   composite attribute, and we need to count the unique zip codes in our table,
@@ -524,7 +524,7 @@ tables into smaller tables that preserve the relationships between the attribute
   this table we will be able to access zip directly because location will be
   divided to two attributes (city) and (zip).
 
-* Write-intensive databases
+- Write-intensive databases
 
   Normalization increases the performance of write-intensive databases Significantly,
   because it reduces data modification anomalies, which make it easier to manipulate
@@ -542,10 +542,10 @@ solution**.
 
 The drawbacks of data redundancy include:
 
-* Data maintenance becomes tedious – data deletion and data updates become problematic
-* It creates data inconsistencies
-* Insert, Update and Delete anomalies become frequent. An update anomaly, for example, means that the versions of the same record, duplicated in different places in the database, will all need to be updated to keep the record consistent
-* Redundant data inflates the size of a database and takes up an inordinate amount of space on disk
+- Data maintenance becomes tedious – data deletion and data updates become problematic
+- It creates data inconsistencies
+- Insert, Update and Delete anomalies become frequent. An update anomaly, for example, means that the versions of the same record, duplicated in different places in the database, will all need to be updated to keep the record consistent
+- Redundant data inflates the size of a database and takes up an inordinate amount of space on disk
 
 ## References
 

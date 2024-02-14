@@ -2,4 +2,4 @@
 
 ## References
 
-* https://medium.com/globant/streaming-data-in-a-delta-table-using-spark-structured-streaming-19bd6f3ea37b
+- https://medium.com/globant/streaming-data-in-a-delta-table-using-spark-structured-streaming-19bd6f3ea37b

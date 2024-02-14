@@ -486,6 +486,7 @@ $ git tag -d "<tag-name>"
 ```
 
 > **Note**:
+>
 > - Annotated tags - `git tag -a '<tag-name>' -m '<message>' HEAD`
 > - Lightweight tags - `git tag <tag-name>`
 
@@ -560,6 +561,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 > **Note**: \
 > About command `git push -u origin master` has options detail:
+>
 > - `-u`/`--set-upstream-to` - for remember this `origin master` parameters, next you will use only `git push` command
 > - `origin` - alias name of remote repository, that mean can remote more than one repository
 > - `master` - target branch name want to push
@@ -709,10 +711,10 @@ $ :wqa
     * `MERGED` – merge result, this is what gets saved in the repo
 
 > **Note**:
+>
 > - `diffg RE` - remote change
 > - `diffg BA` - base change
 > - `diffg LO` - local change
-
 
 ```shell
 $ git commit -m "EDIT CONFLICTS"
@@ -763,6 +765,7 @@ Unmerged paths:
 > **Note**: \
 > Above command can use opposite option, like `git checkout --theirs config.yaml`. \
 > Or use it together with merge strategy,
+>
 > - `git merge --strategy-option ours`
 > - `git merge --strategy-option theirs`
 
@@ -800,6 +803,7 @@ $ git hist
 > **Note**: \
 > `HEAD` is the pointer that keep all commits, most recent commit.
 > In common case, `HEAD` points to the latest commit with `SHA` code.
+>
 > ```shell
 > ...
 > $ git show HEAD

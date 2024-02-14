@@ -16,14 +16,14 @@ $ pip install azure-identity azure-keyvault-secrets
 
 ### 1) Create Managed Identity
 
-* In the `Azure Portal` :octicons-arrow-right-24: Go to `Managed Identities`
+- In the `Azure Portal` :octicons-arrow-right-24: Go to `Managed Identities`
   :octicons-arrow-right-24: Click `Create`
-* Add your managed identity information :octicons-arrow-right-24: Select `Review + create`
+- Add your managed identity information :octicons-arrow-right-24: Select `Review + create`
 
 ### 2) Enable Azure Key Vault
 
-* Go to `Azure Key Vaults` :octicons-arrow-right-24: Select your key vault name
-* On `Access control (IAM)` :octicons-arrow-right-24: Click `Add` :octicons-arrow-right-24:
+- Go to `Azure Key Vaults` :octicons-arrow-right-24: Select your key vault name
+- On `Access control (IAM)` :octicons-arrow-right-24: Click `Add` :octicons-arrow-right-24:
   Assign `Key Vault Secrets User` to your managed identity
 
 !!! tip
@@ -32,10 +32,10 @@ $ pip install azure-identity azure-keyvault-secrets
 
 ### 3) Enable Azure Batch Account
 
-* Go to `Azure Batch Accounts` :octicons-arrow-right-24: Go to `Pools`
+- Go to `Azure Batch Accounts` :octicons-arrow-right-24: Go to `Pools`
   :octicons-arrow-right-24: Select your Batch Pool
-* Go to `Identity` :octicons-arrow-right-24: Nav `User assigned` :octicons-arrow-right-24: Click `Add`
-* Select your managed identity that was created from above :octicons-arrow-right-24: Click `Add`
+- Go to `Identity` :octicons-arrow-right-24: Nav `User assigned` :octicons-arrow-right-24: Click `Add`
+- Select your managed identity that was created from above :octicons-arrow-right-24: Click `Add`
 
 ### 4) Connection Code
 

@@ -27,7 +27,6 @@ shifting of the DE's technologies so fast.
 > For more extension that I use for this project, able to research from
 > [MkDocs Catalogs](https://github.com/mkdocs/catalog).
 
-
 ## License
 
 This project was licensed under the terms of the [MIT license](LICENSE), and thanks

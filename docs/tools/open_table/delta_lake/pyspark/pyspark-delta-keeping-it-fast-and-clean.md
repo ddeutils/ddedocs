@@ -38,27 +38,27 @@ From analysis, we can see that this transaction includes several actions:
 
   ```json
   {
-      "commitInfo": {
-          "timestamp": 1602173340340,
-          "userId": "360903564160648",
-          "userName": "stephanie.bodoff@databricks.com",
-          "operation": "WRITE",
-          "operationParameters": {
-              "mode": "ErrorIfExists",
-              "partitionBy": "[]"
-          },
-          "notebook": {
-              "notebookId": "1607762315395537"
-          },
-          "clusterId": "1008-160338-oil232",
-          "isolationLevel": "WriteSerializable",
-          "isBlindAppend": true,
-          "operationMetrics": {
-              "numFiles": "8",
-              "numOutputBytes": "221245652",
-              "numOutputRows": "10000000"
-          }
+    "commitInfo": {
+      "timestamp": 1602173340340,
+      "userId": "360903564160648",
+      "userName": "stephanie.bodoff@databricks.com",
+      "operation": "WRITE",
+      "operationParameters": {
+        "mode": "ErrorIfExists",
+        "partitionBy": "[]"
+      },
+      "notebook": {
+        "notebookId": "1607762315395537"
+      },
+      "clusterId": "1008-160338-oil232",
+      "isolationLevel": "WriteSerializable",
+      "isBlindAppend": true,
+      "operationMetrics": {
+        "numFiles": "8",
+        "numOutputBytes": "221245652",
+        "numOutputRows": "10000000"
       }
+    }
   }
   ```
 
@@ -70,10 +70,10 @@ From analysis, we can see that this transaction includes several actions:
 
   ```json
   {
-      "protocol": {
-          "minReaderVersion": 1,
-          "minWriterVersion": 2
-      }
+    "protocol": {
+      "minReaderVersion": 1,
+      "minWriterVersion": 2
+    }
   }
   ```
 
@@ -86,17 +86,17 @@ From analysis, we can see that this transaction includes several actions:
 
   ```json
   {
-      "metaData": {
-          "id": "ee2db204-0e38-4962-92b0-83e5570d7cd5",
-          "format": {
-              "provider": "parquet",
-              "options": {}
-          },
-          "schemaString": "{\"type\":\"struct\",\"fields\":[{\"name\":\"id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"firstName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"middleName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"lastName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"gender\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"birthDate\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ssn\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"salary\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}",
-          "partitionColumns": [],
-          "configuration": {},
-          "createdTime": 1602173313568
-      }
+    "metaData": {
+      "id": "ee2db204-0e38-4962-92b0-83e5570d7cd5",
+      "format": {
+        "provider": "parquet",
+        "options": {}
+      },
+      "schemaString": "{\"type\":\"struct\",\"fields\":[{\"name\":\"id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"firstName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"middleName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"lastName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"gender\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"birthDate\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ssn\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"salary\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}",
+      "partitionColumns": [],
+      "configuration": {},
+      "createdTime": 1602173313568
+    }
   }
   ```
 
@@ -149,7 +149,7 @@ cp -r dbfs:/databricks-datasets/learning-spark-v2/people/people-10m.delta dbfs:/
 
 - **Vacuum**:
 
-  The first obvious answer is the `VACUUM` command. What this does are   delete the
+  The first obvious answer is the `VACUUM` command. What this does are delete the
   files that no longer affect our Delta table, given a configurable
   `delta.deletedFileRetentionDuration` that defaults on 7 days.
 
@@ -200,26 +200,26 @@ cp -r dbfs:/databricks-datasets/learning-spark-v2/people/people-10m.delta dbfs:/
   ```json
   {
     "commitInfo": {
-        "timestamp": 1676202617353,
-        "userId": "8019820830300763",
-        "userName": "vitor",
-        "operation": "VACUUM START",
-        "operationParameters": {
-            "retentionCheckEnabled": true,
-            "defaultRetentionMillis": 604800000
-        },
-        "notebook": {
-            "notebookId": "1087108890280137"
-        },
-        "clusterId": "0102-173902-b3a5lq4t",
-        "readVersion": 0,
-        "isolationLevel": "SnapshotIsolation",
-        "isBlindAppend": true,
-        "operationMetrics": {
-            "numFilesToDelete": "0"
-        },
-        "engineInfo": "Databricks-Runtime/11.3.x-scala2.12",
-        "txnId": "6b875d5e-4c0e-4724-a87b-a0a6bbfd8419"
+      "timestamp": 1676202617353,
+      "userId": "8019820830300763",
+      "userName": "vitor",
+      "operation": "VACUUM START",
+      "operationParameters": {
+        "retentionCheckEnabled": true,
+        "defaultRetentionMillis": 604800000
+      },
+      "notebook": {
+        "notebookId": "1087108890280137"
+      },
+      "clusterId": "0102-173902-b3a5lq4t",
+      "readVersion": 0,
+      "isolationLevel": "SnapshotIsolation",
+      "isBlindAppend": true,
+      "operationMetrics": {
+        "numFilesToDelete": "0"
+      },
+      "engineInfo": "Databricks-Runtime/11.3.x-scala2.12",
+      "txnId": "6b875d5e-4c0e-4724-a87b-a0a6bbfd8419"
     }
   }
   ```
@@ -228,29 +228,29 @@ cp -r dbfs:/databricks-datasets/learning-spark-v2/people/people-10m.delta dbfs:/
 
   ```json
   {
-      "commitInfo": {
-          "timestamp": 1676206833338,
-          "userId": "8019820830300763",
-          "userName": "vitor",
-          "operation": "VACUUM START",
-          "operationParameters": {
-              "retentionCheckEnabled": false,
-              "specifiedRetentionMillis": 0,
-              "defaultRetentionMillis": 604800000
-          },
-          "notebook": {
-              "notebookId": "1087108890280137"
-          },
-          "clusterId": "0102-173902-b3a5lq4t",
-          "readVersion": 2,
-          "isolationLevel": "SnapshotIsolation",
-          "isBlindAppend": true,
-          "operationMetrics": {
-              "numFilesToDelete": "8"
-          },
-          "engineInfo": "Databricks-Runtime/11.3.x-scala2.12",
-          "txnId": "42f93d56-8739-46d5-a8f9-c2c1daffe0ec"
-      }
+    "commitInfo": {
+      "timestamp": 1676206833338,
+      "userId": "8019820830300763",
+      "userName": "vitor",
+      "operation": "VACUUM START",
+      "operationParameters": {
+        "retentionCheckEnabled": false,
+        "specifiedRetentionMillis": 0,
+        "defaultRetentionMillis": 604800000
+      },
+      "notebook": {
+        "notebookId": "1087108890280137"
+      },
+      "clusterId": "0102-173902-b3a5lq4t",
+      "readVersion": 2,
+      "isolationLevel": "SnapshotIsolation",
+      "isBlindAppend": true,
+      "operationMetrics": {
+        "numFilesToDelete": "8"
+      },
+      "engineInfo": "Databricks-Runtime/11.3.x-scala2.12",
+      "txnId": "42f93d56-8739-46d5-a8f9-c2c1daffe0ec"
+    }
   }
   ```
 
@@ -288,39 +288,39 @@ cp -r dbfs:/databricks-datasets/learning-spark-v2/people/people-10m.delta dbfs:/
   command:
 
   ```json
-    {
-      "commitInfo": {
-          "timestamp": 1676215176645,
-          "userId": "8019820830300763",
-          "userName": "vitor",
-          "operation": "OPTIMIZE",
-          "operationParameters": {
-              "predicate": "[]",
-              "zOrderBy": "[]",
-              "batchId": "0",
-              "auto": false
-          },
-          "notebook": {
-              "notebookId": "1087108890280137"
-          },
-          "clusterId": "0102-173902-b3a5lq4t",
-          "readVersion": 2,
-          "isolationLevel": "SnapshotIsolation",
-          "isBlindAppend": false,
-          "operationMetrics": {
-              "numRemovedFiles": "8",
-              "numRemovedBytes": "221245652",
-              "p25FileSize": "59403028",
-              "minFileSize": "59403028",
-              "numAddedFiles": "3",
-              "maxFileSize": "88873012",
-              "p75FileSize": "88873012",
-              "p50FileSize": "87441438",
-              "numAddedBytes": "235717478"
-          },
-          "engineInfo": "Databricks-Runtime/11.3.x-scala2.12",
-          "txnId": "55389d3e-4dd5-43a9-b5e1-de67cde8bb72"
-      }
+  {
+    "commitInfo": {
+      "timestamp": 1676215176645,
+      "userId": "8019820830300763",
+      "userName": "vitor",
+      "operation": "OPTIMIZE",
+      "operationParameters": {
+        "predicate": "[]",
+        "zOrderBy": "[]",
+        "batchId": "0",
+        "auto": false
+      },
+      "notebook": {
+        "notebookId": "1087108890280137"
+      },
+      "clusterId": "0102-173902-b3a5lq4t",
+      "readVersion": 2,
+      "isolationLevel": "SnapshotIsolation",
+      "isBlindAppend": false,
+      "operationMetrics": {
+        "numRemovedFiles": "8",
+        "numRemovedBytes": "221245652",
+        "p25FileSize": "59403028",
+        "minFileSize": "59403028",
+        "numAddedFiles": "3",
+        "maxFileSize": "88873012",
+        "p75FileSize": "88873012",
+        "p50FileSize": "87441438",
+        "numAddedBytes": "235717478"
+      },
+      "engineInfo": "Databricks-Runtime/11.3.x-scala2.12",
+      "txnId": "55389d3e-4dd5-43a9-b5e1-de67cde8bb72"
+    }
   }
   ```
 
@@ -381,38 +381,38 @@ cp -r dbfs:/databricks-datasets/learning-spark-v2/people/people-10m.delta dbfs:/
 
   ```json
   {
-      "commitInfo": {
-          "timestamp": 1676217320722,
-          "userId": "8019820830300763",
-          "userName": "vitor",
-          "operation": "OPTIMIZE",
-          "operationParameters": {
-              "predicate": "[]",
-              "zOrderBy": "[\"salary\"]",
-              "batchId": "0",
-              "auto": false
-          },
-          "notebook": {
-              "notebookId": "1087108890280137"
-          },
-          "clusterId": "0102-173902-b3a5lq4t",
-          "readVersion": 2,
-          "isolationLevel": "SnapshotIsolation",
-          "isBlindAppend": false,
-          "operationMetrics": {
-              "numRemovedFiles": "8",
-              "numRemovedBytes": "221245652",
-              "p25FileSize": "113573613",
-              "minFileSize": "113573613",
-              "numAddedFiles": "2",
-              "maxFileSize": "123467314",
-              "p75FileSize": "123467314",
-              "p50FileSize": "123467314",
-              "numAddedBytes": "237040927"
-          },
-          "engineInfo": "Databricks-Runtime/11.3.x-scala2.12",
-          "txnId": "0e9b6467-9385-42fa-bc1a-df5486fc997f"
-      }
+    "commitInfo": {
+      "timestamp": 1676217320722,
+      "userId": "8019820830300763",
+      "userName": "vitor",
+      "operation": "OPTIMIZE",
+      "operationParameters": {
+        "predicate": "[]",
+        "zOrderBy": "[\"salary\"]",
+        "batchId": "0",
+        "auto": false
+      },
+      "notebook": {
+        "notebookId": "1087108890280137"
+      },
+      "clusterId": "0102-173902-b3a5lq4t",
+      "readVersion": 2,
+      "isolationLevel": "SnapshotIsolation",
+      "isBlindAppend": false,
+      "operationMetrics": {
+        "numRemovedFiles": "8",
+        "numRemovedBytes": "221245652",
+        "p25FileSize": "113573613",
+        "minFileSize": "113573613",
+        "numAddedFiles": "2",
+        "maxFileSize": "123467314",
+        "p75FileSize": "123467314",
+        "p50FileSize": "123467314",
+        "numAddedBytes": "237040927"
+      },
+      "engineInfo": "Databricks-Runtime/11.3.x-scala2.12",
+      "txnId": "0e9b6467-9385-42fa-bc1a-df5486fc997f"
+    }
   }
   ```
 
@@ -428,21 +428,21 @@ cp -r dbfs:/databricks-datasets/learning-spark-v2/people/people-10m.delta dbfs:/
 
   ```json
   {
-      "add": {
-          "path": "part-00000-edb01f4d-18f1-4c82-ac18-66444343df9b-c000.snappy.parquet",
-          "partitionValues": {},
-          "size": 123467314,
-          "modificationTime": 1676217320000,
-          "dataChange": false,
-          "stats": "{\"numRecords\":5206176,\"minValues\":{\"id\":1,\"firstName\":\"Aaron\",\"middleName\":\"Aaron\",\"lastName\":\"A'Barrow\",\"gender\":\"F\",\"birthDate\":\"1951-12-31T05:00:00.000Z\",\"ssn\":\"666-10-1010\",\"salary\":-26884},\"maxValues\":{\"id\":9999999,\"firstName\":\"Zulma\",\"middleName\":\"Zulma\",\"lastName\":\"Zywicki\",\"gender\":\"M\",\"birthDate\":\"2000-01-30T05:00:00.000Z\",\"ssn\":\"999-98-9989\",\"salary\":73676},\"nullCount\":{\"id\":0,\"firstName\":0,\"middleName\":0,\"lastName\":0,\"gender\":0,\"birthDate\":0,\"ssn\":0,\"salary\":0}}",
-          "tags": {
-              "INSERTION_TIME": "1602173334000000",
-              "ZCUBE_ZORDER_CURVE": "hilbert",
-              "ZCUBE_ZORDER_BY": "[\"salary\"]",
-              "ZCUBE_ID": "493cfedf-fdaf-4d34-a911-b4663adefec7",
-              "OPTIMIZE_TARGET_SIZE": "83886080"
-          }
+    "add": {
+      "path": "part-00000-edb01f4d-18f1-4c82-ac18-66444343df9b-c000.snappy.parquet",
+      "partitionValues": {},
+      "size": 123467314,
+      "modificationTime": 1676217320000,
+      "dataChange": false,
+      "stats": "{\"numRecords\":5206176,\"minValues\":{\"id\":1,\"firstName\":\"Aaron\",\"middleName\":\"Aaron\",\"lastName\":\"A'Barrow\",\"gender\":\"F\",\"birthDate\":\"1951-12-31T05:00:00.000Z\",\"ssn\":\"666-10-1010\",\"salary\":-26884},\"maxValues\":{\"id\":9999999,\"firstName\":\"Zulma\",\"middleName\":\"Zulma\",\"lastName\":\"Zywicki\",\"gender\":\"M\",\"birthDate\":\"2000-01-30T05:00:00.000Z\",\"ssn\":\"999-98-9989\",\"salary\":73676},\"nullCount\":{\"id\":0,\"firstName\":0,\"middleName\":0,\"lastName\":0,\"gender\":0,\"birthDate\":0,\"ssn\":0,\"salary\":0}}",
+      "tags": {
+        "INSERTION_TIME": "1602173334000000",
+        "ZCUBE_ZORDER_CURVE": "hilbert",
+        "ZCUBE_ZORDER_BY": "[\"salary\"]",
+        "ZCUBE_ID": "493cfedf-fdaf-4d34-a911-b4663adefec7",
+        "OPTIMIZE_TARGET_SIZE": "83886080"
       }
+    }
   }
   ```
 
@@ -455,13 +455,13 @@ cp -r dbfs:/databricks-datasets/learning-spark-v2/people/people-10m.delta dbfs:/
   used correctly in order to be efficient. Below we’ll list some key considerations
   that we must have when using Z-Ordering:
 
-  1) Z-Ordering is only suited for columns with high cardinality, if it has a low
+  1. Z-Ordering is only suited for columns with high cardinality, if it has a low
      cardinality we cannot benefit from data-skipping.
 
-  2) We can specify multiple columns on Z-Order but the effectiveness of its
+  2. We can specify multiple columns on Z-Order but the effectiveness of its
      data-skipping decreases with each extra column.
 
-  3) Make sure to Z-Order only on columns for which statistics are available.
+  3. Make sure to Z-Order only on columns for which statistics are available.
      Have in mind the index of the columns and that only the first 32 columns are
      analyzed.
 

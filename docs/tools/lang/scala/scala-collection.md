@@ -1,7 +1,5 @@
 # Scala Collection
 
-
-
 Scala provides rich set of collection library. It contains classes and traits to
 collect data. These collections can be mutable or immutable. You can use them
 according to your requirement. `Scala.collection.mutable` package contains all the
@@ -19,7 +17,7 @@ mutable collection, you must import `Scala.collection.mutable` package in your c
 > all collections.
 
 | Method                              | Description                                                                                              |
-|-------------------------------------|----------------------------------------------------------------------------------------------------------|
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | def head: A                         | It returns the first element of collection.                                                              |
 | def init: Traversable[A]            | It returns all elements except last one.                                                                 |
 | def isEmpty: Boolean                | It checks whether the collection is empty or not. It returns either true or false.                       |
@@ -143,7 +141,7 @@ It returns a list.
 Commonly used Methods of Seq:
 
 | Method                                                    | Description                                                               |
-|-----------------------------------------------------------|---------------------------------------------------------------------------|
+| --------------------------------------------------------- | ------------------------------------------------------------------------- |
 | def contains[A1 >: A](elem: A1): Boolean                  | Check whether the given element present in this sequence.                 |
 | def copyToArray(xs: Array[A], start: Int, len: Int): Unit | It copies the seq elements to an array.                                   |
 | def endsWith[B](that: GenSeq[B]): Boolean                 | It tests whether this sequence ends with the given sequence or not.       |

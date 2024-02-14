@@ -17,7 +17,7 @@ regulatory requirements.
 
 ![Key Elements of Data Governance](./images/key-elements-of-data-governance.png)
 
-* **Data cataloging**
+- **Data cataloging**
 
   Effective data governance requires knowledge of the data that exists within an
   organization. This is where a data catalog comes in, as it provides a centralized
@@ -47,5 +47,5 @@ regulatory requirements.
 
 ## References
 
-* [Databricks: Data Governance](https://www.databricks.com/discover/data-governance)
-* [Digging into Data Governance and Data Modeling](https://medium.com/hashmapinc/digging-into-data-governance-and-data-modeling-e2ddaeddef93)
+- [Databricks: Data Governance](https://www.databricks.com/discover/data-governance)
+- [Digging into Data Governance and Data Modeling](https://medium.com/hashmapinc/digging-into-data-governance-and-data-modeling-e2ddaeddef93)

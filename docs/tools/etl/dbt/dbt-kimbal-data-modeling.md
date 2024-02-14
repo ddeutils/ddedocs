@@ -2,4 +2,4 @@
 
 ## References
 
-* https://docs.getdbt.com/blog/kimball-dimensional-model
+- https://docs.getdbt.com/blog/kimball-dimensional-model

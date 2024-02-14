@@ -9,10 +9,10 @@ in inefficient resource utilization and increased overall processing time.
 
 **Consequences of Data Skew**:
 
-* Performance Bottleneck: Tasks dealing with larger partitions take disproportionately
+- Performance Bottleneck: Tasks dealing with larger partitions take disproportionately
   longer to complete, causing other tasks and resources to idle.
 
-* Out of Memory (OOM) Errors: Excessive data in certain tasks can lead to memory
+- Out of Memory (OOM) Errors: Excessive data in certain tasks can lead to memory
   overflow, causing OOM errors and task failures.
 
 ## Handling Data Skew
@@ -398,5 +398,5 @@ datasets.
 
 ## References
 
-* [:simple-medium: Spark - Data Skew Odyssey Conquering the Chaos](https://medium.com/@BharathkumarV/sparks-data-skew-odyssey-conquering-the-chaos-d7c3c03e6121)
-* [:simple-medium: Spark Data Skew Solution (With Examples)](https://medium.com/@patrickwork0001/spark-data-skew-solution-with-examples-5643c9402938)
+- [:simple-medium: Spark - Data Skew Odyssey Conquering the Chaos](https://medium.com/@BharathkumarV/sparks-data-skew-odyssey-conquering-the-chaos-d7c3c03e6121)
+- [:simple-medium: Spark Data Skew Solution (With Examples)](https://medium.com/@patrickwork0001/spark-data-skew-solution-with-examples-5643c9402938)

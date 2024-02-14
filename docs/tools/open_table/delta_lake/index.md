@@ -22,4 +22,4 @@ and providing incremental processing at scale.
 
 ## References
 
-* [Microsoft - Azure Databricks: Delta](https://learn.microsoft.com/en-us/azure/databricks/delta/)
+- [Microsoft - Azure Databricks: Delta](https://learn.microsoft.com/en-us/azure/databricks/delta/)

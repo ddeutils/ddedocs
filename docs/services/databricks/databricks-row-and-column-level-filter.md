@@ -2,4 +2,4 @@
 
 ## References
 
-* https://medium.com/@rahulsoni4/row-level-filtering-and-column-level-masking-in-databricks-f561d3b81cc6
+- https://medium.com/@rahulsoni4/row-level-filtering-and-column-level-masking-in-databricks-f561d3b81cc6

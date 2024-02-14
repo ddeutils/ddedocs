@@ -21,14 +21,13 @@ goredis
 - Install Redis Server from Docker Container
 
 ```yaml
-version: '3.9'
+version: "3.9"
 services:
-
-    redis:
-        image: redis
-        container_name: redis
-        ports:
-            - "6379:6379"
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
 ```
 
 ```shell
@@ -83,19 +82,17 @@ Edit the docker-compose file:
 
 ```yaml
 # docker-compose.yml
-version: '3.9'
+version: "3.9"
 services:
-
-    redis:
-        image: redis
-        container_name: redis
-        ports:
-            - "6379:6379"
-        volumes:
-            - ./data/redis:/data
-            - ./config/redis.conf:/redis.conf
-        command: redis-server /redis.conf
-
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+      - ./config/redis.conf:/redis.conf
+    command: redis-server /redis.conf
 ```
 
 ## Create API Server with GO
@@ -148,10 +145,10 @@ services:
 ```
 
 ```js
-import http from 'k6/http'
+import http from "k6/http";
 
-export default function() {
-    http.get('http://host.docker.internal:8000/hello')
+export default function () {
+  http.get("http://host.docker.internal:8000/hello");
 }
 ```
 

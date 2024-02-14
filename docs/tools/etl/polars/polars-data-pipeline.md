@@ -689,4 +689,4 @@ to ensure proper parallelization.
 
 ## References
 
-* [:simple-medium: TowardDS - Data Pipelines with Polars: Step-by-Step Guide](https://towardsdatascience.com/data-pipelines-with-polars-step-by-step-guide-f5474accacc4)
+- [:simple-medium: TowardDS - Data Pipelines with Polars: Step-by-Step Guide](https://towardsdatascience.com/data-pipelines-with-polars-step-by-step-guide-f5474accacc4)

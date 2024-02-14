@@ -46,12 +46,11 @@ events, you can use `schedule`.
 #### Schedules
 
 ```yaml
-...
+---
 name: Weekly Job
 on:
-    schedule:
-        - cron: 0 12 * * 1
-...
+  schedule:
+    - cron: 0 12 * * 1
 ```
 
 !!! note
@@ -67,41 +66,39 @@ on: [push]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  build:
+    # - Actions run in VMs (Linux, Win, Max), or Docker on Linux Vm
+    # - Logs Steaming & Artifacts
+    # - Secret store with each repo or orgs
+    run-on: ${{ matrix.os }}
+    env:
+      IMG_NAME: ${{ github.repository }}
 
-    build:
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+        os: [macos-latest, windows-latest, ubuntu-18.04]
 
-        # - Actions run in VMs (Linux, Win, Max), or Docker on Linux Vm
-        # - Logs Steaming & Artifacts
-        # - Secret store with each repo or orgs
-        run-on: ${{ matrix.os }}
+    steps:
+      # Check out the code
+      - uses: actions/checkout@1
+
+      # Run pre-existing actions
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: npm install, build, and test
+        run: |
+          npm ci
+          npm run build --if-present
+          npm test
         env:
-            IMG_NAME: ${{ github.repository }}
+          CI: true
 
-        strategy:
-            matrix:
-                node-version: [8.x, 10.x, 12.x]
-                os: [macos-latest, windows-latest, ubuntu-18.04]
-
-        steps:
-            # Check out the code
-            - uses: actions/checkout@1
-
-            # Run pre-existing actions
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v1
-              with:
-                node-version: ${{ matrix.node-version }}
-
-            - name: npm install, build, and test
-              run: |
-                npm ci
-                npm run build --if-present
-                npm test
-              env:
-                CI: true
-
-    test:
-        needs: [ build ]
+  test:
+    needs: [build]
 ```
 
 !!! note
@@ -126,68 +123,66 @@ jobs:
 Reusable units of code.
 
 ```yaml
-...
+---
 jobs:
-    build_and_release:
-        name: Build and Release
-        run-on: ubuntu-latest
-        steps:
-            - name: Checkout Code
-              uses: actions/checkout@v1.0.0
+  build_and_release:
+    name: Build and Release
+    run-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1.0.0
 
-            - name: Build and Test
-              uses: actions/build-and-test@v1.0.0
+      - name: Build and Test
+        uses: actions/build-and-test@v1.0.0
 
-            - name: Create Draft Release
-              id: create_draft_release
-              uses: actions/create-draft-release@v1.0.0
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  tag_name: ${{ github.ref }}
-                  release_name: Release ${{ github.ref }}
-                  draft: true
-                  prerelease: false
+      - name: Create Draft Release
+        id: create_draft_release
+        uses: actions/create-draft-release@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: true
+          prerelease: false
 
-            - name: Generate Release notes
-              id: generate_release_notes
-              uses: actions/generate-release-notes@v1.0.0
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate Release notes
+        id: generate_release_notes
+        uses: actions/generate-release-notes@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Edit Release to add notes
-              uses: actions/add-release-notes@v1.0.0
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  release_notes: ${{ steps.generate_release_notes.outputs.release_notes }}
-                  release_id: ${{ steps.create_draft_release.outputs.release_id }}
-...
+      - name: Edit Release to add notes
+        uses: actions/add-release-notes@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release_notes: ${{ steps.generate_release_notes.outputs.release_notes }}
+          release_id: ${{ steps.create_draft_release.outputs.release_id }}
 ```
 
 ## Environments
 
-* Go to your Repository > Click on `Settings`
-* Go to `Environments` > Click `New environment`
+- Go to your Repository > Click on `Settings`
+- Go to `Environments` > Click `New environment`
 
 ```yaml
 deploy-dev:
-    name: Deploy to Dev
-    needs: [ build ]
-    environment:
-        # Same the name that setting on repo
-        name: Development
-        url: 'http://dev.myapp.com'
-
+  name: Deploy to Dev
+  needs: [build]
+  environment:
+    # Same the name that setting on repo
+    name: Development
+    url: "http://dev.myapp.com"
 ```
 
 ## Self-hosted Runners
 
 Steps:
 
-* Download and extract the setup scripts
-* Configure and authenticate the runner with the token
-* Start listening for jobs
+- Download and extract the setup scripts
+- Configure and authenticate the runner with the token
+- Start listening for jobs
 
 !!! note
 
@@ -211,34 +206,33 @@ Steps:
 ```yaml
 name: Target for call from another workflow
 on:
-    repository_dispatch:
-        type: [ MyCustomEventName ]
+  repository_dispatch:
+    type: [MyCustomEventName]
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Print client payload
-              run: |
-                  echo 'ParamA' is ${{ github.event.client_payload.paramA }}
-                  echo 'boolean' is ${{ github.event.client_payload.boolean }}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print client payload
+        run: |
+          echo 'ParamA' is ${{ github.event.client_payload.paramA }}
+          echo 'boolean' is ${{ github.event.client_payload.boolean }}
 ```
 
 ```yaml
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Repository Dispatch
-              uses: peter-evans/repository-dispatch@v1.1.2
-              with:
-                  # A repo scoped GitHub Personal Access Token (PAT)
-                  token: ${{ secrets.REPO_PAT }}
-                  event-type: MyCustomEventName
-                  client-payload: '{ "paramA": 123, "boolean": false }'
-
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1.1.2
+        with:
+          # A repo scoped GitHub Personal Access Token (PAT)
+          token: ${{ secrets.REPO_PAT }}
+          event-type: MyCustomEventName
+          client-payload: '{ "paramA": 123, "boolean": false }'
 ```
 
 ## GitHub Action Examples
@@ -495,4 +489,4 @@ jobs:
 
 ## References
 
-* [Jose Phrodriguezg: Build and Publish Docker Image with GitHub Actions](https://josephrodriguezg.medium.com/build-and-publish-docker-images-with-github-actions-78be3b3fbb9b)
+- [Jose Phrodriguezg: Build and Publish Docker Image with GitHub Actions](https://josephrodriguezg.medium.com/build-and-publish-docker-images-with-github-actions-78be3b3fbb9b)

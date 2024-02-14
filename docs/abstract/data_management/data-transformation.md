@@ -2,4 +2,4 @@
 
 ## References
 
-* [GetDBT: Data Transformation Process](https://www.getdbt.com/blog/data-transformation-process)
+- [GetDBT: Data Transformation Process](https://www.getdbt.com/blog/data-transformation-process)

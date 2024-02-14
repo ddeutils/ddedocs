@@ -79,5 +79,5 @@ if any(
 
 ## References
 
-* https://vvin.medium.com/mount-adls-gen2-to-databricks-file-system-using-service-principal-oauth-2-0-47527e339178
-* https://docs.databricks.com/en/storage/azure-storage.html
+- https://vvin.medium.com/mount-adls-gen2-to-databricks-file-system-using-service-principal-oauth-2-0-47527e339178
+- https://docs.databricks.com/en/storage/azure-storage.html

@@ -55,4 +55,4 @@ out.show()
 
 ## References
 
-* https://towardsdatascience.com/introducing-fugue-reducing-pyspark-developer-friction-a702230455de
+- https://towardsdatascience.com/introducing-fugue-reducing-pyspark-developer-friction-a702230455de

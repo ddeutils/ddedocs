@@ -10,6 +10,6 @@ https://towardsdatascience.com/introduction-to-logistic-regression-in-pyspark-9f
 
 ### Prophet
 
-* [Time Series Analysis with Python using Prophet](https://martinxpn.medium.com/time-series-analysis-with-python-using-prophet-98-100-days-of-python-689b26e8e222)
-* [Getting Started Predicting time series data with Facebook Prophet](https://towardsdatascience.com/getting-started-predicting-time-series-data-with-facebook-prophet-c74ad3040525)
-* [False Prophet: a Homemade Time Series Regression Model](https://towardsdatascience.com/false-prophet-a-homemade-time-series-regression-model-54e296b99438)
+- [Time Series Analysis with Python using Prophet](https://martinxpn.medium.com/time-series-analysis-with-python-using-prophet-98-100-days-of-python-689b26e8e222)
+- [Getting Started Predicting time series data with Facebook Prophet](https://towardsdatascience.com/getting-started-predicting-time-series-data-with-facebook-prophet-c74ad3040525)
+- [False Prophet: a Homemade Time Series Regression Model](https://towardsdatascience.com/false-prophet-a-homemade-time-series-regression-model-54e296b99438)

@@ -6,7 +6,6 @@
 docker system df
 ```
 
-
 ## Clear cache
 
 ```shell

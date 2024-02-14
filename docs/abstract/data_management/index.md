@@ -18,39 +18,39 @@ and operations throughout an organization
 So, whether you’re researching big data or master data, you'll use many types of
 data management.
 
-* **Data processing**:
+- **Data processing**:
 
-    Within this stage of the [data management lifecycle](https://www.ibm.com/topics/data-lifecycle-management),
-    raw data is ingested from a range of data sources, such as web APIs, mobile apps,
-    Internet of Things (IoT) devices, forms, surveys, and more. It is, then, usually
-    processed or loaded, via data integration techniques, such as [extract, transform,
-    load (ETL)](https://www.ibm.com/topics/etl) or [extract, load, transform (ELT)](https://www.ibm.com/topics/elt).
-    While ETL has historically been the standard method to integrate and organize
-    data across different datasets, ELT has been growing in popularity with the emergence
-    of cloud data platforms and the increasing demand for real-time data. Independently
-    of the [data integration](https://www.ibm.com/analytics/data-integration) technique
-    used, the data is usually filtered, merged,
-    or aggregated during the data processing stage to meet the requirements for its
-    intended purpose, which can range from a business intelligence dashboard to a
-    predictive machine learning algorithm.
+  Within this stage of the [data management lifecycle](https://www.ibm.com/topics/data-lifecycle-management),
+  raw data is ingested from a range of data sources, such as web APIs, mobile apps,
+  Internet of Things (IoT) devices, forms, surveys, and more. It is, then, usually
+  processed or loaded, via data integration techniques, such as [extract, transform,
+  load (ETL)](https://www.ibm.com/topics/etl) or [extract, load, transform (ELT)](https://www.ibm.com/topics/elt).
+  While ETL has historically been the standard method to integrate and organize
+  data across different datasets, ELT has been growing in popularity with the emergence
+  of cloud data platforms and the increasing demand for real-time data. Independently
+  of the [data integration](https://www.ibm.com/analytics/data-integration) technique
+  used, the data is usually filtered, merged,
+  or aggregated during the data processing stage to meet the requirements for its
+  intended purpose, which can range from a business intelligence dashboard to a
+  predictive machine learning algorithm.
 
-* **Data storage**:
+- **Data storage**:
 
-    While data can be stored before or after data processing, the type of data and
-    purpose of it will usually dictate the storage repository that is leveraged.
-    For example, data warehousing requires a defined schema to meet specific data
-    analytics requirements for data outputs, such as dashboards, [data visualizations],
-    and other [business intelligence] tasks. These data requirements are usually directed
-    and documented by business users in partnership with data engineers, who will
-    ultimately execute against the defined [data model]. The underlying structure of
-    a [data warehouse] is typically organized as a relational system (i.e. in a structured data format),
-    sourcing data from transactional databases. However, other storage systems,
-    such as [data lakes], incorporate data from both relational and [non-relational systems],
-    becoming a sandbox for innovative data projects. Data lakes benefit data scientists
-    in particular, as they allow them to incorporate both structured and unstructured
-    data into their data science projects.
+  While data can be stored before or after data processing, the type of data and
+  purpose of it will usually dictate the storage repository that is leveraged.
+  For example, data warehousing requires a defined schema to meet specific data
+  analytics requirements for data outputs, such as dashboards, [data visualizations],
+  and other [business intelligence] tasks. These data requirements are usually directed
+  and documented by business users in partnership with data engineers, who will
+  ultimately execute against the defined [data model]. The underlying structure of
+  a [data warehouse] is typically organized as a relational system (i.e. in a structured data format),
+  sourcing data from transactional databases. However, other storage systems,
+  such as [data lakes], incorporate data from both relational and [non-relational systems],
+  becoming a sandbox for innovative data projects. Data lakes benefit data scientists
+  in particular, as they allow them to incorporate both structured and unstructured
+  data into their data science projects.
 
-* **Data governance**:
+- **Data governance**:
 
   Data governance is a set of standards and business processes which ensure that
   data assets are leveraged effectively within an organization. This generally
@@ -62,7 +62,7 @@ data management.
   also help to define roles and responsibilities to ensure that data access is provided
   appropriately; this is particularly important to maintain data privacy.
 
-- **Data security**: \
+* **Data security**: \
   Data security sets guardrails in place to protect digital information from unauthorized
   access, corruption, or theft. As digital technology becomes an increasing part
   of our lives, more scrutiny is placed upon the security practices of modern businesses
@@ -111,11 +111,11 @@ business better data for decision-making.
 A data management strategy typically includes the following components:
 
 #### Data Governance
+
 This includes policies, procedures, and standards that ensure the appropriate use,
 management, and protection of data throughout its lifecycle. It also involves
 establishing roles and responsibilities for data management, as well as ensuring
 compliance with legal and regulatory requirements.
-
 
 #### Data Architecture
 
@@ -151,6 +151,7 @@ selecting appropriate business intelligence and analytics tools, defining key pe
 indicators (KPIs) and metrics, and developing dashboards and reports.
 
 #### Data Security and Privacy
+
 This involves ensuring the confidentiality, integrity, and availability of data.
 It includes establishing data security policies and procedures, implementing access
 controls and encryption, and complying with legal and regulatory requirements.

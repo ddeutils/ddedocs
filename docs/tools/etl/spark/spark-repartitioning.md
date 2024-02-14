@@ -400,5 +400,5 @@ efficient requires understanding the properties of the actual data.
 
 ## References
 
-* https://towardsdatascience.com/should-i-repartition-836f7842298c
-* https://medium.com/@tomhcorbin/repartitioning-in-spark-repartition-vs-coalesce-5e2fde5fa471
+- https://towardsdatascience.com/should-i-repartition-836f7842298c
+- https://medium.com/@tomhcorbin/repartitioning-in-spark-repartition-vs-coalesce-5e2fde5fa471

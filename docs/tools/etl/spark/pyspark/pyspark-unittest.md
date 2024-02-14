@@ -105,4 +105,4 @@ stages:
 
 ## References
 
-* https://medium.com/@xavier211192/how-to-write-pyspark-unit-tests-ci-with-pytest-61ad517f2027
+- https://medium.com/@xavier211192/how-to-write-pyspark-unit-tests-ci-with-pytest-61ad517f2027

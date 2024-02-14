@@ -171,6 +171,7 @@ println(cover)
 
 > **Note**: \
 > If you use MySQL, the above query row syntax will change to
+>
 > ```go
 > query := "select id, name from cover where id=?"
 > row := db.QueryRow(query, id)

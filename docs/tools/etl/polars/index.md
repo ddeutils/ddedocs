@@ -9,4 +9,4 @@ https://python.plainenglish.io/say-goodbye-to-pandas-introducing-polars-fabbd4a2
 
 ## Use-Cases
 
-* [:simple-medium: Process Hundreds of GB of Data in the Cloud](https://medium.com/coiled-hq/process-hundreds-of-gb-of-data-in-the-cloud-with-polars-6162532b3cfd)
+- [:simple-medium: Process Hundreds of GB of Data in the Cloud](https://medium.com/coiled-hq/process-hundreds-of-gb-of-data-in-the-cloud-with-polars-6162532b3cfd)

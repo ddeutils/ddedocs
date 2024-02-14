@@ -4,4 +4,4 @@
 
 ## References
 
-* https://medium.com/gooddata-developers/how-to-build-internal-analytics-without-relying-on-senior-engineers-b2d5032be2bc
+- https://medium.com/gooddata-developers/how-to-build-internal-analytics-without-relying-on-senior-engineers-b2d5032be2bc

@@ -114,6 +114,7 @@ func (r customerRepositoryDB) GetById(id int) (*Customer, error) {
 
 > **Note**: \
 > If you want to implement create function, you can use:
+>
 > ```go
 > query = "insert into ... values(?, ?, ?)"
 > result, err := r.db.Exec(
@@ -348,7 +349,6 @@ func main() {
 
 ## Create Mock Repository
 
-
 ```text
 bank
 |--> repository
@@ -453,15 +453,15 @@ func initConfig() {
 
 ```yaml
 app:
-    port: 8000
+  port: 8000
 
 db:
-    driver: "mysql"
-    host: "13.00.000.00"
-    port: 3306
-    username: root
-    password: P@ssw0rd
-    database: banking
+  driver: "mysql"
+  host: "13.00.000.00"
+  port: 3306
+  username: root
+  password: P@ssw0rd
+  database: banking
 ```
 
 ### Change Database Setup

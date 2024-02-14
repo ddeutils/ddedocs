@@ -4,13 +4,13 @@
 
 1.  Set up AWS IoT Core
 
-    * Go to **AWS IoT Core** :octicons-arrow-right-24: Manage :octicons-arrow-right-24: Thing types :octicons-arrow-right-24: Click `Create thing type`
+    - Go to **AWS IoT Core** :octicons-arrow-right-24: Manage :octicons-arrow-right-24: Thing types :octicons-arrow-right-24: Click `Create thing type`
 
-    * On Thing groups :octicons-arrow-right-24: Click `Create thing group`
+    - On Thing groups :octicons-arrow-right-24: Click `Create thing group`
 
-    * On Security :octicons-arrow-right-24: Policies :octicons-arrow-right-24: Click `Create policy`
+    - On Security :octicons-arrow-right-24: Policies :octicons-arrow-right-24: Click `Create policy`
 
-      * Create Connect Policy
+      - Create Connect Policy
 
         ```json linenums="1"
         {
@@ -18,9 +18,7 @@
           "Statement": [
             {
               "Effect": "Allow",
-              "Action": [
-                "iot:Connect"
-              ],
+              "Action": ["iot:Connect"],
               "Resource": [
                 "arn:aws:iot:<region>:<aws_account_id>:client/${iot:Connection.Thing.ThingName}"
               ]

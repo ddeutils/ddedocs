@@ -288,14 +288,14 @@ https://www.scalefree.com/scalefree-newsletter/insert-only-in-data-vault/
 
 ## Implements
 
-* [Data Vault on Snowflake](https://patrickcuba.medium.com/data-vault-on-snowflake-expanding-to-dimensional-models-5eb67cbdcf4b)
+- [Data Vault on Snowflake](https://patrickcuba.medium.com/data-vault-on-snowflake-expanding-to-dimensional-models-5eb67cbdcf4b)
 
 ## References
 
 - https://dbtvault.readthedocs.io/en/latest/
 - https://www.oraylis.de/blog/2016/data-vault-satellite-loads-explained
 - https://www.databricks.com/blog/2022/06/24/prescriptive-guidance-for-implementing-a-data-vault-model-on-the-databricks-lakehouse-platform.html
-- https://datavaultalliance.com/news/building-a-real-time-data-vault-in-snowflake/ ***
+- https://datavaultalliance.com/news/building-a-real-time-data-vault-in-snowflake/ \*\*\*
 - https://jerryrun.wordpress.com/2018/09/12/chapter-4-data-vault-20-modeling/
 - https://github.com/dbsys21/databricks-lakehouse/blob/main/lakehouse-buildout/data-vault/TPC-DLT-Data-Vault-2.0.sql
 - https://aws.amazon.com/blogs/big-data/design-and-build-a-data-vault-model-in-amazon-redshift-from-a-transactional-database/

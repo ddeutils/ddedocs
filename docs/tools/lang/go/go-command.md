@@ -73,6 +73,7 @@ y := 10
 
 > **Note**: \
 > When to use short declaration
+>
 > ```go
 > package main
 >
@@ -121,6 +122,7 @@ for i, v := range values {
 
 > **Note**: \
 > If you do not want to use index in for-each statement, you can use
+>
 > ```go
 > for _, v := range values {
 >     println(V)
@@ -359,7 +361,6 @@ println(x.GetName())
 ```text
 Tom
 ```
-
 
 ## References
 

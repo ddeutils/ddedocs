@@ -10,10 +10,10 @@ A DAG is a specific type of graph. It can be seen as a graphical representation
 of causal effects i.e. a node in a DAG is the result of an action/relation of its
 predecessor node. It has the following properties.
 
-* Has Nodes, Edges & Direction
-* No cycle
-* Topologically sorted/ordered
-* Idempotent
+- Has Nodes, Edges & Direction
+- No cycle
+- Topologically sorted/ordered
+- Idempotent
 
 !!! note
 
@@ -52,6 +52,6 @@ used in **Redis**.
 
 ## References
 
-* [5 Data Structures That You Probably Aren’t Familiar With](https://levelup.gitconnected.com/5-data-structures-that-you-probably-are-unfamiliar-with-but-are-extremely-useful-6d3b47f51b0c)
-* [:simple-medium: Advance Data Structures for Data Engineering — Part I](https://blog.devgenius.io/advance-data-structures-for-data-engineering-part-i-78ffd2fdd017)
-* [:simple-medium: Advance Data Structures for Data Engineering — Part II](https://blog.devgenius.io/advance-data-structures-for-data-engineering-part-ii-71e9901f1b3d)
+- [5 Data Structures That You Probably Aren’t Familiar With](https://levelup.gitconnected.com/5-data-structures-that-you-probably-are-unfamiliar-with-but-are-extremely-useful-6d3b47f51b0c)
+- [:simple-medium: Advance Data Structures for Data Engineering — Part I](https://blog.devgenius.io/advance-data-structures-for-data-engineering-part-i-78ffd2fdd017)
+- [:simple-medium: Advance Data Structures for Data Engineering — Part II](https://blog.devgenius.io/advance-data-structures-for-data-engineering-part-ii-71e9901f1b3d)

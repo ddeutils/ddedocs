@@ -23,5 +23,5 @@ val multipliedBy3Writer = multipliedBy3.writeStream.format("json")
 sparkSession.streams.awaitAnyTermination()
 ```
 
-* https://www.waitingforcode.com/apache-spark-structured-streaming/multiple-queries-running-apache-spark-structured-streaming/read
-* [Spark Structured Streaming: Multiple Sinks](https://blog.devgenius.io/spark-structured-streaming-multiple-sinks-writes-5dea139d4920)
+- https://www.waitingforcode.com/apache-spark-structured-streaming/multiple-queries-running-apache-spark-structured-streaming/read
+- [Spark Structured Streaming: Multiple Sinks](https://blog.devgenius.io/spark-structured-streaming-multiple-sinks-writes-5dea139d4920)

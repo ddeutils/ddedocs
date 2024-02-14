@@ -11,24 +11,23 @@ comment section.
 So how do we build a Star Schema? As proposed by Kimball, there are 4 steps in
 designing of a dimensional model.
 
-
-1) **Select the business process**. The first step is to identify the business
+1. **Select the business process**. The first step is to identify the business
    process that you want to model. Model the processes that are most significant
    or relevant to the business first.
 
-2) **Declare the grain**. Grain refers to the level of detail of the information
+2. **Declare the grain**. Grain refers to the level of detail of the information
    that you will store in the fact table. The grain should be at the most atomic
    or lowest level possible. For example, A line item on a grocery receipt. The
    grocery owner might want to ask questions such as “what are the items that
    sold the best during the day in our grocery store?”, and to answer this question
    we need to dig into line-item level instead of the order-level.
 
-3) **Identify the dimensions**. You can identify the dimensions by looking at the
+3. **Identify the dimensions**. You can identify the dimensions by looking at the
    descriptive information or attributes that exist in your business process and
    provide context to your measurable events. For example: payment method, customers,
    locations, etc.
 
-4) **Identify the facts**. Facts are the quantitative measures in your business
+4. **Identify the facts**. Facts are the quantitative measures in your business
    process that are always in numeric. For example: price, minutes, speed, etc.
    You should identify/select the measures that are true to your selected grain.
 
@@ -36,7 +35,7 @@ The dataset has 23 columns but for simplicity, I will exclude 4 irrelevant colum
 Here are the descriptions of the columns.
 
 | Columns                | Descriptions                                                                                                                       |
-|------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | TRANSACTION_REFERENCE  | The transaction identifier for each transaction made by consumer                                                                   |
 | USER_REFERENCE         | The user identifier of the consumer                                                                                                |
 | AGE_BAND               | The consumer age range                                                                                                             |

@@ -1,8 +1,9 @@
 # Data Modeling
 
 Read More ...
-* https://www.ibm.com/topics/data-modeling
-* https://medium.com/@HalderNilimesh/mastering-data-modeling-a-comprehensive-guide-to-conceptual-logical-and-physical-models-3accfc72451b
+
+- https://www.ibm.com/topics/data-modeling
+- https://medium.com/@HalderNilimesh/mastering-data-modeling-a-comprehensive-guide-to-conceptual-logical-and-physical-models-3accfc72451b
 
 ![Overall Data Modeling](images/data-model-overall.png)
 
@@ -102,42 +103,42 @@ that include a sequence of tasks to be performed in an iterative manner.
 
 Those workflows generally look like this:
 
-1) Identify the entities. The process of data modeling begins with the identification
-  of the things, events or concepts that are represented in the data set that is
-  to be modeled. Each entity should be cohesive and logically discrete from all others.
+1. Identify the entities. The process of data modeling begins with the identification
+   of the things, events or concepts that are represented in the data set that is
+   to be modeled. Each entity should be cohesive and logically discrete from all others.
 
-2) Identify key properties of each entity. Each entity type can be differentiated
-  from all others because it has one or more unique properties, called attributes.
-  For instance, an entity called "customer" might possess such attributes as a
-  first name, last name, telephone number and salutation, while an entity called
-  "address" might include a street name and number, a city, state, country and
-  zip code.
+2. Identify key properties of each entity. Each entity type can be differentiated
+   from all others because it has one or more unique properties, called attributes.
+   For instance, an entity called "customer" might possess such attributes as a
+   first name, last name, telephone number and salutation, while an entity called
+   "address" might include a street name and number, a city, state, country and
+   zip code.
 
-3) Identify relationships among entities. The earliest draft of a data model will
-  specify the nature of the relationships each entity has with the others.
-  In the above example, each customer "lives at" an address. If that model were
-  expanded to include an entity called "orders," each order would be shipped to
-  and billed to an address as well. These relationships are usually documented
-  via unified modeling language (UML).
+3. Identify relationships among entities. The earliest draft of a data model will
+   specify the nature of the relationships each entity has with the others.
+   In the above example, each customer "lives at" an address. If that model were
+   expanded to include an entity called "orders," each order would be shipped to
+   and billed to an address as well. These relationships are usually documented
+   via unified modeling language (UML).
 
-4) Map attributes to entities completely. This will ensure the model reflects how
-  the business will use the data. Several formal data modeling patterns are in
-  widespread use. Object-oriented developers often apply analysis patterns or
-  design patterns, while stakeholders from other business domains may turn to
-  other patterns.
+4. Map attributes to entities completely. This will ensure the model reflects how
+   the business will use the data. Several formal data modeling patterns are in
+   widespread use. Object-oriented developers often apply analysis patterns or
+   design patterns, while stakeholders from other business domains may turn to
+   other patterns.
 
-5) Assign keys as needed, and decide on a degree of normalization that balances
-  the need to reduce redundancy with performance requirements. Normalization is
-  a technique for organizing data models (and the databases they represent) in
-  which numerical identifiers, called keys, are assigned to groups of data to
-  represent relationships between them without repeating the data. For instance,
-  if customers are each assigned a key, that key can be linked to both their
-  address and their order history without having to repeat this information
-  in the table of customer names. Normalization tends to reduce the amount of
-  storage space a database will require, but it can at cost to query performance.
+5. Assign keys as needed, and decide on a degree of normalization that balances
+   the need to reduce redundancy with performance requirements. Normalization is
+   a technique for organizing data models (and the databases they represent) in
+   which numerical identifiers, called keys, are assigned to groups of data to
+   represent relationships between them without repeating the data. For instance,
+   if customers are each assigned a key, that key can be linked to both their
+   address and their order history without having to repeat this information
+   in the table of customer names. Normalization tends to reduce the amount of
+   storage space a database will require, but it can at cost to query performance.
 
-6) Finalize and validate the data model. Data modeling is an iterative process that
-  should be repeated and refined as business needs change.
+6. Finalize and validate the data model. Data modeling is an iterative process that
+   should be repeated and refined as business needs change.
 
 ## How Can We Define a Good Data Model?
 
@@ -146,30 +147,30 @@ should be taken into account?.
 
 I believe the following five dimensions are the most important:
 
-1) **Performance**
-This is a vast topic, and we are not discussing database vendors, data indexing,
-or technical modifications to boost read and write speeds. I believe we can
-ascribe performance advantages solely based on how we model the data.
+1. **Performance**
+   This is a vast topic, and we are not discussing database vendors, data indexing,
+   or technical modifications to boost read and write speeds. I believe we can
+   ascribe performance advantages solely based on how we model the data.
 
-2) **Productivity**
-On the developer side, we want a model that is simple to work with and reason about,
-so we can "create a lot of good code" without wasting time (the concept of productivity).
+2. **Productivity**
+   On the developer side, we want a model that is simple to work with and reason about,
+   so we can "create a lot of good code" without wasting time (the concept of productivity).
 
-3) **Clearness**
-The Data Model’s ability to be comprehended by those who look at it. As you may
-have heard, most developers read code rather than write it, therefore we must
-clearly grasp what we are doing with our data.
+3. **Clearness**
+   The Data Model’s ability to be comprehended by those who look at it. As you may
+   have heard, most developers read code rather than write it, therefore we must
+   clearly grasp what we are doing with our data.
 
-4) **Flexibility**
-The Model’s capacity to evolve without having a significant influence on our code.
-Because the startup you work for is evolving, the systems and Data Models that
-power it will need to evolve as well.
+4. **Flexibility**
+   The Model’s capacity to evolve without having a significant influence on our code.
+   Because the startup you work for is evolving, the systems and Data Models that
+   power it will need to evolve as well.
 
-5) **Traceability**
-Finally, we want to have data that is useful to the system as well as data that
-is valuable to our users. Knowing what happened in the past, what values the
-entities had at some point in time, being able to travel back and forth in time,
-and so on.
+5. **Traceability**
+   Finally, we want to have data that is useful to the system as well as data that
+   is valuable to our users. Knowing what happened in the past, what values the
+   entities had at some point in time, being able to travel back and forth in time,
+   and so on.
 
 But first, let me tell you about the "conventional way" of Modeling Data, which
 you are already aware of.
@@ -186,7 +187,6 @@ This type of modeling is obvious since it is specified in the same way that we
 think about the problem.
 
 So, let’s run the first test on our five dimensions of analysis (points 1–10):
-
 
 - Clearness: `10 points` \
   Yes, the model is crystal clear, precisely as humans think.
@@ -214,35 +214,35 @@ Hence, The above reason satisfies the need for Advanced-Data Modeling Concepts.
 
 The following are five different types of data organization techniques:
 
-1) Technique of Hierarchy
-A Tree-like structure characterizes the hierarchical model. There is one root
-node or one parent node, and the other child nodes are arranged in a specific
-order. However, the hierarchical approach is currently rarely employed.
-This paradigm is applicable to real-world model relationships.
+1. Technique of Hierarchy
+   A Tree-like structure characterizes the hierarchical model. There is one root
+   node or one parent node, and the other child nodes are arranged in a specific
+   order. However, the hierarchical approach is currently rarely employed.
+   This paradigm is applicable to real-world model relationships.
 
-2) Object-Oriented Model
-The Object-Oriented Method involves the construction of objects that contain
-values that have been saved. The Object-Oriented Model allows for communication
-while also allowing for Data Abstraction, Inheritance, and Encapsulation.
+2. Object-Oriented Model
+   The Object-Oriented Method involves the construction of objects that contain
+   values that have been saved. The Object-Oriented Model allows for communication
+   while also allowing for Data Abstraction, Inheritance, and Encapsulation.
 
-3) Networking Methodology
-The network model allows us to represent items and their relationships in a
-flexible manner. It has a feature called a schema that represents the data as
-a graph. An object is represented within a node, and the relationship between
-them is represented as an edge, allowing them to keep many parent and child
-records in a generalized fashion.
+3. Networking Methodology
+   The network model allows us to represent items and their relationships in a
+   flexible manner. It has a feature called a schema that represents the data as
+   a graph. An object is represented within a node, and the relationship between
+   them is represented as an edge, allowing them to keep many parent and child
+   records in a generalized fashion.
 
-4) Entity-Relationship Diagram
-The ER model (Entity-Relationship model) is a high-level relational model used to
-specify data pieces and relationships for system entities. This conceptual design
-provides a clearer view of the data, making it easier for us to interpret.
-The complete database is represented in this paradigm by an entity-relationship
-diagram, which is made up of Entities, Attributes, and Relationships.
+4. Entity-Relationship Diagram
+   The ER model (Entity-Relationship model) is a high-level relational model used to
+   specify data pieces and relationships for system entities. This conceptual design
+   provides a clearer view of the data, making it easier for us to interpret.
+   The complete database is represented in this paradigm by an entity-relationship
+   diagram, which is made up of Entities, Attributes, and Relationships.
 
-5) Relational Methodology
-The term "relational" refers to the various relationships that exist between the
-entities. There are also many sets of relationships between the entities,
-such as one to one, one to many, many to one, and many to many.
+5. Relational Methodology
+   The term "relational" refers to the various relationships that exist between the
+   entities. There are also many sets of relationships between the entities,
+   such as one to one, one to many, many to one, and many to many.
 
 ## Types of data modeling
 
@@ -319,23 +319,22 @@ A couple of these types of data models will be outlined and explained further do
 
 The following are the advantages of having a Data model from a business standpoint:
 
-
 - A Data model creates a common communication layer that makes it easier for the
-Data Architect and the business folks to communicate. It ensures that all the
-intricacies can be discussed in detail because it is a visual model with a
-shared terminology.
+  Data Architect and the business folks to communicate. It ensures that all the
+  intricacies can be discussed in detail because it is a visual model with a
+  shared terminology.
 
 - High-quality documentation ensures that the code that is implemented is also of
-high quality. The code builds on the preceding documentation phase's decisions,
-reducing the number of errors.
+  high quality. The code builds on the preceding documentation phase's decisions,
+  reducing the number of errors.
 
 - Developers can spend more time on feature development because there is less code
-that needs to be changed. As a result, the amount of time spent coding is reduced,
-and some costs are eliminated.
+  that needs to be changed. As a result, the amount of time spent coding is reduced,
+  and some costs are eliminated.
 
 - Creating a Data Model allows you to determine the scope of the project. Complexity
-is decreased and tough topics are comprehended because of the Data model's visual
-depiction.
+  is decreased and tough topics are comprehended because of the Data model's visual
+  depiction.
 
 The following are the technical advantages of having a Data Model:
 
@@ -344,17 +343,17 @@ The following are the technical advantages of having a Data Model:
   to concentrate on implementation rather than interpretation.
 
 - Lesser Mistakes: There are fewer mistakes. Fewer mistakes are made on the data
-and application side as a result of the Data model's clarity and precision.
-Developers can concentrate on feature development rather than database design.
+  and application side as a result of the Data model's clarity and precision.
+  Developers can concentrate on feature development rather than database design.
 
 - Database Structure Optimization: The Database structure can be optimized right
-from the start before any data is entered. This decreases the amount of data
-that needs to be moved (i.e. to improve performance after the database is in production).
+  from the start before any data is entered. This decreases the amount of data
+  that needs to be moved (i.e. to improve performance after the database is in production).
 
 - Data Risk Reduction: Risks to data are reduced. Data Architects and Database Administrators
-can develop backup and restore procedures if they have a better understanding
-of the data's size. In a disaster recovery scenario, having strategies and safeguards
-in place decreases risks.
+  can develop backup and restore procedures if they have a better understanding
+  of the data's size. In a disaster recovery scenario, having strategies and safeguards
+  in place decreases risks.
 
 ## References
 

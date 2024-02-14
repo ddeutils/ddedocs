@@ -9,19 +9,19 @@ times.
 
 **Consequences of Data Spill**:
 
-* Slowed Down Processing: Disk I/O is significantly slower than memory operations,
+- Slowed Down Processing: Disk I/O is significantly slower than memory operations,
   slowing down the overall application.
 
-* Increased Disk I/O: Frequent spilling increases disk I/O, which can affect the
+- Increased Disk I/O: Frequent spilling increases disk I/O, which can affect the
   lifespan of the hardware and lead to increased maintenance.
 
 ## Handling Data Spill
 
-* **Memory Management**: Tuning memory-related configurations like `spark.memory.fraction`
+- **Memory Management**: Tuning memory-related configurations like `spark.memory.fraction`
   to optimize the amount of memory available for different operations.
 
-* **Optimizing Operations**: Refactoring operations to be more memory-efficient, such
+- **Optimizing Operations**: Refactoring operations to be more memory-efficient, such
   as using more efficient data structures or algorithms.
 
-* **Adjusting Partition Size**: Increasing or decreasing the number of partitions to
+- **Adjusting Partition Size**: Increasing or decreasing the number of partitions to
   ensure that data fits comfortably in memory.

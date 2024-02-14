@@ -46,15 +46,15 @@ rdd.foreachPartition(print_partition)
 
 ## Use Cases
 
-* **Writing data to external systems**: foreach and foreachPartition are often used
+- **Writing data to external systems**: foreach and foreachPartition are often used
   to write the output of a PySpark job to an external system such as a file, database,
   or message queue. For example, you could use foreach to write each element of
   an RDD to a file, or use foreachPartition to write each partition to a separate
   file.
-* Sending data to an external service: Similarly, foreach and foreachPartition can be used to send data to an external service for further analysis. For example, you could use foreach to send each element of an RDD to a web service, or use foreachPartition to send each partition to a separate service.
-* Performing custom processing: foreachPartition can be useful when you want to perform some custom processing on each partition of an RDD. For example, you might want to calculate some summary statistics for each partition or perform some machine learning model training on each partition separately.
-* Debugging and logging: foreach and foreachPartition can be used for debugging and logging purposes. For example, you could use foreach to print the output of each element to the console for debugging purposes, or use foreachPartition to log each partition to a separate file for debugging and monitoring purposes.
-* Performing complex side-effecting operations: Finally, foreach and foreachPartition can be used to perform complex side-effecting operations that cannot be expressed using built-in PySpark transformations. For example, you could use foreach to perform some custom analysis on each element of an RDD, or use foreachPartition to perform some complex transformation on each partition.
+- Sending data to an external service: Similarly, foreach and foreachPartition can be used to send data to an external service for further analysis. For example, you could use foreach to send each element of an RDD to a web service, or use foreachPartition to send each partition to a separate service.
+- Performing custom processing: foreachPartition can be useful when you want to perform some custom processing on each partition of an RDD. For example, you might want to calculate some summary statistics for each partition or perform some machine learning model training on each partition separately.
+- Debugging and logging: foreach and foreachPartition can be used for debugging and logging purposes. For example, you could use foreach to print the output of each element to the console for debugging purposes, or use foreachPartition to log each partition to a separate file for debugging and monitoring purposes.
+- Performing complex side-effecting operations: Finally, foreach and foreachPartition can be used to perform complex side-effecting operations that cannot be expressed using built-in PySpark transformations. For example, you could use foreach to perform some custom analysis on each element of an RDD, or use foreachPartition to perform some complex transformation on each partition.
 
 It’s worth noting that foreach and foreachPartition are actions, meaning they
 trigger the execution of the computation on the RDD. Therefore, they should be used
@@ -64,4 +64,4 @@ perform operations on RDDs, and only use foreach and foreachPartition when neces
 
 ## References
 
-* [](https://medium.com/@uzzaman.ahmed/exploring-the-power-of-pyspark-a-guide-to-using-foreach-and-foreachpartition-actions-ce63c28feade)
+- [](https://medium.com/@uzzaman.ahmed/exploring-the-power-of-pyspark-a-guide-to-using-foreach-and-foreachpartition-actions-ce63c28feade)

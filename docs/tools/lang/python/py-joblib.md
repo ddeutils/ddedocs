@@ -10,7 +10,7 @@ pip install joblib
 
 ### Functions
 
-``` py hl_lines="6 20-23"
+```py hl_lines="6 20-23"
 import os
 import uuid
 import requests
@@ -38,7 +38,7 @@ colors = Parallel(n_jobs=-1)(
 
 ### Classes
 
-``` py hl_lines="1 14-15"
+```py hl_lines="1 14-15"
 from joblib import Parallel, delayed
 
 

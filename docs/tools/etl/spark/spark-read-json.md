@@ -15,7 +15,6 @@ df_raw = spark.createDataFrame(data = _data, schema = _cols)
 df_raw.printSchema()
 ```
 
-
 ```python
 # Determine the schema of the JSON payload from the column
 json_schema_df = spark.read.json(df_raw.rdd.map(lambda row: row.raw_data))

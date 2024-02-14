@@ -242,7 +242,6 @@ the schema of the table if it already exists.
 > This method will use for large data source because we check the record of `insert_data`
 > and `update_data` before merge to target delta table.
 
-
 ## Method 02: Union after Merge
 
 ```python

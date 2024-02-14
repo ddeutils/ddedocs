@@ -122,5 +122,5 @@
 
 ## References
 
-* [User Permission in Serverless SQL Pools](https://www.serverlesssql.com/user-permissions-in-serverless-sql-pools-external-tables-vs-views/)
-* [Serverless SQL: Partition Pruning Delta Tables in Azure Synapse Analytics](https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types)
+- [User Permission in Serverless SQL Pools](https://www.serverlesssql.com/user-permissions-in-serverless-sql-pools-external-tables-vs-views/)
+- [Serverless SQL: Partition Pruning Delta Tables in Azure Synapse Analytics](https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types)

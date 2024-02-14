@@ -13,13 +13,13 @@ finished, it would merge a code to main branch.
 
 - **master**
 
-    The source code of `HEAD` always reflects a _production-ready_
-    state.
+  The source code of `HEAD` always reflects a _production-ready_
+  state.
 
 - **develop**
 
-    The source code of `HEAD` always reflects a state with the
-    latest delivered development changes for the next release.
+  The source code of `HEAD` always reflects a state with the
+  latest delivered development changes for the next release.
 
 !!! note
 

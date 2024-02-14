@@ -6,24 +6,24 @@
 
 Enable Managed Service Identity (MSI) on Azure Function App Protol.
 
-* Go to Azure Function App :octicons-arrow-right-24: Select `Identity`
+- Go to Azure Function App :octicons-arrow-right-24: Select `Identity`
   :octicons-arrow-right-24: Click nav `System Assigned`
-* On Status :octicons-arrow-right-24: Enable to `On` :octicons-arrow-right-24:
+- On Status :octicons-arrow-right-24: Enable to `On` :octicons-arrow-right-24:
   Click `Save`
 
 ### 2) Enable AAD integration
 
 Enable AAD integration for Azure Synapse Workspace.
 
-* Go to Azure Synapse Workspace :octicons-arrow-right-24: Select `Azure Active Directory`
-* Click nav `Set admin` :octicons-arrow-right-24: Select your user :octicons-arrow-right-24: Click `Save`
+- Go to Azure Synapse Workspace :octicons-arrow-right-24: Select `Azure Active Directory`
+- Click nav `Set admin` :octicons-arrow-right-24: Select your user :octicons-arrow-right-24: Click `Save`
 
 ### 3) Add user to Azure Synapse
 
 Add The Azure Function MSI User to the Azure Synapse SQL Pool.
 
-* Connect to **Azure Synapse SQL Pool** on target database.
-* Create MSI user that use the Azure Function name
+- Connect to **Azure Synapse SQL Pool** on target database.
+- Create MSI user that use the Azure Function name
 
   ```sql
   CREATE USER <azure-function-name> FROM EXTERNAL PROVIDER

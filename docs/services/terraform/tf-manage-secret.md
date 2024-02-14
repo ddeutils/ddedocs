@@ -37,4 +37,4 @@ resource "aws_db_instance" "example" {
 
 ## References
 
-* [GruntWork: A Comprehensive Guide to Manage Secrets in Terraform](https://blog.gruntwork.io/a-comprehensive-guide-to-managing-secrets-in-your-terraform-code-1d586955ace1)
+- [GruntWork: A Comprehensive Guide to Manage Secrets in Terraform](https://blog.gruntwork.io/a-comprehensive-guide-to-managing-secrets-in-your-terraform-code-1d586955ace1)

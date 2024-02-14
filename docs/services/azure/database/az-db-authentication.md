@@ -400,7 +400,6 @@ public           |DATABASE_ROLE |query_store_query_variant|SELECT    |GRANT     
     For more detail, you can follew store procedure statement,
     [sp_dbpermissions](https://sqlstudies.com/free-scripts/sp_dbpermissions/)
 
-
 ## References
 
-* [SQL Server Create User and Grant Permission](https://copyprogramming.com/howto/sql-sql-server-create-user-and-grant-permission)
+- [SQL Server Create User and Grant Permission](https://copyprogramming.com/howto/sql-sql-server-create-user-and-grant-permission)

@@ -49,7 +49,7 @@ One of the first things to consider when setting up data skipping is the ideal
 data file size - too small, and you will have too many files (the well-known
 "small-file problem"); too large and you won’t be able to skip enough data.
 
-A good file size range is 32-128MB (1024 * 1024 * 32 = 33554432 for 32MB of course).
+A good file size range is 32-128MB (1024 _ 1024 _ 32 = 33554432 for 32MB of course).
 Again, the idea is that if the file size is too big, the dynamic file pruning
 will skip to the right file or files, but they will be so large it will still
 have a lot of work to do. By **creating smaller files**, you can benefit from file

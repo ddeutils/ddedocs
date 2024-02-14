@@ -109,13 +109,13 @@ to the hub gives us more context.
 > - Unique
 > - At the same level of granularity
 
-| Column        | Alias            | Description                                               | Constraints | Inclusion |
-|---------------|------------------|-----------------------------------------------------------|-------------|-----------|
-| HashKey       | `HUB_{name}_HK`  | HashKey generated from Business Key                       | PK          | Required  |
-| BusinessKey   | `{BS-name}_BK`   | Business defined business key                             | UQ          | Required  |
-| LoadDatetime  | `LDTS`           | Load Datetime from Stage to Data Vault                    |             | Required  |
-| RecordSource  | `RSCR`           | Specifics the source system from which the key originated |             | Required  |
-| LastSeenDate  |                  | Date a record was last included on a data load            |             | Optional  |
+| Column       | Alias           | Description                                               | Constraints | Inclusion |
+| ------------ | --------------- | --------------------------------------------------------- | ----------- | --------- |
+| HashKey      | `HUB_{name}_HK` | HashKey generated from Business Key                       | PK          | Required  |
+| BusinessKey  | `{BS-name}_BK`  | Business defined business key                             | UQ          | Required  |
+| LoadDatetime | `LDTS`          | Load Datetime from Stage to Data Vault                    |             | Required  |
+| RecordSource | `RSCR`          | Specifics the source system from which the key originated |             | Required  |
+| LastSeenDate |                 | Date a record was last included on a data load            |             | Optional  |
 
 **Loading Pattern**:
 
@@ -171,8 +171,8 @@ When thinking of a traditional star schema, links are often associated with fact
 
 | Column       | Alias             | DESC                                                         | Constraints | Inclusion |
 | ------------ | ----------------- | ------------------------------------------------------------ | ----------- | --------- |
-| HashKey      | sha_<type>_<name> | HashKey generated from Business Keys of Linked Hubs          | PK, UQ      | Required  |
-| BusinessKey  | <bs-name>_key     | Concatenation of Business Keys from linked Hubs              | UQ          | Optional  |
+| HashKey      | sha*<type>*<name> | HashKey generated from Business Keys of Linked Hubs          | PK, UQ      | Required  |
+| BusinessKey  | <bs-name>\_key    | Concatenation of Business Keys from linked Hubs              | UQ          | Optional  |
 | LoadDatetime | `LDTS`            | Load Date & Time from Stage to DV                            |             | Required  |
 | RecordSource | `RSCR`            | Specifics the source system from which the key(s) originated |             | Required  |
 | HubHashKey1  |                   | HushKey from Hub Relationship 1                              | FK          | Required  |
@@ -218,6 +218,7 @@ Link can have multiple satellites.
   In this satellite given hub or link entity has multiple active values. For example,
   it can be the case of a phone number that can be professional pr personnel, and both
   may be active at a given moment.
+
   - https://www.scalefree.com/scalefree-newsletter/using-multi-active-satellites-the-correct-way-1-2/
   - https://www.scalefree.com/scalefree-newsletter/using-multi-active-satellites-the-correct-way-2-2/
 
@@ -234,7 +235,7 @@ Link can have multiple satellites.
 
 | Column       | Alias             | DESC                                                         | Constraints | Inclusion |
 | ------------ | ----------------- | ------------------------------------------------------------ | ----------- | --------- |
-| HashKey      | sha_{type}_{name} | HashKey from parent Hub or Link                              | PK, FK      | Required  |
+| HashKey      | sha*{type}*{name} | HashKey from parent Hub or Link                              | PK, FK      | Required  |
 | LoadDatetime | LDTS              | Batch Load Date & Time from Stage to DV                      | PK          | Required  |
 | EndDatetime  | EDTS              | Load Date & Time the record became inactive                  |             | Required  |
 | RecordSource | RSCR              | Specifics the source system from which the key(s) originated |             | Required  |
@@ -430,29 +431,31 @@ r reporting purposes.
 
 Let’s run through each stage of the pipeline
 
-1) Data is landed either as an INSERT OVERWRITE or INSERT ONLY. Without dropping
+1. Data is landed either as an INSERT OVERWRITE or INSERT ONLY. Without dropping
    the target’s contents then this is the first place we can use Streams to process
    new records only downstream.
 
-2) Landed content is staged with data vault metadata tags, some of these are:
+2. Landed content is staged with data vault metadata tags, some of these are:
+
    - Surrogate hash keys – for joining related data vault tables
    - Load date – the timestamp of when the data enters the data warehouse
    - Applied date – the timestamp of the landed data
    - Record source – where the data came from
    - Record hashes – a single column representing a collection of descriptive attributes
 
-3) Autonomous loads through
+3. Autonomous loads through
+
    - Hub loaders – a template reused to load one or many hub tables
    - Link loaders – a template reused to load zero or many link tables
    - Sat loaders – a template reused to load zero or many satellite tables
 
-4) Test Automation measuring the integrity of all loaded (and related) data vault
+4. Test Automation measuring the integrity of all loaded (and related) data vault
    artefacts from the staged content
 
-5) Snapshot is taken of the current load dates and surrogate hash keys from the
+5. Snapshot is taken of the current load dates and surrogate hash keys from the
    parent entity (hub or link) and adjacent satellite tables.
 
-6) Use the AS_OF date table to control the PIT manifold to periodically populate
+6. Use the AS_OF date table to control the PIT manifold to periodically populate
    target PIT tables at the configured frequency.
 
    - **PIT**
@@ -474,6 +477,7 @@ Let’s run through each stage of the pipeline
      ![AS OF Table](../images/data-vault-as-of-table.png)
 
      AS_OF table controls the PIT snapshot in a combination of two ways
+
      - By Window: defining the start and end date of the AS_OF period, the window
        of snapshots to take. You can define a much larger than needed table but
        subset the window in execution.
@@ -482,7 +486,7 @@ Let’s run through each stage of the pipeline
        frequency and depth. Ideally this would not have any involvement by engineering
        teams, only to set this up. From there the business controls the 1 and 0 switches.
 
-7) Information Marts that are defined once as views over a designated PIT table.
+7. Information Marts that are defined once as views over a designated PIT table.
 
 ## Data Vault Architecture
 
@@ -504,6 +508,7 @@ Let’s run through each stage of the pipeline
 > These should be applied before data is stored in the DataVault. Any rules applied
 > here do not alter the contents or the granularity of the data, and maintains
 > auditability.
+>
 > - Data typing
 > - Normalization / De-normalization
 > - Adding system fields (tags)
@@ -514,6 +519,7 @@ Let’s run through each stage of the pipeline
 > **Soft Rules**: \
 > Rules that change, or interpret the data, for example adds business logic. This
 > changes the granularity of the data.
+>
 > - Concatenating name fields
 > - Standardizing addresses
 > - Computing monthly sales
@@ -534,6 +540,7 @@ Let’s run through each stage of the pipeline
   This is a hybrid approach, where you use both Bottom-up and Top-down approaches.
 
   Examples:
+
   - Hubs and Links follow Top-down approach
   - Satellite follows Bottom-up approach
 
@@ -572,6 +579,7 @@ Let’s run through each stage of the pipeline
 
 - **Adaptable** \
   Separation of hard and soft rules allows for quicker updated.
+
   - **Hard**: Any rule that does not change content of individual fields or gain.
   - **Soft**: Any rule that changes or interprets data, or changes the gain (turning data into information)
 
@@ -582,9 +590,9 @@ Let’s run through each stage of the pipeline
 
 - **Optimized Loading**
 
-  1) Decreased process complexity
-  2) Decreased amount of data being processed
-  3) Increased opportunities for parallelization
+  1. Decreased process complexity
+  2. Decreased amount of data being processed
+  3. Increased opportunities for parallelization
 
 - **Platform Agnostic**
   A data vault architecture and model can be built on many platforms - both on premise
@@ -593,9 +601,9 @@ Let’s run through each stage of the pipeline
 
 Good fit for:
 
-* Enterprise teams where the ability to audit data is a primary concern
-* Teams that need flexibility and who want to make large structural changes to their data without causing delays in reporting
-* More technical data teams that can manage and govern the network-like growth of data vault models
+- Enterprise teams where the ability to audit data is a primary concern
+- Teams that need flexibility and who want to make large structural changes to their data without causing delays in reporting
+- More technical data teams that can manage and govern the network-like growth of data vault models
 
 ## Disadvantages
 
@@ -629,6 +637,6 @@ Good fit for:
 - https://aginic.com/blog/modelling-with-data-vaults/
 - https://www.waitingforcode.com/general-big-data/data-vault-2-big-data/read
 - https://www.scalefree.com/scalefree-newsletter/point-in-time-tables-insurance/
-- https://digitalcommons.georgiasouthern.edu/cgi/viewcontent.cgi?article=2402&context=etd ***
+- https://digitalcommons.georgiasouthern.edu/cgi/viewcontent.cgi?article=2402&context=etd \*\*\*
 - https://www.linkedin.com/pulse/data-vault-pit-flow-manifold-patrick-cuba/
 - https://medium.com/snowflake/data-vault-naming-standards-76c93413d3c7

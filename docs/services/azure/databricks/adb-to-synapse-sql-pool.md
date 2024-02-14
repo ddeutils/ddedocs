@@ -3,8 +3,8 @@
 When you want to read and write data on **Azure Synapse Analytic SQL Pool** via
 **Azure Databricks**, that has 2 types of Azure Synapse SQL Pool:
 
-* [Serverless SQL Pool](#access-serverless-sql-pool)
-* [Dedicate SQL Pool](#access-dedicate-sql-pool)
+- [Serverless SQL Pool](#access-serverless-sql-pool)
+- [Dedicate SQL Pool](#access-dedicate-sql-pool)
 
 !!! note
 
@@ -154,8 +154,8 @@ URL = (
 
 **Reference**:
 
-* [Microsoft Databricks JDBC](https://learn.microsoft.com/en-us/azure/databricks/external-data/jdbc)
-* [Spark SQL Data Source JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
+- [Microsoft Databricks JDBC](https://learn.microsoft.com/en-us/azure/databricks/external-data/jdbc)
+- [Spark SQL Data Source JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
 
 #### Method 02: Spark Connector
 
@@ -166,15 +166,15 @@ SQL DB or Sql Server Instance**
 
 Install Driver on cluster:
 
-* **Maven**: `com.microsoft.azure:spark-mssql-connector_2.12:1.2.0`
+- **Maven**: `com.microsoft.azure:spark-mssql-connector_2.12:1.2.0`
 
-    | SPARK VERSION | MAVEN DEPENDENCY                                                                                 |
-    |---------------|--------------------------------------------------------------------------------------------------|
-    | Spark 2.4.x   | groupeId : com.microsoft.azure <br> artifactId : spark-mssql-connector <br> version : 1.0.2      |
-    | Spark 3.0.x   | groupeId : com.microsoft.azure <br> artifactId : spark-mssql-connector_2.12 <br> version : 1.1.0 |
-    | Spark 3.1.x   | groupeId : com.microsoft.azure <br> spark-mssql-connector_2.12 <br> version : 1.2.0              |
+  | SPARK VERSION | MAVEN DEPENDENCY                                                                                 |
+  | ------------- | ------------------------------------------------------------------------------------------------ |
+  | Spark 2.4.x   | groupeId : com.microsoft.azure <br> artifactId : spark-mssql-connector <br> version : 1.0.2      |
+  | Spark 3.0.x   | groupeId : com.microsoft.azure <br> artifactId : spark-mssql-connector_2.12 <br> version : 1.1.0 |
+  | Spark 3.1.x   | groupeId : com.microsoft.azure <br> spark-mssql-connector_2.12 <br> version : 1.2.0              |
 
-    Read More [Supported Version](https://search.maven.org/search?q=spark-mssql-connector)
+  Read More [Supported Version](https://search.maven.org/search?q=spark-mssql-connector)
 
 === "Table"
 
@@ -210,8 +210,8 @@ Install Driver on cluster:
 
 **Reference**:
 
-* [Microsoft SQL Spark Connector](https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver15)
-* [SQL Spark Connector](https://github.com/microsoft/sql-spark-connector)
+- [Microsoft SQL Spark Connector](https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver15)
+- [SQL Spark Connector](https://github.com/microsoft/sql-spark-connector)
 
 ## Access Dedicate SQL Pool
 
@@ -255,23 +255,23 @@ df = (
 
 **Reference**:
 
-* https://bennyaustin.com/2020/02/05/pysparkupsert/
+- https://bennyaustin.com/2020/02/05/pysparkupsert/
 
 ### Azure Service Principle
 
 #### 1) Create Service Principal
 
-* Go to `Azure Active Directory` :octicons-arrow-right-24: `App registrations`
+- Go to `Azure Active Directory` :octicons-arrow-right-24: `App registrations`
   :octicons-arrow-right-24: `New registration`
-* Add the information of this app like `name` is `adb_to_synapse`
-* Click register for create
-* Go to `App registrations` :octicons-arrow-right-24: `Certificates&secrets`
+- Add the information of this app like `name` is `adb_to_synapse`
+- Click register for create
+- Go to `App registrations` :octicons-arrow-right-24: `Certificates&secrets`
   :octicons-arrow-right-24: `New Client Secret`
-* Save this value to `Azure Key Vaults`
+- Save this value to `Azure Key Vaults`
 
 #### 2) Create User in Azure Synapse
 
-* Give it some permissions (On the Dedicated SQL pool, we can add a user and
+- Give it some permissions (On the Dedicated SQL pool, we can add a user and
   assign it to the proper role),
 
   ```sql
@@ -298,11 +298,11 @@ df = (
 
 #### 3) Azure Storage Temp Account
 
-* Go to `Storage account` :octicons-arrow-right-24: `Access Control (IAM)`
+- Go to `Storage account` :octicons-arrow-right-24: `Access Control (IAM)`
   :octicons-arrow-right-24: `Add role assignment`
-* Select Role: `Storage Blob Data Contributor`
-* Select: `register application`
-* Click on save.
+- Select Role: `Storage Blob Data Contributor`
+- Select: `register application`
+- Click on save.
 
 #### 4) Connection Code
 
@@ -345,8 +345,8 @@ df = (
 
 **References**:
 
-* https://pl.seequality.net/load-synapse-analytics-sql-pool-with-azure-databricks/
-* https://learn.microsoft.com/en-us/answers/questions/327270/azure-databricks-to-azure-synapse-service-principa?orderby=newest
+- https://pl.seequality.net/load-synapse-analytics-sql-pool-with-azure-databricks/
+- https://learn.microsoft.com/en-us/answers/questions/327270/azure-databricks-to-azure-synapse-service-principa?orderby=newest
 
 ## Send DDL or DML to Azure Synapse SQL Pool
 
@@ -455,7 +455,6 @@ connection: Connection = driver_manager.getConnection(URL, props)
     > INSERT INTO jdbc (`name`) VALUES ('Line 1: Lorem ipsum ...'), ('Line 2: Lorem ipsum ...')
     > ```
 
-
 === "Call Store Procedure"
 
     ```python
@@ -514,13 +513,13 @@ conn = pyodbc.connect(
 
 **Reference**:
 
-* [Using PyODBC in Azure Databricks for Connecting with MSSQL](https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server)
+- [Using PyODBC in Azure Databricks for Connecting with MSSQL](https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server)
 
 ## References
 
-* (https://docs.databricks.com/data/data-sources/azure/synapse-analytics.html)
-* (https://joeho.xyz/blog-posts/how-to-connect-to-azure-synapse-in-azure-databricks/)
-* (https://learn.microsoft.com/en-us/answers/questions/653154/databricks-packages-for-batch-loading-to-azure.html)
-* :fontawesome-brands-stack-overflow: (https://stackoverflow.com/questions/55708079/spark-optimise-writing-a-dataframe-to-sql-server/55717234) (***)
-* (https://docs.databricks.com/external-data/synapse-analytics.html)
-* (https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control)
+- (https://docs.databricks.com/data/data-sources/azure/synapse-analytics.html)
+- (https://joeho.xyz/blog-posts/how-to-connect-to-azure-synapse-in-azure-databricks/)
+- (https://learn.microsoft.com/en-us/answers/questions/653154/databricks-packages-for-batch-loading-to-azure.html)
+- :fontawesome-brands-stack-overflow: (https://stackoverflow.com/questions/55708079/spark-optimise-writing-a-dataframe-to-sql-server/55717234) (\*\*\*)
+- (https://docs.databricks.com/external-data/synapse-analytics.html)
+- (https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control)

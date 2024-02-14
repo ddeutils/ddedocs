@@ -15,11 +15,11 @@ icon: simple/apachespark
 
 ![Spark Cluster Overview](./images/spark-cluster-overview.png)
 
-* [Understanding Apache Spark Architecture](https://medium.com/@shobhittulshain/understanding-spark-architecture-6003184a12ec)
-* [A Deep Dive into Apache Spark Architecture](https://medium.com/@shaloomathew/a-deep-dive-into-apache-spark-architecture-fe01723b1aa6)
-* https://medium.com/@think-data/this-level-of-detail-in-spark-is-tackled-only-by-experts-2-975cfb41af50
-* [Partitioning & Bucketing](https://blog.det.life/apache-spark-partitioning-and-bucketing-1790586e8917)
-* [How does Adaptive Query Execution fix your Spark performance issues](https://medium.com/@kerrache.massipssa/how-does-adaptive-query-execution-fix-your-spark-performance-issues-029166e772b7)
+- [Understanding Apache Spark Architecture](https://medium.com/@shobhittulshain/understanding-spark-architecture-6003184a12ec)
+- [A Deep Dive into Apache Spark Architecture](https://medium.com/@shaloomathew/a-deep-dive-into-apache-spark-architecture-fe01723b1aa6)
+- https://medium.com/@think-data/this-level-of-detail-in-spark-is-tackled-only-by-experts-2-975cfb41af50
+- [Partitioning & Bucketing](https://blog.det.life/apache-spark-partitioning-and-bucketing-1790586e8917)
+- [How does Adaptive Query Execution fix your Spark performance issues](https://medium.com/@kerrache.massipssa/how-does-adaptive-query-execution-fix-your-spark-performance-issues-029166e772b7)
 
 ## Spark Context vs Spark Session
 
@@ -82,8 +82,8 @@ icon: simple/apachespark
 
 Spark has two API types
 
-* Low-level API (Unstructured)
-* High-level API (Spark’s Structured API)
+- Low-level API (Unstructured)
+- High-level API (Spark’s Structured API)
 
 ![Structured Spark API Execution plan](./images/spark-api-plan.png)
 
@@ -98,15 +98,15 @@ rdd = spark.read.csv("file.csv", header=True).rdd
 
 RDDs support 2 operations:
 
-* **Transformations** — create new rdd but lazy meaning they don't execute until you
+- **Transformations** — create new rdd but lazy meaning they don't execute until you
   call an action on RDD.
 
-    Some transformations on RDDs are `flatMap()`, `map()`, `reduceByKey()`, `filter()`, `sortByKey()`
-    and all these return a new RDD instead of updating the current.
+  Some transformations on RDDs are `flatMap()`, `map()`, `reduceByKey()`, `filter()`, `sortByKey()`
+  and all these return a new RDD instead of updating the current.
 
-* **Actions** — return value to driver program after compute dataset finish.
+- **Actions** — return value to driver program after compute dataset finish.
 
-    Some actions on RDDs are `count()`,  `collect()`,  `first()`,  `max()`,  `reduce()`  and more.
+  Some actions on RDDs are `count()`, `collect()`, `first()`, `max()`, `reduce()` and more.
 
 ### High-level API
 
@@ -122,24 +122,24 @@ https://blog.stackademic.com/apache-spark-101-understanding-spark-code-execution
 
 ## Practices
 
-* https://medium.com/@uzzaman.ahmed/list/pyspark-sql-basics101-d80bd574842d
+- https://medium.com/@uzzaman.ahmed/list/pyspark-sql-basics101-d80bd574842d
 
 ## Most Common Use Cases
 
-* https://towardsdatascience.com/fetch-failed-exception-in-apache-spark-decrypting-the-most-common-causes-b8dff21075c
-* https://medium.com/art-of-data-engineering/distinct-and-dropduplicates-in-spark-real-project-example-9007954b49af
-* https://medium.com/@vishalbarvaliya/coalesce-vs-repartition-58b12a0f0a3d
-* https://medium.com/@vishalbarvaliya/apache-sparks-reducebykey-and-reduce-transformations-42b3bd80e32e
+- https://towardsdatascience.com/fetch-failed-exception-in-apache-spark-decrypting-the-most-common-causes-b8dff21075c
+- https://medium.com/art-of-data-engineering/distinct-and-dropduplicates-in-spark-real-project-example-9007954b49af
+- https://medium.com/@vishalbarvaliya/coalesce-vs-repartition-58b12a0f0a3d
+- https://medium.com/@vishalbarvaliya/apache-sparks-reducebykey-and-reduce-transformations-42b3bd80e32e
 
 ## Interview Questions
 
-* https://blog.devgenius.io/spark-interview-questions-ii-120e1621be9a
-* https://blog.devgenius.io/spark-interview-questions-x-843a24cb703a
-* https://gsanjeewa1111.medium.com/pyspark-facts-b83366842ddf
-* [Top 25 PySpark Interview Questions and Answers (2023)](https://blog.varunsingh.in/top-25-pyspark-interview-questions-and-answers-2023-2eb3c67cbaf5)
+- https://blog.devgenius.io/spark-interview-questions-ii-120e1621be9a
+- https://blog.devgenius.io/spark-interview-questions-x-843a24cb703a
+- https://gsanjeewa1111.medium.com/pyspark-facts-b83366842ddf
+- [Top 25 PySpark Interview Questions and Answers (2023)](https://blog.varunsingh.in/top-25-pyspark-interview-questions-and-answers-2023-2eb3c67cbaf5)
 
 ## Optimization
 
-* https://medium.com/plumbersofdatascience/7-key-strategies-to-optimize-your-spark-applications-948e7df607b
-* [PySpark Tips](https://towardsdev.com/pyspark-tip-d4614b013d6f)
-* [4 Examples to Take Your PySpark Skills to Next Level](https://towardsdatascience.com/4-examples-to-take-your-pyspark-skills-to-next-level-2a04cbe6e630)
+- https://medium.com/plumbersofdatascience/7-key-strategies-to-optimize-your-spark-applications-948e7df607b
+- [PySpark Tips](https://towardsdev.com/pyspark-tip-d4614b013d6f)
+- [4 Examples to Take Your PySpark Skills to Next Level](https://towardsdatascience.com/4-examples-to-take-your-pyspark-skills-to-next-level-2a04cbe6e630)

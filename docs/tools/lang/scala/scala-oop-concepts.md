@@ -17,6 +17,7 @@ to create object and class so that you can develop object-oriented applications.
   cell phone are the real world objects.
 
   Object typically has two characteristics:
+
   - State: data values of an object are known as its state.
   - Behavior: functionality that an object performs is known as its behavior.
 
@@ -29,6 +30,7 @@ to create object and class so that you can develop object-oriented applications.
   of similar type.
 
   In scala, a class can contain:
+
   - Data member
   - Member method
   - Constructor
@@ -40,7 +42,6 @@ to create object and class so that you can develop object-oriented applications.
   scope. If you don't specify access scope, it is public. There must be an object
   in which main method is defined. It provides starting point for your program.
   Here, we have created an example of class.
-
 
 ```scala
 class Student {
@@ -105,6 +106,7 @@ new Arithmetic().add(10, 10);  // Sum = 20
 > Access modifier is used to define accessibility of data and our code to the outside
 > world. Scala provides only three types of access modifiers, which are given
 > below:
+>
 > - No modifier
 > - Protected: `protected var ...`
 > - Private: `private var ...`

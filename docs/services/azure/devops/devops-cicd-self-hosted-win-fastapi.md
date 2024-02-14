@@ -170,7 +170,7 @@ sc.exe start "FastAPIService"
 
 > **Warning**: \
 > I cannot use the python package, `pywin32`, because I get the error message; `Error 1053: The
-> service did not respond to the start or control request in a timely fashion` when start this
+service did not respond to the start or control request in a timely fashion` when start this
 > application service on locally.
 
 ### Setup Agent to On-Premises Server
@@ -211,70 +211,70 @@ For the **CI pipeline**, I test code and package dependencies on the artifact se
 
 ```yaml
 jobs:
-- job: Phase_1
-  displayName: Build and Test
-  pool:
-    vmImage: windows-latest
-  variables:
-    python.version: '3.9, 3.10'
-  steps:
-  - checkout: self
-    clean: true
-    fetchDepth: 1
-  - task: UsePythonVersion@0
-    displayName: Use Python $(python.version)
-    inputs:
-      versionSpec: $(python.version)
-  - task: CmdLine@2
-    displayName: Install dependencies
-    inputs:
-      script: python -m pip install --upgrade pip && pip install -r requirements.txt
-      workingDirectory: fastapi
-      failOnStderr: true
-  - task: CmdLine@2
-    displayName: pytest
-    inputs:
-      script: pip install pytest && pytest tests --doctest-modules --junitxml=junit/test-results.xml
-      workingDirectory: fastapi
-      failOnStderr: true
-  - task: PublishTestResults@2
-    displayName: Publish Test Results **/test-results.xml
-    inputs:
-      testResultsFiles: '**/test-results.xml'
-      failTaskOnFailedTests: true
-      testRunTitle: Python $(python.version)
-- job: Phase_2
-  displayName: Publish
-  dependsOn: Phase_1
-  pool:
-    vmImage: windows-latest
-  steps:
-  - checkout: self
-    clean: true
-    fetchDepth: 1
-  - task: UsePythonVersion@0
-    displayName: Use Python 3.9.13
-    inputs:
-      versionSpec: 3.9.13
-  - task: CmdLine@2
-    displayName: Create virtual environment
-    inputs:
-      script: python -m pip install --upgrade pip && python -m venv venv
-      workingDirectory: fastapi
-  - task: CmdLine@2
-    displayName: Install dependencies
-    inputs:
-      script: .\venv\Scripts\activate && pip install -r requirements.txt --no-cache
-      workingDirectory: fastapi
-  - task: CmdLine@2
-    displayName: Pack dependency files to wheel format
-    inputs:
-      script: .\venv\Scripts\activate && pip wheel -w wheels -r .\requirements.txt && echo "Create wheel files successful."
-      workingDirectory: fastapi
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: drop'
-    inputs:
-      PathtoPublish: fastapi
+  - job: Phase_1
+    displayName: Build and Test
+    pool:
+      vmImage: windows-latest
+    variables:
+      python.version: "3.9, 3.10"
+    steps:
+      - checkout: self
+        clean: true
+        fetchDepth: 1
+      - task: UsePythonVersion@0
+        displayName: Use Python $(python.version)
+        inputs:
+          versionSpec: $(python.version)
+      - task: CmdLine@2
+        displayName: Install dependencies
+        inputs:
+          script: python -m pip install --upgrade pip && pip install -r requirements.txt
+          workingDirectory: fastapi
+          failOnStderr: true
+      - task: CmdLine@2
+        displayName: pytest
+        inputs:
+          script: pip install pytest && pytest tests --doctest-modules --junitxml=junit/test-results.xml
+          workingDirectory: fastapi
+          failOnStderr: true
+      - task: PublishTestResults@2
+        displayName: Publish Test Results **/test-results.xml
+        inputs:
+          testResultsFiles: "**/test-results.xml"
+          failTaskOnFailedTests: true
+          testRunTitle: Python $(python.version)
+  - job: Phase_2
+    displayName: Publish
+    dependsOn: Phase_1
+    pool:
+      vmImage: windows-latest
+    steps:
+      - checkout: self
+        clean: true
+        fetchDepth: 1
+      - task: UsePythonVersion@0
+        displayName: Use Python 3.9.13
+        inputs:
+          versionSpec: 3.9.13
+      - task: CmdLine@2
+        displayName: Create virtual environment
+        inputs:
+          script: python -m pip install --upgrade pip && python -m venv venv
+          workingDirectory: fastapi
+      - task: CmdLine@2
+        displayName: Install dependencies
+        inputs:
+          script: .\venv\Scripts\activate && pip install -r requirements.txt --no-cache
+          workingDirectory: fastapi
+      - task: CmdLine@2
+        displayName: Pack dependency files to wheel format
+        inputs:
+          script: .\venv\Scripts\activate && pip wheel -w wheels -r .\requirements.txt && echo "Create wheel files successful."
+          workingDirectory: fastapi
+      - task: PublishBuildArtifacts@1
+        displayName: "Publish Artifact: drop"
+        inputs:
+          PathtoPublish: fastapi
 ```
 
 > **Note**: \

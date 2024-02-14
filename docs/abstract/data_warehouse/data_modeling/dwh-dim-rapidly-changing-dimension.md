@@ -23,7 +23,7 @@ For example:
 
 Consider patient dimension where there are 1000 rows in it. On average basis,
 each patient changes the 10 of attributes in a year. If you use the type 2 to manage
-this scenario, there will be 1000*10 = 10000 rows. Imagine if the table has 1 million rows,
+this scenario, there will be 1000\*10 = 10000 rows. Imagine if the table has 1 million rows,
 it’ll become very hard to handle the situation with type 2.
 Hence, we use rapidly changing dimension approach.
 

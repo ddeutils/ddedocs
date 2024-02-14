@@ -16,9 +16,9 @@ each node.
 
 ## SortMerge Joins
 
- It consists of hashing each row on both table and shuffle the rows with the same
- hash into the same partition. There the keys are sorted on both side and the `sortMerge`
- algorithm is applied.
+It consists of hashing each row on both table and shuffle the rows with the same
+hash into the same partition. There the keys are sorted on both side and the `sortMerge`
+algorithm is applied.
 
 To drastically speed up your sortMerges, write your large datasets as a Hive table
 with pre-bucketing and pre-sorting option (same number of partitions) instead of
@@ -109,6 +109,6 @@ Example: In a geospatial analysis scenario, joining geographic data organized by
 
 ## References
 
-* https://towardsdatascience.com/the-art-of-joining-in-spark-dcbd33d693c
-* https://towardsdatascience.com/strategies-of-spark-join-c0e7b4572bcf
-* [:simple-medium: Spark Joining Strategy Part I](https://medium.com/@patrickwork0001/spark-joining-strategy-part-1-1f9ca35dc87f)
+- https://towardsdatascience.com/the-art-of-joining-in-spark-dcbd33d693c
+- https://towardsdatascience.com/strategies-of-spark-join-c0e7b4572bcf
+- [:simple-medium: Spark Joining Strategy Part I](https://medium.com/@patrickwork0001/spark-joining-strategy-part-1-1f9ca35dc87f)
