@@ -38,6 +38,10 @@ will go to any specialize roles on technical data tools such as,
 - [Data Platform Engineer](dae-data-platform-engineer.md)
 - [MlOps Engineer]()
 
+## Daily Work
+
+[Daily Work Routine as a Data Engineer](https://medium.com/@patrickwork0001/daily-work-routine-as-a-data-engineer-ee9e9cc2190c)
+
 ## Practices
 
 ### Beginner
