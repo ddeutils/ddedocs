@@ -2,6 +2,32 @@
 
 ## Latest Changes
 
+## 20240219
+
+### :scissors: References
+
+- :clipboard: refs: add k8s docs from medium. (_2024-02-19_)
+
+### :book: Documents
+
+- :pencil: summary: sum git docs on index page. (_2024-02-19_)
+
+### :black_nib: Code Changes
+
+- :art: styled: change format of mkdocs config file. (_2024-02-19_)
+
+### :package: Build & Workflow
+
+- :toolbox: build: rename of publish workflow from ci. (_2024-02-19_)
+- :toolbox: build: update ci workflow that able to use cache depend on requirement file. (_2024-02-14_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update clishelf version to 0.1.8. (_2024-02-19_)
+- :pushpin: deps: comment markdown-link-check hook for initial development. (_2024-02-14_)
+- :pushpin: deps: add prettier hook on this project. (_2024-02-14_)
+- :pushpin: deps: update clishelf version that fix write changelog file. (_2024-02-13_)
+
 ## 20240213
 
 ### :book: Documents
