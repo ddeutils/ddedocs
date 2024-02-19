@@ -80,8 +80,5 @@ repos:
 #      - id: markdown-link-check
 #        name: markdown-link-check
 #        files: \.md$
-#        args:
-#          - -q
-#          - --config
-#          - .md-link-check.json
+#        args: ["-q", "--config", ".markdown-link-check.json"]
 #        stages: [commit]
