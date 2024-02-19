@@ -1,2 +1,2 @@
-clishelf==0.1.7
+clishelf==0.1.8
 mkdocs-material==9.5.9
