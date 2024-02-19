@@ -255,9 +255,7 @@ nav:
       - Version Control:
           - Git:
               - tools/vcs/git/index.md
-              - Commands:
-                  - Common: tools/vcs/git/git-cmd-common.md
-                  - Advance: tools/vcs/git/git-cmd-advance.md
+              - Advance Command: tools/vcs/git/git-cmd-advance.md
               - Scenarios:
                   - tools/vcs/git/git-common-scenarios.md
                   - Revert Commit: tools/vcs/git/git-revert-commit.md
@@ -490,6 +488,7 @@ nav:
 plugins:
   - tags
   - search
+  - glightbox
 
 markdown_extensions:
   - attr_list

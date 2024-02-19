@@ -1,2 +1,3 @@
 clishelf==0.1.8
-mkdocs-material==9.5.9
+mkdocs-glightbox==0.3.7
+mkdocs-material==9.5.10

@@ -121,7 +121,7 @@ username/myproject$ git status
 >     YOUR MESSAGE
 ```
 
-### `--hard` option
+#### `--hard` option
 
 ```shell
 username/myproject$ git reset --hard HEAD~1
@@ -143,62 +143,69 @@ username/myproject$ git status
 
 ## Reset `master` Branch
 
-### First Method
+=== "First Method"
 
-```shell
-# Clone the project, e.g. `myproject` is my project repository
-username/myproject$ git clone https://github/username/myproject.git
+    ```shell
+    # Clone the project, e.g. `myproject` is my project repository
+    username/myproject$ git clone https://github/username/myproject.git
 
-# Since all of the commits history are in the `.git` folder, we have to remove it
-username/myproject$ cd myproject
+    # Since all of the commits history are in the `.git` folder, we have to remove it
+    username/myproject$ cd myproject
 
-# And delete the `.git` folder:
-username/myproject$ git rm -rf .git
+    # And delete the `.git` folder:
+    username/myproject$ git rm -rf .git
 
-# Now, re-initialize the repository:
-username/myproject$ git init
-username/myproject$ git remote add origin https://github.com/heiswayi/myproject.git
-username/myproject$ git remote -v
+    # Now, re-initialize the repository:
+    username/myproject$ git init
+    username/myproject$ git remote add origin https://github.com/heiswayi/myproject.git
+    username/myproject$ git remote -v
 
-# Add all the files and commit the changes:
-username/myproject$ git add --all
-username/myproject$ git commit -am "Initial commit"
+    # Add all the files and commit the changes:
+    username/myproject$ git add --all
+    username/myproject$ git commit -am "Initial commit"
 
-# Force push update to the master branch of our project repository:
-username/myproject$ git push -f origin master
-```
+    # Force push update to the master branch of our project repository:
+    username/myproject$ git push -f origin master
+    ```
 
-> NOTE: You might need to provide the credentials for your GitHub account.
+    !!! note
 
-### Second Method
+        You might need to provide the credentials for your GitHub account.
 
-Deleting the `.git` folder may cause problems in our git repository. If we want to delete all of our commits history, but keep the code in its current state, try this:
+=== "Second Method"
 
-```shell
-# Check out to a temporary branch
-username/myproject$ git checkout --orphan "TEMP_BRANCH"
+    Deleting the `.git` folder may cause problems in our git repository. If we want
+    to delete all of our commits history, but keep the code in its current state,
+    try this:
 
-# Add all the files
-username/myproject$ git add -A
+    ```shell
+    # Check out to a temporary branch
+    username/myproject$ git checkout --orphan "TEMP_BRANCH"
 
-# Commit the changes
-username/myproject$ git commit -am "Initial commit"
+    # Add all the files
+    username/myproject$ git add -A
 
-# Delete the old branch
-username/myproject$ git branch -D master
+    # Commit the changes
+    username/myproject$ git commit -am "Initial commit"
 
-# Rename the temporary branch, "TEMP_BRANCH" to master
-username/myproject$ git branch -m master
+    # Delete the old branch
+    username/myproject$ git branch -D master
 
-# Finally, force update to our repository
-username/myproject$ git push -f origin master
-```
+    # Rename the temporary branch, "TEMP_BRANCH" to master
+    username/myproject$ git branch -m master
 
-> NOTE: This will not keep our old commits history around. But if this doesn't work, try the next method below.
+    # Finally, force update to our repository
+    username/myproject$ git push -f origin master
+    ```
+
+    !!! note
+
+        This will not keep our old commits history around.
 
 ## Git Rebase
 
-Instead, use it for cleaning up your local commit history before merging it into a shared team branch. `git rebase` will use for
+Instead, use it for cleaning up your local commit history before merging it into
+a shared team branch. `git rebase` will use for
 
 - Change a commit's message
 - Delete/Reorder commits
@@ -475,15 +482,20 @@ Git hooks เป็นสิ่งที่ติดตัวมากับ Git
 > $ git config --local core.hooksPath /path/to/my/centralized/hooks
 > ```
 
-Let’s have a look what kind of local hooks we have in our repository’s .git/hooks folder :
-├── applypatch-msg.sample
-├── commit-msg.sample
-├── post-update.sample
-├── pre-applypatch.sample
-├── pre-commit.sample
-├── prepare-commit-msg.sample
-├── pre-rebase.sample
-└── update.sample
+Let’s have a look what kind of local hooks we have in our repository’s `.git/hooks`
+folder :
+
+```text
+.git/hooks
+  ├── applypatch-msg.sample
+  ├── commit-msg.sample
+  ├── post-update.sample
+  ├── pre-applypatch.sample
+  ├── pre-commit.sample
+  ├── prepare-commit-msg.sample
+  ├── pre-rebase.sample
+  └── update.sample
+```
 
 ### Post Receive
 

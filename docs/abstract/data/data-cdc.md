@@ -4,7 +4,7 @@ icon: material/newspaper-variant-multiple
 
 # Data: Change Data Capture (CDC)
 
-![Change Data Capture](./images/data-cdc-01.png)
+![Change Data Capture](./images/data-cdc-01.png){ loading=lazy }
 
 **Change Data Capture** (CDC) is a design pattern that identifies and tracks changes
 in data so that action can be taken using this change data. It’s particularly
