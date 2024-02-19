@@ -36,7 +36,7 @@ will go to any specialize roles on technical data tools such as,
 
 - [DataOps Engineer](dae-dataops-engineer.md)
 - [Data Platform Engineer](dae-data-platform-engineer.md)
-- [MLOps Engineer]()
+- [MlOps Engineer]()
 
 ## Practices
 

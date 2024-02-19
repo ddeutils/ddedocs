@@ -1,4 +1,4 @@
-name: ci
+name: publish
 
 on:
   push:
@@ -12,12 +12,14 @@ permissions:
   contents: write
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout all of contents
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Install Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.8
 
