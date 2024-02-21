@@ -9,30 +9,40 @@ knowledge in Data Develop and Engineer field.
     Because I'm in the middle of trying to practice writing and reading. Please
     understand this issue before going deeper into it.
 
-First, I will start reading the popular Data Engineer books from worldwide.
+First, I will start reading the popular Data Engineer books from worldwide. That
+have many blogs represent many different books to you, but I see that it has some
+book that you should to read that they say you should too.
 
-- [:material-newspaper: Fundamentals of Data Engineer Book](https://blog.det.life/fundamentals-of-data-engineering-book-key-learning-points-35001380dda6)
+- [:material-book-open-page-variant: Fundamentals of Data Engineering](abstract/book/book-fundamentals-of-data-engineering.md)
+- [:material-book-open-page-variant: Data Pipelines Pocket Reference](abstract/book/book-data-pipelines-pocket-reference.md)
 - [:simple-medium: Data Engineer Books](https://towardsdatascience.com/data-engineering-books-f373005d53fc)
+  - [Data Engineering with Python]
+  - [The Data Warehouse Toolkit]
+  - [Architecting Modern Data Platforms]
+  - [Spark: The Definitive Guide]
 - [:simple-medium: 4 Top Data Engineering Books That Shaped My Career](https://medium.com/towards-data-engineering/4-top-data-engineering-books-that-shaped-my-career-472a519dc34f)
+  - [Designing Data-Intensive Applications]
 
 When I start reading, I raise the idea about the future of this my responsibility.
 I know the Data Engineering tools will shift so fast because last three year I
 start with the map-reduce processing on HDFS but nowadays, it changes to in-memory
 processing like Impala or Spark.
 
-!!! quote
+!!! quote "What is DE do?"
 
-    **Data Engineer** is ...
+    **Data Engineering** is the development, operation, and maintenance of data
+    infrastructure, either on-premises or in the cloud (or hybrid or multi-cloud),
+    comprising databases and pipelines to extract, transform, and load data.[^1]
 
-So I will drop the books to my bookcase and go to my laptop and start searching
-about trend of Data Engineering.
+Then I drop the books to my bookcase and go to start searching about trend of
+Data Engineering.
 
 - [:simple-medium: The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
 - [:simple-medium: My Predictions for Data Engineering](https://medium.com/art-of-data-engineering/my-predictions-for-data-engineering-in-2024-0723fa7a6e04)
 
-In the future on my job path, if I do not in love with communication or business
-knowledge that make me be [Lead of Data Engineer](dae-lead-data-engineer.md), I
-will go to any specialize roles on technical data tools such as,
+In the future on my job path, if I do not in love with communication or management
+knowledge that make me be [Lead of Data Engineer](dae-lead-data-engineer.md), I will go to any specialize
+roles on technical data tools such as,
 
 - [DataOps Engineer](dae-dataops-engineer.md)
 - [Data Platform Engineer](dae-data-platform-engineer.md)
@@ -69,3 +79,5 @@ Data Engineering tools.
 
 - [:simple-medium: Data Engineering](https://medium.com/tag/data-engineering)
 - [:simple-medium: ODDS Team](https://medium.com/odds-team)
+
+[^1]: Information from [:simple-medium: What is Data Engineering?](https://medium.com/codex/what-is-data-engineering-407bcf860baf)

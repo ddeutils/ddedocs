@@ -16,6 +16,7 @@ theme:
     - content.code.annotation
     - content.code.copy
     - content.code.select
+    - content.footnote.tooltips
   language: en
   palette:
     - scheme: default
@@ -58,6 +59,7 @@ nav:
           - Data Management:
               - abstract/data_management/index.md
               - Data Ingestion: abstract/data_management/data-ingestion.md
+              - Data Storage: abstract/data_management/data-storage.md
               - Data Quality: abstract/data_management/data-quality.md
               - Data Transformation: abstract/data_management/data-transformation.md
               - Data Pipeline: abstract/data_management/data-pipeline.md
@@ -104,6 +106,8 @@ nav:
       - Knowledge:
           - CDC: abstract/data/data-cdc.md
           - Data Structure: abstract/data/data-structure.md
+      - Book:
+          - Fundamentals of Data Engineering: abstract/book/book-fundamentals-of-data-engineering.md
       - News & Research:
           - ChatGPT:
               - abstract/chatgpt/index.md
@@ -495,6 +499,8 @@ markdown_extensions:
   - md_in_html
   - def_list
   - admonition
+  - footnotes
+  - tables
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -519,7 +525,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - tables
 
 copyright: |
   &copy; 2023 <a href="https://github.com/korawica/ddedocs" target="_blank" rel="noopener">Korawich Anuttra</a>

@@ -2,13 +2,17 @@
 icon: material/face-man
 ---
 
-# Data Platform Engineer
+# Role: _Data Platform Engineer_
 
 - [Building a Data Platform in 2024](https://towardsdatascience.com/building-a-data-platform-in-2024-d63c736cccef)
 - https://life.wongnai.com/get-to-know-data-platform-engineer-role-at-lmwn-4b43443eaca8
 - [Medium: Cloud Agnostic Data Platform](https://medium.com/@mariusz_kujawski/cloud-agnostic-data-platform-3aedd6d0eb3b)
 - [Modern Architecture for Emerging Data Infrastructures](https://premvishnoi.medium.com/modern-architecture-for-merging-data-infrastructures-8223a6dda911)
 - [Modern Architecture for Emerging Data Infrastructures](https://premvishnoi.medium.com/modern-architecture-for-merging-data-infrastructures-8223a6dda911)
+
+## Knowledge
+
+- [Microservices vs. Monolithic Approaches in Data](https://towardsdatascience.com/microservices-vs-monolithic-approaches-in-data-8d9d9a064d06)
 
 ## Use Cases
 
