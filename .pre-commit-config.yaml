@@ -3,7 +3,7 @@ default_language_version:
   python: python3.8
 
 ci:
-  skip: [shelf-commit-msg]
+  skip: [shelf-commit-msg, compress-hook]
   autofix_commit_msg: |
     🚧 [pre-commit.ci] auto fixes from pre-commit.com hooks
   autofix_prs: true
@@ -74,11 +74,20 @@ repos:
         minimum_pre_commit_version: 2.9.0
         exclude: ^(locale|CHANGELOG)
         stages: [commit]
-#  - repo: https://github.com/tcort/markdown-link-check
-#    rev: v3.11.2
-#    hooks:
-#      - id: markdown-link-check
-#        name: markdown-link-check
-#        files: \.md$
-#        args: ["-q", "--config", ".markdown-link-check.json"]
-#        stages: [commit]
+  #  - repo: https://github.com/tcort/markdown-link-check
+  #    rev: v3.11.2
+  #    hooks:
+  #      - id: markdown-link-check
+  #        name: markdown-link-check
+  #        files: \.md$
+  #        args: ["-q", "--config", ".markdown-link-check.json"]
+  #        stages: [commit]
+  - repo: local
+    hooks:
+      - id: compress-hook
+        name: compress files on assets
+        stages: [commit]
+        types: [python]
+        entry: venv/Scripts/python.exe scripts/compress.py
+        language: system
+        always_run: true
