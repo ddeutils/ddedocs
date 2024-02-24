@@ -105,8 +105,37 @@
         loop.run_until_complete(main())
     ```
 
+## Connect with Kafka
+
+[Read More on Connector Document](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/tutorials/spark#running-spark)
+
+```python
+# Source: https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/tutorials/spark#running-spark
+EH_NAME_SPACE = "eventhubs-name-space"
+EH_NAME = "eventhubs-name"
+EH_SASL = (
+    f'org.apache.kafka.common.security.plain.PlainLoginModule required'
+    f'username="$ConnectionString" '
+    f'password="Endpoint=sb://{EH_NAME_SPACE}.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=****";'
+)
+(
+    df.write
+        .format("kafka")
+        .option("kafka.sasl.mechanism", "PLAIN")
+        .option("kafka.security.protocol", "SASL_SSL")
+        .option("kafka.sasl.jaas.config", EH_SASL)
+        .option("kafka.batch.size", 5000)
+        .option("kafka.bootstrap.servers", f"{EH_NAME_SPACE}.servicebus.windows.net:9093")
+        .option("kafka.request.timeout.ms", 120000)
+        .option("topic", EH_NAME)
+        .option("checkpointLocation", "/mnt/telemetry/cp.txt")
+        .save()
+)
+```
+
 ## References
 
 - [:material-microsoft: Azure Event Hubs Features](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features)
 - [:simple-pypi: PyPI: `azure-eventhub`](https://pypi.org/project/azure-eventhub/)
 - [:material-stack-overflow: Set startingPosition in Event Hub on Databricks](https://stackoverflow.com/questions/64028177/set-startingposition-in-event-hub-on-databricks)
+- [How to format a Pyspark connection string for Azure Eventhub with Kafka](https://stackoverflow.com/questions/57547184/how-to-format-a-pyspark-connection-string-for-azure-eventhub-with-kafka)

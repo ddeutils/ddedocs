@@ -52,9 +52,14 @@ nav:
       - Principles:
           - SOLID Principles: dae-solid-principles.md
       - Roles:
-          - Data Platform Engineer: dae-data-platform-engineer.md
-          - Data Operation Engineer: dae-dataops-engineer.md
-          - Lead of Data Engineer: dae-lead-data-engineer.md
+          - Data Platform Engineer:
+              - roles/data_platform_engineer/index.md
+          - Data Operation Engineer:
+              - roles/dataops_engineer/index.md
+          - Lead of Data Engineer:
+              - roles/lead_data_engineer/index.md
+          - Ml Operation Engineer:
+              - roles/mlops_engineer/index.md
       - Abstraction:
           - Data Management:
               - abstract/data_management/index.md
@@ -259,14 +264,10 @@ nav:
       - Version Control:
           - Git:
               - tools/vcs/git/index.md
-              - Advance Command: tools/vcs/git/git-cmd-advance.md
-              - Scenarios:
-                  - tools/vcs/git/git-common-scenarios.md
-                  - Revert Commit: tools/vcs/git/git-revert-commit.md
-              - Strategies:
-                  - Branching Strategies: tools/vcs/git/git-branching-strategies.md
-                  - Commit Release: tools/vcs/git/git-commit-release.md
-                  - Deployment: tools/vcs/git/git-deployment.md
+              - Scenarios: tools/vcs/git/git-scenarios.md
+              - Branching Strategies: tools/vcs/git/git-branching-strategies.md
+              - Commit Release: tools/vcs/git/git-commit-release.md
+              - Deployment: tools/vcs/git/git-deployment.md
       - Languages:
           - Shell:
               - tools/lang/shell/index.md

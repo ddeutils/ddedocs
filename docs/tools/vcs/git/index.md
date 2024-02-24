@@ -13,15 +13,77 @@ icon: material/git
 [Official Documents](https://git-scm.com/).
 
 - Save and Track different versions of your repositories
-- coordinate changes across different teams without impacting the work of other collaborators
-- share local copies of the same codebases as other developers when working offline
-- isolate new fixes and features in development without impacting production
+- Coordinate changes across different teams without impacting the work of other collaborators
+- Share local copies of the same codebases as other developers when working offline
+- Isolate new fixes and features in development without impacting production
 
 ## Workflow
 
 ```text
-Initial ---> Working ---> Index/Staging ---> Repository
+Initial ---> Working <--> Index/Staging <--> Repository
 ```
+
+=== "Initial"
+
+    ```text
+    .git/
+      ├───> hooks/
+      ├───> info/
+      ├───> objects/
+      ├───> refs/
+      ├───> config
+      ├───> description
+      ├───> FETCH_HEAD
+      ├───> HEAD
+      └───> index
+    ```
+
+=== "Working"
+
+    ```text
+    .git/
+      ├───> hooks/
+      ├───> info/
+      ├───> objects/
+      ├───> refs/
+      ├───> config
+      ├───> description
+      ├───> FETCH_HEAD
+      ├───> HEAD
+      └───> index
+    ```
+
+=== "Index/Staging"
+
+    ```text
+    .git/
+      ├───> ...
+      ├───> objects/
+      |       ├───> 19/
+      |       |     └───> 10283f238bc06de68f6a2ac63f3ec8c7a0dfef
+      |       ├───> info/
+      |       └───> pack/
+      ├───> ...
+      └───> index
+    ```
+
+=== "Repository"
+
+    ```text
+    .git/
+      ├───> ...
+      ├───> objects/
+      |     ├───> 3c/
+      |     |     └───> 6d5a4...
+      |     ├───> 19/
+      |     |     └───> 10283f238bc06de68f6a2ac63f3ec8c7a0dfef
+      |     ├───> info/
+      |     └───> pack/
+      ├───> ...
+      └───> index
+    ```
+
+**Details**:
 
 === "Initial"
 
@@ -29,19 +91,6 @@ Initial ---> Working ---> Index/Staging ---> Repository
 
     ```console
     $ git init
-    ```
-
-    ```text
-    .git/
-      |---> hooks/
-      |---> info/
-      |---> objects/
-      |---> refs/
-      |---> config
-      |---> description
-      |---> FETCH_HEAD
-      |---> HEAD
-      |---> index
     ```
 
     Another command, `git init –bare` will create and keep only configuration
@@ -112,17 +161,6 @@ Initial ---> Working ---> Index/Staging ---> Repository
         $ git prune
         ```
 
-    ```text
-    .git/
-      |---> ...
-      |---> objects/
-      |       |---> 19/
-      |       |     |---> 10283f238bc06de68f6a2ac63f3ec8c7a0dfef
-      |       |---> info/
-      |       |---> pack/
-      |---> ...
-    ```
-
     ```console
     $ git ls-files
     demo.txt
@@ -176,19 +214,6 @@ Initial ---> Working ---> Index/Staging ---> Repository
         ```console
         $ git reset --hard <commit-hash>
         ```
-
-    ```text
-    .git/
-    |---> ...
-    |---> objects/
-    |     |---> 3c/
-    |     |     |---> 6d5a4...
-    |     |---> 19/
-    |     |     |---> 10283f238bc06de68f6a2ac63f3ec8c7a0dfef
-    |     |---> info/
-    |     |---> pack/
-    |---> ...
-    ```
 
     ```console
     # Get type of Git file
@@ -319,6 +344,20 @@ Author: ...
 ...
 ```
 
+Filtering your commit history:
+
+- by date - `--before` or `--after`
+- by message - `--grep`
+- by author - `--author`
+- by file - `-- ${filename}`
+- by branch - `${branch-name}`
+
+```console
+$ git log --after="2021-7-1"
+$ git log --after="2021-7-1" --before="2021-6-5"
+$ git log --grep="refactor"
+```
+
 ### Git Diff
 
 ```console
@@ -347,16 +386,16 @@ index 2a3ee71..84f5955 100644
 === "List"
 
     ```console
-    # List local branchs
     $ git branch
-
-    # List all branchs on local and remote
-    $ git branch -a
     ```
+
+    **Options**:
+
+    - `-a`, `git branch -a`: List all branchs on local and remote
 
 === "Create"
 
-    ```console
+    ```shell
     # Create new branch
     $ git branch <branch-name>
 
@@ -386,6 +425,25 @@ index 2a3ee71..84f5955 100644
 !!! note
 
     If you want to check out previous branch, you can use: `git checkout -`.
+
+### Git Checkout
+
+```shell
+# Revert all modified files to clean status
+$ git checkout .
+
+# Switch to previous branch
+$ git checkout -
+
+# Revert to specific commit
+$ git checkout "<commit>"
+
+# Revert to specific file and commit
+$ git checkout "<commit>" <file-name>
+
+# Create new branch in local repository from existing branch in remote repository
+$ git checkout -b feature/xxx origin/feature/xxx
+```
 
 ### Git Tag
 
@@ -474,7 +532,7 @@ hash revert to any commit (the latest commit always dirty).
 
 ### Git Remote
 
-=== "Set"
+=== "Set Remote"
 
     ```shell
     $ git remote add origin https://github.com/username/myproject.git
@@ -483,7 +541,7 @@ hash revert to any commit (the latest commit always dirty).
     origin  https://github.com/username/myproject.git (push)
     ```
 
-=== "Push"
+=== "Push to Remote"
 
     ```shell
     $ git push -u origin master
@@ -505,7 +563,7 @@ hash revert to any commit (the latest commit always dirty).
         `git push` command. The another way is
         [use ssh for connect to remote](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
-=== "Pull"
+=== "Fetch from Remote"
 
     ```shell
     $ git fetch
@@ -520,6 +578,8 @@ hash revert to any commit (the latest commit always dirty).
 
     nothing to commit, working tree clean
     ```
+
+=== "Pull from Remote"
 
     ```shell
     $ git pull
@@ -552,6 +612,18 @@ $ git merge upstream/master
 
 ## Advance CMD
 
+### Git Revert
+
+Revert specific commit to new commit
+
+```console
+$ git revert "<commit>"
+$ git revert -m 1 "<commit>"
+
+# Revert merge change
+$ git reset --hard HEAD^
+```
+
 ### Git Merge & Rebase
 
 === "Merge"
@@ -576,20 +648,94 @@ $ git merge upstream/master
     $ git commit -m "squash develop"
     ```
 
-=== "Rebase"
+=== "Merge Rebase"
 
     - Will append all commits history of the feature branch in the front of the master branch
     - Will NOT add extra dummy commit.
 
-    ```console
+    ```shell
     # Rebase all commit from dev branch to main branch
     $ git switch dev
     $ git rebase main
+    $ git rebase --continue
     $ git switch main
-    $ git rebase dev
-    $ git reflog expire --expire-unreachable=now --all
-    $ git prune
+    $ git merge dev
+    $ git branch -d dev
     ```
+
+    !!! note
+
+        If you want to cancel the rebase process, you can use `git rebase --abort`.
+
+### Git Rebase Self
+
+Instead, use it for cleaning up your local commit history before merging it into
+a shared team branch. `git rebase` will use for
+
+- Change a commit message
+- Delete/Reorder commits
+- Combine multiple commits into one (squash)
+- Edit/Split an existing commit into multiple new ones
+
+!!! warning
+
+    Do **NOT** use Interactive Rebase on commits that you've already pushed/shared
+    on a remote repository.
+
+```console
+$ git rebase -i HEAD~3
+pick adfa804 Update config.yaml
+pick 81529d3 update config.yaml
+pick 3d8cc7a Update config.yaml
+
+# Rebase 5a30adf..ae76b2e onto 5a30adf (3 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified). Use -c <commit> to reword the commit message.
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+:q!
+
+$ git rebase --abort
+```
+
+```console
+$ git log --oneline
+ae76b2e (HEAD -> master, origin/master) USE OURS ON CONFLICT FILE
+81529d3 update config.yaml
+3d8cc7a Update config.yaml
+adfa804 Update config.yaml
+5a30adf ADD CONFIG
+4e133da YOUR MESSAGE
+```
+
+!!! note
+
+    When you want to control commit with rebase, `git rebase master --interactive`
+
+!!! note
+
+    If you want to **squash** all commit together, you can use `git merge --squash "<branch>"`
+    command. (Or `git rebase -i --autosquash`)
 
 ### Git Conflict
 
@@ -603,6 +749,9 @@ $ git merge upstream/master
 
 ### Git Cherry Pick
 
+If you want to take some commit (such as bug fix commit) from another branch to
+your branch (Allows you to select individual commits to be integrated).
+
 Cherry Pick fixed file from dev to main branch
 
 ```shell
@@ -612,8 +761,203 @@ $ git switch main
 $ git log dev --oneline
 <commit-hash> (dev) bug fix
 ...
-$ git cherry-pick <commit-hash>
+$ git cherry-pick "<commit-hash>"
 ```
+
+!!! note
+
+    git does not that delete commit from source branch and in your branch will be exists that commit in new id.
+
+## Git Submodules
+
+Git Submodule help you to develop main project together with subproject and separate
+the commits of subproject from main project.
+
+The file `.submodule` is configuration of `git submodule` that keep project’s URL,
+local subdirectory, and subproject branches that was tracked.
+
+=== "Add"
+
+    ```console
+    $ git submodule add -b master https://github.com/username/module sub-project
+    $ git status
+    On branch master
+    Your branch is up to date with 'origin/master'.
+    Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
+          new file:   .gitmodules
+          new file:   sub-project
+
+    $ cd sub-project
+    sub-project$ ls
+    README.md ...
+    ```
+
+    ```console
+    $ cat .gitmodules
+    [submodule "sub-project"]
+        path = sub-project
+        url = https://github.com/username/sub-project.git
+        branch = master
+    ```
+
+    !!! note
+
+        When you already push, you will see submodule in main project repository
+        and the submodule does not keep the source code but it keep hash commit
+        number of submodule.
+
+=== "Clone"
+
+    ```shell
+    $ git clone https://github.com/username/mainproject.git
+    $ cd sub-project
+    sub-project$ ls
+
+
+    sub-project$ git submodule init
+    sub-project$ git submodule update
+    Cloning into '/username/mainproject/sub-project'...
+    Submodule path 'sub-project': checked out 'a5635f67626c1c224e733fe407aaa132b5e5d1e3
+    ```
+
+    !!! note
+
+        The `git clone --recurse-submodules "<repository-url>"` is auto initialize
+        and update submodules.
+
+    `git submodule update --init --recursive`
+
+    ```shell
+    $ cd sub-project/
+    sub-project$ git fetch
+    sub-project$ git merge origin/master
+    Already up to date.
+    ```
+
+    !!! note
+
+        `git submodule update --remote` will auto fetch and merge with track branch. If you do not set trank, you will use
+
+        ```shell
+        username/myproject$ git config -f .gitmodules submodule.sub-project.branch develop
+        username/myproject$ cat .gitmodules
+        [submodule "sub-project"]
+         path = sub-project
+         url = https://github.com/username/sub-project.git
+         branch = develop
+        ```
+
+        Optional, `git submodule update --remote --merge` or `git submodule update --remote --rebase`
+
+=== "Push"
+
+    ```shell
+    username/myproject/sub-project$ git commit -am 'update readme.md'
+    username/myproject/sub-project$ git push
+
+    username/myproject/sub-project$ cd ..
+    username/myproject$ git commit -am 'update submodule'
+    username/myproject$ git push
+    ```
+
+    > NOTE: You can push along with the main project, where the submodule is pushed before the main project is pushed using the command `git push — recurse-submodules=on-demand`
+
+=== "Delete"
+
+    ```shell
+    username/myproject$ git submodule deinit -f sub-project
+    > Cleared directory 'sub-project'
+    > Submodule 'sub-project' (https://github.com/username/sub-project.git) unregistered for path 'sub-project'
+
+    username/myproject$ rm -rf .git/modules/sub-project
+    username/myproject$ git rm --cached sub-project
+    > rm 'sub-project'
+
+    username/myproject$ rm .gitmodules
+    username/myproject$ git commit -am "REMOVED submodule"
+    > [master 66b1703] removed submodule
+    >  2 files changed, 5 deletions(-)
+    >  delete mode 160000 sub-project
+
+    username/myproject$ git push origin master
+    ```
+
+## Git Reflog
+
+A protocol of HEAD Pointer movements. Reflog is a mechanism to record when the tip
+of branches is updated. This command is to manage the information recorded in it.
+
+ใช้แสดง Log ของการเปลี่ยนแปลงใน HEAD ของ Local Repository มันเหมาะสำหรับการค้นหางานที่สูญหายไป
+
+```shell
+username/myproject$ git reflog --all
+> ae76b2e (HEAD -> master, origin/master) HEAD@{0}: rebase -i (abort): updating HEAD
+> 81529d3 HEAD@{1}: rebase -i (start): checkout HEAD~3
+> ae76b2e (HEAD -> master, origin/master) refs/remotes/origin/master@{0}: update by push
+> ae76b2e (HEAD -> master, origin/master) refs/heads/master@{0}: commit (merge): USE OURS ON CONFLICT FILE
+> ae76b2e (HEAD -> master, origin/master) HEAD@{2}: commit (merge): USE OURS ON CONFLICT FILE
+> 81529d3 refs/heads/master@{1}: commit: update config.yaml
+> 81529d3 HEAD@{3}: commit: update config.yaml
+> adfa804 refs/heads/master@{2}: reset: moving to HEAD~1
+> :
+```
+
+## Git Blame
+
+Use to track change inline of file.
+
+```console
+$ git blame config.yaml
+5a30adf5 (usernaem    2022-03-06 13:52:04 +0700 1) env:
+adfa8044 (usernaemDEV 2022-03-06 19:30:39 +0700 2)   develop: "/dev"
+adfa8044 (usernaemDEV 2022-03-06 19:30:39 +0700 3)   remote: "/remote"
+81529d32 (usernaem    2022-03-07 11:19:06 +0700 4)   production: "/prod"
+```
+
+## Git Bisect
+
+### Start bisect
+
+```shell
+username/myproject$ git bisect start
+username/myproject$ git bisect bad "<commit-start>"
+username/myproject$ git bisect good "<commit-end>"
+```
+
+### Unittest until the latest commit exists
+
+```shell
+username/myproject$ run app
+username/myproject$ git bisect bad
+> Bisecting: 7 revisions left to test after this (roughly 3 steps)
+> [12sasa53261sdfas4235sdab721c2405abv0*****] COMMIT MESSAGE
+
+...
+
+username/myproject$ run app
+username/myproject$ git bisect bad
+> Bisecting: 0 revisions left to test after this (roughly 0 steps)
+> [jk1p1634sda78v93kla13asdfscc23140030*****] COMMIT MESSAGE
+
+username/myproject$ git bisect bad
+> 5a30adf5d4f184fd4586891e26d6826ab66***** COMMIT MESSAGE
+> commit 5a30adf5d4f184fd4586891e26d6826ab66*****
+> Author: username <username@email.com>
+> Date: Sun Jan 01 00:00:00 1999 +0700
+>
+>     COMMIT MESSAGE
+
+username/myproject$ git show 5a30adf5d4f184fd4586891e26d6826ab66*****
+```
+
+### If found the bug success, you should exit bisect first
+
+```shell
+username/myproject$ git bisect reset
+```
+
+> NOTE: `git bisect log` will show the log of bisect, should use this command before reset.
 
 ## References
 

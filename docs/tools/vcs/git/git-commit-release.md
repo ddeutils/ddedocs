@@ -18,12 +18,12 @@ $ git commit -am "<type>(<scope>): <short-summary-in-present-tense>
 
 `<short-summary>`
 
-: - use the imperative, present tense: "change" not "changed" nor "changes" - don't capitalize first letter - no dot (.) at the end
+: use the imperative, present tense: "change" not "changed" nor "changes" - don't capitalize first letter - no dot (.) at the end
 
 `<type>`
 
 : - `feat`: Features : A new feature. - `fix`: Bugfixes : A bug fix. - `docs`: Documents : Documentation changes. - `style`: Style : Changes that do not affect the meaning of the code
-(white-space, formatting, missing semi-colons, etc). - `refactor`: Refactor : A code change that neither fixes a bug nor adds a feature. - `perf`: Improved performance : A code change that improves performance. - `test`: Testing : Changes to the test framework. - `build`: Build : Changes to the build process or tools. - `dep`: Dependencies and Removals : Changes or update dependencies
+(white-space, formatting, missing semi-colons, etc). - `refactor`: Refactor : A code change that neither fixes a bug nor adds a feature. - `perf`: Improved performance : A code change that improves performance. - `test`: Testing : Changes to the test framework. - `build`: Build : Changes to the build process or tools. - `dep`: Dependencies and Removals : Changes or update dependencies.
 
 `<scope>`
 

@@ -7,7 +7,7 @@ knowledge in Data Develop and Engineer field.
 
     This project I am working on doesn't have much proper English grammar.
     Because I'm in the middle of trying to practice writing and reading. Please
-    understand this issue before going deeper into it.
+    understand this issue before going deeper into it :face_holding_back_tears:.
 
 First, I will start reading the popular Data Engineer books from worldwide. That
 have many blogs represent many different books to you, but I see that it has some
@@ -16,12 +16,12 @@ book that you should to read that they say you should too.
 - [:material-book-open-page-variant: Fundamentals of Data Engineering](abstract/book/book-fundamentals-of-data-engineering.md)
 - [:material-book-open-page-variant: Data Pipelines Pocket Reference](abstract/book/book-data-pipelines-pocket-reference.md)
 - [:simple-medium: Data Engineer Books](https://towardsdatascience.com/data-engineering-books-f373005d53fc)
-  - [Data Engineering with Python]
-  - [The Data Warehouse Toolkit]
-  - [Architecting Modern Data Platforms]
-  - [Spark: The Definitive Guide]
+  - [:material-book-open-page-variant: Data Engineering with Python]
+  - [:material-book-open-page-variant: The Data Warehouse Toolkit]
+  - [:material-book-open-page-variant: Architecting Modern Data Platforms]
+  - [:material-book-open-page-variant: Spark: The Definitive Guide]
 - [:simple-medium: 4 Top Data Engineering Books That Shaped My Career](https://medium.com/towards-data-engineering/4-top-data-engineering-books-that-shaped-my-career-472a519dc34f)
-  - [Designing Data-Intensive Applications]
+  - [:material-book-open-page-variant: Designing Data-Intensive Applications]
 
 When I start reading, I raise the idea about the future of this my responsibility.
 I know the Data Engineering tools will shift so fast because last three year I
@@ -40,13 +40,13 @@ Data Engineering.
 - [:simple-medium: The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
 - [:simple-medium: My Predictions for Data Engineering](https://medium.com/art-of-data-engineering/my-predictions-for-data-engineering-in-2024-0723fa7a6e04)
 
-In the future on my job path, if I do not in love with communication or management
-knowledge that make me be [Lead of Data Engineer](dae-lead-data-engineer.md), I will go to any specialize
-roles on technical data tools such as,
+In the future on this role, if I do not in love with communication or management
+knowledge that make me be [Lead of Data Engineer](roles/lead_data_engineer/index.md), I will go to any specialize
+roles such as,
 
-- [DataOps Engineer](dae-dataops-engineer.md)
-- [Data Platform Engineer](dae-data-platform-engineer.md)
-- [MlOps Engineer]()
+- [DataOps Engineer](roles/dataops_engineer/index.md)
+- [Data Platform Engineer](roles/data_platform_engineer/index.md)
+- [MlOps Engineer](roles/mlops_engineer/index.md)
 
 ## Daily Work
 
