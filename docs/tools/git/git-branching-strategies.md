@@ -250,36 +250,6 @@ This policy or working method is called **Upstream First**.
     > customers who are stuck on legacy releases and are not able to move
     > forward to current releases, but need security and other bug fixes.
 
-## Bump-Version
-
-The bump version is the script that auto update `CHANGELOG.md` file with all
-commit messages after the latest bump version or first initial commit.
-
-General digit of version naming, like `v1.2.3`, will mean
-`v${Major}.${Minor}.${Patch}.${Support}`, reference from [semver](https://semver.org/)
-
-Generate commit message:
-
-```console
-$ git log --pretty=format:"  - %s" "v$BASE_STRING"...HEAD
-```
-
-Auto generate version (Only increment last number):
-
-```console
-$ $(eval VERSION=$(`shell git describe --tags --abbrev=0 | awk -F. '{OFS="."; $NF+=1; print $0}'`))
-$ git add .
-$ git commit -m "$m"
-$ git push origin master
-$ git tag -a $(VERSION) -m "new release"
-$ git push origin $(VERSION)
-```
-
-**Examples of Bump-version script**:
-
-- [BUMP-VERSION-shell](https://gist.github.com/Nomane/df017387aaa2d24cbacb5da3a55256cf)
-- [BUMP-VERSION-shell-v2](https://gist.github.com/jv-k/703e79306554c26a65a7cfdb9ca119c6)
-
 ## References
 
 - [Successful Git Branch Model](https://nvie.com/posts/a-successful-git-branching-model/)

@@ -22,14 +22,22 @@ $ git commit -am "<type>(<scope>): <short-summary-in-present-tense>
 
 `<type>`
 
-: - `feat`: Features : A new feature. - `fix`: Bugfixes : A bug fix. - `docs`: Documents : Documentation changes. - `style`: Style : Changes that do not affect the meaning of the code
-(white-space, formatting, missing semi-colons, etc). - `refactor`: Refactor : A code change that neither fixes a bug nor adds a feature. - `perf`: Improved performance : A code change that improves performance. - `test`: Testing : Changes to the test framework. - `build`: Build : Changes to the build process or tools. - `dep`: Dependencies and Removals : Changes or update dependencies.
+:   - `feat`: Features : A new feature.
+    - `fix`: Bugfixes : A bug fix.
+    - `docs`: Documents : Documentation changes.
+    - `style`: Style : Changes that do not affect the meaning of the code
+      (white-space, formatting, missing semi-colons, etc).
+    - `refactor`: Refactor : A code change that neither fixes a bug nor adds a feature.
+    - `perf`: Improved performance : A code change that improves performance.
+    - `test`: Testing : Changes to the test framework.
+    - `build`: Build : Changes to the build process or tools.
+    - `dep`: Dependencies and Removals : Changes or update dependencies.
 
 `<scope>`
 
-: An optional keyword that provides context for where the change was made.
-It can be anything relevant to your package or development workflow
-(e.g., it could be the module or function name affected by the change).
+:   An optional keyword that provides context for where the change was made.
+    It can be anything relevant to your package or development workflow
+    (e.g., it could be the module or function name affected by the change).
 
     Different text in the commit message will trigger PSR to make different
     kinds of releases:

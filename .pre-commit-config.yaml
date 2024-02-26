@@ -57,31 +57,31 @@ repos:
       - id: shelf-commit-msg
         stages: [commit-msg]
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v4.0.0-alpha.8
-    hooks:
-      - id: prettier
-        types_or:
-          - toml
-          - css
-          - json
-          - json5
-          - yaml
-          - markdown
-        additional_dependencies:
-          - prettier
-          - prettier-plugin-toml
-        minimum_pre_commit_version: 2.9.0
-        exclude: ^(locale|CHANGELOG)
-        stages: [commit]
-  #  - repo: https://github.com/tcort/markdown-link-check
-  #    rev: v3.11.2
-  #    hooks:
-  #      - id: markdown-link-check
-  #        name: markdown-link-check
-  #        files: \.md$
-  #        args: ["-q", "--config", ".markdown-link-check.json"]
-  #        stages: [commit]
+#  - repo: https://github.com/pre-commit/mirrors-prettier
+#    rev: v4.0.0-alpha.8
+#    hooks:
+#      - id: prettier
+#        types_or:
+#          - toml
+#          - css
+#          - json
+#          - json5
+#          - yaml
+#          - markdown
+#        additional_dependencies:
+#          - prettier
+#          - prettier-plugin-toml
+#        minimum_pre_commit_version: 2.9.0
+#        exclude: ^(locale|CHANGELOG)
+#        stages: [commit]
+#  - repo: https://github.com/tcort/markdown-link-check
+#    rev: v3.11.2
+#    hooks:
+#      - id: markdown-link-check
+#        name: markdown-link-check
+#        files: \.md$
+#        args: ["-q", "--config", ".markdown-link-check.json"]
+#        stages: [commit]
   - repo: local
     hooks:
       - id: compress-hook

@@ -1,4 +1,4 @@
-# Git: _Scenarios_
+# Git Scenarios
 
 ## Reset Removed File
 

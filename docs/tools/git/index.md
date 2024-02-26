@@ -626,6 +626,8 @@ $ git reset --hard HEAD^
 
 ### Git Merge & Rebase
 
+[Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
 === "Merge"
 
     - Will keep all commits history of the feature branch and move them into the master branch

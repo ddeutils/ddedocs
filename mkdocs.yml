@@ -183,6 +183,8 @@ nav:
                   - RestAPI Refresh Dataset: services/azure/powerbi/pbi-restapi-refresh-dataset.md
           - AWS:
               - services/aws/index.md
+              - VPC:
+                  - Getting Started: services/aws/vpc/vpc-getting-started.md
               - IoT:
                   - Rule to S3: services/aws/iot_core/iot-rule-to-s3.md
                   - Rule to Kinesis: services/aws/iot_core/iot-rule-to-kinesis.md
@@ -263,11 +265,11 @@ nav:
       - tools/index.md
       - Version Control:
           - Git:
-              - tools/vcs/git/index.md
-              - Scenarios: tools/vcs/git/git-scenarios.md
-              - Branching Strategies: tools/vcs/git/git-branching-strategies.md
-              - Commit Release: tools/vcs/git/git-commit-release.md
-              - Deployment: tools/vcs/git/git-deployment.md
+              - tools/git/index.md
+              - Scenarios: tools/git/git-scenarios.md
+              - Branching Strategies: tools/git/git-branching-strategies.md
+              - Commit Release: tools/git/git-commit-release.md
+              - Hooks: tools/git/git-hooks.md
       - Languages:
           - Shell:
               - tools/lang/shell/index.md
