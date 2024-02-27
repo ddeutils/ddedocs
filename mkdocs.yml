@@ -155,6 +155,7 @@ nav:
                       - To Synapse SQL Pool: services/azure/databricks/adb-to-synapse-sql-pool.md
                       - To BigQuery: services/azure/databricks/adb-to-bigquery.md
                       - To Event Hubs: services/azure/databricks/adb-to-eventhubs.md
+                      - To IoT Hub: services/azure/databricks/adb-to-iothub.md
               - Event Hubs:
                   - Getting Started: services/azure/eventhubs/eventhubs-getting-started.md
                   - Producer Data: services/azure/eventhubs/eventhubs-produce-data.md
@@ -198,7 +199,7 @@ nav:
               - Lambda:
                   - Pros & Cons: services/aws/lambda/lambda-stop-using-for-everything.md
                   - With Docker: services/aws/lambda/lambda-with-docker.md
-              - Step Function:
+              - Step Functions:
                   - State Machine Language: services/aws/step_function/stfn-state-machine-language.md
                   - Schedule: services/aws/step_function/stfn-schedule-by-event-bridge.md
                   - Combine Parallel: services/aws/step_function/stfn-combine-data-parallel-state.md
