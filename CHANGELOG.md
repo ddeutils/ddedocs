@@ -2,6 +2,26 @@
 
 ## Latest Changes
 
+## 20240227
+
+### :tada: Features
+
+- :dart: feat: add compress script for any asset data to repo. (_2024-02-21_)
+
+### :scissors: References
+
+- :clipboard: refs: add ref doc for state machine lang on aws step func. (_2024-02-26_)
+
+### :book: Documents
+
+- :page_facing_up: docs: add connection to iot hub docs on azure databricks. (_2024-02-27_)
+- :pencil: summary: summary git docs for common and advance commands. (_2024-02-24_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: 📦 Bump mkdocs-material from 9.5.10 to 9.5.11 (_2024-02-26_)
+- :test_tube: test: add compress-hook on local repo for compression files. (_2024-02-21_)
+
 ## 20240219
 
 ### :scissors: References
