@@ -1,6 +1,6 @@
 # S3: Trigger Lambda
 
-![S3 Trigger Lambda](./images/s3-trigger-lambda.png)
+![S3 Trigger Lambda](img/s3-trigger-lambda.png)
 
 ## References
 

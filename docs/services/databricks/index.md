@@ -4,6 +4,8 @@ icon: simple/databricks
 
 # Databricks
 
+Read more any information on the [Databricks Blog](https://www.databricks.com/blog).
+
 ## SDK
 
 ```console

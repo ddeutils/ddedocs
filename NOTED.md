@@ -10,6 +10,12 @@ mkdocs serve
 > **Note**:\
 > It will generate document to the url: http://127.0.0.1:8000/
 
+## Release Document
+
+```shell
+shelf vs bump date
+```
+
 ## Reference
 
 - [How To Create STUNNING Code Documentation With MkDocs Material Theme](https://www.youtube.com/watch?v=Q-YA_dA8C20)

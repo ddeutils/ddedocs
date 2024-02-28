@@ -2,7 +2,7 @@
 
 ## Orchestration
 
-[Invoke AWS Step Functions from other services](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-invoke-sfn.html)
+[:material-aws: Invoke AWS Step Functions from other services](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-invoke-sfn.html)
 
 ### Scheduler
 
@@ -17,4 +17,4 @@
     With **AWS Step Functions**, you can define state machines that describe your workflow
     as a series of steps, their relationships, and their inputs and outputs.
 
-    [Schedule a Serverless Workflow with AWS Step Functions and Amazon EventBridge Scheduler](https://aws.amazon.com/tutorials/scheduling-a-serverless-workflow-step-functions-amazon-eventbridge-scheduler/)
+    [:material-aws: Schedule a Serverless Workflow with AWS Step Functions and Amazon EventBridge Scheduler](https://aws.amazon.com/tutorials/scheduling-a-serverless-workflow-step-functions-amazon-eventbridge-scheduler/)

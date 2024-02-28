@@ -156,6 +156,7 @@ nav:
                       - To BigQuery: services/azure/databricks/adb-to-bigquery.md
                       - To Event Hubs: services/azure/databricks/adb-to-eventhubs.md
                       - To IoT Hub: services/azure/databricks/adb-to-iothub.md
+                      - To Kinesis: services/azure/databricks/adb-to-kinesis.md
               - Event Hubs:
                   - Getting Started: services/azure/eventhubs/eventhubs-getting-started.md
                   - Producer Data: services/azure/eventhubs/eventhubs-produce-data.md
@@ -200,9 +201,9 @@ nav:
                   - Pros & Cons: services/aws/lambda/lambda-stop-using-for-everything.md
                   - With Docker: services/aws/lambda/lambda-with-docker.md
               - Step Functions:
-                  - State Machine Language: services/aws/step_function/stfn-state-machine-language.md
-                  - Schedule: services/aws/step_function/stfn-schedule-by-event-bridge.md
-                  - Combine Parallel: services/aws/step_function/stfn-combine-data-parallel-state.md
+                  - Getting Started: services/aws/step_functions/stfn-getting-started.md
+                  - State Machine Language: services/aws/step_functions/stfn-state-machine-language.md
+                  - Combine Parallel Results: services/aws/step_functions/stfn-combine-data-parallel-state.md
               - Glue:
                   - Getting Started: services/aws/glue/glue-getting-started.md
                   - Local Env: services/aws/glue/glue-local-env.md
@@ -211,7 +212,8 @@ nav:
               - EMR:
                   - Compare Databricks: services/aws/emr/emr-compare-with-databricks.md
               - Kinesis:
-                  - Streaming: services/aws/kinesis/kinesis-streaming.md
+                  - Data Streams: services/aws/kinesis/kinesis-data-streams.md
+                  - Data Firehose: services/aws/kinesis/kinesis-data-firehose.md
           - Google:
               - services/google/index.md
               - API Authentication: services/google/google-api-authenticate.md
