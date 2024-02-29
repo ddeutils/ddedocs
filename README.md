@@ -1,7 +1,8 @@
 # Docs: _Data Developer & Engineer_
 
-This project will deliver about **Data Developer & Engineer Documents and
-Hands-On** from my experience and reference from public blogs only :warning:
+> [!WARNING]
+> This project will deliver about **Data Developer & Engineer Documents and
+> Hands-On** from my experience and reference from public blogs only!!!
 
 I will use this project be a co-pyrot for implement and serve [`MkDocs`](https://github.com/mkdocs/mkdocs)
 with the [Material Extension](https://squidfunk.github.io/mkdocs-material/)
@@ -23,7 +24,7 @@ This project will keep all good information for Data Engineering role, but you w
 see that has a lot of knowledge topics do not summarize to my opinion. Because of
 shifting of the DE's technologies so fast.
 
-> **Note**:\
+> [!NOTE]
 > For more extension that I use for this project, able to research from
 > [MkDocs Catalogs](https://github.com/mkdocs/catalog).
 
