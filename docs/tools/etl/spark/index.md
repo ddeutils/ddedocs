@@ -21,6 +21,8 @@ icon: simple/apachespark
 - [Partitioning & Bucketing](https://blog.det.life/apache-spark-partitioning-and-bucketing-1790586e8917)
 - [How does Adaptive Query Execution fix your Spark performance issues](https://medium.com/@kerrache.massipssa/how-does-adaptive-query-execution-fix-your-spark-performance-issues-029166e772b7)
 
+- [Apache Spark for Dummies: Part 4 — Advanced Spark Features](https://medium.com/@SaiParvathaneni/apache-spark-for-dummies-part-4-advanced-spark-features-d45e3b333c56)
+
 ## Spark Context vs Spark Session
 
 !!! quote

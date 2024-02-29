@@ -49,7 +49,8 @@ extra:
 nav:
   - Home:
       - index.md
-      - Principles:
+      - Principles & Steps:
+          - Daily Work: dae-daily-work.md
           - SOLID Principles: dae-solid-principles.md
       - Roles:
           - Data Platform Engineer:
@@ -294,6 +295,8 @@ nav:
               - Functional Programing:
                   - Monad: tools/lang/python/functional/py-func-monad.md
                   - Toolz: tools/lang/python/functional/py-func-toolz.md
+              - Versions:
+                  - Python 3.12: tools/lang/python/updates/py-py312.md
           - GO:
               - tools/lang/go/index.md
               - Command: tools/lang/go/go-command.md

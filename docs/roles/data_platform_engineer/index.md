@@ -12,6 +12,7 @@ icon: material/face-man
 
 ## Knowledge
 
+- [My key takeaways after building a data engineering platform](https://medium.com/datamindedbe/my-key-takeaways-for-building-a-data-product-307ad06e529f)
 - [Microservices vs. Monolithic Approaches in Data](https://towardsdatascience.com/microservices-vs-monolithic-approaches-in-data-8d9d9a064d06)
 
 ## Use Cases

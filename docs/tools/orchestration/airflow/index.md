@@ -24,6 +24,8 @@ https://medium.com/@datasmiles/over-4-years-with-airflow-our-top-10-make-life-ea
 https://medium.com/@datasmiles/mastering-apache-airflow-myessential-best-practices-for-robust-data-orchestration-095460505843
 https://towardsdatascience.com/getting-started-with-astronomer-airflow-the-data-engineering-workhorse-d5a5cf543c2c
 
+- [Apache Airflow Cookbook — Part.1](https://medium.com/towardsdev/apache-airflow-cookbook-part-1-1444bb7047b6)
+
 ## References
 
 - https://github.com/zkan/data-pipelines-with-airflow
