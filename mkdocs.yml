@@ -502,6 +502,10 @@ plugins:
   - tags
   - search
   - glightbox
+# # NOTE: this plugin is currently reserved to sponsors
+#  - optimize:
+#      cache_dir: .cache/
+#      concurrency: 2
 
 markdown_extensions:
   - attr_list
