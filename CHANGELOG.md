@@ -2,6 +2,22 @@
 
 ## Latest Changes
 
+## 20240304
+
+### :scissors: References
+
+- :clipboard: refs: add reference docs from medium for python, spark, data engineer. (_2024-02-29_)
+
+### :book: Documents
+
+- :page_facing_up: docs: update docs from medium refs. (_2024-03-04_)
+- :page_facing_up: docs: update option highlight for note on README file. (_2024-02-29_)
+- :page_facing_up: docs: update docs for databricks read stream from kinesis. (_2024-02-28_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: add optimize plugin for future update from mkdocs. (_2024-03-01_)
+
 ## 20240227
 
 ### :tada: Features
