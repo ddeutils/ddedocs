@@ -7,7 +7,7 @@ mkdocs new .
 mkdocs serve
 ```
 
-> **Note**:\
+> [!NOTE]
 > It will generate document to the url: http://127.0.0.1:8000/
 
 ## Release Document
