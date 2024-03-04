@@ -16,12 +16,12 @@ book that you should to read that they say you should too.
 - [:material-book-open-page-variant: Fundamentals of Data Engineering](abstract/book/book-fundamentals-of-data-engineering.md)
 - [:material-book-open-page-variant: Data Pipelines Pocket Reference](abstract/book/book-data-pipelines-pocket-reference.md)
 - [:simple-medium: Data Engineer Books](https://towardsdatascience.com/data-engineering-books-f373005d53fc)
-  - [:material-book-open-page-variant: Data Engineering with Python]
-  - [:material-book-open-page-variant: The Data Warehouse Toolkit]
-  - [:material-book-open-page-variant: Architecting Modern Data Platforms]
-  - [:material-book-open-page-variant: Spark: The Definitive Guide]
+    - [:material-book-open-page-variant: Data Engineering with Python]
+    - [:material-book-open-page-variant: The Data Warehouse Toolkit]
+    - [:material-book-open-page-variant: Architecting Modern Data Platforms]
+    - [:material-book-open-page-variant: Spark: The Definitive Guide]
 - [:simple-medium: 4 Top Data Engineering Books That Shaped My Career](https://medium.com/towards-data-engineering/4-top-data-engineering-books-that-shaped-my-career-472a519dc34f)
-  - [:material-book-open-page-variant: Designing Data-Intensive Applications]
+    - [:material-book-open-page-variant: Designing Data-Intensive Applications]
 
 When I start reading, I raise the idea about the future of this my responsibility.
 I know the Data Engineering tools will shift so fast because last three year I
@@ -44,29 +44,13 @@ In the future on this role, if I do not in love with communication or management
 knowledge that make me be [Lead of Data Engineer](roles/lead_data_engineer/index.md), I will go to any specialize
 roles such as,
 
-- [DataOps Engineer](roles/dataops_engineer/index.md)
-- [Data Platform Engineer](roles/data_platform_engineer/index.md)
-- [MlOps Engineer](roles/mlops_engineer/index.md)
+<div class="grid cards" markdown>
 
-## Practices
+- [:material-face-man: Data Platform Engineer](roles/data_platform_engineer/index.md)
+- [:material-face-man-shimmer: Data Operation Engineer](roles/dataops_engineer/index.md)
+- [:material-face-man-profile: ML Operation Engineer](roles/mlops_engineer/index.md)
 
-### Beginner
-
-- [:simple-medium: TowardDS - Data Engineering: A Formula 1-inspired Guide for Beginners](https://towardsdatascience.com/data-engineering-a-formula-1-inspired-guide-for-beginners-5511488803ee)
-- [:simple-medium: A Guide to Data Engineering Infrastructure](https://towardsdatascience.com/a-guide-to-data-engineering-infrastructure-cb074e0d3f99)
-- [:simple-medium: Data Engineer Best Practice](https://medium.com/@matt_weingarten/data-engineering-best-practices-2a02949b99c4)
-- [:simple-medium: Data Engineering Best Practices](https://asrathore08.medium.com/data-engineering-best-practices-164c1e29969d)
-- [:simple-medium: Building the Foundation of Modern Data: A Deep Dive into Data Engineering](https://medium.com/@your_data_scientist_bestie/building-the-foundation-of-modern-data-a-deep-dive-into-data-engineering-5f12838d360c)
-- [:simple-medium: Data Engineering: Practice System Design Question and Solution: Streaming](https://medium.com/@seancoyne/data-engineering-practice-system-design-question-and-solution-streaming-ad32562ba954)
-
-- [:simple-medium: How we think about Data Pipelines is changing](https://towardsdatascience.com/how-we-think-about-data-pipelines-is-changing-51c3bf6f34dc)
-
-- [:simple-medium: Cracking the Data Engineering Interview: The System Design Interview](https://medium.com/@seancoyne/cracking-the-data-engineering-interview-the-system-design-interview-fcda02d95c65)
-- [:simple-medium: The (Not So Subtle) Art of Not Giving A Fuck About Data](https://svenbalnojan.medium.com/the-not-so-subtle-art-of-not-giving-a-fuck-about-data-c12a686987c9)
-
-### Develop
-
-- [:material-newspaper: Test Driven](https://testdriven.io/)
+</div>
 
 ## Communities
 

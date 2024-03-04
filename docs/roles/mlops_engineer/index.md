@@ -14,5 +14,8 @@ icon: material/face-man-profile
 ## References
 
 - [MLOps — What, Why and How](https://medium.com/@anup0999/mlops-what-why-and-how-7c1e0eb39ca1)
+- https://learn.microsoft.com/en-us/azure/architecture/ai-ml/idea/orchestrate-mlops-azure-databricks
+- https://www.databricks.com/blog/2022/06/22/architecting-mlops-on-the-lakehouse.html
+- https://docs.databricks.com/en/machine-learning/mlops/mlops-workflow.html#mlops-workflows-on-databricks
 
 [^1]: [Architecting MLOps on the Lakehouse](https://www.databricks.com/blog/2022/06/22/architecting-mlops-on-the-lakehouse.html)
