@@ -3,13 +3,13 @@
 This project will deliver all knowledge from my experience and other sharing
 knowledge in Data Develop and Engineer field.
 
-!!! warning
+!!! warning "Important"
 
     This project I am working on doesn't have much proper English grammar.
     Because I'm in the middle of trying to practice writing and reading. Please
     understand this issue before going deeper into it :face_holding_back_tears:.
 
-First, I will start reading the popular Data Engineer books from worldwide. That
+First, I will start reading the popular Data Engineering books from worldwide. That
 have many blogs represent many different books to you, but I see that it has some
 book that you should to read that they say you should too.
 
@@ -25,8 +25,8 @@ book that you should to read that they say you should too.
 
 When I start reading, I raise the idea about the future of this my responsibility.
 I know the Data Engineering tools will shift so fast because last three year I
-start with the map-reduce processing on HDFS but nowadays, it changes to in-memory
-processing like Impala or Spark.
+start with the map-reduce processing on **Hadoop HDFS** but nowadays, it changes
+to in-memory processing like **Impala** or **Spark**.
 
 !!! quote "What is DE do?"
 
@@ -46,9 +46,9 @@ roles such as,
 
 <div class="grid cards" markdown>
 
-- [:material-face-man: Data Platform Engineer](roles/data_platform_engineer/index.md)
-- [:material-face-man-shimmer: Data Operation Engineer](roles/dataops_engineer/index.md)
-- [:material-face-man-profile: ML Operation Engineer](roles/mlops_engineer/index.md)
+- [:material-face-man: **Data Platform Engineer**](roles/data_platform_engineer/index.md)
+- [:material-face-man-shimmer: **Data Ops Engineer**](roles/dataops_engineer/index.md)
+- [:material-face-man-profile: **ML Ops Engineer**](roles/mlops_engineer/index.md)
 
 </div>
 
@@ -60,4 +60,4 @@ Data Engineering tools.
 - [:simple-medium: Data Engineering](https://medium.com/tag/data-engineering)
 - [:simple-medium: ODDS Team](https://medium.com/odds-team)
 
-[^1]: Information from [:simple-medium: What is Data Engineering?](https://medium.com/codex/what-is-data-engineering-407bcf860baf)
+[^1]: Information of this quote reference from [:simple-medium: What is Data Engineering?](https://medium.com/codex/what-is-data-engineering-407bcf860baf)

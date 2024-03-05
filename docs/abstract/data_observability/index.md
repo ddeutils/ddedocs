@@ -4,7 +4,7 @@ icon: material/engine-outline
 
 # Data Observability
 
-**Data observability** is an organization’s ability to fully understand the health of
+**Data Observability** is an organization’s ability to fully understand the health of
 the data in their systems. Data observability eliminates data downtime by applying
 best practices learned from DevOps to data pipeline observability.
 

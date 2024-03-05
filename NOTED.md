@@ -4,11 +4,19 @@
 
 ```shell
 mkdocs new .
+```
+
+## Serving
+
+```shell
 mkdocs serve
 ```
 
 > [!NOTE]
 > It will generate document to the url: http://127.0.0.1:8000/
+
+> [!TIP]
+> If you do not want to use auto reload, you can use `mkdocs serve --no-livereload`.
 
 ## Release Document
 

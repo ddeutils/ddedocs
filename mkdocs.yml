@@ -17,6 +17,7 @@ theme:
     - content.code.copy
     - content.code.select
     - content.footnote.tooltips
+    - content.tooltips
   language: en
   palette:
     - scheme: default
@@ -53,6 +54,7 @@ nav:
           - Daily Work: dae-daily-work.md
           - SOLID Principles: dae-solid-principles.md
       - Roles:
+          - roles/index.md
           - Data Platform Engineer:
               - roles/data_platform_engineer/index.md
           - Data Operation Engineer:
