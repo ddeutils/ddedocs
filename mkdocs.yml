@@ -24,13 +24,13 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-      primary: teal
+      primary: black
       accent: purple
     - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: teal
+      primary: blue grey
       accent: lime
   font:
     text: Roboto
@@ -57,11 +57,11 @@ nav:
           - roles/index.md
           - Data Platform Engineer:
               - roles/data_platform_engineer/index.md
-          - Data Operation Engineer:
+          - DataOps Engineer:
               - roles/dataops_engineer/index.md
           - Lead of Data Engineer:
               - roles/lead_data_engineer/index.md
-          - Ml Operation Engineer:
+          - MLOps Engineer:
               - roles/mlops_engineer/index.md
       - Abstraction:
           - Data Management:
@@ -129,6 +129,7 @@ nav:
                   - To Databricks: services/github/github-actions-to-databricks.md
           - Azure:
               - services/azure/index.md
+              - API Authentication: services/azure/az-api-authen.md
               - Database:
                   - Authentication: services/azure/database/az-db-authentication.md
                   - Monitoring: services/azure/database/az-db-monitoring.md
@@ -219,7 +220,7 @@ nav:
                   - Data Firehose: services/aws/kinesis/kinesis-data-firehose.md
           - Google:
               - services/google/index.md
-              - API Authentication: services/google/google-api-authenticate.md
+              - API Authentication: services/google/google-api-authen.md
               - Cloud Functions:
                   - To Managing Secrets: services/google/functions/gcf-to-managing-secrets.md
               - BigQuery:
@@ -542,4 +543,4 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/korawica/ddedocs" target="_blank" rel="noopener">Korawich Anuttra</a>
+  Copyright &copy; 2023 <a href="https://github.com/korawica/ddedocs" target="_blank" rel="noopener">Korawich Anuttra</a>

@@ -47,8 +47,8 @@ roles such as,
 <div class="grid cards" markdown>
 
 - [:material-face-man: **Data Platform Engineer**](roles/data_platform_engineer/index.md)
-- [:material-face-man-shimmer: **Data Ops Engineer**](roles/dataops_engineer/index.md)
-- [:material-face-man-profile: **ML Ops Engineer**](roles/mlops_engineer/index.md)
+- [:material-face-man-shimmer: **DataOps Engineer**](roles/dataops_engineer/index.md)
+- [:material-face-man-profile: **MLOps Engineer**](roles/mlops_engineer/index.md)
 
 </div>
 
@@ -57,7 +57,23 @@ roles such as,
 This below is the list of communities that must learn about coding knowledge and
 Data Engineering tools.
 
-- [:simple-medium: Data Engineering](https://medium.com/tag/data-engineering)
-- [:simple-medium: ODDS Team](https://medium.com/odds-team)
+<div class="grid cards" markdown>
+
+-   :simple-medium: **Data Engineering**
+
+    ---
+    A Medium Tag for Data Engineering knowledge and solutions.
+
+    [:octicons-arrow-right-24: Go Through](https://medium.com/tag/data-engineering)
+
+-   :simple-medium: **ODDS Team**
+
+    ---
+    A Group that believes software development should be joyful and advocates
+    deliberate practice.
+
+    [:octicons-arrow-right-24: Go Through](https://medium.com/tag/data-engineering)
+
+</div>
 
 [^1]: Information of this quote reference from [:simple-medium: What is Data Engineering?](https://medium.com/codex/what-is-data-engineering-407bcf860baf)
