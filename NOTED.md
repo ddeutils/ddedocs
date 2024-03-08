@@ -24,7 +24,7 @@ mkdocs serve
 shelf vs bump date
 ```
 
-## Reference
+## References
 
 - [How To Create STUNNING Code Documentation With MkDocs Material Theme](https://www.youtube.com/watch?v=Q-YA_dA8C20)
 - [GitHub Gist - Markdown with `markdownlint`](https://gist.github.com/ahgraber/9ad4d0086a3f239f7872b7f33ebbe4c5#markdown-with-markdownlint)
