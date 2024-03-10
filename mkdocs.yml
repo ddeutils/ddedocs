@@ -38,6 +38,8 @@ theme:
   icon:
     logo: material/library-shelves
     repo: fontawesome/brands/github-alt
+    admonition:
+        warning: material/alert-decagram-outline
 
 repo_name: korawica/ddedocs
 repo_url: https://github.com/korawica/ddedocs

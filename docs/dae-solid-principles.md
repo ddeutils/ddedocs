@@ -1,3 +1,7 @@
+---
+icon: material/shield-crown-outline
+---
+
 # Data Engineering: _SOLID Principles_
 
 ## References
