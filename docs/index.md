@@ -13,16 +13,6 @@ First, I will start reading the popular Data Engineering books from worldwide. T
 have many blogs represent many different books to you, but I see that it has some
 book that you should to read that they say you should too.
 
-- [:material-book-open-page-variant: Fundamentals of Data Engineering](abstract/book/book-fundamentals-of-data-engineering.md)
-- [:material-book-open-page-variant: Data Pipelines Pocket Reference](abstract/book/book-data-pipelines-pocket-reference.md)
-- [:simple-medium: Data Engineer Books](https://towardsdatascience.com/data-engineering-books-f373005d53fc)
-- [:simple-medium: 4 Top Data Engineering Books That Shaped My Career](https://medium.com/towards-data-engineering/4-top-data-engineering-books-that-shaped-my-career-472a519dc34f)
-- [:material-book-open-page-variant: Data Engineering with Python]
-- [:material-book-open-page-variant: The Data Warehouse Toolkit]
-- [:material-book-open-page-variant: Architecting Modern Data Platforms]
-- [:material-book-open-page-variant: Spark: The Definitive Guide]
-- [:material-book-open-page-variant: Designing Data-Intensive Applications]
-
 When I start reading, I raise the idea about the future of this my responsibility.
 I know the Data Engineering tools will shift so fast because last three year I
 start with the map-reduce processing on **Hadoop HDFS** but nowadays, it changes

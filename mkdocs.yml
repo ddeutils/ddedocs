@@ -117,6 +117,7 @@ nav:
           - CDC: abstract/data/data-cdc.md
           - Data Structure: abstract/data/data-structure.md
       - Book:
+          - abstract/book/index.md
           - Fundamentals of Data Engineering: abstract/book/book-fundamentals-of-data-engineering.md
       - News & Research:
           - ChatGPT:

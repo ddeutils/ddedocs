@@ -2,7 +2,7 @@
 icon: material/face-man
 ---
 
-# Role: _Data Platform Engineer_
+# Data Platform Engineer
 
 - [Building a Data Platform in 2024](https://towardsdatascience.com/building-a-data-platform-in-2024-d63c736cccef)
 - https://life.wongnai.com/get-to-know-data-platform-engineer-role-at-lmwn-4b43443eaca8
