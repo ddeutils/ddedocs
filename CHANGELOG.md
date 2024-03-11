@@ -2,6 +2,24 @@
 
 ## Latest Changes
 
+## 20240311
+
+### :scissors: References
+
+- :clipboard: refs: add auth with oauth2 to azure service. (_2024-03-08_)
+- :clipboard: refs: reference docs for mlops engineer. (_2024-03-05_)
+
+### :book: Documents
+
+- :page_facing_up: docs: change abstact book from home page to index of book page. (_2024-03-11_)
+- :page_facing_up: docs: update icon on warning admonitions. (_2024-03-10_)
+- :page_facing_up: docs: update README and NOTED. (_2024-03-08_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs version to 9.5.13. (_2024-03-08_)
+- :pushpin: deps: upgrade python version from 38 to 39. (_2024-03-04_)
+
 ## 20240304
 
 ### :scissors: References
