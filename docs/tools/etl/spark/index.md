@@ -13,7 +13,7 @@ icon: simple/apachespark
 
 ## Architecture
 
-![Spark Cluster Overview](./images/spark-cluster-overview.png)
+![Spark Cluster Overview](img/spark-cluster-overview.png)
 
 - [Understanding Apache Spark Architecture](https://medium.com/@shobhittulshain/understanding-spark-architecture-6003184a12ec)
 - [A Deep Dive into Apache Spark Architecture](https://medium.com/@shaloomathew/a-deep-dive-into-apache-spark-architecture-fe01723b1aa6)
@@ -87,7 +87,7 @@ Spark has two API types
 - Low-level API (Unstructured)
 - High-level API (Spark’s Structured API)
 
-![Structured Spark API Execution plan](./images/spark-api-plan.png)
+![Structured Spark API Execution plan](img/spark-api-plan.png)
 
 ### Low-level API
 

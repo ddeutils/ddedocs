@@ -146,7 +146,7 @@ tableA.join(tableB, 'user_id')
 
 If the join is planed with sort-merge join, the execution plan will look like this:
 
-![Execution Plan](images/spark-bucketing-exec-plan.png)
+![Execution Plan](img/spark-bucketing-exec-plan.png)
 
 As you can see, each branch of the join contains an `Exchange` operator that represents
 the shuffle (notice that Spark will not always use sort-merge join for joining
@@ -159,7 +159,7 @@ buckets, Spark will read the data on the cluster with this specific distribution
 so it doesn't require additional repartitioning and shuffle — the Exchange operator
 will no longer be present in the plan:
 
-![Execution Plan](images/spark-bucketing-exec-plan-2.png)
+![Execution Plan](img/spark-bucketing-exec-plan-2.png)
 
 ### One-side shuffle-free join
 
@@ -303,7 +303,7 @@ Well, each file name has a specific structure and contains information not only
 about the bucket to which it belongs, but also which task produced the file as
 you can see from this picture:
 
-![Bucket Pruning](images/spark-bucketing-filter-pruning.png)
+![Bucket Pruning](img/spark-bucketing-filter-pruning.png)
 
 The bucket pruning can lead to a huge speed-up if the table is very large.
 
@@ -352,7 +352,7 @@ table by calling a SQL statement
 spark.sql("DESCRIBE EXTENDED table_name").show(n=100)
 ```
 
-![Descript Bucketed Table](images/spark-bucketing-desc.png)
+![Descript Bucketed Table](img/spark-bucketing-desc.png)
 
 From this, you can see if the table is bucketed, what fields were used for the
 bucketing and how many buckets the table has. Notice that we called here `show(n=100)`

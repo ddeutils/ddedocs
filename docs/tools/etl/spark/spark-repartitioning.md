@@ -101,7 +101,7 @@ spark.table("tableA") \
 The `spark plan` for this query will look like this (and I added there also the
 information about the _oP_, _oO_ and the requirements of the `SortMergeJoin`):
 
-![](images/spark-repartition-plan.png)
+![](img/spark-repartition-plan.png)
 
 From the spark plan we can see that the child nodes of the SortMergeJoin (two
 Project operators) have no oP or oO (they are Unknown and None) and this is a general
@@ -115,7 +115,7 @@ plan will look like this (and this is what you can find also in the SparkUI in t
 SQL tab, you won’t find there the spark plan though, because it is not available
 there):
 
-![](images/spark-repartition-plan-2.png)
+![](img/spark-repartition-plan-2.png)
 
 ## Bucketing
 
@@ -224,7 +224,7 @@ dfA \
 
 The spark plan of this query looks like this
 
-![](images/spark-repartition-example-2.png)
+![](img/spark-repartition-example-2.png)
 
 In the spark plan, you can see a pair of HashAggregate operators, the first one
 (on the top) is responsible for a partial aggregation and the second one does the
@@ -236,7 +236,7 @@ is what we will take advantage of shortly. In the general case, these requiremen
 are not fulfilled so the ER rule will add Exchanges (and Sorts). This will lead
 to this executed plan:
 
-![](images/spark-repartition-example-2-plan.png)
+![](img/spark-repartition-example-2-plan.png)
 
 As you can see we end up with a plan that has three Exchange operators, so three
 shuffles will happen during the execution. Let’s now see how using repartition
@@ -256,7 +256,7 @@ by a strategy that converts RepartitionByExpression node from the logical plan.
 This Exchange will be a child of the first HashAggregate operator, and it will set
 the oP to HashPartitioning (user_id) which will be passed downstream:
 
-![](images/spark-repartition-example-2-plan-2.png)
+![](img/spark-repartition-example-2-plan-2.png)
 
 The requirements for oP of all operators in the left branch are now satisfied so
 ER rule will add no additional Exchanges (it will still add Sort to satisfy oO).
@@ -266,7 +266,7 @@ will be distributed by any of these two fields, the requirements will be met. Th
 final executed plan will have only one Exchange in the left branch (and one in
 the right branch) so using repartition we reduced the number of shuffles by one:
 
-![](images/spark-repartition-example-2-plan-3.png)
+![](img/spark-repartition-example-2-plan-3.png)
 
 ## Discussion
 
@@ -311,7 +311,7 @@ countDF.union(sumDF)
 
 Here is the final executed plan for this query:
 
-![](images/spark-repartition-example-3-plan.png)
+![](img/spark-repartition-example-3-plan.png)
 
 It is a typical plan for a union-like query, one branch for each DataFrame in the
 union. We can see that there are two shuffles, one for each aggregation. Besides
@@ -333,7 +333,7 @@ sumDF = df.groupBy("user_id") \
 countDF.union(sumDF)
 ```
 
-![](images/spark-repartition-example-3-plan-2.png)
+![](img/spark-repartition-example-3-plan-2.png)
 
 The repartition function will move the Exchange operator before the HashAggregate,
 and it will make the Exchange sub-branches identical so it will be reused by another

@@ -4,7 +4,7 @@
 
 ## On-Heap vs Off-Heap Memory Management
 
-![A Comparative Overview](./images/spark-comparative-on-off-heap.png)
+![A Comparative Overview](img/spark-comparative-on-off-heap.png)
 
 ## Tungsten Optimizer: Enhancing Spark’s Memory Management
 

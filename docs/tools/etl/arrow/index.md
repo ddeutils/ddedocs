@@ -1,5 +1,5 @@
 ---
-icon: material/less-than
+icon: material/bow-arrow
 ---
 
 # Apache Arrow
