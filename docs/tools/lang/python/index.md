@@ -10,4 +10,5 @@ https://medium.com/@Sabrina-Carpenter/10-advanced-code-performance-tips-for-seni
 
 ## Create Package
 
-https://medium.com/towards-data-engineering/pip-install-your-de-packages-from-github-fbfeed553555
+- [Advanced Project Structuring — Python](https://python.plainenglish.io/advanced-project-structuring-python-part-i-d74f342e58f0)
+- https://medium.com/towards-data-engineering/pip-install-your-de-packages-from-github-fbfeed553555

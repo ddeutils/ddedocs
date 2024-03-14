@@ -1,7 +1,8 @@
-# Data Management: _Data Pipeline_
+# Data Pipeline
 
 - [Creating a Data Pipeline from Scratch](https://gustavorsantos.medium.com/creating-a-data-pipeline-from-scratch-47c8031c7c36)
 - https://medium.com/@kxnk/data-pipelines-pocket-reference-key-learning-points-bb9225ee95a9
+- [Mastering Data Engineering: A breakdown of Data Pipeline Stages and Tools](https://sujit-j-fulse.medium.com/mastering-data-engineering-a-breakdown-of-data-pipeline-stages-and-tools-38d44b29b948)
 
 ## Type of Data Pipelines
 
