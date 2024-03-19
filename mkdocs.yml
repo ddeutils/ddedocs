@@ -255,8 +255,9 @@ nav:
       - System & Network:
           - Edge:
               - services/sys/edge/index.md
-              - FTP: services/sys/edge/op-ftp.md
-              - SFTP: services/sys/edge/op-sftp.md
+              - SSH: services/sys/edge/edge-ssh.md
+              - FTP: services/sys/edge/edge-ftp.md
+              - SFTP: services/sys/edge/edge-sftp.md
           - Docker:
               - services/sys/docker/index.md
               - Dockerfile: services/sys/docker/docker-file.md
@@ -280,6 +281,8 @@ nav:
               - Branching Strategies: tools/git/git-branching-strategies.md
               - Commit Release: tools/git/git-commit-release.md
               - Hooks: tools/git/git-hooks.md
+          - DVC:
+              - tools/dvc/index.md
       - Languages:
           - Shell:
               - tools/lang/shell/index.md
