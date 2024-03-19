@@ -18,7 +18,7 @@ I know the Data Engineering tools will shift so fast because last three year I
 start with the map-reduce processing on **Hadoop HDFS** but nowadays, it changes
 to in-memory processing like **Impala** or **Spark**.
 
-!!! quote ":material-check-decagram: What is DE do?"
+!!! quote "What is DE do?"
 
     **Data Engineering** is the Development, Operation, and Maintenance of data
     infrastructure, either on-premises or in the cloud (or hybrid or multi-cloud),
@@ -27,8 +27,15 @@ to in-memory processing like **Impala** or **Spark**.
 Then I drop the books to my bookcase and go to start searching about trend of
 Data Engineering.
 
+<figure markdown="span">
+  ![The 2023 MAD (ML/AI/DATA) Landscape](img/mad-data-landscape.png){ loading=lazy width="650" }
+  <figcaption><a href="https://mad.firstmark.com/">The 2023 MAD (ML/AI/DATA) Landscape</a></figcaption>
+</figure>
+
 - [:simple-medium: The Future of the Data Engineer part I](https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be)
 - [:simple-medium: My Predictions for Data Engineering](https://medium.com/art-of-data-engineering/my-predictions-for-data-engineering-in-2024-0723fa7a6e04)
+
+## Roles
 
 In the future on this role, if I do not in love with communication or management
 knowledge that make me be [Lead of Data Engineer](roles/lead_data_engineer/index.md), I will go to any specialize
@@ -67,3 +74,4 @@ Data Engineering tools.
 </div>
 
 [^1]: Information of this quote reference from [:simple-medium: What is Data Engineering?](https://medium.com/codex/what-is-data-engineering-407bcf860baf)
+[^2]: [The 2023 MAD (ML/AI/DATA) Landscape](https://mad.firstmark.com/)

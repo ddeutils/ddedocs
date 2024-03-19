@@ -52,9 +52,9 @@ extra:
 nav:
   - Home:
       - index.md
-      - Principles & Steps:
-          - Daily Work: dae-daily-work.md
-          - SOLID Principles: dae-solid-principles.md
+      - Principles & Noted:
+          - Daily Work: note/dae-daily-work.md
+          - SOLID Principles: note/dae-solid-principles.md
       - Roles:
           - roles/index.md
           - Data Platform Engineer:
@@ -481,6 +481,7 @@ nav:
       - Lakehouse:
           - On-Premise: designs/architect/act-on-premise-lake-house.md
       - Architect:
+          - Realtime Data Stream: designs/architect/new/act-realtime.md
           - Projects:
               - Project 01: designs/architect/projects/proj-01.md
       - Migration:

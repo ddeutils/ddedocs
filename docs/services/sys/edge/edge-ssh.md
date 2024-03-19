@@ -4,25 +4,25 @@
 
 There are 4 different ways to present certificates and their components:
 
-PEM
+**PEM**
 
 :   Governed by RFCs, used preferentially by open-source software because it is
     text-based and therefore less prone to translation/transmission errors. It
     can have a variety of extensions (`.pem`, `.key`, `.cer`, `.cert`, more)
 
-PKCS7
+**PKCS7**
 
 :   An open standard used by Java and supported by Windows. Does not contain
     private key material.
 
-PKCS12
+**PKCS12**
 
 :   A Microsoft private standard that was later defined in an RFC that provides
     enhanced security versus the plain-text PEM format. This can contain private
     key and certificate chain material. Its used preferentially by Windows systems,
     and can be freely converted to PEM format through use of openssl.
 
-DER
+**DER**
 
 :   The parent format of PEM. It's useful to think of it as a binary version of
     the base64-encoded PEM file. Not routinely used very much outside of
@@ -97,6 +97,8 @@ Testing,
     ```
 
 ## Multiple Public Keys
+
+Generate multi pair of private and public key,
 
 ```shell
 ssh-keygen -t rsa -f ~/.ssh/id_rsa.home
