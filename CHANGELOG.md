@@ -2,6 +2,21 @@
 
 ## Latest Changes
 
+## 20240319
+
+### :scissors: References
+
+- :clipboard: refs: add references docs from medium. (_2024-03-14_)
+
+### :book: Documents
+
+- :page_facing_up: docs: add ssh docs on edge and dvc tool. (_2024-03-19_)
+- :page_facing_up: docs: rename image folder to img on spark tool. (_2024-03-12_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs-material version from 9.5.13 to 9.5.14. (_2024-03-18_)
+
 ## 20240311
 
 ### :scissors: References
