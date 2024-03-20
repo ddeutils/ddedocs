@@ -36,10 +36,11 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    logo: material/library-shelves
     repo: fontawesome/brands/github-alt
     admonition:
         warning: material/alert-decagram-outline
+  logo: img/favicon.png
+  favicon: img/favicon.png
 
 repo_name: korawica/ddedocs
 repo_url: https://github.com/korawica/ddedocs
@@ -468,18 +469,23 @@ nav:
               - tools/cicd/jenkins/index.md
   - Designs:
       - designs/index.md
+      - Application:
+          - API: designs/app/app-api.md
       - Data Pipeline:
           - AWS Serverless Data Analytic: designs/architect/act-aws-serverless-data-analytics-pipeline.md
           - Azure Modern Data Pipeline: designs/architect/act-azure-modern-data-pipeline.md
           - Stream Processing: designs/architect/act-open-source-stream-processing.md
           - Stream Kafka: designs/architect/act-kafka-stream-pipeline.md
       - Data Platform:
-          - MDM: designs/architect/act-master-data-management.md
-          - Internal Analytics: designs/architect/act-internal-analytics.md
+          - Master Data Management: designs/data-platform/data-platform-mdm.md
+          - Internal Analytics: designs/data-platform/data-platform-internal-analytics.md
+          - With Databricks: designs/data-platform/data-platform-with-databricks.md
       - Data Mesh:
           - Azure Data Mesh: designs/architect/act-data-mesh-with-azure.md
       - Lakehouse:
           - On-Premise: designs/architect/act-on-premise-lake-house.md
+      - Real World:
+          - Netflix: designs/examples/example-netflix-maestro-iceberg.md
       - Architect:
           - Realtime Data Stream: designs/architect/new/act-realtime.md
           - Projects:

@@ -1,6 +1,6 @@
 # Open source Stream Processing
 
-![Architect Open Source Stream Processing](images/open-source-stream-processing.png "Open Source Stream Processing")
+![Architect Open Source Stream Processing](img/open-source-stream-processing.png "Open Source Stream Processing")
 
 ## References
 

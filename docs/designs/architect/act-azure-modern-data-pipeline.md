@@ -1,6 +1,6 @@
 # Modern Azure Data Architecture
 
-![](images/modern-azure-data-architecture.png)
+![](img/modern-azure-data-architecture.png)
 
 ## References
 
