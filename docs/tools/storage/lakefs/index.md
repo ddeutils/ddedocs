@@ -1,5 +1,5 @@
 ---
-icon: fontawesome/solid/water
+icon: material/chat-question-outline
 ---
 
 # LakeFS

@@ -73,10 +73,10 @@ monitoring models in production environments.
 
 ## References
 
-- [:simple-medium: MLOps -- What, Why and How](https://medium.com/@anup0999/mlops-what-why-and-how-7c1e0eb39ca1)
-- [:material-web: MLOps Benefits That Make It An Upcoming Industry Trend](https://geniusee.com/single-blog/mlops-practices-and-its-benefits)
+- [:simple-medium: MLOps - What, Why and How](https://medium.com/@anup0999/mlops-what-why-and-how-7c1e0eb39ca1)
+- [:material-web: MLOps - Benefits That Make It An Upcoming Industry Trend](https://geniusee.com/single-blog/mlops-practices-and-its-benefits)
 - [:material-microsoft-azure: Orchestrate MLOps by using Azure Databricks](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/idea/orchestrate-mlops-azure-databricks)
 - [:simple-databricks: Architecting MLOps on the Lakehouse](https://www.databricks.com/blog/2022/06/22/architecting-mlops-on-the-lakehouse.html)
-- [:simple-databricks: MLOps workflows on Databricks](https://docs.databricks.com/en/machine-learning/mlops/mlops-workflow.html#mlops-workflows-on-databricks)
+- [:simple-databricks: MLOps - workflows on Databricks](https://docs.databricks.com/en/machine-learning/mlops/mlops-workflow.html#mlops-workflows-on-databricks)
 
 [^1]: [:simple-databricks: Architecting MLOps on the Lakehouse](https://www.databricks.com/blog/2022/06/22/architecting-mlops-on-the-lakehouse.html)

@@ -363,6 +363,8 @@ nav:
               - tools/etl/polars/index.md
               - Data Pipeline: tools/etl/polars/polars-data-pipeline.md
               - SCD2 on Delta Lake: tools/etl/polars/polars-scd2-on-delta-lake.md
+          - DLT:
+              - tools/etl/dlt/index.md
           - DBT:
               - tools/etl/dbt/index.md
               - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md
@@ -430,32 +432,34 @@ nav:
           - Trino:
               - tools/query/trino/index.md
       - File Format:
+          - tools/files/index.md
           - Parquet:
               - tools/files/parquet/index.md
-      - Open Table Format:
           - Hive:
-              - tools/open_table/hive/index.md
-          - Delta Lake:
-              - tools/open_table/delta_lake/index.md
-              - Deletion Vector: tools/open_table/delta_lake/delta-lake-deletion-vector.md
-              - Liquid Clustering: tools/open_table/delta_lake/delta-lake-liquid-clustering.md
-              - Partition Z-Order Cluster: tools/open_table/delta_lake/delta-lake-partition-zorder-cluster.md
-              - Universal Format: tools/open_table/delta_lake/delta-lake-universal-format.md
+              - tools/files/hive/index.md
+          - Delta:
+              - tools/files/delta/index.md
+              - Deletion Vector: tools/files/delta/delta-lake-deletion-vector.md
+              - Liquid Clustering: tools/files/delta/delta-lake-liquid-clustering.md
+              - Partition Z-Order Cluster: tools/files/delta/delta-lake-partition-zorder-cluster.md
+              - Universal Format: tools/files/delta/delta-lake-universal-format.md
               - API:
                   - Pyspark:
-                      - Auto Schema Evolution: tools/open_table/delta_lake/pyspark/pyspark-delta-auto-schema-evolution.md
-                      - Image Files: tools/open_table/delta_lake/pyspark/pyspark-delta-image-files.md
-                      - SCD2: tools/open_table/delta_lake/pyspark/pyspark-delta-scd2.md
-                      - Star Schema: tools/open_table/delta_lake/pyspark/pyspark-delta-star-schema.md
-                      - Keeping Fast & Clean: tools/open_table/delta_lake/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
-                      - Best Practice: tools/open_table/delta_lake/pyspark/pyspark-delta-best-practice.md
-                      - Handling Concurrent Write: tools/open_table/delta_lake/pyspark/pyspark-delta-handling-concurrent-write.md
-                      - Stream Data: tools/open_table/delta_lake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
+                      - Auto Schema Evolution: tools/files/delta/pyspark/pyspark-delta-auto-schema-evolution.md
+                      - Image Files: tools/files/delta/pyspark/pyspark-delta-image-files.md
+                      - SCD2: tools/files/delta/pyspark/pyspark-delta-scd2.md
+                      - Star Schema: tools/files/delta/pyspark/pyspark-delta-star-schema.md
+                      - Keeping Fast & Clean: tools/files/delta/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
+                      - Best Practice: tools/files/delta/pyspark/pyspark-delta-best-practice.md
+                      - Handling Concurrent Write: tools/files/delta/pyspark/pyspark-delta-handling-concurrent-write.md
+                      - Stream Data: tools/files/delta/pyspark/pyspark-delta-stream-data-with-spark-stream.md
           - Iceberg:
-              - tools/open_table/iceberg/index.md
-              - Reduce Full Scan: tools/open_table/iceberg/icb-reduce-full-scan.md
-              - Small Files: tools/open_table/iceberg/icb-small-files.md
-              - With Pyspark: tools/open_table/iceberg/icb-with-pyspark.md
+              - tools/files/iceberg/index.md
+              - Reduce Full Scan: tools/files/iceberg/icb-reduce-full-scan.md
+              - Small Files: tools/files/iceberg/icb-small-files.md
+              - With Pyspark: tools/files/iceberg/icb-with-pyspark.md
+          - Static Frame:
+              - tools/files/static-frame/index.md
       - Storage:
           - Hadoop:
               - tools/storage/hadoop/index.md
@@ -488,8 +492,12 @@ nav:
           - Netflix: designs/examples/example-netflix-maestro-iceberg.md
       - Architect:
           - Realtime Data Stream: designs/architect/new/act-realtime.md
-          - Projects:
-              - Project 01: designs/architect/projects/proj-01.md
+      - Projects:
+          - Project 01: designs/architect/projects/proj-01.md
+          - Project 02: designs/architect/projects/proj-02.md
+          - Project 03: designs/architect/projects/proj-03.md
+          - Project 04: designs/architect/projects/proj-04.md
+          - Project 05: designs/architect/projects/proj-05.md
       - Migration:
           - Lakehouse from DWH: designs/migration/mg-lakehouse-from-classic-dwh.md
   - Analytics:
