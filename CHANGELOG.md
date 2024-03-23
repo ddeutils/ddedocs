@@ -2,6 +2,22 @@
 
 ## Latest Changes
 
+## 20240323
+
+### :tada: Features
+
+- :dart: feat: add favicon and refactor design architect docs. (_2024-03-20_)
+
+### :book: Documents
+
+- :page_facing_up: docs: add project docs to designs. (_2024-03-20_)
+- :page_facing_up: docs: update mad data landscape on the home page. (_2024-03-19_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: change getting started page to index on azure services. (_2024-03-23_)
+- :construction: refactored: add vcs folder for keep git and dvc docs. (_2024-03-20_)
+
 ## 20240319
 
 ### :scissors: References
