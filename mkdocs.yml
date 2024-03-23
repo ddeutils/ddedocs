@@ -66,6 +66,7 @@ nav:
               - roles/lead_data_engineer/index.md
           - MLOps Engineer:
               - roles/mlops_engineer/index.md
+              - Challenge: roles/mlops_engineer/mlops-challenge.md
       - Abstraction:
           - Data Management:
               - abstract/data_management/index.md
@@ -133,12 +134,14 @@ nav:
                   - To Databricks: services/github/github-actions-to-databricks.md
           - Azure:
               - services/azure/index.md
-              - API Authentication: services/azure/az-api-authen.md
+              - OAuth: services/azure/az-oauth.md
+              - Storage Queue:
+                  - services/azure/storage_queue/index.md
               - Database:
                   - Authentication: services/azure/database/az-db-authentication.md
                   - Monitoring: services/azure/database/az-db-monitoring.md
               - Batch:
-                  - Getting Started: services/azure/batch/az-btch-getting-started.md
+                  - services/azure/batch/index.md
                   - Start Task: services/azure/batch/az-btch-start-task.md
                   - Auto Scalable: services/azure/batch/az-btch-auto-scalable.md
                   - Connections:
@@ -151,6 +154,7 @@ nav:
                       - Docker inside Node: services/azure/batch/az-btch-run-docker-inside.md
               - Function App:
                   - Deploy Function V2: services/azure/functions/azf-deploy-v2-local.md
+                  - Deploy with Docker: services/azure/functions/azf-deploy-with-docker.md
                   - Connections:
                       - To Key Vault: services/azure/functions/azf-access-key-vault.md
                       - To Synapse SQL Pool: services/azure/functions/azf-access-synapse-sql-pool.md
@@ -166,7 +170,7 @@ nav:
                       - To IoT Hub: services/azure/databricks/adb-to-iothub.md
                       - To Kinesis: services/azure/databricks/adb-to-kinesis.md
               - Event Hubs:
-                  - Getting Started: services/azure/eventhubs/eventhubs-getting-started.md
+                  - services/azure/eventhubs/index.md
                   - Producer Data: services/azure/eventhubs/eventhubs-produce-data.md
               - Data Factory:
                   - Share IR: services/azure/data_factory/adf-ir-sharing.md
@@ -214,6 +218,7 @@ nav:
                   - Combine Parallel Results: services/aws/step_functions/stfn-combine-data-parallel-state.md
               - Glue:
                   - Getting Started: services/aws/glue/glue-getting-started.md
+                  - Data Quality: services/aws/glue/glue-data-quality.md
                   - Local Env: services/aws/glue/glue-local-env.md
               - Athena:
                   - With DeltaLake: services/aws/athena/athena-with-delta-lake.md
@@ -268,6 +273,8 @@ nav:
                   - Postgres: services/sys/docker/docker-compose-postgresql.md
           - Kubernetes:
               - services/sys/k8s/index.md
+              - Pod Scheduling: services/sys/k8s/k8s-pod-scheduling.md
+              - Networking: services/sys/k8s/k8s-networking.md
       - Databases:
           - Postgres:
               - services/postgres/index.md

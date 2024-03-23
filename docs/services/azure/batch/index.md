@@ -1,4 +1,6 @@
-# Azure Batch: Getting Started
+# Azure Batch
+
+![Azure Batch Architecture](img/az-btch-architecture.png)
 
 - https://github.com/baptisteohanes/Demo_AzureBatch/blob/master/python_tutorial_client.py
 
@@ -53,3 +55,8 @@
 ## Python
 
 - https://github.com/uglide/azure-content/blob/master/articles/batch/batch-python-tutorial.md
+
+
+## References
+
+- [Running heavy workloads using Azure Batch Processing](https://www.bridgenext.com/blog/running-heavy-workloads-using-azure-batch-processing/)

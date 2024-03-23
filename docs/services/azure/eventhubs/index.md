@@ -1,4 +1,6 @@
-# Getting Started
+# Azure EventHubs
+
+## Getting Started
 
 === "Python: Async"
 

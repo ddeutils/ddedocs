@@ -1,4 +1,4 @@
-# Azure Storage Account: Queue
+# Azure Storage Queue
 
 ## Examples
 
