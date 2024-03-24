@@ -1,5 +1,5 @@
 ---
-icon:
+icon: material/chat-question-outline
 ---
 
 # Dagster

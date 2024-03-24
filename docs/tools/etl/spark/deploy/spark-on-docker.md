@@ -1,4 +1,4 @@
-# Apache Spark: _With Docker_
+# On Docker
 
 ## References
 

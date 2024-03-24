@@ -262,21 +262,21 @@ nav:
                       - Databricks: services/terraform/tf-azure-databricks.md
       - System & Network:
           - Edge:
-              - services/sys/edge/index.md
-              - SSH: services/sys/edge/edge-ssh.md
-              - FTP: services/sys/edge/edge-ftp.md
-              - SFTP: services/sys/edge/edge-sftp.md
+              - services/edge/index.md
+              - SSH: services/edge/edge-ssh.md
+              - FTP: services/edge/edge-ftp.md
+              - SFTP: services/edge/edge-sftp.md
           - Docker:
-              - services/sys/docker/index.md
-              - Dockerfile: services/sys/docker/docker-file.md
+              - services/docker/index.md
+              - Dockerfile: services/docker/docker-file.md
               - Commands:
-                  - Management: services/sys/docker/docker-cmd-management.md
+                  - Management: services/docker/docker-cmd-management.md
               - Compose:
-                  - Postgres: services/sys/docker/docker-compose-postgresql.md
+                  - Postgres: services/docker/docker-compose-postgresql.md
           - Kubernetes:
-              - services/sys/k8s/index.md
-              - Pod Scheduling: services/sys/k8s/k8s-pod-scheduling.md
-              - Networking: services/sys/k8s/k8s-networking.md
+              - services/k8s/index.md
+              - Pod Scheduling: services/k8s/k8s-pod-scheduling.md
+              - Networking: services/k8s/k8s-networking.md
       - Databases:
           - Postgres:
               - services/postgres/index.md
@@ -365,6 +365,7 @@ nav:
           - Soda:
               - tools/quality/soda/index.md
       - Extract & Transform & Load:
+          - tools/etl/index.md
           - Pandas:
               - tools/etl/pandas/index.md
               - SQL Conversion: tools/etl/pandas/py_pd_convert_from_sql.md
@@ -377,7 +378,7 @@ nav:
           - DBT:
               - tools/etl/dbt/index.md
               - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md
-              - Lake House: tools/etl/dbt/dbt-on-lake-house.md
+              - LakeHouse: tools/etl/dbt/dbt-on-lake-house.md
               - DBT Loom: tools/etl/dbt/dbt-loom.md
               - DBT Mesh: tools/etl/dbt/dbt-mesh.md
               - Connections:
@@ -386,6 +387,11 @@ nav:
               - tools/etl/arrow/index.md
           - Spark:
               - tools/etl/spark/index.md
+              - Common:
+                  - Read JSON: tools/etl/spark/spark-read-json.md
+                  - UDFs: tools/etl/spark/spark-udfs.md
+                  - Select & SelectExpr: tools/etl/spark/pyspark/pyspark-select-and-selectexpr.md
+                  - Why SUCCESS: tools/etl/spark/spark-why-success.md
               - Optimizations:
                   - tools/etl/spark/optimizations/index.md
                   - Bucketing: tools/etl/spark/spark-bucketing.md
@@ -397,11 +403,6 @@ nav:
                   - Data Spill: tools/etl/spark/optimizations/spark-data-spill.md
                   - Shuffling: tools/etl/spark/optimizations/spark-shuffling.md
                   - Storage: tools/etl/spark/optimizations/spark-storage.md
-              - Common:
-                  - Read JSON: tools/etl/spark/spark-read-json.md
-                  - UDFs: tools/etl/spark/spark-udfs.md
-                  - Select & SelectExpr: tools/etl/spark/pyspark/pyspark-select-and-selectexpr.md
-                  - Why SUCCESS: tools/etl/spark/spark-why-success.md
               - API:
                   - Pyspark:
                       - Data Wrangling Functions: tools/etl/spark/pyspark/pyspark-data-wrangling-functions.md
@@ -416,9 +417,10 @@ nav:
                   - Read Files: tools/etl/spark/stream/spark-stream-read-files.md
                   - Multi Query: tools/etl/spark/stream/spark-stream-multi-query.md
                   - ForEach Batch: tools/etl/spark/stream/spark-stream-foreach-batch.md
-              - Local: tools/etl/spark/pyspark/pyspark-local.md
-              - With Docker: tools/etl/spark/spark-with-docker.md
-              - With DataProc Serverless: tools/etl/spark/pyspark/pyspark-local-with-dataproc-serverless.md
+              - Deploy:
+                  - On Local: tools/etl/spark/deploy/spark-on-local.md
+                  - On Docker: tools/etl/spark/deploy/spark-on-docker.md
+                  - On Local with DataProc Serverless: tools/etl/spark/deploy/spark-on-local-with-dataproc-serverless.md
               - Updated:
                   - Spark3.4:
                       - Parameterised SQL: tools/etl/spark/updated/spark-3-4-parameterised-sql.md
