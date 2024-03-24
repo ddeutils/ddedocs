@@ -1,0 +1,7 @@
+authors:
+  admin:
+    name: Korawich Anuttra       # Author name
+    description: Admin           # Author description
+    avatar: /img/dde.png         # Author avatar
+#    slug: url           # Author profile slug
+#    url: url            # Author website URL

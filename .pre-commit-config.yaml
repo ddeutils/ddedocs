@@ -91,3 +91,12 @@ repos:
         entry: venv/Scripts/python.exe scripts/compress.py
         language: system
         always_run: true
+
+#      - id: auto-update-date
+#        name: auto update date
+#        stages: [commit]
+#        types: [python]
+#        files: \.md$
+#        entry: venv/Scripts/python.exe scripts/auto_update.py
+#        language: system
+#        always_run: true

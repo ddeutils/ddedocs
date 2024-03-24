@@ -67,6 +67,8 @@ nav:
           - MLOps Engineer:
               - roles/mlops_engineer/index.md
               - Challenge: roles/mlops_engineer/mlops-challenge.md
+          - Analytic Engineer:
+              - roles/analytic_engineer/index.md
       - Abstraction:
           - Data Management:
               - abstract/data_management/index.md
@@ -528,11 +530,22 @@ nav:
               - analytics/forecast/index.md
           - Cluster:
               - analytics/cluster/index.md
+  - Blogs:
+      - blog/index.md
 
 plugins:
   - tags
   - search
   - glightbox
+# # NOTE: this plugin is currently reserved to sponsors
+#  - meta
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_date_format: medium
+      post_url_date_format: yyyy/MM/dd
+      post_readtime_words_per_minute: 300
+      authors_file: "{blog}/.authors.yml"
 # # NOTE: this plugin is currently reserved to sponsors
 #  - optimize:
 #      cache_dir: .cache/
