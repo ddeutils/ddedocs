@@ -165,6 +165,7 @@ cython_debug/
 
 # Local Keeper
 .local/
+.cache/
 
 # Backup files
 backup/

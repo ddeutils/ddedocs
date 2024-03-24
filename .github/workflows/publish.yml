@@ -36,5 +36,7 @@ jobs:
           pip install pillow cairosvg
 
       - name: Deploy GitHub Page
+        env:
+          CI: true
         run: |
           mkdocs gh-deploy --force
