@@ -24,14 +24,11 @@ that provides an efficient way to manage data across a diverse but unified data 
 _Databases_, _Data Lakes_ and _Data Warehouses_, _Big Data Management Systems_,
 _Data Analytics_, and more.
 
-### :material-format-list-bulleted: Types of data management
+### :material-format-list-bulleted: Types of Data Management
 
-The scope of a data management discipline is quite broad, and a strong data management
+The scope of a Data Management discipline is quite broad, and a strong data management
 strategy typically implements the following components to streamline their strategy
 and operations throughout an organization
-
-So, whether you’re researching big data or master data, you'll use many types of
-data management.
 
 **Data processing**
 

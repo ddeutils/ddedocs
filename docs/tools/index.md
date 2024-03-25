@@ -13,13 +13,13 @@ data technologies used to collect, process, store, and analyze data.
   <figcaption><a href="https://bitestreams.com/blog/modern-data-stack/">DBT Ecosystem Overview</a></figcaption>
 </figure>
 
-The **MDS** advocates a lot of changes, but if not done right they can
-be painful, expensive, and risky. Most often when I talk to data stack owners in
-the enterprise, the question is not so much how one tool compares to another but
-whether they can live with the status quo or Have a strong enough desire to
-change.
+:material-page-last: The **MDS** advocates a lot of changes, but if not done right
+they can be painful, expensive, and risky. Most often when I talk to data stack
+owners in the enterprise, the question is not so much how one tool compares to
+another but whether they can live with the status quo or Have a strong enough
+desire to change.
 
-**The Key Concepts**:
+:material-key-chain: **The Key Concepts**:
 
 - Easy to Try & Deploy
 - Massive Scalability
@@ -29,7 +29,7 @@ change.
 - Composable Data Stack
 - Flexible Pricing
 
-The **MDS** allows you to build on top of the software of giants instead of adopting
+:material-page-last: The **MDS** allows you to build on top of the software of giants instead of adopting
 the "^^**not invented here syndrome**^^". Consider whether the business value from your
 analytics solution is coming from how well you manage your data pipelines and
 data infrastructure, versus how well you build analytics and AI products on

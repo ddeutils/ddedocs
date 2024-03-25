@@ -1,3 +1,16 @@
+---
+authors:
+  - admin
+categories:
+  - Architect
+tags:
+  - Project
+date:
+  created: 2024-03-25
+  update: 2024-03-25
+draft: true
+---
+
 # Project: Reddit, Airflow, Celery, Postgres, S3, AWS Glue, Athena, Redshift
 
 ![Project 02](img/project-02.png)

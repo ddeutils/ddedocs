@@ -497,26 +497,15 @@ nav:
           - Netflix: designs/examples/example-netflix-maestro-iceberg.md
       - Architect:
           - Realtime Data Stream: designs/architect/new/act-realtime.md
-      - Projects:
-          - Project 01: designs/architect/projects/proj-01.md
-          - Project 02: designs/architect/projects/proj-02.md
-          - Project 03: designs/architect/projects/proj-03.md
-          - Project 04: designs/architect/projects/proj-04.md
-          - Project 05: designs/architect/projects/proj-05.md
       - Migration:
           - Lakehouse from DWH: designs/migration/mg-lakehouse-from-classic-dwh.md
   - Analytics:
       - analytics/index.md
-      - Role:
-          - Analytic Engineer:
-              - analytics/analytic_engineer/index.md
-      - Knowledge:
+      - Logic & Algorithm:
           - Data Analytic:
               - analytics/data_analytic/index.md
               - Design Thinking: analytics/data_analytic/da-design-thinking.md
-          - Analytic Engineer:
-              - analytics/analytic_engineer/index.md
-      - Algorithm:
+      - AI & Model:
           - ML Management Tool: analytics/analytic-ml-management-tools.md
           - Linker:
               - analytics/linker/index.md
