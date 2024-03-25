@@ -1,8 +1,20 @@
 ---
+authors:
+  - admin
+categories:
+  - AI
+tags:
+  - AI
+date:
+  created: 2024-03-24
+  update: 2024-03-24
+draft: true
 icon: material/robot-outline
 ---
 
 # ChatGPT
+
+:material-robot-outline: ChatGPT
 
 ## Role Play
 

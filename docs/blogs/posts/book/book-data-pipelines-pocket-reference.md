@@ -1,4 +1,17 @@
-# Book: _Data Pipelines Pocket Reference_
+---
+authors:
+  - admin
+categories:
+  - Book
+tags:
+  - Data
+date:
+  created: 2024-03-24
+  update: 2024-03-24
+draft: true
+---
+
+# Data Pipelines Pocket Reference
 
 ## References
 

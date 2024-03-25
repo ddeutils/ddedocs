@@ -1,6 +1,45 @@
 # Tools
 
-## Noted
+:material-format-list-group: **Modern Data Stack (MDS)** is a collection of tools and cloud
+data technologies used to collect, process, store, and analyze data.
+
+!!! note
+
+    So, this topic will group any open-soure data tools by the **Modern Data Stack**
+    concept.
+
+<figure markdown="span">
+  ![DBT Ecosystem Overview](img/tools-dbt-ecosystem-overview.png){ loading=lazy width="700" }
+  <figcaption><a href="https://bitestreams.com/blog/modern-data-stack/">DBT Ecosystem Overview</a></figcaption>
+</figure>
+
+The **MDS** advocates a lot of changes, but if not done right they can
+be painful, expensive, and risky. Most often when I talk to data stack owners in
+the enterprise, the question is not so much how one tool compares to another but
+whether they can live with the status quo or Have a strong enough desire to
+change.
+
+**The Key Concepts**:
+
+- Easy to Try & Deploy
+- Massive Scalability
+    - Data
+    - Users
+    - Use Cases
+- Composable Data Stack
+
+The **MDS** allows you to build on top of the software of giants instead of adopting
+the "<u>**not invented here syndrome**</u>". Consider whether the business value from your
+analytics solution is coming from how well you manage your data pipelines and
+data infrastructure, versus how well you build analytics and AI products on
+top of your infrastructure.
+
+<figure markdown="span">
+  ![The Modern Open-Source Data Stack](img/tools-modern-open-source-data-stack.png){ loading=lazy width="700" }
+  <figcaption><a href="https://www.datafold.com/blog/the-modern-data-stack-open-source-edition#instrumentation/">The Modern Open-Source Data Stack</a></figcaption>
+</figure>
+
+## :material-select-compare: Comparison
 
 - https://itnext.io/five-apache-projects-you-probably-didnt-know-about-13528e05765f
 - https://medium.com/geekculture/airflow-vs-prefect-vs-kestra-which-is-best-for-building-advanced-data-pipelines-40cfbddf9697

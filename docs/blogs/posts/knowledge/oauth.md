@@ -2,17 +2,18 @@
 authors:
   - admin
 categories:
-  - Dummy
+  - Knowledge
 tags:
-  - Initial
-  - Dummy
+  - API
 date:
   created: 2024-03-24
   update: 2024-03-24
 draft: true
 ---
 
-# Initial Blog
+# OAuth
+
+:material-cloud-key-outline: OAuth
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
 nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor

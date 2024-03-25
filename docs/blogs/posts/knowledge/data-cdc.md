@@ -1,10 +1,19 @@
 ---
-icon: material/newspaper-variant-multiple
+authors:
+  - admin
+categories:
+  - Knowledge
+tags:
+  - Data
+date:
+  created: 2024-03-24
+  update: 2024-03-24
+draft: true
 ---
 
-# Data: Change Data Capture (CDC)
+# Change Data Capture (CDC)
 
-![Change Data Capture](./images/data-cdc-01.png){ loading=lazy }
+![Change Data Capture](img/data-cdc-01.png){ loading=lazy }
 
 **Change Data Capture** (CDC) is a design pattern that identifies and tracks changes
 in data so that action can be taken using this change data. It’s particularly
@@ -12,6 +21,8 @@ crucial in data-driven architectures where it’s essential to promptly and reli
 capture the modifications in the source data store and propagate them to downstream
 systems. CDC can be applied in various scenarios, including data replication,
 data warehousing, real-time analytics, and more.
+
+<!-- more -->
 
 ## References
 

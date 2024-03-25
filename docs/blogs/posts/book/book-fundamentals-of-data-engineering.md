@@ -1,8 +1,17 @@
 ---
-icon: material/book-open-variant
+authors:
+  - admin
+categories:
+  - Book
+tags:
+  - Data
+date:
+  created: 2024-03-24
+  update: 2024-03-24
+draft: true
 ---
 
-# Book: _Fundamentals of Data Engineering_
+# Fundamentals of Data Engineering
 
 ## References
 

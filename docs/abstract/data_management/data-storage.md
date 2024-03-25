@@ -1,6 +1,6 @@
 # Data Management: Data Storage
 
-![Data Storage](images/data-storage.png){ loading=lazy }
+![Data Storage](img/data-storage.png){ loading=lazy }
 
 ## References
 

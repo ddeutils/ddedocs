@@ -4,7 +4,7 @@ icon: material/face-woman
 
 # Analytic Engineer
 
-!!! quote
+!!! quote "What is AE do?"
 
-    Make sure that companies can understand their data and use it to solve problems,
-    answer questions, or make decisions
+    **Analytic Engineer** is who make sure that companies can understand their data
+    and use it to _Solve Problems_, _Answer Questions_, or _Make Decisions_.

@@ -6,10 +6,10 @@ icon: material/git
 
 !!! quote inline end
 
-    **Git** is an open source distributed version control system designed to handle
-    everything from small to very large projects with speed and efficiency.
+    **Git** is an <u>Open Source Distributed Version Control System Designed</u>
+    to handle everything from small to very large projects with speed and efficiency.
 
-**Git** is the best version control tools for any developer, you can read the
+:material-git: **Git** is the best version control tools for any developer, you can read the
 [Official Documents](https://git-scm.com/).
 
 - Save and Track different versions of your repositories
@@ -17,7 +17,7 @@ icon: material/git
 - Share local copies of the same codebases as other developers when working offline
 - Isolate new fixes and features in development without impacting production
 
-## Workflow
+## :octicons-workflow-24: Workflow
 
 ```text
 Initial ---> Working <--> Index/Staging <--> Repository
@@ -262,7 +262,7 @@ Initial ---> Working <--> Index/Staging <--> Repository
         `git ldm` for list history commits that you do in local repository before daily
         standup meeting.
 
-## Common CMD
+## :material-console-line: Common Command
 
 ### Git Hash
 
@@ -610,7 +610,7 @@ $ git checkout master
 $ git merge upstream/master
 ```
 
-## Advance CMD
+## :material-console-line: Advance Command
 
 ### Git Revert
 
@@ -770,7 +770,7 @@ $ git cherry-pick "<commit-hash>"
 
     git does not that delete commit from source branch and in your branch will be exists that commit in new id.
 
-## Git Submodules
+### Git Submodules
 
 Git Submodule help you to develop main project together with subproject and separate
 the commits of subproject from main project.
@@ -885,7 +885,7 @@ local subdirectory, and subproject branches that was tracked.
     username/myproject$ git push origin master
     ```
 
-## Git Reflog
+### Git Reflog
 
 A protocol of HEAD Pointer movements. Reflog is a mechanism to record when the tip
 of branches is updated. This command is to manage the information recorded in it.
@@ -905,7 +905,7 @@ username/myproject$ git reflog --all
 > :
 ```
 
-## Git Blame
+### Git Blame
 
 Use to track change inline of file.
 
@@ -917,9 +917,9 @@ adfa8044 (usernaemDEV 2022-03-06 19:30:39 +0700 3)   remote: "/remote"
 81529d32 (usernaem    2022-03-07 11:19:06 +0700 4)   production: "/prod"
 ```
 
-## Git Bisect
+### Git Bisect
 
-### Start bisect
+#### Start bisect
 
 ```shell
 username/myproject$ git bisect start
@@ -927,7 +927,7 @@ username/myproject$ git bisect bad "<commit-start>"
 username/myproject$ git bisect good "<commit-end>"
 ```
 
-### Unittest until the latest commit exists
+#### Unittest until the latest commit exists
 
 ```shell
 username/myproject$ run app
@@ -953,16 +953,19 @@ username/myproject$ git bisect bad
 username/myproject$ git show 5a30adf5d4f184fd4586891e26d6826ab66*****
 ```
 
-### If found the bug success, you should exit bisect first
+#### If found the bug success, you should exit bisect first
 
 ```shell
 username/myproject$ git bisect reset
 ```
 
-> NOTE: `git bisect log` will show the log of bisect, should use this command before reset.
+!!! note
 
-## References
+    `git bisect log` will show the log of bisect, should use this command before
+    reset.
+
+## :material-vector-link: References
 
 - TODO - [:simple-medium: Git commands I wish I knew earlier as a developer](https://levelup.gitconnected.com/git-commands-i-wish-i-knew-earlier-as-a-developer-a5f9f47d5644)
 - [Frequently Used Git Commands](https://armno.in.th/2019/07/29/frequently-used-git-commands/)
-- [Git is your Friend](https://medium.com/@pakin/git-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-git-is-your-friend-c609c5f8efea)
+- [:simple-medium: Git is your Friend](https://medium.com/@pakin/git-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-git-is-your-friend-c609c5f8efea)

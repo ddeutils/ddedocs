@@ -4,10 +4,25 @@ icon: material/warehouse
 
 # Data Management
 
-**Data management** is the effective practice of collecting, storing, protecting, delivering,
-and processing data. In business, data is usually associated with customers, prospects,
-employees, deals, competitors, and finances. When an organization effectively manages data,
-they **gain** insights that **drive** business decisions.
+**Data Management** is the effective practice of _Collecting_, _Storing_, _Protecting_,
+_Delivering_, and _Processing_ data.
+In business, data is usually associated with customers, prospects, employees, deals,
+competitors, and finances. <u>When an organization effectively manages data,
+they **Gain** insights that **Drive** business decisions</u>.
+
+For trend of **Data Management**, I will follow the sharing knowledge
+from the **[Gartner](https://www.gartner.com/en) Hype Cycle for Data Management**.
+
+<figure markdown="span">
+  ![Gartner Hype Cycle for Data Management 2023](img/gartner-hype-cycle-graphic.png){ loading=lazy width="700" }
+  <figcaption><a href="https://www.gartner.com/en/documents/4573399">Gartner Hype Cycle for Data Management 2023</a></figcaption>
+</figure>
+
+:material-page-last: Today's organizations need a **Data Management Solution**
+that provides an efficient way to manage data across a diverse but unified data tier.
+**Data Management Systems** are built on data management platforms and can include
+_Databases_, _Data Lakes_ and _Data Warehouses_, _Big Data Management Systems_,
+_Data Analytics_, and more.
 
 ### Types of data management
 
@@ -18,86 +33,66 @@ and operations throughout an organization
 So, whether you’re researching big data or master data, you'll use many types of
 data management.
 
-- **Data processing**:
+**Data processing**
 
-  Within this stage of the [data management lifecycle](https://www.ibm.com/topics/data-lifecycle-management),
-  raw data is ingested from a range of data sources, such as web APIs, mobile apps,
-  Internet of Things (IoT) devices, forms, surveys, and more. It is, then, usually
-  processed or loaded, via data integration techniques, such as [extract, transform,
-  load (ETL)](https://www.ibm.com/topics/etl) or [extract, load, transform (ELT)](https://www.ibm.com/topics/elt).
-  While ETL has historically been the standard method to integrate and organize
-  data across different datasets, ELT has been growing in popularity with the emergence
-  of cloud data platforms and the increasing demand for real-time data. Independently
-  of the [data integration](https://www.ibm.com/analytics/data-integration) technique
-  used, the data is usually filtered, merged,
-  or aggregated during the data processing stage to meet the requirements for its
-  intended purpose, which can range from a business intelligence dashboard to a
-  predictive machine learning algorithm.
+:   Within this stage of the [Data Management Lifecycle](https://www.ibm.com/topics/data-lifecycle-management),
+    raw data is ingested from a range of data sources, such as web APIs, mobile apps,
+    Internet of Things (IoT) devices, forms, surveys, and more. It is, then, usually
+    processed or loaded, via data integration techniques, such as [extract, transform,
+    load (ETL)](https://www.ibm.com/topics/etl) or [extract, load, transform (ELT)](https://www.ibm.com/topics/elt).
+    While ETL has historically been the standard method to integrate and organize
+    data across different datasets, ELT has been growing in popularity with the emergence
+    of cloud data platforms and the increasing demand for real-time data. Independently
+    of the [data integration](https://www.ibm.com/analytics/data-integration) technique
+    used, the data is usually filtered, merged,
+    or aggregated during the data processing stage to meet the requirements for its
+    intended purpose, which can range from a business intelligence dashboard to a
+    predictive machine learning algorithm.
 
-- **Data storage**:
+**Data storage**
 
-  While data can be stored before or after data processing, the type of data and
-  purpose of it will usually dictate the storage repository that is leveraged.
-  For example, data warehousing requires a defined schema to meet specific data
-  analytics requirements for data outputs, such as dashboards, [data visualizations],
-  and other [business intelligence] tasks. These data requirements are usually directed
-  and documented by business users in partnership with data engineers, who will
-  ultimately execute against the defined [data model]. The underlying structure of
-  a [data warehouse] is typically organized as a relational system (i.e. in a structured data format),
-  sourcing data from transactional databases. However, other storage systems,
-  such as [data lakes], incorporate data from both relational and [non-relational systems],
-  becoming a sandbox for innovative data projects. Data lakes benefit data scientists
-  in particular, as they allow them to incorporate both structured and unstructured
-  data into their data science projects.
+:   While data can be stored before or after data processing, the type of data and
+    purpose of it will usually dictate the storage repository that is leveraged.
+    For example, data warehousing requires a defined schema to meet specific data
+    analytics requirements for data outputs, such as dashboards, [data visualizations],
+    and other [business intelligence] tasks. These data requirements are usually directed
+    and documented by business users in partnership with data engineers, who will
+    ultimately execute against the defined [data model]. The underlying structure of
+    a [data warehouse] is typically organized as a relational system (i.e. in a structured data format),
+    sourcing data from transactional databases. However, other storage systems,
+    such as [data lakes], incorporate data from both relational and [non-relational systems],
+    becoming a sandbox for innovative data projects. Data lakes benefit data scientists
+    in particular, as they allow them to incorporate both structured and unstructured
+    data into their data science projects.
 
-- **Data governance**:
+**Data governance**
 
-  Data governance is a set of standards and business processes which ensure that
-  data assets are leveraged effectively within an organization. This generally
-  includes processes around data quality, data access, usability, and data security.
-  For instance, data governance councils tend align on taxonomies to ensure that
-  metadata is added consistently across various data sources. This taxonomy should
-  also be further documented via a data catalog to make data more accessible to users,
-  facilitating data democratization across organizations. Data governance teams
-  also help to define roles and responsibilities to ensure that data access is provided
-  appropriately; this is particularly important to maintain data privacy.
+:   Data governance is a set of standards and business processes which ensure that
+    data assets are leveraged effectively within an organization. This generally
+    includes processes around data quality, data access, usability, and data security.
+    For instance, data governance councils tend align on taxonomies to ensure that
+    metadata is added consistently across various data sources. This taxonomy should
+    also be further documented via a data catalog to make data more accessible to users,
+    facilitating data democratization across organizations. Data governance teams
+    also help to define roles and responsibilities to ensure that data access is provided
+    appropriately; this is particularly important to maintain data privacy.
 
-* **Data security**: \
-  Data security sets guardrails in place to protect digital information from unauthorized
-  access, corruption, or theft. As digital technology becomes an increasing part
-  of our lives, more scrutiny is placed upon the security practices of modern businesses
-  to ensure that customer data is protected from cybercriminals or disaster recovery
-  incidents. While data loss can be devastating to any business, data breaches,
-  in particular, can reap costly consequences from both a financial and brand standpoint.
-  Data security teams can better secure their data by leveraging encryption and
-  data masking within their data security strategy.
+**Data security**
 
-### Data management systems and components
-
-#### Database management systems (DBMS)
-
-#### Data warehouses and lakes
-
-#### Data integration
-
-#### Data governance, security, and compliance
-
-#### Business intelligence and analytics
-
-### Hype Cycle for Data Management
-
-Gartner, Hype Cycle for Data Management, 2022,
-Donald Feinberg, Philip Russom, Nina Showell, 30 June 2022
-
-![Hype Cycle for Data Management 2022](images/hype-cycle-for-data-management-2022.png)
-
-### Data Management Processes
+:   Data security sets guardrails in place to protect digital information from unauthorized
+    access, corruption, or theft. As digital technology becomes an increasing part
+    of our lives, more scrutiny is placed upon the security practices of modern businesses
+    to ensure that customer data is protected from cybercriminals or disaster recovery
+    incidents. While data loss can be devastating to any business, data breaches,
+    in particular, can reap costly consequences on both a financial and brand standpoint.
+    Data security teams can better secure their data by leveraging encryption and
+    data masking within their data security strategy.
 
 ### Benefits of Investing in Data Management
 
-Data management can make your company more effective and responsive to your customers.
-Stellar data can help your team limit errors and build trust. It also gives your
-business better data for decision-making.
+**Data Management** can make your company more effective and responsive to your
+customers. Stellar data can help your team limit errors and build trust. It also
+gives your business better data for decision-making.
 
 - Building a Secure and Reliable System
 - Understanding Your Most Profitable Customers
@@ -162,7 +157,7 @@ and protection of data throughout its lifecycle.
 
 ## References
 
-- https://www.oracle.com/database/what-is-data-management/
-- https://blog.hubspot.com/website/data-management
-- https://www.tibco.com/reference-center/what-is-data-management
-- https://a16z.com/2020/10/15/emerging-architectures-for-modern-data-infrastructure/
+- [](https://www.oracle.com/database/what-is-data-management/)
+- [](https://blog.hubspot.com/website/data-management)
+- [](https://www.tibco.com/reference-center/what-is-data-management)
+- [](https://a16z.com/2020/10/15/emerging-architectures-for-modern-data-infrastructure/)

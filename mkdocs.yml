@@ -53,22 +53,6 @@ extra:
 nav:
   - Home:
       - index.md
-      - Principles & Noted:
-          - Daily Work: note/dae-daily-work.md
-          - SOLID Principles: note/dae-solid-principles.md
-      - Roles:
-          - roles/index.md
-          - Data Platform Engineer:
-              - roles/data_platform_engineer/index.md
-          - DataOps Engineer:
-              - roles/dataops_engineer/index.md
-          - Lead of Data Engineer:
-              - roles/lead_data_engineer/index.md
-          - MLOps Engineer:
-              - roles/mlops_engineer/index.md
-              - Challenge: roles/mlops_engineer/mlops-challenge.md
-          - Analytic Engineer:
-              - roles/analytic_engineer/index.md
       - Abstraction:
           - Data Management:
               - abstract/data_management/index.md
@@ -117,15 +101,22 @@ nav:
               - Viable Monitoring System: abstract/data_observability/dobs-maintaining-a-viable-monitoring-sys.md
           - Data Mesh:
               - abstract/data_mesh/index.md
-      - Knowledge:
-          - CDC: abstract/data/data-cdc.md
-          - Data Structure: abstract/data/data-structure.md
-      - Book:
-          - abstract/book/index.md
-          - Fundamentals of Data Engineering: abstract/book/book-fundamentals-of-data-engineering.md
-      - News & Research:
-          - ChatGPT:
-              - abstract/chatgpt/index.md
+      - Roles:
+          - roles/index.md
+          - Data Platform Engineer:
+              - roles/data_platform_engineer/index.md
+          - DataOps Engineer:
+              - roles/dataops_engineer/index.md
+          - Lead of Data Engineer:
+              - roles/lead_data_engineer/index.md
+          - MLOps Engineer:
+              - roles/mlops_engineer/index.md
+              - Challenge: roles/mlops_engineer/mlops-challenge.md
+          - Analytic Engineer:
+              - roles/analytic_engineer/index.md
+      - Principles & Noted:
+          - Daily Work: note/dae-daily-work.md
+          - SOLID Principles: note/dae-solid-principles.md
   - Services:
       - services/index.md
       - Provider:
@@ -355,17 +346,13 @@ nav:
               - tools/orchestration/kedro/index.md
           - Mage AI:
               - tools/orchestration/mageai/index.md
-      - Quality:
-          - Great Expectations:
-              - tools/quality/great_expectations/index.md
-              - With Databricks: tools/quality/great_expectations/gexp-with-databricks.md
-              - With Spark: tools/quality/great_expectations/gexp-with-spark.md
-          - Deequ:
-              - tools/quality/deequ/index.md
-          - Soda:
-              - tools/quality/soda/index.md
+      - Collection & Integration:
+          - SQLAlchemy:
+              - tools/collection/sqlalchemy/index.md
+          - Airbyte:
+              - tools/collection/airbyte/index.md
+              - With Terraform: tools/collection/airbyte/airbyte-with-terraform.md
       - Extract & Transform & Load:
-          - tools/etl/index.md
           - Pandas:
               - tools/etl/pandas/index.md
               - SQL Conversion: tools/etl/pandas/py_pd_convert_from_sql.md
@@ -428,9 +415,6 @@ nav:
               - tools/etl/kafka/index.md
               - Use-Cases:
                   - Agoda: tools/etl/kafka/kafka-agoda.md
-          - Airbyte:
-              - tools/etl/airbyte/index.md
-              - With Terraform: tools/etl/airbyte/airbyte-with-terraform.md
           - Fugue:
               - tools/etl/fugue/index.md
           - Sea Tunnel:
@@ -479,6 +463,15 @@ nav:
               - tools/storage/lakefs/index.md
           - MinIO:
               - tools/storage/minio/index.md
+      - Quality:
+          - Great Expectations:
+              - tools/quality/great_expectations/index.md
+              - With Databricks: tools/quality/great_expectations/gexp-with-databricks.md
+              - With Spark: tools/quality/great_expectations/gexp-with-spark.md
+          - Deequ:
+              - tools/quality/deequ/index.md
+          - Soda:
+              - tools/quality/soda/index.md
       - CICD:
           - Jenkins:
               - tools/cicd/jenkins/index.md
@@ -544,11 +537,17 @@ plugins:
   - blog:
       blog_dir: blogs
       blog_toc: true
+      post_dir: "{blog}/posts"
       post_date_format: medium
       post_url_date_format: yyyy/MM/dd
       post_readtime_words_per_minute: 300
       authors_file: "{blog}/.authors.yml"
       pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+      archive_name: Datetime
+      archive_date_format: MMMM yyyy
+      archive_url_date_format: yyyy/MM
+      archive_toc: true
+      categories_toc: true
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
       enable_creation_date: true

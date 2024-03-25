@@ -1,14 +1,27 @@
 ---
-icon: material/newspaper-variant-multiple
+authors:
+  - admin
+categories:
+  - Knowledge
+tags:
+  - Data
+date:
+  created: 2024-03-24
+  update: 2024-03-24
+draft: true
 ---
 
 # Data Structure
+
+:material-queue-first-in-last-out:
 
 ## Directed Acyclic Graph (DAG)
 
 A DAG is a specific type of graph. It can be seen as a graphical representation
 of causal effects i.e. a node in a DAG is the result of an action/relation of its
 predecessor node. It has the following properties.
+
+<!-- more -->
 
 - Has Nodes, Edges & Direction
 - No cycle
@@ -35,7 +48,7 @@ probability to build subsequent layers of linked lists upon the original linked
 list. Each additional layer of links contains a subset of elements from previous
 layers.
 
-![Skip List](./images/data-structure-skip-list.png)
+![Skip List](img/data-structure-skip-list.png)
 
 In a skip list, if we have to insert a new node, only the adjacent nodes will be
 affected, so we can still access a large part of our data while this is happening.
