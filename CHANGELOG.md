@@ -2,6 +2,23 @@
 
 ## Latest Changes
 
+## 20240325
+
+### :tada: Features
+
+- :dart: feat: add git plugins on this docs. (_2024-03-24_)
+- :dart: feat: add blog plug-in for refactored design content. (_2024-03-24_)
+
+### :book: Documents
+
+- :page_facing_up: docs: add detail of service on index page. (_2024-03-25_)
+- :page_facing_up: docs: update data management docs. (_2024-03-25_)
+- :page_facing_up: docs: add diagram asset for re-drawing diagram image from refs. (_2024-03-24_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: change folder name of spark docs. (_2024-03-24_)
+
 ## 20240323
 
 ### :tada: Features
