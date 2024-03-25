@@ -7,11 +7,11 @@ icon: material/warehouse
 **Data Management** is the effective practice of _Collecting_, _Storing_, _Protecting_,
 _Delivering_, and _Processing_ data.
 In business, data is usually associated with customers, prospects, employees, deals,
-competitors, and finances. <u>When an organization effectively manages data,
-they **Gain** insights that **Drive** business decisions</u>.
+competitors, and finances. ^^When an organization effectively manages data,
+they **Gain** insights that **Drive** business decisions^^.
 
 For trend of **Data Management**, I will follow the sharing knowledge
-from the **[Gartner](https://www.gartner.com/en) Hype Cycle for Data Management**.
+from the **[Gartner Hype Cycle for Data Management](https://www.gartner.com/en)**.
 
 <figure markdown="span">
   ![Gartner Hype Cycle for Data Management 2023](img/gartner-hype-cycle-graphic.png){ loading=lazy width="700" }
@@ -24,7 +24,7 @@ that provides an efficient way to manage data across a diverse but unified data 
 _Databases_, _Data Lakes_ and _Data Warehouses_, _Big Data Management Systems_,
 _Data Analytics_, and more.
 
-### Types of data management
+### :material-format-list-bulleted: Types of data management
 
 The scope of a data management discipline is quite broad, and a strong data management
 strategy typically implements the following components to streamline their strategy
@@ -155,7 +155,7 @@ Overall, a data management strategy is a comprehensive approach to managing data
 that includes a range of components designed to ensure the effective use, management,
 and protection of data throughout its lifecycle.
 
-## References
+## :material-vector-link: References
 
 - [](https://www.oracle.com/database/what-is-data-management/)
 - [](https://blog.hubspot.com/website/data-management)

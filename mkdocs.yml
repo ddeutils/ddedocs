@@ -407,6 +407,7 @@ nav:
               - Deploy:
                   - On Local: tools/etl/spark/deploy/spark-on-local.md
                   - On Docker: tools/etl/spark/deploy/spark-on-docker.md
+                  - On Kubernetes: tools/etl/spark/deploy/spark-on-k8s.md
                   - On Local with DataProc Serverless: tools/etl/spark/deploy/spark-on-local-with-dataproc-serverless.md
               - Updated:
                   - Spark3.4:
@@ -568,6 +569,10 @@ markdown_extensions:
   - admonition
   - footnotes
   - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -588,7 +593,6 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.details
-  - pymdownx.mark
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg

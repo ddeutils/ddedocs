@@ -105,6 +105,13 @@ Data Engineering tools.
 
     [:octicons-arrow-right-24: Go Through](https://medium.com/tag/data-engineering)
 
+-   :material-map-marker-path: **TPA Roadmap**
+
+    ---
+    Community driven roadmaps, articles and resources for developers in Thailand
+
+    [:octicons-arrow-right-24: Go Through](https://roadmap.thaiprogrammer.org/)
+
 </div>
 
 ## :material-bookshelf: Books

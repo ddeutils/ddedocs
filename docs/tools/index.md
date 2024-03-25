@@ -27,9 +27,10 @@ change.
     - Users
     - Use Cases
 - Composable Data Stack
+- Flexible Pricing
 
 The **MDS** allows you to build on top of the software of giants instead of adopting
-the "<u>**not invented here syndrome**</u>". Consider whether the business value from your
+the "^^**not invented here syndrome**^^". Consider whether the business value from your
 analytics solution is coming from how well you manage your data pipelines and
 data infrastructure, versus how well you build analytics and AI products on
 top of your infrastructure.

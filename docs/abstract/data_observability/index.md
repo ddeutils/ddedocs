@@ -4,13 +4,14 @@ icon: material/engine-outline
 
 # Data Observability
 
-**Data Observability** is an organization’s ability to fully understand the health of
-the data in their systems. Data observability eliminates data downtime by applying
+**Data Observability** is an organization's ability to fully understand the health
+of the data in their systems. Data observability eliminates data downtime by applying
 best practices learned from DevOps to data pipeline observability.
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
-Data observability tools use automated monitoring, automated root cause analysis,
+:material-page-last: **Data observability Tools** use automated monitoring, automated
+root cause analysis,
 data lineage and data health insights to detect, resolve, and prevent data anomalies.
 This leads to healthier pipelines, more productive teams, better data management,
 and happier customers.
