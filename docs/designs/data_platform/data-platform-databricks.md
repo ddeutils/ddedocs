@@ -1,3 +1,7 @@
+---
+icon: simple/databricks
+---
+
 # Data Platform Strategy with Databricks
 
 !!! quote

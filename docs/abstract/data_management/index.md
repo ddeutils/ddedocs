@@ -11,10 +11,10 @@ competitors, and finances. ^^When an organization effectively manages data,
 they **Gain** insights that **Drive** business decisions^^.
 
 For trend of **Data Management**, I will follow the sharing knowledge
-from the **[Gartner Hype Cycle for Data Management](https://www.gartner.com/en)**.
+from the **[:material-chart-bell-curve: Gartner Hype Cycle for Data Management](https://www.gartner.com/en)**.
 
 <figure markdown="span">
-  ![Gartner Hype Cycle for Data Management 2023](img/gartner-hype-cycle-graphic.png){ loading=lazy width="700" }
+  ![Gartner Hype Cycle for Data Management 2023](img/gartner-hype-cycle-graphic.png){ loading=lazy width="600" }
   <figcaption><a href="https://www.gartner.com/en/documents/4573399">Gartner Hype Cycle for Data Management 2023</a></figcaption>
 </figure>
 

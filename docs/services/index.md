@@ -1,8 +1,8 @@
 # Services
 
-:material-cloud-cog-outline: Cloud Provider and Services that use on **Modern Data Stack (MDS)**.
-You can see the below diagram show a some MDS ecosystem that include the **Cloud Services**
-more than the **Open-Source Stacks**.
+:material-cloud-cog-outline: Cloud Provider and Data Services that use on
+**Modern Data Stack (MDS)**. You can see the below diagram show a some MDS
+ecosystem that include the **Cloud Services** more than the **Open-Source Stacks**.
 
 <figure markdown="span">
   ![Modern Data Stack Ecosystem](img/services-modern-data-stack-ecosystem.png){ loading=lazy width="700" }
@@ -45,6 +45,10 @@ they're good to go with the traditional one.
 MDS provides businesses with a bias for action. Creating the MDS enables organizations
 to devote more time to analyzing their data and less time engineering their
 data processing pipelines.
+
+## :material-cloud-upload-outline: Cloud
+
+:material-image-filter-drama-outline: **Cloud**
 
 ## :material-select-compare: Comparison
 

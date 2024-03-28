@@ -1,3 +1,7 @@
+---
+icon: material/database-import-outline
+---
+
 # Master Data Management
 
 A successful **Master Data Management (MDM)** implementation is no simple task. It

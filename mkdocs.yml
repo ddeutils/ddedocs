@@ -99,12 +99,15 @@ nav:
               - Data Lineage: abstract/data_observability/dobs-data-lineage.md
               - Conductor: abstract/data_observability/dobs-conductor.md
               - Viable Monitoring System: abstract/data_observability/dobs-maintaining-a-viable-monitoring-sys.md
+          - Data Strategy:
+              - abstract/data_strategy/index.md
           - Data Mesh:
               - abstract/data_mesh/index.md
       - Roles:
           - roles/index.md
           - Data Platform Engineer:
               - roles/data_platform_engineer/index.md
+              - FinOps: roles/data_platform_engineer/dp-finops.md
           - DataOps Engineer:
               - roles/dataops_engineer/index.md
           - Lead of Data Engineer:
@@ -473,9 +476,11 @@ nav:
               - tools/quality/deequ/index.md
           - Soda:
               - tools/quality/soda/index.md
-      - CICD:
+      - Deploy & Monitoring:
           - Jenkins:
-              - tools/cicd/jenkins/index.md
+              - tools/deploy/jenkins/index.md
+          - Jira:
+              - tools/deploy/jira/index.md
   - Designs:
       - designs/index.md
       - Application:
@@ -486,25 +491,27 @@ nav:
           - Stream Processing: designs/architect/act-open-source-stream-processing.md
           - Stream Kafka: designs/architect/act-kafka-stream-pipeline.md
       - Data Platform:
-          - Master Data Management: designs/data-platform/data-platform-mdm.md
-          - Internal Analytics: designs/data-platform/data-platform-internal-analytics.md
-          - With Databricks: designs/data-platform/data-platform-with-databricks.md
+          - Master Data Management: designs/data_platform/data-platform-mdm.md
+          - Internal Analytics: designs/data_platform/data-platform-internal-analytics.md
+          - With Databricks: designs/data_platform/data-platform-databricks.md
+          - With Cloudera: designs/data_platform/data-platform-cloudera.md
       - Data Mesh:
-          - Azure Data Mesh: designs/architect/act-data-mesh-with-azure.md
-      - Lakehouse:
-          - On-Premise: designs/architect/act-on-premise-lake-house.md
-      - Real World:
-          - Netflix: designs/examples/example-netflix-maestro-iceberg.md
+          - With Azure: designs/data_mesh/data-mesh-azure.md
+      - Data Lakehouse:
+          - On Premise: designs/data_lakehouse/lakehouse-on-premise.md
+          - Migration:
+              - Lakehouse from DWH: designs/data_lakehouse/migration/mg-lakehouse-from-classic-dwh.md
       - Architect:
           - Realtime Data Stream: designs/architect/new/act-realtime.md
-      - Migration:
-          - Lakehouse from DWH: designs/migration/mg-lakehouse-from-classic-dwh.md
+      - Real World:
+          - Netflix: designs/examples/example-netflix-maestro-iceberg.md
   - Analytics:
       - analytics/index.md
+      - Abstract:
+          - Design Thinking: analytics/abstract/da-design-thinking.md
       - Logic & Algorithm:
           - Data Analytic:
               - analytics/data_analytic/index.md
-              - Design Thinking: analytics/data_analytic/da-design-thinking.md
       - AI & Model:
           - ML Management Tool: analytics/analytic-ml-management-tools.md
           - Linker:

@@ -9,6 +9,8 @@ knowledge in **_Data Develop and Engineer_** area.
     Because I'm in the middle of trying to practice writing and reading. Please
     understand this issue before going deeper into it :face_holding_back_tears:
 
+> Disclaimer: This project create from my experiment on Data Engineer around ~4 years.
+
 ## :material-arrow-down-right: Getting Started
 
 :material-page-last: First, I will start reading the popular Data Engineering books from worldwide. That
@@ -60,10 +62,12 @@ another hand, **Business Users** able to use less of technical knowledge to inte
 with Data in the **Data Platform** that make SLA time to request to **Data Engineer**
 decrease a lot! :partying_face:
 
+- [:simple-medium: Skill Sets for Data Engineer 2024](https://manussanun.medium.com/skill-sets-for-data-engineer-2024-adf43ac37b53)
+
 ## :material-account-arrow-right-outline: Roles
 
-In the future, if I do not in love with communication or management knowledge
-that make me be :material-face-agent: [**Lead of Data Engineer**](roles/lead_data_engineer/index.md),
+:material-page-last: In the future, if I do not in love with communication or management
+level skill that make me be :material-face-agent: [**Lead of Data Engineer**](roles/lead_data_engineer/index.md),
 I will go to any specialize roles such as,
 
 <div class="grid cards" markdown>
@@ -113,6 +117,10 @@ Data Engineering tools.
     [:octicons-arrow-right-24: Go Through](https://roadmap.thaiprogrammer.org/)
 
 </div>
+
+## :octicons-skip-24: TL; DR
+
+
 
 ## :material-bookshelf: Books
 

@@ -1,3 +1,7 @@
+---
+icon: material/home-analytics
+---
+
 # Internal Analytics
 
 ![Architect: Internal Analytics](img/data-platform-internal-analytics-overview.png)
