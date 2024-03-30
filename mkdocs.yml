@@ -372,9 +372,12 @@ nav:
               - DBT Loom: tools/etl/dbt/dbt-loom.md
               - DBT Mesh: tools/etl/dbt/dbt-mesh.md
               - Connections:
-                  - To Synapse: tools/etl/dbt/dbt-to-synapse.md
+                  - To Synapse: tools/etl/dbt/connection/dbt-to-synapse.md
+                  - To Trino: tools/etl/dbt/connection/dbt-to-trino.md
+                  - To Athena: tools/etl/dbt/connection/dbt-to-athena.md
           - Arrow:
               - tools/etl/arrow/index.md
+              - Modern Data Service: tools/etl/arrow/arrow-modern-data-service.md
           - Spark:
               - tools/etl/spark/index.md
               - Common:

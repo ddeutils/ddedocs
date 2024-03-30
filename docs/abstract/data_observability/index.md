@@ -106,6 +106,7 @@ platform has the following features:
 
 ## References
 
+- (TODO): https://sanjmo.medium.com/is-data-observability-critical-to-successful-data-analytics-d09b983b95c6
 - [MontecarloData: What is Data Observability](https://www.montecarlodata.com/blog-what-is-data-observability/)
 - https://www.montecarlodata.com/blog-data-observability-tools/
 - https://snowplow.io/blog/data-observability-dashboard/
