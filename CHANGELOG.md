@@ -2,6 +2,21 @@
 
 ## Latest Changes
 
+## 20240401
+
+### :scissors: References
+
+- :clipboard: refs: add reference docs from medium on main abstact knowledge. (_2024-04-01_)
+- :clipboard: refs: reference docs from medium for dbt and arrow. (_2024-03-30_)
+
+### :book: Documents
+
+- :page_facing_up: docs: add jira and prepare deploy docs. (_2024-03-28_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: move project architecture to blogs. (_2024-03-25_)
+
 ## 20240325
 
 ### :tada: Features
