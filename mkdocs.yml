@@ -213,7 +213,7 @@ nav:
                   - State Machine Language: services/aws/step_functions/stfn-state-machine-language.md
                   - Combine Parallel Results: services/aws/step_functions/stfn-combine-data-parallel-state.md
               - Glue:
-                  - Getting Started: services/aws/glue/glue-getting-started.md
+                  - services/aws/glue/index.md
                   - Data Quality: services/aws/glue/glue-data-quality.md
                   - Local Env: services/aws/glue/glue-local-env.md
               - Athena:
@@ -484,6 +484,9 @@ nav:
               - tools/deploy/jenkins/index.md
           - Jira:
               - tools/deploy/jira/index.md
+      - ML & Analytic:
+          - MLflow:
+              - tools/analytic/mlflow/index.md
   - Designs:
       - designs/index.md
       - Application:

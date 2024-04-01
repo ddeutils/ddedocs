@@ -18,3 +18,4 @@ at every step of the data journey for everyone who needs it in your organization
 ## :material-finance: References
 
 - [What is Data Strategy?](https://aws.amazon.com/what-is/data-strategy/)
+- TODO - [A Data Strategy Comprehensive Guide for a Step-by-Step Data Maturity Assessment](https://blog.det.life/a-data-strategy-comprehensive-guide-for-a-step-by-step-data-maturity-assessment-b9ff23de7cd7)

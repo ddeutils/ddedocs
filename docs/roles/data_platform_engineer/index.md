@@ -19,6 +19,10 @@ icon: material/face-man
 - [Modern Architecture for Emerging Data Infrastructures](https://premvishnoi.medium.com/modern-architecture-for-merging-data-infrastructures-8223a6dda911)
 - [Modern Architecture for Emerging Data Infrastructures](https://premvishnoi.medium.com/modern-architecture-for-merging-data-infrastructures-8223a6dda911)
 
+## Data Platform Architect
+
+- [Data Platforms : Good Architect — Bad Architect](https://medium.com/dcsfamily/data-platforms-good-architect-bad-architect-cb9bdee35c34)
+
 ## Knowledge
 
 - [My key takeaways after building a data engineering platform](https://medium.com/datamindedbe/my-key-takeaways-for-building-a-data-product-307ad06e529f)
