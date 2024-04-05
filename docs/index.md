@@ -9,7 +9,9 @@ knowledge in **_Data Develop and Engineer_** area.
     Because I'm in the middle of trying to practice writing and reading. Please
     understand this issue before going deeper into it :face_holding_back_tears:
 
-> Disclaimer: This project create from my experiment on Data Engineer around ~4 years.
+> **_Disclaimer_**: This project create from my experiment on **Data Engineer**
+> around ~4 years and I know it has a lot of knowledge to use when you want to
+> become a **Data Engineer**.
 
 ## :material-arrow-down-right: Getting Started
 

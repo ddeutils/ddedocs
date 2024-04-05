@@ -9,6 +9,8 @@ Data warehouses use a process called Extract, Transform, Load (ETL) to extract
 data from different sources, transform it into a consistent format, and load it
 into the warehouse.
 
+![Data Warehouse Elements](img/data-warehouse-elements.png)
+
 ## Types of Data Warehouse
 
 There are three main types of data warehouses:
@@ -75,7 +77,7 @@ Going through the large dataset for each query would result in low performance.
 Hence, the One-tier EDW Architecture is only suitable for organizations with small
 datasets.
 
-![One-tier Architecture](images/edw-one-tier.png)
+![One-tier Architecture](img/edw-one-tier.png)
 
 One-tier architecture for EDW means that you have a database directly connected
 with the analytical interfaces where the end user can make queries. Setting the
@@ -104,7 +106,7 @@ repository that contains domain-specific information), performing queries on it
 would require much less time than it would on a Data Warehouse.
 A Two-tier EDW is considered to be more suitable for real-life scenarios.
 
-![Two-tier Architecture](images/edw-two-tier.png)
+![Two-tier Architecture](img/edw-two-tier.png)
 
 Creating a data mart layer will require additional resources to establish hardware
 and integrate those databases with the rest of the data platform. But, such an
@@ -121,12 +123,12 @@ The OLAP Layer consists of OLAP Cubes is a specific type of database which are u
 to store data in a multidimensional form allowing faster analysis to be performed
 on the data.
 
-![Three-tier Architecture](images/edw-three-tier.png)
+![Three-tier Architecture](img/edw-three-tier.png)
 
 It’s pretty difficult to explain in words, so let’s look at this handy example of
 what a cube can look like.
 
-![OLAP Cube](images/olap_cube.png)
+![OLAP Cube](img/olap_cube.png)
 
 So, as you can see, a cube adds dimensions to the data. You may think of it as
 multiple Excel tables combined with each other. The front of the cube is the usual

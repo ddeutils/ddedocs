@@ -427,7 +427,7 @@ r reporting purposes.
 
 ## Data Vault Pipeline
 
-![Data Vault Pipeline](../images/data-vault-pipeline.png)
+![Data Vault Pipeline](../img/data-vault-pipeline.png)
 
 Let’s run through each stage of the pipeline
 
@@ -460,7 +460,7 @@ Let’s run through each stage of the pipeline
 
    - **PIT**
 
-     ![PIT Table](../images/data-vault-pit-table.png)
+     ![PIT Table](../img/data-vault-pit-table.png)
 
      A Point-in-Time (PIT) table is a physical collection of applicable surrogate
      keys and load dates for a snapshot period. It must be a table otherwise the
@@ -474,7 +474,7 @@ Let’s run through each stage of the pipeline
 
    - **AS_OF**
 
-     ![AS OF Table](../images/data-vault-as-of-table.png)
+     ![AS OF Table](../img/data-vault-as-of-table.png)
 
      AS_OF table controls the PIT snapshot in a combination of two ways
 
@@ -544,7 +544,7 @@ Let’s run through each stage of the pipeline
   - Hubs and Links follow Top-down approach
   - Satellite follows Bottom-up approach
 
-![Data Vault Architecture](../images/data-vault-architecture.png)
+![Data Vault Architecture](../img/data-vault-architecture.png)
 
 ## Unit of Work
 
