@@ -10,8 +10,7 @@ knowledge in **_Data Develop and Engineer_** area.
     understand this issue before going deeper into it :face_holding_back_tears:
 
 > **_Disclaimer_**: This project create from my experiment on **Data Engineer**
-> around ~4 years and I know it has a lot of knowledge to use when you want to
-> become a **Data Engineer**.
+> around ~5 years and I know it has a lot of knowledge to use on **Data Engineering**.
 
 ## :material-arrow-down-right: Getting Started
 
@@ -30,8 +29,8 @@ book that you should to read that they say you should too.
   <figcaption><a href="https://www.techment.com/unlocking-the-power-of-data-a-beginners-guide-to-data-engineering/">Life Cycle of Data Engineering</a></figcaption>
 </figure>
 
-<u>**Data engineering** is a critical part of the data lifecycle that enables organizations
-to manage and process large volumes of data efficiently and reliably</u>[^3].
+^^**Data engineering** is a critical part of the data lifecycle that enables organizations
+to manage and process large volumes of data efficiently and reliably^^[^3].
 By these concepts, **Data Engineers** can design and implement data pipelines
 that meet the requirements of their organizations and ensure that their data is
 managed consistently and reliably.
@@ -41,24 +40,23 @@ I know the Data Engineering tools will shift so fast because last three year I
 start with the map-reduce processing on **Hadoop HDFS** but nowadays, it changes
 to in-memory processing like **Impala** or **Spark**.
 
-You will see below the **Data Landscape** :material-land-plots: that show about how
-many possibility tools that able to use on your work.
+![The 2023 MAD (ML/AI/DATA) Landscape](img/mad-data-landscape.png){ loading=lazy width="350" align=right }
 
-<figure markdown="span">
-  ![The 2023 MAD (ML/AI/DATA) Landscape](img/mad-data-landscape.png){ loading=lazy width="650" }
-  <figcaption><a href="https://mad.firstmark.com/">The 2023 MAD (ML/AI/DATA) Landscape</a></figcaption>
-</figure>
+You will see the right picture, the [**2023 MAD (ML/AI/Data) Landscape** :material-land-plots:](https://mad.firstmark.com/),
+that show about how many possibility tools that able to use on your Data Engineering work.
+It has many area that you should to choose which one that match with your architect
+or fit with your cost planing.
 
 :material-page-last: Finally, I drop the books and go to start searching and
-observing about trend of **Data Engineering**. The below diagram shows <u>how the
-focus areas of **Data Engineering Shift** as the analytics organization evolves</u>.
+observing about trend of **Data Engineering**. The below diagram shows ^^how the
+focus areas of **Data Engineering Shift** as the analytics organization evolves^^.
 
 <figure markdown="span">
   ![Data Engineering Shift](img/data-engineering-shift.png){ loading=lazy width="650" }
   <figcaption><a href="https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be">Data Engineering Shift</a></figcaption>
 </figure>
 
-The trend of <u>**Modern Data Stack**</u> will make the **Data Engineering Jobs**
+The trend of ^^**Modern Data Stack**^^ will make the **Data Engineering Jobs**
 so easy and force you have the time to focus on **Business Problem**. So, in the
 another hand, **Business Users** able to use less of technical knowledge to interact
 with Data in the **Data Platform** that make SLA time to request to **Data Engineer**

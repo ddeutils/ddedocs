@@ -150,7 +150,7 @@ analysis. These operations are as follows:
 
         A sample Roll-up operation is as follows:
 
-        ![Roll-up](images/roll_up.png)
+        ![Roll-up](img/roll_up.png)
 
 === "Drill-down"
 
@@ -162,7 +162,7 @@ analysis. These operations are as follows:
 
         A sample Drill-down operation is as follows:
 
-        ![Drill-down](images/drill_down.png)
+        ![Drill-down](img/drill_down.png)
 
 === "Slice"
 
@@ -173,7 +173,7 @@ analysis. These operations are as follows:
 
         A sample Slice operation is as follows:
 
-        ![Slice](images/slice.png)
+        ![Slice](img/slice.png)
 
 === "Dice"
 
@@ -184,7 +184,7 @@ analysis. These operations are as follows:
 
         A sample Dice operation is as follows:
 
-        ![Dice](images/dice.png)
+        ![Dice](img/dice.png)
 
 Hence, it can be seen that the implementation of an OLAP Layer in the Three-tier
 Enterprise Data Warehouse (EDW) Architecture allows more in-depth analysis to be

@@ -19,7 +19,19 @@ icon: material/face-man
 - [Modern Architecture for Emerging Data Infrastructures](https://premvishnoi.medium.com/modern-architecture-for-merging-data-infrastructures-8223a6dda911)
 - [Modern Architecture for Emerging Data Infrastructures](https://premvishnoi.medium.com/modern-architecture-for-merging-data-infrastructures-8223a6dda911)
 
+## What is Data Architecture?
+
+**Data Architecture** is the blueprint of a data system that serves the business
+requirements of a product and describes how data is collected, stored, transformed
+and distributed.
+It consists of data models, governance policies, rules and standards that need
+to be implemented and followed to build a robust and secure data system.
+
+![Data Architecture vs Data Engineer](img/data-architecture-vs-data-engineer.png.crdownload)
+
 ## Data Platform Architect
+
+![Cloud Computing Abstractions Explained](img/cloud-computing-abstractions-explained.png)
 
 - [Data Platforms : Good Architect — Bad Architect](https://medium.com/dcsfamily/data-platforms-good-architect-bad-architect-cb9bdee35c34)
 

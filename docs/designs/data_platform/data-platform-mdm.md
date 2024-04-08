@@ -33,6 +33,10 @@ allows other domains to quickly recognize master data.
 
 ![Using synchronized copies of enterprise reference data before distributing](img/data-platform-mdm-data-distribution-other-domain.png)
 
+## Golden Records
+
+- [Master Data Management: Building the Golden Record](https://aws.plainenglish.io/master-data-management-building-the-golden-record-b31eaf0abfdc)
+
 ## Conclusion
 
 Despite the numerous benefits, MDM can be challenging to maintain due to the many

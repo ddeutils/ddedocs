@@ -146,8 +146,8 @@ nav:
                       - To BigQuery: services/azure/batch/az-btch-to-bigquery.md
                   - Dockerize:
                       - Run Pyspark With Docker: services/azure/batch/az-btch-run-pyspark-with-docker.md
-                      - Docker mode: services/azure/batch/az-btch-run-docker.md
-                      - Docker inside Node: services/azure/batch/az-btch-run-docker-inside.md
+                      - Docker: services/azure/batch/az-btch-with-docker.md
+                      - Docker inside Node: services/azure/batch/az-btch-with-docker-inside.md
               - Function App:
                   - Deploy Function V2: services/azure/functions/azf-deploy-v2-local.md
                   - Deploy with Docker: services/azure/functions/azf-deploy-with-docker.md
@@ -254,8 +254,8 @@ nav:
                   - Databricks: services/terraform/tf-databricks.md
                   - Azure:
                       - Databricks: services/terraform/tf-azure-databricks.md
-      - System & Network:
-          - Edge:
+      - Server & Container:
+          - Edge Server:
               - services/edge/index.md
               - SSH: services/edge/edge-ssh.md
               - FTP: services/edge/edge-ftp.md
@@ -327,7 +327,9 @@ nav:
               - OOP Concept: tools/lang/scala/scala-oop-concepts.md
           - Rust:
               - tools/lang/rust/index.md
+              - Learning: tools/lang/rust/rust-learning.md
               - From Python: tools/lang/rust/rust-from-python.md
+              - CLI Application: tools/lang/rust/rust-cli-app.md
           - Mojo:
               - tools/lang/mojo/index.md
       - Orchestration:
@@ -460,6 +462,8 @@ nav:
               - Reduce Full Scan: tools/files/iceberg/icb-reduce-full-scan.md
               - Small Files: tools/files/iceberg/icb-small-files.md
               - With Pyspark: tools/files/iceberg/icb-with-pyspark.md
+          - Hudi:
+              - tools/files/hudi/index.md
           - Static Frame:
               - tools/files/static-frame/index.md
       - Storage:

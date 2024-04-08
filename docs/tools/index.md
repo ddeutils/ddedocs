@@ -66,6 +66,12 @@ top of your infrastructure.
 
 - [Polars, DuckDB, Pandas, Modin, Ponder, Fugue, Daft](https://rathoreaparna678.medium.com/polars-duckdb-pandas-modin-ponder-fugue-daft-which-one-is-the-best-dataframe-and-sql-tool-e8f7cba550cb)
 
+#### DuckDB vs Polars
+
+![DuckDB vs Polars](img/tools-compare-duckdb-vs-polars.png){ loading=lazy width="600" }
+
+Read More: [Benchmarking Python Processing Engines: Who’s the Fastest?](https://medium.com/@bruno.nrello/benchmarking-python-processing-engines-whos-the-fastest-695f99cfe655)
+
 ### Data Quality
 
 https://medium.com/@brunouy/a-guide-to-open-source-data-quality-tools-in-late-2023-f9dbadbc7948

@@ -1,8 +1,73 @@
 # Azure Batch
 
+**Azure Batch** is a robust service that provides parallel batch processing to
+execute intensive workloads of varying size.
+It creates a pool of compute nodes (virtual machines) to tackle heavy loads.
+With **Azure Batch**, batch processing has become more streamlined and viable to
+complete data-intensive workloads at any scale.
+To initiate automated creation and management of Azure Batch pool, job, and task,
+the developer needs to create a batch application which can carry out on-premise
+execution using batch API.
+The batch application can be easily developed as an Azure CLI script, `.Net` application,
+or `Python` application. The batch application is not limited to any technology
+as Azure batch service provides REST API which is well documented.
+
+The following diagram depicts an Azure Batch Processing design based on a
+parallel workload:
+
 ![Azure Batch Architecture](img/az-btch-architecture.png)
 
 - https://github.com/baptisteohanes/Demo_AzureBatch/blob/master/python_tutorial_client.py
+
+The following steps explain the Azure Batch workflow scenario:
+
+- The relevant data which needs to be processed by the task is uploaded to Azure storage.
+  From Azure storage, the files are downloaded to the compute nodes to run the tasks.
+- The setup is then completed to configure the pool of compute nodes. As the
+  workload application is present in the compute node, the data needs to reach
+  the compute node for application to process it.
+  After processing the data, it is sent back to the storage.
+- The job is set up and configured to manage a collection of tasks/work items.
+- The task is then set up, configured, and assigned a job. The task defines the
+  computational work to be done which may consist of retrieving the files stored
+  in the Microsoft Azure Cloud storage.
+
+## Typical Workload Applications / Use Cases
+
+**Cloud-aware application**
+
+:   Consider this use case based on a sample project in GitHub (Ref1)*.
+    In this instance, the application is aware of the existence of Cloud and
+    can interact with it.
+
+    ![Cloud-aware application](img/az-btch-cloud-aware-application.png){ loading=lazy }
+
+    The block diagram above is an extension of the detailed diagram represented
+    in the Azure batch processing section above.
+    The overall execution process is the same, except one special attribute that
+    the workload application is aware of the Cloud. It is capable to execute
+    read and write operations on Cloud storage.
+
+
+**Legacy application**
+
+:   This includes standalone applications that do not include Cloud as part of
+    the overall architecture or applications which organizations implemented
+    before Cloud became mainstream.
+
+    ![Legacy application](img/az-btch-legacy-application.png){ loading=lazy }
+
+    Let’s review an example of an application which is not aware of the cloud.
+    Consider this sample project (Ref 2)where an application takes MP4 files from
+    the filesystem and converts them into an AVI format using a FFmpeg tool
+    (which is not Cloud aware) and then saves them to the filesystem.
+
+The data processing remains same as mentioned in Azure batch processing with
+the only difference being the tasks act as the intermediate between I/O container
+and workload application present in the compute node.
+Azure Batch has the capability to push the file from Cloud storage to the node
+before starting the task, and after completion of the task, push it back to
+Cloud storage.
 
 ## Create Batch Pool
 
@@ -60,3 +125,4 @@
 ## References
 
 - [Running heavy workloads using Azure Batch Processing](https://www.bridgenext.com/blog/running-heavy-workloads-using-azure-batch-processing/)
+- [Azure Batch cloud scale containers for HPC](https://www.youtube.com/watch?v=r5jxlwJQEPc)
