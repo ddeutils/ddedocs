@@ -2,6 +2,20 @@
 
 ## Latest Changes
 
+## 20240408
+
+### :scissors: References
+
+- :clipboard: refs: reference docs for medium blogs. (_2024-04-08_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: 📦 Bump mkdocs-material from 9.5.15 to 9.5.16 (_2024-04-01_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: updat mkdocs version to 9.5.17. (_2024-04-05_)
+
 ## 20240401
 
 ### :scissors: References
