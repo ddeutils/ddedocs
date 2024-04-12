@@ -27,7 +27,7 @@ and distributed.
 It consists of data models, governance policies, rules and standards that need
 to be implemented and followed to build a robust and secure data system.
 
-![Data Architecture vs Data Engineer](img/data-architecture-vs-data-engineer.png.crdownload)
+![Data Architecture vs Data Engineer](img/data-architecture-vs-data-engineer.png)
 
 ## Data Platform Architect
 

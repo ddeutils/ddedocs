@@ -301,13 +301,19 @@ nav:
           - Python:
               - tools/lang/python/index.md
               - Wheel: tools/lang/python/py-dependency-wheel.md
-              - Joblib: tools/lang/python/py-joblib.md
-              - Pydantic: tools/lang/python/py-pydantic.md
               - Sync Multi-processes: tools/lang/python/py-sync-multi-processes.md
               - Data Structure for DE: tools/lang/python/py-data-structure-for-data-engineer.md
+              - Libraries:
+                  - Pytest: tools/lang/python/py-pytest.md
+                  - Pre-Commit: tools/lang/python/py-pre-commit.md
+                  - Joblib: tools/lang/python/py-joblib.md
+                  - Pydantic: tools/lang/python/py-pydantic.md
               - Functional Programing:
                   - Monad: tools/lang/python/functional/py-func-monad.md
                   - Toolz: tools/lang/python/functional/py-func-toolz.md
+              - Rust:
+                  - With Rust: tools/lang/python/py-with-rust.md
+                  - Migration: tools/lang/python/py-rust-migrate.md
               - Versions:
                   - Python 3.12: tools/lang/python/updates/py-py312.md
           - GO:
@@ -341,12 +347,17 @@ nav:
               - Pool: tools/orchestration/airflow/airflow-pool.md
               - Connections:
                   - With Kafka: tools/orchestration/airflow/airflow-with-kafka.md
+                  - With DBT: tools/orchestration/airflow/airflow-with-dbt.md
               - Unittest: tools/orchestration/airflow/airflow-unittest.md
               - CICD: tools/orchestration/airflow/airflow-cicd.md
               - On Kubernetes: tools/orchestration/airflow/airflow-on-k8s.md
+              - Updated:
+                  - 2.9.0: tools/orchestration/airflow/updated/airflow-2-9-0.md
           - Dagster:
               - tools/orchestration/dagster/index.md
               - Dynamic Partition: tools/orchestration/dagster/dagster-dynamic-partition.md
+              - Connections:
+                  - With DLT: tools/orchestration/dagster/dagster-dlt.md
           - Kedro:
               - tools/orchestration/kedro/index.md
           - Mage AI:
@@ -365,6 +376,8 @@ nav:
               - tools/etl/polars/index.md
               - Data Pipeline: tools/etl/polars/polars-data-pipeline.md
               - SCD2 on Delta Lake: tools/etl/polars/polars-scd2-on-delta-lake.md
+              - Connections:
+                  - To Synapse: tools/etl/polars/connection/polars-to-synapse.md
           - DLT:
               - tools/etl/dlt/index.md
           - DBT:
@@ -479,6 +492,8 @@ nav:
               - tools/quality/great_expectations/index.md
               - With Databricks: tools/quality/great_expectations/gexp-with-databricks.md
               - With Spark: tools/quality/great_expectations/gexp-with-spark.md
+          - Pandera:
+              - tools/quality/pandera/index.md
           - Deequ:
               - tools/quality/deequ/index.md
           - Soda:

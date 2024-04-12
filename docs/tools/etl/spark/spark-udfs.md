@@ -153,7 +153,7 @@ for serialization, most of the cases that involves huge data volume doesn't fit
 the dataframe within driver memory and might fail. Though this can be fixed through
 different options, it needs additional effort.
 
-## References
+## :material-vector-link: References
 
 However, it's important to remember that UDF aren’t optimized by Spark’s Catalyst
 optimizer. Therefore, whenever feasible, use Spark native transformations functions

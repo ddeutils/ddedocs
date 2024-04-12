@@ -68,7 +68,7 @@ def select_data_to_write(df, columns):
 
 ## Example: Machine Learning Features
 
-![Data Pipeline Flow](./images/polars-data-pipeline-example.png)
+![Data Pipeline Flow](img/polars-data-pipeline-example.png)
 
 === "Reading"
 
