@@ -35,6 +35,16 @@ your tasks in the right way, right order, right time.
 - Google - Cloud Composer
 - AWS - Amazon Manged Workflows for Apache Airflow (NWAA)
 
+## Components
+
+![Airflow Components](img/airflow-components-high-level.png){ loading=lazy }
+
+- **Airflow Scheduler** — the "heart" of Airflow, that parses the DAGs,
+  checks the scheduled intervals, and passes the tasks over to the workers.
+- **Airflow Worker** — picks up the tasks and actually performs the work.
+- **Airflow Webserver** — provides the main user interface to visualize and
+  monitor the DAGs and their results.
+
 ## Architecture
 
 ![Airflow Architecture Overview](img/airflow-architecture-overview.png){ loading=lazy }

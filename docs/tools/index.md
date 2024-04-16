@@ -1,12 +1,17 @@
 # Tools
 
+!!! warning
+
+    I will filter the DE tools on this session that do not dynamically and flexibility
+    for the most data strategies.
+
 :material-format-list-group: **Modern Data Stack (MDS)** is a collection of tools and cloud
 data technologies used to collect, process, store, and analyze data.
 
 !!! note
 
     So, this topic will group any open-soure data tools by the **Modern Data Stack**
-    concept.
+    concept. Sometime I will found a tools from [ReStack](https://www.restack.io/)
 
 <figure markdown="span">
   ![DBT Ecosystem Overview](img/tools-dbt-ecosystem-overview.png){ loading=lazy width="700" }
