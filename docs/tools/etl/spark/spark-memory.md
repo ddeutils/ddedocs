@@ -1,6 +1,7 @@
 # Spark: Memory
 
 - https://medium.com/@think-data/understanding-the-memory-components-of-spark-e3070f315d17
+- [Decoding Spark Executor Memory Management : Tuning spark configs](https://medium.com/airteldigital/decoding-spark-executor-memory-management-tuning-spark-configs-17c481529ccd)
 
 ## On-Heap vs Off-Heap Memory Management
 

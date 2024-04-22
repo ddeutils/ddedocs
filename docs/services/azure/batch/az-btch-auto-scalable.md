@@ -16,6 +16,23 @@ load) then autoscale is a good fit :partying_face:.
 
 ## Examples
 
+Simaple re-scale node,
+
+```cs
+$NodeDeallocationOption = taskcompletion;
+
+minNodes = 1;
+maxNodes = 10;
+
+activeTasks = $ActiveTasks.GetSample(1);
+runningTasks = $RunningTasks.GetSample(1);
+
+totalTasks = activeTasks + runningTasks;
+
+nodes = min(max(minNodes, totalTasks), maxNodes);
+$TargetDedicated = nodes;
+```
+
 ### Auto Scale Target Low-Priority Nodes
 
 Set autoscale evaluation interval to `15m 00s`.

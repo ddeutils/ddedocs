@@ -28,3 +28,4 @@ data warehousing, real-time analytics, and more.
 
 - [Medium: Change Data Capture (CDC)](https://medium.com/@venkatkarthick15/change-data-capture-cdc-3a076c9bdaa3)
 - [Medium: The Change Data Capture (CDC) Design Pattern](https://medium.com/@luishrsoares/the-change-data-capture-cdc-design-pattern-fa8d3adc964f)
+- [Medium: CDC from zero to hero](https://medium.com/plumbersofdatascience/cdc-from-zero-to-hero-a5a2fb8ee67b)
