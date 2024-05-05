@@ -2,6 +2,12 @@
 
 [:material-youtube: Git - Branching Strategies Explained](https://www.youtube.com/watch?v=U_IFGpJDbeU)
 
+## Data Engineer branches
+
+![Git Branching Strategy for Data Engineering](img/git-branching-strategy-for-data-engineering.png)
+
+[Read More](https://towardsdatascience.com/how-to-structure-your-git-branching-strategy-by-a-data-engineer-45ff96857bb)
+
 ## The Mainline branches
 
 It's the simplest but most effective way for small teams. Because of working
