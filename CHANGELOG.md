@@ -2,6 +2,38 @@
 
 ## Latest Changes
 
+## 20240505
+
+### :tada: Features
+
+- :dart: feat: merge branch 'main' of https://github.com/korawica/ddedocs into main. (_2024-04-25_)
+
+### :scissors: References
+
+- :clipboard: refs: update references docs from medium blog. (_2024-04-22_)
+- :clipboard: refs: add reference docs from medium about airflow. (_2024-04-16_)
+- :clipboard: refs: add references docs from medium blogs. (_2024-04-12_)
+
+### :book: Documents
+
+- :page_facing_up: docs: git branching strategies doc. (_2024-05-05_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: 📦 bump mkdocs-git-revision-date-localized-plugin from 1.2.4 to 1.2.5 (_2024-05-05_)
+- :construction: refactored: 📦 bump clishelf from 0.2.0 to 0.2.4 (_2024-05-05_)
+- :construction: refactored: 📦 bump mkdocs-material from 9.5.20 to 9.5.21 (_2024-05-05_)
+- :construction: refactored: 📦 bump mkdocs-material from 9.5.17 to 9.5.18 (_2024-04-22_)
+
+### :package: Build & Workflow
+
+- :toolbox: build: update publish workflow frequency. (_2024-05-05_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update version of mkdocs-material to 9.5.20. (_2024-04-29_)
+- :pushpin: deps: update version of mkdocs-material to 9.5.19. (_2024-04-25_)
+
 ## 20240408
 
 ### :scissors: References
