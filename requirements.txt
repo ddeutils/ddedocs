@@ -2,4 +2,4 @@ clishelf==0.2.0
 mkdocs-git-committers-plugin-2==2.3.0
 mkdocs-git-revision-date-localized-plugin==1.2.4
 mkdocs-glightbox==0.3.7
-mkdocs-material==9.5.20
+mkdocs-material==9.5.21
