@@ -1,5 +1,7 @@
 # Docs: _Data Developer & Engineer_
 
+<img alt="gitleaks badge" src="https://img.shields.io/badge/protected%20by-gitleaks-blue">
+
 > [!WARNING]
 > This project will deliver about **Data Developer & Engineer Documents and
 > Hands-On** from my experience and reference from public blogs only!!!
