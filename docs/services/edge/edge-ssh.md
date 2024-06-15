@@ -110,11 +110,13 @@ Host home
     Hostname home.example.com
     IdentityFile ~/.ssh/id_rsa.home
     User <your home acct>
+    IdentitiesOnly yes
 
 Host work
     Hostname work.example.com
     IdentityFile ~/.ssh/id_rsa.work
     User <your work acct>
+    IdentitiesOnly yes
 ```
 
 ## References

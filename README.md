@@ -14,7 +14,7 @@ and plug-in with **GitHub** action to GitHub domain.
 **Main project page**:
 
 ```url
-https://korawica.github.io/ddedocs/
+https://ddeutils.github.io/ddedocs/
 ```
 
 ## Noted
