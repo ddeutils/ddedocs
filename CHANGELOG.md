@@ -2,6 +2,31 @@
 
 ## Latest Changes
 
+## 20240616
+
+### :book: Documents
+
+- :page_facing_up: docs: update url on readme. (_2024-06-15_)
+- :page_facing_up: docs: add reference docs from medium. (_2024-05-07_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: 📦 bump mkdocs-git-revision-date-localized-plugin from 1.2.5 to 1.2.6 (#64) (_2024-06-03_)
+- :construction: refactored: 📦 bump mkdocs-glightbox from 0.3.7 to 0.4.0 (#63) (_2024-06-03_)
+- :construction: refactored: 📦 bump mkdocs-material from 9.5.21 to 9.5.25 (_2024-06-01_)
+
+### :bug: Fix Bugs
+
+- :gear: fixed: add license to gitleaks workflow. (_2024-06-06_)
+
+### :package: Build & Workflow
+
+- :toolbox: build: add gitleaks to gh-action. (_2024-06-06_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs-material to 9.5.26. (_2024-06-16_)
+
 ## 20240505
 
 ### :tada: Features
