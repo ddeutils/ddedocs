@@ -117,9 +117,9 @@ nav:
               - Challenge: roles/mlops_engineer/mlops-challenge.md
           - Analytic Engineer:
               - roles/analytic_engineer/index.md
-      - Principles & Noted:
-          - Daily Work: note/dae-daily-work.md
-          - SOLID Principles: note/dae-solid-principles.md
+      - Noted:
+          - Getting Requirement: note/getting-requirement.md
+          - Daily Work: note/daily-work.md
   - Services:
       - services/index.md
       - Provider:
@@ -533,8 +533,6 @@ nav:
           - Netflix: designs/examples/example-netflix-maestro-iceberg.md
   - Analytics:
       - analytics/index.md
-      - Abstract:
-          - Design Thinking: analytics/abstract/da-design-thinking.md
       - Logic & Algorithm:
           - Data Analytic:
               - analytics/data_analytic/index.md

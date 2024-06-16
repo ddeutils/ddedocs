@@ -1,8 +1,17 @@
 ---
-icon: material/shield-crown-outline
+authors:
+  - admin
+categories:
+  - Knowledge
+tags:
+  - Principle
+date:
+  created: 2024-06-16
+  update: 2024-06-16
+draft: true
 ---
 
-# Data Engineering: _SOLID Principles_
+# _SOLID Principles_
 
 ## References
 

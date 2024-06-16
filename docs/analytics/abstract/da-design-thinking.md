@@ -1,1 +1,0 @@
-# Data Analytic: Design Thinking

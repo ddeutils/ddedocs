@@ -1,13 +1,13 @@
 # Welcome to **Data Develop & Engineer**
 
-This project will deliver all knowledge in **_Data Develop and Engineer_** area.
+This project will deliver all knowledge in **_Data Developer and Engineer_** area.
 
-> **_Disclaimer_**: This project create from my experiment on **Data Engineer**
-> around ~5 years (_Update on 2024_).
+> **_Disclaimer_**: This project create from my **Data Engineer** experience and
+> experiment around ~5 years (_Update on 2024_).
 
 !!! warning "Important"
 
-    This project doesn't have much proper _English_ grammar.
+    This documents doesn't have much proper _English_ grammar.
     Because I am in the middle of trying to practice writing and reading.
     Please understand and open your mind on this issue before going deeper into
     it :face_holding_back_tears:
