@@ -2,6 +2,9 @@
 
 <img alt="gitleaks badge" src="https://img.shields.io/badge/protected%20by-gitleaks-blue">
 
+- [Page](#page)
+- [Noted](#noted)
+
 > [!WARNING]
 > This project will deliver about **Data Developer & Engineer Documents and
 > Hands-On** from my experience and reference from public blogs only!!!
@@ -13,7 +16,7 @@ and editing.
 For additional, it can deploy and plug-in with **GitHub** action to hosting on
 **GitHub Page** domain.
 
-**Main project page**:
+## Page
 
 ```url
 https://ddeutils.github.io/ddedocs/

@@ -1,22 +1,22 @@
 # Welcome to **Data Develop & Engineer**
 
-This project will deliver all knowledge from my experience and other sharing
-knowledge in **_Data Develop and Engineer_** area.
-
-!!! warning "Important"
-
-    This project I am working on doesn't have much proper _English_ grammar.
-    Because I'm in the middle of trying to practice writing and reading. Please
-    understand this issue before going deeper into it :face_holding_back_tears:
+This project will deliver all knowledge in **_Data Develop and Engineer_** area.
 
 > **_Disclaimer_**: This project create from my experiment on **Data Engineer**
 > around ~5 years (_Update on 2024_).
 
+!!! warning "Important"
+
+    This project doesn't have much proper _English_ grammar.
+    Because I am in the middle of trying to practice writing and reading.
+    Please understand and open your mind on this issue before going deeper into
+    it :face_holding_back_tears:
+
 ## :material-arrow-down-right: Getting Started
 
-:material-page-last: First, I will start reading the popular Data Engineering books from worldwide. That
-have many blogs represent many different books to you, but I see that it has some
-book that you should to read that they say you should too.
+:material-page-last: First, I will start reading the popular Data Engineering books
+from worldwide. That have many blogs represent many different books to you,
+but I see that it has some book that you should to read that they say you should too.
 
 !!! quote "What is DE do?"
 
