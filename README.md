@@ -2,6 +2,8 @@
 
 <img alt="gitleaks badge" src="https://img.shields.io/badge/protected%20by-gitleaks-blue">
 
+**Table of Contents:**
+
 - [Page](#page)
 - [Noted](#noted)
 
@@ -28,8 +30,8 @@ I will update this project by **Weekly frequency**. (This statement warn to me
 when I come back to develop this project again :sweat_smile:)
 
 This project will keep all good information for **Data Engineer** role, but you will
-see that it has a lot of knowledge topics do not summarize to my opinion. Because of
-shifting of the DE's technologies so fast.
+see that it has a lot of knowledge do not summarize to my opinion. Because of
+shifting of the DE's technologies so fast and I do not have time to focus on it.
 
 I will find my core concept of this project as soon as possible. If I do not define
 the subjective of this way of this project must to go, it will have a lot of confusing
