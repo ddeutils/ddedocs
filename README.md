@@ -1,5 +1,7 @@
 # Docs: _Data Developer & Engineer_
 
+[![size](https://img.shields.io/github/languages/code-size/ddeutils/ddedocs)](https://github.com/ddeutils/ddedocs)
+[![gh license](https://img.shields.io/github/license/ddeutils/ddedocs)](https://github.com/ddeutils/ddedocs/blob/main/LICENSE)
 <img alt="gitleaks badge" src="https://img.shields.io/badge/protected%20by-gitleaks-blue">
 
 **Table of Contents:**
