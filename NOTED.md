@@ -1,5 +1,7 @@
 # Noted
 
+This note will tell us about provisioning mkdocs on local for testing or hosting.
+
 ## Initialize `mkdocs`
 
 ```shell

@@ -138,16 +138,17 @@ nav:
                   - Monitoring: services/azure/database/az-db-monitoring.md
               - Batch:
                   - services/azure/batch/index.md
-                  - Start Task: services/azure/batch/az-btch-start-task.md
-                  - Auto Scalable: services/azure/batch/az-btch-auto-scalable.md
+                  - Start Task: services/azure/batch/az-ba-start-task.md
+                  - Auto Scalable: services/azure/batch/az-ba-auto-scalable.md
                   - Connections:
-                      - To Key Vault: services/azure/batch/az-btch-to-key-vault.md
-                      - To DataLake: services/azure/batch/az-btch-to-datalake.md
-                      - To BigQuery: services/azure/batch/az-btch-to-bigquery.md
+                      - To Key Vault: services/azure/batch/az-ba-to-key-vault.md
+                      - To Synapse: services/azure/batch/az-ba-to-synapse.md
+                      - To DataLake: services/azure/batch/az-ba-to-datalake.md
+                      - To BigQuery: services/azure/batch/az-ba-to-bigquery.md
                   - Dockerize:
-                      - Run Pyspark With Docker: services/azure/batch/az-btch-run-pyspark-with-docker.md
-                      - Docker: services/azure/batch/az-btch-with-docker.md
-                      - Docker inside Node: services/azure/batch/az-btch-with-docker-inside.md
+                      - Run Pyspark With Docker: services/azure/batch/az-ba-run-pyspark-with-docker.md
+                      - Docker: services/azure/batch/az-ba-with-docker.md
+                      - Docker inside Node: services/azure/batch/az-ba-with-docker-inside.md
               - Function App:
                   - Deploy Function V2: services/azure/functions/azf-deploy-v2-local.md
                   - Deploy with Docker: services/azure/functions/azf-deploy-with-docker.md

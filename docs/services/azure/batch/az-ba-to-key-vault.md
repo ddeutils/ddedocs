@@ -1,4 +1,4 @@
-# Azure Batch: _To Key Vault_
+# _To Key Vault_
 
 On Bath Pool, it should install Python package:
 
@@ -14,7 +14,7 @@ $ pip install azure-identity azure-keyvault-secrets
     used for retrieving customer-managed keys from the Key Vault. This identity
     is not available on Batch pools.
 
-### 1) Create Managed Identity
+### 1) Create User-Assigned Managed Identity
 
 - In the `Azure Portal` :octicons-arrow-right-24: Go to `Managed Identities`
   :octicons-arrow-right-24: Click `Create`
@@ -24,7 +24,7 @@ $ pip install azure-identity azure-keyvault-secrets
 
 - Go to `Azure Key Vaults` :octicons-arrow-right-24: Select your key vault name
 - On `Access control (IAM)` :octicons-arrow-right-24: Click `Add` :octicons-arrow-right-24:
-  Assign `Key Vault Secrets User` to your managed identity
+  Assign `Key Vault Secrets User` to your user-assigned managed identity
 
 !!! tip
 
@@ -38,6 +38,9 @@ $ pip install azure-identity azure-keyvault-secrets
 - Select your managed identity that was created from above :octicons-arrow-right-24: Click `Add`
 
 ### 4) Connection Code
+
+Implement connection code to the Azure Batch Node that use to get any secrets from
+Azure Key Vault.
 
 ```python
 from azure.identity import ManagedIdentityCredential
@@ -129,7 +132,8 @@ when we uploaded the certificate to the App Registration for Azure Batch Account
 Sometimes called a public key, a certificate is the recommended credential type
 because they're considered more secure than client secrets.
 
-- Go to Azure App registrations :octicons-arrow-right-24: Select `Certificates & secrets` :octicons-arrow-right-24: Click `Certificates`
+- Go to Azure App registrations :octicons-arrow-right-24: Select `Certificates & secrets`
+  :octicons-arrow-right-24: Click `Certificates`
 - Upload the certificate that was created from above step. Select the file you
   want to upload. It must be one of the following file types: `.cer`, `.pem`, `.crt`
   :octicons-arrow-right-24: Select `Add`.

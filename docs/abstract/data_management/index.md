@@ -4,14 +4,15 @@ icon: material/warehouse
 
 # Data Management
 
-**Data Management** is the effective practice of _Collecting_, _Storing_, _Protecting_,
-_Delivering_, and _Processing_ data.
+**Data Management** is the effective practice of ==_Collecting_, _Storing_, _Protecting_,
+_Delivering_, and _Processing_ data==.
 In business, data is usually associated with customers, prospects, employees, deals,
 competitors, and finances. ^^When an organization effectively manages data,
 they **Gain** insights that **Drive** business decisions^^.
 
-For trend of **Data Management**, I will follow the sharing knowledge
-from the **[:material-chart-bell-curve: Gartner Hype Cycle for Data Management](https://www.gartner.com/en)**.
+For trend of **Data Management**, We should follow the sharing knowledge from the
+**[:material-chart-bell-curve: Gartner Hype Cycle for Data Management](https://www.gartner.com/en)**.
+**Data Management** strategy can change everytime because it depend on technology.
 
 <figure markdown="span">
   ![Gartner Hype Cycle for Data Management 2023](img/gartner-hype-cycle-graphic.png){ loading=lazy width="600" }
@@ -22,7 +23,7 @@ from the **[:material-chart-bell-curve: Gartner Hype Cycle for Data Management](
 that provides an efficient way to manage data across a diverse but unified data tier.
 **Data Management Systems** are built on data management platforms and can include
 _Databases_, _Data Lakes_ and _Data Warehouses_, _Big Data Management Systems_,
-_Data Analytics_, and more.
+_Data Analytics_, and More.
 
 ### :material-format-list-bulleted: Types of Data Management
 

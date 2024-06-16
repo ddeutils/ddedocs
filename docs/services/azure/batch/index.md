@@ -1,13 +1,15 @@
 # Azure Batch
 
 **Azure Batch** is a robust service that provides parallel batch processing to
-execute intensive workloads of varying size.
-It creates a pool of compute nodes (virtual machines) to tackle heavy loads.
+execute intensive workloads of varying size of Azure Compute.
+It creates a pool of compute nodes (Virtual Machines) to tackle heavy loads.
+
 With **Azure Batch**, batch processing has become more streamlined and viable to
 complete data-intensive workloads at any scale.
 To initiate automated creation and management of Azure Batch pool, job, and task,
 the developer needs to create a batch application which can carry out on-premise
 execution using batch API.
+
 The batch application can be easily developed as an Azure CLI script, `.Net` application,
 or `Python` application. The batch application is not limited to any technology
 as Azure batch service provides REST API which is well documented.
@@ -120,7 +122,6 @@ Cloud storage.
 ## Python
 
 - https://github.com/uglide/azure-content/blob/master/articles/batch/batch-python-tutorial.md
-
 
 ## References
 

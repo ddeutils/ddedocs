@@ -8,8 +8,10 @@
 
 I will use this project be a co-pyrot for implement and serve [`MkDocs`](https://github.com/mkdocs/mkdocs)
 with the [Material Extension](https://squidfunk.github.io/mkdocs-material/)
-for generate documents with static web from a markdown files that easy to deploy
-and plug-in with **GitHub** action to GitHub domain.
+for generate static web documents from a **Markdown** files that easy to readable
+and editing.
+For additional, it can deploy and plug-in with **GitHub** action to hosting on
+**GitHub Page** domain.
 
 **Main project page**:
 
@@ -22,15 +24,19 @@ https://ddeutils.github.io/ddedocs/
 I will update this project by **Weekly frequency**. (This statement warn to me
 when I come back to develop this project again :sweat_smile:)
 
-This project will keep all good information for Data Engineering role, but you will
-see that has a lot of knowledge topics do not summarize to my opinion. Because of
+This project will keep all good information for **Data Engineer** role, but you will
+see that it has a lot of knowledge topics do not summarize to my opinion. Because of
 shifting of the DE's technologies so fast.
+
+I will find my core concept of this project as soon as possible. If I do not define
+the subjective of this way of this project must to go, it will have a lot of confusing
+documents.
 
 > [!NOTE]
 > For more extension that I use for this project, able to research from
 > [MkDocs Catalogs](https://github.com/mkdocs/catalog).
 
-[Read more about start-up this docs](NOTED.md)
+[Read more about start-up this docs on the Local](NOTED.md)
 
 ## License
 

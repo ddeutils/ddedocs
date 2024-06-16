@@ -20,7 +20,7 @@ book that you should to read that they say you should too.
 
 !!! quote "What is DE do?"
 
-    **Data Engineer** is who able to _Develop_, _Operate_, and _Maintain_ of
+    **Data Engineer** is who able to ==_Develop_, _Operate_, and _Maintain_== of
     **Data Infrastructure**, either On-Premises or Clouds, comprising databases,
     storages, compute engines, and pipelines to Extract, Transform, and Load Data.[^1]
 
@@ -120,7 +120,7 @@ Data Engineering tools.
 
 ## :octicons-skip-24: TL; DR
 
-
+Why Data Engineer?
 
 ## :material-bookshelf: Books
 

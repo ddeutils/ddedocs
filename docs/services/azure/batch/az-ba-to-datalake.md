@@ -1,12 +1,12 @@
-# Azure Batch: _To DataLake Storage_
+# _To DataLake Storage_
 
 On Bath Pool, it should install Python package:
 
 ```console
-$ pip install azure-identity azure-storage-file-datalake cffi
+$ pip install -U azure-identity azure-storage-file-datalake cffi
 ```
 
-## Using Managed Identity
+## Using User-Assigned Managed Identity
 
 ### 1) Create Managed Identity
 
