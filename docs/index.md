@@ -10,7 +10,7 @@ knowledge in **_Data Develop and Engineer_** area.
     understand this issue before going deeper into it :face_holding_back_tears:
 
 > **_Disclaimer_**: This project create from my experiment on **Data Engineer**
-> around ~5 years and I know it has a lot of knowledge to use on **Data Engineering**.
+> around ~5 years (_Update on 2024_).
 
 ## :material-arrow-down-right: Getting Started
 
