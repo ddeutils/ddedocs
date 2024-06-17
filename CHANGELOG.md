@@ -2,6 +2,30 @@
 
 ## Latest Changes
 
+## 20240617
+
+### :book: Documents
+
+- :page_facing_up: docs: update azure batch docs for connect to synapse. (_2024-06-17_)
+- :page_facing_up: docs: update bredge on readme. (_2024-06-16_)
+- :page_facing_up: docs: refoctored home page. (_2024-06-16_)
+- :page_facing_up: docs: update readme for table of contents. (_2024-06-16_)
+- :page_facing_up: docs: update list of contents on readme. (_2024-06-16_)
+- :page_facing_up: docs: update azure batch doc that connect to azure synapse. (_2024-06-16_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: remove books contents from this project. (_2024-06-17_)
+- :construction: refactored: change alias name of azure batch docs. (_2024-06-16_)
+
+### :bug: Fix Bugs
+
+- :gear: fixed: comment analytic and design docs. (_2024-06-17_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs-material version to 9.5.27. (_2024-06-16_)
+
 ## 20240616
 
 ### :book: Documents
