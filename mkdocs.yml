@@ -507,45 +507,45 @@ nav:
       - ML & Analytic:
           - MLflow:
               - tools/analytic/mlflow/index.md
-  - Designs:
-      - designs/index.md
-      - Application:
-          - API: designs/app/app-api.md
-      - Data Pipeline:
-          - AWS Serverless Data Analytic: designs/architect/act-aws-serverless-data-analytics-pipeline.md
-          - Azure Modern Data Pipeline: designs/architect/act-azure-modern-data-pipeline.md
-          - Stream Processing: designs/architect/act-open-source-stream-processing.md
-          - Stream Kafka: designs/architect/act-kafka-stream-pipeline.md
-      - Data Platform:
-          - Master Data Management: designs/data_platform/data-platform-mdm.md
-          - Internal Analytics: designs/data_platform/data-platform-internal-analytics.md
-          - With Databricks: designs/data_platform/data-platform-databricks.md
-          - With Cloudera: designs/data_platform/data-platform-cloudera.md
-      - Data Mesh:
-          - With Azure: designs/data_mesh/data-mesh-azure.md
-      - Data Lakehouse:
-          - On Premise: designs/data_lakehouse/lakehouse-on-premise.md
-          - Migration:
-              - Lakehouse from DWH: designs/data_lakehouse/migration/mg-lakehouse-from-classic-dwh.md
-      - Architect:
-          - Realtime Data Stream: designs/architect/new/act-realtime.md
-      - Real World:
-          - Netflix: designs/examples/example-netflix-maestro-iceberg.md
-  - Analytics:
-      - analytics/index.md
-      - Logic & Algorithm:
-          - Data Analytic:
-              - analytics/data_analytic/index.md
-      - AI & Model:
-          - ML Management Tool: analytics/analytic-ml-management-tools.md
-          - Linker:
-              - analytics/linker/index.md
-              - With Splink: analytics/linker/linker-with-splink.md
-              - With RecordLinkage: analytics/linker/linker-with-recordlinkage.md
-          - Forecast:
-              - analytics/forecast/index.md
-          - Cluster:
-              - analytics/cluster/index.md
+#  - Designs:
+#      - designs/index.md
+#      - Application:
+#          - API: designs/app/app-api.md
+#      - Data Pipeline:
+#          - AWS Serverless Data Analytic: designs/architect/act-aws-serverless-data-analytics-pipeline.md
+#          - Azure Modern Data Pipeline: designs/architect/act-azure-modern-data-pipeline.md
+#          - Stream Processing: designs/architect/act-open-source-stream-processing.md
+#          - Stream Kafka: designs/architect/act-kafka-stream-pipeline.md
+#      - Data Platform:
+#          - Master Data Management: designs/data_platform/data-platform-mdm.md
+#          - Internal Analytics: designs/data_platform/data-platform-internal-analytics.md
+#          - With Databricks: designs/data_platform/data-platform-databricks.md
+#          - With Cloudera: designs/data_platform/data-platform-cloudera.md
+#      - Data Mesh:
+#          - With Azure: designs/data_mesh/data-mesh-azure.md
+#      - Data Lakehouse:
+#          - On Premise: designs/data_lakehouse/lakehouse-on-premise.md
+#          - Migration:
+#              - Lakehouse from DWH: designs/data_lakehouse/migration/mg-lakehouse-from-classic-dwh.md
+#      - Architect:
+#          - Realtime Data Stream: designs/architect/new/act-realtime.md
+#      - Real World:
+#          - Netflix: designs/examples/example-netflix-maestro-iceberg.md
+#  - Analytics:
+#      - analytics/index.md
+#      - Logic & Algorithm:
+#          - Data Analytic:
+#              - analytics/data_analytic/index.md
+#      - AI & Model:
+#          - ML Management Tool: analytics/analytic-ml-management-tools.md
+#          - Linker:
+#              - analytics/linker/index.md
+#              - With Splink: analytics/linker/linker-with-splink.md
+#              - With RecordLinkage: analytics/linker/linker-with-recordlinkage.md
+#          - Forecast:
+#              - analytics/forecast/index.md
+#          - Cluster:
+#              - analytics/cluster/index.md
   - Blogs:
       - blogs/index.md
 
