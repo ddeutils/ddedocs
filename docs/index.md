@@ -123,42 +123,6 @@ Data Engineering tools.
 
 Why Data Engineer?
 
-## :material-bookshelf: Books
-
-<div class="grid cards" markdown>
-
--   [:material-book-open-page-variant: Fundamentals of Data Engineering](blogs/posts/book/book-fundamentals-of-data-engineering.md)
-
-    ---
-    The Fundamentals
-
--   [:material-book-open-page-variant: Data Pipelines Pocket Reference](blogs/posts/book/book-data-pipelines-pocket-reference.md)
-
-    ---
-
-
--   [:simple-medium: Data Engineer Books](https://towardsdatascience.com/data-engineering-books-f373005d53fc)
-
-    ---
-
--   [:simple-medium: 4 Top Data Engineering Books That Shaped My Career](https://medium.com/towards-data-engineering/4-top-data-engineering-books-that-shaped-my-career-472a519dc34f)
-
-    ---
-
--   [:material-book-open-page-variant: Data Engineering with Python]
-
-    ---
-
--   [:material-book-open-page-variant: The Data Warehouse Toolkit]
-
-    ---
-
--   [:material-book-open-page-variant: Architecting Modern Data Platforms]
--   [:material-book-open-page-variant: Spark: The Definitive Guide]
--   [:material-book-open-page-variant: Designing Data-Intensive Applications]
-
-</div>
-
 [^1]: Information of this quote reference from [:simple-medium: What is Data Engineering?](https://medium.com/codex/what-is-data-engineering-407bcf860baf)
 [^2]: [:material-land-plots: The 2023 MAD (ML/AI/DATA) Landscape](https://mad.firstmark.com/)
 [^3]: Unlocking the Power of Data: [:material-web:A Beginner’s Guide to Data Engineering](https://www.techment.com/unlocking-the-power-of-data-a-beginners-guide-to-data-engineering/)
