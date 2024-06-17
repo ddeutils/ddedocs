@@ -1,11 +1,11 @@
 # Azure Batch: _Auto Scalable_
 
-**Autoscale** is not (currently) intended as a sub 1m response to changes but
+**Autoscale** is not (currently) intended as a sub 1M response to changes but
 rather to adjust the size of your pool gradually as you run a workload.
 
 !!! quote
 
-    The Batch service uses your formula to determine the target number of
+    The Batch uses your formula to determine the target number of
     compute nodes in the pool for the next interval of processing.
 
 Since we only evaluate the formula every ~15m it is not like your pool is going
@@ -16,7 +16,8 @@ load) then autoscale is a good fit :partying_face:.
 
 ## Examples
 
-Simaple re-scale node,
+Simaple re-scale dedicate node (`$TargetDedicated`) that base on running and active
+tasks that exists on the Pool,
 
 ```cs
 $NodeDeallocationOption = taskcompletion;
@@ -32,6 +33,10 @@ totalTasks = activeTasks + runningTasks;
 nodes = min(max(minNodes, totalTasks), maxNodes);
 $TargetDedicated = nodes;
 ```
+
+!!! note
+
+    If you want to scale low-priority node, you have change variable to `$TargetLowPriorityNodes`
 
 ### Auto Scale Target Low-Priority Nodes
 

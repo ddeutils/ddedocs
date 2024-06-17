@@ -53,6 +53,9 @@ extra:
 nav:
   - Home:
       - index.md
+      - Main:
+          - Getting Requirement: note/getting-requirement.md
+          - Daily Work: note/daily-work.md
       - Abstraction:
           - Data Management:
               - abstract/data_management/index.md
@@ -117,9 +120,6 @@ nav:
               - Challenge: roles/mlops_engineer/mlops-challenge.md
           - Analytic Engineer:
               - roles/analytic_engineer/index.md
-      - Noted:
-          - Getting Requirement: note/getting-requirement.md
-          - Daily Work: note/daily-work.md
   - Services:
       - services/index.md
       - Provider:

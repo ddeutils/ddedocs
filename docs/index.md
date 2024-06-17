@@ -1,9 +1,10 @@
 # Welcome to **Data Develop & Engineer**
 
-This project will deliver all knowledge in **_Data Developer and Engineer_** area.
+This project will deliver all Practice and Knowledge of **_Data Developer and Engineer_**
+area.
 
-> **_Disclaimer_**: This project create from my **Data Engineer** experience and
-> experiment around ~5 years (_Update on 2024_).
+> **_Disclaimer_**: This documents add-on opinion from my **Data Engineer** experience
+> and experiment around ~5 years (_Update on 2024_).
 
 !!! warning "Important"
 

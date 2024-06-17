@@ -4,12 +4,12 @@ On Batch Pool, it should install Microsoft SQL Server ODBC Driver and Python
 packages:
 
 ```console
-$ pip install azure-identity arrow-odbc
+$ pip install azure-identity arrow-odbc polars
 ```
 
-=== note
+!!! note
 
-    I recommend arrow-odbc for loadding performance.
+    I recommend `arrow-odbc` and `polars` for loadding performance.
 
 ## Using User-Assigned Managed Identity
 
@@ -38,4 +38,24 @@ $ pip install azure-identity arrow-odbc
 ### 4) Connection Code
 
 ```python
+import os
+import polars as pl
+from arrow_odbc import read_arrow_batches_from_odbc
+
+reader = read_arrow_batches_from_odbc(
+    query="SELECT * FROM <schema-name>.<table-name>",
+    connection_string=(
+        f"Driver={{ODBC Driver 17 for SQL Server}};"
+        f"Server={os.getenv('MSSQL_HOST')};"
+        f"Port=1433;"
+        f"Database={os.getenv('MSSQL_DB')};"
+        f"Uid={os.getenv('MSSQL_USER')};"
+        f"Pwd={os.getenv('MSSQL_PASS')};"
+    ),
+    max_bytes_per_batch=536_870_912,  # Default: 2**29 (536_870_912)
+    batch_size=1_000_000,  # Default: 65_535
+)
+reader.fetch_concurrently()
+for batch in reader:
+    df: pl.DataFrame = pl.from_arrow(batch)
 ```
