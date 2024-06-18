@@ -10,8 +10,8 @@
 - [Noted](#noted)
 
 > [!WARNING]
-> This project will deliver about **Data Developer & Engineer Documents and
-> Hands-On** from my experience and reference from public blogs only!!!
+> <u>This project will deliver about **Data Developer & Engineer Documents and
+> Hands-On** from my experience and reference from public blogs only!!!</u>
 
 I will use this project be a co-pyrot for implement and serve [`MkDocs`](https://github.com/mkdocs/mkdocs)
 with the [Material Extension](https://squidfunk.github.io/mkdocs-material/)
@@ -44,8 +44,3 @@ documents.
 > [MkDocs Catalogs](https://github.com/mkdocs/catalog).
 
 [Read more about start-up this docs on the Local](NOTED.md)
-
-## License
-
-This project was licensed under the terms of the [MIT license](LICENSE), and thanks
-all for reference public blogs that sharing knowledge to me.

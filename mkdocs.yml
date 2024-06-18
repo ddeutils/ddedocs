@@ -54,8 +54,8 @@ nav:
   - Home:
       - index.md
       - Main:
-          - Getting Requirement: note/getting-requirement.md
-          - Daily Work: note/daily-work.md
+          - Getting Requirement: getting-requirement.md
+          - Daily Work: daily-work.md
       - Abstraction:
           - Data Management:
               - abstract/data_management/index.md
