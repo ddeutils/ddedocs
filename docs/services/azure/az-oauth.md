@@ -1,13 +1,11 @@
 # Azure: API Authentication
 
-## Access scenarios
-
 <figure markdown="span">
   ![Access Scenarios](img/az-access-scenarios.png){ loading=lazy width="700" }
   <figcaption>Access Scenarios</figcaption>
 </figure>
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
 ### 1) Create Service Principle
 

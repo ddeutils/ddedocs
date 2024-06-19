@@ -10,8 +10,8 @@
 - [Noted](#noted)
 
 > [!WARNING]
-> <u>This project will deliver about **Data Developer & Engineer Documents and
-> Hands-On** from my experience and reference from public blogs only!!!</u>
+> This project will deliver about **Data Developer & Engineer Documents and
+> Hands-On** from my experience and reference from public blogs only!!!
 
 I will use this project be a co-pyrot for implement and serve [`MkDocs`](https://github.com/mkdocs/mkdocs)
 with the [Material Extension](https://squidfunk.github.io/mkdocs-material/)
