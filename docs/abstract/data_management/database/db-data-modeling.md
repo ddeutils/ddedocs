@@ -5,7 +5,7 @@ Read More ...
 - https://www.ibm.com/topics/data-modeling
 - https://medium.com/@HalderNilimesh/mastering-data-modeling-a-comprehensive-guide-to-conceptual-logical-and-physical-models-3accfc72451b
 
-![Overall Data Modeling](images/data-model-overall.png)
+![Overall Data Modeling](img/data-model-overall.png)
 
 **Data modeling** is the process of creating a visual representation of either a whole
 information system or parts of it to communicate connections between data points
@@ -47,7 +47,7 @@ Data models can generally be divided into three categories, which vary according
 to their degree of abstraction. The process will start with a conceptual model,
 progress to a logical model and conclude with a physical model.
 
-![Types of Data Models](images/data-model-types.png)
+![Types of Data Models](img/data-model-types.png)
 
 Each type of data model is discussed in more detail below:
 
@@ -63,7 +63,7 @@ important for the business to represent in the data model), their characteristic
 and constraints, the relationships between them and relevant security
 and data integrity requirements. Any notation is typically simple.
 
-![Conceptual Data Model](images/data-model-conceptual.png)
+![Conceptual Data Model](img/data-model-conceptual.png)
 
 ### Logical data models
 
@@ -78,7 +78,7 @@ Logical data models can be useful in highly procedural implementation environmen
 or for projects that are data-oriented by nature, such as data warehouse design
 or reporting system development.
 
-![Logical Data Model](images/data-model-logical.png)
+![Logical Data Model](img/data-model-logical.png)
 
 ### Physical data models
 
@@ -91,7 +91,7 @@ foreign keys that will be used to maintain those relationships.
 Physical data models can include database management system (DBMS)-specific properties,
 including performance tuning.
 
-![Physical Data Model](images/data-model-physical.png)
+![Physical Data Model](img/data-model-physical.png)
 
 ## Data modeling process
 

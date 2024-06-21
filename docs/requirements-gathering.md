@@ -4,7 +4,9 @@ icon: material/comment-search-outline
 
 # Requirements Gathering
 
-One of the mistakes you’ll make as a data engineer is not truly understanding the
+## :material-arrow-down-right: Getting Started
+
+One of the mistakes you’ll make as a Data Engineer is not truly understanding the
 business requirements.
 
 !!! quote
@@ -14,8 +16,6 @@ business requirements.
 But they mean they want the data updated 3-4x a day, or maybe they only look at
 the report once a week; at that moment, the data should be as up-to-date as
 possible.
-
-## :material-arrow-down-right: Getting Started
 
 ### Identify the End-Users
 

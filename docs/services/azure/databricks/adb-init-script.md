@@ -1,20 +1,20 @@
-# Azure Databricks: _Init Script_
+# Init Script
 
-An **Init Script** (initialization script) is a shell script that runs during
-startup of each cluster node before the Apache Spark driver or executor
-JVM starts.
+**Init Script** (Initialization Script) is a shell script that runs during
+startup of each cluster node before the **Apache Spark** driver or executor
+**JVM** starts.
 
 !!! danger
 
-    **Legacy global** and **legacy cluster-named** init scripts run before other
+    **Legacy Global** and **Legacy Cluster-Named** init scripts run before other
     init scripts. These init scripts might be present in workspaces created
     before **February 21, 2023**.
 
-## Cluster-scoped init scripts
+## Cluster-Scoped init scripts
 
 We want to initialize some program before a cluster started like:
 
-```shell
+```shell titiles="init_script.sh"
 #!/bin/bash
 
 echo "Start running init script: adb-default"
@@ -26,10 +26,10 @@ timedatectl set-timezone Asia/Bangkok
 
 To use the UI to configure a cluster to run an init script, complete the following steps:
 
-- On the cluster configuration page, click the Advanced Options toggle.
+- On the Cluster **Configuration Page** :octicons-arrow-right-24: Click the **Advanced Options** toggle.
 - At the bottom of the page :octicons-arrow-right-24: click the **Init Scripts** tab.
 - In the Destination drop-down, select the Workspace destination type.
-- Specify a path to the init script.
+- Specify a path to the init script like `SYS/init_script.sh`.
 - Click Add.
 
 !!! note
@@ -48,5 +48,5 @@ To use the UI to configure a cluster to run an init script, complete the followi
 
 ## References
 
-- https://docs.databricks.com/clusters/init-scripts.html
-- https://www.youtube.com/watch?v=p9IPgYM4AyI
+- [](https://docs.databricks.com/clusters/init-scripts.html)
+- [](https://www.youtube.com/watch?v=p9IPgYM4AyI)

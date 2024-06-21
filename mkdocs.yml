@@ -165,6 +165,8 @@ nav:
                       - To Event Hubs: services/azure/databricks/adb-to-eventhubs.md
                       - To IoT Hub: services/azure/databricks/adb-to-iothub.md
                       - To Kinesis: services/azure/databricks/adb-to-kinesis.md
+                  - Unity Catalog:
+                      - Privileges: services/azure/databricks/uc/adb-uc-privileges.md
               - Event Hubs:
                   - services/azure/eventhubs/index.md
                   - Producer Data: services/azure/eventhubs/eventhubs-produce-data.md
