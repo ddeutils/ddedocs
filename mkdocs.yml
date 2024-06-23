@@ -335,8 +335,6 @@ nav:
               - Learning: tools/lang/rust/rust-learning.md
               - From Python: tools/lang/rust/rust-from-python.md
               - CLI Application: tools/lang/rust/rust-cli-app.md
-          - Mojo:
-              - tools/lang/mojo/index.md
       - Orchestration:
           - AirFlow:
               - tools/orchestration/airflow/index.md

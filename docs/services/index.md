@@ -41,7 +41,7 @@ let's have a look at how it differs from the **Traditional Data Stack**.
 | Requires serious technical background  | Suitable for users without extensive technical background |
 | Contains traditional RDBMS             | Works with RDBMS as well as big data, unstructured data   |
 
-The **MDS** provides businesses with a bias for action. Creating the MDS enables
+The **Modern Data Stack** provides businesses with a bias for action. Creating the MDS enables
 organizations to devote more time to analyzing their data and less time engineering
 their data processing pipelines.
 

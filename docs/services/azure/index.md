@@ -2,71 +2,13 @@
 icon: material/microsoft-azure
 ---
 
-# Azure
+# Microsoft Azure
 
-## Azure CLI
+Designed by **Microsoft** in 2010, Microsoft Azure is one of the widely used
+cloud computing platforms.
+Azure provides a wide variety of services such as cloud storage, compute services,
+network services, cognitive services, databases, analytics, and IoT.
 
-### Installation
-
-=== "On Local"
-
-    ```console
-    $ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-    $ az upgrade
-    ```
-
-    !!! note
-
-        If you want to remove all azure data from the CLI, you can use `rm -rf ~/.azure`.
-
-=== "On Docker"
-
-    ```shell
-    $ docker pull mcr.microsoft.com/azure-cli
-    $ docker run -it mcr.microsoft.com/azure-cli
-    ```
-
-    !!! note
-
-        If you want to pick up the SSH keys from your user environment:
-
-        ```console
-        $ docker run -it -v ${HOME}/.ssh:/root/.ssh mcr.microsoft.com/azure-cli
-        ```
-
-### Getting Started
-
-[Read More Azure CLI](https://github.com/Azure/azure-cli)
-
-```console
-# login
-$ az login
-
-# list subscriptions
-$ az account list -o table
-
-# set active subscription
-$ az account set --subscription <SUBSCRIPTION_ID>
-
-# create an Azure Resource Group
-$ az group create -n rg-functions-with-go \
-  -l germanywestcentral
-
-# create an Azure Storage Account (required for Azure Functions App)
-$ az storage account create -n safnwithgo2021 \
-  -g rg-functions-with-go \
-  -l germanywestcentral
-
-# create an Azure Functions App
-$ az functionapp create -n fn-with-go \
-  -g rg-functions-with-go \
-  --consumption-plan-location germanywestcentral \
-  --os-type Linux \
-  --runtime custom \
-  --functions-version 3 \
-  --storage-account safnwithgo2021
-```
-
-### Certificate-based auth with Azure Service Principals
-
-- https://arsenvlad.medium.com/certificate-based-auth-with-azure-service-principals-from-linux-command-line-a440c4599cae
+It makes building, deploying, and managing applications very easy.
+All the Microsoft Azure fundamentals are also described for a better understanding
+of readers.

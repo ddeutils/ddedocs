@@ -1,4 +1,4 @@
-# Azure: API Authentication
+# OAuth
 
 <figure markdown="span">
   ![Access Scenarios](img/az-access-scenarios.png){ loading=lazy width="700" }
