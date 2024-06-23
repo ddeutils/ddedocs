@@ -103,6 +103,7 @@ nav:
               - Viable Monitoring System: abstract/data_observability/dobs-maintaining-a-viable-monitoring-sys.md
           - Data Strategy:
               - abstract/data_strategy/index.md
+              - Semantic Layer: abstract/data_strategy/strategy-semantic-layer.md
           - Data Mesh:
               - abstract/data_mesh/index.md
       - Roles:
