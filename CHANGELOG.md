@@ -2,6 +2,18 @@
 
 ## Latest Changes
 
+## 20240623
+
+### :scissors: References
+
+- :clipboard: refs: ref semantic layer and daily-routine work docs. (_2024-06-23_)
+- :clipboard: refs: add reference for one-big-table. (_2024-06-21_)
+
+### :book: Documents
+
+- :page_facing_up: docs: add emoji on azure docs. (_2024-06-19_)
+- :page_facing_up: docs: update readme and index page. (_2024-06-18_)
+
 ## 20240617
 
 ### :book: Documents
