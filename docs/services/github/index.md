@@ -1,5 +1,0 @@
----
-icon: material/github
----
-
-# GitHub

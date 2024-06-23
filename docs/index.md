@@ -20,12 +20,12 @@ data lifecycle that enables organizations to manage and process large volumes of
 data efficiently and reliably^^[^3].
 By these concepts, **Data Engineers** can design and implement **Data Pipelines**
 that meet the requirements of their organizations and ensure that their data is
-managed ==**Consistently** and **Reliably**==.
+managed _Consistently_ and _Reliably_.
 
 !!! quote "What is DE do?"
 
-    **Data Engineer** is who able to ==_Develop_, _Operate_, and _Maintain_== of
-    **Data Infrastructure**, either On-Premises or Clouds, comprising databases,
+    **Data Engineer** is who able to ==_**Develop**_, _**Operate**_, and _**Maintain**_==
+    of **Data Infrastructure**, either On-Premises or Clouds, comprising databases,
     storages, compute engines, and pipelines to Extract, Transform, and Load Data.[^1]
 
 <figure markdown="span">
@@ -33,10 +33,10 @@ managed ==**Consistently** and **Reliably**==.
   <figcaption><a href="https://www.techment.com/unlocking-the-power-of-data-a-beginners-guide-to-data-engineering/">Life Cycle of Data Engineering</a></figcaption>
 </figure>
 
-:material-page-last: When I started, I got the idea about the future of my responsibilities.
-I know the Data Engineering tools will shift so fast because last three year I
-start with the map-reduce processing on **Hadoop HDFS** but nowadays, it changes
-to in-memory processing like **Impala** or **Spark**.
+:material-page-last: When I started on this role, I got the idea about the future
+of my responsibilities. I know the Data Engineering tools will shift so fast because
+the last three year I start with the map-reduce processing on **Hadoop HDFS** but
+nowadays, it changes to in-memory processing like **Impala** or **Spark**.
 
 ![The 2023 MAD (ML/AI/DATA) Landscape](img/mad-data-landscape.png){ loading=lazy width="350" align=right }
 
@@ -67,13 +67,11 @@ role:
   metrics movements in a self-serve manner.
 
 :material-page-last: Additional, the trend of ^^**Modern Data Stack**^^ will make
-the **Data Engineering Jobs** so easy and force you have the time to focus on
+the **Data Engineering** so easy and force you have the time to focus on
 **Business Problem**.
-So, in the another hand, **Business Users** able to use less of technical knowledge
-to interact with Data in the **Data Platform** that make SLA time to request to
-**Data Engineer** decrease a lot! :partying_face:
-
-- [:simple-medium: Skill Sets for Data Engineer 2024](https://manussanun.medium.com/skill-sets-for-data-engineer-2024-adf43ac37b53)
+In the another hand, **Business Users** able to use less of technical knowledge
+to interact the Data in the **Data Platform** that make less of SLA to require
+**Data Engineer** a lot! :partying_face:
 
 ## :material-account-arrow-right-outline: Roles
 
@@ -92,22 +90,22 @@ I will go to any specialize roles such as,
 
 ## :material-account-supervisor-outline: Communities
 
-This below is the list of communities that must learn about Coding knowledge and
-Data Engineering tools.
+:material-page-last: This below is the list of Communities that must learn about
+Coding knowledge and Data Engineering tools.
 
 <div class="grid cards" markdown>
 
 -   :simple-medium: **Data Engineering**
 
     ---
-    The Medium Tag for Data Engineering knowledge and solutions :octicons-share-android-24:
+    The **Medium Tag** for Data Engineering knowledge and solutions :octicons-share-android-24:
 
     [:octicons-arrow-right-24: Go Through](https://medium.com/tag/data-engineering)
 
 -   :material-coffee-to-go-outline: **Data Engineer Cafe**
 
     ---
-    An Area of Discussing Blog for Data Engineer like talk to your close friend
+    An **Area of Discussing Blog** for Data Engineer like talk to your close friend
     at the Cafe :material-coffee-maker-outline:
 
     [:octicons-arrow-right-24: Go Through](https://discuss.dataengineercafe.io/)
@@ -115,7 +113,7 @@ Data Engineering tools.
 -   :simple-medium: **ODDS Team**
 
     ---
-    The Medium Group that believes software development should be joyful and
+    The **Medium Group** that believes software development should be joyful and
     advocates deliberate practice :material-human-greeting-proximity:
 
     [:octicons-arrow-right-24: Go Through](https://medium.com/tag/data-engineering)
@@ -123,7 +121,7 @@ Data Engineering tools.
 -   :material-map-marker-path: **TPA Roadmap**
 
     ---
-    Community driven roadmaps, articles and resources for developers in Thailand
+    **Community Driven Roadmaps, Articles and Resources** for developers in Thailand
 
     [:octicons-arrow-right-24: Go Through](https://roadmap.thaiprogrammer.org/)
 
