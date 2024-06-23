@@ -55,6 +55,7 @@ nav:
       - index.md
       - Requirements Gathering: requirements-gathering.md
       - Daily Work: daily-work.md
+      - Data Storytelling: data-storytelling.md
       - Abstraction:
           - Data Management:
               - abstract/data_management/index.md

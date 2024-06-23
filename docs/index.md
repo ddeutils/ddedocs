@@ -15,9 +15,12 @@ area.
 
 ## :material-arrow-down-right: Getting Started
 
-:material-page-last: First, I will start reading the popular Data Engineering books
-from worldwide. That have many blogs represent many different books to you,
-but I see that it has some book that you should to read that they say you should too.
+:material-page-last: First, ^^**Data engineering** is a critical part of the
+data lifecycle that enables organizations to manage and process large volumes of
+data efficiently and reliably^^[^3].
+By these concepts, **Data Engineers** can design and implement **Data Pipelines**
+that meet the requirements of their organizations and ensure that their data is
+managed ==**Consistently** and **Reliably**==.
 
 !!! quote "What is DE do?"
 
@@ -30,12 +33,6 @@ but I see that it has some book that you should to read that they say you should
   <figcaption><a href="https://www.techment.com/unlocking-the-power-of-data-a-beginners-guide-to-data-engineering/">Life Cycle of Data Engineering</a></figcaption>
 </figure>
 
-^^**Data engineering** is a critical part of the data lifecycle that enables organizations
-to manage and process large volumes of data efficiently and reliably^^[^3].
-By these concepts, **Data Engineers** can design and implement data pipelines
-that meet the requirements of their organizations and ensure that their data is
-managed consistently and reliably.
-
 :material-page-last: When I started, I got the idea about the future of my responsibilities.
 I know the Data Engineering tools will shift so fast because last three year I
 start with the map-reduce processing on **Hadoop HDFS** but nowadays, it changes
@@ -44,13 +41,12 @@ to in-memory processing like **Impala** or **Spark**.
 ![The 2023 MAD (ML/AI/DATA) Landscape](img/mad-data-landscape.png){ loading=lazy width="350" align=right }
 
 You will see the right picture, the [**2023 MAD (ML/AI/Data) Landscape** :material-land-plots:](https://mad.firstmark.com/),
-that show about how many possibility tools that able to use on your Data Engineering work.
-It has many area that you should to choose which one that match with your architect
-or fit with your cost planing.
+that show about how many possibility tools that able to use on your project.
+It has many area that you should to choose which one that match with the current
+architect or fit with your cost planing model.
 
-:material-page-last: Finally, I drop the books and go to start searching and
-observing about trend of **Data Engineering**. The below diagram shows ^^how the
-focus areas of **Data Engineering Shift** as the analytics organization evolves^^.
+:material-page-last: Finally, the below diagram shows ^^how the focus areas of
+**Data Engineering Shift** as the analytics organization evolves^^.
 
 <figure markdown="span">
   ![Data Engineering Shift](img/data-engineering-shift.png){ loading=lazy width="650" }
@@ -70,11 +66,12 @@ role:
 - **Data Accessibility**: An example could be enabling end-users to analyze significant
   metrics movements in a self-serve manner.
 
-The trend of ^^**Modern Data Stack**^^ will make the **Data Engineering Jobs**
-so easy and force you have the time to focus on **Business Problem**. So, in the
-another hand, **Business Users** able to use less of technical knowledge to interact
-with Data in the **Data Platform** that make SLA time to request to **Data Engineer**
-decrease a lot! :partying_face:
+:material-page-last: Additional, the trend of ^^**Modern Data Stack**^^ will make
+the **Data Engineering Jobs** so easy and force you have the time to focus on
+**Business Problem**.
+So, in the another hand, **Business Users** able to use less of technical knowledge
+to interact with Data in the **Data Platform** that make SLA time to request to
+**Data Engineer** decrease a lot! :partying_face:
 
 - [:simple-medium: Skill Sets for Data Engineer 2024](https://manussanun.medium.com/skill-sets-for-data-engineer-2024-adf43ac37b53)
 
