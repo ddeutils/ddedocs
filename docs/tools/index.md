@@ -2,55 +2,52 @@
 
 !!! warning
 
-    I will filter the DE tools on this session that do not dynamically and flexibility
-    for the most data strategies.
+    I will filter **Data Engineering Tools** on this session that do not dynamically
+    and flexibility for the most **Data Architect** and **Modern Data Strack**.
 
-:material-format-list-group: **Modern Data Stack (MDS)** is a collection of tools and cloud
-data technologies used to collect, process, store, and analyze data.
+:material-format-list-group: **Modern Data Stack (MDS)** is a collection of _Software Tools_
+and _Cloud Services_ that used to Collect, Process, Store, and Analyze data.
 
 !!! note
 
-    So, this topic will group any open-soure data tools by the **Modern Data Stack**
-    concept. Sometime I will found a tools from [ReStack](https://www.restack.io/)
+    This session groups any Open-Soure Tools base on **Modern Data Stack** concept.
+    Some topic I found the tools from the [ReStack](https://www.restack.io/)
 
 <figure markdown="span">
   ![DBT Ecosystem Overview](img/tools-dbt-ecosystem-overview.png){ loading=lazy width="700" }
   <figcaption><a href="https://bitestreams.com/blog/modern-data-stack/">DBT Ecosystem Overview</a></figcaption>
 </figure>
 
-:material-page-last: The **MDS** advocates a lot of changes, but if not done right
-they can be painful, expensive, and risky. Most often when I talk to data stack
-owners in the enterprise, the question is not so much how one tool compares to
-another but whether they can live with the status quo or Have a strong enough
-desire to change.
+:material-page-last: **Modern Data Stack** advocates a lot of changes, but if not
+done right they can be painful, expensive, and risky. Most often when I talk to
+data stack owners in the enterprise, the question is not so much how one tool
+compares to another but whether they can live with the status quo or Have a strong
+enough desire to change.
 
-:material-key-chain: **The Key Concepts**:
+:octicons-key-16: **The Key Concepts**:
 
 - Easy to Try & Deploy
-- Massive Scalability
-    - Data
-    - Users
-    - Use Cases
+- Massive Scalability; Data, Users, and Use Cases
 - Composable Data Stack
 - Flexible Pricing
-
-:material-page-last: The **MDS** allows you to build on top of the software of giants instead of adopting
-the "^^**not invented here syndrome**^^". Consider whether the business value from your
-analytics solution is coming from how well you manage your data pipelines and
-data infrastructure, versus how well you build analytics and AI products on
-top of your infrastructure.
 
 <figure markdown="span">
   ![The Modern Open-Source Data Stack](img/tools-modern-open-source-data-stack.png){ loading=lazy width="700" }
   <figcaption><a href="https://www.datafold.com/blog/the-modern-data-stack-open-source-edition#instrumentation/">The Modern Open-Source Data Stack</a></figcaption>
 </figure>
 
-## :material-select-compare: Comparison
+:material-page-last: **Modern Data Stack** allows you to build on top of the software
+of giants instead of adopting the "^^**not invented here syndrome**^^".
+Consider whether the business value from your analytics solution is coming from
+how well you manage your data pipelines and data infrastructure, versus how well
+you build analytics and AI products on top of your infrastructure.
 
-- https://itnext.io/five-apache-projects-you-probably-didnt-know-about-13528e05765f
-- https://medium.com/geekculture/airflow-vs-prefect-vs-kestra-which-is-best-for-building-advanced-data-pipelines-40cfbddf9697
-- https://medium.com/@mariusz_kujawski/converting-csv-files-to-parquet-with-polars-pandas-dask-and-dackdb-52a77378349d
-- https://medium.com/@kywe665/hot-take-apache-hudi-delta-lake-apache-iceberg-are-divergent-7ca6a43d39fc
+## :material-select-compare: Tools Comparison
+
+- [](https://itnext.io/five-apache-projects-you-probably-didnt-know-about-13528e05765f)
+- [](https://medium.com/geekculture/airflow-vs-prefect-vs-kestra-which-is-best-for-building-advanced-data-pipelines-40cfbddf9697)
+- [](https://medium.com/@mariusz_kujawski/converting-csv-files-to-parquet-with-polars-pandas-dask-and-dackdb-52a77378349d)
+- [](https://medium.com/@kywe665/hot-take-apache-hudi-delta-lake-apache-iceberg-are-divergent-7ca6a43d39fc)
 
 ### File Format
 
