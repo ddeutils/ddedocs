@@ -445,37 +445,30 @@ nav:
               - tools/query/duckdb/index.md
           - Trino:
               - tools/query/trino/index.md
-      - File Format:
-          - tools/files/index.md
-          - Parquet:
-              - tools/files/parquet/index.md
-          - Hive:
-              - tools/files/hive/index.md
-          - Delta:
-              - tools/files/delta/index.md
-              - Deletion Vector: tools/files/delta/delta-lake-deletion-vector.md
-              - Liquid Clustering: tools/files/delta/delta-lake-liquid-clustering.md
-              - Partition Z-Order Cluster: tools/files/delta/delta-lake-partition-zorder-cluster.md
-              - Universal Format: tools/files/delta/delta-lake-universal-format.md
-              - API:
-                  - Pyspark:
-                      - Auto Schema Evolution: tools/files/delta/pyspark/pyspark-delta-auto-schema-evolution.md
-                      - Image Files: tools/files/delta/pyspark/pyspark-delta-image-files.md
-                      - SCD2: tools/files/delta/pyspark/pyspark-delta-scd2.md
-                      - Star Schema: tools/files/delta/pyspark/pyspark-delta-star-schema.md
-                      - Keeping Fast & Clean: tools/files/delta/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
-                      - Best Practice: tools/files/delta/pyspark/pyspark-delta-best-practice.md
-                      - Handling Concurrent Write: tools/files/delta/pyspark/pyspark-delta-handling-concurrent-write.md
-                      - Stream Data: tools/files/delta/pyspark/pyspark-delta-stream-data-with-spark-stream.md
+      - Open Table:
+          - tools/open_table/index.md
+          - Delta Lake:
+              - tools/open_table/delta_lake/index.md
+              - Deletion Vector: tools/open_table/delta_lake/delta-lake-deletion-vector.md
+              - Liquid Clustering: tools/open_table/delta_lake/delta-lake-liquid-clustering.md
+              - Partition Z-Order Cluster: tools/open_table/delta_lake/delta-lake-partition-zorder-cluster.md
+              - Universal Format: tools/open_table/delta_lake/delta-lake-universal-format.md
+              - Pyspark API:
+                  - Auto Schema Evolution: tools/open_table/delta_lake/pyspark/pyspark-delta-auto-schema-evolution.md
+                  - Image Files: tools/open_table/delta_lake/pyspark/pyspark-delta-image-files.md
+                  - SCD2: tools/open_table/delta_lake/pyspark/pyspark-delta-scd2.md
+                  - Star Schema: tools/open_table/delta_lake/pyspark/pyspark-delta-star-schema.md
+                  - Keeping Fast & Clean: tools/open_table/delta_lake/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
+                  - Best Practice: tools/open_table/delta_lake/pyspark/pyspark-delta-best-practice.md
+                  - Handling Concurrent Write: tools/open_table/delta_lake/pyspark/pyspark-delta-handling-concurrent-write.md
+                  - Stream Data: tools/open_table/delta_lake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
           - Iceberg:
-              - tools/files/iceberg/index.md
-              - Reduce Full Scan: tools/files/iceberg/icb-reduce-full-scan.md
-              - Small Files: tools/files/iceberg/icb-small-files.md
-              - With Pyspark: tools/files/iceberg/icb-with-pyspark.md
+              - tools/open_table/iceberg/index.md
+              - Reduce Full Scan: tools/open_table/iceberg/icb-reduce-full-scan.md
+              - Small Files: tools/open_table/iceberg/icb-small-files.md
+              - With Pyspark: tools/open_table/iceberg/icb-with-pyspark.md
           - Hudi:
-              - tools/files/hudi/index.md
-          - Static Frame:
-              - tools/files/static-frame/index.md
+              - tools/open_table/hudi/index.md
       - Storage:
           - Hadoop:
               - tools/storage/hadoop/index.md
