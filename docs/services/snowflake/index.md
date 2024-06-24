@@ -1,5 +1,5 @@
 ---
-icon: material/snowflake
+icon: simple/snowflake
 ---
 
 # Snowflake

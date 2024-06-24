@@ -4,7 +4,9 @@ icon: material/tray-arrow-down
 
 # Daily Work & Routine
 
-## Morning: Laying the Groundwork
+## :material-arrow-down-right: Getting Started
+
+### Morning: Laying the Groundwork
 
 Reviewing System Health and Performance: The day begins with a critical review
 of the data systems’ health.
@@ -17,15 +19,18 @@ with cross-functional teams, set the tone for the day. These discussions are vit
 for aligning on priorities, sharing updates on ongoing projects, and strategizing
 solutions for any emerging challenges.
 
-## Midday: Deep Dive into Core Responsibilities
+### Midday: Deep Dive into Core Responsibilities
 
-Tackling Data and Quality Issues: Data engineers meticulously address data discrepancies, ensuring accuracy and consistency. This includes cleansing data, resolving duplicate records, and rectifying format discrepancies, thereby upholding the data’s integrity for reliable analysis.
+Tackling Data and Quality Issues: Data engineers meticulously address data
+discrepancies, ensuring accuracy and consistency. This includes cleansing data,
+resolving duplicate records, and rectifying format discrepancies,
+thereby upholding the data’s integrity for reliable analysis.
 
 Aligning with Business Requirements: A significant part of the day involves translating business questions and requirements into technical specifications. This close collaboration with stakeholders ensures that the data infrastructure and processes align with business objectives, facilitating data-driven decision-making.
 
 Building and Optimizing ETL Processes: Designing and refining ETL processes to automate the flow of data through the pipeline is a core task. This involves coding, testing, and deploying processes that extract data from diverse sources, transform it into a structured format, and load it into a data warehouse or lake for analysis.
 
-## Afternoon: Expansion and Collaboration
+### Afternoon: Expansion and Collaboration
 
 Creating Dashboards and Reporting Tools: Collaborating with data analysts and business users, data engineers contribute to developing dashboards and visualizations. These tools are designed to make data insights accessible, supporting strategic business decisions.
 
@@ -33,7 +38,7 @@ Collaborating with Domain Experts: Working with domain experts is crucial for re
 
 Embracing Software Engineering Practices: Developing custom tools and applications to automate routine tasks and improve efficiency is an integral part of the day. This might include creating scripts for data quality checks or developing integrations to streamline data flows.
 
-## Late Afternoon to Evening: Reflection and Continuous Learning
+### Late Afternoon to Evening: Reflection and Continuous Learning
 
 Addressing Technical Debt and Bugs: Late afternoons often involve tackling technical debt and debugging issues, ensuring the data infrastructure is robust and efficient.
 
@@ -63,12 +68,25 @@ Incorporating these focused blocks into the daily schedule requires strategic pl
 
 ### Continuous Improvement and Collaboration
 
-Security and Compliance: Ensuring data security and compliance with regulations is an ongoing concern. Landing zones provide a controlled environment to enforce data governance standards, crucial for managing sensitive information.
+Security and Compliance: Ensuring data security and compliance with regulations
+is an ongoing concern. Landing zones provide a controlled environment to enforce
+data governance standards, crucial for managing sensitive information.
 
-Standardized Data Communication: Establishing a standardized protocol for data exchange between the Enterprise Data Platform and various sources ensures a cohesive data strategy, vital for the integrity and accessibility of organizational data.
+Standardized Data Communication: Establishing a standardized protocol for data
+exchange between the Enterprise Data Platform and various sources ensures a
+cohesive data strategy, vital for the integrity and accessibility of organizational
+data.
 
-### Conclusion
+## :material-source-commit-end: Conclusion
 
-The daily routine of a data engineer is characterized by a balance of technical challenges, strategic planning, and proactive collaboration. From ensuring the smooth operation of data pipelines to addressing data quality, aligning with business needs, and embracing continuous learning, each aspect of their day contributes to the overarching goal of leveraging data for strategic insights. As the data landscape continues to evolve, the role of the data engineer will remain integral to unlocking the potential of data to drive decision-making and innovation in the digital age.
+The daily routine of a data engineer is characterized by a balance of technical
+challenges, strategic planning, and proactive collaboration.
+From ensuring the smooth operation of data pipelines to addressing data quality,
+aligning with business needs, and embracing continuous learning, each aspect of
+their day contributes to the overarching goal of leveraging data for strategic
+insights.
+As the data landscape continues to evolve, the role of the data engineer will
+remain integral to unlocking the potential of data to drive decision-making
+and innovation in the digital age.
 
-- [Daily Work Routine as a Data Engineer](https://medium.com/@patrickwork0001/daily-work-routine-as-a-data-engineer-ee9e9cc2190c)
+[^1]: [Daily Work Routine as a Data Engineer](https://medium.com/@patrickwork0001/daily-work-routine-as-a-data-engineer-ee9e9cc2190c)

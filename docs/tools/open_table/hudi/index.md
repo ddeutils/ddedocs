@@ -1,3 +1,7 @@
+---
+icon: material/chat-question-outline
+---
+
 # Apache Hudi
 
 Hudi stands for — Hadoop Upsert Deletes and Incrementals

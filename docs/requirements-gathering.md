@@ -4,8 +4,6 @@ icon: material/comment-search-outline
 
 # Requirements Gathering
 
-## :material-arrow-down-right: Getting Started
-
 One of the mistakes you’ll make as a Data Engineer is not truly understanding the
 business requirements.
 
@@ -16,6 +14,8 @@ business requirements.
 But they mean they want the data updated 3-4x a day, or maybe they only look at
 the report once a week; at that moment, the data should be as up-to-date as
 possible.
+
+## :material-arrow-down-right: Getting Started
 
 ### Identify the End-Users
 
@@ -40,17 +40,21 @@ Assist end-users in defining requirements by engaging in conversations about the
 objectives and challenges. Understand their current operations to gain valuable
 insights. Use the following questions to refine requirements:
 
-- Business impact:
+-   Business impact:
 
-  How does having this data impact the business? What is the measurable improvement in the bottom line, business OKR, etc? Knowing the business impact helps in determining if this project is worth doing.
+    How does having this data impact the business? What is the measurable improvement
+    in the bottom line, business OKR, etc? Knowing the business impact helps in
+    determining if this project is worth doing.
 
-  Evaluate how the data impacts the business and quantify the improvements.
+    Evaluate how the data impacts the business and quantify the improvements.
 
-- Semantic understanding:
+-   Semantic understanding:
 
-  What does the data represent? What business process generates this data? Knowing this will help you model the data and understand its relation to other tables in your warehouse.
+    What does the data represent? What business process generates this data?
+    Knowing this will help you model the data and understand its relation to other
+    tables in your warehouse.
 
-  Grasp the data's representation and its relation to other warehouse tables.
+    Grasp the data's representation and its relation to other warehouse tables.
 
 - Data source: Where does the data originate? (an application DB, external vendor via SFTP/Cloud store dumps, API data pull, manual upload, etc).
 
@@ -81,9 +85,11 @@ Thank end-users for their time/expertise
 - Recommend solutions(or different ways to do things) for their common issues
 - Acknowledge their help & expertise when presenting the project to a wider audience
 
-End-users who feel invested will root for the project, and help evangelize it. Having end-users who root for the project helps a lot with resource allocation.
+End-users who feel invested will root for the project, and help evangelize it.
+Having end-users who root for the project helps a lot with resource allocation.
 
-Clearly define the requirements, record them (e.g. JIRA, etc), and get sign-off from the stakeholders.
+Clearly define the requirements, record them (e.g. JIRA, etc), and get sign-off
+from the stakeholders.
 
 ### End-User Validation
 
@@ -127,7 +133,7 @@ Do not accept Adhoc change/feature requests!(unless it’s an emergency). Create
 Educate the end-user on the process of requesting a new feature/change.
 Following a process will prevent scope creep and allow you to deliver on time.
 
-## Conclusion
+## :material-source-commit-end: Conclusion
 
 Effectively managing ever-changing requirements is a challenging aspect of a
 data engineer's role. By following the steps outlined in this article, you can
