@@ -1,12 +1,12 @@
-# Azure Batch: _Auto Scalable_
+# Auto Scalable
 
 **Autoscale** is not (currently) intended as a sub 1M response to changes but
 rather to adjust the size of your pool gradually as you run a workload.
 
 !!! quote
 
-    The Batch uses your formula to determine the target number of
-    compute nodes in the pool for the next interval of processing.
+    **Batch** uses your formula to determine the target number of compute nodes in
+    the pool for the next interval of processing.
 
 Since we only evaluate the formula every ~15m it is not like your pool is going
 to immediately respond to new task pressure if left to its own devices. On the

@@ -4,20 +4,10 @@
 execute intensive workloads of varying size of Azure Compute.
 It creates a pool of compute nodes (Virtual Machines) to tackle heavy loads.
 
-With **Azure Batch**, batch processing has become more streamlined and viable to
-complete data-intensive workloads at any scale.
-To initiate automated creation and management of Azure Batch pool, job, and task,
-the developer needs to create a batch application which can carry out on-premise
-execution using batch API.
-
-The batch application can be easily developed as an Azure CLI script, `.Net` application,
-or `Python` application. The batch application is not limited to any technology
-as Azure batch service provides REST API which is well documented.
-
-The following diagram depicts an Azure Batch Processing design based on a
-parallel workload:
-
-![Azure Batch Architecture](img/az-btch-architecture.png)
+<figure markdown="span">
+  ![Azure Batch Architecture](img/az-btch-architecture.png){ loading=lazy width="550" }
+  <figcaption>Azure Batch Architecture</figcaption>
+</figure>
 
 - https://github.com/baptisteohanes/Demo_AzureBatch/blob/master/python_tutorial_client.py
 

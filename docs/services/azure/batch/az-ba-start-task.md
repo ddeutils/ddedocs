@@ -1,9 +1,9 @@
-# Azure Batch: _Start Task_
+# Start Task
 
 ## Command Line
 
-Below CMD will remove newline charactor that come from Windows first and then it
-will call the start task file with `bash`.
+Below CMD will remove newline charactor that come from **Windows** first and then
+it will execute the start task file with `bash`.
 
 ```shell
 /bin/bash -c "sed -i 's/\r$//' start_task.sh && bash ./start_task.sh"
