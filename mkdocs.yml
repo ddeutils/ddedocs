@@ -127,8 +127,10 @@ nav:
           - Azure:
               - services/azure/index.md
               - OAuth: services/azure/az-oauth.md
-              - Storage Queue:
-                  - services/azure/storage_queue/index.md
+              - Storage:
+                  - services/azure/storage/index.md
+                  - Queue:
+                      - services/azure/storage/queue/index.md
               - Database:
                   - Authentication: services/azure/database/az-db-authentication.md
                   - Monitoring: services/azure/database/az-db-monitoring.md
@@ -434,8 +436,6 @@ nav:
               - tools/etl/kafka/index.md
               - Use-Cases:
                   - Agoda: tools/etl/kafka/kafka-agoda.md
-          - Fugue:
-              - tools/etl/fugue/index.md
           - Sea Tunnel:
               - tools/etl/seatunnel/index.md
           - Flink:
@@ -448,20 +448,20 @@ nav:
       - Open Table:
           - tools/open_table/index.md
           - Delta Lake:
-              - tools/open_table/delta_lake/index.md
-              - Deletion Vector: tools/open_table/delta_lake/delta-lake-deletion-vector.md
-              - Liquid Clustering: tools/open_table/delta_lake/delta-lake-liquid-clustering.md
-              - Partition Z-Order Cluster: tools/open_table/delta_lake/delta-lake-partition-zorder-cluster.md
-              - Universal Format: tools/open_table/delta_lake/delta-lake-universal-format.md
+              - tools/open_table/deltalake/index.md
+              - Deletion Vector: tools/open_table/deltalake/delta-lake-deletion-vector.md
+              - Liquid Clustering: tools/open_table/deltalake/delta-lake-liquid-clustering.md
+              - Partition Z-Order Cluster: tools/open_table/deltalake/delta-lake-partition-zorder-cluster.md
+              - Universal Format: tools/open_table/deltalake/delta-lake-universal-format.md
               - Pyspark API:
-                  - Auto Schema Evolution: tools/open_table/delta_lake/pyspark/pyspark-delta-auto-schema-evolution.md
-                  - Image Files: tools/open_table/delta_lake/pyspark/pyspark-delta-image-files.md
-                  - SCD2: tools/open_table/delta_lake/pyspark/pyspark-delta-scd2.md
-                  - Star Schema: tools/open_table/delta_lake/pyspark/pyspark-delta-star-schema.md
-                  - Keeping Fast & Clean: tools/open_table/delta_lake/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
-                  - Best Practice: tools/open_table/delta_lake/pyspark/pyspark-delta-best-practice.md
-                  - Handling Concurrent Write: tools/open_table/delta_lake/pyspark/pyspark-delta-handling-concurrent-write.md
-                  - Stream Data: tools/open_table/delta_lake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
+                  - Auto Schema Evolution: tools/open_table/deltalake/pyspark/pyspark-delta-auto-schema-evolution.md
+                  - Image Files: tools/open_table/deltalake/pyspark/pyspark-delta-image-files.md
+                  - SCD2: tools/open_table/deltalake/pyspark/pyspark-delta-scd2.md
+                  - Star Schema: tools/open_table/deltalake/pyspark/pyspark-delta-star-schema.md
+                  - Keeping Fast & Clean: tools/open_table/deltalake/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
+                  - Best Practice: tools/open_table/deltalake/pyspark/pyspark-delta-best-practice.md
+                  - Handling Concurrent Write: tools/open_table/deltalake/pyspark/pyspark-delta-handling-concurrent-write.md
+                  - Stream Data: tools/open_table/deltalake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
           - Iceberg:
               - tools/open_table/iceberg/index.md
               - Reduce Full Scan: tools/open_table/iceberg/icb-reduce-full-scan.md

@@ -3,22 +3,22 @@
 This project will deliver all Practice and Knowledge of **Data Developer and Engineer**
 area.
 
-> **_Disclaimer_**: This documents add-on opinion from my **Data Engineer** experience
-> and experiment around ~5 years (_Update on 2024_).
+> **_Disclaimer_**: This docs add-on my opinion from **Data Engineer** experience
+> and experiment around ~5 years (_Since 2019_).
 
 !!! warning "Important"
 
-    This documents doesn't have much proper _English_ grammar.
-    Because I am in the middle of trying to practice writing and reading.
-    Please understand and open your mind on this issue before going deeper into
-    it :face_holding_back_tears:
+    I do not have much proper _English_ grammar because I am in the middle level
+    of trying to practice writing and reading.
+    Please understand this problem and open your mind before continue this
+    documents :face_holding_back_tears:
 
 ## :material-arrow-down-right: Getting Started
 
 :material-page-last: First, ^^**Data engineering** is a critical part of the
 data lifecycle that enables organizations to manage and process large volumes of
 data efficiently and reliably^^[^3].
-By these concepts, **Data Engineers** can design and implement **Data Pipelines**
+By these concepts, **Data Engineer** can design and implement **Data Pipelines**
 that meet the requirements of their organizations and ensure that their data is
 managed _Consistently_ and _Reliably_.
 

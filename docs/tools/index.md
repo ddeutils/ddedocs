@@ -27,7 +27,7 @@ enough desire to change.
 :octicons-key-16: **The Key Concepts**:
 
 - Easy to Try & Deploy
-- Massive Scalability; Data, Users, and Use Cases
+- Massive Scalability; _Data_, _Users_, and _Use-Cases_
 - Composable Data Stack
 - Flexible Pricing
 
@@ -55,12 +55,12 @@ you build analytics and AI products on top of your infrastructure.
 - https://medium.com/@turkelturk/data-file-formats-in-data-engineering-5ba0db8c2c16
 - [Compressing Your Data: A Comparison of Popular Algorithms](https://thedatasalesguy.medium.com/compressing-your-data-a-comparison-of-popular-algorithms-7a7dc341af94)
 
-### Ingestion
+### Data Ingestion
 
 [](https://jove.medium.com/airbyte-or-meltano-lazy-mans-guide-3b869c7d80f1)
 [Modern Data Stack: Reverse ETL](https://blog.stackademic.com/modern-data-stack-reverse-etl-e77c920887ae)
 
-### Compute
+### Computing
 
 - [Trino vs StarRocks](https://blog.devgenius.io/comparison-of-the-open-source-query-engines-trino-and-starrocks-cf959049f9ab)
 

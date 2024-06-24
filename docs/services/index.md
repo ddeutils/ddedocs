@@ -35,7 +35,6 @@ let's have a look at how it differs from the **Traditional Data Stack**.
 
 | **Traditional Data Stack**             | **Modern Data Stack**                                     |
 |----------------------------------------|-----------------------------------------------------------|
-| Hosted on-premises                     | Hosted in the cloud                                       |
 | Has coupled structure                  | Has modular structure                                     |
 | Complex setup requiring large IT teams | Less time on technical configuration                      |
 | Requires serious technical background  | Suitable for users without extensive technical background |
