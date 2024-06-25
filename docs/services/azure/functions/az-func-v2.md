@@ -1,4 +1,4 @@
-# Azure Function: Deploy Python V2 on Local
+# Python V2
 
 https://medium.com/@saurabh.dasgupta1/developing-and-deploying-a-python-azure-function-step-by-step-83c5066a2531
 https://towardsdatascience.com/tutorial-of-python-azure-functions-81949b1fd6db

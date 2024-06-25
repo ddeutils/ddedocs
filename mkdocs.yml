@@ -138,22 +138,18 @@ nav:
                   - services/azure/batch/index.md
                   - Start Task: services/azure/batch/az-ba-start-task.md
                   - Auto Scalable: services/azure/batch/az-ba-auto-scalable.md
+                  - Run Pyspark: services/azure/batch/az-ba-run-pyspark.md
                   - Connections:
-                      - To Key Vault: services/azure/batch/az-ba-to-key-vault.md
-                      - To Synapse: services/azure/batch/az-ba-to-synapse.md
-                      - To DataLake: services/azure/batch/az-ba-to-datalake.md
-                      - To BigQuery: services/azure/batch/az-ba-to-bigquery.md
+                      - Azure: services/azure/batch/az-ba-to-az.md
+                      - BigQuery: services/azure/batch/az-ba-to-bigquery.md
                   - Dockerize:
-                      - Run Pyspark With Docker: services/azure/batch/az-ba-run-pyspark-with-docker.md
                       - Docker: services/azure/batch/az-ba-with-docker.md
                       - Docker inside Node: services/azure/batch/az-ba-with-docker-inside.md
               - Function App:
-                  - Deploy Function V2: services/azure/functions/azf-deploy-v2-local.md
-                  - Deploy with Docker: services/azure/functions/azf-deploy-with-docker.md
+                  - Function V2: services/azure/functions/az-func-v2.md
+                  - Dockerize: services/azure/functions/az-func-with-docker.md
                   - Connections:
-                      - To Key Vault: services/azure/functions/azf-access-key-vault.md
-                      - To Synapse SQL Pool: services/azure/functions/azf-access-synapse-sql-pool.md
-                      - To Service Bus: services/azure/functions/azf-access-service-bus.md
+                      - Azure: services/azure/functions/az-func-to-az.md
               - Databricks:
                   - Init Script: services/azure/databricks/adb-init-script.md
                   - Mount Storage: services/azure/databricks/adb-mount-storage.md
@@ -497,8 +493,6 @@ plugins:
   - tags
   - search
   - glightbox
-# # NOTE: this plugin is currently reserved to sponsors
-#  - meta
   - blog:
       blog_dir: blogs
       blog_toc: true
@@ -521,10 +515,6 @@ plugins:
       enabled: !ENV [CI, false]
       repository: korawica/ddedocs
       branch: main
-# # NOTE: this plugin is currently reserved to sponsors
-#  - optimize:
-#      cache_dir: .cache/
-#      concurrency: 2
 
 markdown_extensions:
   - attr_list

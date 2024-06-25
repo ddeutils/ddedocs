@@ -1,4 +1,4 @@
-# Azure Batch: _Run PySpark with Docker_
+# Run PySpark
 
 You simply wrap your Spark code in a Docker container, and schedule 100 of those
 containers on a pool of 20 Azure Batch nodes, and let them execute the 100 jobs
@@ -11,7 +11,7 @@ In order to run this example, we need to set up:
 - **Azure Container Registry** to store the Docker container
 - **Azure Batch Accounts** to run your batch jobs in.
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
 Chances are you already have these running in Azure. If not, it’s simple click
 and install on the Azure Portal. For each of these 3 services, you need to get

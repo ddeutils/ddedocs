@@ -1,4 +1,4 @@
-# Azure Data Factory: _Link Services_
+# Link Services
 
 ## Azure Services
 
@@ -249,6 +249,10 @@
         }
     }
     ```
+
+## AWS Services
+
+## Google Services
 
 ## Storage System
 

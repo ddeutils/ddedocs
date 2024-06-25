@@ -1,16 +1,8 @@
-# Azure Batch: _Docker inside Node_
+# Dockerize inside Node
 
-Azure Batch is a very useful service that you can manage VMs and run tasks among
-the VMs. It fits into my need naturally. To avoid the dependencies of running some
-Python training code, I notice docker container is another natural tool to help
-– build all the dependencies and external service connections into the container
-and let Azure Batch to run container task in the VM. In this way, the VM managed
-by Azure Batch does not need to worry about the version of OS, dependencies etc.
-All we need to ensure is the docker container can be run correctly on the VM,
-which is a very simple step for Ubuntu or other Linux system. The same training
-container could accept different parameters and run as much as we want.
+## :material-arrow-down-right: Getting Started
 
-## Create Pool
+### Create Pool with Dockerize start task
 
 Create Ubuntu pool and set start task command line:
 
@@ -34,9 +26,9 @@ sudo apt-get install dos2unix
     We add `$USER` to docker group because we want to execute `docker` command
     without `sudo`.
 
-## Create Dockerfile
+### Create Docker image file
 
-```dockerfile
+```dockerfile title="Dockerfile"
 FROM ubuntu:16.04
 
 RUN apt-get update && \
@@ -45,8 +37,6 @@ RUN apt-get update && \
 RUN echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
 RUN apt-get install -y --no-install-recommends msttcorefonts
 
-# python-package
-# miniconda
 RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     /bin/bash Miniconda3-latest-Linux-x86_64.sh -f -b -p /opt/conda && \
     export PATH="/opt/conda/bin:$PATH"
@@ -55,15 +45,12 @@ ENV PATH /opt/conda/bin:$PATH
 
 RUN conda install -y numpy scipy scikit-learn pandas matplotlib
 
-# azure storage
 RUN pip install azure azure-storage
 
-# clean
 RUN apt-get autoremove -y && apt-get clean && \
     conda clean -i -l -t -y && \
     rm -rf /usr/local/src/*
 
-# copy resource files
 COPY . .
 
 ENV AZURE_BLOB_KEY="[AZURE_BLOB_KEY]"
@@ -71,9 +58,9 @@ ENV AZURE_BLOB_KEY="[AZURE_BLOB_KEY]"
 ENTRYPOINT [ "python", "train.py" ]
 ```
 
-## Create runner script file
+### Create runner script
 
-```shell
+```shell title="runner.sh"
 #!/bin/bash
 
 echo "Script Name: $0 with process id: $$";

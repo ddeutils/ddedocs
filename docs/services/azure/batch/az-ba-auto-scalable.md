@@ -14,7 +14,7 @@ other hand if you are running a long-lived pool, and you want to respond to
 changes over the course of a day (for example day/night discrepancies in task
 load) then autoscale is a good fit :partying_face:.
 
-## Examples
+## :material-test-tube: Examples
 
 Simaple re-scale dedicate node (`$TargetDedicated`) that base on running and active
 tasks that exists on the Pool,
@@ -298,8 +298,8 @@ Set autoscale evaluation interval to `15m 00s`.
     $TargetDedicated = $NeedCompute ? $NodesToAllocate : $MinCapacity;
     ```
 
-## References
+## :material-content-copy: References
 
-- [Microsoft Azure Batch Automatic Scaling](https://learn.microsoft.com/en-us/azure/batch/batch-automatic-scaling)
-- [Azure Batch Pool Auto Scale Formulas](https://gordon.byers.me/azure/azure-batch-pool-auto-scale-forumulas/)
-- [Azure Content: Batch Automatic Scaling](https://github.com/Huachao/azure-content/blob/master/articles/batch/batch-automatic-scaling.md)
+- [:material-microsoft: Microsoft Azure Batch Automatic Scaling](https://learn.microsoft.com/en-us/azure/batch/batch-automatic-scaling)
+- [:material-post-outline: Azure Batch Pool Auto Scale Formulas](https://gordon.byers.me/azure/azure-batch-pool-auto-scale-forumulas/)
+- [:material-github: Azure Content: Batch Automatic Scaling](https://github.com/Huachao/azure-content/blob/master/articles/batch/batch-automatic-scaling.md)

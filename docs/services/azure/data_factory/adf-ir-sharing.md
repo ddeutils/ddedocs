@@ -1,4 +1,4 @@
-# Azure Data Factory: _IR Sharing_
+# IR Sharing
 
 ## References
 
