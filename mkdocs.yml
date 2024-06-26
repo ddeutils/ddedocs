@@ -161,6 +161,7 @@ nav:
                       - To IoT Hub: services/azure/databricks/adb-to-iothub.md
                       - To Kinesis: services/azure/databricks/adb-to-kinesis.md
                   - Unity Catalog:
+                      - Setup: services/azure/databricks/uc/adb-uc-setup.md
                       - Privileges: services/azure/databricks/uc/adb-uc-privileges.md
               - Event Hubs:
                   - services/azure/eventhubs/index.md
@@ -182,12 +183,9 @@ nav:
                       - Function App: services/azure/devops/devops-cicd-az-afn.md
                       - Databricks: services/azure/devops/devops-cicd-az-adb.md
                       - Data Factory: services/azure/devops/devops-cicd-az-adf.md
-                      - Power BI: services/azure/devops/devops-cicd-az-pbi.md
                       - Synapse: services/azure/devops/devops-cicd-az-synapse.md
                   - CICD (Self Hosted):
                       - Deploy Python App: services/azure/devops/devops-cicd-self-hosted-win-fastapi.md
-              - PowerBI:
-                  - RestAPI Refresh Dataset: services/azure/powerbi/pbi-restapi-refresh-dataset.md
           - AWS:
               - services/aws/index.md
               - VPC:

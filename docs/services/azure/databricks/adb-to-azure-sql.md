@@ -1,4 +1,4 @@
-# Databricks: _To Azure SQL_
+# To Azure SQL
 
 ## Azure Service Principal
 

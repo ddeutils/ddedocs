@@ -7,7 +7,7 @@ status. Pod statuses are crucial in understanding the health and state of a pod
 at any given time. There are five primary phases or statuses that a pod can
 be in.
 
-![Pod Phases](images/k8s-pod-phase.png)
+![Pod Phases](img/k8s-pod-phase.png)
 
 ### Pending
 

@@ -18,7 +18,7 @@ Kubernetes (K8s)
 
 ## Core Concepts of Kubernetes
 
-![Core Concepts of Kubernetes](images/k8s-core-concepts.png){ loading=lazy }
+![Core Concepts of Kubernetes](img/k8s-core-concepts.png){ loading=lazy }
 
 - **Control Plane** — The ‘brain’ of the cluster, responsible for managing the nodes and applications that are running on them. It consists of several components, such as API server, etcd, scheduler, and controller manager.
 - **API Server** — It exposes a RESTful API that allows users to interact with the cluster.
@@ -34,20 +34,20 @@ Kubernetes (K8s)
 
 - **Deployments**: This is a higher-level concept that manages declarative updates for Pods and ReplicaSets. Deployments use a template for a pod and control parameters to scale the number of pods, rolling update strategies, and desired state. used for managing the rollout and scaling of applications.
 
-  ![Deployments](images/k8s-deployments.png){ loading=lazy }
+  ![Deployments](img/k8s-deployments.png){ loading=lazy }
 
 - **Services**: Exposing an application running on a POD to the network (other PODS).
   A Kubernetes Service is an abstraction layer that defines a logical set of Pods
   and a policy by which to access them. This is often used to provide network access
   to a set of pods.
 
-  ![Services](images/k8s-services.png){ loading=lazy }
+  ![Services](img/k8s-services.png){ loading=lazy }
 
 - **Ingress** — Ingresses provide external access to services within the cluster.
   They manage external HTTP and HTTPS routing, allowing us to define rules for
   handling incoming traffic.
 
-  ![Ingress](images/k8s-ingress.png){ loading=lazy }
+  ![Ingress](img/k8s-ingress.png){ loading=lazy }
 
 - **Statefulsets** — A StatefulSet is a set of pods with a unique, persistent hostname
   and ID. StatefulSets are designed to run stateful applications in Kubernetes
@@ -60,22 +60,22 @@ Kubernetes (K8s)
   Apache Kafka which distribute the data amongst their brokers; hence, one broker
   is not the same as another.
 
-  ![Statefulsets](images/k8s-statefulsets.png){ loading=lazy }
+  ![Statefulsets](img/k8s-statefulsets.png){ loading=lazy }
 
 - **Config map** — Config Maps store configuration data separately from application code, allowing for easier configuration changes without modifying the container image.
 
 - **Secret** — Secrets store sensitive information such as passwords, API keys, and tokens. They are base64-encoded and can be mounted into pods or used as environment variables.
 
-  ![Secret and Config map](images/k8s-secret-config-map.png){ loading=lazy }
+  ![Secret and Config map](img/k8s-secret-config-map.png){ loading=lazy }
 
 - **Daemonsets** — DaemonSets ensure that a copy of a pod runs on every node in the cluster. This is particularly useful for system-level tasks such as log collection, monitoring, or node-specific functionality.
 
-  ![Daemonsets](images/k8s-daemonsets.png){ loading=lazy }
+  ![Daemonsets](img/k8s-daemonsets.png){ loading=lazy }
 
 - **Job** — Jobs manage the execution of short-lived tasks to completion. They are useful for batch processing, data migration, or any task that needs to run to completion but doesn’t require continuous execution.
 - **Cron Jobs** — Cron Jobs enables the scheduling of recurring tasks in a Kubernetes cluster, similar to the cron jobs in traditional Unix/Linux systems. They are valuable for automating periodic processes.
 
-  ![Job and Cron Jobs](images/k8s-job-cronjob.png){ loading=lazy }
+  ![Job and Cron Jobs](img/k8s-job-cronjob.png){ loading=lazy }
 
 - **Namespace** — Namespaces provide a way to divide cluster resources into virtual
   clusters, enabling multi-tenancy and resource isolation. They help organize and
@@ -85,7 +85,7 @@ Kubernetes (K8s)
 - **Role Binding** — A role binding grants the permissions defined in a role to a user or set of users. It holds a list of subjects (users, groups, or service accounts), and a reference to the role being granted
 - **Service Account** — A service account provides an identity for processes that run in a Pod, and maps to a ServiceAccount object. When you authenticate to the API server, you identify yourself as a particular user.
 
-  ![Role, Role Binding, and Service Account](images/k8s-role-rolebinding-service-account.png){ loading=lazy }
+  ![Role, Role Binding, and Service Account](img/k8s-role-rolebinding-service-account.png){ loading=lazy }
 
 - **Nodes**: These are worker machines in Kubernetes, which can be either physical or virtual. Each node runs pods and is managed by the master node. Nodes have the necessary services to run pods and are managed by the control plane.
 - **Label, Annotation & Selectors** — Labels are key-value pairs attached to objects (such as pods, nodes, services, and more) to help organize and categorize them. Labels can be used with selectors to filter and select specific resources. Annotations in Kubernetes are a mechanism for adding arbitrary metadata to objects (such as pods, services, nodes, and more) that are not used for identification or selection purposes.
@@ -201,7 +201,7 @@ Kubernetes (K8s)
 - RunContainerError — The issue is usually due to misconfiguration such as: Mounting a not-existent volume such as ConfigMap or Secrets. Mounting a read-only volume as read-write.
 - Pod in pending state — The cluster doesn’t have enough resources such as CPU and memory to run the Pod. The current Namespace has a ResourceQuota object and creating the Pod will make the Namespace go over the quota. The Pod is bound to a Pending PersistentVolumeClaim.
 
-![Troubleshooting Deployments](images/k8s-troubleshooting-deployments.png)
+![Troubleshooting Deployments](img/k8s-troubleshooting-deployments.png)
 
 ## Practices
 

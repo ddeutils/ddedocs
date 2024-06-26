@@ -1,4 +1,4 @@
-# Azure Databricks: _Mount Storage_
+# Mount Azure Storage
 
 **List of mounts**:
 
@@ -19,13 +19,7 @@ dbutils.fs.mount(
 )
 ```
 
-## Azure Data Lake Storage Gen 2
-
-Mounting a storage system to your Databricks File System is a one time activity,
-by this means, you will have to execute the code (code used for mounting) only
-once in your workspace to mount your storage account, but not every time you
-execute a particular notebook. Even though if you try it will through an error
-like "Directory already mounted"
+## DataLake
 
 ```python
 adls_account = "<storage-account-name>"
