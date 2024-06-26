@@ -1,4 +1,4 @@
-# Data Governance: Data Quality Framework for Scale
+# Data Quality Framework for Scale
 
 ## References
 

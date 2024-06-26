@@ -1,4 +1,4 @@
-# Azure Synapse: _Authentication_
+# Authentication
 
 ## Users & Roles
 
@@ -407,5 +407,5 @@ WITH (
 
 ## References
 
-- [Microsoft Azure Synapse Analytics SQL Authentication](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/sql-authentication?tabs=serverless)
-- [Microsoft SQL T-SQL Create User Transaction](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-user-transact-sql?view=azure-sqldw-latest)
+- [:material-microsoft: Microsoft Azure Synapse Analytics SQL Authentication](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/sql-authentication?tabs=serverless)
+- [:material-microsoft: Microsoft SQL T-SQL Create User Transaction](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-user-transact-sql?view=azure-sqldw-latest)

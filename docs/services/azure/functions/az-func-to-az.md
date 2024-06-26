@@ -19,21 +19,20 @@
 
 Add The **Azure Function** MSI User to the **Azure Key Vault**.
 
-- Go to **Azure Key Vault** :octicons-arrow-right-24: Select `Access policies`
-  :octicons-arrow-right-24: Click nav `Create`
-- On `Configure from a template` :octicons-arrow-right-24: Select `Secret Management`
-  :octicons-arrow-right-24: Click `Next`
-- On `Principle` :octicons-arrow-right-24: Search the Azure Function name
-  :octicons-arrow-right-24: Click `Create`
+- Go to **Azure Key Vault** :octicons-arrow-right-24: Select **Access policies**
+  :octicons-arrow-right-24: Click nav **Create**
+- On **Configure from a template** :octicons-arrow-right-24: Select **Secret Management**
+  :octicons-arrow-right-24: Click **Next**
+- On **Principle** :octicons-arrow-right-24: Search the **Azure Function** name
+  :octicons-arrow-right-24: Click **Create**
 
 Add **Secret** to **Azure Function**:
 
 - Go **to Azure Key Vault** :octicons-arrow-right-24: Select **Secrets**
-  :octicons-arrow-right-24: Click nav `Generate/Import`
-- Create your Secrets :octicons-arrow-right-24: Copy the `Secret Identifier`
-  uri
-- Go to **Azure Function App** :octicons-arrow-right-24: Select `Configuration`
-  :octicons-arrow-right-24: Click `New application setting`
+  :octicons-arrow-right-24: Click nav **Generate/Import**
+- Create your Secrets :octicons-arrow-right-24: Copy the **Secret Identifier** URI
+- Go to **Azure Function App** :octicons-arrow-right-24: Select **Configuration**
+  :octicons-arrow-right-24: Click **New application setting**
 - Pass the name to environment variable with this value:
   `@Microsoft.KeyVault(SecretUri=<secret-identifier-uri>)`
 

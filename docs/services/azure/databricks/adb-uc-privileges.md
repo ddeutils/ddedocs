@@ -16,7 +16,7 @@ principals.
 
 ## Manage Privileges
 
-![Inheritance model](../img/adb-uc-object-hierarchy.png)
+![Inheritance model](img/adb-uc-object-hierarchy.png)
 
 ## References
 

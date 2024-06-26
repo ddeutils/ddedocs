@@ -1,3 +1,7 @@
+---
+icon: simple/mlflow
+---
+
 # MLflow
 
 **MLflow** is an open-source platform for end-to-end lifecycle management of

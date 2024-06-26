@@ -97,10 +97,11 @@ nav:
               - Modern Team: abstract/data_governance/dgn-with-modern-data-team.md
           - Data Observability:
               - abstract/data_observability/index.md
+              - Data Orchestration: abstract/data_observability/dobs-data-orchestration.md
               - Data CICD: abstract/data_observability/dobs-data-cicd.md
               - Data Quality Metric: abstract/data_observability/dobs-data-quality-metrics.md
               - Data Lineage: abstract/data_observability/dobs-data-lineage.md
-              - Conductor: abstract/data_observability/dobs-conductor.md
+              - Data Consistency: abstract/data_observability/dobs-data-consistency.md
               - Viable Monitoring System: abstract/data_observability/dobs-maintaining-a-viable-monitoring-sys.md
           - Data Strategy:
               - abstract/data_strategy/index.md
@@ -108,7 +109,6 @@ nav:
           - Data Mesh:
               - abstract/data_mesh/index.md
       - Roles:
-          - roles/index.md
           - Data Platform Engineer:
               - roles/data_platform_engineer/index.md
               - FinOps: roles/data_platform_engineer/dp-finops.md
@@ -161,8 +161,8 @@ nav:
                       - To IoT Hub: services/azure/databricks/adb-to-iothub.md
                       - To Kinesis: services/azure/databricks/adb-to-kinesis.md
                   - Unity Catalog:
-                      - Setup: services/azure/databricks/uc/adb-uc-setup.md
-                      - Privileges: services/azure/databricks/uc/adb-uc-privileges.md
+                      - Setup: services/azure/databricks/adb-uc-setup.md
+                      - Privileges: services/azure/databricks/adb-uc-privileges.md
               - Event Hubs:
                   - services/azure/eventhubs/index.md
                   - Producer Data: services/azure/eventhubs/eventhubs-produce-data.md
@@ -249,6 +249,8 @@ nav:
                   - Databricks: services/terraform/tf-databricks.md
                   - Azure:
                       - Databricks: services/terraform/tf-azure-databricks.md
+          - Infisical:
+              - services/infisical/index.md
       - Server & Container:
           - Server:
               - services/server/index.md

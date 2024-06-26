@@ -28,7 +28,8 @@ you can remove the **Global Administrator** role from the Azure Databricks accou
 !!! note
 
     If you do not create new **Access Connector** and use default provisioning, it
-    will not use any managed identity on this **Access Connector**.
+    will not use any managed identity on this **Access Connector**. The default
+    Accesss Connector name is `unity-catalog-access-connector`
 
 ## :material-arrow-down-right: Getting Started
 
