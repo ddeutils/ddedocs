@@ -1,4 +1,4 @@
-# Data Warehouse: Data Vault Approach
+# Data Vault Approach
 
 In contrary to Inmon’s view, Linstedt assumes that all available data from the entire
 time period should be loaded into the warehouse. This is known as the

@@ -62,15 +62,7 @@ nav:
               - Data Modeling: abstract/data_management/data-modeling.md
               - Data Integration: abstract/data_management/data-integration.md
               - Data Quality: abstract/data_management/data-quality.md
-              - Data Pipeline: abstract/data_management/data-pipeline.md
-              - Database:
-                  - Normalization: abstract/data_management/database/db-normalization-form.md
-                  - De-Normalization: abstract/data_management/database/db-denormalization-form.md
-                  - Slowly Change Dimension: abstract/data_management/database/db-scd.md
               - Data Warehouse: abstract/data_management/data-warehouse.md
-              - Data Lakehouse:
-                  - abstract/data_lakehouse/index.md
-                  - PBAC: abstract/data_lakehouse/data-lakehouse-policy-based-access-control.md
           - Data Governance:
               - abstract/data_governance/index.md
               - Implement: abstract/data_governance/dgn-data-quality-framework-for-scale.md
@@ -78,6 +70,9 @@ nav:
               - Modern Team: abstract/data_governance/dgn-with-modern-data-team.md
           - Data Architecture:
               - abstract/data_architecture/index.md
+              - Data Lakehouse:
+                  - abstract/data_lakehouse/index.md
+                  - PBAC: abstract/data_lakehouse/data-lakehouse-policy-based-access-control.md
               - Modeling Technique:
                   - abstract/data_architecture/data_modeling/index.md
                   - Inmon Approach:
@@ -94,6 +89,10 @@ nav:
                   - Anchor Approach: abstract/data_architecture/data_modeling/dwh-anchor-approach.md
           - Data Mesh:
               - abstract/data_mesh/index.md
+          - DataOps:
+              - abstract/data_ops/index.md
+          - Data Pipeline:
+              - abstract/data_pipeline/index.md
           - Data Observability:
               - abstract/data_observability/index.md
               - Data Orchestration: abstract/data_observability/dobs-data-orchestration.md
@@ -106,6 +105,14 @@ nav:
               - abstract/data_strategy/index.md
               - Semantic Layer: abstract/data_strategy/strategy-semantic-layer.md
               - Data Driven: abstract/data_strategy/strategy-data-driven.md
+              - Normalization: abstract/data_strategy/strategy-normalization-form.md
+              - De-Normalization: abstract/data_strategy/strategy-denormalization-form.md
+              - Slowly Change Dimension: abstract/data_strategy/strategy-scd.md
+      - Advance:
+          - MLOps:
+              - abstract/mlops/index.md
+          - Emerging Trends:
+              - abstract/emerging_trends/index.md
       - Roles:
           - Data Platform Engineer:
               - roles/data_platform_engineer/index.md

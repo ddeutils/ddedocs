@@ -15,6 +15,11 @@ A Data Strategy outlines an organization's long-term vision for collecting,
 storing, sharing, and usage of its data. It makes working with data easier to do
 at every step of the data journey for everyone who needs it in your organization.
 
+- Query Optimization
+- Indexing Strategies
+- Caching Mechanisms
+- Distributed Computing for Big Data
+
 ## :material-finance: References
 
 - [What is Data Strategy?](https://aws.amazon.com/what-is/data-strategy/)

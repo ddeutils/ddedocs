@@ -1,4 +1,4 @@
-# Data Warehouse: _Bill Inmon Approach_
+# Bill Inmon Approach
 
 The Bill Inmon design approach uses the normalized form (3NF) for building entity structure,
 avoiding data redundancy as much as possible. This results in clearly identifying

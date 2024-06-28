@@ -1,4 +1,4 @@
-# Data Warehouse: Anchor Approach
+# Anchor Approach
 
 The Anchor Model further normalizes the data vault model. The initial intention of Lars.
 Rönnbäck was to design a highly scalable model. His core concept is that all expansion

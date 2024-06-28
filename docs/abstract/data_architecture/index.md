@@ -8,3 +8,5 @@ icon: material/vector-rectangle
 - Event-Driven Data Architectures
 - Polyglot Persistence in Microservices
 - Serverless Data Architectures
+- Cloud-Native Data Architectures
+- Data Lake and Lakehouse Architectures

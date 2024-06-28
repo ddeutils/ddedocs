@@ -1,4 +1,4 @@
-# Data Warehouse: _Ralph Kimball Approach_
+# Ralph Kimball Approach
 
 https://towardsdatascience.com/data-modeling-for-mere-mortals-part-2-dimensional-modeling-fundamentals-ae2f53622321
 

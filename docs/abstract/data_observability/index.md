@@ -1,5 +1,5 @@
 ---
-icon: material/engine-outline
+icon: material/speedometer-slow
 ---
 
 # Data Observability

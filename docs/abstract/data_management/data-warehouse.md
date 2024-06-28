@@ -370,7 +370,7 @@ include a metadata layer, which provides information about the data in the data
 warehouse, such as its origin, format, and meaning. The metadata layer can be used
 to help users understand and navigate the data.
 
-## Design
+## :material-gesture: Design
 
 data warehouse design that can be applied within the framework of the design methods
 discussed earlier. Here is a brief overview of how each of these approaches relates

@@ -1,4 +1,8 @@
-# DataOps
+---
+icon: material/hexagon-multiple-outline
+---
+
+# Data Ops
 
 **DataOps** is a collection of practices that focuses on breaking down silos
 between data producers and consumers, improving data quality and transparency of
@@ -11,6 +15,13 @@ and enhanced human communication.
 ![DataOps](img/dataops.png){ loading=lazy }
 
 ## Noted
+
+- Continuous Integration/Continuous Deployment for Data
+- Automated Testing for Data Pipelines
+- Data Observability
+- Incident Management for Data Systems
+
+---
 
 - Data Pipeline Orchestration
 - Continuous Integration/Continuous Deployment (CI/CD) for Data

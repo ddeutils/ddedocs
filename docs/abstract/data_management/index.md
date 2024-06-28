@@ -32,7 +32,7 @@ compliance with legal and regulatory requirements.
 
 [Read More about Data Governance](../data_governance/index.md)
 
-### Data Quality Management
+### Data Quality and Consistency
 
 Ensuring that data is accurate, complete, and consistent. It includes
 defining data quality metrics, establishing data quality rules, and implementing
@@ -41,18 +41,23 @@ data profiling and cleansing tools and techniques.
 - Data Cleansing: Regularly cleaning data to remove inaccuracies and inconsistencies.
 - Data Validation: Implementing processes to ensure data accuracy and reliability.
 
-### Data Integration and Transformation
+### Data Integration & Transformation
 
-This involves consolidating data from multiple sources into a single, unified view
+Consolidating data from multiple sources into a single, unified view
 of the data. It includes selecting appropriate data integration tools, defining
 data mapping and transformation rules, and establishing data synchronization and
 replication protocols.
 
+- ETL/ELT Processes
+- Batch and Stream Processing
+- Real-Time Data Integration
+- Data Transformation Techniques
+
 ### Data Lifecycle Management
 
-- Archiving and Retention: Implementing policies for data archiving and retention
+- **Archiving and Retention**: Implementing policies for data archiving and retention
   based on data usage and legal requirements.
-- Disposal: Securely disposing of data that is no longer needed.
+- **Disposal**: Securely disposing of data that is no longer needed.
 
 ### Data Security and Privacy
 
@@ -65,6 +70,11 @@ controls and encryption, and complying with legal and regulatory requirements.
   like GDPR, CCPA, and others.
 - Zero Trust Architecture: Implementing security models that verify every access
   request as if it originated from an open network.
+
+- Data Encryption and Masking
+- Access Control and Authentication
+- Compliance and Regulatory Requirements
+- Privacy-Preserving Data Processing
 
 ### Data Democratization
 
