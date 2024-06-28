@@ -1,8 +1,5 @@
 # Welcome to **Data Develop & Engineer**
 
-This project will deliver all Practice and Knowledge of **Data Developer and Engineer**
-area.
-
 > **_Disclaimer_**: This docs add-on my opinion from **Data Engineer** experience
 > and experiment around ~5 years (_Since 2019_).
 
@@ -12,6 +9,10 @@ area.
     of trying to practice writing and reading.
     Please understand this problem and open your mind before continue this
     documents :face_holding_back_tears:
+
+
+This project will deliver all Practice and Knowledge of **Data Developer and Engineer**
+area.
 
 ## :material-arrow-down-right: Getting Started
 

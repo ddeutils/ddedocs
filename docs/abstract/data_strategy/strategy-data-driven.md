@@ -1,4 +1,4 @@
-# Data Management: _Driven_
+# Data Driven
 
 ## References
 

@@ -10,6 +10,12 @@ and enhanced human communication.
 
 ![DataOps](img/dataops.png){ loading=lazy }
 
+## Noted
+
+- Data Pipeline Orchestration
+- Continuous Integration/Continuous Deployment (CI/CD) for Data
+- Data Observability
+- Automated Data Quality Checks
 
 ## References
 

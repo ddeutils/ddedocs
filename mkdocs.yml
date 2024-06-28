@@ -59,15 +59,12 @@ nav:
       - Abstraction:
           - Data Management:
               - abstract/data_management/index.md
-              - Data Ingestion: abstract/data_management/data-ingestion.md
+              - Data Modeling: abstract/data_management/data-modeling.md
+              - Data Integration: abstract/data_management/data-integration.md
               - Data Storage: abstract/data_management/data-storage.md
               - Data Quality: abstract/data_management/data-quality.md
-              - Data Transformation: abstract/data_management/data-transformation.md
               - Data Pipeline: abstract/data_management/data-pipeline.md
-              - Driven: abstract/data_management/data-management-driven.md
               - Database:
-                  - abstract/data_management/database/index.md
-                  - Data Modeling: abstract/data_management/database/db-data-modeling.md
                   - Normalization: abstract/data_management/database/db-normalization-form.md
                   - De-Normalization: abstract/data_management/database/db-denormalization-form.md
                   - SCD2: abstract/data_management/database/db-scd.md
@@ -95,6 +92,10 @@ nav:
               - Implement: abstract/data_governance/dgn-data-quality-framework-for-scale.md
               - Data Quality Framework: abstract/data_governance/dgn-implement-process.md
               - Modern Team: abstract/data_governance/dgn-with-modern-data-team.md
+          - Data Architecture:
+              - abstract/data_architecture/index.md
+          - Data Mesh:
+              - abstract/data_mesh/index.md
           - Data Observability:
               - abstract/data_observability/index.md
               - Data Orchestration: abstract/data_observability/dobs-data-orchestration.md
@@ -106,8 +107,7 @@ nav:
           - Data Strategy:
               - abstract/data_strategy/index.md
               - Semantic Layer: abstract/data_strategy/strategy-semantic-layer.md
-          - Data Mesh:
-              - abstract/data_mesh/index.md
+              - Data Driven: abstract/data_strategy/strategy-data-driven.md
       - Roles:
           - Data Platform Engineer:
               - roles/data_platform_engineer/index.md

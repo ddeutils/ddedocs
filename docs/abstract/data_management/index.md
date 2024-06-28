@@ -4,11 +4,10 @@ icon: material/warehouse
 
 # Data Management
 
-**Data Management** is the effective practice of ==_Collecting_, _Storing_, _Protecting_,
-_Delivering_, and _Processing_ data==.
-In business, data is usually associated with customers, prospects, employees, deals,
-competitors, and finances. ^^When an organization effectively manages data,
-they **Gain** insights that **Drive** business decisions^^.
+**Data Management** refers to the practices, architectural techniques, and tools
+that manage, store, and analyze data throughout its lifecycle.
+Effective data management ensures that data is accurate, available, and accessible
+when needed while maintaining security and compliance with relevant regulations.
 
 For trend of **Data Management**, We should follow the sharing knowledge from the
 **[:material-chart-bell-curve: Gartner Hype Cycle for Data Management](https://www.gartner.com/en)**.
@@ -19,59 +18,62 @@ Data management strategy can change everytime because it depend on technology.
   <figcaption><a href="https://www.gartner.com/en/documents/4573399">Gartner Hype Cycle for Data Management 2023</a></figcaption>
 </figure>
 
-:material-page-last: Today's organizations need a **Data Management Solution**
-that provides an efficient way to manage data across a diverse but unified data tier.
-**Data Management Systems** are built on data management platforms and can include
-_Databases_, _Data Lakes_ and _Data Warehouses_, _Big Data Management Systems_,
-_Data Analytics_, and More.
+## :material-arrow-down-right: Getting Started
 
-### Data Management Strategy
+### Data Governance
 
-#### Data Governance
-
-This includes policies, procedures, and standards that ensure the appropriate use,
+Includes policies, procedures, and standards that ensure the appropriate use,
 management, and protection of data throughout its lifecycle. It also involves
 establishing roles and responsibilities for data management, as well as ensuring
 compliance with legal and regulatory requirements.
 
-#### Data Architecture
+- Policies and Standards: Establishing clear policies for data usage, privacy, and security.
+- Data Stewardship: Assigning responsibilities to ensure data quality and compliance.
 
-This involves designing a data model that supports the organization's needs and
-provides a framework for data storage, retrieval, and processing. It includes
-selecting appropriate data storage technologies, defining data integration and
-migration strategies, and establishing data security and privacy protocols.
+[Read More about Data Governance](../data_governance/index.md)
 
-#### Data Quality
+### Data Quality Management
 
-This involves ensuring that data is accurate, complete, and consistent. It includes
+Ensuring that data is accurate, complete, and consistent. It includes
 defining data quality metrics, establishing data quality rules, and implementing
 data profiling and cleansing tools and techniques.
 
-#### Data Integration
+- Data Cleansing: Regularly cleaning data to remove inaccuracies and inconsistencies.
+- Data Validation: Implementing processes to ensure data accuracy and reliability.
+
+### Data Integration and Transformation
 
 This involves consolidating data from multiple sources into a single, unified view
 of the data. It includes selecting appropriate data integration tools, defining
 data mapping and transformation rules, and establishing data synchronization and
 replication protocols.
 
-#### Data Warehousing
+### Data Lifecycle Management
 
-This involves designing and implementing a data warehouse or data lake that provides
-a centralized repository for storing and analyzing large volumes of data. It
-includes selecting appropriate data warehousing technologies, designing a data
-warehouse schema, and defining data loading and transformation processes.
+- Archiving and Retention: Implementing policies for data archiving and retention
+  based on data usage and legal requirements.
+- Disposal: Securely disposing of data that is no longer needed.
 
-#### Business Intelligence and Analytics
-
-This involves using data to gain insights and inform business decisions. It includes
-selecting appropriate business intelligence and analytics tools, defining key performance
-indicators (KPIs) and metrics, and developing dashboards and reports.
-
-#### Data Security and Privacy
+### Data Security and Privacy
 
 This involves ensuring the confidentiality, integrity, and availability of data.
 It includes establishing data security policies and procedures, implementing access
 controls and encryption, and complying with legal and regulatory requirements.
+
+- Advanced Encryption: Using cutting-edge encryption techniques to protect data.
+- Regulatory Compliance: Ensuring adherence to global data protection regulations
+  like GDPR, CCPA, and others.
+- Zero Trust Architecture: Implementing security models that verify every access
+  request as if it originated from an open network.
+
+### Data Democratization
+
+- Self-service Analytics: Providing tools and platforms that enable non-technical
+  users to access and analyze data.
+- Data Literacy Programs: Promoting data literacy across the organization to empower
+  employees to make data-driven decisions.
+
+## :material-source-commit-end: Conclusion
 
 Overall, a data management strategy is a comprehensive approach to managing data
 that includes a range of components designed to ensure the effective use, management,
