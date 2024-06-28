@@ -120,7 +120,7 @@ on the data.
 It’s pretty difficult to explain in words, so let’s look at this handy example of
 what a cube can look like.
 
-![OLAP Cube](img/olap_cube.png)
+![OLAP Cube](img/olap_cube.png){ loading=lazy width="450" }
 
 So, as you can see, a cube adds dimensions to the data. You may think of it as
 multiple Excel tables combined with each other. The front of the cube is the usual
@@ -178,228 +178,36 @@ analysis. These operations are as follows:
 
         ![Dice](img/dice.png)
 
-Hence, it can be seen that the implementation of an OLAP Layer in the Three-tier
-Enterprise Data Warehouse (EDW) Architecture allows more in-depth analysis to be
-performed on the data and also ensure high performance.
-
-#### Types of Enterprise Data Warehouses
-
-##### On-premise Data Warehouse
-
-Usage of an On-premise Data Warehouse means that the organization is responsible
-for purchasing, setting up, and maintaining the software and hardware required
-to manage the Data Warehouse.
-
-An on-premise data warehouse is a data warehouse that is installed and maintained
-on the physical servers or hardware of an organization. An on-premise data warehouse
-offers more control and security over the data and infrastructure, but it also
-requires more upfront investment and ongoing maintenance costs. An on-premise
-data warehouse may also face limitations in scalability, flexibility, and innovation.
-
-The advantages are as follows:
-
-- **Control**: The organization chooses the kind of hardware and software that will
-  be used to set up the Data Warehouse.
-
-- **Speed**: The Data Warehouse is On-premise and will hence have little to no
-  network latency.
-
-- **Security**: Only someone who is connected to the organization's network
-  can access the Data Warehouse.
-
-The disadvantage are as follows:
-
-- **High Cost of Investment**: The Data Warehouse would require high investment
-  to purchase and set up the initial software and hardware. Even then, as the
-  volume of data with the organization increases, more hardware will have to
-  be purchased to accommodate that data.
-
-- **Inability to Scale Resources**: On-premise Data Warehouses cannot scale resources
-  up or down as per the requirements due to limited hardware.
-
-!!! note
-
-    **Data warehouse appliance**: A data warehouse appliance is a pre-integrated
-    bundle of hardware and software—CPUs, storage, operating system, and data
-    warehouse software—that a business can connect to its network and start using
-    as-is. A data warehouse appliance sits somewhere between cloud and on-premises
-    implementations in terms of upfront cost, speed of deployment, ease of scalability,
-    and management control.
-
-!!! tip
-
-    **When to use ?**: Such an EDW type is appropriate for organizations of all
-    sizes that want to process their data securely and make the most out of it.
-    Classic warehouses allow for morphing into different architectural styles of
-    the data platform and scaling up and down on purpose while maintaining data
-    privacy concerns.
-
-##### Cloud-based Data Warehouse
-
-Cloud-based Data Warehousing is a service provided by an organization that various
-other organizations can use to fulfill their Data Warehousing needs. This means
-that the organization does not have to set up its own On-premise hardware and
-software but only pay for the Cloud Data Warehousing Solution.
-
-A cloud-based data warehouse is a data warehouse that is hosted and managed by
-a third-party cloud service provider. A cloud-based data warehouse offers more
-scalability, flexibility, and cost-efficiency over the data and infrastructure,
-but it also requires more trust and compliance with the cloud service provider.
-A cloud-based data warehouse can also leverage other cloud services and tools,
-such as machine learning, data lake, and streaming analytics.
-
-The advantages are as follows:
-
-- **Low Cost of Investment**: Organizations do not have to invest large amounts of
-  money to purchase and set up hardware and software requirements of the Data Warehouse.
-
-- **Scalability**: Storage and Compute capabilities of your Data Warehouse can
-  scale up or down as per your business and data requirements automatically
-  and hence, you only have to pay for what you use.
-
-The disadvantages are as follows:
-
-- **Security**: Since the Cloud-based Data Warehouses store data of many organizations
-  that can be accessed over the Internet, businesses feel some level of concern
-  over the storage of confidential data.
-
-- **Accessibility**: Cloud-based Data Warehouses cannot be accessed in-case there
-  is no internet access.
-
-- **Latency**: Depending on where the Data Warehouse is located, businesses might
-  notice some network latency while accessing their data.
-
-**Examples**:
-
-- Amazon Redshift
-- Snowflake
-- Google BigQuery
-- Azure Synapse Analytic
-
-!!! tip
-
-    **When to use ?**: Cloud data warehouse platforms are a great choice for organizations
-    of any size. If you need everything set up for you, including managed data integration,
-    DW maintenance, and BI support.
-
-##### Virtual-based Data Warehouse
-
-A virtual data warehouse is a type of data warehouse that is built on top of
-existing data sources, such as transactional databases or cloud storage services.
-It is typically built using a virtualization layer, which allows users to query
-and analyze data from multiple sources as if it were all stored in a single location.
-
-The data can stay in its sources: It isn’t moved physically anywhere but can still
-be pulled with the help of analytical tools. Virtual warehouses can be used if
-you don’t want to mess with all the underlying infrastructure, or the data you have
-is easily manageable as it is.
-
-However, such an approach has many drawbacks:
-
-- Multiple databases will require constant software and hardware maintenance and
-  costs.
-
-- The data stored in a virtual DW still requires transformation software to make
-  it digestible for the end users and reporting tools.
-
-- Complex data queries may take too much time, as the required pieces of data may
-  be placed in two separate databases.
-
-**Example**:
-
-- Denodo
-- TIBCO Data Virtualization
-- Actifio.
-
-!!! tip
-
-    **When to use ?**: Virtual EDWs are suitable for businesses that have raw data
-    in a standardized form that does not require complex analytics. It also fits
-    organizations that don’t use BI systematically or want to start with it.
+---
 
 ### Operational Data Store
 
-**Operational Data Store** (ODS) are nothing but data store required when neither
-Data warehouse nor OLTP systems support organizations reporting needs.
-In ODS, Data warehouse is refreshed in real time. Hence, it is widely preferred
+:material-page-last: **Operational Data Store (ODS)** are nothing but data store
+required when neither Data warehouse nor OLTP systems support organizations reporting
+needs.
+In ODS, Data warehouse is refreshed in real-time. Hence, it is widely preferred
 for routine activities like storing records of the Employees.
 
-In the ODS, the data is cleaned to avoid junk or repetition, validated for redundancy
-and made sure for the data to be obeying the systematic rules set by the business/project.
-This is the location where all the data used in recent functions are held on,
-which is then relocated to the data warehouse's permanent storage systems or
-the data warehouse's Archives.
+!!! note
 
-An ODS is a type of data warehouse that stores real-time or near-real-time data
-from transactional systems. It is designed to support operational reporting and
-analysis, and it typically uses a bottom-up approach to design, which means that
-the data model is based on specific business requirements.
+    Unlike traditional data warehouses typically used for long-term storage and
+    historical data analysis, an ODS focuses on providing a current, integrated,
+    and consistent view of operational data from multiple sources.
+    It acts as an intermediary layer between the operational systems
+    (such as transactional databases, CRM systems, or ERP systems)
+    and the data warehouse or data mart.
 
-This is a type of data warehouse that stores operational data from various sources
-and provides near real-time reporting and analysis. It is designed to handle frequent
-updates and queries from operational systems. It also serves as a source of data
-for the EDW or data marts.
+    This is a type of data warehouse that stores operational data from various sources
+    and provides near real-time reporting and analysis. It is designed to handle frequent
+    updates and queries from operational systems. It also serves as a source of data
+    for the EDW or data marts.
 
-#### Implementation of Operational Data Stores
+:material-page-last: An ODS is a type of data warehouse that stores real-time or
+near-real-time data from transactional systems. It is designed to support operational
+reporting and analysis, and it typically uses a bottom-up approach to design,
+which means that the data model is based on specific business requirements.
 
-Any number of data sources can be integrated to create an Operational Data Store.
-For an integrated data source system to be qualified as an operational Data Store,
-it should comply with the below principles:
-
-1. **Subject-Oriented**:
-
-   The Operational Data Store should be designed and built based on explicit functional
-   requirements presented by the business, for a certain specific area under discussion.
-
-2. **Integrated**:
-
-   All the data from multiple data sources of the given application undergoes a
-   set of ETL process flow, which includes cleaning the junk data to reduce redundancy,
-   transforming all the data into a single format and loading the entire set of
-   records onto the ODS, based on the business/ client’s policies for data control
-   and regularity.
-
-3. **Current/Up-To-Date**:
-
-   The data in the ODS is expected to be up-to-date, in order to cover all the current
-   functions of application tied to the Data Warehouse and to show the existing
-   status of the data from every source linked to the DW system.
-
-4. **Granularity in the Details**:
-
-   It is primarily used to support the operational business functions/ requirements,
-   and so it is important for the rules to be implemented in a way that it maintains
-   the comprehensive level of detailing the business entails for those functions
-   to be executed.
-
-#### Advantages of Operational Data Stores
-
-It is a beneficial database in comparison to a data warehouse system as a whole.
-Below are the justification for its advantageous nature:
-
-- An ODS provides access to only the current, finely crumbled, non-aggregated,
-  less complicated data, which can be queried in a well-fitted approach without
-  using the operational systems.
-
-- When the Reporting & Analysis tools need data that are closer to real-time operations,
-  it can be queried from the Operational Data Store, as and when it is received
-  from the respective source systems, instead of opting for more prolonging conversion
-  and loading operations from the other database sources in the data warehouse systems.
-
-- ODS is a secure option as it does not contain all the historical data and operations,
-  which makes it resilient for any cyber-attacks or hacking of data privacy.
-
-- It is a practically feasible structural design option when bearing in mind the
-  complex requirements provided by the business, in order to generate input for
-  analysis and reporting processes that leads to business decision-making.
-
-- ODS facilitates considerably less total time for turnaround when in trouble,
-  like the environment failure or when a database needs a restart, which implicates
-  less stress on the business or the stack holders of the application.
-
-- In order to fetch data from an ODS, querying need not be complex or with multi-level
-  joins and conditional Simple queries will be sufficient as it holds moderately
-  detailed operational data.
+---
 
 ### Data Mart
 
@@ -416,128 +224,25 @@ unit or department. It is optimized for querying and reporting on a specific sub
 area, such as sales or marketing, and it is typically easier and faster to implement
 than an EDW.
 
-This is a subset of data warehouse that is designed to serve a specific department,
-function, or business unit. It contains a limited amount of data that is relevant
-to a particular domain or topic. It can be independent or dependent on the EDW or
-ODS.
+!!! quote
 
-#### Types of Data Mart
+    In truth, the Kimball model was for data marts, not a data warehouse.
+    A data mart and a data warehouse are fundamentally different things.
+    — Bill Inmon
 
-##### Dependent Data Mart
+!!! quote
 
-A dependent data mart is purely from the data warehouse and all the grouped
-dependent will form an enterprise data warehouse. It is purely a subset of
-data warehouse since it is created from central DW. Since clean and summarised
-data is already present in the central data warehouse ETT process or Extract
-Transform and Transportation is simplified. We just need to identify the particular
-subset here and perform ETT on top of it. These data marts are typically
-built to achieve better availability and a lot of improved performance with
-better control and efficiency.
+    A data mart is a curated subset of data often generated for analytics and
+    business intelligence users. Data marts are often created as a repository
+    of pertinent information for a subgroup of workers or a particular use case.
+    — Snowflake
 
-##### Independent Data Mart
+---
 
-A independent data mart act as standalone systems, meaning they can work without
-a data warehouse. They receive data from external and internal data sources directly.
-The data presented in independent data marts can be then used for the creation of a
-data warehouse. This approach is called bottom-up.
-
-Often, the motivation behind choosing independent data marts is shorter time to
-market. They work great for small to medium-sized companies.
-
-So, the key difference between dependent and independent data marts is in the way
-they get data from sources. The step involving data transfer, filtering, and loading
-into either a data warehouse or data mart is called the extract-transform-load (ELT)
-process. When dealing with dependent data marts, the central data warehouse already
-keeps data formatted and cleansed, so ETL tools will do little work. On the other hand,
-independent data marts require the complete ETL process for data to be injected.
-
-##### Hybrid Data Mart
-
-A hybrid data marts integrate data from all existing operational data sources and/or
-data warehouses. This method collects the benefits and addresses the issues of both
-top-down and bottom-up approaches. Hybrid data marts are a good choice for organizations
-that have multiple databases.
-
-#### Features of Data Mart
-
-- Since the source of the data is concentrated to subject the user response time
-  is enhanced by using it.
-
-- For frequently required data, using data marts will be beneficial since it is
-  subset to central DW and hence data size will be lesser.
-
-- Also since the volume of the data is limited the processing time will be quite
-  reduced compared to central DWS.
-
-- These are basically agile and can accommodate the changes in the model quite
-  quickly and efficiently compared to the data warehouse.
-
-- Datamart requires a single subject expert to handle, in contrast to warehouse
-  data, the expertise we require in multiple subject warehouses. Because of this,
-  we say that data mart is more agile.
-
-- We can segregate access categories to a low level with partitioned data and with
-  data mart, it is a lot easy.
-
-- Infrastructure dependency is quite limited and data can be stored in on different
-  hardware platforms upon segmentation.
-
-#### Steps to Implement Data Mart
-
-1. **Designing**
-
-   This will be the first step in the implementation where all the required tasks
-   and sources identified to gather technical and business information. Later the
-   logical plan is implemented and upon review, this will be converted to a physical
-   plan. Also, the logical and physical structure of the data is decided here like
-   how to partition the data and field of partition like date or any other file.
-
-2. **Construction**
-
-   This is the second phase of implementation where physical databases were generated
-   with the help of RDBMS, which was determined as part of the design process and
-   logical structures. All the objects like schema, indexes, tables, views, etc
-   are created.
-
-3. **Populating**
-
-   This is the third phase and here data is populated in it upon sourcing the data.
-   All the required transformations are implemented prior to populating the data on it.
-
-4. **Accessing**
-
-   This is the next step of implementation where we will use the populated data
-   to query upon for creating reports. End-user use this step to understand the data using queries.
-
-5. **Managing**
-
-   This is the last stage of implementation of the data mart and here various tasks
-   such as access management, system optimization, and tuning, managing and adding fresh
-   data to the data mart and planing recovery scenarios to handle any failure cases are taken care of.
-
-#### Benefits
-
-- It is one of the best cost-effective alternatives to a data warehouse where you
-  need to work on only a small segment of data.
-
-- Segregation of data from sources will make data mart efficient as a specific
-  group of people can work the data from a specific source instead of all using
-  the data warehouse.
-
-- Faster access to the data is possible by using data mart if we know on which
-  subset we require to access.
-
-- Datamart is lot easier to use so end-users can easily query on top of them.
-
-- Coming to the implementation time data mart requires less time compared with
-  the data warehouse since the data is segregated in groups.
-
-- Historical data from a particular subject can be used for easy trend analysis.
-
-### Summary
+### Comparison
 
 |                    | EDW                                                     | ODS                                                  | DM                                                              |
-| ------------------ | ------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- |
+|--------------------|---------------------------------------------------------|------------------------------------------------------|-----------------------------------------------------------------|
 | Purpose            | Serves the entire organization                          | Supports operational reporting                       | Serves a specific business unit/department                      |
 | Data Integration   | Integrates data from multiple sources                   | Integrates real-time data from transactional systems | Integrates data from a specific subject area                    |
 | Data Model         | Top-down approach to design                             | Bottom-up approach to design                         | Designed based on specific business requirements                |
@@ -548,7 +253,7 @@ that have multiple databases.
 | Cost               | Higher cost due to complexity and scale                 | Lower cost due to simpler design and implementation  | Lower cost due to simpler design and implementation             |
 
 | Criteria          | EDW                                                     | ODS                                                      | DM                                                     |
-| ----------------- | ------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------ |
+|-------------------|---------------------------------------------------------|----------------------------------------------------------|--------------------------------------------------------|
 | Scope             | Enterprise-wide                                         | Operational                                              | Departmental or functional                             |
 | Data sources      | Multiple internal and external sources                  | Multiple operational sources                             | EDW, ODS, or other sources                             |
 | Data integration  | High degree of integration and standardization          | Moderate degree of integration and standardization       | Low degree of integration and standardization          |
@@ -562,7 +267,9 @@ that have multiple databases.
 | Query frequency   | Low to moderate (periodic or on-demand)                 | High (continuous or near-continuous)                     | Moderate to high (periodic or on-demand)               |
 | User types        | Analysts, managers, executives, data scientists, etc.   | Operational staff, managers, etc.                        | Analysts, managers, etc.                               |
 
-## Data Warehouse Architecture
+---
+
+## Architecture
 
 ### Bottom tier (Data Layer)
 
@@ -663,7 +370,7 @@ include a metadata layer, which provides information about the data in the data
 warehouse, such as its origin, format, and meaning. The metadata layer can be used
 to help users understand and navigate the data.
 
-## Data Warehouse Design
+## Design
 
 data warehouse design that can be applied within the framework of the design methods
 discussed earlier. Here is a brief overview of how each of these approaches relates
@@ -676,7 +383,7 @@ for organizations with well-defined business requirements. Hybrid design may be 
 good choice for organizations that need a flexible and adaptable data warehouse
 that can accommodate changing business requirements over time.
 
-### Bottom-up design
+### Bottom-up
 
 Bottom-up design is an approach to data warehouse design that focuses on building
 small, specialized data marts first and then integrating them into a larger data
@@ -697,9 +404,9 @@ data marts.
     model, which is optimized for querying and analysis, and building a star or snowflake
     schema that supports specific business functions.
 
-    See more, [Kimball Approach](./data_modeling/dwh-kimball-approach.md)
+    See more, [Kimball Approach](../data_architecture/data_modeling/dwh-kimball-approach.md)
 
-### Top-down design
+### Top-down
 
 Top-down design is an approach to data warehouse design that starts with a comprehensive
 enterprise data model and then designs the data warehouse based on that model.
@@ -711,6 +418,7 @@ to accommodate the specific business requirements.
 !!! example
 
     **Third Normal Form Model** (Bill Inmon):
+
     The 3NF Model, also known as the Inmon model, is a top-down design approach that
     emphasizes the importance of a comprehensive enterprise data model. This model is
     designed to support complex business processes and is often used for data warehouse
@@ -718,9 +426,9 @@ to accommodate the specific business requirements.
     data model, which is then used to build data marts that support specific business
     functions.
 
-    See more, [Inmon Approach](./data_modeling/dwh-inmon-approach.md)
+    See more, [Inmon Approach](../data_architecture/data_modeling/dwh-inmon-approach.md)
 
-### Hybrid design
+### Hybrid
 
 Hybrid design is an approach to data warehouse design that combines elements of
 both bottom-up and top-down design. This approach recognizes that there may be benefits
@@ -733,6 +441,7 @@ data warehouse.
 !!! example
 
     **Data Vault 2.0 Model**:
+
     The DV 2.0 Model is a hybrid design approach that combines elements of both
     the Inmon and Kimball models. This model is designed to support flexibility, scalability,
     and agility, and is often used for data warehouse implementations in organizations
@@ -741,7 +450,7 @@ data warehouse.
     into three types of tables (Hub, Link, and Satellite), which can then be used to
     build data marts that support specific business functions.
 
-    See more, [Data Vault Model](./data_modeling/dwh-data-vault-approach.md)
+    See more, [Data Vault Model](../data_architecture/data_modeling/dwh-data-vault-approach.md)
 
 **Differences between the three designs**:
 
@@ -758,6 +467,8 @@ data warehouse.
 - **Complexity**: Kimball is relatively simple, Inmon is more complex, and
   Data Vault is the most complex of the three methodologies.
 
+---
+
 ### Summary
 
 Overall, the choice of design method will depend on the specific needs and circumstances
@@ -769,7 +480,7 @@ model may be a good choice for organizations that need a flexible and scalable
 data warehouse that can accommodate changing business requirements over time.
 
 | Design Method | 3NF Model (Inmon)                                                                                                                        | Dimensional Model (Kimball)                                                                                                                 | Data Vault 2.0 Model                                                                                                                                       |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Description   | Top-down design approach that emphasizes a comprehensive enterprise data model                                                           | Bottom-up design approach that emphasizes simplicity and ease of use                                                                        | Hybrid design approach that combines elements of the Inmon and Kimball models                                                                              |
 | Strengths     | Supports complex business processes, supports enterprise-wide integration, allows for data reuse                                         | Supports ad-hoc querying and analysis, easy to understand and use, can be quickly implemented                                               | Supports flexibility, scalability, and agility, accommodates changing business requirements, allows for data reuse                                         |
 | Weaknesses    | Can be time-consuming to design and build, may not be well-suited for ad-hoc querying and analysis                                       | May not be well-suited for complex business processes or enterprise-wide integration, may not support as much data reuse as the Inmon model | Can be more complex to design and build than the Inmon or Kimball models, may not be as well-suited for smaller organizations or simple business processes |

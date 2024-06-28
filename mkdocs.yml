@@ -61,29 +61,13 @@ nav:
               - abstract/data_management/index.md
               - Data Modeling: abstract/data_management/data-modeling.md
               - Data Integration: abstract/data_management/data-integration.md
-              - Data Storage: abstract/data_management/data-storage.md
               - Data Quality: abstract/data_management/data-quality.md
               - Data Pipeline: abstract/data_management/data-pipeline.md
               - Database:
                   - Normalization: abstract/data_management/database/db-normalization-form.md
                   - De-Normalization: abstract/data_management/database/db-denormalization-form.md
                   - Slowly Change Dimension: abstract/data_management/database/db-scd.md
-              - Data Warehouse:
-                  - abstract/data_warehouse/index.md
-                  - Modeling Technique:
-                      - abstract/data_warehouse/data_modeling/index.md
-                      - Inmon Approach:
-                          - Abstract: abstract/data_warehouse/data_modeling/dwh-inmon-approach.md
-                      - Kimball Approach:
-                          - Abstract: abstract/data_warehouse/data_modeling/dwh-kimball-approach.md
-                          - Implement: abstract/data_warehouse/data_modeling/dwh-dim-implement.md
-                          - Slowly Changing Dim: abstract/data_warehouse/data_modeling/dwh-dim-slowly-changing-dimension.md
-                          - Rapidly Changing Dim: abstract/data_warehouse/data_modeling/dwh-dim-rapidly-changing-dimension.md
-                          - Techniques: abstract/data_warehouse/data_modeling/dwh-dim-techniques.md
-                      - Data Vault Approach:
-                          - Abstract: abstract/data_warehouse/data_modeling/dwh-data-vault-approach.md
-                          - Implement: abstract/data_warehouse/data_modeling/dwh-data-vault-implement.md
-                      - Anchor Approach: abstract/data_warehouse/data_modeling/dwh-anchor-approach.md
+              - Data Warehouse: abstract/data_management/data-warehouse.md
               - Data Lakehouse:
                   - abstract/data_lakehouse/index.md
                   - PBAC: abstract/data_lakehouse/data-lakehouse-policy-based-access-control.md
@@ -94,6 +78,20 @@ nav:
               - Modern Team: abstract/data_governance/dgn-with-modern-data-team.md
           - Data Architecture:
               - abstract/data_architecture/index.md
+              - Modeling Technique:
+                  - abstract/data_architecture/data_modeling/index.md
+                  - Inmon Approach:
+                      - Abstract: abstract/data_architecture/data_modeling/dwh-inmon-approach.md
+                  - Kimball Approach:
+                      - Abstract: abstract/data_architecture/data_modeling/dwh-kimball-approach.md
+                      - Implement: abstract/data_architecture/data_modeling/dwh-dim-implement.md
+                      - Slowly Changing Dim: abstract/data_architecture/data_modeling/dwh-dim-slowly-changing-dimension.md
+                      - Rapidly Changing Dim: abstract/data_architecture/data_modeling/dwh-dim-rapidly-changing-dimension.md
+                      - Techniques: abstract/data_architecture/data_modeling/dwh-dim-techniques.md
+                  - Data Vault Approach:
+                      - Abstract: abstract/data_architecture/data_modeling/dwh-data-vault-approach.md
+                      - Implement: abstract/data_architecture/data_modeling/dwh-data-vault-implement.md
+                  - Anchor Approach: abstract/data_architecture/data_modeling/dwh-anchor-approach.md
           - Data Mesh:
               - abstract/data_mesh/index.md
           - Data Observability:
@@ -430,8 +428,6 @@ nav:
               - tools/etl/kafka/index.md
               - Use-Cases:
                   - Agoda: tools/etl/kafka/kafka-agoda.md
-          - Sea Tunnel:
-              - tools/etl/seatunnel/index.md
           - Flink:
               - tools/etl/flink/index.md
       - Query:

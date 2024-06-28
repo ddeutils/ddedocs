@@ -74,6 +74,8 @@ In the another hand, **Business Users** able to use less of technical knowledge
 to interact the Data in the **Data Platform** that make less of SLA to require
 **Data Engineer** a lot! :partying_face:
 
+---
+
 ## :material-account-arrow-right-outline: Roles
 
 :material-page-last: In the future, if I do not in love with communication or management
@@ -88,6 +90,8 @@ I will go to any specialize roles such as,
 - :material-face-woman: [**Analytic Engineer**](roles/analytic_engineer/index.md)
 
 </div>
+
+---
 
 ## :material-account-supervisor-outline: Communities
 
@@ -127,6 +131,8 @@ Coding knowledge and Data Engineering tools.
     [:octicons-arrow-right-24: Go Through](https://roadmap.thaiprogrammer.org/)
 
 </div>
+
+---
 
 ## :octicons-skip-24: TL; DR
 
