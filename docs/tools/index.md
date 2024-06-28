@@ -49,6 +49,10 @@ you build analytics and AI products on top of your infrastructure.
 - [](https://medium.com/@mariusz_kujawski/converting-csv-files-to-parquet-with-polars-pandas-dask-and-dackdb-52a77378349d)
 - [](https://medium.com/@kywe665/hot-take-apache-hudi-delta-lake-apache-iceberg-are-divergent-7ca6a43d39fc)
 
+### Open Table
+
+- [Apache Iceberg vs. Delta Lake: A Comprehensive Guide for Modern Data Processing](https://medium.com/@rakeshchanda/apache-iceberg-vs-delta-lake-a-comprehensive-guide-for-modern-data-processing-73be5c71795a)
+
 ### File Format
 
 - [Comparing Performance of Big Data File Formats: A Practical Guide](https://towardsdatascience.com/comparing-performance-of-big-data-file-formats-a-practical-guide-ef366561b7d2)

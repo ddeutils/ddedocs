@@ -1,17 +1,13 @@
 # Data Warehouse
 
-**Data Warehouse** (DW or DWH) is a centralized repository or digital storage system
+**Data Warehouse (DW or DWH)** is a centralized repository or digital storage system
 that integrates and stores data from various sources within an organization. It
 is designed to support Business Intelligence (BI) activities such as _reporting_,
 _data analysis_, and _decision-making_.
 
-Data warehouses use a process called Extract, Transform, Load (ETL) to extract
-data from different sources, transform it into a consistent format, and load it
-into the warehouse.
-
 ![Data Warehouse Elements](img/data-warehouse-elements.png)
 
-## Types of Data Warehouse
+## :material-format-list-bulleted: Types of Data Warehouse
 
 There are three main types of data warehouses:
 
@@ -36,10 +32,6 @@ data and classifying data according to subject. These data sources could be the
 Databases of various _Enterprise Resource Planning (ERP)_ systems, _Customer Relationship
 Management (CRM)_ systems, and other forms of _Online Transactional Processing (OLTP)_
 systems.
-
-EDW is the most preferred form of data storage today due to its ability to scale
-storage requirements up or down as per the business and data requirements. This
-means that an EDW is capable of providing unlimited storage to any enterprise
 
 !!! note
 
@@ -793,11 +785,11 @@ querying and analysis and a need for simplicity and ease of use, the Dimensional
 data warehouse that can accommodate changing business requirements over time,
 the Data Vault 2.0 model may be the best option.
 
-## References
+## :material-playlist-plus: Read Mores
 
 - [Guru99: Data Warehousing](https://www.guru99.com/data-warehousing.html)
 - [Guru99: Data Warehouse Architecture](https://www.guru99.com/data-warehouse-architecture.html#8)
-- [IBM: Data Warehouse](https://www.ibm.com/topics/data-warehouse/)
+- [:simple-ibm: IBM: Data Warehouse](https://www.ibm.com/topics/data-warehouse/)
 - [A Complete Guide to Data Warehouse in 2022](https://www.analyticsvidhya.com/blog/2022/06/a-complete-guide-to-data-warehousing-in-2022/)
 - [CodingNinjas: Inmon vs Kimball Approaches in DWH](https://www.codingninjas.com/studio/library/inmon-vs-kimball-approach-in-data-warehousing)
 - [Nearshore: Data Warehouse Architecture](https://www.nearshore-it.eu/articles/technologies/data-warehouse-architecture/)

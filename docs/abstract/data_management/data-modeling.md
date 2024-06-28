@@ -36,7 +36,7 @@ important for the business to represent in the data model), their characteristic
 and constraints, the relationships between them and relevant security
 and data integrity requirements. Any notation is typically simple.
 
-![Conceptual Data Model](img/data-model-conceptual.png){ loading=lazy width="550" }
+![Conceptual Data Model](img/data-model-conceptual.png){ width="550" }
 
 ### Logical Data Models
 

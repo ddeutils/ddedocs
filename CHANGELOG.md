@@ -2,6 +2,30 @@
 
 ## Latest Changes
 
+## 20240628
+
+### :scissors: References
+
+- :clipboard: refs: ref docs from data storytelling. (_2024-06-23_)
+
+### :book: Documents
+
+- :page_facing_up: docs: revision abstact information of data knowledge. (_2024-06-28_)
+- :page_facing_up: docs: edit data management. (_2024-06-27_)
+- :page_facing_up: docs: update index page for databricks and roles. (_2024-06-26_)
+- :page_facing_up: docs: update azure databricks uc setup. (_2024-06-26_)
+- :page_facing_up: docs: update azure docs. (_2024-06-25_)
+- :page_facing_up: docs: update docs for azure batch account. (_2024-06-24_)
+- :page_facing_up: docs: update azure docs. (_2024-06-24_)
+- :page_facing_up: docs: prepare tool and service pages. (_2024-06-23_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: remove some tools that not necessary to use. (_2024-06-24_)
+- :construction: refactored: remove file format and rename to open-table. (_2024-06-23_)
+- :construction: refactored: remove mojo from lang tool session. (_2024-06-23_)
+- :construction: refactored: remove github service that do not necessary impl. (_2024-06-23_)
+
 ## 20240623
 
 ### :scissors: References

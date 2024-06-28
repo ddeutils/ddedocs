@@ -1,5 +1,0 @@
----
-icon: simple/dvc
----
-
-# DVC

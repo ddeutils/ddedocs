@@ -67,7 +67,7 @@ nav:
               - Database:
                   - Normalization: abstract/data_management/database/db-normalization-form.md
                   - De-Normalization: abstract/data_management/database/db-denormalization-form.md
-                  - SCD2: abstract/data_management/database/db-scd.md
+                  - Slowly Change Dimension: abstract/data_management/database/db-scd.md
               - Data Warehouse:
                   - abstract/data_warehouse/index.md
                   - Modeling Technique:
@@ -275,15 +275,13 @@ nav:
               - With Kubernetes: services/postgres/postgres-with-k8s.md
   - Tools:
       - tools/index.md
-      - Version Control:
+      - Common:
           - Git:
-              - tools/vcs/git/index.md
-              - Scenarios: tools/vcs/git/git-scenarios.md
-              - Branching Strategies: tools/vcs/git/git-branching-strategies.md
-              - Commit Release: tools/vcs/git/git-commit-release.md
-              - Hooks: tools/vcs/git/git-hooks.md
-          - DVC:
-              - tools/vcs/dvc/index.md
+              - tools/git/index.md
+              - Scenarios: tools/git/git-scenarios.md
+              - Branching Strategies: tools/git/git-branching-strategies.md
+              - Commit Release: tools/git/git-commit-release.md
+              - Hooks: tools/git/git-hooks.md
       - Languages:
           - Shell:
               - tools/lang/shell/index.md
