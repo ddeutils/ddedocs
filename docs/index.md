@@ -14,6 +14,8 @@
 This project will deliver all Practice and Knowledge of **Data Developer and Engineer**
 area.
 
+---
+
 ## :material-arrow-down-right: Getting Started
 
 :material-page-last: First, ^^**Data engineering** is a critical part of the
@@ -79,15 +81,38 @@ to interact the Data in the **Data Platform** that make less of SLA to require
 ## :material-account-arrow-right-outline: Roles
 
 :material-page-last: In the future, if I do not in love with communication or management
-level skill that make me be :material-face-agent: [**Lead of Data Engineer**](roles/lead_data_engineer/index.md),
+level skill that make me be :material-face-agent: [**Lead Data Engineer**](roles/lead_data_engineer/index.md),
 I will go to any specialize roles such as,
 
 <div class="grid cards" markdown>
 
-- :material-face-man: [**Data Platform Engineer**](roles/data_platform_engineer/index.md)
-- :material-face-man-shimmer: [**DataOps Engineer**](roles/dataops_engineer/index.md)
-- :material-face-man-profile: [**MLOps Engineer**](roles/mlops_engineer/index.md)
-- :material-face-woman: [**Analytic Engineer**](roles/analytic_engineer/index.md)
+-   :material-face-man: [**Data Platform Engineer**](roles/data_platform_engineer/index.md)
+
+-   :material-face-man-shimmer: [**DataOps Engineer**](roles/dataops_engineer/index.md)
+
+    ---
+    [Read More about **DataOps**](./abstract/dataops/index.md)
+
+-   :material-face-man-profile: **MLOps Engineer**
+
+    ---
+    **MLOps Engineers** Build and Maintain a platform to enable the development
+    and deployment of machine learning models. They typically do that
+    through standardization, automation, and monitoring.
+
+    **MLOps Engineers** reiterate the platform and processes to make the machine
+    learning model development and deployment quicker, more reliable, reproducible,
+    and efficient.
+
+    [Read More about **MLOps**](./abstract/mlops/index.md)
+
+-   :material-face-woman: **Analytic Engineer**
+
+    ---
+    **Analytic Engineer** is who make sure that companies can understand their data
+    and use it to _Solve Problems_, _Answer Questions_, or _Make Decisions_.
+
+    [Read More about **Analytic Engineer**](https://towardsdatascience.com/analytics-engineering-8b0ed0883379)
 
 </div>
 

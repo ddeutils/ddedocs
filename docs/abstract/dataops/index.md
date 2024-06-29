@@ -28,6 +28,16 @@ and enhanced human communication.
 - Data Observability
 - Automated Data Quality Checks
 
+## DataOps Engineer
+
+- https://medium.com/4th-coffee/10-new-devops-tools-to-watch-in-2024-a5127c0b3411
+- [Is Data Observability Critical to Successful Data Analytics?](https://sanjmo.medium.com/is-data-observability-critical-to-successful-data-analytics-d09b983b95c6)
+
+## Examples
+
+- [DataOps for the Modern Data Warehouse](https://github.com/Azure-Samples/modern-data-warehouse-dataops)
+
+
 ## References
 
 - [Data Engineering concepts: Part 7, DevOps, DataOps and MLOps](https://medium.com/@mudrapatel17/data-engineering-concepts-part-7-devops-dataops-and-mlops-afc6f432473c)

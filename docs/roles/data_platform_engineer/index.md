@@ -4,8 +4,6 @@ icon: material/face-man
 
 # Data Platform Engineer
 
-**Data Platform & Architecture Engineer**
-
 ## Why?
 
 - สามารถออกแบบ Data Platform Architecture ให้เหมาะสมกับการใช้ data ในบริษัทได้

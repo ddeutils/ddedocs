@@ -90,7 +90,7 @@ nav:
           - Data Mesh:
               - abstract/data_mesh/index.md
           - DataOps:
-              - abstract/data_ops/index.md
+              - abstract/dataops/index.md
           - Data Pipeline:
               - abstract/data_pipeline/index.md
           - Data Observability:
@@ -116,16 +116,8 @@ nav:
       - Roles:
           - Data Platform Engineer:
               - roles/data_platform_engineer/index.md
-              - FinOps: roles/data_platform_engineer/dp-finops.md
-          - DataOps Engineer:
-              - roles/dataops_engineer/index.md
-          - Lead of Data Engineer:
+          - Lead Data Engineer:
               - roles/lead_data_engineer/index.md
-          - MLOps Engineer:
-              - roles/mlops_engineer/index.md
-              - Challenge: roles/mlops_engineer/mlops-challenge.md
-          - Analytic Engineer:
-              - roles/analytic_engineer/index.md
   - Services:
       - services/index.md
       - Provider:
