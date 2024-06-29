@@ -114,8 +114,6 @@ nav:
           - Emerging Trends:
               - abstract/emerging_trends/index.md
       - Roles:
-          - Data Platform Engineer:
-              - roles/data_platform_engineer/index.md
           - Lead Data Engineer:
               - roles/lead_data_engineer/index.md
   - Services:

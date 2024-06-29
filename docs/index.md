@@ -86,11 +86,18 @@ I will go to any specialize roles such as,
 
 <div class="grid cards" markdown>
 
--   :material-face-man: [**Data Platform Engineer**](roles/data_platform_engineer/index.md)
-
--   :material-face-man-shimmer: [**DataOps Engineer**](roles/dataops_engineer/index.md)
+-   :material-face-man: **Data Platform Engineer**
 
     ---
+    **Data Platform Engineer**
+
+    [Read More about **Data Architect**](./abstract/data_architecture/index.md)
+
+-   :material-face-man-shimmer: **DataOps Engineer**
+
+    ---
+    **DataOps Engineer**
+
     [Read More about **DataOps**](./abstract/dataops/index.md)
 
 -   :material-face-man-profile: **MLOps Engineer**
