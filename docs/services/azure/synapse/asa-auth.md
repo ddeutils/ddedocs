@@ -1,6 +1,6 @@
-# Authentication
+# Auth
 
-## Users & Roles
+## :material-arrow-right-bottom: Users & Roles
 
 ### Getting Users
 
@@ -61,6 +61,8 @@
         AND [name] = 'username@mail.com'
     ;
     ```
+
+---
 
 ### Create User
 
@@ -145,6 +147,8 @@
     ;
     ```
 
+---
+
 ### Getting Relations
 
 === ":octicons-code-review-16: List relate roles and users"
@@ -217,6 +221,8 @@
     db_datawriter|DATA ENGINEER   |2022-11-15 00:00:00.000|2022-11-15 00:00:00.000|
     ```
 
+---
+
 ### Roles
 
 === ":material-database-settings-outline: Dedicate SQL Pool"
@@ -277,7 +283,9 @@
         ;
         ```
 
-## Permissions
+---
+
+## :material-arrow-right-bottom: Permissions
 
 ### Getting Relations
 
@@ -359,6 +367,8 @@
     syndpdev|de_vendor  |DATABASE_ROLE |user@email.com        |GRANT|EXECUTE                       |FUNC_CHK_TITLE  |SQL_SCALAR_FUNCTION |
     ```
 
+---
+
 ### Grant
 
 === "data execution"
@@ -387,7 +397,9 @@ GRANT IMPERSONATE ON USER::<user-name> TO <user-name>;
 
 [More Example for Grant Permissions](https://learn.microsoft.com/en-us/sql/t-sql/statements/grant-transact-sql?view=azure-sqldw-latest#examples)
 
-## Workload
+---
+
+## :material-arrow-right-bottom: Workload
 
 ```sql
 CREATE WORKLOAD GROUP <group-name>
@@ -405,7 +417,7 @@ WITH (
 );
 ```
 
-## References
+## :material-playlist-plus: Read Mores
 
 - [:material-microsoft: Microsoft Azure Synapse Analytics SQL Authentication](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/sql-authentication?tabs=serverless)
 - [:material-microsoft: Microsoft SQL T-SQL Create User Transaction](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-user-transact-sql?view=azure-sqldw-latest)

@@ -4,9 +4,6 @@
 manages a pool of compute nodes (virtual machines), installs the applications you
 want to run, and schedules jobs to run on the nodes.
 
-Sometimes however a container could be a more appropriate solution for simplicity
-and scaling than a virtual machine.
-
 ## :material-arrow-down-right: Getting Started
 
 ### Azure Container Registry
@@ -19,7 +16,7 @@ and scaling than a virtual machine.
 - Click Enable on **Admin user** option
 - Save these values, **Login server**, **Username**, and **Password**
 - Go to your local terminal for prepare docker file
-- Create your `Dockerfile` file and test your image able to run on the Local
+- Create your `Dockerfile` file
 
     ```dockerfile title="Dockerfile"
     FROM python:3.9-slim
@@ -33,17 +30,18 @@ and scaling than a virtual machine.
     CMD ["python", "./main.py"]
     ```
 
+    The main Python file that run on this Docker
+
     ```python title="./main.py"
     print("This is a Main file for testing Dockerize.")
     with open('/output/docker_test.txt', 'w') as f:
         f.write("Write Output file on Dockerize.")
     ```
 
-    ```shell
-    docker build -t "python-ba" . --no-cache
-    ```
+- Test this Docker image able to run on the Local
 
     ```shell
+    docker build -t "python-ba" . --no-cache
     docker run --name python-btch -v "${pwd}\output:/output" python-btch
     ```
 
@@ -51,13 +49,7 @@ and scaling than a virtual machine.
 
     ```shell
     docker login cr-ba-python-dev.azurecr.io
-    ```
-
-    ```shell
     docker tag python-btch:latest cr-ba-python-dev.azurecr.io/btch/python-btch:0.0.1-test
-    ```
-
-    ```shell
     docker push cr-ba-python-dev.azurecr.io/btch/python-btch:0.0.1-test
     ```
 
@@ -71,7 +63,7 @@ and scaling than a virtual machine.
 - Go to **Jobs** :octicons-arrow-right-24: Create new job in `btch-pool-cntn` pool with name `btch-job-cntn`
 - Go to **Tasks** :octicons-arrow-right-24: Create new task in this job
 
-    - Go to **Image name** and add `cr-ba-python-dev.azurecr.io/btch/python-btch:0.0.1-test`
+    - Go to **Image name** :octicons-arrow-right-24: Add `cr-ba-python-dev.azurecr.io/btch/python-btch:0.0.1-test`
     - Go to **Container run options** and add below command
 
         ```text
@@ -90,9 +82,10 @@ and scaling than a virtual machine.
         call docker build -t python-test:latest . --no-cache
         call docker tag python-test:latest cr-ba-python-dev.azurecr.io/poc/python-test:%version%
         call docker push cr-ba-python-dev.azurecr.io/poc/python-test:%version%
-        ::call docker rmi cr-ba-python-dev.azurecr.io/poc/python-test:%version%
+        call docker rmi cr-ba-python-dev.azurecr.io/poc/python-test:%version%
 
-        for /f "tokens=1-3" %%c IN ('docker image ls ^| Findstr /r "^cr-ba-python-dev.azurecr.io* ^<none>"') do (
+        for /f "tokens=1-3" %%c IN ('docker image ls ^| Findstr /r "^cr-ba-python-dev.azurecr.io* ^<none>"')
+        do (
             echo Start remove image: `%%c:%%d` with ID: %%e
             if "%%d" equ "<none>" (
                 echo Delete image with id ...
@@ -127,21 +120,23 @@ and scaling than a virtual machine.
 
 !!! note
 
+    About mounting volumn to Azure Batch Node,
+
     `--mount type=bind,source=/datadisks/disk1,target=/data`
 
     `-v {<volume_id>}:{<path>}`
 
 !!! warning
 
-    **Azure Data Factory** does not support for run Azure Batch with docker container currently,
-    [Read More](https://github.com/MicrosoftDocs/azure-docs/issues/16473)
+    **Azure Data Factory** does not support for run **Azure Batch** with a Docker
+    container in the Custom Activity currently, [Read More](https://github.com/MicrosoftDocs/azure-docs/issues/16473)
 
-## Run with Mount Volume
+## :material-arrow-right-bottom: Run with Mount Volume
 
-- https://raw.githubusercontent.com/Azure-Samples/compute-automation-configurations/master/prepare_vm_disks.sh
-- https://stackoverflow.com/questions/64763378/can-i-use-docker-volumes-in-container-based-azure-batch-pools
+- [:material-github: Azure Samples: Compute Automation Configurations - Prepare VM disks](https://raw.githubusercontent.com/Azure-Samples/compute-automation-configurations/master/prepare_vm_disks.sh)
+- [:material-stack-overflow: Can I use Docker volumes in Container based Azure Batch Pool](https://stackoverflow.com/questions/64763378/can-i-use-docker-volumes-in-container-based-azure-batch-pools)
 
 
-## References
+## :material-playlist-plus: Read Mores
 
-- [Use Container for Azure Batch Service](https://dev.to/kenakamu/use-container-for-azure-batch-service-2mnn)
+- [:material-newspaper: Use Container for Azure Batch Service](https://dev.to/kenakamu/use-container-for-azure-batch-service-2mnn)

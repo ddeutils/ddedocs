@@ -1,4 +1,8 @@
-# Azure Synapse: _Date & Timezone_
+# Date & Timezone
+
+## :material-arrow-down-right: Getting Started
+
+### Convert Timezone
 
 ```sql
 SELECT
@@ -11,6 +15,6 @@ SELECT
 FROM ...
 ```
 
-## References
+## :material-playlist-plus: Read Mores
 
-- [Microsoft: Data Types - Datetimeoffset](https://learn.microsoft.com/en-us/sql/t-sql/data-types/datetimeoffset-transact-sql?view=sql-server-ver16)
+- [:material-microsoft: Microsoft: Data Types - Datetimeoffset](https://learn.microsoft.com/en-us/sql/t-sql/data-types/datetimeoffset-transact-sql?view=sql-server-ver16)

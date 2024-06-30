@@ -1,20 +1,17 @@
-# CI/CD FastAPI with Windows Server in On-Premises Server
+# Self Hosted with FastAPI
 
 When we want to create a Rest API application like **Azure Function App** on
 an on-premises server, it is simply to use the [FastAPI](https://fastapi.tiangolo.com/)
 package, which is a lightweight Python ASGI web application, for this our purpose.
 
-I will prove the concept that this application can run automatically with a
-CI/CD pipeline without any issues.
+## :material-arrow-down-right: Getting Started
 
 ### Setup Application
 
 Let’s start setting up your **FastAPI** application and a `.bat` script for run
 this application with dynamic input arguments.
 
-**Python code in `app/app.py`**:
-
-```python
+```python title="app/app.py"
 from fastapi import FastAPI
 
 def create_app() -> FastAPI:
@@ -28,9 +25,7 @@ def create_app() -> FastAPI:
     return app
 ```
 
-**Python code in `main.py`**:
-
-```python
+```python title="main.py"
 import uvicorn
 from app.app import create_app
 
@@ -40,9 +35,7 @@ if __name__ == '__main__':
     uvicorn.run(app, host="0.0.0.0", port=8000)
 ```
 
-**Powershell code in `scripts/runserver.bat`**:
-
-```shell
+```shell title="scripts/runserver.bat"
 @echo off
 goto :init
 
@@ -134,24 +127,32 @@ goto :init
     goto :eof
 ```
 
-> **Note**: \
-> I use the `.bat` script because the on-premise server that I want to run is Windows OS.
+!!! note
+
+    I use the `.bat` script because the on-premise server that I want to run is
+    Windows OS.
 
 ### Deploy to Window Service
 
-I use the [NSSM](https://nssm.cc/) software for wrap the `runserver.bat` script file and monitor whether my app is able to run continuously on the Windows service.
+I use the [NSSM](https://nssm.cc/) software for wrap the `runserver.bat` script file and monitor
+whether my app is able to run continuously on the Windows service.
 So, I will [Download NSSM](https://nssm.cc/release/nssm-2.24.zip) and unzip the installed file to the current path.
 
-> **Note**: \
-> We cannot use the **Docker** container in the target on-premises server because of the Windows Server version does not support, it be **Windows Server 2016** which does not support Linux container on VM and WSL.
+!!! note
 
-First, we install my application on the **Windows service**, which can be seen in the **Services** software.
+    We cannot use the **Docker** container in the target on-premises server
+    because of the Windows Server version does not support, it be **Windows Server 2016**
+    which does not support Linux container on VM and WSL.
+
+First, we install my application on the **Windows service**, which can be seen
+in the **Services** software.
 
 ```shell
 .\nssm\win64\nssm.exe install "FastAPIService" "%cd%\runserver.bat"
 ```
 
-Next, we can setup additional the logging component for `stdout` and `stderr` in this application.
+Next, we can setup additional the logging component for `stdout` and `stderr`
+in this application.
 
 ```shell
 .\nssm\win64\nssm.exe set "FastAPIService" AppStdout "%cd%\logs\FastAPIService.log"
@@ -168,20 +169,30 @@ Finally, we start the application service by `sc.exe` command.
 sc.exe start "FastAPIService"
 ```
 
-> **Warning**: \
-> I cannot use the python package, `pywin32`, because I get the error message; `Error 1053: The
-service did not respond to the start or control request in a timely fashion` when start this
-> application service on locally.
+!!! warning
+
+    I cannot use the python package, `pywin32`, because I get the error message;
+
+    ```text
+    Error 1053: The service did not respond to the start or control request in a timely fashion
+    ```
+
+    when start this application service on locally.
 
 ### Setup Agent to On-Premises Server
 
-We will create a CI/CD deployment pipeline with **Azure DevOps** that able to deploy the application to target server. The purpose is running this application on the Windows service in an on-premises server.
+We will create a CI/CD deployment pipeline with **Azure DevOps** that able to
+deploy the application to target server. The purpose is running this application
+on the Windows service in an on-premises server.
 
-Firstly, the on-premises server does not connect to **Azure DevOps** because It was not listed in the **Agent Pools** by **Self-Hosted** agent connection type in my organization setting. So, we create a new agent pool name like `MYSTDVM01` and follow the Azure document to list this new agent in the Agents menu.
+Firstly, the on-premises server does not connect to **Azure DevOps** because
+It was not listed in the **Agent Pools** by **Self-Hosted** agent connection
+type in my organization setting. So, we create a new agent pool name like
+`MYSTDVM01` and follow the Azure document to list this new agent in the Agents menu.
 
-> **Note**: \
-> More detail about the new Agent implementation,
-> [How to install Self-hosted Windows agent for Azure DevOps](https://www.youtube.com/watch?v=xuKXO811O_w).
+!!! note
+
+    More detail about the new Agent implementation, [How to install Self-hosted Windows agent for Azure DevOps](https://www.youtube.com/watch?v=xuKXO811O_w).
 
 If you want to let everyone in your group of **Azure DevOps** can see and use this agent, you
 should add owner permission to your group by
@@ -200,10 +211,11 @@ Finally, we set up a Python interpreter for running the Python application in th
 - Create a complete file at `$(Agent.ToolsDirectory)/Python/3.9.13/x64.complete` for trigger **Azure DevOps**
   pipeline can use this package in the job
 
-> **Note**: \
-> If your server set a proxy firwall rule, you can run self-hosted agent config by
-> `./config.cmd --proxyurl http://proxy.domain.co.th --proxyusername "CEMENTH/{user}" --proxypassword "*******"`,
-> it will save your password to `.proxycredentials` file for reuse this password for proxy mode configuration.
+!!! note
+
+    If your server set a proxy firwall rule, you can run self-hosted agent config by
+    `./config.cmd --proxyurl http://proxy.domain.co.th --proxyusername "CEMENTH/{user}" --proxypassword "*******"`,
+    it will save your password to `.proxycredentials` file for reuse this password for proxy mode configuration.
 
 ### Deploy to On-Premises Server
 
@@ -277,9 +289,11 @@ jobs:
           PathtoPublish: fastapi
 ```
 
-> **Note**: \
-> For the Python dependencies in the requirement.txt file, I use wheel to download these dependencies
-> from PyPI and save them to \wheels path by `pip wheel -w wheels -r .\requirements.txt`
+!!! note
+
+    For the Python dependencies in the requirement.txt file, I use wheel to download
+    these dependencies from PyPI and save them to `\wheels` path by
+    `pip wheel -w wheels -r .\requirements.txt`
 
 For the **CD pipeline**, I deploy the application to the Windows service and the test service.
 
@@ -374,11 +388,15 @@ jobs:
     displayName: 'RestAPI to Health Check'
 ```
 
-> **Warning**: \
-> We should install **NSSM** on that on-premises server before running this CI/CD pipeline.\
-> If you get a permission issue of your agent job when executing the **NSSM** file, you can
-> add the self-host agent user, `NetworkService`, to the **Admin** group in that server.
+!!! warning
+
+    We should install **NSSM** on that on-premises server before running this
+    CI/CD pipeline. If you get a permission issue of your agent job when executing
+    the **NSSM** file, you can add the self-host agent user, `NetworkService`,
+    to the **Admin** group in that server.
 
 ### Setup Environments
 
-We will set up environments for the **CD pipelines** by the port of application such as `8001` for development and `8000` for production because we want to partition that server for two environments.
+We will set up environments for the **CD pipelines** by the port of application
+such as `8001` for development and `8000` for production because we want to partition
+that server for two environments.

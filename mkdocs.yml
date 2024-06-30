@@ -162,26 +162,20 @@ nav:
                   - Share IR: services/azure/data_factory/adf-ir-sharing.md
                   - Link Services: services/azure/data_factory/adf-link-services.md
               - Synapse:
-                  - Authentication: services/azure/synapse/asa-authentication.md
+                  - Auth: services/azure/synapse/asa-auth.md
                   - External Data Source: services/azure/synapse/asa-external-data-source.md
                   - Partition View: services/azure/synapse/asa-partition-view.md
                   - Operations: services/azure/synapse/asa-operations.md
                   - Low-Level Security: services/azure/synapse/asa-low-level-security.md
-                  - Convert Timezone: services/azure/synapse/asa-date-timezone.md
+                  - Date & Timezone: services/azure/synapse/asa-date-timezone.md
               - DevOps:
                   - For Loop: services/azure/devops/devops-for-loop.md
                   - Multi Repo: services/azure/devops/devops-multi-repo.md
-                  - CICD:
-                      - Function App: services/azure/devops/devops-cicd-az-afn.md
-                      - Databricks: services/azure/devops/devops-cicd-az-adb.md
-                      - Data Factory: services/azure/devops/devops-cicd-az-adf.md
-                      - Synapse: services/azure/devops/devops-cicd-az-synapse.md
-                  - CICD (Self Hosted):
-                      - Deploy Python App: services/azure/devops/devops-cicd-self-hosted-win-fastapi.md
+                  - Deploy:
+                      - Self Hosted FastAPI: services/azure/devops/devops-self-hosted-win-fastapi.md
           - AWS:
               - services/aws/index.md
-              - VPC:
-                  - Getting Started: services/aws/vpc/vpc-getting-started.md
+              - VPC: services/aws/aws-vpc.md
               - IoT:
                   - Rule to S3: services/aws/iot_core/iot-rule-to-s3.md
                   - Rule to Kinesis: services/aws/iot_core/iot-rule-to-kinesis.md
@@ -291,10 +285,10 @@ nav:
               - Sync Multi-processes: tools/lang/python/py-sync-multi-processes.md
               - Data Structure for DE: tools/lang/python/py-data-structure-for-data-engineer.md
               - Libraries:
-                  - Pytest: tools/lang/python/py-pytest.md
-                  - Pre-Commit: tools/lang/python/py-pre-commit.md
-                  - Joblib: tools/lang/python/py-joblib.md
-                  - Pydantic: tools/lang/python/py-pydantic.md
+                  - Pytest: tools/lang/python/libs/py-pytest.md
+                  - Pre-Commit: tools/lang/python/libs/py-pre-commit.md
+                  - Joblib: tools/lang/python/libs/py-joblib.md
+                  - Pydantic: tools/lang/python/libs/py-pydantic.md
               - Functional Programing:
                   - Monad: tools/lang/python/functional/py-func-monad.md
                   - Toolz: tools/lang/python/functional/py-func-toolz.md
