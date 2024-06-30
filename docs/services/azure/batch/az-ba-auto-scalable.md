@@ -298,7 +298,7 @@ Set autoscale evaluation interval to `15m 00s`.
     $TargetDedicated = $NeedCompute ? $NodesToAllocate : $MinCapacity;
     ```
 
-## :material-content-copy: References
+## :material-content-copy: Read Mores
 
 - [:material-microsoft: Microsoft Azure Batch Automatic Scaling](https://learn.microsoft.com/en-us/azure/batch/batch-automatic-scaling)
 - [:material-post-outline: Azure Batch Pool Auto Scale Formulas](https://gordon.byers.me/azure/azure-batch-pool-auto-scale-forumulas/)

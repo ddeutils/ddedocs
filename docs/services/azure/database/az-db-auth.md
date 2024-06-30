@@ -1,6 +1,6 @@
-# Azure Database: _Authentication_
+# Auth
 
-## Users & Roles
+## :material-arrow-right-bottom: Users & Roles
 
 ### Getting Users
 
@@ -67,6 +67,8 @@
     FROM [sys].[database_principals]
     ...
     ```
+
+---
 
 ### Create User
 
@@ -174,7 +176,7 @@ GO
     ALTER ROLE [role-name] DROP MEMBER [username@email.com];
     ```
 
-## Permissions
+## :material-arrow-right-bottom: Permissions
 
 ### Grant
 
@@ -400,6 +402,6 @@ public           |DATABASE_ROLE |query_store_query_variant|SELECT    |GRANT     
     For more detail, you can follew store procedure statement,
     [sp_dbpermissions](https://sqlstudies.com/free-scripts/sp_dbpermissions/)
 
-## References
+## :material-playlist-plus: Read Mores
 
 - [SQL Server Create User and Grant Permission](https://copyprogramming.com/howto/sql-sql-server-create-user-and-grant-permission)

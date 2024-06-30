@@ -122,12 +122,9 @@ nav:
           - Azure:
               - services/azure/index.md
               - OAuth: services/azure/az-oauth.md
-              - Storage:
-                  - services/azure/storage/index.md
-                  - Queue:
-                      - services/azure/storage/queue/index.md
+              - Storage: services/azure/storage/index.md
               - Database:
-                  - Authentication: services/azure/database/az-db-authentication.md
+                  - Auth: services/azure/database/az-db-auth.md
                   - Monitoring: services/azure/database/az-db-monitoring.md
               - Batch:
                   - services/azure/batch/index.md
@@ -329,6 +326,7 @@ nav:
       - Orchestration:
           - AirFlow:
               - tools/orchestration/airflow/index.md
+              - Sensor: tools/orchestration/airflow/airflow-sensor.md
               - Pydantic Validator: tools/orchestration/airflow/airflow-pydantic-validator.md
               - Repeatable DAGs: tools/orchestration/airflow/airflow-repeatable-dags.md
               - Cost Optimize: tools/orchestration/airflow/airflow-cost-optimization.md
@@ -339,18 +337,14 @@ nav:
               - Unittest: tools/orchestration/airflow/airflow-unittest.md
               - CICD: tools/orchestration/airflow/airflow-cicd.md
               - On Kubernetes: tools/orchestration/airflow/airflow-on-k8s.md
-              - Updated:
-                  - 2.9.0: tools/orchestration/airflow/updated/airflow-2-9-0.md
           - Dagster:
               - tools/orchestration/dagster/index.md
               - Dynamic Partition: tools/orchestration/dagster/dagster-dynamic-partition.md
               - Connections:
                   - With DLT: tools/orchestration/dagster/dagster-dlt.md
-          - Kedro:
-              - tools/orchestration/kedro/index.md
-          - Mage AI:
-              - tools/orchestration/mageai/index.md
       - Collection & Integration:
+          - DLT:
+              - tools/etl/dlt/index.md
           - SQLAlchemy:
               - tools/collection/sqlalchemy/index.md
           - Airbyte:
@@ -366,8 +360,6 @@ nav:
               - SCD2 on Delta Lake: tools/etl/polars/polars-scd2-on-delta-lake.md
               - Connections:
                   - To Synapse: tools/etl/polars/connection/polars-to-synapse.md
-          - DLT:
-              - tools/etl/dlt/index.md
           - DBT:
               - tools/etl/dbt/index.md
               - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md

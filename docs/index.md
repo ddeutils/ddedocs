@@ -127,8 +127,8 @@ I will go to any specialize roles such as,
 
 ## :material-account-supervisor-outline: Communities
 
-:material-page-last: This below is the list of Communities that must learn about
-Coding knowledge and Data Engineering tools.
+:material-page-last: This below is the list of Communities that you must join for
+keep update knowledge for Developer and Data Engineer trend.
 
 <div class="grid cards" markdown>
 
