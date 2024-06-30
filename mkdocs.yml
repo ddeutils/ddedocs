@@ -133,7 +133,7 @@ nav:
                   - Run Pyspark: services/azure/batch/az-ba-run-pyspark.md
                   - Connections:
                       - Azure: services/azure/batch/az-ba-to-az.md
-                      - BigQuery: services/azure/batch/az-ba-to-bigquery.md
+                      - Google: services/azure/batch/az-ba-to-google.md
                   - Dockerize:
                       - Docker: services/azure/batch/az-ba-with-docker.md
                       - Docker inside Node: services/azure/batch/az-ba-with-docker-inside.md
@@ -344,7 +344,7 @@ nav:
                   - With DLT: tools/orchestration/dagster/dagster-dlt.md
       - Collection & Integration:
           - DLT:
-              - tools/etl/dlt/index.md
+              - tools/collection/dlt/index.md
           - SQLAlchemy:
               - tools/collection/sqlalchemy/index.md
           - Airbyte:

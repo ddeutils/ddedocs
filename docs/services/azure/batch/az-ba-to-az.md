@@ -239,6 +239,8 @@ credential = CertificateCredential(
 )
 ```
 
+---
+
 ## :material-microsoft-azure: Services
 
 !!! tip
@@ -287,6 +289,8 @@ def secret_client(keyvault_name: str):
     - https://medium.com/datamindedbe/how-to-access-key-vaults-from-azure-batch-jobs-34388b1adf46
     - https://learn.microsoft.com/en-us/azure/batch/batch-customer-managed-key
 
+---
+
 ### Synapse
 
 #### Prerequisite
@@ -332,6 +336,8 @@ reader.fetch_concurrently()
 for batch in reader:
     df: pl.DataFrame = pl.from_arrow(batch)
 ```
+
+---
 
 ### DataLake
 

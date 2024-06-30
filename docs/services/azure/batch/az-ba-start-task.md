@@ -1,6 +1,8 @@
 # Start Task
 
-## Command Line
+## :material-arrow-down-right: Getting Started
+
+### Command Line
 
 Below CMD will remove newline charactor that come from **Windows** first and then
 it will execute the start task file with `bash`.
@@ -9,11 +11,11 @@ it will execute the start task file with `bash`.
 /bin/bash -c "sed -i 's/\r$//' start_task.sh && bash ./start_task.sh"
 ```
 
-## Start Task
+### Start Task File
 
 === "Python 3.8"
 
-    ```shell
+    ```shell title="start_task.sh"
     #!/bin/bash
 
     echo 'Update Ubuntu' &&
@@ -25,6 +27,8 @@ it will execute the start task file with `bash`.
     sudo update-alternatives --set python3 /usr/bin/python3.8 &&
     python3 --version
     ```
+
+---
 
 ## :material-test-tube: Examples
 

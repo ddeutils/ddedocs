@@ -127,6 +127,8 @@
     GO
     ```
 
+---
+
 ### Relationship of Users and Roles
 
 ```sql
@@ -160,6 +162,8 @@ db_datareader|DATA ENGINEER   |2022-11-15 00:00:00.000|2022-11-15 00:00:00.000|
 db_datawriter|DATA ENGINEER   |2022-11-15 00:00:00.000|2022-11-15 00:00:00.000|
 ```
 
+---
+
 ### Create Role
 
 ```sql
@@ -175,6 +179,8 @@ GO
     ```sql
     ALTER ROLE [role-name] DROP MEMBER [username@email.com];
     ```
+
+---
 
 ## :material-arrow-right-bottom: Permissions
 
@@ -324,6 +330,8 @@ GO
     REVERT
     ```
 
+---
+
 ### Impersonate
 
 ```sql
@@ -342,6 +350,8 @@ GO
     ```sql
     REVOKE IMPERSONATE ON USER::[<user@mail.com>] TO [<target@mail.com>];
     ```
+
+---
 
 ### Relationship of Permissions and Objects
 
@@ -404,4 +414,4 @@ public           |DATABASE_ROLE |query_store_query_variant|SELECT    |GRANT     
 
 ## :material-playlist-plus: Read Mores
 
-- [SQL Server Create User and Grant Permission](https://copyprogramming.com/howto/sql-sql-server-create-user-and-grant-permission)
+- [:material-newspaper: SQL Server Create User and Grant Permission](https://copyprogramming.com/howto/sql-sql-server-create-user-and-grant-permission)

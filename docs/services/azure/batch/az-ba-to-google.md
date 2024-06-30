@@ -1,15 +1,17 @@
 # Connection BigQuery
 
-## Using Service Account
+## :material-account-check-outline: Authentication
 
-### 1) Create Service Account
+### Using Service Account
+
+#### 1) Create Service Account
 
 - In the **IAM & Admin** :octicons-arrow-right-24: Go to **Service Accounts**
   :octicons-arrow-right-24: Click **CREATE SERVICE ACCOUNT**
 - On **Permission** :octicons-arrow-right-24: Assign **BigQuery Job User** and
   **BigQuery Data Editor** to this service account
 
-### 2) Keep Credential to Key Vault
+#### 2) Keep Credential to Key Vault
 
 -   When a service account was created, it will generate Json credential file that
     has detail like:
@@ -30,7 +32,44 @@
     }
     ```
 
-### 3) Connection Code
+#### 3) Connection Code
+
+On Bath Pool, it should install Python package:
+
+```console
+$ pip install google-auth
+```
+
+```python
+import json
+from google.oauth2.service_account import Credentials
+
+json_info = json.loads(secret_client.get_secret("GOOGLE-JSON-STR").value)
+credentials = Credentials.from_service_account_info(json_info),
+```
+
+### Using OAuth Token
+
+User credentials are typically obtained via **OAuth2.0**
+
+```python
+from google.oauth2.credentials import Credentials
+
+credentials = Credentials(
+    '<access-token>',
+    # NOTE: If you obtain a refresh token
+    refresh_token='<refresh_token>',
+    token_uri='<token_uri>',
+    client_id='<client_id>',
+    client_secret='<client_secret>',
+)
+```
+
+---
+
+## :material-google-cloud: Services
+
+### BigQuery
 
 On Bath Pool, it should install Python package:
 
@@ -51,11 +90,9 @@ import pandas as pd
 import pandas_gbq as pg
 from google.oauth2.service_account import Credentials
 
-df: pd.DataFrame = pd.read_parquet("/dummy-file.parquet")
-
 json_info = json.loads(secret_client.get_secret("GOOGLE-JSON-STR").value)
 pg.to_gbq(
-    df,
+    pd.read_parquet("/dummy-file.parquet"),
     destination_table="<dataset>.<table-name>",
     if_exists='replace',
     project_id="<project-id>",

@@ -243,11 +243,9 @@ with DAG(
     start >> [waiting_for_datetime, waiting_for_file] >> end
 ```
 
-## :material-arrow-right-bottom: Others
+## :material-arrow-right-bottom: Options
 
-There are many useful things that we can apply to optimize our Sensor.
-
-### SensorOperator PokeInterval & Timeout
+### PokeInterval & Timeout
 
 Every SensorOperators are built-in with these parameters.
 
@@ -265,7 +263,7 @@ FileSensor(
 )
 ```
 
-### SensorOperator Mode
+### Modes
 
 Mode is the behavior of the Sensor during the poke_interval, there are 3 different
 modes.
