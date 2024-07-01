@@ -122,7 +122,7 @@ nav:
           - Azure:
               - services/azure/index.md
               - OAuth: services/azure/az-oauth.md
-              - Storage: services/azure/storage/index.md
+              - Storage: services/azure/az-storage-account.md
               - Database:
                   - Auth: services/azure/database/az-db-auth.md
                   - Monitoring: services/azure/database/az-db-monitoring.md
@@ -143,6 +143,7 @@ nav:
                   - Connections:
                       - Azure: services/azure/functions/az-func-to-az.md
               - Databricks:
+                  - services/azure/databricks/index.md
                   - Init Script: services/azure/databricks/adb-init-script.md
                   - Mount Storage: services/azure/databricks/adb-mount-storage.md
                   - Connections:
@@ -157,7 +158,6 @@ nav:
                       - Privileges: services/azure/databricks/adb-uc-privileges.md
               - Event Hubs:
                   - services/azure/eventhubs/index.md
-                  - Producer Data: services/azure/eventhubs/eventhubs-produce-data.md
               - Data Factory:
                   - Share IR: services/azure/data_factory/adf-ir-sharing.md
                   - Link Services: services/azure/data_factory/adf-link-services.md
@@ -165,7 +165,7 @@ nav:
                   - Auth: services/azure/synapse/asa-auth.md
                   - External Data Source: services/azure/synapse/asa-external-data-source.md
                   - Partition View: services/azure/synapse/asa-partition-view.md
-                  - Operations: services/azure/synapse/asa-operations.md
+                  - Monitoring: services/azure/synapse/asa-monitoring.md
                   - Low-Level Security: services/azure/synapse/asa-low-level-security.md
                   - Date & Timezone: services/azure/synapse/asa-date-timezone.md
               - DevOps:
@@ -173,6 +173,8 @@ nav:
                   - Multi Repo: services/azure/devops/devops-multi-repo.md
                   - Deploy:
                       - Self Hosted FastAPI: services/azure/devops/devops-self-hosted-win-fastapi.md
+              - Fabric:
+                  - services/azure/fabric/index.md
           - AWS:
               - services/aws/index.md
               - VPC: services/aws/aws-vpc.md
@@ -226,6 +228,7 @@ nav:
                   - Functional Workspace Organization: services/databricks/databricks-func-workspace-organize.md
           - Snowflake:
               - services/snowflake/index.md
+              - Data Wash: services/snowflake/snf-data-wash.md
           - Ansible:
               - services/ansible/index.md
           - Terraform:

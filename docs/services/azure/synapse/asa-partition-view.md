@@ -1,6 +1,8 @@
-# Azure Synapse Analytics: _Partition View_
+# Partition View
 
-## Manage Permission
+## :material-arrow-down-right: Getting Started
+
+### Manage Permission
 
 1.  Remove bulk operations on master
 
@@ -21,7 +23,9 @@
     GO
     ```
 
-## Partition Pruning
+---
+
+### Partition Pruning
 
 === ":simple-apacheparquet: Parquet"
 
@@ -118,9 +122,17 @@
 === ":material-file-code: Json"
 
     ```sql
+    CREATE VIEW [<schema-name>].[<view-name>]
+    AS
+    SELECT
+        *
+    FROM
+        ...
     ```
 
-## References
+---
 
-- [User Permission in Serverless SQL Pools](https://www.serverlesssql.com/user-permissions-in-serverless-sql-pools-external-tables-vs-views/)
-- [Serverless SQL: Partition Pruning Delta Tables in Azure Synapse Analytics](https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types)
+## :material-playlist-plus: Read Mores
+
+- [:material-newspaper: User Permission in Serverless SQL Pools](https://www.serverlesssql.com/user-permissions-in-serverless-sql-pools-external-tables-vs-views/)
+- [:material-newspaper: Serverless SQL: Partition Pruning Delta Tables in Azure Synapse Analytics](https://www.serverlesssql.com/partition-pruning-delta-tables-in-azure-synapse-analytics/#Database_Types)

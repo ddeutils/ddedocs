@@ -7,6 +7,8 @@ a unified approach across all of your Databricks workspaces.
 
     **Azure Databricks** workspace should be **Premium** pricing tier.
 
+---
+
 ## :material-sort-variant: Prerequisite
 
 To enable the **Databricks Account Console** and establish your first **Account
@@ -17,19 +19,20 @@ For security purposes, only someone with the **Global Administrator** role has
 permission to assign the first account admin role. After completing these steps,
 you can remove the **Global Administrator** role from the Azure Databricks account.
 
-- Create **Resource Group**
-- Create Premium Tier **Azure Databricks** Workspace
-- Create **Azure DataLake Gen2 Storage Account** and Container
-- Create **Access Connector** for **Azure Databricks**
-- Grant **Storage Blob Data Contributor** to **Access Connector** for **Azure Databricks**
-  on **Azure DataLake Gen2 Storage Account**
-- Enable **Unity Catalog** by creating Metastore and assigning to Workspace
+1.  Create **Resource Group**
+2.  Create Premium Tier **Azure Databricks** Workspace
+3.  Create **Azure DataLake Gen2 Storage Account** and Container
+4.  Create **Access Connector** for **Azure Databricks**
+5.  Grant **Storage Blob Data Contributor** to **Access Connector** for **Azure Databricks** on **Azure DataLake Gen2 Storage Account**
+6.  Enable **Unity Catalog** by creating Metastore and assigning to Workspace
 
 !!! note
 
     If you do not create new **Access Connector** and use default provisioning, it
     will not use any managed identity on this **Access Connector**. The default
     Accesss Connector name is `unity-catalog-access-connector`
+
+---
 
 ## :material-arrow-down-right: Getting Started
 
@@ -41,6 +44,8 @@ you can remove the **Global Administrator** role from the Azure Databricks accou
     - **Azure DataLake Storage Gen2** (Example: `https://<container-name>@<storage-account-name>.dfs.core.windows.net/<path>`)
     - **Access Connector ID** (Resource ID of your **Access Connector**)
 - Assign the workspace map to this metastore :octicons-arrow-right-24: Click on **Enable** Unity Catalog
+
+---
 
 ## :material-arrow-right-bottom: External Catalog
 
@@ -58,6 +63,8 @@ you can remove the **Global Administrator** role from the Azure Databricks accou
   :octicons-arrow-right-24: Click **Add** an external location
 - Enter the External location name and **Azure DataLake Storage Gen2** URL :octicons-arrow-right-24:
   Select the Storage credential you created :octicons-arrow-right-24: Click **Create**
+
+---
 
 ## :material-playlist-plus: Read Mores
 

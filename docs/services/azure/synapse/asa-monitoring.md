@@ -1,6 +1,8 @@
-# Azure Synapse Analytic: _Operation_
+# Monitoring
 
-## Table Size
+## :material-arrow-down-right: Getting Started
+
+### Table Size
 
 ```sql
 CREATE VIEW dbo.vTableSizes
@@ -118,7 +120,7 @@ FROM size
 
 [Design tables using dedicated SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries)
 
-## Operation Status
+### Operation Status
 
 ```sql
 -- This query returns the latest operations in the server
@@ -142,7 +144,7 @@ SELECT [session_activity_id]
     FROM sys.dm_operation_status
 ```
 
-## Data Skew & Outdated State
+### Data Skew & Outdated State
 
 ```sql
 -- data skew -> cmp_rows>1mil, skew >= 10%
@@ -201,8 +203,8 @@ where cmp_row_count>@minRows and (stat_info is not null or skew_info is not null
 order by sch_name, table_name
 ```
 
-## References
+## :material-playlist-plus: Read Mores
 
-- https://davidalzamendi.com/azure-synapse-analytics-last-operations-in-server/
-- https://github.com/ProdataSQL/SynapseTools/blob/main/SqlPools/
-- https://github.com/ProdataSQL/SynapseTools/blob/main/SqlPools/Maintenance/vTableStats.sql
+- [:material-newspaper: Azure Synapse Last Operations in Server](https://davidalzamendi.com/azure-synapse-analytics-last-operations-in-server/)
+- [:material-github: GitHub: ProdataSQL - SynapseTools](https://github.com/ProdataSQL/SynapseTools/blob/main/SqlPools/)
+- [:material-github: GitHub: ProdataSQL - SynapseTools vTableStats](https://github.com/ProdataSQL/SynapseTools/blob/main/SqlPools/Maintenance/vTableStats.sql)

@@ -115,5 +115,5 @@ Cloud storage.
 
 ## Read Mores
 
-- [Running heavy workloads using Azure Batch Processing](https://www.bridgenext.com/blog/running-heavy-workloads-using-azure-batch-processing/)
-- [Azure Batch cloud scale containers for HPC](https://www.youtube.com/watch?v=r5jxlwJQEPc)
+- [:material-newspaper: Running heavy workloads using Azure Batch Processing](https://www.bridgenext.com/blog/running-heavy-workloads-using-azure-batch-processing/)
+- [:material-youtube: Azure Batch cloud scale containers for HPC](https://www.youtube.com/watch?v=r5jxlwJQEPc)

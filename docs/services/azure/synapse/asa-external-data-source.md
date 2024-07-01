@@ -1,4 +1,4 @@
-# Azure Synapse Analytic: _External Data Source_
+# External Data Source
 
 ## Database Scope Credential
 

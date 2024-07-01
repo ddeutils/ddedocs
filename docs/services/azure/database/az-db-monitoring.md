@@ -1,6 +1,8 @@
-# Azure Database: _Monitoring_
+# Monitoring
 
-## Partition State
+## :material-arrow-down-right: Getting Started
+
+### Partition State
 
 ```sql
 SELECT

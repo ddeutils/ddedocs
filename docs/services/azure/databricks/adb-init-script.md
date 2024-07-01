@@ -10,11 +10,13 @@ startup of each cluster node before the **Apache Spark** driver or executor
     init scripts. These init scripts might be present in workspaces created
     before **February 21, 2023**.
 
-## Cluster-Scoped init scripts
+## :material-arrow-down-right: Getting Started
+
+### Cluster-Scoped init scripts
 
 We want to initialize some program before a cluster started like:
 
-```shell titiles="init_script.sh"
+```shell title="init_script.sh"
 #!/bin/bash
 
 echo "Start running init script: adb-default"
@@ -26,11 +28,11 @@ timedatectl set-timezone Asia/Bangkok
 
 To use the UI to configure a cluster to run an init script, complete the following steps:
 
-- On the Cluster **Configuration Page** :octicons-arrow-right-24: Click the **Advanced Options** toggle.
-- At the bottom of the page :octicons-arrow-right-24: click the **Init Scripts** tab.
-- In the Destination drop-down, select the Workspace destination type.
-- Specify a path to the init script like `SYS/init_script.sh`.
-- Click Add.
+- On the Cluster **Configuration Page** :octicons-arrow-right-24: Click the **Advanced Options** toggle
+- At the bottom of the page :octicons-arrow-right-24: click the **Init Scripts** tab
+- In the Destination drop-down, select the Workspace destination type
+- Specify a path to the init script like `SYS/init_script.sh` :octicons-arrow-right-24:
+  Click **Add**.
 
 !!! note
 
@@ -39,14 +41,17 @@ To use the UI to configure a cluster to run an init script, complete the followi
     init script called `my-init.sh` in their home directory, the configured
     path would be `/Users/user1@databricks.com/my-init.sh`.
 
-## Global init scripts
+---
+
+### Global init scripts
 
 - Go to the **Admin Settings** :octicons-arrow-right-24: Click `Global Init Scripts`
-- Click + `Add`.
-- Name the script and enter it by typing, pasting, or dragging a text file
-  into the Script field.
+- Click **Add** :octicons-arrow-right-24: Name the script and enter it by typing,
+  pasting, or dragging a text file into the Script field.
 
-## References
+---
 
-- [](https://docs.databricks.com/clusters/init-scripts.html)
-- [](https://www.youtube.com/watch?v=p9IPgYM4AyI)
+## :material-playlist-plus: Read Mores
+
+- [:simple-databricks: Databricks - Init Scripts](https://docs.databricks.com/clusters/init-scripts.html)
+- [:material-youtube: Global Init Script in Azure databricks](https://www.youtube.com/watch?v=p9IPgYM4AyI)

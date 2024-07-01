@@ -55,7 +55,7 @@ df = (
 )
 ```
 
-## References
+## :material-playlist-plus: Read Mores
 
 - https://github.com/Azure/azure-event-hubs-spark/blob/master/docs/PySpark/structured-streaming-pyspark.md#user-configuration
 - https://medium.com/@kaviprakash.2007/structured-streaming-using-azure-databricks-and-event-hub-6b0bcbf029c4
