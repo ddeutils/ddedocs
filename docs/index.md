@@ -43,7 +43,7 @@ nowadays, it changes to in-memory processing like **Impala** or **Spark**.
 
 ![The 2023 MAD (ML/AI/DATA) Landscape](img/mad-data-landscape.png){ loading=lazy width="350" align=right }
 
-You will see the right picture, the [**2023 MAD (ML/AI/Data) Landscape** :material-land-plots:](https://mad.firstmark.com/),
+You will see the right picture, the [**2023 MAD (ML/AI/Data) Landscape** :material-land-plots:](https://mad.firstmark.com/)[^2],
 that show about how many possibility tools that able to use on your project.
 It has many area that you should to choose which one that match with the current
 architect or fit with your cost planing model.
@@ -81,7 +81,7 @@ to interact the Data in the **Data Platform** that make less of SLA to require
 ## :material-account-arrow-right-outline: Roles
 
 :material-page-last: In the future, if I do not in love with communication or management
-level skill that make me be :material-face-agent: [**Lead Data Engineer**](roles/lead_data_engineer/index.md),
+level skill that make me be :material-face-agent: [**Lead Data Engineer**](lead-data-engineer.md),
 I will go to any specialize roles such as,
 
 <div class="grid cards" markdown>
@@ -122,6 +122,8 @@ I will go to any specialize roles such as,
     [Read More about **Analytic Engineer**](https://towardsdatascience.com/analytics-engineering-8b0ed0883379)
 
 </div>
+
+The role from above, I reference from ^^Types of Data Professionals^^[^4].
 
 ---
 
@@ -172,50 +174,69 @@ Why Data Engineer?
 
 ### Methodologies
 
-- **Discovery Phase:**
+-   **Discovery Phase:**
 
-  At this early stage, flexibility is crucial because requirements in large enterprises often evolve. Identify the primary and secondary stakeholders. Meet them, and get their avatar into an orientation diagram or slide deck. These are ultimately your customers; engagement with them will make or break your project. Identify the product owner. This person, or people, will own the delivery and operations for this data product. They will be your tiebreakers and demo audience, and they are the ones who will sign off on your project's delivery.
+    At this early stage, flexibility is crucial because requirements in large
+    enterprises often evolve. Identify the primary and secondary stakeholders.
+    Meet them, and get their avatar into an orientation diagram or slide deck.
+    These are ultimately your customers; engagement with them will make or break
+    your project.
 
-- **Requirements Gathering**
+    Identify the product owner. This person, or people, will own the delivery and
+    operations for this data product. They will be your tiebreakers and demo audience,
+    and they are the ones who will sign off on your project's delivery.
 
-  The process of gathering requirements from various stakeholders can be technically and inter-personally challenging. Not everyone will have the same understanding of the problem or its solutions. Techniques such as interviews, surveys, and workshops will help expose these differences so that we can work towards getting everyone on the same page. Mock-ups and wireframes can also help flush out requirements at this phase.
+-   **Requirements Gathering**
 
-- **Design and Planning**
+    The process of gathering requirements from various stakeholders can be technically
+    and inter-personally challenging. Not everyone will have the same understanding
+    of the problem or its solutions. Techniques such as interviews, surveys,
+    and workshops will help expose these differences so that we can work towards
+    getting everyone on the same page. Mock-ups and wireframes can also help
+    flush out requirements at this phase.
 
-  Data engineers should plan the architecture, data pipelines, and infrastructure
-  based on the gathered requirements. This phase should stress the importance of
-  designing for scalability and maintainability. Deciding to buy or build happens
-  here. Will there be legacy code to deal with, existing system integrations, or greenfield? Consider which systems will consume the data when selecting a data store. Web apps will need low-latency data stores and will benefit from caching (think MemCacheD). Dashboards usually work best with relational database systems such as PostGres or MySQL, and caching may not be ideal for real-time or near-real-time data, but read replicas may help fan out the read load. Most data projects will benefit from an ETL (Extract, Transform, Load) pattern, where each step is a discrete, independent step that can be run and tested in isolation and end to end. The artifacts from this design process should include diagrams, documentation, and, hopefully, the beginnings of test cases. It would also be a good idea to start a source-to-target mapping that defines the data points in the consuming application (dashboard, web app, etc.) and shows their lineage all the way back to their original source.
+-   **Design and Planning**
 
-- **Story grooming and Backlog building**
+    Data engineers should plan the architecture, data pipelines, and infrastructure
+    based on the gathered requirements. This phase should stress the importance of
+    designing for scalability and maintainability. Deciding to buy or build happens
+    here. Will there be legacy code to deal with, existing system integrations, or greenfield? Consider which systems will consume the data when selecting a data store. Web apps will need low-latency data stores and will benefit from caching (think MemCacheD). Dashboards usually work best with relational database systems such as PostGres or MySQL, and caching may not be ideal for real-time or near-real-time data, but read replicas may help fan out the read load. Most data projects will benefit from an ETL (Extract, Transform, Load) pattern, where each step is a discrete, independent step that can be run and tested in isolation and end to end. The artifacts from this design process should include diagrams, documentation, and, hopefully, the beginnings of test cases. It would also be a good idea to start a source-to-target mapping that defines the data points in the consuming application (dashboard, web app, etc.) and shows their lineage all the way back to their original source.
 
-  Once we have a design and some test cases, we identify the Minimum Viable Product (MVP).
-  This could be a thin slice of functionality where a subset of data is exposed
-  end to end or a single data source end to end, the idea is to break up the work
-  into phases or chunks that are more manageable. Features are written to encapsulate
-  the required work for each part of the MVP, those features are filled in with
-  the user stories that make that feature work. At this point, you will want a
-  detailed design for the MVP, including data flows, expected inputs and outputs,
-  API contracts, etc. The components not in scope for MVP can have epics and even
-  features at this point, but since you will learn as you build out MVP, it might
-  make sense to leave the detail for non-MVP components until closer to the delivery
-  of the MVP.
+-   **Story grooming and Backlog building**
 
-- **Implementation and Testing**
+    Once we have a design and some test cases, we identify the Minimum Viable Product (MVP).
+    This could be a thin slice of functionality where a subset of data is exposed
+    end to end or a single data source end to end, the idea is to break up the work
+    into phases or chunks that are more manageable. Features are written to encapsulate
+    the required work for each part of the MVP, those features are filled in with
+    the user stories that make that feature work. At this point, you will want a
+    detailed design for the MVP, including data flows, expected inputs and outputs,
+    API contracts, etc. The components not in scope for MVP can have epics and even
+    features at this point, but since you will learn as you build out MVP, it might
+    make sense to leave the detail for non-MVP components until closer to the delivery
+    of the MVP.
 
-  Once we have user stories, engineers can fill out the tasks that will satisfy the user story requirements. We can take these requirements and start writing tests that our production code will then satisfy. Some organizations will open a pull request with just the test cases to facilitate the conversation with the technical team and stakeholders. Initial development artifacts should include production code and unit tests. As complete functionality is deployed, integration tests can be built out where real data moves through the pipeline and is measured at critical points during its journey for accuracy and completeness. Once the entire pipeline is in place, we develop our end-to-end tests that cover the complete pipeline with checks to ensure we push the right data to the correct place. Using this test-driven development (TDD) approach, we can ensure the person writing the software feature is writing just the code needed to satisfy requirements and nothing more. This goes a long way to cut down the number of defects and missed requirements.
+-   **Implementation and Testing**
 
-- **Validation and Quality Assurance**: **Tracking row counts at every point in the pipeline and automated tests for known business rules will eliminate many validation issues**
+    Once we have user stories, engineers can fill out the tasks that will satisfy the user story requirements. We can take these requirements and start writing tests that our production code will then satisfy. Some organizations will open a pull request with just the test cases to facilitate the conversation with the technical team and stakeholders. Initial development artifacts should include production code and unit tests. As complete functionality is deployed, integration tests can be built out where real data moves through the pipeline and is measured at critical points during its journey for accuracy and completeness. Once the entire pipeline is in place, we develop our end-to-end tests that cover the complete pipeline with checks to ensure we push the right data to the correct place. Using this test-driven development (TDD) approach, we can ensure the person writing the software feature is writing just the code needed to satisfy requirements and nothing more. This goes a long way to cut down the number of defects and missed requirements.
 
-  Having Subject Matter Experts (SMEs) or Business analysts with domain knowledge get eyeballs on the data will identify problems before production. This means providing a stable, consistent, accessible place for validations. A good artifact from this process is a data quality report that shows the health or quality of data at each step in the pipeline. Things like anomaly detection on the values can automate the detection of bugs or drift.
+-   **Validation and Quality Assurance**: **Tracking row counts at every point in the pipeline and automated tests for known business rules will eliminate many validation issues**
 
-- **Feedback Loops**
+    Having Subject Matter Experts (SMEs) or Business analysts with domain knowledge get eyeballs on the data will identify problems before production. This means providing a stable, consistent, accessible place for validations. A good artifact from this process is a data quality report that shows the health or quality of data at each step in the pipeline. Things like anomaly detection on the values can automate the detection of bugs or drift.
 
-  Throughout each phase of this methodology, stakeholders should establish feedback loops to ensure alignment and address evolving requirements. Initially, initial diagrams, documentation, and story grooming can help establish feedback loops. Later, regular and frequent demos and design reviews will help shape conversations around expectations and functionality.
+-   **Feedback Loops**
 
-- **Hand-off**
+    Throughout each phase of this methodology, stakeholders should establish feedback loops to ensure alignment and address evolving requirements. Initially, initial diagrams, documentation, and story grooming can help establish feedback loops. Later, regular and frequent demos and design reviews will help shape conversations around expectations and functionality.
 
-  Once the functionality is delivered, an operations team must be trained to support and maintain the application. Clear diagrams and documentation will aid this process. Runbooks and troubleshooting guides are also invaluable at this point. Ideally, most of the invasive maintenance has been automated, and the operations team is left to handle support requests, such as requests for access, data issues, etc. Metrics such as the number of incidents and their root causes will help illuminate where future development work might need to happen.
+-   **Hand-off**
+
+    Once the functionality is delivered, an operations team must be trained to
+    support and maintain the application. Clear diagrams and documentation will
+    aid this process. Run-books and troubleshooting guides are also invaluable at
+    this point. Ideally, most of the invasive maintenance has been automated,
+    and the operations team is left to handle support requests, such as requests for access, data issues, etc. Metrics such as the number of incidents and their root causes will help illuminate where future development work might need to happen.
+
+---
 
 **Conclusion**:
 

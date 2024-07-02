@@ -5,3 +5,7 @@
 
 - https://medium.com/@karim.faiz/open-data-lakehouse-revolutionizing-data-management-2cecf94f95e3
 - [Data Lake 101: Architecture](https://aws.plainenglish.io/data-lake-101-architecture-5da905c2256c)
+
+## Examples
+
+- [:simple-medium: 5 Brilliant Lakehouse Architectures from Tencent, WeChat, and More](https://starrocks.medium.com/5-brilliant-lakehouse-architectures-from-tencent-wechat-and-more-dd069facf532)

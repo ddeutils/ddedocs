@@ -86,7 +86,9 @@ nav:
                   - Data Vault Approach:
                       - Abstract: abstract/data_architecture/data_modeling/dwh-data-vault-approach.md
                       - Implement: abstract/data_architecture/data_modeling/dwh-data-vault-implement.md
+                      - Buzz Act Schema: abstract/data_architecture/data_modeling/dwh-data-vault-business-vault-act-schema.md
                   - Anchor Approach: abstract/data_architecture/data_modeling/dwh-anchor-approach.md
+                  - One Big Table Approach: abstract/data_architecture/data_modeling/dwh-obt-approach.md
           - Data Mesh:
               - abstract/data_mesh/index.md
           - DataOps:
@@ -98,6 +100,7 @@ nav:
               - Data Orchestration: abstract/data_observability/dobs-data-orchestration.md
               - Data CICD: abstract/data_observability/dobs-data-cicd.md
               - Data Quality Metric: abstract/data_observability/dobs-data-quality-metrics.md
+              - Data Quality Pyramid: abstract/data_observability/dobs-data-quality-pyramid.md
               - Data Lineage: abstract/data_observability/dobs-data-lineage.md
               - Data Consistency: abstract/data_observability/dobs-data-consistency.md
               - Viable Monitoring System: abstract/data_observability/dobs-maintaining-a-viable-monitoring-sys.md
@@ -108,14 +111,15 @@ nav:
               - Normalization: abstract/data_strategy/strategy-normalization-form.md
               - De-Normalization: abstract/data_strategy/strategy-denormalization-form.md
               - Slowly Change Dimension: abstract/data_strategy/strategy-scd.md
+              - Sensitive Data: abstract/data_strategy/strategy-sensitive-data.md
       - Advance:
           - MLOps:
               - abstract/mlops/index.md
+              - Challenge: abstract/mlops/mlops-challenge.md
           - Emerging Trends:
               - abstract/emerging_trends/index.md
       - Roles:
-          - Lead Data Engineer:
-              - roles/lead_data_engineer/index.md
+          - Lead Data Engineer: lead-data-engineer.md
   - Services:
       - services/index.md
       - Provider:
@@ -192,6 +196,7 @@ nav:
               - Lambda:
                   - Pros & Cons: services/aws/lambda/lambda-stop-using-for-everything.md
                   - With Docker: services/aws/lambda/lambda-with-docker.md
+                  - CICD: services/aws/lambda/lambda-cicd.md
               - Step Functions:
                   - Getting Started: services/aws/step_functions/stfn-getting-started.md
                   - State Machine Language: services/aws/step_functions/stfn-state-machine-language.md
@@ -199,6 +204,7 @@ nav:
               - Glue:
                   - services/aws/glue/index.md
                   - Data Quality: services/aws/glue/glue-data-quality.md
+                  - With Iceberg: services/aws/glue/glue-with-iceberg.md
                   - Local Env: services/aws/glue/glue-local-env.md
               - Athena:
                   - With DeltaLake: services/aws/athena/athena-with-delta-lake.md
@@ -207,6 +213,8 @@ nav:
               - Kinesis:
                   - Data Streams: services/aws/kinesis/kinesis-data-streams.md
                   - Data Firehose: services/aws/kinesis/kinesis-data-firehose.md
+              - Secret:
+                  - Across Account: services/aws/secrets/secrets-across-account.md
           - Google:
               - services/google/index.md
               - API Authentication: services/google/google-api-authen.md
@@ -239,6 +247,8 @@ nav:
                   - Databricks: services/terraform/tf-databricks.md
                   - Azure:
                       - Databricks: services/terraform/tf-azure-databricks.md
+                  - AWS:
+                      - Glue: services/terraform/tf-aws-glue.md
           - Infisical:
               - services/infisical/index.md
       - Server & Container:
@@ -258,6 +268,8 @@ nav:
               - services/k8s/index.md
               - Pod Scheduling: services/k8s/k8s-pod-scheduling.md
               - Networking: services/k8s/k8s-networking.md
+              - RBAC: services/k8s/k8s-rbac.md
+              - State Phase: services/k8s/k8s-state-phase.md
       - Databases:
           - Postgres:
               - services/postgres/index.md
@@ -288,11 +300,13 @@ nav:
               - Wheel: tools/lang/python/py-dependency-wheel.md
               - Sync Multi-processes: tools/lang/python/py-sync-multi-processes.md
               - Data Structure for DE: tools/lang/python/py-data-structure-for-data-engineer.md
+              - Threading: tools/lang/python/py-threading.md
               - Libraries:
                   - Pytest: tools/lang/python/libs/py-pytest.md
                   - Pre-Commit: tools/lang/python/libs/py-pre-commit.md
                   - Joblib: tools/lang/python/libs/py-joblib.md
                   - Pydantic: tools/lang/python/libs/py-pydantic.md
+                  - SQLAlchemy: tools/lang/python/libs/py-sqlalchemy.md
               - Functional Programing:
                   - Monad: tools/lang/python/functional/py-func-monad.md
                   - Toolz: tools/lang/python/functional/py-func-toolz.md
@@ -343,8 +357,6 @@ nav:
       - Collection & Integration:
           - DLT:
               - tools/collection/dlt/index.md
-          - SQLAlchemy:
-              - tools/collection/sqlalchemy/index.md
           - Airbyte:
               - tools/collection/airbyte/index.md
               - With Terraform: tools/collection/airbyte/airbyte-with-terraform.md
@@ -450,8 +462,6 @@ nav:
           - Hadoop:
               - tools/storage/hadoop/index.md
               - On Mac: tools/storage/hadoop/hadoop-on-mac.md
-          - LakeFS:
-              - tools/storage/lakefs/index.md
           - MinIO:
               - tools/storage/minio/index.md
       - Quality:
@@ -459,14 +469,16 @@ nav:
               - tools/quality/great_expectations/index.md
               - With Databricks: tools/quality/great_expectations/gexp-with-databricks.md
               - With Spark: tools/quality/great_expectations/gexp-with-spark.md
-      - Deploy & Monitoring:
+      - CICD & Monitoring:
           - Jenkins:
-              - tools/deploy/jenkins/index.md
+              - tools/cicd/jenkins/index.md
           - Jira:
-              - tools/deploy/jira/index.md
+              - tools/cicd/jira/index.md
       - ML & Analytic:
           - MLflow:
               - tools/analytic/mlflow/index.md
+          - Pinot:
+              - tools/analytic/pinot/index.md
   - Blogs:
       - blogs/index.md
 

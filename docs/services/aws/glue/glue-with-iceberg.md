@@ -1,6 +1,6 @@
 # With Iceberg
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
 ###  Define the important libraries
 
@@ -114,6 +114,6 @@ ib_Write_SQL = f"""
 ibspark.sql(ib_Write_SQL)
 ```
 
-## References
+## :material-playlist-plus: Read Mores
 
-- https://rajaswalavalkar.medium.com/deploy-apache-iceberg-data-lake-on-amazon-s3-using-aws-glue-spark-job-e14feb38e048
+- [:simple-medium: Deploy Apache Iceberg Data Lake on Amazon S3 using AWS Glue Spark job](https://rajaswalavalkar.medium.com/deploy-apache-iceberg-data-lake-on-amazon-s3-using-aws-glue-spark-job-e14feb38e048)

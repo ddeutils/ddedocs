@@ -4,11 +4,6 @@
 [![gh license](https://img.shields.io/github/license/ddeutils/ddedocs)](https://github.com/ddeutils/ddedocs/blob/main/LICENSE)
 <img alt="gitleaks badge" src="https://img.shields.io/badge/protected%20by-gitleaks-blue">
 
-**Table of Contents:**
-
-- [Page](#page)
-- [Noted](#noted)
-
 > [!WARNING]
 > This project will deliver about **Data Developer & Engineer Documents and
 > Hands-On** from my experience and reference from public blogs only!!!

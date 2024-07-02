@@ -28,12 +28,12 @@ especially in terms of its approach to **concurrency** and **memory safety**.
 
 The key features that define safety in rust are:
 
-- [Memory management (Ownership System)](#ownership---memory-management)
+- [Memory management (Ownership System)](#ownership--memory-management)
 - [Borrowing and references](#borrowing-and-references)
 - [Lifetimes](#lifetimes)
 - [Error handling](#error-handling)
 
-### Ownership - Memory management
+### Ownership & Memory management
 
 _Ownership_ is a **set of rules that govern how a program manages memory**.
 It refers to how different parts of the system’s memory are allocated and controlled.

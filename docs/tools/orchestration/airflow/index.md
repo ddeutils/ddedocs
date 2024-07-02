@@ -1,5 +1,5 @@
 ---
-icon: simple/apacheairflow
+icon: material/pinwheel-outline
 ---
 
 # Apache Airflow

@@ -1,5 +1,5 @@
 ---
-icon: material/chat-question-outline
+icon: simple/delta
 ---
 
 # Delta

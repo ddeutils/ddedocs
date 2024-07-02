@@ -1,20 +1,9 @@
-# Pyspark Delta lake: SCD2
+# SCD2
 
-**Update**: `2023-04-25` |
-**Tag**: `Python` `Spark` `Delta Lake` `SCD` `DWH`
-
-**Slowly Changing Dimensions** (SCDs) are a concept used in data warehousing to maintain
+**Slowly Changing Dimensions (SCD)** are a concept used in data warehousing to maintain
 historical data over time, while tracking changes in data. SCDs are important for
 analysis and reporting purposes, and there are different types of SCDs to choose
 from depending on the specific requirements of the data warehouse.
-
-**Table of Contents**:
-
-- [Advantages of Using Delta Lake for SCD2 Implementation](#advantages-of-using-delta-lake-for-scd2-implementation)
-- [Setup Data table for SCD2 Implementation](#setup-data-table-for-scd2-implementation)
-- [**Method 01**: Insert, Update, and Overwrite](#method-01--insert-update-and-overwrite)
-- [**Method 02**: Union after Merge](#method-02--union-after-merge)
-- [**Method 03**: Merge and Append](#method-03--merge-and-append)
 
 ## Advantages of Using Delta Lake for SCD2 Implementation
 
@@ -43,7 +32,7 @@ from depending on the specific requirements of the data warehouse.
   reports and dashboards that can provide insights into trends and patterns over
   time.
 
-## Setup Data table for SCD2 Implementation
+## Setup Data table
 
 We define customer table that has initialized data name `initial_df` and incoming
 data name `source_df`.

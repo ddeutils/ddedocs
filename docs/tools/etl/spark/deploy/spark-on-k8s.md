@@ -9,6 +9,7 @@ available. This is great in so many ways, including but not limited to:
 - can use minio as local storage backend (better throughput compared to calling S3 via home/work internet)
 - cheaper than all managed solutions, even serverless variants (more on this later)
 
-## References
+## Read Mores
 
 - [Spark on Kubernetes](https://karnwong.me/posts/2023/09/spark-on-kubernetes/?fbclid=IwAR1c9QzH5jSUpUw0cvPovkCWD7l1Tq7Kvmf7rBHToNRhW_IPKbGf3KjeEOQ)
+- [:simple-medium: Spark On Kubernetes](https://medium.com/@kayvan.sol2/spark-on-kubernetes-d566158186c6)

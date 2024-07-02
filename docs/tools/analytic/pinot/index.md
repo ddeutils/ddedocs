@@ -1,3 +1,7 @@
+---
+icon: material/pin-outline
+---
+
 # Apache Pinot
 
 **Pinot** is a distributed low latency OLAP data store. It is optimized for analytical

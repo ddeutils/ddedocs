@@ -4,6 +4,6 @@ icon: material/ansible
 
 # Ansible
 
-## Read Mores
+## :material-playlist-plus: Read Mores
 
-- [](https://youtu.be/kWSlAGp4Z1k?si=9T67IPO4R6lR1FSl)
+- [:material-youtube: Ansible ขอแบบเบาๆ](https://youtu.be/kWSlAGp4Z1k?si=9T67IPO4R6lR1FSl)

@@ -2,6 +2,6 @@
 
 ![Azure Databricks Architecture](img/adb-architecture.png){ loading=lazy }
 
-## References
+## :material-playlist-plus: Read Mores
 
-- https://learn.microsoft.com/en-us/azure/databricks/getting-started/overview
+- [:material-microsoft: Microsoft - Azure Databricks Getting Started](https://learn.microsoft.com/en-us/azure/databricks/getting-started/overview)
