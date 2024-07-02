@@ -2,6 +2,26 @@
 
 ## Latest Changes
 
+## 20240702
+
+### :scissors: References
+
+- :clipboard: refs: data-mesh and knowledge from chat-gpt. (_2024-06-29_)
+
+### :book: Documents
+
+- :page_facing_up: docs: update and add icon azure content. (_2024-07-02_)
+- :page_facing_up: docs: update docs on azure content. (_2024-07-01_)
+- :page_facing_up: docs: update docs for azure content. (_2024-06-30_)
+- :page_facing_up: docs: update docs on azure service for batch. (_2024-06-30_)
+- :page_facing_up: docs: update role session on home page. (_2024-06-29_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: tools that does not use in common case. (_2024-06-30_)
+- :construction: refactored: remove role nav from home page. (_2024-06-29_)
+- :construction: refactored: change location of data modeling technique. (_2024-06-28_)
+
 ## 20240628
 
 ### :scissors: References
