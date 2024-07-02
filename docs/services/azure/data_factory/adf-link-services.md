@@ -250,9 +250,7 @@
     }
     ```
 
-## AWS Services
-
-## Google Services
+---
 
 ## Storage System
 
@@ -478,6 +476,8 @@
         }
     }
     ```
+
+---
 
 ## File System
 

@@ -1,6 +1,6 @@
 # External Data Source
 
-## Database Scope Credential
+## :material-arrow-right-bottom: Database Scope Credential
 
 A **Database Credential** is not mapped to a server login or database user. The
 credential is used by the database to access to the external location anytime the
@@ -126,7 +126,9 @@ to access the data via RBAC in **Azure Portal**.
     GO
     ```
 
-## External Data Source
+---
+
+## :material-arrow-right-bottom: External Data Source
 
 ### List Data Source
 
@@ -182,7 +184,9 @@ data source. See [More Supported Protocol](https://learn.microsoft.com/en-us/sql
     )
     ```
 
-## External File Format
+---
+
+## :material-arrow-right-bottom: External File Format
 
 ### Create File Format
 
@@ -207,7 +211,9 @@ WITH (
 );
 ```
 
-## References
+---
+
+## :material-playlist-plus: Read Mores
 
 - [Microsoft: Develop Storage Files Access Control](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity)
 - [Microsoft: TSQL - Create External Data Source](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=azure-sqldw-latest&preserve-view=true&tabs=dedicated)

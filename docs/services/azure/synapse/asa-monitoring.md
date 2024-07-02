@@ -120,6 +120,8 @@ FROM size
 
 [Design tables using dedicated SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries)
 
+---
+
 ### Operation Status
 
 ```sql
@@ -143,6 +145,8 @@ SELECT [session_activity_id]
       ,[last_modify_time]
     FROM sys.dm_operation_status
 ```
+
+---
 
 ### Data Skew & Outdated State
 
@@ -202,6 +206,8 @@ from [all_results]
 where cmp_row_count>@minRows and (stat_info is not null or skew_info is not null)
 order by sch_name, table_name
 ```
+
+---
 
 ## :material-playlist-plus: Read Mores
 

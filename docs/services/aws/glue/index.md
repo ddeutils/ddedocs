@@ -1,6 +1,8 @@
 # AWS Glue
 
-Let’s start by briefly introducing the key concepts we’ll cover:
+## :material-arrow-down-right: Getting Started
+
+Let's start by briefly introducing the key concepts we'll cover:
 
 - AWS Glue Data Catalog: A centralized metadata repository that stores metadata about data sources, transformations, and targets.
 - AWS Glue Database: A logical container that organizes tables, allowing for better data management.
@@ -16,6 +18,6 @@ Let’s start by briefly introducing the key concepts we’ll cover:
 
 https://levelup.gitconnected.com/optimizing-and-reducing-aws-glue-costs-e7426fa732af
 
-## References
+## :material-playlist-plus: Read Mores
 
 - [A Guide to AWS Glue: Data Catalog, Databases, Crawler, Triggers, with S3](https://jouneidraza.medium.com/a-guide-to-aws-glue-data-catalog-databases-crawler-triggers-with-s3-252c0ab4114e)

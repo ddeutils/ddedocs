@@ -178,7 +178,8 @@ nav:
           - AWS:
               - services/aws/index.md
               - VPC: services/aws/aws-vpc.md
-              - IoT:
+              - Policy: services/aws/aws-policy.md
+              - IoT Core:
                   - Rule to S3: services/aws/iot_core/iot-rule-to-s3.md
                   - Rule to Kinesis: services/aws/iot_core/iot-rule-to-kinesis.md
                   - Rule to Timestream Grafana: services/aws/iot_core/iot-rule-timestream-grafana.md
