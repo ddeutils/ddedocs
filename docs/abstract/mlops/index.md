@@ -76,6 +76,10 @@ However, **ML Engineers** focus on building, training and validating machine lea
 models, while **MLOps Engineers** concentrate primarily on testing, deploying and
 monitoring models in production environments.
 
+## Noted
+
+- [:simple-medium: Practical MLOps — MLflow](https://oleg-dubetcky.medium.com/practical-mlops-mlflow-78ff9dd7eb2d)
+
 ## Read Mores
 
 - [:simple-medium: MLOps - What, Why and How](https://medium.com/@anup0999/mlops-what-why-and-how-7c1e0eb39ca1)

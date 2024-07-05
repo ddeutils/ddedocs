@@ -70,6 +70,8 @@ nav:
               - Modern Team: abstract/data_governance/dgn-with-modern-data-team.md
           - Data Architecture:
               - abstract/data_architecture/index.md
+              - Secure Data Platform: abstract/data_architecture/data-architecture-secure-data-platform.md
+              - Event-Driven Data Architect: abstract/data_architecture/event-driven-data-architecture.md
               - Data Lakehouse:
                   - abstract/data_lakehouse/index.md
                   - PBAC: abstract/data_lakehouse/data-lakehouse-policy-based-access-control.md
@@ -91,6 +93,7 @@ nav:
                   - One Big Table Approach: abstract/data_architecture/data_modeling/dwh-obt-approach.md
           - Data Mesh:
               - abstract/data_mesh/index.md
+              - Data Domain Usage Monitoring: abstract/data_mesh/data-domain-usage-monitoring.md
           - DataOps:
               - abstract/dataops/index.md
           - Data Pipeline:
@@ -217,7 +220,7 @@ nav:
                   - Across Account: services/aws/secrets/secrets-across-account.md
           - Google:
               - services/google/index.md
-              - API Authentication: services/google/google-api-authen.md
+              - OAuth: services/google/google-oauth.md
               - Cloud Functions:
                   - To Managing Secrets: services/google/functions/gcf-to-managing-secrets.md
               - BigQuery:
@@ -255,6 +258,7 @@ nav:
           - Server:
               - services/server/index.md
               - SSH: services/server/edge-ssh.md
+              - SSL/TSL: services/server/edge-ssl.md
               - FTP: services/server/edge-ftp.md
               - SFTP: services/server/edge-sftp.md
           - Docker:
@@ -455,6 +459,7 @@ nav:
               - tools/open_table/iceberg/index.md
               - Reduce Full Scan: tools/open_table/iceberg/icb-reduce-full-scan.md
               - Small Files: tools/open_table/iceberg/icb-small-files.md
+              - Concurrent Write: tools/open_table/iceberg/icb-concurrent-write.md
               - With Pyspark: tools/open_table/iceberg/icb-with-pyspark.md
           - Hudi:
               - tools/open_table/hudi/index.md

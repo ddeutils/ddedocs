@@ -28,10 +28,10 @@ especially in terms of its approach to **concurrency** and **memory safety**.
 
 The key features that define safety in rust are:
 
-- [Memory management (Ownership System)](#ownership--memory-management)
-- [Borrowing and references](#borrowing-and-references)
-- [Lifetimes](#lifetimes)
-- [Error handling](#error-handling)
+- Ownership & Memory management
+- Borrowing and references
+- Lifetimes
+- Error handling
 
 ### Ownership & Memory management
 

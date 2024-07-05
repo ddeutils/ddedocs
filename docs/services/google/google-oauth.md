@@ -1,6 +1,6 @@
-# Google: API Authentication
+# OAuth
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
 ### 1) Create Credential
 
@@ -101,9 +101,13 @@
 
 ## OAuth Playground
 
-[Developer OAuth Playground](https://developers.google.com/oauthplayground/)
+- [:material-google: Developer OAuth Playground](https://developers.google.com/oauthplayground/)
 
-## References
+## Implement
+
+- [:simple-medium: Implement OAuth 2.0 Authorization Flow With FastAPI](https://python.plainenglish.io/implement-oauth-2-0-authorization-flow-with-fastapi-7365385862e9)
+
+## Read Mores
 
 - [:material-google-cloud: Google Developer: Identity - OAuth2 Web Server](https://developers.google.com/identity/protocols/oauth2/web-server#userconsentprompt)
 - [:simple-medium: Getting Google OAuth Access Token using Google APIs](https://medium.com/automationmaster/getting-google-oauth-access-token-using-google-apis-18b2ba11a11a)

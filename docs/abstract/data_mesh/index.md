@@ -39,9 +39,9 @@ Here are the key characteristics and principles of **Data Mesh**:
 
 ## Noted
 
-- [Data Mesh in Practice](https://medium.com/@axel.schwanke/data-mesh-in-practice-recommendations-from-roches-journey-e0e0d51c4a89)
-- [Navigating Your Data Platform’s Growing Pains: A Path from Data Mess to Data Mesh](https://towardsdatascience.com/navigating-your-data-platforms-growing-pains-a-path-from-data-mess-to-data-mesh-c16df72f5463)
-- https://medium.com/@think-data/data-mesh-architecture-in-modern-data-engineering-762ac7f8901b
+- [:simple-medium: Data Mesh in Practice](https://medium.com/@axel.schwanke/data-mesh-in-practice-recommendations-from-roches-journey-e0e0d51c4a89)
+- [:simple-medium: Navigating Your Data Platform’s Growing Pains: A Path from Data Mess to Data Mesh](https://towardsdatascience.com/navigating-your-data-platforms-growing-pains-a-path-from-data-mess-to-data-mesh-c16df72f5463)
+- [:simple-medium: How Data Mesh Architecture changed our Engineering Teams](https://medium.com/@think-data/data-mesh-architecture-in-modern-data-engineering-762ac7f8901b)
 
 ## Questions
 
