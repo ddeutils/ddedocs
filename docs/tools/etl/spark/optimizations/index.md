@@ -1,4 +1,4 @@
-# Spark: _Optimization_
+# Optimization
 
 ## Performance Issues
 

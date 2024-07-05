@@ -1,8 +1,8 @@
-# Apache Spark: _Structured Stream_
+# Structured Stream
 
 ## ETL
 
-```python titles="Spark-streaming-medallion"
+```python title="Spark-streaming-medallion"
 class Bronze():
     def __init__(self):
         self.base_data_dir = "/FileStore/spark_structured_streaming"

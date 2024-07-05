@@ -31,6 +31,20 @@ managed _Consistently_ and _Reliably_.
     of **Data Infrastructure**, either On-Premises or Clouds, comprising databases,
     storages, compute engines, and pipelines to Extract, Transform, and Load Data.[^1]
 
+!!! quote
+
+    Data Engineering is the development, implementation, and maintenance of systems
+    and processes that take in raw data and produce high-quality, consistent
+    information that supports downstream use cases, such as analysis and machine
+    learning. Data engineering is the intersection of security, data management,
+    DataOps, data architecture, orchestration, and software engineering.
+
+    A Data Engineer manages the data engineering lifecycle, beginning with getting
+    data from source systems and ending with serving data for use cases, such as
+    analysis or machine learning.
+
+    — Joe Reis and Matt Housley in “Fundamentals of Data Engineering”
+
 <figure markdown="span">
   ![Life Cycle of Data Engineering](img/life-cycle-of-data-engineering.png){ loading=lazy width="650" }
   <figcaption><a href="https://www.techment.com/unlocking-the-power-of-data-a-beginners-guide-to-data-engineering/">Life Cycle of Data Engineering</a></figcaption>
@@ -163,6 +177,13 @@ keep update knowledge for Developer and Data Engineer trend.
     **Community Driven Roadmaps, Articles and Resources** for developers in Thailand
 
     [:octicons-arrow-right-24: Go Through](https://roadmap.thaiprogrammer.org/)
+
+-   :material-package-variant-plus: **TestDriven**
+
+    ---
+    Learn to build high-quality web apps with **best practices**
+
+    [:octicons-arrow-right-24: Go Through](https://testdriven.io/)
 
 </div>
 

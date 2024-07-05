@@ -17,7 +17,7 @@ icon: simple/apachespark
 
 - [Understanding Apache Spark Architecture](https://medium.com/@shobhittulshain/understanding-spark-architecture-6003184a12ec)
 - [A Deep Dive into Apache Spark Architecture](https://medium.com/@shaloomathew/a-deep-dive-into-apache-spark-architecture-fe01723b1aa6)
-- https://medium.com/@think-data/this-level-of-detail-in-spark-is-tackled-only-by-experts-2-975cfb41af50
+- [](https://medium.com/@think-data/this-level-of-detail-in-spark-is-tackled-only-by-experts-2-975cfb41af50)
 - [Partitioning & Bucketing](https://blog.det.life/apache-spark-partitioning-and-bucketing-1790586e8917)
 - [How does Adaptive Query Execution fix your Spark performance issues](https://medium.com/@kerrache.massipssa/how-does-adaptive-query-execution-fix-your-spark-performance-issues-029166e772b7)
 
@@ -80,9 +80,11 @@ icon: simple/apachespark
     )
     ```
 
+---
+
 ## Spark API
 
-Spark has two API types
+**Spark has two API types**:
 
 - Low-level API (Unstructured)
 - High-level API (Spark’s Structured API)
@@ -100,15 +102,16 @@ rdd = spark.read.csv("file.csv", header=True).rdd
 
 RDDs support 2 operations:
 
-- **Transformations** — create new rdd but lazy meaning they don't execute until you
-  call an action on RDD.
+-   **Transformations** — create new rdd but lazy meaning they don't execute until you
+    call an action on RDD.
 
-  Some transformations on RDDs are `flatMap()`, `map()`, `reduceByKey()`, `filter()`, `sortByKey()`
-  and all these return a new RDD instead of updating the current.
+    Some transformations on RDDs are `flatMap()`, `map()`, `reduceByKey()`, `filter()`, `sortByKey()`
+    and all these return a new RDD instead of updating the current.
 
-- **Actions** — return value to driver program after compute dataset finish.
+-   **Actions** — return value to driver program after compute dataset finish.
 
-  Some actions on RDDs are `count()`, `collect()`, `first()`, `max()`, `reduce()` and more.
+    Some actions on RDDs are `count()`, `collect()`, `first()`, `max()`, `reduce()`
+    and more.
 
 ### High-level API
 
@@ -118,7 +121,9 @@ Structured data
 Structured API able to use with batch and streaming computation that is Spark SQL,
 Dataframes, Datasets API but for streaming, it be Spark Structured Streaming.
 
-![Spark RDDs, DataFrames, and Datasets](img/spark-rdd-df-dataset.png)
+![Spark RDDs, DataFrames, and Datasets](./img/spark-rdd-df-dataset.png)
+
+---
 
 ## Execution
 

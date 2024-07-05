@@ -1,4 +1,4 @@
-# Spark RDD: _Map & MapPartitions_
+# Map & MapPartitions
 
 # Foreach
 
