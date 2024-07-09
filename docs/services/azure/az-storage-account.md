@@ -2,12 +2,14 @@
 
 ## :material-arrow-right-bottom: FQDN
 
-- Blob: `https://{storage-account-name}.blob.core.windows.net/`
-- File: `https://{storage-account-name}.file.core.windows.net/`
-- Queue: `https://{storage-account-name}.queue.core.windows.net/`
-- Table: `https://{storage-account-name}.table.core.windows.net/`
-- DataLake: `https://{storage-account-name}.dfs.core.windows.net/`
-- Static Web: `https://{storage-account-name}.z23.web.core.windows.net/`
+| Type       | FQDN                                                       |
+|------------|------------------------------------------------------------|
+| Blob       | `https://{storage-account-name}.blob.core.windows.net/`    |
+| File       | `https://{storage-account-name}.file.core.windows.net/`    |
+| Queue      | `https://{storage-account-name}.queue.core.windows.net/`   |
+| Table      | `https://{storage-account-name}.table.core.windows.net/`   |
+| DataLake   | `https://{storage-account-name}.dfs.core.windows.net/`     |
+| Static Web | `https://{storage-account-name}.z23.web.core.windows.net/` |
 
 ## :material-arrow-right-bottom: Storage Queue
 

@@ -1,5 +1,9 @@
 # Partition View
 
+!!! warning
+
+    The `OPENROWSET` syntax can use **Azure Synapse Serverless SQL Pool** only
+
 ## :material-arrow-down-right: Getting Started
 
 ### Manage Permission

@@ -122,7 +122,7 @@ to access the data via RBAC in **Azure Portal**.
     ) AS [r]
     GO
 
-    GRANT SELECT ON OBJECT::[DEVDWHCURATED].[VW_DELTA_DIM_SALE_ADB] TO adbuser
+    GRANT SELECT ON OBJECT::[CURATED].[<view-name>] TO <user-name>
     GO
     ```
 
@@ -212,6 +212,23 @@ WITH (
 ```
 
 ---
+
+## :material-arrow-right-bottom: External Table
+
+```sql
+CREATE EXTERNAL TABLE [CURATED].[<external-table-name>]
+(
+    [PurposeId] [varchar](max),
+    [RetireOnDate] [datetime],
+    [CreatedDate] [datetime]
+)
+WITH (
+    DATA_SOURCE = [<data-source-name>],
+    FILE_FORMAT = [<external-file-format>],
+    LOCATION = N'/path/of/data/date=20240708'
+)
+GO
+```
 
 ## :material-playlist-plus: Read Mores
 

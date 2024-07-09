@@ -18,7 +18,7 @@ principals.
 
 ![Inheritance model](img/adb-uc-object-hierarchy.png)
 
-## References
+## :material-playlist-plus: Read Mores
 
-- [Manage privileges in Unity Catalog](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/manage-privileges/#grant)
-- [Unity Catalog privileges and securable objects](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/manage-privileges/privileges)
+- [:material-microsoft: Manage privileges in Unity Catalog](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/manage-privileges/#grant)
+- [:material-microsoft: Unity Catalog privileges and securable objects](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/manage-privileges/privileges)

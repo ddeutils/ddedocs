@@ -1,12 +1,14 @@
-# Mount Azure Storage
+# Mount Storage
 
-**List of mounts**:
+## List of Mounts
 
 ```python
 display(dbutils.fs.mounts())
 ```
 
-## Azure Blob Storage
+## Mount
+
+### Azure Blob Storage
 
 ```python
 dbutils.fs.mount(
@@ -19,7 +21,9 @@ dbutils.fs.mount(
 )
 ```
 
-## DataLake
+---
+
+### Azure DataLake Storage
 
 ```python
 adls_account = "<storage-account-name>"
@@ -59,6 +63,8 @@ if not any(
     )
 ```
 
+---
+
 ## Unmount command
 
 ```python
@@ -71,7 +77,7 @@ if any(
     dbutils.fs.unmount(mount_point)
 ```
 
-## References
+## :material-playlist-plus: Read Mores
 
-- https://vvin.medium.com/mount-adls-gen2-to-databricks-file-system-using-service-principal-oauth-2-0-47527e339178
-- https://docs.databricks.com/en/storage/azure-storage.html
+- [Mount ADLS Gen2 to Databricks File System using Service Principle](https://vvin.medium.com/mount-adls-gen2-to-databricks-file-system-using-service-principal-oauth-2-0-47527e339178)
+- [Storage - Azure Storage](https://docs.databricks.com/en/storage/azure-storage.html)

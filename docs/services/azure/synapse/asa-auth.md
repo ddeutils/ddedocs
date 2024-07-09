@@ -236,8 +236,8 @@
 === ":material-database-off-outline: Serverless SQL Pool"
 
     ```sql
-    CREATE ROLE [rolename]
-    ALTER ROLE [rolename] ADD MEMBER [username@mail.com]
+    CREATE ROLE [rolename];
+    ALTER ROLE [rolename] ADD MEMBER [username@mail.com];
     GO
     ```
 
@@ -257,7 +257,7 @@
         ALTER ROLE [role-name] DROP MEMBER [username@mail.com];
         ```
 
-    Generate systax,
+    Generate a drop systax from query,
 
     === ":material-database-settings-outline: Dedicate SQL Pool"
 
@@ -371,7 +371,7 @@
 
 ### Grant
 
-=== "data execution"
+=== "Data Execution"
 
     ```sql
     GRANT CREATE VIEW TO [role-name];
@@ -387,13 +387,19 @@
     GRANT ALTER ON SCHEMA::<schema-name> TO [role-name];
     ```
 
+=== "Specific Table"
+
+    ```sql
+    GRANT SELECT ON OBJECT::<schema-name>.<object-name> TO [role-name]
+    ```
+
 ```sql
 GRANT IMPERSONATE ON USER::<user-name> TO <user-name>;
 ```
 
 !!! warning
 
-    Impersonate can not use on the Synapse Serverless SQL Pool.
+    Impersonate can not use on the **Azure Synapse Serverless SQL Pool**.
 
 [More Example for Grant Permissions](https://learn.microsoft.com/en-us/sql/t-sql/statements/grant-transact-sql?view=azure-sqldw-latest#examples)
 
