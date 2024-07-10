@@ -2,6 +2,26 @@
 
 ## Latest Changes
 
+## 20240710
+
+### :scissors: References
+
+- :clipboard: refs: event-architect app that able to fit with data architect. (_2024-07-05_)
+
+### :book: Documents
+
+- :page_facing_up: docs: update gettering requirement docs. (_2024-07-10_)
+- :page_facing_up: docs: update azure docs for synapse and storage. (_2024-07-09_)
+- :page_facing_up: docs: update home page. (_2024-07-06_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: change nav listing for tools and services. (_2024-07-02_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs-material to 9.5.28. (_2024-07-05_)
+
 ## 20240702
 
 ### :scissors: References
