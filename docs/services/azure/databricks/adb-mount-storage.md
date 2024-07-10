@@ -65,15 +65,12 @@ if not any(
 
 ---
 
-## Unmount command
+## Unmount
 
 ```python
-mount_point = "/mnt/<mount-path>"
+mount_point: str = "/mnt/<mount-path>"
 
-if any(
-        mount.mountPoint == mount_point
-        for mount in dbutils.fs.mounts()
-):
+if any(mount.mountPoint == mount_point for mount in dbutils.fs.mounts()):
     dbutils.fs.unmount(mount_point)
 ```
 

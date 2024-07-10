@@ -11,19 +11,25 @@ icon: material/tray-arrow-down
 
 ## :material-arrow-down-right: Getting Started
 
-The role of a data engineer is fundamental in today’s data-driven decision-making
-landscape, embodying a unique amalgamation of technical acumen, strategic foresight,
-and collaborative dynamism.
+:material-page-last: The role of a Data Engineer is fundamental in today’s data-driven
+decision-making landscape, embodying a unique amalgamation of technical acumen,
+strategic foresight, and collaborative dynamism.
 
-### Morning: Laying the Groundwork
+### Morning
+
+!!! note
+
+    Laying the Groundwork
 
 #### Reviewing System Health and Performance
+
 The day begins with a critical review of the data systems’ health.
 Monitoring dashboards for alerts on data ingestion or processing issues ensures
 that any potential bottlenecks are identified and addressed early, safeguarding
 the data pipeline’s integrity.
 
 #### Stand-up Meetings
+
 Quick stand-up meetings with the data team, and occasionally with cross-functional
 teams, set the tone for the day.
 These discussions are vital for aligning on priorities, sharing updates on
@@ -33,17 +39,23 @@ ongoing projects, and strategizing solutions for any emerging challenges.
 
 ### Midday: Deep Dive into Core Responsibilities
 
-Tackling Data and Quality Issues: Data engineers meticulously address data
+#### Tackling Data and Quality Issues
+
+Data engineers meticulously address data
 discrepancies, ensuring accuracy and consistency. This includes cleansing data,
 resolving duplicate records, and rectifying format discrepancies,
 thereby upholding the data’s integrity for reliable analysis.
 
-Aligning with Business Requirements: A significant part of the day involves translating
+#### Aligning with Business Requirements
+
+A significant part of the day involves translating
 business questions and requirements into technical specifications. This close
 collaboration with stakeholders ensures that the data infrastructure and processes
 align with business objectives, facilitating data-driven decision-making.
 
-Building and Optimizing ETL Processes: Designing and refining ETL processes to
+#### Building and Optimizing ETL Processes
+
+Designing and refining ETL processes to
 automate the flow of data through the pipeline is a core task. This involves coding,
 testing, and deploying processes that extract data from diverse sources, transform
 it into a structured format, and load it into a data warehouse or lake for analysis.
@@ -52,18 +64,24 @@ it into a structured format, and load it into a data warehouse or lake for analy
 
 ### Afternoon: Expansion and Collaboration
 
-Creating Dashboards and Reporting Tools: Collaborating with data analysts and
-business users, data engineers contribute to developing dashboards and visualizations.
+#### Creating Dashboards and Reporting Tools
+
+Collaborating with data analysts and business users, data engineers contribute
+to developing dashboards and visualizations.
 These tools are designed to make data insights accessible, supporting strategic
 business decisions.
 
-Collaborating with Domain Experts: Working with domain experts is crucial for
-refining data models and ensuring they accurately reflect real-world entities.
+#### Collaborating with Domain Experts
+
+Working with domain experts is crucial for refining data models and ensuring
+they accurately reflect real-world entities.
 This collaboration enhances the relevance and quality of data, facilitating more
 meaningful analysis.
 
-Embracing Software Engineering Practices: Developing custom tools and applications
-to automate routine tasks and improve efficiency is an integral part of the day.
+#### Embracing Software Engineering Practices
+
+Developing custom tools and applications to automate routine tasks and improve
+efficiency is an integral part of the day.
 This might include creating scripts for data quality checks or developing integrations
 to streamline data flows.
 
@@ -71,12 +89,16 @@ to streamline data flows.
 
 ### Late Afternoon to Evening: Reflection and Continuous Learning
 
-Addressing Technical Debt and Bugs: Late afternoons often involve tackling technical
-debt and debugging issues, ensuring the data infrastructure is robust and efficient.
+####  Addressing Technical Debt and Bugs
 
-Documentation: Comprehensive documentation of systems, data flows, and processes
-ensures knowledge sharing and consistency. This is crucial for maintaining a
-transparent and efficient data operation.
+Late afternoons often involve tackling technical debt and debugging issues, ensuring
+the data infrastructure is robust and efficient.
+
+#### Documentation
+
+Comprehensive documentation of systems, data flows, and processes ensures knowledge
+sharing and consistency. This is crucial for maintaining a transparent and efficient
+data operation.
 
 #### Learning New Technologies
 
