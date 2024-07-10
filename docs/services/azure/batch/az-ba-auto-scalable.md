@@ -40,7 +40,7 @@ $TargetDedicated = nodes;
 
     If you want to scale low-priority node, you have change variable to `$TargetLowPriorityNodes`
 
-### Auto Scale Target Low-Priority Nodes
+### Low-Priority Nodes
 
 Set autoscale evaluation interval to `15m 00s`.
 
@@ -112,7 +112,7 @@ Set autoscale evaluation interval to `15m 00s`.
 
 ---
 
-### Auto Scale Target Dedicated Nodes
+### Dedicated Nodes
 
 === "Using Active and Running Task Sample"
 

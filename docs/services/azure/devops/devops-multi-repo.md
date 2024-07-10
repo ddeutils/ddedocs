@@ -1,4 +1,4 @@
-# DevOps: _Multi-Repositories_
+# Multi-Repositories
 
 ```yaml
 pool:

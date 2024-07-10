@@ -37,7 +37,11 @@ ongoing projects, and strategizing solutions for any emerging challenges.
 
 ---
 
-### Midday: Deep Dive into Core Responsibilities
+### Midday
+
+!!! note
+
+    Deep Dive into Core Responsibilities
 
 #### Tackling Data and Quality Issues
 
@@ -62,7 +66,11 @@ it into a structured format, and load it into a data warehouse or lake for analy
 
 ---
 
-### Afternoon: Expansion and Collaboration
+### Afternoon
+
+!!! note
+
+    Expansion and Collaboration
 
 #### Creating Dashboards and Reporting Tools
 
@@ -87,7 +95,11 @@ to streamline data flows.
 
 ---
 
-### Late Afternoon to Evening: Reflection and Continuous Learning
+### Late Afternoon to Evening
+
+!!! note
+
+    Reflection and Continuous Learning
 
 ####  Addressing Technical Debt and Bugs
 
@@ -143,8 +155,9 @@ of robust solutions without the distractions of routine tasks.
 
 ### Development Time Blocks
 
-Similarly, development activities, whether designing new data pipelines, optimizing
-existing processes, or developing custom tools, require uninterrupted attention.
+:material-page-last: Similarly, development activities, whether designing new data
+pipelines, optimizing existing processes, or developing custom tools, require
+uninterrupted attention.
 These blocks of time are earmarked for deep work, where data engineers can engage
 in complex coding tasks, architectural design, and testing. By isolating these
 development periods from the day’s operational demands, engineers can innovate
@@ -162,9 +175,10 @@ and robustness.
 
 ### Strategic Scheduling for Maximum Impact
 
-Incorporating these focused blocks into the daily schedule requires strategic planning.
-Data engineers, in collaboration with their teams and management,
-identify priorities and deadlines to determine the best times for these deep work
+:material-page-last: Incorporating these focused blocks into the daily schedule
+requires strategic planning.
+Data engineers, in collaboration with their teams and management, identify
+priorities and deadlines to determine the best times for these deep work
 sessions. This might involve scheduling data issue resolution early in the week
 when data loads are typically lower, or blocking development time post stand-up
 meetings when the day’s objectives are clear.
@@ -186,12 +200,13 @@ data.
 
 ## :material-source-commit-end: Conclusion
 
-The daily routine of a data engineer is characterized by a balance of technical
-challenges, strategic planning, and proactive collaboration.
+:material-page-last: The daily routine of a data engineer is characterized by
+a balance of technical challenges, strategic planning, and proactive collaboration.
 From ensuring the smooth operation of data pipelines to addressing data quality,
 aligning with business needs, and embracing continuous learning, each aspect of
 their day contributes to the overarching goal of leveraging data for strategic
 insights.
+
 As the data landscape continues to evolve, the role of the data engineer will
 remain integral to unlocking the potential of data to drive decision-making
 and innovation in the digital age.

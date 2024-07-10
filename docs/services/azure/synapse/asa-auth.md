@@ -415,7 +415,7 @@ WITH (
     REQUEST_MIN_RESOURCE_GRANT_PERCENT = 100
 );
 
---classifies load_user with the workload group LoadData
+-- Classifies load_user with the workload group LoadData
 CREATE WORKLOAD CLASSIFIER [<classifier-name>]
 WITH (
     WORKLOAD_GROUP = '<group-name>',

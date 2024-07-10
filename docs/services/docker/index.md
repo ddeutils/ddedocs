@@ -19,13 +19,3 @@ Docker is not compatible manage the large resource such as 128 Core with 1 memor
 
 Docker has concept Build, Ship, and Run. This concept make Docker be the most popular
 container software in this world.
-
-**Components for concepts**:
-
-- Image
-
-The basic of a Docker container.
-
-- Container
-- Engine
-- Registry

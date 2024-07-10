@@ -138,7 +138,7 @@ SELECT * FROM [sys].[external_data_sources];
 
 ### Create Data Source
 
-=== "Dedicate SQL Pool"
+=== ":material-database-settings-outline: Dedicate SQL Pool"
 
     ```sql
     CREATE EXTERNAL DATA SOURCE [<external-data-source>]
@@ -158,7 +158,7 @@ SELECT * FROM [sys].[external_data_sources];
         `PUSHDOWN = ON | OFF` is set to `ON` by default, meaning the ODBC Driver
         can leverage server-side processing for complex queries.
 
-=== "Serverless SQL Pool"
+=== ":material-database-off-outline: Serverless SQL Pool"
 
     ```sql
     CREATE EXTERNAL DATA SOURCE [<external-data-source>]
@@ -188,6 +188,12 @@ data source. See [More Supported Protocol](https://learn.microsoft.com/en-us/sql
 
 ## :material-arrow-right-bottom: External File Format
 
+### List File Format
+
+```sql
+SELECT * FROM [sys].[external_file_formats]
+```
+
 ### Create File Format
 
 ```sql
@@ -198,37 +204,60 @@ WITH (
 );
 ```
 
-```sql
-CREATE EXTERNAL FILE FORMAT <skip_header_csv>
-WITH (
-    FORMAT_TYPE = DELIMITEDTEXT,
-    FORMAT_OPTIONS(
-        FIELD_TERMINATOR    = ',',
-        STRING_DELIMITER    = '"',
-        FIRST_ROW           = 2,
-        USE_TYPE_DEFAULT    = True
-    )
-);
-```
+=== "CSV"
+
+    ```sql
+    CREATE EXTERNAL FILE FORMAT <skip_header_csv>
+    WITH (
+        FORMAT_TYPE = DELIMITEDTEXT,
+        FORMAT_OPTIONS(
+            FIELD_TERMINATOR    = ',',
+            STRING_DELIMITER    = '"',
+            FIRST_ROW           = 2,
+            USE_TYPE_DEFAULT    = True
+        )
+    );
+    ```
+
+=== "JSON"
+
+    ```sql
+    CREATE EXTERNAL FILE FORMAT <json-format>
+    WITH (
+        FORMAT_TYPE = JSON,
+        DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+    );
+    ```
+
+=== "DELTA"
+
+    ```sql
+    CREATE EXTERNAL FILE FORMAT <delta-format>
+    WITH (
+        FORMAT_TYPE = DELTA
+    );
+    ```
 
 ---
 
 ## :material-arrow-right-bottom: External Table
 
-```sql
-CREATE EXTERNAL TABLE [CURATED].[<external-table-name>]
-(
-    [PurposeId] [varchar](max),
-    [RetireOnDate] [datetime],
-    [CreatedDate] [datetime]
-)
-WITH (
-    DATA_SOURCE = [<data-source-name>],
-    FILE_FORMAT = [<external-file-format>],
-    LOCATION = N'/path/of/data/date=20240708'
-)
-GO
-```
+=== "Serverless SQL Pool"
+
+    ```sql
+    CREATE EXTERNAL TABLE [CURATED].[<external-table-name>]
+    (
+        [PurposeId] [varchar](max),
+        [RetireOnDate] [datetime],
+        [CreatedDate] [datetime]
+    )
+    WITH (
+        DATA_SOURCE = [<data-source-name>],
+        FILE_FORMAT = [<external-file-format>],
+        LOCATION = N'/path/of/data/date=20240708'
+    )
+    GO
+    ```
 
 ## :material-playlist-plus: Read Mores
 

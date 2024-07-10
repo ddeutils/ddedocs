@@ -6,14 +6,14 @@
 
     ```json
     {
-        "name": "KeyVaultAll",
+        "name": "KeyVault",
         "type": "Microsoft.DataFactory/factories/linkedservices",
         "properties": {
             "description": "All of Key Vaults",
             "annotations": [],
             "type": "AzureKeyVault",
             "typeProperties": {
-                "baseUrl": "https://kv-<platform>-dev.vault.azure.net/"
+                "baseUrl": "https://<key-vault-name>.vault.azure.net/"
             }
         }
     }
@@ -736,5 +736,5 @@
 
 !!! note
 
-    If you want to use `AutoResolveIntegrationRuntime`, you can delete key `connectVia`
-    from above json data.
+    If you want to use `AutoResolveIntegrationRuntime`, you can delete key
+    `connectVia` from above json structure.

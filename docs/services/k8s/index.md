@@ -16,7 +16,7 @@ Kubernetes (K8s)
     $ brew install k9s
     ```
 
-## Core Concepts of Kubernetes
+## Core Concepts
 
 ![Core Concepts of Kubernetes](img/k8s-core-concepts.png){ loading=lazy }
 
@@ -26,7 +26,7 @@ Kubernetes (K8s)
 - **Scheduler** — Responsible for placing applications onto nodes, depending on the availability and requirements of the resources.
 - **Controller Manager** — monitoring the state of the cluster.
 
-## Data Plane components of Kubernetes
+## Data Plane Components
 
 - **Containers**: Kubernetes is built around containerization. A container packages an application with all its dependencies and runtime environment. This ensures consistency across various development, testing, and production environments.
 
