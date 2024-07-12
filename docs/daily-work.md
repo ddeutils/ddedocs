@@ -124,9 +124,10 @@ innovative solutions, driving the organization’s data capabilities forward.
 
 ### Prioritizing Deep Work - Data Issue Resolution and Development Blocks
 
-In the dynamic field of data engineering, amidst the array of daily tasks and
-responsibilities, it’s crucial to carve out substantial, uninterrupted periods
-dedicated solely to either resolving data issues or focusing on development projects.
+:material-page-last: In the dynamic field of data engineering, amidst the array
+of daily tasks and responsibilities, it’s crucial to carve out substantial,
+uninterrupted periods dedicated solely to either resolving data issues or focusing
+on development projects.
 This practice of setting aside larger blocks of time is not merely a scheduling
 preference but a strategic necessity to ensure the depth of focus required for
 these complex and time-consuming activities.
@@ -135,8 +136,9 @@ these complex and time-consuming activities.
 
 ### Data Issue Resolution Blocks
 
-Data issues, encompassing discrepancies, inconsistencies, or integrity concerns,
-demand meticulous attention to detail and a thorough investigative process.
+:material-page-last: Data issues, encompassing discrepancies, inconsistencies, or
+integrity concerns, demand meticulous attention to detail and a thorough
+investigative process.
 Given their potential to impact the reliability of data insights and the overall
 efficiency of data operations, data engineers allocate significant, focused periods
 to dive deep into these problems. This dedicated time allows for a comprehensive
@@ -187,14 +189,17 @@ meetings when the day’s objectives are clear.
 
 ### Continuous Improvement and Collaboration
 
-Security and Compliance: Ensuring data security and compliance with regulations
+#### Security and Compliance
+
+Ensuring data security and compliance with regulations
 is an ongoing concern. Landing zones provide a controlled environment to enforce
 data governance standards, crucial for managing sensitive information.
 
-Standardized Data Communication: Establishing a standardized protocol for data
-exchange between the Enterprise Data Platform and various sources ensures a
-cohesive data strategy, vital for the integrity and accessibility of organizational
-data.
+#### Standardized Data Communication
+
+Establishing a standardized protocol for data exchange between the Enterprise Data
+Platform and various sources ensures a cohesive data strategy, vital for the
+integrity and accessibility of organizational data.
 
 ---
 

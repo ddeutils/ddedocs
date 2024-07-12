@@ -1,7 +1,7 @@
 # Aggregate
 
-Apache Spark provides two primary methods for performing aggregations: **Sort-based**
-aggregation and **Hash-based** aggregation.
+**Apache Spark** provides two primary methods for performing aggregations: **Sort-based**
+and **Hash-based** aggregations.
 These methods are optimized for different scenarios and have distinct performance
 characteristics.
 

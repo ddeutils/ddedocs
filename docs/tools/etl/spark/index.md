@@ -7,17 +7,25 @@ icon: simple/apachespark
 !!! quote
 
     **Apache Spark** is a unified computing engine and a set of libraries for parallel
-    data processing on computer cluster
+    data processing on computer cluster.
 
-[The Essential PySpark Cheat Sheet for Success!](https://pub.towardsai.net/simplify-your-data-engineering-journey-the-essential-pyspark-cheat-sheet-for-success-69db0c38b31e)
+Read more [The Essential PySpark Cheat Sheet for Success!](https://pub.towardsai.net/simplify-your-data-engineering-journey-the-essential-pyspark-cheat-sheet-for-success-69db0c38b31e)
 
 ## Architecture
 
-![Spark Cluster Overview](img/spark-cluster-overview.png)
+The Apache Spark framework uses a ==**master-slave architecture**== that consists
+of a driver, which runs as a master node, and many executors that run across as
+worker nodes in the cluster.
+Apache Spark can be used for batch processing and real-time processing as well.
+
+<figure markdown="span">
+  ![Spark Cluster Overview](img/spark-cluster-overview.png){ loading=lazy width="650" }
+  <figcaption>Spark Cluster Overview</figcaption>
+</figure>
 
 - [Understanding Apache Spark Architecture](https://medium.com/@shobhittulshain/understanding-spark-architecture-6003184a12ec)
 - [A Deep Dive into Apache Spark Architecture](https://medium.com/@shaloomathew/a-deep-dive-into-apache-spark-architecture-fe01723b1aa6)
-- [](https://medium.com/@think-data/this-level-of-detail-in-spark-is-tackled-only-by-experts-2-975cfb41af50)
+- [This level of detail in Spark is tackled only by experts — 2](https://medium.com/@think-data/this-level-of-detail-in-spark-is-tackled-only-by-experts-2-975cfb41af50)
 - [Partitioning & Bucketing](https://blog.det.life/apache-spark-partitioning-and-bucketing-1790586e8917)
 - [How does Adaptive Query Execution fix your Spark performance issues](https://medium.com/@kerrache.massipssa/how-does-adaptive-query-execution-fix-your-spark-performance-issues-029166e772b7)
 
@@ -25,7 +33,7 @@ icon: simple/apachespark
 
 ## Spark Context vs Spark Session
 
-!!! quote
+!!! note
 
     **Spark Session** is a unified entry point of a spark application from Spark 2.0
 
@@ -84,23 +92,25 @@ icon: simple/apachespark
 
 ## Spark API
 
-**Spark has two API types**:
+<figure markdown="span">
+  ![Structured Spark API Execution plan](img/spark-api-plan.png){ loading=lazy width="650" }
+  <figcaption>Structured Spark API Execution plan</figcaption>
+</figure>
 
-- Low-level API (Unstructured)
-- High-level API (Spark’s Structured API)
-
-![Structured Spark API Execution plan](img/spark-api-plan.png)
+![Spark RDDs, DataFrames, and Datasets](./img/spark-rdd-df-dataset.png)
 
 ### Low-level API
 
 **Resilient Distributed Datasets** (RDDs) is collection of elements partitioned that
 distributes to each node in cluster and work parallel.
 
+You can convert the Abstract DataFrame to Low-level RDD by:
+
 ```python
 rdd = spark.read.csv("file.csv", header=True).rdd
 ```
 
-RDDs support 2 operations:
+**RDDs support 2 operations**:
 
 -   **Transformations** — create new rdd but lazy meaning they don't execute until you
     call an action on RDD.
@@ -115,13 +125,11 @@ RDDs support 2 operations:
 
 ### High-level API
 
-Structured API is tool for manipulate all sorts of data such as Unstructured, Semi-Structured,
+**Structured API** is tool for manipulate all sorts of data such as Unstructured, Semi-Structured,
 Structured data
 
 Structured API able to use with batch and streaming computation that is Spark SQL,
 Dataframes, Datasets API but for streaming, it be Spark Structured Streaming.
-
-![Spark RDDs, DataFrames, and Datasets](./img/spark-rdd-df-dataset.png)
 
 ---
 

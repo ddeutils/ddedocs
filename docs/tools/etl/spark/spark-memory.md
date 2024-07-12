@@ -1,4 +1,4 @@
-# Spark: Memory
+# Memory
 
 - https://medium.com/@think-data/understanding-the-memory-components-of-spark-e3070f315d17
 - [Decoding Spark Executor Memory Management : Tuning spark configs](https://medium.com/airteldigital/decoding-spark-executor-memory-management-tuning-spark-configs-17c481529ccd)
@@ -61,6 +61,6 @@ remain crucial in the realm of big data analytics.
 
 [Spark Out Of Memory Error](https://goraidebashree7.medium.com/spark-out-of-memory-error-da89b242d435)
 
-## References
+## Read Mores
 
 - [Apache Spark Memory Management: On-Heap vs Off-Heap in the Context of Tungsten Optimizer](https://medium.com/@skraghunandan11/apache-spark-memory-management-on-heap-vs-off-heap-in-the-context-of-tungsten-optimizer-df6f641a2d93)

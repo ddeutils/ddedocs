@@ -1,17 +1,7 @@
-# Pyspark Handling Media Files
-
-**Update**: `2023-05-08` |
-**Type**: `Use-Cases` |
-**Tag**: `Big Data` `Spark` `PySpark` `Binary File`
+# Handling Media Files
 
 Pyspark provides several APIs to deal with image, audio, and video files. In this
 article we will discuss some ways to handle these files in PySpark.
-
-**Table of Contents**:
-
-- [Basic Features](#basic-features)
-- [Additional Features provided by PySpark API](#additional-features-provided-by-pyspark-api)
-- [Advantages of Using PySpark](#advantages-of-using-pyspark)
 
 ## Basic Features
 
@@ -291,52 +281,6 @@ df = spark.read.format("binaryFile").load("path/to/video.mp4").selectExpr("path"
 df = df.select("path", perform_object_detection("content").alias("frame_data"))
 ```
 
-## Advantages of Using PySpark
-
-Here are some advantages of using PySpark for processing image, audio, and video files:
-
-- **Scalability**:
-  PySpark is designed for distributed computing, which means that it can process
-  large files and datasets much faster than traditional computing frameworks.
-  This makes it an ideal choice for processing image, audio, and video files,
-  which can be very large.
-
-- **Performance**:
-  PySpark is highly optimized for data processing, which means that it can perform
-  complex operations on large datasets very quickly. This is especially important
-  when working with image, audio, and video files, which often require computationally
-  intensive operations like feature extraction and object detection.
-
-- **Integration with other tools**:
-  PySpark integrates with many popular data processing and machine learning tools,
-  like TensorFlow, Keras, and OpenCV. This makes it easy to incorporate these tools
-  into your data processing pipeline, and to leverage their capabilities for tasks
-  like image classification, object detection, and speech recognition.
-
-- **Flexible data sources**:
-  PySpark can read data from a wide range of sources, including local files, distributed
-  file systems like Hadoop Distributed File System (HDFS), and cloud storage platforms
-  like Amazon S3 and Google Cloud Storage. This makes it easy to process image,
-  audio, and video files regardless of where they are stored.
-
-- **Unified API**:
-  PySpark provides a unified API for processing different types of data, including
-  image, audio, and video files. This means that you can use the same set of APIs
-  and functions to process all of these different file types, which can simplify
-  your code and reduce development time.
-
-- **Fault tolerance**:
-  PySpark is designed to be fault-tolerant, which means that it can recover from
-  failures and continue processing data even if some nodes fail. This is especially
-  important when processing large datasets, as the likelihood of a node failure
-  increases with the size of the dataset.
-
-- **Cost-effective**:
-  PySpark is open-source and can be run on commodity hardware, which makes it a
-  cost-effective option for processing image, audio, and video files. Additionally,
-  PySpark can be run on cloud-based infrastructure, which allows you to scale your
-  processing resources up or down as needed, and to pay only for what you use.
-
-## References
+## Read Mores
 
 - https://blog.devgenius.io/handling-media-files-in-pyspark-image-audio-video-files-8e3bcd7a5c4e

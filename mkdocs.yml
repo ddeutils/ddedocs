@@ -283,57 +283,6 @@ nav:
               - Branching Strategies: tools/git/git-branching-strategies.md
               - Commit Release: tools/git/git-commit-release.md
               - Hooks: tools/git/git-hooks.md
-      - Languages:
-          - Shell:
-              - tools/lang/shell/index.md
-              - App: tools/lang/shell/ubt-sh-common-file.md
-          - PowerShell:
-              - tools/lang/powershell/index.md
-              - Batch File: tools/lang/powershell/win-bat-file.md
-              - RestAPI: tools/lang/powershell/win-bat-restapi.md
-          - SQL:
-              - tools/lang/sql/index.md
-              - Optimizing SQL Queries: tools/lang/sql/sql-optimizing-sql-queries.md
-          - Python:
-              - tools/lang/python/index.md
-              - Wheel: tools/lang/python/py-dependency-wheel.md
-              - Sync Multi-processes: tools/lang/python/py-sync-multi-processes.md
-              - Data Structure for DE: tools/lang/python/py-data-structure-for-data-engineer.md
-              - Threading: tools/lang/python/py-threading.md
-              - Libraries:
-                  - Pytest: tools/lang/python/libs/py-pytest.md
-                  - Pre-Commit: tools/lang/python/libs/py-pre-commit.md
-                  - Joblib: tools/lang/python/libs/py-joblib.md
-                  - Pydantic: tools/lang/python/libs/py-pydantic.md
-                  - SQLAlchemy: tools/lang/python/libs/py-sqlalchemy.md
-              - Functional Programing:
-                  - Monad: tools/lang/python/functional/py-func-monad.md
-                  - Toolz: tools/lang/python/functional/py-func-toolz.md
-              - Rust:
-                  - With Rust: tools/lang/python/py-with-rust.md
-                  - Migration: tools/lang/python/py-rust-migrate.md
-              - Versions:
-                  - Python 3.12: tools/lang/python/updates/py-py312.md
-          - GO:
-              - tools/lang/go/index.md
-              - Command: tools/lang/go/go-command.md
-              - Unittest: tools/lang/go/go-unittest.md
-              - Connect Database: tools/lang/go/go-database.md
-              - tools:
-                  - Connect Kafka: tools/lang/go/go-connect-kafka.md
-                  - Connect Redis: tools/lang/go/go-connect-redis.md
-                  - Hexagonal Architect: tools/lang/go/go-hexagonal-architecture.md
-          - Scala:
-              - tools/lang/scala/index.md
-              - Command: tools/lang/scala/scala-basic-command.md
-              - Advance Feature: tools/lang/scala/scala-advance-feature.md
-              - Collection: tools/lang/scala/scala-collection.md
-              - OOP Concept: tools/lang/scala/scala-oop-concepts.md
-          - Rust:
-              - tools/lang/rust/index.md
-              - Learning: tools/lang/rust/rust-learning.md
-              - From Python: tools/lang/rust/rust-from-python.md
-              - CLI Application: tools/lang/rust/rust-cli-app.md
       - Orchestration:
           - AirFlow:
               - tools/orchestration/airflow/index.md
@@ -354,11 +303,11 @@ nav:
               - Connections:
                   - With DLT: tools/orchestration/dagster/dagster-dlt.md
       - Collection & Integration:
-          - DLT:
-              - tools/collection/dlt/index.md
           - Airbyte:
               - tools/collection/airbyte/index.md
               - With Terraform: tools/collection/airbyte/airbyte-with-terraform.md
+          - DLT:
+              - tools/collection/dlt/index.md
       - Extract & Transform & Load:
           - Pandas:
               - tools/etl/pandas/index.md
@@ -368,7 +317,7 @@ nav:
               - Data Pipeline: tools/etl/polars/polars-data-pipeline.md
               - SCD2 on Delta Lake: tools/etl/polars/polars-scd2-on-delta-lake.md
               - Connections:
-                  - To Synapse: tools/etl/polars/connection/polars-to-synapse.md
+                  - To Synapse: tools/etl/polars/polars-to-synapse.md
           - DBT:
               - tools/etl/dbt/index.md
               - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md
@@ -379,16 +328,14 @@ nav:
                   - To Synapse: tools/etl/dbt/connection/dbt-to-synapse.md
                   - To Trino: tools/etl/dbt/connection/dbt-to-trino.md
                   - To Athena: tools/etl/dbt/connection/dbt-to-athena.md
-          - Arrow:
-              - tools/etl/arrow/index.md
-              - Modern Data Service: tools/etl/arrow/arrow-modern-data-service.md
           - Spark:
               - tools/etl/spark/index.md
-              - Common:
-                  - Read JSON: tools/etl/spark/spark-read-json.md
-                  - UDFs: tools/etl/spark/spark-udfs.md
-                  - Select & SelectExpr: tools/etl/spark/pyspark/pyspark-select-and-selectexpr.md
-                  - Why SUCCESS: tools/etl/spark/spark-why-success.md
+              - IO: tools/etl/spark/spark-io.md
+              - UDFs: tools/etl/spark/spark-udfs.md
+              - Why SUCCESS: tools/etl/spark/spark-why-success.md
+              - RDD:
+                  - Foreach & Foreach Partition: tools/etl/spark/spark-rdd-foreach-foreachpartition.md
+                  - Map & Map Partition: tools/etl/spark/spark-rdd-map-mappartition.md
               - Optimizations:
                   - tools/etl/spark/optimizations/index.md
                   - Bucketing: tools/etl/spark/spark-bucketing.md
@@ -400,14 +347,14 @@ nav:
                   - Data Spill: tools/etl/spark/optimizations/spark-data-spill.md
                   - Shuffling: tools/etl/spark/optimizations/spark-shuffling.md
                   - Storage: tools/etl/spark/optimizations/spark-storage.md
-              - API:
-                  - Pyspark:
-                      - Data Wrangling Functions: tools/etl/spark/pyspark/pyspark-data-wrangling-functions.md
-                      - SCD2: tools/etl/spark/pyspark/pyspark-scd2.md
-                      - RegExp: tools/etl/spark/pyspark/pyspark-regexp.md
-                      - Media Files: tools/etl/spark/pyspark/pyspark-media-files.md
-                      - Unittest: tools/etl/spark/pyspark/pyspark-unittest.md
-                      - Avoid These at Any Cost: tools/etl/spark/pyspark/pyspark-avoid-these-at-any-cost.md
+              - Pyspark:
+                  - Select & SelectExpr: tools/etl/spark/pyspark-select-and-selectexpr.md
+                  - Data Wrangling Functions: tools/etl/spark/pyspark-data-wrangling-functions.md
+                  - SCD2: tools/etl/spark/pyspark-scd2.md
+                  - RegExp: tools/etl/spark/pyspark-regexp.md
+                  - Media Files: tools/etl/spark/pyspark-media-files.md
+                  - Unittest: tools/etl/spark/pyspark-unittest.md
+                  - Avoid These at Any Cost: tools/etl/spark/pyspark-avoid-these-at-any-cost.md
               - Structured Stream:
                   - tools/etl/spark/stream/index.md
                   - Aggregate: tools/etl/spark/stream/spark-stream-aggregate.md
@@ -420,27 +367,25 @@ nav:
                   - On Kubernetes: tools/etl/spark/deploy/spark-on-k8s.md
                   - On Local with DataProc Serverless: tools/etl/spark/deploy/spark-on-local-with-dataproc-serverless.md
               - Updated:
-                  - Spark3.4:
+                  - Spark 3.4:
                       - Parameterised SQL: tools/etl/spark/updated/spark-3-4-parameterised-sql.md
           - Kafka:
               - tools/etl/kafka/index.md
+              - With Zookeeper: tools/etl/kafka/kafka-without-zookeeper.md
               - Use-Cases:
                   - Agoda: tools/etl/kafka/kafka-agoda.md
           - Flink:
               - tools/etl/flink/index.md
-      - Query:
           - DuckDB:
-              - tools/query/duckdb/index.md
-          - Trino:
-              - tools/query/trino/index.md
+              - tools/etl/duckdb/index.md
       - Open Table:
           - tools/open_table/index.md
-          - Delta Lake:
+          - DeltaLake:
               - tools/open_table/deltalake/index.md
-              - Deletion Vector: tools/open_table/deltalake/delta-lake-deletion-vector.md
-              - Liquid Clustering: tools/open_table/deltalake/delta-lake-liquid-clustering.md
-              - Partition Z-Order Cluster: tools/open_table/deltalake/delta-lake-partition-zorder-cluster.md
-              - Universal Format: tools/open_table/deltalake/delta-lake-universal-format.md
+              - Deletion Vector: tools/open_table/deltalake/deltalake-deletion-vector.md
+              - Liquid Clustering: tools/open_table/deltalake/deltalake-liquid-clustering.md
+              - Partition Z-Order Cluster: tools/open_table/deltalake/deltalake-partition-zorder-cluster.md
+              - Universal Format: tools/open_table/deltalake/deltalake-universal-format.md
               - Pyspark API:
                   - Auto Schema Evolution: tools/open_table/deltalake/pyspark/pyspark-delta-auto-schema-evolution.md
                   - Image Files: tools/open_table/deltalake/pyspark/pyspark-delta-image-files.md
@@ -479,6 +424,59 @@ nav:
               - tools/analytic/mlflow/index.md
           - Pinot:
               - tools/analytic/pinot/index.md
+          - Trino:
+              - tools/analytic/trino/index.md
+      - Languages:
+          - Shell:
+              - tools/lang/shell/index.md
+              - App: tools/lang/shell/ubt-sh-common-file.md
+          - PowerShell:
+              - tools/lang/powershell/index.md
+              - Batch File: tools/lang/powershell/win-bat-file.md
+              - RestAPI: tools/lang/powershell/win-bat-restapi.md
+          - SQL:
+              - tools/lang/sql/index.md
+              - Optimizing SQL Queries: tools/lang/sql/sql-optimizing-sql-queries.md
+          - Python:
+              - tools/lang/python/index.md
+              - Wheel: tools/lang/python/py-dependency-wheel.md
+              - Sync Multi-processes: tools/lang/python/py-sync-multi-processes.md
+              - Data Structure for DE: tools/lang/python/py-data-structure-for-data-engineer.md
+              - Threading: tools/lang/python/py-threading.md
+              - Libraries:
+                  - Pytest: tools/lang/python/libs/py-pytest.md
+                  - Pre-Commit: tools/lang/python/libs/py-pre-commit.md
+                  - Joblib: tools/lang/python/libs/py-joblib.md
+                  - Pydantic: tools/lang/python/libs/py-pydantic.md
+                  - SQLAlchemy: tools/lang/python/libs/py-sqlalchemy.md
+              - Functional Programing:
+                  - Monad: tools/lang/python/functional/py-func-monad.md
+                  - Toolz: tools/lang/python/functional/py-func-toolz.md
+              - Rust:
+                  - With Rust: tools/lang/python/py-with-rust.md
+                  - Migration: tools/lang/python/py-rust-migrate.md
+              - Versions:
+                  - Python 3.12: tools/lang/python/updates/py-py312.md
+          - GO:
+              - tools/lang/go/index.md
+              - Command: tools/lang/go/go-command.md
+              - Unittest: tools/lang/go/go-unittest.md
+              - Connect Database: tools/lang/go/go-database.md
+              - Tools:
+                  - Connect Kafka: tools/lang/go/go-connect-kafka.md
+                  - Connect Redis: tools/lang/go/go-connect-redis.md
+                  - Hexagonal Architect: tools/lang/go/go-hexagonal-architecture.md
+          - Scala:
+              - tools/lang/scala/index.md
+              - Command: tools/lang/scala/scala-basic-command.md
+              - Advance Feature: tools/lang/scala/scala-advance-feature.md
+              - Collection: tools/lang/scala/scala-collection.md
+              - OOP Concept: tools/lang/scala/scala-oop-concepts.md
+          - Rust:
+              - tools/lang/rust/index.md
+              - Learning: tools/lang/rust/rust-learning.md
+              - From Python: tools/lang/rust/rust-from-python.md
+              - CLI Application: tools/lang/rust/rust-cli-app.md
   - Blogs:
       - blogs/index.md
 

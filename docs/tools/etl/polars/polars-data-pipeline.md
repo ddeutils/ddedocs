@@ -1,4 +1,4 @@
-# Polars: _Data Pipeline_
+# Data Pipeline
 
 **Polars** way of working with data lends itself quite nicely to building scalable data
 pipelines. First of all, the fact that we can chain the methods so easily allows
@@ -66,7 +66,9 @@ def select_data_to_write(df, columns):
     ).collect().write_parquet("top_monthly_videos.parquet")
     ```
 
-## Example: Machine Learning Features
+---
+
+## Example
 
 ![Data Pipeline Flow](img/polars-data-pipeline-example.png)
 
@@ -628,6 +630,8 @@ def select_data_to_write(df, columns):
         return df
     ```
 
+---
+
 ```python
 def pipeline():
     """Pipeline that reads, cleans, and transofrms data into
@@ -680,13 +684,17 @@ if __name__ == "__main__":
     output.write_parquet("./data/modelling_data.parquet")
 ```
 
-## Noted
+---
+
+## Conclusion
 
 Make sure to apply these learnings to your own data. I recommend starting small
 (2–3 steps) and then expanding the pipeline as your needs grow. Make sure to keep
 it modular, lazy, and group as many operations into `.with_columns()` as possible
 to ensure proper parallelization.
 
-## References
+---
+
+## Read Mores
 
 - [:simple-medium: TowardDS - Data Pipelines with Polars: Step-by-Step Guide](https://towardsdatascience.com/data-pipelines-with-polars-step-by-step-guide-f5474accacc4)

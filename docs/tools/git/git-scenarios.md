@@ -1,6 +1,6 @@
-# Git Scenarios
+# Scenarios
 
-## Reset Removed File
+## :material-arrow-right-bottom: Reset Removed File
 
 ```console
 $ rm -r README.md
@@ -114,7 +114,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
         `git remove --cached README.md`
 
-## Reset `main` Branch
+---
+
+## :material-arrow-right-bottom: Reset `main` Branch
 
 === "Deleting `.git`"
 
@@ -163,3 +165,14 @@ no changes added to commit (use "git add" and/or "git commit -a")
     # Finally, force update to our repository
     $ git push -f origin main
     ```
+
+---
+
+## :material-arrow-right-bottom: Revert Commits
+
+```shell
+git checkout -b <new-branch-name> <revert-commit-id>
+git merge --strategy=ours main
+git checkout main
+git merge <new-branch-name>
+```

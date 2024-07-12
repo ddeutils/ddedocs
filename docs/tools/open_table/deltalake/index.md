@@ -2,7 +2,7 @@
 icon: simple/delta
 ---
 
-# Delta
+# Delta Lake
 
 !!! quote
 
@@ -16,10 +16,28 @@ with Apache Spark APIs, and was developed for tight integration with Structured 
 allowing you to easily use a single copy of data for both batch and streaming operations
 and providing incremental processing at scale.
 
-## Compare with Parquet
+---
 
-[Read More](https://medium.com/@abhinav.prakash1804/delta-lake-vs-parquet-86e1e926f446)
+## :material-arrow-down-right: Getting Started
 
-## References
+### Basic Architecture
 
-- [Microsoft - Azure Databricks: Delta](https://learn.microsoft.com/en-us/azure/databricks/delta/)
+- **Delta Logs**: Utilizes JSON logs to record changes, ensuring accurate data
+  lineage and versioning.
+- **ACID Transactions**: Supports ACID transactions, providing reliable data management
+  for concurrent operations.
+- **Merge-on-Write**: Employs a merge-on-write strategy for updates, guaranteeing high
+  performance and consistency.
+
+### Use Cases
+
+- **Real-Time Analytics**: Its time travel and versioning features make it perfect
+  for real-time data processing and analytics.
+- **Data Lakes in Cloud Environments**: With its high scalability and integration
+  with cloud services, Delta Lake is well-suited for managing cloud-based data lakes.
+
+---
+
+## Read Mores
+
+- [:material-microsoft: Microsoft - Azure Databricks: Delta](https://learn.microsoft.com/en-us/azure/databricks/delta/)

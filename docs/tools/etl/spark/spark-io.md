@@ -1,4 +1,6 @@
-# Spark: Read Json
+# IO
+
+## Json
 
 ```python
 # Example Data Frame with column having JSON data
@@ -41,6 +43,7 @@ df_details.select("emp_no", "parsed_data.*").show(10, False)
 ```python
 # We can explode the data further from list
 from pyspark.sql.functions import explode
+
 df_details.select("emp_no", "parsed_data.dept", "parsed_data.fname", "parsed_data.lname", "parsed_data") \
     .withColumn("skills", explode("parsed_data.skills")) \
     .drop("parsed_data") \

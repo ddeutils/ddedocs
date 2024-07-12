@@ -5,7 +5,7 @@ icon: material/comment-search-outline
 # Requirements Gathering
 
 One of the mistakes you’ll make as a Data Engineer is not truly understanding the
-business requirements.
+^^**Business Requirements**^^.
 
 !!! quote
 
@@ -26,10 +26,25 @@ for designing an appropriate solution.
 
 End-users (& their preferences) for data projects are usually one of:
 
-- Data Analysts/Scientists: _SQL, CSV files_
-- Business Users: _Dashboards, Reports, Excel files_
-- Software Engineers: _SQL, APIs, CRMs, JSON files_
-- External Clients: _Cloud storage, SFTP/FTP, APIs, Database_
+<div class="grid cards" markdown>
+
+-   **Data Analysts/Scientists**
+
+    _SQL, CSV files_
+
+-   **Business Users**
+
+    _Dashboards, Reports, Excel files_
+
+-   **Software Engineers**
+
+    _SQL, APIs, CRMs, JSON files_
+
+-   **External Clients**
+
+    _Cloud storage, SFTP/FTP, APIs, Database_
+
+</div>
 
 ---
 
@@ -45,7 +60,7 @@ Understand their current operations to gain valuable insights.
 
 Use the following questions to refine requirements:
 
--   Business Impact:
+-   **Business Impact**
 
     How does having this data impact the business? What is the measurable improvement
     in the bottom line, business OKR, etc? Knowing the business impact helps in
@@ -53,7 +68,7 @@ Use the following questions to refine requirements:
 
     Evaluate how the data impacts the business and quantify the improvements.
 
--   Semantic Understanding:
+-   **Semantic Understanding**
 
     What does the data represent? What business process generates this data?
     Knowing this will help you model the data and understand its relation to other
@@ -61,43 +76,43 @@ Use the following questions to refine requirements:
 
     Grasp the data's representation and its relation to other warehouse tables.
 
--   Data Source:
+-   **Data Source**
 
     Where does the data originate? (an application DB, external vendor via SFTP/Cloud
     store dumps, API data pull, manual upload, etc).
 
--   Frequency of Data Pipeline:
+-   **Frequency of Data Pipeline**
 
     How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc).
     Is there a business case for not allowing a higher frequency?
     What is the highest frequency of data load acceptable by end-users?
 
--   Historical Data:
+-   **Historical Data**
 
     Does historical data need to be stored? When loading data into a warehouse,
     the answer is usually yes.
 
--   Data Caveats:
+-   **Data Caveats**
 
     Does the data have any caveats? (e.g. seasonality affecting size, data skew,
     inability to join, or data unavailability).
     Are there any known issues with upstream data sources, such as late arriving
     data, or missing data?
 
--   Access Pattern:
+-   **Access Pattern**
 
     How will the end user access the data? Is access via SQL, dashboard tool,
     APIs, or cloud storage? In the case of SQL or dashboard access, What are the
     commonly used filter columns (e.g. date, some business entity)? What is the
     expected access latency?
 
--   Business Rules Check (QA):
+-   **Business Rules Check (QA)**
 
     What data quality metrics do the end-users care about? What are business
     logic-based data quality checks? Which numeric fields should be checked for
     divergence (e.g. can’t differ by more than x%) across data pulls?
 
--   Data Output Requirements:
+-   **Data Output Requirements**
 
     What is the data output schema? (column names, API field names, Cloud storage
     file name/size, etc)
@@ -114,9 +129,6 @@ Help the end-users feel invested in the project by following the steps below.
 - Ask & incorporate their feedback
 - Recommend solutions(or different ways to do things) for their common issues
 - Acknowledge their help & expertise when presenting the project to a wider audience
-
-End-users who feel invested will root for the project, and help evangelize it.
-Having end-users who root for the project helps a lot with resource allocation.
 
 Clearly define the requirements, record them (e.g. JIRA, etc), and get sign-off
 from the stakeholders.

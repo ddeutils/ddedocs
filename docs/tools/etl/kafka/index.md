@@ -6,7 +6,11 @@ icon: material/apache-kafka
 
 - [Setting up Apache Kafka for local development with Docker](https://medium.com/devops-techable/setting-up-apache-kafka-for-local-development-with-docker-aa3c5810073a)
 
-## Connection Code
+## Getting Started
+
+[Apache Kafka — Overview](https://medium.com/@vutrinh274/apache-kafka-overview-b04c4ab8ef49)
+
+## Example Connection Code
 
 ```shell
 $ pip install kafka-python
