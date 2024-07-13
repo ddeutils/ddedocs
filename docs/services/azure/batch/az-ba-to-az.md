@@ -241,7 +241,7 @@ credential = CertificateCredential(
 
 ---
 
-## :material-microsoft-azure: Services
+## :material-microsoft-azure: Azure Services
 
 !!! tip
 

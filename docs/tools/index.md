@@ -24,12 +24,16 @@ data stack owners in the enterprise, the question is not so much how one tool
 compares to another but whether they can live with the status quo or Have a strong
 enough desire to change.
 
-:octicons-key-16: **The Key Concepts**:
+**The Key Concepts**:
+
+<div class="grid cards" markdown>
 
 - Easy to Try & Deploy
 - Massive Scalability; _Data_, _Users_, and _Use-Cases_
 - Composable Data Stack
 - Flexible Pricing
+
+</div>
 
 <figure markdown="span">
   ![The Modern Open-Source Data Stack](img/tools-modern-open-source-data-stack.png){ loading=lazy width="700" }
@@ -41,6 +45,18 @@ of giants instead of adopting the "^^**not invented here syndrome**^^".
 Consider whether the business value from your analytics solution is coming from
 how well you manage your data pipelines and data infrastructure, versus how well
 you build analytics and AI products on top of your infrastructure.
+
+## :octicons-stack-24: Tools Stacks
+
+<div class="grid cards" markdown>
+
+-   - Dagster or mage.ai for orchestration (TBD)
+    - Polars for lightning fast ETL workloads
+    - Delta Lake as the storage layer
+    - DuckDB as the analytical SQL interface
+    - [Rill](https://www.rilldata.com/) or [Evidence](https://evidence.dev/) for data viz (TBD)
+
+</div>
 
 ## :material-select-compare: Tools Comparison
 

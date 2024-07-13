@@ -1,20 +1,23 @@
 # IO
 
-## Json
+## Getting Started
+
+### Why _SUCCESS file
+
+https://towardsdev.com/why-does-spark-write-output-a-success-file-83662e43b515
+
+## Data
+
+### Json
 
 ```python
-# Example Data Frame with column having JSON data
-_data = [
+data = [
     ['EMP001', '{"dept" : "account", "fname": "Ramesh", "lname": "Singh", "skills": ["excel", "tally", "word"]}'],
     ['EMP002', '{"dept" : "sales", "fname": "Siv", "lname": "Kumar", "skills": ["biking", "sales"]}'],
     ['EMP003', '{"dept" : "hr", "fname": "MS Raghvan", "skills": ["communication", "soft-skills"]}']
 ]
-# Columns for the data
-_cols = ['emp_no', 'raw_data']
 
-# Let's create the raw Data Frame
-df_raw = spark.createDataFrame(data = _data, schema = _cols)
-df_raw.printSchema()
+df_raw = spark.createDataFrame(data=data, schema=['emp_no', 'raw_data'])
 ```
 
 ```python

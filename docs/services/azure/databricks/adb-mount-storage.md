@@ -1,35 +1,49 @@
 # Mount Storage
 
-## List of Mounts
+## :material-arrow-down-right: Getting Started
+
+### List of Mounts
 
 ```python
 display(dbutils.fs.mounts())
 ```
 
-## Mount
+---
 
-### Azure Blob Storage
+### Mounting
+
+#### Azure Blob Storage
 
 ```python
-dbutils.fs.mount(
-    source = "wasbs://<container-name>@<storage-account-name>.blob.core.windows.net",
-    mount_point = "/mnt/<mount-path>",
-    extra_configs = {
-        "fs.azure.account.key.<storage-account-name>.blob.core.windows.net":
-        dbutils.secrets.get(scope="<scope-name>", key="adls-account-key"),
-    }
-)
+adls_account: str = "<storage-account-name>"
+adls_container: str = "<container-name>"
+mount_point: str = "/mnt/<mount-path>"
+
+access_key = dbutils.secrets.get(scope="<scope-name>", key="adls-account-key")
+
+if not any(
+    mount.mountPoint == mount_point
+    for mount in dbutils.fs.mounts()
+):
+    dbutils.fs.mount(
+        source=f"wasbs://{adls_container}@{adls_account}.blob.core.windows.net",
+        mount_point=mount_point,
+        extra_configs={
+            "fs.azure.account.key.<storage-account-name>.blob.core.windows.net",
+            access_key,
+        },
+    )
 ```
 
 ---
 
-### Azure DataLake Storage
+#### Azure DataLake Storage
 
 ```python
-adls_account = "<storage-account-name>"
-adls_container = "<container-name>"
-adls_dir = "<dir-path>"
-mount_point = "/mnt/<mount-path>"
+adls_account: str = "<storage-account-name>"
+adls_container: str = "<container-name>"
+adls_dir: str = "<dir-path>"
+mount_point: str = "/mnt/<mount-path>"
 
 client_id = dbutils.secrets.get(scope="<scope-name>", key="adb-client-id")
 client_secret_id = dbutils.secrets.get(scope="<scope-name>", key="adb-client-secrete-id")
@@ -53,19 +67,19 @@ configs: Dict[str, str] = {
 
 # Mount ADLS Storage to DBFS only if the directory is not already mounted
 if not any(
-        mount.mountPoint == mount_point
-        for mount in dbutils.fs.mounts()
+    mount.mountPoint == mount_point
+    for mount in dbutils.fs.mounts()
 ):
     dbutils.fs.mount(
-        source = source,
-        mount_point = mount_point,
-        extra_configs = configs
+        source=source,
+        mount_point=mount_point,
+        extra_configs=configs
     )
 ```
 
 ---
 
-## Unmount
+### Unmount
 
 ```python
 mount_point: str = "/mnt/<mount-path>"

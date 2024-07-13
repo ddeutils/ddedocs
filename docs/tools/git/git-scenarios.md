@@ -168,7 +168,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ---
 
-## :material-arrow-right-bottom: Revert Commits
+## :material-arrow-right-bottom: Revert Multi-Merge Commits
 
 ```shell
 git checkout -b <new-branch-name> <revert-commit-id>

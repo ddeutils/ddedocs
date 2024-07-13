@@ -153,7 +153,9 @@ nav:
                   - services/azure/databricks/index.md
                   - Init Script: services/azure/databricks/adb-init-script.md
                   - Mount Storage: services/azure/databricks/adb-mount-storage.md
+                  - Secrets: services/azure/databricks/adb-secrets.md
                   - Connections:
+                      - To Azure: services/azure/databricks/adb-to-az.md
                       - To Azure SQL: services/azure/databricks/adb-to-azure-sql.md
                       - To Synapse SQL Pool: services/azure/databricks/adb-to-synapse-sql-pool.md
                       - To BigQuery: services/azure/databricks/adb-to-bigquery.md
@@ -330,9 +332,8 @@ nav:
                   - To Athena: tools/etl/dbt/connection/dbt-to-athena.md
           - Spark:
               - tools/etl/spark/index.md
-              - IO: tools/etl/spark/spark-io.md
+              - IO: tools/etl/spark/spark-df-io.md
               - UDFs: tools/etl/spark/spark-udfs.md
-              - Why SUCCESS: tools/etl/spark/spark-why-success.md
               - RDD:
                   - Foreach & Foreach Partition: tools/etl/spark/spark-rdd-foreach-foreachpartition.md
                   - Map & Map Partition: tools/etl/spark/spark-rdd-map-mappartition.md

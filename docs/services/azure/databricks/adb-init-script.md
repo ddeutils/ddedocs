@@ -30,16 +30,23 @@ To use the UI to configure a cluster to run an init script, complete the followi
 
 - On the Cluster **Configuration Page** :octicons-arrow-right-24: Click the **Advanced Options** toggle
 - At the bottom of the page :octicons-arrow-right-24: click the **Init Scripts** tab
-- In the Destination drop-down, select the Workspace destination type
+- In the **Destination** drop-down :octicons-arrow-right-24: Select the **Workspace** type
 - Specify a path to the init script like `SYS/init_script.sh` :octicons-arrow-right-24:
   Click **Add**.
 
 !!! note
 
     Each user has a Home directory configured under the `/Users` directory in
-    the workspace. If a user with the name `user1@databricks.com` stored an
+    the workspace. If a user with the name `user@databricks.com` stored an
     init script called `my-init.sh` in their home directory, the configured
-    path would be `/Users/user1@databricks.com/my-init.sh`.
+    path would be `/Users/user@databricks.com/my-init.sh`.
+
+---
+
+### Cluster-Scoped with Shared Cluster
+
+For shared access mode, you must add init scripts to the `allowlist`.
+See [Allowlist libraries and init scripts on shared compute](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/manage-privileges/allowlist).
 
 ---
 
