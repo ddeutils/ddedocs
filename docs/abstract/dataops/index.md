@@ -10,8 +10,8 @@ icon: material/hexagon-multiple-outline
     between data producers and consumers, improving data quality and transparency
     of results.[^1]
 
-**DataOps** provides a collaboration of data engineering, data science and operations
-team.
+**DataOps (Data Operations)** provides a collaboration of data engineering,
+data science and operations team.
 It aims to automate the delivery of the right and reliable data to appropriate
 teams through a much faster approach. And this leads to better data productivity
 and enhanced human communication.
@@ -22,6 +22,10 @@ and enhanced human communication.
 </figure>
 
 ## :material-arrow-down-right: Getting Started
+
+### DataOps vs. DevOps
+
+![DataOps vs. DevOps—similarities and differences](./img/dataops-vs-devops.png)
 
 ## Noted
 

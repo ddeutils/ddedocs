@@ -53,6 +53,7 @@ extra:
 nav:
   - Home:
       - index.md
+      - Methodology: methodology.md
       - Requirements Gathering: requirements-gathering.md
       - Daily Work: daily-work.md
       - Data Storytelling: data-storytelling.md
@@ -77,20 +78,20 @@ nav:
                   - PBAC: abstract/data_lakehouse/data-lakehouse-policy-based-access-control.md
               - Modeling Technique:
                   - abstract/data_architecture/data_modeling/index.md
-                  - Inmon Approach:
+                  - Inmon:
                       - Abstract: abstract/data_architecture/data_modeling/dwh-inmon-approach.md
-                  - Kimball Approach:
+                  - Kimball:
                       - Abstract: abstract/data_architecture/data_modeling/dwh-kimball-approach.md
                       - Implement: abstract/data_architecture/data_modeling/dwh-dim-implement.md
                       - Slowly Changing Dim: abstract/data_architecture/data_modeling/dwh-dim-slowly-changing-dimension.md
                       - Rapidly Changing Dim: abstract/data_architecture/data_modeling/dwh-dim-rapidly-changing-dimension.md
                       - Techniques: abstract/data_architecture/data_modeling/dwh-dim-techniques.md
-                  - Data Vault Approach:
+                  - Data Vault:
                       - Abstract: abstract/data_architecture/data_modeling/dwh-data-vault-approach.md
                       - Implement: abstract/data_architecture/data_modeling/dwh-data-vault-implement.md
                       - Buzz Act Schema: abstract/data_architecture/data_modeling/dwh-data-vault-business-vault-act-schema.md
-                  - Anchor Approach: abstract/data_architecture/data_modeling/dwh-anchor-approach.md
-                  - One Big Table Approach: abstract/data_architecture/data_modeling/dwh-obt-approach.md
+                  - Anchor: abstract/data_architecture/data_modeling/dwh-anchor-approach.md
+                  - One Big Table: abstract/data_architecture/data_modeling/dwh-obt-approach.md
           - Data Mesh:
               - abstract/data_mesh/index.md
               - Data Domain Usage Monitoring: abstract/data_mesh/data-domain-usage-monitoring.md
@@ -120,6 +121,7 @@ nav:
           - MLOps:
               - abstract/mlops/index.md
               - Challenge: abstract/mlops/mlops-challenge.md
+              - CICD: abstract/mlops/mlops-cicd.md
           - Emerging Trends:
               - abstract/emerging_trends/index.md
       - Roles:

@@ -1,4 +1,4 @@
-# Data Warehouse: _Data Modeling Technique_
+# Data Modeling
 
 **Data Modeling** is a process of creating a conceptual representation of the data
 and its relationships within an organization or system. Dimensional modeling is
@@ -10,7 +10,7 @@ flexibility, and scalability to accommodate changes in business needs.
 - https://medium.com/@dnyanesh.bandbe88/the-3-brothers-of-data-modelling-kimball-inmon-data-vault-5788863e98c8
 - https://medium.com/@khedekarpratik123/data-vault-2-0-modern-data-modelling-methodology-part-1-ed91ed408d48
 
-## Type of Data Modeling
+## Types of Data Modeling
 
 ### One Big-Tabel
 
@@ -20,7 +20,7 @@ flexibility, and scalability to accommodate changes in business needs.
 
 https://patrickcuba.medium.com/data-vault-is-not-a-monolith-3ea2014ffedc
 
-## References
+## Read Mores
 
 - [Medium: Data Modeling Techniques for Data Warehouse](https://medium.com/@mariusz_kujawski/data-modeling-techniques-for-data-warehouse-3edcb541e34e)
 - https://towardsdatascience.com/data-modelling-for-data-engineers-93d058efa302
