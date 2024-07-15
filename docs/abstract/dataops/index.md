@@ -2,15 +2,16 @@
 icon: material/hexagon-multiple-outline
 ---
 
-# Data Ops
+# DataOps
 
 !!! note
 
     **DataOps** is a collection of practices that focuses on breaking down silos
     between data producers and consumers, improving data quality and transparency
-    of results.
+    of results.[^1]
 
-**DataOps** provides a collaboration of data engineering, data science and operations team.
+**DataOps** provides a collaboration of data engineering, data science and operations
+team.
 It aims to automate the delivery of the right and reliable data to appropriate
 teams through a much faster approach. And this leads to better data productivity
 and enhanced human communication.
@@ -20,6 +21,7 @@ and enhanced human communication.
   <figcaption>DataOps</figcaption>
 </figure>
 
+## :material-arrow-down-right: Getting Started
 
 ## Noted
 
@@ -35,7 +37,9 @@ and enhanced human communication.
 - Data Observability
 - Automated Data Quality Checks
 
-## DataOps Engineer
+## Roles
+
+### DataOps Engineer
 
 - [:simple-medium: 10 New DevOps Tools to Watch in 2024](https://medium.com/4th-coffee/10-new-devops-tools-to-watch-in-2024-a5127c0b3411)
 - [:simple-medium: Is Data Observability Critical to Successful Data Analytics?](https://sanjmo.medium.com/is-data-observability-critical-to-successful-data-analytics-d09b983b95c6)
@@ -44,7 +48,4 @@ and enhanced human communication.
 
 - [:material-github: DataOps for the Modern Data Warehouse](https://github.com/Azure-Samples/modern-data-warehouse-dataops)
 
-
-## References
-
-- [:simple-medium: Data Engineering concepts: Part 7, DevOps, DataOps and MLOps](https://medium.com/@mudrapatel17/data-engineering-concepts-part-7-devops-dataops-and-mlops-afc6f432473c)
+[^1]: [:simple-medium: Data Engineering concepts: Part 7, DevOps, DataOps and MLOps](https://medium.com/@mudrapatel17/data-engineering-concepts-part-7-devops-dataops-and-mlops-afc6f432473c)

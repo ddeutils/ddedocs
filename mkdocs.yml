@@ -96,6 +96,7 @@ nav:
               - Data Domain Usage Monitoring: abstract/data_mesh/data-domain-usage-monitoring.md
           - DataOps:
               - abstract/dataops/index.md
+              - Data Product: abstract/dataops/data-product.md
           - Data Pipeline:
               - abstract/data_pipeline/index.md
           - Data Observability:

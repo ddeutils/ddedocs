@@ -1,6 +1,6 @@
 # IO
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
 ### Why _SUCCESS file
 

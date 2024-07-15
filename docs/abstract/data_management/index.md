@@ -4,8 +4,8 @@ icon: material/warehouse
 
 # Data Management
 
-**Data Management** refers to the practices, architectural techniques, and tools
-that manage, store, and analyze data throughout its lifecycle.
+**Data Management** refers to the practices, architectural techniques, strategies
+and tools that manage, store, and analyze data throughout its lifecycle.
 Effective data management ensures that data is accurate, available, and accessible
 when needed while maintaining security and compliance with relevant regulations.
 
@@ -85,6 +85,6 @@ controls and encryption, and complying with legal and regulatory requirements.
 
 ## :material-source-commit-end: Conclusion
 
-Overall, a data management strategy is a comprehensive approach to managing data
+Overall, a Data Management strategy is a comprehensive approach to managing data
 that includes a range of components designed to ensure the effective use, management,
 and protection of data throughout its lifecycle.
