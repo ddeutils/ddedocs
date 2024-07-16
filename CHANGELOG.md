@@ -2,6 +2,21 @@
 
 ## Latest Changes
 
+## 20240716
+
+### :book: Documents
+
+- :page_facing_up: docs: update dataops docs. (_2024-07-16_)
+- :page_facing_up: docs: remove methodolody from index to content page. (_2024-07-15_)
+- :page_facing_up: docs: update data product on dataops. (_2024-07-15_)
+- :page_facing_up: docs: update spark docs for index page. (_2024-07-13_)
+- :page_facing_up: docs: reformat azure and tools docs. (_2024-07-12_)
+- :page_facing_up: docs: refactored some docs that not relate. (_2024-07-11_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: upgrade mkdocs-material==9.5.29. (_2024-07-15_)
+
 ## 20240710
 
 ### :scissors: References
