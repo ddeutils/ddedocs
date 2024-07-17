@@ -64,9 +64,9 @@ Like software observability, data observability includes its own set of pillars:
 - **Schema**: What’s the schema, and has it changed? Were the changes to the schema made intentionally?
 - **Lineage**: Which upstream and downstream dependencies are connected to a given data asset? Who relies on that data for decision-making, and what tables is that data in?
 
-[Read More about Data Observability](../data_observability/index.md)
+[Read More about **Data Observability**](../data_observability/index.md)
 
-### Framework
+### DataOps Framework
 
 ![DataOps Flow](./img/dataops-flow.png)
 
@@ -102,6 +102,52 @@ However, by applying similar principles of DevOps to data pipelines, data teams
 can better collaborate to identify, resolve, and even prevent data quality issues
 from occurring in the first place.
 
+## Functions of a DataOps Platform
+
+With a strong DataOps platform, organizations can solve inefficient data-generation
+and processing problems and improve poor data quality caused by errors and
+inconsistencies.
+
+### Data Ingestion
+
+Generally, the first step in the lifecycle of data starts by ingesting it into a
+data lake or data warehouse to transform it into usable insights through the
+pipeline.
+Organizations need a competent tool that can handle ingestion at scale.
+As an organization grows, an efficient solution for data ingestion is required.
+
+### Data Orchestration
+
+Data volume and type within organizations will continue to grow and it's important
+to manage that growth before it gets out of hand.
+Infinite resources are an impossibility, so data orchestration focuses on organizing
+multiple pipeline tasks into a single end-to-end process that enables data to
+move predictably through a platform when and where it's needed without requiring
+an engineer to code manually.
+
+### Data Transformation
+
+Data transformation is where raw data is cleaned, manipulated and prepared for
+analysis.
+Organizations should invest in tools that make creating complex models faster
+and manage them reliably as teams expand and the data volume grows.
+
+### Data Catalog
+
+A data catalog is like a library for all data assets within an organization.
+It organizes, describes and makes data easy to find and understand.
+In DataOps, a data catalog can help build a solid foundation for smooth data operations.
+Data catalogs serve as a single point of reference for all data needs.
+
+### Data Observability
+
+Without data observability, an organization is not implementing a proper DataOps
+practice.
+Observability protects the reliability and accuracy of data products being produced
+and makes reliable data available for upstream and downstream users.
+
+[Read More about **Data Observability**](../data_observability/index.md)
+
 ## Noted
 
 - Continuous Integration/Continuous Deployment for Data
@@ -132,5 +178,9 @@ software, data, and other resources are available on demand.
 ## Examples
 
 - [:material-github: DataOps for the Modern Data Warehouse](https://github.com/Azure-Samples/modern-data-warehouse-dataops)
+
+## Read Mores
+
+- [What is DataOps?](https://www.ibm.com/topics/dataops)
 
 [^1]: [:simple-medium: Data Engineering concepts: Part 7, DevOps, DataOps and MLOps](https://medium.com/@mudrapatel17/data-engineering-concepts-part-7-devops-dataops-and-mlops-afc6f432473c)

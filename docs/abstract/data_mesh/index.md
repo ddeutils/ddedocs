@@ -24,6 +24,8 @@ Here are the key characteristics and principles of **Data Mesh**:
     and usability. Data products are built to be discoverable, understandable,
     trustworthy, and usable by other teams.
 
+    [Read more about Data as a Product](./data-as-a-product.md)
+
 -   **Self-Serve Data Infrastructure as a Platform**
 
     To enable domain teams to manage their data products effectively, a self-serve
@@ -42,6 +44,7 @@ Here are the key characteristics and principles of **Data Mesh**:
 - [:simple-medium: Data Mesh in Practice](https://medium.com/@axel.schwanke/data-mesh-in-practice-recommendations-from-roches-journey-e0e0d51c4a89)
 - [:simple-medium: Navigating Your Data Platform’s Growing Pains: A Path from Data Mess to Data Mesh](https://towardsdatascience.com/navigating-your-data-platforms-growing-pains-a-path-from-data-mess-to-data-mesh-c16df72f5463)
 - [:simple-medium: How Data Mesh Architecture changed our Engineering Teams](https://medium.com/@think-data/data-mesh-architecture-in-modern-data-engineering-762ac7f8901b)
+- [:simple-medium: Challenges and Solutions in Data Mesh – Part 1](https://towardsdatascience.com/challenges-and-solutions-in-data-mesh-part-1-24cd45290805)
 
 ## Questions
 

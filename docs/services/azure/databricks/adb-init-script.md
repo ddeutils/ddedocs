@@ -10,9 +10,7 @@ startup of each cluster node before the **Apache Spark** driver or executor
     init scripts. These init scripts might be present in workspaces created
     before **February 21, 2023**.
 
-## :material-arrow-down-right: Getting Started
-
-### Cluster-Scoped init scripts
+## :material-sort-variant: Prerequisite
 
 We want to initialize some program before a cluster started like:
 
@@ -25,6 +23,10 @@ echo "Driver IP: $DB_DRIVER_IP"
 
 timedatectl set-timezone Asia/Bangkok
 ```
+
+## :material-arrow-down-right: Getting Started
+
+### Cluster-Scoped init scripts
 
 To use the UI to configure a cluster to run an init script, complete the following steps:
 
@@ -47,6 +49,14 @@ To use the UI to configure a cluster to run an init script, complete the followi
 
 For shared access mode, you must add init scripts to the `allowlist`.
 See [Allowlist libraries and init scripts on shared compute](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/manage-privileges/allowlist).
+
+- In your **Azure Databricks Workspace** :octicons-arrow-right-24: Click **Catalog**
+- Click Gear Icon to open the metastore details and permissions UI :octicons-arrow-right-24:
+  Select **Allowed JARs/Init Scripts** :octicons-arrow-right-24: Click Add
+
+!!! warning
+
+    Init scripts use the identity of the cluster owner.
 
 ---
 

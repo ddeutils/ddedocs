@@ -94,6 +94,7 @@ nav:
                   - One Big Table: abstract/data_architecture/data_modeling/dwh-obt-approach.md
           - Data Mesh:
               - abstract/data_mesh/index.md
+              - Data as a Product: abstract/data_mesh/data-as-a-product.md
               - Data Domain Usage Monitoring: abstract/data_mesh/data-domain-usage-monitoring.md
           - DataOps:
               - abstract/dataops/index.md

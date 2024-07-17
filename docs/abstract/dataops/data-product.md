@@ -5,14 +5,14 @@
     A **Data Product** is a product or service that leverages data as its core
     component to deliver value to end users or customers (data consumers).[^1]
 
-Data Product involves collecting, analyzing, and using data to provide insight,
+## :material-arrow-down-right: Getting Started
+
+**Data Product** involves collecting, analyzing, and using data to provide insight,
 information, or functionality that helps address specific needs or business challenges.
 Data products integrate data from source systems, process it, ensure compliance,
 and make it instantly available to consumers.
 
-## Getting Started
-
-## Principles of an Enterprise-Grade Data Product
+### Principles of an Enterprise-Grade Data Product
 
 1.  Inherently valuable: Complete and valuable without any other data required.
 2.  Product managed: A product owner manages each product through the entire lifecycle, like any other digital product.
@@ -25,7 +25,9 @@ and make it instantly available to consumers.
 9.  Accessible: Must be accessible in a useful way for target consumers.
 10. Discoverable: Must be easy for target users to find.
 
-### The Data Product contract
+---
+
+### The Data Product Contract
 
 As you share data across organizational boundaries, you are faced with the questions
 outlined above.
@@ -62,6 +64,8 @@ The data product owner can improve data quality over time.
 The data product consumer can enjoy a service level agreement with defined guarantees
 supporting them throughout the entire product lifecycle.
 
+---
+
 ## Examples
 
 Data products can take various forms depending on the industry and application
@@ -74,4 +78,4 @@ and target internal or external audiences. Here are a few examples:
 5.  Real-time Dashboards: display real-time data metrics and key performance indicators (KPIs) to provide instant insights into various aspects of a business, such as supply chain health, website traffic, or social media engagement.
 6.  Data APIs: Application Programming Interfaces (APIs) that enable access to structured and unstructured data for developers to build their data products applications.
 
-[^1]: [What is a Data Product?](https://www.dataops.live/what-are-data-products)
+[^1]: DataOps Live: [What is a Data Product?](https://www.dataops.live/what-are-data-products)

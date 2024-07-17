@@ -121,6 +121,7 @@ it will execute the start task file with `bash`.
     echo '########## Setting ODBC Libs ##########' &&
     sudo curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - &&
     sudo curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list > /etc/apt/sources.list.d/mssql-release.list &&
+    sudo apt-get update &&
     sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17 &&
     echo '--- Done: msodbcsql17' &&
     sudo ACCEPT_EULA=Y apt-get install -y mssql-tools &&
