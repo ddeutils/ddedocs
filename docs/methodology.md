@@ -4,6 +4,8 @@ icon: material/google-circles-extended
 
 # Methodology of Data Engineer
 
+![Key components and flow of a data engineering project](./img/the-key-components-and-flow-of-a-data-engineering-project.png)
+
 ## :material-arrow-down-right: Getting Started
 
 The data engineering process covers a sequence of tasks that turn a large amount
@@ -13,7 +15,12 @@ machine learning engineers, and others.
 ### Discovery Phase
 
 At this early stage, flexibility is crucial because requirements in large
-enterprises often evolve. Identify the primary and secondary stakeholders.
+enterprises often evolve.
+
+!!! note
+
+    Identify the ^^primary^^ and ^^secondary^^ stakeholders.
+
 Meet them, and get their avatar into an orientation diagram or slide deck.
 These are ultimately your customers; engagement with them will make or break
 your project.
@@ -31,7 +38,7 @@ and workshops will help expose these differences so that we can work towards
 getting everyone on the same page. Mock-ups and wireframes can also help
 flush out requirements at this phase.
 
-[Read More](./requirements-gathering.md)
+[Read More about Requirements Gathering](./requirements-gathering.md)
 
 ### Design and Planning
 
@@ -45,14 +52,15 @@ here. Will there be legacy code to deal with, existing system integrations, or g
 Once we have a design and some test cases, we identify the Minimum Viable Product (MVP).
 This could be a thin slice of functionality where a subset of data is exposed
 end to end or a single data source end to end, the idea is to break up the work
-into phases or chunks that are more manageable. Features are written to encapsulate
-the required work for each part of the MVP, those features are filled in with
-the user stories that make that feature work. At this point, you will want a
-detailed design for the MVP, including data flows, expected inputs and outputs,
-API contracts, etc. The components not in scope for MVP can have epics and even
-features at this point, but since you will learn as you build out MVP, it might
-make sense to leave the detail for non-MVP components until closer to the delivery
-of the MVP.
+into phases or chunks that are more manageable.
+
+Features are written to encapsulate the required work for each part of the MVP,
+those features are filled in with the user stories that make that feature work.
+At this point, you will want a detailed design for the MVP, including data flows,
+expected inputs and outputs, API contracts, etc.
+The components not in scope for MVP can have epics and even features at this point,
+but since you will learn as you build out MVP, it might make sense to leave the
+detail for non-MVP components until closer to the delivery of the MVP.
 
 ### Implementation and Testing
 
@@ -66,6 +74,7 @@ Initial development artifacts should include production code and unit tests.
 As complete functionality is deployed, integration tests can be built out where
 real data moves through the pipeline and is measured at critical points during
 its journey for accuracy and completeness.
+
 Once the entire pipeline is in place, we develop our end-to-end tests that cover
 the complete pipeline with checks to ensure we push the right data to the correct
 place. Using this test-driven development (TDD) approach, we can ensure the person
@@ -114,3 +123,8 @@ causes will help illuminate where future development work might need to happen.
   delivery.
 - Focus on repeatability and testing: time spent here early on will pay dividends
   later in the development lifecycle.
+
+
+## Read Mores
+
+- [A Comprehensive Guide on Planning a Data Engineering Project](https://www.fissionlabs.com/blog-posts/a-comprehensive-guide-on-planning-a-data-engineering-project)
