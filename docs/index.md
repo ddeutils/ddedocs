@@ -18,18 +18,18 @@ area.
 
 ## :material-arrow-down-right: Getting Started
 
-:material-page-last: First, ^^**Data engineering** is a critical part of the
-Data Lifecycle that enables organizations to manage and process large volumes of
-data efficiently and reliably^^[^3].
-By these concepts, **Data Engineer** can design and implement **Data Pipelines**
-that meet the requirements of their organizations and ensure that their data is
-managed _Consistently_ and _Reliably_.
+:material-page-last: First, ^^**Data Engineering** is a critical part of the
+==Data Lifecycle== that enables organizations to manage and process large volumes
+of data efficiently and reliably^^[^3].
+By these concepts, **Data Engineer** should design and implement **Data Pipeline**
+and **Data Management Strategy** that meet the requirements of their organizations
+and ensure that their data is managed _Consistently_ and _Reliably_.
 
 !!! quote "What is DE do?"
 
     **Data Engineer** is who able to ==_**Develop**_, _**Operate**_, and _**Maintain**_==
     of **Data Infrastructure**, either On-Premises or Clouds, comprising databases,
-    storages, compute engines, and pipelines to Extract, Transform, and Load Data.[^1]
+    storages, compute engines, and pipelines.[^1]
 
 !!! quote "Fundamentals of Data Engineering"
 
@@ -162,53 +162,41 @@ The role from above, I reference from ^^Types of Data Professionals^^[^4].
 ## :material-account-supervisor-outline: Communities
 
 :material-page-last: This below is the list of Communities that you must join for
-keep update knowledge for Developer and Data Engineer trend.
+keep update knowledge for [Developer and Data Engineer trends](./abstract/emerging_trends/index.md).
 
 <div class="grid cards" markdown>
 
--   :simple-medium: **Data Engineering**
+-   [:simple-medium: **Data Engineering**](https://medium.com/tag/data-engineering)
 
     ---
     The **Medium Tag** for Data Engineering knowledge and solutions :octicons-share-android-24:
 
-    [:octicons-arrow-right-24: Go Through](https://medium.com/tag/data-engineering)
-
--   :material-coffee-to-go-outline: **Data Engineer Cafe**
+-   [:material-coffee-to-go-outline: **Data Engineer Cafe**](https://discuss.dataengineercafe.io/)
 
     ---
     An **Area of Discussing Blog** for Data Engineer like talk to your close friend
     at the Cafe :material-coffee-maker-outline:
 
-    [:octicons-arrow-right-24: Go Through](https://discuss.dataengineercafe.io/)
-
--   :simple-medium: **ODDS Team**
+-   [:simple-medium: **ODDS Team**](https://medium.com/tag/data-engineering)
 
     ---
     The **Medium Group** that believes software development should be joyful and
     advocates deliberate practice :material-human-greeting-proximity:
 
-    [:octicons-arrow-right-24: Go Through](https://medium.com/tag/data-engineering)
-
--   :material-map-marker-path: **TPA Roadmap**
+-   [:material-map-marker-path: **TPA Roadmap**](https://roadmap.thaiprogrammer.org/)
 
     ---
     **Community Driven Roadmaps, Articles and Resources** for developers in Thailand
 
-    [:octicons-arrow-right-24: Go Through](https://roadmap.thaiprogrammer.org/)
-
--   :material-package-variant-plus: **TestDriven**
+-   [:material-package-variant-plus: **TestDriven**](https://testdriven.io/)
 
     ---
     Learn to build high-quality web apps with **best practices**
 
-    [:octicons-arrow-right-24: Go Through](https://testdriven.io/)
-
--   :material-brain: **Second Brain**
+-   [:material-brain: **Second Brain**](https://www.ssp.sh/brain/data-engineering/)
 
     ---
-    My inspiration document website.
-
-    [:octicons-arrow-right-24: Go Through](https://www.ssp.sh/brain/data-engineering/)
+    My inspiration Data Engineering document website.
 
 </div>
 
