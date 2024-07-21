@@ -2,6 +2,14 @@
 
 ## Latest Changes
 
+## 20240721
+
+### :book: Documents
+
+- :page_facing_up: docs: update docs for main page. (_2024-07-21_)
+- :page_facing_up: docs: update home page. (_2024-07-21_)
+- :page_facing_up: docs: update data mesh contents. (_2024-07-17_)
+
 ## 20240716
 
 ### :book: Documents
