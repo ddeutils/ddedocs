@@ -33,7 +33,8 @@ theme:
       primary: blue grey
       accent: lime
   font:
-    text: Roboto
+#    text: Roboto
+    text: Work Sans
     code: Roboto Mono
   icon:
     repo: fontawesome/brands/github-alt

@@ -19,7 +19,7 @@ area.
 ## :material-arrow-down-right: Getting Started
 
 :material-page-last: First, ^^**Data engineering** is a critical part of the
-data lifecycle that enables organizations to manage and process large volumes of
+Data Lifecycle that enables organizations to manage and process large volumes of
 data efficiently and reliably^^[^3].
 By these concepts, **Data Engineer** can design and implement **Data Pipelines**
 that meet the requirements of their organizations and ensure that their data is
@@ -31,7 +31,7 @@ managed _Consistently_ and _Reliably_.
     of **Data Infrastructure**, either On-Premises or Clouds, comprising databases,
     storages, compute engines, and pipelines to Extract, Transform, and Load Data.[^1]
 
-!!! quote
+!!! quote "Fundamentals of Data Engineering"
 
     Data Engineering is the development, implementation, and maintenance of systems
     and processes that take in raw data and produce high-quality, consistent
@@ -39,16 +39,27 @@ managed _Consistently_ and _Reliably_.
     learning. Data engineering is the intersection of security, data management,
     DataOps, data architecture, orchestration, and software engineering.
 
-    A Data Engineer manages the data engineering lifecycle, beginning with getting
-    data from source systems and ending with serving data for use cases, such as
-    analysis or machine learning.
+    A Data Engineer manages the ^^Data Engineering Lifecycle^^, beginning with
+    getting data from source systems and ending with serving data for use cases,
+    such as analysis or machine learning.
 
-    — Joe Reis and Matt Housley in “Fundamentals of Data Engineering”
+    — Joe Reis and Matt Housley in [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/)
 
 <figure markdown="span">
   ![Life Cycle of Data Engineering](img/life-cycle-of-data-engineering.png){ loading=lazy width="650" }
   <figcaption><a href="https://www.techment.com/unlocking-the-power-of-data-a-beginners-guide-to-data-engineering/">Life Cycle of Data Engineering</a></figcaption>
 </figure>
+
+You will see that stages of the cycle include Data Ingestion, Data Transformation,
+Data Serving, and Data Storage.
+
+| Best practice               | Importance                                                                                                                                      |
+|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Proactive data monitoring   | Regularly checks datasets for anomalies to maintain data integrity. This includes identifying missing, duplicate, or inconsistent data entries. |
+| Schema drift management     | Detects and addresses changes in data structure, ensuring compatibility and reducing data pipeline breaks.                                      |
+| Continuous documentation    | Manages descriptive information about data, aiding in discoverability and comprehension.                                                        |
+| Data security measures      | Controls and monitors access to data sources, enhancing security and compliance.                                                                |
+| Version control and backups | Tracks change to datasets over time, aiding in reproducibility and audit trails.                                                                |
 
 :material-page-last: When I started on this role, I got the idea about the future
 of my responsibilities. I know the Data Engineering tools will shift so fast because
@@ -62,8 +73,13 @@ that show about how many possibility tools that able to use on your project.
 It has many area that you should to choose which one that match with the current
 architect or fit with your cost planing model.
 
+---
+
 :material-page-last: Finally, the below diagram shows ^^how the focus areas of
 **Data Engineering Shift** as the analytics organization evolves^^.
+That mean Data Engineer does not create a part of data ingestion or serving only.
+When data engineering tools change very quickly, The focus of data engineers has
+changed as well.
 
 <figure markdown="span">
   ![Data Engineering Shift](img/data-engineering-shift.png){ loading=lazy width="650" }
@@ -82,6 +98,8 @@ role:
 
 - **Data Accessibility**: An example could be enabling end-users to analyze significant
   metrics movements in a self-serve manner.
+
+---
 
 :material-page-last: Additional, the trend of ^^**Modern Data Stack**^^ will make
 the **Data Engineering** so easy and force you have the time to focus on
@@ -184,6 +202,13 @@ keep update knowledge for Developer and Data Engineer trend.
     Learn to build high-quality web apps with **best practices**
 
     [:octicons-arrow-right-24: Go Through](https://testdriven.io/)
+
+-   :material-brain: **Second Brain**
+
+    ---
+    My inspiration document website.
+
+    [:octicons-arrow-right-24: Go Through](https://www.ssp.sh/brain/data-engineering/)
 
 </div>
 

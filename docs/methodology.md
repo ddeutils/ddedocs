@@ -6,6 +6,10 @@ icon: material/google-circles-extended
 
 ## :material-arrow-down-right: Getting Started
 
+The data engineering process covers a sequence of tasks that turn a large amount
+of raw data into a practical product meeting the needs of analysts, data scientists,
+machine learning engineers, and others.
+
 ### Discovery Phase
 
 At this early stage, flexibility is crucial because requirements in large
