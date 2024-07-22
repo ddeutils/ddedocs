@@ -9,7 +9,7 @@ It creates a pool of compute nodes (Virtual Machines) to tackle heavy loads.
   <figcaption>Azure Batch Architecture</figcaption>
 </figure>
 
-## Typical Workload Applications / Use Cases
+## Typical Workload Applications
 
 The data processing remains same as mentioned in Azure batch processing with
 the only difference being the tasks act as the intermediate between I/O container
@@ -25,7 +25,10 @@ Consider this use case based on a sample project in GitHub (Ref1)*.
 In this instance, the application is aware of the existence of Cloud and
 can interact with it.
 
-![Cloud-aware application](img/az-btch-cloud-aware-application.png){ loading=lazy }
+<figure markdown="span">
+  ![Cloud-aware application](img/az-btch-cloud-aware-application.png){ loading=lazy width="550" }
+  <figcaption>Cloud-Aware Application</figcaption>
+</figure>
 
 The block diagram above is an extension of the detailed diagram represented
 in the Azure batch processing section above.
@@ -41,14 +44,21 @@ This includes standalone applications that do not include Cloud as part of
 the overall architecture or applications which organizations implemented
 before Cloud became mainstream.
 
-![Legacy application](img/az-btch-legacy-application.png){ loading=lazy }
+<figure markdown="span">
+  ![Legacy application](img/az-btch-legacy-application.png){ loading=lazy width="550" }
+  <figcaption>Legacy Application</figcaption>
+</figure>
 
 Let’s review an example of an application which is not aware of the cloud.
 Consider this sample project (Ref 2)where an application takes MP4 files from
 the filesystem and converts them into an AVI format using a FFmpeg tool
 (which is not Cloud aware) and then saves them to the filesystem.
 
-## Create Azure Batch Pool
+---
+
+## Getting Started
+
+### Create Azure Batch Pool
 
 ```json
 {
@@ -96,9 +106,9 @@ the filesystem and converts them into an AVI format using a FFmpeg tool
 }
 ```
 
-## Python Tutorial
+### Python Tutorial
 
-- [Azure Content - Azure Batch Python Tutorial](https://github.com/uglide/azure-content/blob/master/articles/batch/batch-python-tutorial.md)
+- [:material-github: Azure Content - Azure Batch Python Tutorial](https://github.com/uglide/azure-content/blob/master/articles/batch/batch-python-tutorial.md)
 
 ## Read Mores
 

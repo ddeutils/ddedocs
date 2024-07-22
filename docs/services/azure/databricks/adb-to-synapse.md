@@ -1,23 +1,21 @@
-# Databricks: _To Synapse SQL Pool_
+# To Synapse SQL Pool
 
 When you want to read and write data on **Azure Synapse Analytic SQL Pool** via
 **Azure Databricks**, that has 2 types of Azure Synapse SQL Pool:
 
-- [Serverless SQL Pool](#access-serverless-sql-pool)
-- [Dedicate SQL Pool](#access-dedicate-sql-pool)
+- [Serverless SQL Pool](#serverless-sql-pool)
+- [Dedicate SQL Pool](#dedicate-sql-pool)
 
-!!! note
-
-    Why do we need staging storage?
+!!! note "Why do we need staging storage?"
 
     Staging folder is needed to store some temporary data whenever we read/write
-    data from/to `Azure Synapse`. Whenever we read/write data, we actually
+    data from/to **Azure Synapse**. Whenever we read/write data, ^^we actually
     leverage **PolyBase** to move the data, which staging storage is used to achieve
-    high performance.
+    high performance.^^
 
-## Access Serverless SQL Pool
+## Serverless SQL Pool
 
-### 1) Create Database Scope
+### 1) Prerequisite
 
 If you want to see the list of existing database scope credential, you can use
 this command:
@@ -26,8 +24,6 @@ this command:
 SELECT * FROM [sys].[database_scoped_credentials];
 ```
 
-### 2) Create External Data Source
-
 Create external datasource for connection from Synapse Serverless to Azure Data
 Lake Storage.
 
@@ -35,9 +31,9 @@ Lake Storage.
 IF NOT EXISTS (
     SELECT *
     FROM [sys].[external_data_sources]
-    WHERE NAME = 'dataplatdev_curated_adb'
+    WHERE NAME = 'data_curated_adb'
 )
-    CREATE EXTERNAL DATA SOURCE [dataplatdev_curated_adb]
+    CREATE EXTERNAL DATA SOURCE [data_curated_adb]
     WITH (
         CREDENTIAL = [adb_cred],
         LOCATION = 'abfss://{curated}@{dataplatdev}.dfs.core.windows.net'
@@ -45,19 +41,14 @@ IF NOT EXISTS (
 GO
 ```
 
-!!! abstract
+[Read More about **External Data Source**](../synapse/asa-external-data-source.md)
 
-    ```sql
-    SELECT * FROM [sys].[external_data_sources];
-    ```
-
-### 3) Create User in Serverless SQL Pool
+### 2) Create User in Serverless SQL Pool
 
 Create login user and grant permission reference above database scope credential
 
 ```sql
-CREATE LOGIN [adbuser] WITH PASSWORD = 'Gl2vimQkvpZp'
-;
+CREATE LOGIN [adbuser] WITH PASSWORD = '<password>';
 GRANT REFERENCES ON DATABASE SCOPED CREDENTIAL::[adb_cred] TO [adbuser];
 GO
 ```
@@ -69,7 +60,7 @@ CREATE OR ALTER VIEW [CURATED].[VW_DELTA_SALES]
 AS SELECT *
    FROM OPENROWSET(
        BULK '/{delta_silver}/{table_sales}',
-       DATA_SOURCE = 'dataplatdev_curated_adb',
+       DATA_SOURCE = 'data_curated_adb',
        FORMAT = 'DELTA'
    ) AS [R]
 ;
@@ -80,12 +71,12 @@ GRANT SELECT ON OBJECT::[CURATED].[VW_DELTA_SALES] TO [adbuser]
 
 More Detail, [Control storage account access for serverless SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=service-principal#supported-storage-authorization-types)
 
-### 4) Connection Code
+### 3) Connection Code
 
 #### Method 01: JDBC Connector
 
 This method reads or writes the data row by row, resulting in performance issues.
-**Not Recommended**.
+==**Not Recommended**==.
 
 Set Spark Config:
 
@@ -100,6 +91,19 @@ Set Spark Config:
         "fs.azure.account.key.{dataplatdev}.dfs.core.windows.net",
         "<storage-account-access-key>"
     )
+
+    df = (
+      spark.read
+          .format("jdbc")
+          .option("url", (
+              f"jdbc:sqlserver://{server}:1433;database={database};user={username};password={password};"
+              f"encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.sql.azuresynapse.net;loginTimeout=30;"
+          ))
+          .option("tempDir", "abfss://{curated}@{storage-account}.dfs.core.windows.net/<folder-for-temporary-data>")
+          .option("forwardSparkAzureStorageCredentials", "true")
+          .option("query", "SELECT * FROM [CURATED].[VW_DELTA_SALES]")
+          .load()
+      )
     ```
 
 === "Azure Blob Storage"
@@ -113,38 +117,14 @@ Set Spark Config:
         "fs.azure.account.key.{dataplatdev}.blob.core.windows.net",
         "<storage-account-access-key>"
     )
-    ```
 
-**Make JDBC URL**:
-
-```python
-URL = (
-    f"jdbc:sqlserver://{server}:1433;database={database};user={username};password={password};"
-    f"encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.sql.azuresynapse.net;loginTimeout=30;"
-)
-```
-
-=== "Azure Data Lake Gen 2"
-
-    ```python
     df = (
       spark.read
           .format("jdbc")
-          .option("url", URL)
-          .option("tempDir", "abfss://{curated}@{storage-account}.dfs.core.windows.net/<folder-for-temporary-data>")
-          .option("forwardSparkAzureStorageCredentials", "true")
-          .option("query", "SELECT * FROM [CURATED].[VW_DELTA_SALES]")
-          .load()
-      )
-    ```
-
-=== "Azure Blob Storage"
-
-    ```python
-    df = (
-      spark.read
-          .format("jdbc")
-          .option("url", URL)
+          .option("url", (
+              f"jdbc:sqlserver://{server}:1433;database={database};user={username};password={password};"
+              f"encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.sql.azuresynapse.net;loginTimeout=30;"
+          ))
           .option("tempDir", "wasbs://{curated}@{storage-account}.blob.core.windows.net/<folder-for-temporary-data>")
           .option("forwardSparkAzureStorageCredentials", "true")
           .option("query", "SELECT * FROM [CURATED].[VW_DELTA_SALES]")
@@ -161,20 +141,20 @@ URL = (
 
 This method uses bulk insert to read/write data. There are a lot more options that
 can be further explored. First Install the Library using **Maven Coordinate** in
-the Data-bricks cluster, and then use the below code. **Recommended for Azure
-SQL DB or Sql Server Instance**
+the Data-bricks cluster, and then use the below code.
+==**Recommended for Azure SQL DB or Sql Server Instance**==
 
 Install Driver on cluster:
 
-- **Maven**: `com.microsoft.azure:spark-mssql-connector_2.12:1.2.0`
+-   **Maven**: `com.microsoft.azure:spark-mssql-connector_2.12:1.2.0`
 
-  | SPARK VERSION | MAVEN DEPENDENCY                                                                                 |
-  | ------------- | ------------------------------------------------------------------------------------------------ |
-  | Spark 2.4.x   | groupeId : com.microsoft.azure <br> artifactId : spark-mssql-connector <br> version : 1.0.2      |
-  | Spark 3.0.x   | groupeId : com.microsoft.azure <br> artifactId : spark-mssql-connector_2.12 <br> version : 1.1.0 |
-  | Spark 3.1.x   | groupeId : com.microsoft.azure <br> spark-mssql-connector_2.12 <br> version : 1.2.0              |
+   | SPARK VERSION   | MAVEN DEPENDENCY                                                                               |
+   |-----------------|------------------------------------------------------------------------------------------------|
+   | Spark 2.4.x     | groupeId: com.microsoft.azure <br> artifactId: spark-mssql-connector <br> version : 1.0.2      |
+   | Spark 3.0.x     | groupeId: com.microsoft.azure <br> artifactId: spark-mssql-connector_2.12 <br> version : 1.1.0 |
+   | Spark 3.1.x     | groupeId: com.microsoft.azure <br> artifactId: spark-mssql-connector_2.12 <br> version : 1.2.0 |
 
-  Read More [Supported Version](https://search.maven.org/search?q=spark-mssql-connector)
+    Read More [Supported Version](https://search.maven.org/search?q=spark-mssql-connector)
 
 === "Table"
 
@@ -213,7 +193,7 @@ Install Driver on cluster:
 - [Microsoft SQL Spark Connector](https://learn.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver15)
 - [SQL Spark Connector](https://github.com/microsoft/sql-spark-connector)
 
-## Access Dedicate SQL Pool
+## Dedicate SQL Pool
 
 When connect to Azure Synapse Dedicated SQL Pool, we will use special spark connector,
 `com.databricks.spark.sqldw` method.
@@ -515,11 +495,11 @@ conn = pyodbc.connect(
 
 - [Using PyODBC in Azure Databricks for Connecting with MSSQL](https://stackoverflow.com/questions/62005930/using-pyodbc-in-azure-databrick-for-connecting-with-sql-server)
 
-## References
+## Read Mores
 
 - (https://docs.databricks.com/data/data-sources/azure/synapse-analytics.html)
 - (https://joeho.xyz/blog-posts/how-to-connect-to-azure-synapse-in-azure-databricks/)
 - (https://learn.microsoft.com/en-us/answers/questions/653154/databricks-packages-for-batch-loading-to-azure.html)
-- :fontawesome-brands-stack-overflow: (https://stackoverflow.com/questions/55708079/spark-optimise-writing-a-dataframe-to-sql-server/55717234) (\*\*\*)
+- [:material-stack-overflow: Spark: optimise writing a DataFrame to SQL Server](https://stackoverflow.com/questions/55708079/spark-optimise-writing-a-dataframe-to-sql-server/55717234)
 - (https://docs.databricks.com/external-data/synapse-analytics.html)
 - (https://learn.microsoft.com/en-us/azure/synapse-analytics/security/how-to-set-up-access-control)

@@ -9,7 +9,10 @@
 - Go to `https://<databricks-instance>.azuredatabricks.net#secrets/createScope`
 - Create Scope with `All workspace users` manage principle
 
-![Azure Databricks Secrets Scope](./img/adb-kv-scope.png)
+<figure markdown="span">
+  ![Azure Databricks Secrets Scope](./img/adb-kv-scope.png){ loading=lazy width="500" }
+  <figcaption>Azure Databricks Secrets Scope</figcaption>
+</figure>
 
 ### List of Secrets
 
@@ -17,6 +20,12 @@
 
 ```python
 display(dbutils.secrets.listScopes())
+```
+
+**List of secrets with a scope name**:
+
+```python
+display(dbutils.secrets.list(scope='<scope-name>'))
 ```
 
 ## Read Mores

@@ -67,9 +67,7 @@ credentials = Credentials(
 
 ---
 
-## :material-google-cloud: Services
-
-### BigQuery
+### :material-arrow-right-bottom: BigQuery
 
 On Bath Pool, it should install Python package:
 

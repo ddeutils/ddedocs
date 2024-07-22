@@ -161,12 +161,9 @@ nav:
                   - Secrets: services/azure/databricks/adb-secrets.md
                   - Connections:
                       - To Azure: services/azure/databricks/adb-to-az.md
-                      - To Azure SQL: services/azure/databricks/adb-to-azure-sql.md
-                      - To Synapse SQL Pool: services/azure/databricks/adb-to-synapse-sql-pool.md
-                      - To BigQuery: services/azure/databricks/adb-to-bigquery.md
-                      - To Event Hubs: services/azure/databricks/adb-to-eventhubs.md
-                      - To IoT Hub: services/azure/databricks/adb-to-iothub.md
-                      - To Kinesis: services/azure/databricks/adb-to-kinesis.md
+                      - To Synapse: services/azure/databricks/adb-to-synapse.md
+                      - To Google: services/azure/databricks/adb-to-google.md
+                      - To AWS: services/azure/databricks/adb-to-aws.md
                   - Unity Catalog:
                       - Setup: services/azure/databricks/adb-uc-setup.md
                       - Privileges: services/azure/databricks/adb-uc-privileges.md
@@ -185,18 +182,18 @@ nav:
               - DevOps:
                   - For Loop: services/azure/devops/devops-for-loop.md
                   - Multi Repo: services/azure/devops/devops-multi-repo.md
-                  - Deploy:
-                      - Self Hosted FastAPI: services/azure/devops/devops-self-hosted-win-fastapi.md
+                  - Self Hosted: services/azure/devops/devops-self-hosted.md
               - Fabric:
                   - services/azure/fabric/index.md
           - AWS:
               - services/aws/index.md
+              - IAM: services/aws/aws-iam.md
               - VPC: services/aws/aws-vpc.md
-              - Policy: services/aws/aws-policy.md
               - IoT Core:
-                  - Rule to S3: services/aws/iot_core/iot-rule-to-s3.md
-                  - Rule to Kinesis: services/aws/iot_core/iot-rule-to-kinesis.md
-                  - Rule to Timestream Grafana: services/aws/iot_core/iot-rule-timestream-grafana.md
+                  - Rules:
+                      - to S3: services/aws/iot_core/iot-rule-to-s3.md
+                      - to Kinesis: services/aws/iot_core/iot-rule-to-kinesis.md
+                      - to Timestream Grafana: services/aws/iot_core/iot-rule-timestream-grafana.md
               - S3:
                   - Filter Content: services/aws/s3/s3-filter-content.md
                   - Trigger Lambda: services/aws/s3/s3-trigger-lambda.md
@@ -204,7 +201,7 @@ nav:
               - EC2:
                   - Domain with Route53: services/aws/ec2/ec2-domain-with-route53.md
               - Lambda:
-                  - Pros & Cons: services/aws/lambda/lambda-stop-using-for-everything.md
+                  - services/aws/lambda/index.md
                   - With Docker: services/aws/lambda/lambda-with-docker.md
                   - CICD: services/aws/lambda/lambda-cicd.md
               - Step Functions:

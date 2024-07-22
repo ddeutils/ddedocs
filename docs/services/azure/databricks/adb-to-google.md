@@ -1,6 +1,10 @@
-# Databricks: _To BigQuery_
+# Connect to Google Services
 
-## Using JSON Encoding
+## :material-account-check-outline: Authentication
+
+## :material-arrow-right-bottom: BigQuery
+
+### Using JSON Encoding
 
 ```python
 credentials_json_str: str = dbutils.secrets.get(scope="<scope-name>", key="<secret-key-name>")
@@ -20,7 +24,7 @@ df.show()
 
     [GitHub: Error getting access token from metadata server](https://github.com/GoogleCloudDataproc/spark-bigquery-connector/issues?q=is%3Aissue+Error+getting+access+token+from+metadata+server+at%3A+http%3A%2F%2F169.254.169.254%2FcomputeMetadata%2Fv1%2Finstance%2Fservice-accounts%2Fdefault%2Ftoken)
 
-## Using GOOGLE_APPLICATION_CREDENTIALS
+### Using GOOGLE_APPLICATION_CREDENTIALS
 
 ```python
 import os
@@ -28,7 +32,7 @@ import os
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "</path/to/key/file>"
 ```
 
-## Using Filepath
+### Using Filepath
 
 ```python
 df = (
@@ -40,7 +44,7 @@ df = (
 )
 ```
 
-## Access Token
+### Access Token
 
 ```python
 # Globally
@@ -50,11 +54,11 @@ spark.conf.set("gcpAccessToken", "<access-token>")
 df = (
     spark.read
         .format("bigquery")
-        .option("gcpAccessToken", "<acccess-token>")
+        .option("gcpAccessToken", "<access-token>")
 )
 ```
 
-## References
+**References**:
 
 - (https://docs.databricks.com/en/external-data/bigquery.html#step-2-set-up-databricks)
-- https://github.com/GoogleCloudDataproc/spark-bigquery-connector
+- (https://github.com/GoogleCloudDataproc/spark-bigquery-connector)

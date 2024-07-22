@@ -241,22 +241,20 @@ credential = CertificateCredential(
 
 ---
 
-## :material-microsoft-azure: Azure Services
-
 !!! tip
 
     Wait for at least 15 minutes for role to propagate and then try to access after
     assign **IAM Role** to target service.
 
-### Key Vault
+## :material-arrow-right-bottom: Key Vault
 
-#### Prerequisite
+### Prerequisite
 
 - Go to **Azure Key Vaults** :octicons-arrow-right-24: Select your key vault name, `kv-demo`
 - On **Access control (IAM)** :octicons-arrow-right-24: Click **Add** :octicons-arrow-right-24:
   Assign **Key Vault Secrets User** to your user-assigned managed identity
 
-#### Connection Code
+### Connection Code
 
 Before develop code, you should install Azure Key Vault client library;
 
@@ -291,9 +289,9 @@ def secret_client(keyvault_name: str):
 
 ---
 
-### Synapse
+## :material-arrow-right-bottom: Synapse
 
-#### Prerequisite
+### Prerequisite
 
 -   Go to **Azure Synapse SQL Pool** :octicons-arrow-right-24: Create user from external
     provider and grant permission of this user such as **Read** access,
@@ -302,7 +300,7 @@ def secret_client(keyvault_name: str):
     CREATE USER [<user-assigned-name>] FROM EXTERNAL PROVIDER;
     ```
 
-#### Connection Code
+### Connection Code
 
 Before develop code, you should install DataFrame API library;
 
@@ -339,15 +337,15 @@ for batch in reader:
 
 ---
 
-### DataLake
+## :material-arrow-right-bottom: DataLake
 
-#### Prerequisite
+### Prerequisite
 
 - Go to **Azure Storage Accounts** :octicons-arrow-right-24: Select your storage account name
 - On **Access control (IAM)** :octicons-arrow-right-24: Click **Add** :octicons-arrow-right-24:
   Assign **Storage Blob Data Contributor** to your user-assigned managed identity
 
-#### Connection Code
+### Connection Code
 
 Before develop code, you should install Azure Datalake Storage client library;
 

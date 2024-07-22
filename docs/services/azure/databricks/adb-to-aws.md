@@ -1,21 +1,23 @@
-# To Kinesis
+# Connect to AWS Services
 
-On July 11, 2017, we announced the general availability of Apache Spark 2.2.0 as
-part of Databricks Runtime 3.0 (DBR) for the Unified Analytics Platform. To augment
-the scope of Structured Streaming on DBR, we support AWS Kinesis Connector as a
-source (to read streams from), giving developers the freedom to do three things.
+## :material-account-check-outline: Authentication
 
-![Structured Streaming with Amazon Kinesis](img/adb-kinesis-structured-streamimg.png){ loading=lazy }
+### Using AWS Access Token
+
+- Go to **IAM**
+
+## :material-arrow-right-bottom: Kinesis
 
 !!! warning
 
-    In Databricks Runtime 11.3 LTS and above, the `Trigger.Once` setting is deprecated.
+    In **Databricks Runtime 11.3 LTS and Above**, the `Trigger.Once` setting is
+    deprecated.
     Databricks recommends you use `Trigger.AvailableNow` for all incremental batch
     processing workloads.[^1]
 
-## IAM Policy
+### 1) IAM Policy
 
-By default, the Kinesis connector resorts to [Amazon’s default credential provider chain](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html#credentials-default)
+By default, the Kinesis connector resorts to [:material-aws: Amazon’s default credential provider chain](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html#credentials-default)
 
 === "Read"
 
@@ -65,26 +67,7 @@ By default, the Kinesis connector resorts to [Amazon’s default credential prov
     }
     ```
 
-## Schema
-
-Kinesis returns records with the following schema:
-
-```python
-from pyspark.sql.types import TimestampType, StringType, StructType, StructField, BinaryType
-
-schema = StructType(
-    [
-        StructField("partitionKey", StringType(), True),
-        StructField("data", BinaryType(), False),
-        StructField("stream", StringType(), False),
-        StructField("shardId", StringType(), False),
-        StructField("sequenceNumber", StringType(), False),
-        StructField("approximateArrivalTimestamp", TimestampType(), False),
-    ],
-)
-```
-
-## Connection Code
+### 2) Connection Code
 
 === "ReadStream"
 
@@ -132,7 +115,26 @@ schema = StructType(
     )
     ```
 
-## References
+!!! note
+
+    Kinesis returns records with the following schema:
+
+    ```python
+    from pyspark.sql.types import TimestampType, StringType, StructType, StructField, BinaryType
+
+    schema: StructType = StructType(
+        [
+            StructField("partitionKey", StringType(), True),
+            StructField("data", BinaryType(), False),
+            StructField("stream", StringType(), False),
+            StructField("shardId", StringType(), False),
+            StructField("sequenceNumber", StringType(), False),
+            StructField("approximateArrivalTimestamp", TimestampType(), False),
+        ],
+    )
+    ```
+
+**References**:
 
 - [:simple-databricks: Apache Spark’s Structured Streaming with Amazon Kinesis on Databricks](https://www.databricks.com/blog/2017/08/09/apache-sparks-structured-streaming-with-amazon-kinesis-on-databricks.html)
 - [:simple-databricks: Connect to Amazon Kinesis](https://docs.databricks.com/en/connect/streaming/kinesis.html)
