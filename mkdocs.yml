@@ -134,6 +134,7 @@ nav:
           - Azure:
               - services/azure/index.md
               - OAuth: services/azure/az-oauth.md
+              - VNet: services/azure/az-vnet.md
               - Storage: services/azure/az-storage-account.md
               - Database:
                   - Auth: services/azure/database/az-db-auth.md
@@ -422,6 +423,8 @@ nav:
               - tools/cicd/jenkins/index.md
           - Jira:
               - tools/cicd/jira/index.md
+          - Vault:
+              - tools/cicd/vault/index.md
       - ML & Analytic:
           - MLflow:
               - tools/analytic/mlflow/index.md

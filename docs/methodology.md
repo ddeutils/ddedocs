@@ -31,12 +31,12 @@ and they are the ones who will sign off on your project's delivery.
 
 ### Requirements Gathering
 
-The process of gathering requirements from various stakeholders can be technically
-and inter-personally challenging. Not everyone will have the same understanding
-of the problem or its solutions. Techniques such as interviews, surveys,
-and workshops will help expose these differences so that we can work towards
-getting everyone on the same page. Mock-ups and wireframes can also help
-flush out requirements at this phase.
+:material-page-last: The process of gathering requirements from various stakeholders
+can be technically and inter-personally challenging.
+Not everyone will have the same understanding of the problem or its solutions.
+Techniques such as interviews, surveys, and workshops will help expose these
+differences so that we can work towards getting everyone on the same page.
+Mock-ups and wireframes can also help flush out requirements at this phase.
 
 [Read More about Requirements Gathering](./requirements-gathering.md)
 
@@ -44,8 +44,28 @@ flush out requirements at this phase.
 
 Data engineers should plan the architecture, data pipelines, and infrastructure
 based on the gathered requirements. This phase should stress the importance of
-designing for scalability and maintainability. Deciding to buy or build happens
-here. Will there be legacy code to deal with, existing system integrations, or greenfield? Consider which systems will consume the data when selecting a data store. Web apps will need low-latency data stores and will benefit from caching (think MemCacheD). Dashboards usually work best with relational database systems such as PostGres or MySQL, and caching may not be ideal for real-time or near-real-time data, but read replicas may help fan out the read load. Most data projects will benefit from an ETL (Extract, Transform, Load) pattern, where each step is a discrete, independent step that can be run and tested in isolation and end to end. The artifacts from this design process should include diagrams, documentation, and, hopefully, the beginnings of test cases. It would also be a good idea to start a source-to-target mapping that defines the data points in the consuming application (dashboard, web app, etc.) and shows their lineage all the way back to their original source.
+designing for scalability and maintainability.
+
+Deciding to buy or build happens here. Will there be legacy code to deal with,
+existing system integrations, or greenfield? Consider which systems will consume
+the data when selecting a data store.
+
+!!! example
+
+    Web apps will need low-latency data stores and will benefit from caching (think MemCacheD).
+    Dashboards usually work best with relational database systems such as Postgres or MySQL,
+    and caching may not be ideal for real-time or near-real-time data, but read
+    replicas may help fan out the read load.
+
+Most data projects will benefit from an ETL (Extract, Transform, Load) pattern,
+where each step is a discrete, independent step that can be run and tested in
+isolation and end to end.
+The artifacts from this design process should include diagrams, documentation,
+and, hopefully, the beginnings of test cases.
+
+It would also be a good idea to start a source-to-target mapping that defines
+the data points in the consuming application (dashboard, web app, etc.) and shows
+their lineage all the way back to their original source.
 
 ### Story grooming and Backlog building
 
@@ -114,7 +134,7 @@ causes will help illuminate where future development work might need to happen.
 
 ---
 
-## Conclusion
+## :material-source-commit-end: Conclusion
 
 - Know your customers: Strong stakeholder and product owner relationships are
   often at the crux of a successful data project.

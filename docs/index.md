@@ -1,6 +1,6 @@
 # Welcome to **Data Develop & Engineer**
 
-> **_Disclaimer_**: This docs add-on my opinion from **Data Engineer** experience
+> **_Disclaimer_**: This docs add-on my opinion from Data Engineer experience
 > and experiment around ~5 years (_Since 2019_).
 
 !!! warning "Important"
