@@ -201,6 +201,8 @@ nav:
                   - Transform Lambda: services/aws/s3/s3-transform-lambda.md
               - EC2:
                   - Domain with Route53: services/aws/ec2/ec2-domain-with-route53.md
+              - ECS:
+                  - With Fargate: services/aws/ecs/ecs-deploy-with-fargate.md
               - Lambda:
                   - services/aws/lambda/index.md
                   - With Docker: services/aws/lambda/lambda-with-docker.md
@@ -320,9 +322,10 @@ nav:
           - Polars:
               - tools/etl/polars/index.md
               - Data Pipeline: tools/etl/polars/polars-data-pipeline.md
-              - SCD2 on Delta Lake: tools/etl/polars/polars-scd2-on-delta-lake.md
+              - SCD2 on DeltaLake: tools/etl/polars/polars-scd2-on-delta-lake.md
               - Connections:
                   - To Synapse: tools/etl/polars/polars-to-synapse.md
+                  - To DeltaLake: tools/etl/polars/polars-to-delta.md
           - DBT:
               - tools/etl/dbt/index.md
               - Kimbal Modeling: tools/etl/dbt/dbt-kimbal-data-modeling.md
@@ -382,6 +385,9 @@ nav:
               - tools/etl/flink/index.md
           - DuckDB:
               - tools/etl/duckdb/index.md
+              - Database: tools/etl/duckdb/duckdb-db.md
+              - Connections:
+                  - To DeltaLake: tools/etl/duckdb/duckdb-delta.md
       - Open Table:
           - tools/open_table/index.md
           - DeltaLake:
@@ -390,6 +396,7 @@ nav:
               - Liquid Clustering: tools/open_table/deltalake/deltalake-liquid-clustering.md
               - Partition Z-Order Cluster: tools/open_table/deltalake/deltalake-partition-zorder-cluster.md
               - Universal Format: tools/open_table/deltalake/deltalake-universal-format.md
+              - Merge: tools/open_table/deltalake/deltalake-merge.md
               - Pyspark API:
                   - Auto Schema Evolution: tools/open_table/deltalake/pyspark/pyspark-delta-auto-schema-evolution.md
                   - Image Files: tools/open_table/deltalake/pyspark/pyspark-delta-image-files.md
