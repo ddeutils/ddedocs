@@ -130,7 +130,7 @@ nav:
           - Lead Data Engineer: lead-data-engineer.md
   - Services:
       - services/index.md
-      - Provider:
+      - Cloud Provider:
           - Azure:
               - services/azure/index.md
               - OAuth: services/azure/az-oauth.md
@@ -232,6 +232,7 @@ nav:
                   - To Managing Secrets: services/google/functions/gcf-to-managing-secrets.md
               - BigQuery:
                   - Getting Started: services/google/bigquery/getting-started.md
+      - Data Processing:
           - Databricks:
               - services/databricks/index.md
               - Dynamically Workflow: services/databricks/databricks-dynamically-workflow.md
@@ -248,17 +249,18 @@ nav:
           - Snowflake:
               - services/snowflake/index.md
               - Data Wash: services/snowflake/snf-data-wash.md
+      - IaC & Infra:
           - Ansible:
               - services/ansible/index.md
           - Terraform:
               - services/terraform/index.md
               - Manage Secret: services/terraform/tf-manage-secret.md
-              - Provider:
+              - Providers:
                   - Databricks: services/terraform/tf-databricks.md
-                  - Azure:
-                      - Databricks: services/terraform/tf-azure-databricks.md
-                  - AWS:
-                      - Glue: services/terraform/tf-aws-glue.md
+                  - Azure Databricks: services/terraform/tf-azure-databricks.md
+                  - AWS Glue: services/terraform/tf-aws-glue.md
+          - Pulumi:
+              - services/pulumi/index.md
           - Infisical:
               - services/infisical/index.md
       - Server & Container:
@@ -266,14 +268,13 @@ nav:
               - services/server/index.md
               - SSH: services/server/edge-ssh.md
               - SSL/TSL: services/server/edge-ssl.md
-              - FTP: services/server/edge-ftp.md
               - SFTP: services/server/edge-sftp.md
           - Docker:
               - services/docker/index.md
               - Dockerfile: services/docker/docker-file.md
               - Commands:
                   - Management: services/docker/docker-cmd-management.md
-              - Compose:
+              - Composes:
                   - Postgres: services/docker/docker-compose-postgresql.md
           - Kubernetes:
               - services/k8s/index.md

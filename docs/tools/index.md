@@ -35,6 +35,8 @@ enough desire to change.
 
 </div>
 
+---
+
 <figure markdown="span">
   ![The Modern Open-Source Data Stack](img/tools-modern-open-source-data-stack.png){ loading=lazy width="700" }
   <figcaption><a href="https://www.datafold.com/blog/the-modern-data-stack-open-source-edition#instrumentation/">The Modern Open-Source Data Stack</a></figcaption>
@@ -45,6 +47,8 @@ of giants instead of adopting the "^^**not invented here syndrome**^^".
 Consider whether the business value from your analytics solution is coming from
 how well you manage your data pipelines and data infrastructure, versus how well
 you build analytics and AI products on top of your infrastructure.
+
+---
 
 ## :octicons-stack-24: Tools Stacks
 
@@ -58,12 +62,14 @@ you build analytics and AI products on top of your infrastructure.
 
 </div>
 
+---
+
 ## :material-select-compare: Tools Comparison
 
-- [](https://itnext.io/five-apache-projects-you-probably-didnt-know-about-13528e05765f)
-- [](https://medium.com/geekculture/airflow-vs-prefect-vs-kestra-which-is-best-for-building-advanced-data-pipelines-40cfbddf9697)
-- [](https://medium.com/@mariusz_kujawski/converting-csv-files-to-parquet-with-polars-pandas-dask-and-dackdb-52a77378349d)
-- [](https://medium.com/@kywe665/hot-take-apache-hudi-delta-lake-apache-iceberg-are-divergent-7ca6a43d39fc)
+- [:simple-medium: Five Apache projects you probably didn’t know about](https://itnext.io/five-apache-projects-you-probably-didnt-know-about-13528e05765f)
+- [:simple-medium: Airflow vs. Prefect vs. Kestra — Which is Best for Building Advanced Data Pipelines?](https://medium.com/geekculture/airflow-vs-prefect-vs-kestra-which-is-best-for-building-advanced-data-pipelines-40cfbddf9697)
+- [:simple-medium: Converting Huge CSV Files to Parquet with Dask, DuckDB, Polars, Pandas.](https://medium.com/@mariusz_kujawski/converting-csv-files-to-parquet-with-polars-pandas-dask-and-dackdb-52a77378349d)
+- [:simple-medium: Hot Take — Apache Hudi, Delta Lake, Apache Iceberg are Divergent](https://medium.com/@kywe665/hot-take-apache-hudi-delta-lake-apache-iceberg-are-divergent-7ca6a43d39fc)
 
 ### Open Table
 

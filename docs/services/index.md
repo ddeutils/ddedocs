@@ -46,9 +46,16 @@ their data and less time engineering their data processing pipelines.
 
 ## :material-select-compare: Providers Comparison
 
-- [:material-cloud-outline: Compare Clouds](https://comparecloud.in/)
+- ==[:material-cloud-outline: Compare Cloud Service Providers](https://comparecloud.in/)==
+
+### Data Processing
+
 - [:simple-medium: Databricks vs Snowflake: A Complete 2024 Comparison](https://medium.com/sync-computing/databricks-vs-snowflake-a-complete-2024-comparison-462eac35b639)
+
+### IaC & Infra
+
 - [:simple-medium: Pulumi vs Terraform: The Definitive Guide to Choosing Your IaC Tool](https://medium.com/4th-coffee/pulumi-v-s-terraform-the-definitive-guide-to-choosing-your-iac-tool-5a602f754439)
+- [:simple-medium: Pulumi vs. Terraform: Choosing your IaC Tool](https://medium.com/datamindedbe/pulumi-vs-terraform-choosing-your-iac-tool-6d17b5222545)
 
 ## :material-finance: FinOps
 

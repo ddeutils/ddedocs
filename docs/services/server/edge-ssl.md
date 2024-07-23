@@ -1,6 +1,6 @@
 # SSL/TSL
 
-Data engineering often involves the development and use of custom web
+Data Engineering often involves the development and use of custom web
 APIs (REST, GraphQL, etc.), as well as the integration and utilization of various
 open-source web applications such as Spark UI, Kafka UI, Grafana, Kibana, and
 many more.

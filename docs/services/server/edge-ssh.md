@@ -1,6 +1,8 @@
 # SSH
 
-## Certificate
+## Getting Started
+
+### Certificate
 
 There are 4 different ways to present certificates and their components:
 
@@ -29,7 +31,9 @@ There are 4 different ways to present certificates and their components:
     Windows.
 
 
-## Authenticate with Password and Public Key
+## Authenticate
+
+### with Password and Public Key
 
 First, we set the **SSHD configuration file** for allow support public key and
 password authentication methods together.
