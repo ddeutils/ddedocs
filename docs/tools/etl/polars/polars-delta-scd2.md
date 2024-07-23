@@ -2,26 +2,6 @@
 
 ## :material-arrow-down-right: Getting Started
 
-Before I can implement a type 2 slowly changing dimension, I first fill the target
-table with an initial data load. However, a couple of metadata fields are required
-in order to track changes:
-
--   `is_current`:
-
-    Whether the record has the currently valid information for the specific product code
-
--   `valid_from`:
-
-    The timestamp from which the record was/is current.
-
--   `valid_to`:
-
-    The timestamp until which the record was/is current.
-
--   `is_deleted`:
-
-    Whether the product code no longer exists in the source data.
-
 ### Prerequisite
 
 ```python

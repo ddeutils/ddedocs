@@ -312,6 +312,8 @@ pip install arrow-odbc polars
 
     I recommend `arrow-odbc` and `polars` for loadding performance.
 
+    Read More about [Polars to Syanpse](../../../tools/etl/polars/polars-to-synapse.md)
+
 ```python
 import os
 import polars as pl
@@ -324,8 +326,7 @@ reader = read_arrow_batches_from_odbc(
         f"Server={os.getenv('MSSQL_HOST')};"
         f"Port=1433;"
         f"Database={os.getenv('MSSQL_DB')};"
-        f"Uid={os.getenv('MSSQL_USER')};"
-        f"Pwd={os.getenv('MSSQL_PASS')};"
+        f"Authentication=ActiveDirectoryMsi;"
     ),
     max_bytes_per_batch=536_870_912,  # Default: 2 ** 29 (536_870_912)
     batch_size=1_000_000,  # Default: 65_535

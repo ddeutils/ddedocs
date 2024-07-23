@@ -2,7 +2,7 @@
 icon: material/chat-question-outline
 ---
 
-# DLT
+# DltHub
 
 In the vast ocean of data management, the processes of extracting data from various
 sources and loading it into target systems are fundamental yet critical steps for

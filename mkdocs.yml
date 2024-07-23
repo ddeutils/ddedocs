@@ -299,22 +299,26 @@ nav:
               - Repeatable DAGs: tools/orchestration/airflow/airflow-repeatable-dags.md
               - Cost Optimize: tools/orchestration/airflow/airflow-cost-optimization.md
               - Pool: tools/orchestration/airflow/airflow-pool.md
-              - Connections:
-                  - With Kafka: tools/orchestration/airflow/airflow-with-kafka.md
-                  - With DBT: tools/orchestration/airflow/airflow-with-dbt.md
               - Unittest: tools/orchestration/airflow/airflow-unittest.md
-              - CICD: tools/orchestration/airflow/airflow-cicd.md
-              - On Kubernetes: tools/orchestration/airflow/airflow-on-k8s.md
+              - Implements:
+                  - CICD: tools/orchestration/airflow/airflow-cicd.md
+                  - On K8s: tools/orchestration/airflow/airflow-on-k8s.md
+              - Connections:
+                  - To Kafka: tools/orchestration/airflow/airflow-to-kafka.md
+                  - To DBT: tools/orchestration/airflow/airflow-to-dbt.md
+                  - To Minio: tools/orchestration/airflow/airflow-to-minio.md
           - Dagster:
               - tools/orchestration/dagster/index.md
               - Dynamic Partition: tools/orchestration/dagster/dagster-dynamic-partition.md
               - Connections:
-                  - With DLT: tools/orchestration/dagster/dagster-dlt.md
+                  - To DLT: tools/orchestration/dagster/dagster-to-dlt.md
+          - Bacalhau:
+              - tools/orchestration/bacalhau/index.md
       - Ingestion:
           - Airbyte:
               - tools/ingestion/airbyte/index.md
               - With Terraform: tools/ingestion/airbyte/airbyte-with-terraform.md
-          - DLT:
+          - DltHub:
               - tools/ingestion/dlt/index.md
       - Extract & Transform & Load:
           - Pandas:
@@ -323,7 +327,7 @@ nav:
           - Polars:
               - tools/etl/polars/index.md
               - Data Pipeline: tools/etl/polars/polars-data-pipeline.md
-              - SCD2 on DeltaLake: tools/etl/polars/polars-scd2-on-delta-lake.md
+              - DeltaLake SCD2: tools/etl/polars/polars-delta-scd2.md
               - Connections:
                   - To Synapse: tools/etl/polars/polars-to-synapse.md
                   - To DeltaLake: tools/etl/polars/polars-to-delta.md

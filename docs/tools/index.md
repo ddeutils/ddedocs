@@ -48,13 +48,22 @@ Consider whether the business value from your analytics solution is coming from
 how well you manage your data pipelines and data infrastructure, versus how well
 you build analytics and AI products on top of your infrastructure.
 
+This tools topic, I will focus with above contents:
+
+- Setting Connections
+- Implement its Features
+- Tuning & Optimization
+
 ---
 
 ## :octicons-stack-24: Tools Stacks
 
+The tools stacks choice for each Data Architecture that fit with cost and easy to
+implement for small to large scale.
+
 <div class="grid cards" markdown>
 
--   - Dagster or mage.ai for orchestration (TBD)
+-   - Dagster or Mage.ai for orchestration (TBD)
     - Polars for lightning fast ETL workloads
     - Delta Lake as the storage layer
     - DuckDB as the analytical SQL interface

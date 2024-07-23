@@ -50,6 +50,12 @@ The Modern Data Stack provides businesses with a bias for action.
 Creating a Modern Data Stack enables organizations to devote more time to analyzing
 their data and less time engineering their data processing pipelines.
 
+This services topic, I will focus with above contents:
+
+- Setting Connections
+- Hands-On its Services
+- Adjustment & Optimization Setting
+
 ## :material-select-compare: Providers Comparison
 
 - ==[:material-cloud-outline: Compare Cloud Service Providers](https://comparecloud.in/)==
