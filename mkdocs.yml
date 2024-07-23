@@ -292,7 +292,7 @@ nav:
               - Commit Release: tools/git/git-commit-release.md
               - Hooks: tools/git/git-hooks.md
       - Orchestration:
-          - AirFlow:
+          - Airflow:
               - tools/orchestration/airflow/index.md
               - Sensor: tools/orchestration/airflow/airflow-sensor.md
               - Pydantic Validator: tools/orchestration/airflow/airflow-pydantic-validator.md
@@ -310,12 +310,12 @@ nav:
               - Dynamic Partition: tools/orchestration/dagster/dagster-dynamic-partition.md
               - Connections:
                   - With DLT: tools/orchestration/dagster/dagster-dlt.md
-      - Collection & Integration:
+      - Ingestion:
           - Airbyte:
-              - tools/collection/airbyte/index.md
-              - With Terraform: tools/collection/airbyte/airbyte-with-terraform.md
+              - tools/ingestion/airbyte/index.md
+              - With Terraform: tools/ingestion/airbyte/airbyte-with-terraform.md
           - DLT:
-              - tools/collection/dlt/index.md
+              - tools/ingestion/dlt/index.md
       - Extract & Transform & Load:
           - Pandas:
               - tools/etl/pandas/index.md
@@ -377,18 +377,19 @@ nav:
               - Updated:
                   - Spark 3.4:
                       - Parameterised SQL: tools/etl/spark/updated/spark-3-4-parameterised-sql.md
-          - Kafka:
-              - tools/etl/kafka/index.md
-              - With Zookeeper: tools/etl/kafka/kafka-without-zookeeper.md
-              - Use-Cases:
-                  - Agoda: tools/etl/kafka/kafka-agoda.md
-          - Flink:
-              - tools/etl/flink/index.md
           - DuckDB:
               - tools/etl/duckdb/index.md
               - Database: tools/etl/duckdb/duckdb-db.md
               - Connections:
                   - To DeltaLake: tools/etl/duckdb/duckdb-delta.md
+      - Streaming:
+          - Kafka:
+              - tools/stream/kafka/index.md
+              - With Zookeeper: tools/stream/kafka/kafka-without-zookeeper.md
+              - Use-Cases:
+                  - Agoda: tools/stream/kafka/kafka-agoda.md
+          - Flink:
+              - tools/stream/flink/index.md
       - Open Table:
           - tools/open_table/index.md
           - DeltaLake:
@@ -433,14 +434,14 @@ nav:
               - tools/cicd/jira/index.md
           - Vault:
               - tools/cicd/vault/index.md
-      - ML & Analytic:
+      - ML & BI:
           - MLflow:
-              - tools/analytic/mlflow/index.md
+              - tools/ml/mlflow/index.md
           - Pinot:
-              - tools/analytic/pinot/index.md
+              - tools/bi/pinot/index.md
           - Trino:
-              - tools/analytic/trino/index.md
-      - Languages:
+              - tools/bi/trino/index.md
+      - Programing Languages:
           - Shell:
               - tools/lang/shell/index.md
               - App: tools/lang/shell/ubt-sh-common-file.md

@@ -108,6 +108,11 @@ In the another hand, **Business Users** able to use less of technical knowledge
 to interact the Data in the **Data Platform** that make less of SLA to require
 **Data Engineer** a lot! :partying_face:
 
+You can follow the Modern Data Stack on this topics:
+
+- [Services](./services/index.md)
+- [Tools](./tools/index.md)
+
 ---
 
 ## :material-account-arrow-right-outline: Roles
@@ -203,4 +208,4 @@ keep update knowledge for [Developer and Data Engineer trends](./abstract/emergi
 [^1]: Information of this quote reference from [:simple-medium: What is Data Engineering?](https://medium.com/codex/what-is-data-engineering-407bcf860baf)
 [^2]: [:material-land-plots: The 2023 MAD (ML/AI/DATA) Landscape](https://mad.firstmark.com/)
 [^3]: Unlocking the Power of Data: [:material-web:A Beginner’s Guide to Data Engineering](https://www.techment.com/unlocking-the-power-of-data-a-beginners-guide-to-data-engineering/)
-[^4]: Types of Data Professionals, credit to [:material-linkedin: Kevin Rosamont Prombo](https://www.linkedin.com/in/krosamont/) for creating the [infographic](https://kevros.shinyapps.io/radar_skills/)
+[^4]: Types of Data Professionals, credit to [:material-linkedin: Kevin Rosamont Prombo](https://www.linkedin.com/in/krosamont/) for creating the [Infographic](https://kevros.shinyapps.io/radar_skills/)
