@@ -1,5 +1,10 @@
 # Services
 
+!!! warning
+
+    I will filter **Data Engineering Services** on this session that do not relate
+    and unnecessary for the most **Data Architect** and **Modern Data Strack**.
+
 :material-page-last: Service and Cloud Provider that use on **Modern Data Stack (MDS)**.
 You can see the below diagram show a ==Modern Data Stack Ecosystem== that include
 the **Cloud Services** more than the [**Open-Source Stacks**](../tools/index.md).
@@ -9,8 +14,9 @@ the **Cloud Services** more than the [**Open-Source Stacks**](../tools/index.md)
   <figcaption><a href="https://atlan.com/modern-data-stack-101/">Modern Data Stack Ecosystem</a></figcaption>
 </figure>
 
-:material-page-last: As such, the definition of a **MDS** cannot be clearly stated
-since every business tries to adapt modern technologies to their requirements.
+:material-page-last: As such, the definition of a **Modern Data Stack** cannot
+be clearly stated since every business tries to adapt modern technologies to
+their requirements.
 
 However, there are definite features of the modern data stack that identify it:
 
