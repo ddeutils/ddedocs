@@ -65,6 +65,8 @@ nav:
               - Data Integration: abstract/data_management/data-integration.md
               - Data Quality: abstract/data_management/data-quality.md
               - Data Warehouse: abstract/data_management/data-warehouse.md
+              - Data Mart: abstract/data_management/data-mart.md
+              - ODS: abstract/data_management/data-ods.md
           - Data Governance:
               - abstract/data_governance/index.md
               - Implement: abstract/data_governance/dgn-data-quality-framework-for-scale.md

@@ -1,26 +1,15 @@
 # Data Warehouse
 
 **Data Warehouse (DW or DWH)** is a centralized repository or digital storage system
-that integrates and stores data from various sources within an organization. It
-is designed to support Business Intelligence (BI) activities such as _reporting_,
+that integrates and stores data from various sources within an organization.
+It is designed to support Business Intelligence (BI) activities such as _reporting_,
 _data analysis_, and _decision-making_.
 
 ![Data Warehouse Elements](img/data-warehouse-elements.png)
 
-## :material-format-list-bulleted: Types of Data Warehouse
+---
 
-There are three main types of data warehouses:
-
-- [Enterprise Data Warehouse (EDW)](#enterprise-data-warehouse)
-- [Operational Data Store (ODS)](#operational-data-store)
-- [Data Mart (DM)](#data-mart)
-
-Overall, the type of data warehouse an organization chooses depends on its specific
-needs and requirements. Some organizations may require a centralized, enterprise-wide
-data warehouse, while others may benefit from a more focused data mart or an operational
-data store that supports real-time decision-making.
-
-### Enterprise Data Warehouse
+## :material-arrow-down-right: Getting Started
 
 **Enterprise Data Warehouse** (EDW) is a centralized warehouse that provides decision
 support service across the enterprise. It offers a unified approach for organizing
@@ -40,7 +29,7 @@ systems.
     sources across the entire enterprise and is designed to support the reporting and
     analytics needs of multiple departments.
 
-#### Enterprise Data Warehouse Architecture
+### Enterprise Data Warehouse Architecture
 
 While there are many architectural approaches that extend warehouse capabilities
 in one way or another, we will focus on the most essential ones. Without diving
@@ -56,7 +45,7 @@ is a separate category of tools known as ETL. Also, under the ETL umbrella, data
 tools perform manipulations with data before it’s placed in a warehouse.
 These tools operate between a raw data layer and a warehouse.
 
-##### One-tier Architecture
+#### One-tier Architecture
 
 This is considered to be one of the most primitive forms of EDW architectures.
 In this architecture, the Reporting Tools are connected directly
@@ -84,7 +73,7 @@ Such an approach is rarely used for large-scale data platforms, because of its
 slowness and unpredictability. To perform advanced data queries, a warehouse can
 be extended with low-level instances that make access to data easier.
 
-##### Two-tier Architecture
+#### Two-tier Architecture
 
 The Two-tier Architecture implements a **Data Mart** layer between the Reporting
 layer and the EDW. **Data Marts** can be seen as smaller Databases that contain
@@ -107,7 +96,7 @@ data more easily because a given mart will contain only domain-specific informat
 In addition, data marts will limit the access to data for end users, making EDW
 more secure.
 
-##### Three-tier Architecture
+#### Three-tier Architecture
 
 A Three-tier Architecture further implements an Online Analytical Processing (OLAP)
 Layer between the Data Mart Layer and the Reporting Layer.
@@ -177,95 +166,6 @@ analysis. These operations are as follows:
         A sample Dice operation is as follows:
 
         ![Dice](img/dice.png)
-
----
-
-### Operational Data Store
-
-:material-page-last: **Operational Data Store (ODS)** are nothing but data store
-required when neither Data warehouse nor OLTP systems support organizations reporting
-needs.
-In ODS, Data warehouse is refreshed in real-time. Hence, it is widely preferred
-for routine activities like storing records of the Employees.
-
-!!! note
-
-    Unlike traditional data warehouses typically used for long-term storage and
-    historical data analysis, an ODS focuses on providing a current, integrated,
-    and consistent view of operational data from multiple sources.
-    It acts as an intermediary layer between the operational systems
-    (such as transactional databases, CRM systems, or ERP systems)
-    and the data warehouse or data mart.
-
-    This is a type of data warehouse that stores operational data from various sources
-    and provides near real-time reporting and analysis. It is designed to handle frequent
-    updates and queries from operational systems. It also serves as a source of data
-    for the EDW or data marts.
-
-:material-page-last: An ODS is a type of data warehouse that stores real-time or
-near-real-time data from transactional systems. It is designed to support operational
-reporting and analysis, and it typically uses a bottom-up approach to design,
-which means that the data model is based on specific business requirements.
-
----
-
-### Data Mart
-
-**Data Mart** is a subset of the data warehouse. It specially designed for a particular
-line of business, such as sales, finance, sales or finance.
-In an independent data mart, data can collect directly from sources.
-
-Data Mart is also a storage component used to store data of a specific function
-or part related to a company by an individual authority, so data marts are flexible
-and small.
-
-A data mart is a subset of an EDW that is designed to serve a specific business
-unit or department. It is optimized for querying and reporting on a specific subject
-area, such as sales or marketing, and it is typically easier and faster to implement
-than an EDW.
-
-!!! quote
-
-    In truth, the Kimball model was for data marts, not a data warehouse.
-    A data mart and a data warehouse are fundamentally different things.
-    — Bill Inmon
-
-!!! quote
-
-    A data mart is a curated subset of data often generated for analytics and
-    business intelligence users. Data marts are often created as a repository
-    of pertinent information for a subgroup of workers or a particular use case.
-    — Snowflake
-
----
-
-### Comparison
-
-|                    | EDW                                                     | ODS                                                  | DM                                                              |
-|--------------------|---------------------------------------------------------|------------------------------------------------------|-----------------------------------------------------------------|
-| Purpose            | Serves the entire organization                          | Supports operational reporting                       | Serves a specific business unit/department                      |
-| Data Integration   | Integrates data from multiple sources                   | Integrates real-time data from transactional systems | Integrates data from a specific subject area                    |
-| Data Model         | Top-down approach to design                             | Bottom-up approach to design                         | Designed based on specific business requirements                |
-| Complexity         | More complex and time-consuming to design and implement | Less complex and quicker to implement                | Less complex and quicker to implement                           |
-| Query and Analysis | Supports complex queries and analytics                  | Supports operational reporting and simple analysis   | Optimized for querying and reporting on a specific subject area |
-| Data Volume        | Large volume of historical data                         | Real-time or near-real-time data                     | Smaller volume of data                                          |
-| Users              | Business analysts, executives, data scientists          | Operational staff, business analysts                 | Business analysts, departmental staff                           |
-| Cost               | Higher cost due to complexity and scale                 | Lower cost due to simpler design and implementation  | Lower cost due to simpler design and implementation             |
-
-| Criteria          | EDW                                                     | ODS                                                      | DM                                                     |
-|-------------------|---------------------------------------------------------|----------------------------------------------------------|--------------------------------------------------------|
-| Scope             | Enterprise-wide                                         | Operational                                              | Departmental or functional                             |
-| Data sources      | Multiple internal and external sources                  | Multiple operational sources                             | EDW, ODS, or other sources                             |
-| Data integration  | High degree of integration and standardization          | Moderate degree of integration and standardization       | Low degree of integration and standardization          |
-| Data granularity  | Mixed levels of granularity                             | Low level of granularity (detailed)                      | High level of granularity (aggregated or summarized)   |
-| Data currency     | Historical and current data                             | Near real-time or real-time data                         | Historical and current data                            |
-| Data quality      | High quality (cleansed and validated)                   | Moderate quality (some cleansing and validation)         | High quality (cleansed and validated)                  |
-| Data structure    | Relational or dimensional models                        | Relational models                                        | Dimensional models                                     |
-| Data volume       | Very large (terabytes or petabytes)                     | Large (gigabytes or terabytes)                           | Small or medium (megabytes or gigabytes)               |
-| Query performance | Moderate to high (depends on indexing and partitioning) | Low to moderate (depends on updates and concurrency)     | High (optimized for analysis)                          |
-| Query complexity  | High (supports complex and ad-hoc queries)              | Low to moderate (supports simple and predefined queries) | Moderate to high (supports complex and ad-hoc queries) |
-| Query frequency   | Low to moderate (periodic or on-demand)                 | High (continuous or near-continuous)                     | Moderate to high (periodic or on-demand)               |
-| User types        | Analysts, managers, executives, data scientists, etc.   | Operational staff, managers, etc.                        | Analysts, managers, etc.                               |
 
 ---
 
@@ -469,7 +369,7 @@ data warehouse.
 
 ---
 
-### Summary
+## Summary
 
 Overall, the choice of design method will depend on the specific needs and circumstances
 of the organization. The Inmon model may be more appropriate for organizations with

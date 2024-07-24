@@ -18,6 +18,8 @@ Data management strategy can change everytime because it depend on technology.
   <figcaption><a href="https://www.gartner.com/en/documents/4573399">Gartner Hype Cycle for Data Management 2023</a></figcaption>
 </figure>
 
+---
+
 ## :material-arrow-down-right: Getting Started
 
 ### Data Governance
@@ -82,6 +84,39 @@ controls and encryption, and complying with legal and regulatory requirements.
   users to access and analyze data.
 - Data Literacy Programs: Promoting data literacy across the organization to empower
   employees to make data-driven decisions.
+
+### Data Storage
+
+Data Storage on this part we will focus on Data Warehouse, Data Mart, and Operational
+Data Store (ODS).
+
+|                    | EDW                                                     | ODS                                                  | DM                                                              |
+|--------------------|---------------------------------------------------------|------------------------------------------------------|-----------------------------------------------------------------|
+| Purpose            | Serves the entire organization                          | Supports operational reporting                       | Serves a specific business unit/department                      |
+| Data Integration   | Integrates data from multiple sources                   | Integrates real-time data from transactional systems | Integrates data from a specific subject area                    |
+| Data Model         | Top-down approach to design                             | Bottom-up approach to design                         | Designed based on specific business requirements                |
+| Complexity         | More complex and time-consuming to design and implement | Less complex and quicker to implement                | Less complex and quicker to implement                           |
+| Query and Analysis | Supports complex queries and analytics                  | Supports operational reporting and simple analysis   | Optimized for querying and reporting on a specific subject area |
+| Data Volume        | Large volume of historical data                         | Real-time or near-real-time data                     | Smaller volume of data                                          |
+| Users              | Business analysts, executives, data scientists          | Operational staff, business analysts                 | Business analysts, departmental staff                           |
+| Cost               | Higher cost due to complexity and scale                 | Lower cost due to simpler design and implementation  | Lower cost due to simpler design and implementation             |
+
+| Criteria          | EDW                                                     | ODS                                                      | DM                                                     |
+|-------------------|---------------------------------------------------------|----------------------------------------------------------|--------------------------------------------------------|
+| Scope             | Enterprise-wide                                         | Operational                                              | Departmental or functional                             |
+| Data sources      | Multiple internal and external sources                  | Multiple operational sources                             | EDW, ODS, or other sources                             |
+| Data integration  | High degree of integration and standardization          | Moderate degree of integration and standardization       | Low degree of integration and standardization          |
+| Data granularity  | Mixed levels of granularity                             | Low level of granularity (detailed)                      | High level of granularity (aggregated or summarized)   |
+| Data currency     | Historical and current data                             | Near real-time or real-time data                         | Historical and current data                            |
+| Data quality      | High quality (cleansed and validated)                   | Moderate quality (some cleansing and validation)         | High quality (cleansed and validated)                  |
+| Data structure    | Relational or dimensional models                        | Relational models                                        | Dimensional models                                     |
+| Data volume       | Very large (terabytes or petabytes)                     | Large (gigabytes or terabytes)                           | Small or medium (megabytes or gigabytes)               |
+| Query performance | Moderate to high (depends on indexing and partitioning) | Low to moderate (depends on updates and concurrency)     | High (optimized for analysis)                          |
+| Query complexity  | High (supports complex and ad-hoc queries)              | Low to moderate (supports simple and predefined queries) | Moderate to high (supports complex and ad-hoc queries) |
+| Query frequency   | Low to moderate (periodic or on-demand)                 | High (continuous or near-continuous)                     | Moderate to high (periodic or on-demand)               |
+| User types        | Analysts, managers, executives, data scientists, etc.   | Operational staff, managers, etc.                        | Analysts, managers, etc.                               |
+
+---
 
 ## :material-source-commit-end: Conclusion
 
