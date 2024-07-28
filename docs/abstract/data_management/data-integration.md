@@ -5,7 +5,7 @@
     How should developers and data practitioners start to incorporate environmental
     factors when developing end-to-end data solutions?[^1]
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
 ![Sustainable Data Engineering Patterns](./img/sustainable-data-engineering-patterns.png)
 
@@ -219,6 +219,8 @@ https://medium.com/towards-data-engineering/why-etl-becomes-elt-or-even-let-1ea7
 [Medium: Part2 - Tool Selection Strategy](https://medium.com/the-modern-scientist/data-ingestion-part-2-tool-selection-strategy-07c6ca7aeddb)
 
 [Unveiling Essential Framework Components](https://rkniyer999.medium.com/demystifying-data-ingestion-unveiling-essential-framework-components-in-a-data-lake-0ac448ac8918)
+
+---
 
 ## Read Mores
 

@@ -33,7 +33,6 @@ theme:
       primary: blue grey
       accent: lime
   font:
-#    text: Roboto
     text: Work Sans
     code: Roboto Mono
   icon:
@@ -50,6 +49,10 @@ extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/korawica/ddedocs
+    - icon: fontawesome/brands/linkedin-in
+      link: https://www.linkedin.com/in/korawica
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/korawica
 
 nav:
   - Home:
@@ -263,6 +266,8 @@ nav:
                   - AWS Glue: services/terraform/tf-aws-glue.md
           - Pulumi:
               - services/pulumi/index.md
+          - OpenTofu:
+              - services/opentofu/index.md
           - Infisical:
               - services/infisical/index.md
       - Server & Container:
