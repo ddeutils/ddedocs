@@ -2,6 +2,28 @@
 
 ## Latest Changes
 
+## 20240728
+
+### :book: Documents
+
+- :page_facing_up: docs: update git documents. (_2024-07-28_)
+- :page_facing_up: docs: split content on data warehouse. (_2024-07-24_)
+- :page_facing_up: docs: update polars docs for synapse conn. (_2024-07-23_)
+- :page_facing_up: docs: update services main page doc. (_2024-07-23_)
+- :page_facing_up: docs: add docs that not in nav config. (_2024-07-22_)
+- :page_facing_up: docs: add vault tool and edit azure vnet document. (_2024-07-22_)
+- :page_facing_up: docs: update docs for aws and infisical. (_2024-07-22_)
+- :page_facing_up: docs: edit link of commu topic. (_2024-07-21_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: change group of DE tools. (_2024-07-23_)
+- :construction: refactored: change outliner on services page and split group by usecase. (_2024-07-23_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs-material version to 9.5.30. (_2024-07-23_)
+
 ## 20240721
 
 ### :book: Documents
