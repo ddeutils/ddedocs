@@ -4,8 +4,13 @@ icon: material/warehouse
 
 # Data Management
 
-**Data Management** refers to the practices, architectural techniques, strategies
-and tools that manage, store, and analyze data throughout its lifecycle.
+!!! warning
+
+    Data Management is the core point that a Data Engineer should to think about
+    it first when implement any Data Component.
+
+Data Management refers to the _Practices_, _Architectural Techniques_, _Strategies_,
+and _Tools_ that manage, store, and analyze data throughout its lifecycle.
 Effective data management ensures that data is accurate, available, and accessible
 when needed while maintaining security and compliance with relevant regulations.
 
@@ -17,6 +22,13 @@ Data management strategy can change everytime because it depend on technology.
   ![Gartner Hype Cycle for Data Management 2023](img/gartner-hype-cycle-graphic.png){ loading=lazy width="600" }
   <figcaption><a href="https://www.gartner.com/en/documents/4573399">Gartner Hype Cycle for Data Management 2023</a></figcaption>
 </figure>
+
+!!! note
+
+    Modern Data Management involves a set of practices, techniques, and technologies
+    used to handle data as a valuable resource.
+    Its aim is to ensure the availability, integrity, security, and usability
+    of data within an organization.[^1]
 
 ---
 
@@ -87,6 +99,11 @@ controls and encryption, and complying with legal and regulatory requirements.
 
 ### Data Storage
 
+- Data Warehouse
+- Data Mart
+- Operation Data Store
+- Data Lake
+
 Data Storage on this part we will focus on Data Warehouse, Data Mart, and Operational
 Data Store (ODS).
 
@@ -123,3 +140,5 @@ Data Store (ODS).
 Overall, a Data Management strategy is a comprehensive approach to managing data
 that includes a range of components designed to ensure the effective use, management,
 and protection of data throughout its lifecycle.
+
+[^1]: [Modern Data Management: 8 Things You Can Gain From It](https://atlan.com/modern-data-management/)

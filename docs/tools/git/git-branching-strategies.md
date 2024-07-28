@@ -1,4 +1,4 @@
-# Git Branching Strategies
+# Branching Strategies
 
 [:material-youtube: Git - Branching Strategies Explained](https://www.youtube.com/watch?v=U_IFGpJDbeU)
 

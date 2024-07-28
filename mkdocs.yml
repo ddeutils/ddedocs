@@ -77,8 +77,8 @@ nav:
               - Secure Data Platform: abstract/data_architecture/data-architecture-secure-data-platform.md
               - Event-Driven Data Architect: abstract/data_architecture/event-driven-data-architecture.md
               - Data Lakehouse:
-                  - abstract/data_lakehouse/index.md
-                  - PBAC: abstract/data_lakehouse/data-lakehouse-policy-based-access-control.md
+                  - abstract/data_architecture/data_lakehouse/index.md
+                  - PBAC: abstract/data_architecture/data_lakehouse/data-lakehouse-policy-based-access-control.md
               - Modeling Technique:
                   - abstract/data_architecture/data_modeling/index.md
                   - Inmon:

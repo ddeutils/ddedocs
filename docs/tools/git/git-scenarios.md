@@ -1,5 +1,8 @@
 # Scenarios
 
+This topic will provide solutions for Git scenario that you want to manage your
+Git working find after do something mistake.
+
 ## :material-arrow-right-bottom: Reset Removed File
 
 ```console
