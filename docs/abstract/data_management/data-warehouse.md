@@ -5,15 +5,19 @@ that integrates and stores data from various sources within an organization.
 It is designed to support Business Intelligence (BI) activities such as _reporting_,
 _data analysis_, and _decision-making_.
 
-![Data Warehouse Elements](img/data-warehouse-elements.png)
+<figure markdown="span">
+  ![Data Warehouse Elements](img/data-warehouse-elements.png){ loading=lazy width="650" }
+  <figcaption>Data Warehouse Elements</figcaption>
+</figure>
 
 ---
 
 ## :material-arrow-down-right: Getting Started
 
-**Enterprise Data Warehouse** (EDW) is a centralized warehouse that provides decision
-support service across the enterprise. It offers a unified approach for organizing
-and representing data. It also provides the ability to classify data according
+:material-page-last: A **Data Warehouse**, or **Enterprise Data Warehouse** (EDW)
+is a centralized warehouse that provides decision support service across the enterprise.
+It offers a unified approach for organizing and representing data.
+It also provides the ability to classify data according
 to the subject and give access according to those divisions.
 
 EDWs are usually a collection of databases that offer a unified approach for organizing
@@ -29,154 +33,47 @@ systems.
     sources across the entire enterprise and is designed to support the reporting and
     analytics needs of multiple departments.
 
-### Enterprise Data Warehouse Architecture
+### Understanding OLAP and OLTP
 
-While there are many architectural approaches that extend warehouse capabilities
-in one way or another, we will focus on the most essential ones. Without diving
-into too much technical detail, the whole data pipeline can be divided into three
-layers:
+OLAP (online analytical processing) is software for performing multidimensional
+analysis at high speeds on large volumes of data from unified, centralized data
+store, such as a data warehouse.
+OLTP (online transactional processing), enables the real-time execution of large
+numbers of database transactions by large numbers of people, typically over the
+internet.
+The main difference between OLAP and OLTP is in the name: OLAP is analytical in
+nature, and OLTP is transactional.
 
-- Raw data layer (data sources)
-- Warehouse and its ecosystem
-- User interface (analytical tools)
+OLAP tools are designed for multidimensional analysis of data in a data warehouse,
+which contains both historical and transactional data.
+Common uses of OLAP include data mining and other business intelligence apps,
+complex analytical calculations, and predictive scenarios, as well as business
+reporting functions like financial analysis, budgeting, and forecast planning.
 
-The tooling that concerns data Extraction, Transformation, and Loading into a warehouse
-is a separate category of tools known as ETL. Also, under the ETL umbrella, data integration
-tools perform manipulations with data before it’s placed in a warehouse.
-These tools operate between a raw data layer and a warehouse.
-
-#### One-tier Architecture
-
-This is considered to be one of the most primitive forms of EDW architectures.
-In this architecture, the Reporting Tools are connected directly
-to the Data Warehouse. Although this architecture is easy to set up and implement,
-it causes various issues for large datasets. Most organizations today have hundreds
-of Gigabytes of data. This means that to perform any query, the Reporting Tool
-would have to go through all that data which is a time taking process.
-Going through the large dataset for each query would result in low performance.
-
-Hence, the One-tier EDW Architecture is only suitable for organizations with small
-datasets.
-
-![One-tier Architecture](img/edw-one-tier.png)
-
-One-tier architecture for EDW means that you have a database directly connected
-with the analytical interfaces where the end user can make queries. Setting the
-direct connection between an EDW and analytical tools brings several challenges:
-
-- Traditionally, you can consider your storage a warehouse starting from 100GB of data. Working with it directly may result in messy query results, as well as low processing speed.
-- Querying data right from the DW may require precise input so that the system will be able to filter out non-required data. Which makes dealing with presentation tools a little difficult.
-- Limited flexibility/analytical capabilities exist.
-
-Additionally, the one-tier architecture sets some limits to reporting complexity.
-Such an approach is rarely used for large-scale data platforms, because of its
-slowness and unpredictability. To perform advanced data queries, a warehouse can
-be extended with low-level instances that make access to data easier.
-
-#### Two-tier Architecture
-
-The Two-tier Architecture implements a **Data Mart** layer between the Reporting
-layer and the EDW. **Data Marts** can be seen as smaller Databases that contain
-domain-specific information, which is only a part of the data stored
-in the Data Warehouse. All information stored in the Data Warehouse is split
-into various Data Marts based on the domain of information.
-
-The Reporting Tools are then connected to this Data Mart Layer. Because a single
-Data Mart consists of only a small part of the data in the Data Warehouse (low-level
-repository that contains domain-specific information), performing queries on it
-would require much less time than it would on a Data Warehouse.
-A Two-tier EDW is considered to be more suitable for real-life scenarios.
-
-![Two-tier Architecture](img/edw-two-tier.png)
-
-Creating a data mart layer will require additional resources to establish hardware
-and integrate those databases with the rest of the data platform. But, such an
-approach solves the problem with querying: Each department will access required
-data more easily because a given mart will contain only domain-specific information.
-In addition, data marts will limit the access to data for end users, making EDW
-more secure.
-
-#### Three-tier Architecture
-
-A Three-tier Architecture further implements an Online Analytical Processing (OLAP)
-Layer between the Data Mart Layer and the Reporting Layer.
-The OLAP Layer consists of OLAP Cubes is a specific type of database which are used
-to store data in a multidimensional form allowing faster analysis to be performed
-on the data.
-
-![Three-tier Architecture](img/edw-three-tier.png)
-
-It’s pretty difficult to explain in words, so let’s look at this handy example of
-what a cube can look like.
-
-![OLAP Cube](img/olap_cube.png){ loading=lazy width="450" }
-
-So, as you can see, a cube adds dimensions to the data. You may think of it as
-multiple Excel tables combined with each other. The front of the cube is the usual
-two-dimensional table, where the region (Africa, Asia, etc.) is specified vertically,
-while sales numbers and dates are written horizontally. The magic begins when we
-look at the upper facet of the cube, where sales are segmented by routes and the
-bottom specifies time-period. That’s known as multidimensional data.
-
-OLAP Cubes allow various operations to be performed on it, which results in quality
-analysis. These operations are as follows:
-
-=== "Roll-up"
-
-    This can be defined as the process of reducing the attributes being measured
-    by either performing aggregations or moving up the hierarchy (performing grouping
-    based on a specific order).
-
-    ??? example
-
-        A sample Roll-up operation is as follows:
-
-        ![Roll-up](img/roll_up.png)
-
-=== "Drill-down"
-
-    This can be defined as the process of increasing the number of attributes being
-    measured to perform a more in-depth analysis by moving down the hierarchy.
-    Drill-down is considered to be the opposite of the Roll-up operation.
-
-    ??? example
-
-        A sample Drill-down operation is as follows:
-
-        ![Drill-down](img/drill_down.png)
-
-=== "Slice"
-
-    This can be defined as the process of removing a dimension by specifying a
-    filter on the dimension to be removed.
-
-    ??? example
-
-        A sample Slice operation is as follows:
-
-        ![Slice](img/slice.png)
-
-=== "Dice"
-
-    This can be defined as the process of specifying filters for two or more dimensions
-    resulting in the formation of a Sub-Cube.
-
-    ??? example
-
-        A sample Dice operation is as follows:
-
-        ![Dice](img/dice.png)
+OLTP is designed to support transaction-oriented applications by processing recent
+transactions as quickly and accurately as possible.
+Common uses of OLTP include ATMs, e-commerce software, credit card payment data
+processing, online bookings, reservation systems, and record-keeping tools.
 
 ---
 
 ## Architecture
 
-### Bottom tier (Data Layer)
+In addition to the below three-tier architecture, some data warehouse architectures
+also include a metadata layer, which provides information about the data in the data
+warehouse, such as its origin, format, and meaning.
+The metadata layer can be used to help users understand and navigate the data.
 
-The bottom tier consists of the Data Repository, usually a relational database system,
-which collects, cleanses, and transforms data from various data sources through
-a process known as Extract, Transform, and Load (`ETL`) or a process known as Extract,
-Load, and Transform (`ELT`).
+![Data Warehouse Architecture](./img/data-warehouse-architecture.png)
+
+### Bottom tier
+
+The Bottom Tier (Data Layer) consists of the Data Repository, usually a relational
+database system, which collects, cleanses, and transforms data from various data
+sources through a process known as;
+
+- Extract Transform Load (ETL)
+- Extract Load Transform (ELT)
 
 As a preliminary process, before the data is loaded into the repository,
 all the data relevant and required are identified from several sources of the system.
@@ -189,25 +86,17 @@ typically stored in a relational database management system (RDBMS), which is op
 for querying and reporting on large datasets. In some cases, data may also be stored
 in columnar or in-memory databases for improved performance.
 
-Few commonly used ETL tools are:
+---
 
-- Informatica
-- Microsoft SSIS
-- Snaplogic
-- Confluent
-- Apache Kafka
-- Alooma
-- Ab Initio
-- IBM Infosphere
+### Middle tier
 
-### Middle tier (Semantics Layer)
+The Middle Tier (Semantics Layer) consists of an `OLAP` (Online Analytical Processing)
+servers which enables fast query speeds. The Data Warehouse can have more than one
+OLAP server, and it can have more than one type of OLAP server model as well,
+which depends on the volume of the data to be processed and the type of data held
+in the bottom tier.
 
-The middle tier consists of an `OLAP` (Online Analytical Processing) servers
-which enables fast query speeds. The Data Warehouse can have more than one OLAP server,
-and it can have more than one type of OLAP server model as well, which depends on
-the volume of the data to be processed and the type of data held in the bottom tier.
-
-ETL Layer. This layer is responsible for extracting, transforming, and loading the data from
+This layer is responsible for extracting, transforming, and loading the data from
 various sources into the data warehouse. This is typically done using ETL (Extract,
 Transform, Load) tools, which automate the process of moving and converting data.
 
@@ -241,12 +130,18 @@ Three types of OLAP models can be used in this tier, which are known as
     a smooth functional flow between the database systems. HOLAP allows storing data
     in both the relational and the multidimensional formats.
 
-The type of OLAP model used is dependent on the type of database system that exists.
+!!! note
 
-### Top tier (Analytics Layer)
+    The type of OLAP model used is dependent on the type of database system that
+    exists.
 
-The top tier is represented by some kind of front-end user interface or reporting
-tool, which enables end users to conduct ad-hoc data analysis on their business data.
+---
+
+### Top tier
+
+The Top Tier (Analytics Layer) is represented by some kind of front-end user interface
+or reporting tool, which enables end users to conduct ad-hoc data analysis on their
+business data.
 It holds various tools like query tools, analysis tools, reporting tools, and
 [data mining tools](https://www.educba.com/data-mining-tool/).
 
@@ -255,20 +150,7 @@ in a format that is easy to understand and analyze. This layer includes tools fo
 querying, reporting, and visualization, which allow users to create custom reports
 and dashboards based on the data in the data warehouse.
 
-Below are the few commonly used Top Tier tools.
-
-- IBM Cognos
-- Microsoft BI Platform
-- SAP Business Objects Web
-- Pentaho
-- Crystal Reports
-- SAP BW
-- SAS Business Intelligence
-
-In addition to the three-tier architecture, some data warehouse architectures also
-include a metadata layer, which provides information about the data in the data
-warehouse, such as its origin, format, and meaning. The metadata layer can be used
-to help users understand and navigate the data.
+---
 
 ## :material-gesture: Design
 
@@ -352,24 +234,11 @@ data warehouse.
 
     See more, [Data Vault Model](../data_architecture/data_modeling/dwh-data-vault-approach.md)
 
-**Differences between the three designs**:
-
-- **Approach**: Kimball is bottom-up, Inmon is top-down, and Data Vault is a hybrid
-  approach.
-
-- **Schema**: Kimball uses a star or snowflake schema, Inmon uses a 3NF schema,
-  and Data Vault uses a hub-and-spoke schema.
-
-- **Focus**: Kimball focuses on the business process or subject area, Inmon focuses
-  on the data, and Data Vault focuses on the relationships between the data.
-- **Flexibility**: Kimball is known for its flexibility, Inmon is known for its
-  consistency, and Data Vault is known for its ability to handle complex data relationships.
-- **Complexity**: Kimball is relatively simple, Inmon is more complex, and
-  Data Vault is the most complex of the three methodologies.
+[Read more about **Data Modeling**](../data_architecture/data_modeling/index.md)
 
 ---
 
-## Summary
+## Conclusion
 
 Overall, the choice of design method will depend on the specific needs and circumstances
 of the organization. The Inmon model may be more appropriate for organizations with
@@ -396,11 +265,13 @@ querying and analysis and a need for simplicity and ease of use, the Dimensional
 data warehouse that can accommodate changing business requirements over time,
 the Data Vault 2.0 model may be the best option.
 
+---
+
 ## :material-playlist-plus: Read Mores
 
 - [Guru99: Data Warehousing](https://www.guru99.com/data-warehousing.html)
 - [Guru99: Data Warehouse Architecture](https://www.guru99.com/data-warehouse-architecture.html#8)
-- [:simple-ibm: IBM: Data Warehouse](https://www.ibm.com/topics/data-warehouse/)
+- [IBM: Data Warehouse](https://www.ibm.com/topics/data-warehouse/)
 - [A Complete Guide to Data Warehouse in 2022](https://www.analyticsvidhya.com/blog/2022/06/a-complete-guide-to-data-warehousing-in-2022/)
 - [CodingNinjas: Inmon vs Kimball Approaches in DWH](https://www.codingninjas.com/studio/library/inmon-vs-kimball-approach-in-data-warehousing)
 - [Nearshore: Data Warehouse Architecture](https://www.nearshore-it.eu/articles/technologies/data-warehouse-architecture/)

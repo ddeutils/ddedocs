@@ -24,6 +24,8 @@ However, in most practical applications, normalization achieves its best in
 
     [By Wiki Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
 
+## Getting Started
+
 !!! abstract
 
     **primary key**
@@ -40,14 +42,14 @@ However, in most practical applications, normalization achieves its best in
 
     **composite key**
 
-    :   A **primary key** composed of multiple columns used to identify a record
+    :   A primary key composed of multiple columns used to identify a record
         uniquely.
 
     **candidate key**
 
     :   A field that able to be primary key.
 
-!!! abstract
+!!! abstract "Prime & Non-Prime"
 
     **prime attribute**
 
@@ -59,7 +61,7 @@ However, in most practical applications, normalization achieves its best in
     :   Attributes of the relation which does not exist in any of the possible
         candidate keys of the relation. They also known as **Non-Key Attributes**.
 
-    !!! example
+    ??? example
 
         ```text
         R = (H, I, J, K, L, M, N, O)
@@ -123,7 +125,7 @@ However, in most practical applications, normalization achieves its best in
 
         [Read more this example](https://dba.stackexchange.com/questions/127298/what-are-the-prime-and-non-prime-attributes-in-this-relation)
 
-## What is Anomalies?
+### What is Anomalies?
 
 Anomalies are the problems that occur in the update, delete and insert operations
 in poorly designed or un-normalized data when all data stored in one table (Flat file).
@@ -157,108 +159,148 @@ R = (courseNo,  tutor,  lab, labSize){
     What if we improved (`lab: C3`) and now it (`labSize: 250`), to update it we will
     have to update all other columns where (`lab: C3`).
 
-## Dependency Rules
+---
+
+### Why do we need to normalize our tables?
+
+- When (ACID compliant) is required
+
+  It improves integrity and consistency of your data.
+  (ACID = Atomicity Consistency Isolation Durability)
+
+- Fewer storage needed
+
+  Since we eliminated repeated groups, and divided our tables, we reduced the
+  size of our tables and database.
+
+- less logical I/O cost
+
+  When you need to retrieve data, you will retrieve smaller amount of data, and
+  when you need to add or insert in tables, it will be easier, and more organized.
+
+- Queries become easier
+
+  If we have un-normalized table that has (location) attribute {City, Zip} as
+  composite attribute, and we need to count the unique zip codes in our table,
+  so we will access first location, then we will try to get zip, after normalize
+  this table we will be able to access zip directly because location will be
+  divided to two attributes (city) and (zip).
+
+- Write-intensive databases
+
+  Normalization increases the performance of write-intensive databases Significantly,
+  because it reduces data modification anomalies, which make it easier to manipulate
+  your database.
+
+---
+
+### Dependency Rules
 
 Rule for call the attribute relationships
 
-### Functional Dependency
+#### Functional Dependency
 
 This is the primary key (single or composite) relationship for identified other
 attributes. When we say A is identified by B (B is a primary key), then A
 functionally dependent on B, can be represented graphically as (B -> A)
 
-#### Complete/Fully Functional Dependency
+=== "Complete/Fully Functional"
 
-!!! example
+    !!! example
 
-    ```text
-    R = (customerID, name, salary){
-        (1,          Tom,  18,000),
-        (2,          June, 22,000),
-        (3,          Rose, 15,000)
-    }
-    ```
+        ```text
+        R = (customerID, name, salary){
+            (1,          Tom,  18,000),
+            (2,          June, 22,000),
+            (3,          Rose, 15,000)
+        }
+        ```
 
-    `customerID -> {name, salary}` is Fully Functional Dependency (FFD).
+        `customerID -> {name, salary}` is **Fully Functional Dependency (FFD)**.
 
-    - `name` and `salary` were identified by `customerID` and functionally dependent on it.
-    - `customerID` determines `name` and `salary`.
+        - `name` and `salary` were identified by `customerID` and functionally
+          dependent on it.
+        - `customerID` determines `name` and `salary`.
 
-#### Partial Dependency
+=== "Partial"
 
-When only one of the prime attributes determines another attribute with no exist
-of other prime attributes in this relation. OR when not all non-prime attributes
-depend on all prime attributes.
+    When only one of the prime attributes determines another attribute with no exist
+    of other prime attributes in this relation. OR when not all non-prime attributes
+    depend on all prime attributes.
 
-!!! example
+    !!! example
 
-    {A, B} are our prime attributes, C is non-prime attribute and A -> Z not {A, B} -> C,
-    so it's partial dependency because C is functionally dependent on only one prime
-    attribute not all prime attributes.
+        {A, B} are our prime attributes, C is non-prime attribute and A -> Z not {A, B} -> C,
+        so it's partial dependency because C is functionally dependent on only one prime
+        attribute not all prime attributes.
 
-    ```text
-    R = (order, product, productName, quantity){
-        (1,     A,       table,       1),
-        (1,     B,       chair,       4),
-        (2,     A,       table,       2)
-    }
-    ```
+        ```text
+        R = (order, product, productName, quantity){
+            (1,     A,       table,       1),
+            (1,     B,       chair,       4),
+            (2,     A,       table,       2)
+        }
+        ```
 
-    `{order, product} -> {productName, quantity}` is Fully Functional Dependency (FFD)
-    because of using for all key.
+        `{order, product} -> {productName, quantity}` is Fully Functional Dependency (FFD)
+        because of using for all key.
 
-    `product -> productName` is being Partial Dependency because use one key from
-    prime attributes.
+        `product -> productName` is being Partial Dependency because use one key from
+        prime attributes.
 
-#### Transitive Dependency
+=== "Transitive"
 
-There is non-prime attribute functionally dependent on another non-prime attribute
-OR It means that changing a value in one column leads to a change in another
-column-columns other than prime attributes.
+    There is non-prime attribute functionally dependent on another non-prime attribute
+    OR It means that changing a value in one column leads to a change in another
+    column-columns other than prime attributes.
 
-A transitive functional dependency is when changing a non-key column, might
-cause any of the other non-key columns to change
+    A transitive functional dependency is when changing a non-key column, might
+    cause any of the other non-key columns to change
 
-!!! note
+    !!! note
 
-    In transitive dependency non-prime attribute determines another non-prime attribute,
-    In partial dependency when only one of the prime attributes determines another
-    attribute with no exist of other prime attributes
-    (because of that we called it partial dependency).
+        In transitive dependency non-prime attribute determines another non-prime attribute,
+        In partial dependency when only one of the prime attributes determines another
+        attribute with no exist of other prime attributes
+        (because of that we called it partial dependency).
 
-!!! example
+    !!! example
 
-    We say that A -> C is transitive dependency if it generated from A -> B & B -> C
-    not A -> C directly.
+        We say that `A -> C` is transitive dependency if it generated from `A -> B`
+        & `B -> C` not `A -> C` directly.
 
-#### Multivalued Dependency
+===  "Multivalued"
 
-It usually a relationship consisting of 3 attributes (A, B, C). single value
-from (A) gives more than one value in (B), single value of (A) gives more than
-one value in (C), and (B) , (C) are independent of each other.
+    It usually a relationship consisting of 3 attributes (A, B, C). single value
+    from (A) gives more than one value in (B), single value of (A) gives more than
+    one value in (C), and (B) , (C) are independent of each other.
 
-- There are at least 3 attributes A, B, C in a relation and
-- For each value of A there is a well-defined set of values
-  for B, and a well-defined set of values for C,
-- But the set of values for B is independent on the set of
-  values for C
+    - There are at least 3 attributes A, B, C in a relation and
+    - For each value of A there is a well-defined set of values
+      for B, and a well-defined set of values for C,
+    - But the set of values for B is independent on the set of
+      values for C
 
-!!! example
+    !!! example
 
-    (emp_no , proj_no, dependents)
+        (emp_no , proj_no, dependents)
 
-    (employee) do have many (projects), (employee) do have many ( dependents ) like
-    his children, and it’s obviously projects and his dependents are independent of each other,
-    which means if we need to remove one of his projects we don't have to delete one
-    of his dependent. so we have here multivalued dependency which violates 4NF.
+        (employee) do have many (projects), (employee) do have many ( dependents ) like
+        his children, and it’s obviously projects and his dependents are independent of each other,
+        which means if we need to remove one of his projects we don't have to delete one
+        of his dependent. so we have here multivalued dependency which violates 4NF.
 
-### Join Dependency
+---
+
+#### Join Dependency
 
 Whenever we can recreate a table by simply joining various tables where each of
 these tables consists of a subset of the table’s attribute, then this table is
 known as a **Join Dependency**.
 
-## Normalization Order
+---
+
+## Orders
 
 The normalization process takes our relational schema throw a series or pipeline
 of tests to make sure that’s it satisfy a certain normal form, this process
@@ -271,9 +313,7 @@ criteria of normal forms.
 data, to apply 1NF it should have the following criteria:
 
 - Each column or single cell contains atomic values
-
 - Each entity has a **primary key**
-
 - No duplicated rows or columns
 
 In other words, each row in the table should have a unique identifier, and each
@@ -295,13 +335,14 @@ value in the table should be indivisible.
     }
     ```
 
+---
+
 ### 2NF: Second Normal Form
 
 **Second Normal Form** (2NF) do more than the 1NF because 1NF only eliminates
 repeating groups, not redundancy.
 
 - It should be in 1NF.
-
 - It should not have **partial dependencies**. Each non-prime attribute is full
   functionally dependent on the whole primary key (all prime attributes).
 
@@ -328,6 +369,8 @@ repeating groups, not redundancy.
          (3,         John)
     }
     ```
+
+---
 
 ### 3NF: Third Normal Form
 
@@ -360,12 +403,13 @@ repeating groups, not redundancy.
     }
     ```
 
+---
+
 ### BCNF: Boyce-Codd Normal Form
 
 **Boyce-Codd Normal Form** (BCNF) will remove all candidate key.
 
 - It should be in 3NF.
-
 - Any attribute in table depends only on super-key.
   A -> Z means (A) is super-key of (Z) (even (Z) is a prime attribute)
 
@@ -402,6 +446,8 @@ repeating groups, not redundancy.
     }
     ```
 
+---
+
 ### 4NF: Fourth Normal Form
 
 **Fourth Normal Form** (4NF)
@@ -435,6 +481,8 @@ data describing the relevant entity, then it is in 4th Normal Form.
          (A01,       South)
     }
     ```
+
+---
 
 ### 5NF: Fifth Normal Form
 
@@ -484,6 +532,8 @@ tables into smaller tables that preserve the relationships between the attribute
     R != R1 join R2 join R3
     ```
 
+---
+
 ### 6NF: Sixth Normal Form
 
 **Sixth Normal Form** (6NF) (Proposed)
@@ -499,58 +549,10 @@ tables into smaller tables that preserve the relationships between the attribute
     tables; and inserts and deletes will similarly require operations across multiple
     tables.
 
-## Why do we need to normalize our tables?
+## Read Mores
 
-- When (ACID compliant) is required
-
-  It improves integrity and consistency of your data.
-  (ACID = Atomicity Consistency Isolation Durability)
-
-- Fewer storage needed
-
-  Since we eliminated repeated groups, and divided our tables, we reduced the
-  size of our tables and database.
-
-- less logical I/O cost
-
-  When you need to retrieve data, you will retrieve smaller amount of data, and
-  when you need to add or insert in tables, it will be easier, and more organized.
-
-- Queries become easier
-
-  If we have un-normalized table that has (location) attribute {City, Zip} as
-  composite attribute, and we need to count the unique zip codes in our table,
-  so we will access first location, then we will try to get zip, after normalize
-  this table we will be able to access zip directly because location will be
-  divided to two attributes (city) and (zip).
-
-- Write-intensive databases
-
-  Normalization increases the performance of write-intensive databases Significantly,
-  because it reduces data modification anomalies, which make it easier to manipulate
-  your database.
-
-## Drawbacks of Normalization
-
-When we need to work with **read-intensive** databases, you may need to **join** data
-from multiple tables, and work with a huge amount of data.
-In **normalized databases**, you will need many **join** operations to combine data from
-multiple tables to satisfy user needs, which will **increase time-consuming**, and
-make it difficult to work with **a huge amount of data**, so if you need to work with
-the **read-intensive** database it's obviously normalization won't be your **optimal
-solution**.
-
-The drawbacks of data redundancy include:
-
-- Data maintenance becomes tedious – data deletion and data updates become problematic
-- It creates data inconsistencies
-- Insert, Update and Delete anomalies become frequent. An update anomaly, for example, means that the versions of the same record, duplicated in different places in the database, will all need to be updated to keep the record consistent
-- Redundant data inflates the size of a database and takes up an inordinate amount of space on disk
-
-## References
-
-- https://en.wikipedia.org/wiki/Third_normal_form/
-- https://en.wikipedia.org/wiki/Database_normalization/
+- [:material-wikipedia: Third normal form](https://en.wikipedia.org/wiki/Third_normal_form/)
+- [:material-wikipedia: Database normalization](https://en.wikipedia.org/wiki/Database_normalization/)
 - [database normalization](https://en.wikipedia.org/wiki/Database_normalization)
 - [table normalization](https://medium.com/@miwtoo/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3-normalization-%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B8%E0%B8%87-schema-d0324b6c9556)
 - https://datavalley.technology/normalization-in-depth/

@@ -64,12 +64,15 @@ nav:
       - Abstraction:
           - Data Management:
               - abstract/data_management/index.md
-              - Data Modeling: abstract/data_management/data-modeling.md
+              - Data Model: abstract/data_management/data-model.md
               - Data Integration: abstract/data_management/data-integration.md
               - Data Quality: abstract/data_management/data-quality.md
               - Data Warehouse: abstract/data_management/data-warehouse.md
               - Data Mart: abstract/data_management/data-mart.md
               - ODS: abstract/data_management/data-ods.md
+              - Normalization: abstract/data_management/data-normalization-form.md
+              - De-Normalization: abstract/data_management/data-denormalization-form.md
+              - SCD: abstract/data_management/data-scd.md
           - Data Governance:
               - abstract/data_governance/index.md
               - Implement: abstract/data_governance/dgn-data-quality-framework-for-scale.md
@@ -120,9 +123,6 @@ nav:
               - abstract/data_strategy/index.md
               - Semantic Layer: abstract/data_strategy/strategy-semantic-layer.md
               - Data Driven: abstract/data_strategy/strategy-data-driven.md
-              - Normalization: abstract/data_strategy/strategy-normalization-form.md
-              - De-Normalization: abstract/data_strategy/strategy-denormalization-form.md
-              - Slowly Change Dimension: abstract/data_strategy/strategy-scd.md
               - Sensitive Data: abstract/data_strategy/strategy-sensitive-data.md
       - Advance:
           - MLOps:
