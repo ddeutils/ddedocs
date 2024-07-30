@@ -8,7 +8,7 @@ icon: material/hexagon-multiple-outline
 
     **DataOps** is a collection of practices that focuses on breaking down silos
     between data producers and consumers, improving data quality and transparency
-    of results.[^1]
+    of results to be seamless.[^1]
 
 <figure markdown="span">
   ![DataOps Flow Main](./img/dataops-flow-main.png){ loading=lazy width="550" }
@@ -178,7 +178,7 @@ software, data, and other resources are available on demand.
 
 - [:material-github: DataOps for the Modern Data Warehouse](https://github.com/Azure-Samples/modern-data-warehouse-dataops)
 
-## Read Mores
+## :material-playlist-plus: Read Mores
 
 - [What is DataOps?](https://www.ibm.com/topics/dataops)
 

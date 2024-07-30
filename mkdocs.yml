@@ -66,6 +66,7 @@ nav:
               - abstract/data_management/index.md
               - Data Model: abstract/data_management/data-model.md
               - Data Integration: abstract/data_management/data-integration.md
+              - Data Transformation: abstract/data_management/data-transformation.md
               - Data Quality: abstract/data_management/data-quality.md
               - Data Warehouse: abstract/data_management/data-warehouse.md
               - Data Mart: abstract/data_management/data-mart.md
@@ -108,12 +109,12 @@ nav:
           - DataOps:
               - abstract/dataops/index.md
               - Data Product: abstract/dataops/data-product.md
+              - Data CICD: abstract/dataops/data-cicd.md
           - Data Pipeline:
               - abstract/data_pipeline/index.md
           - Data Observability:
               - abstract/data_observability/index.md
               - Data Orchestration: abstract/data_observability/dobs-data-orchestration.md
-              - Data CICD: abstract/data_observability/dobs-data-cicd.md
               - Data Quality Metric: abstract/data_observability/dobs-data-quality-metrics.md
               - Data Quality Pyramid: abstract/data_observability/dobs-data-quality-pyramid.md
               - Data Lineage: abstract/data_observability/dobs-data-lineage.md
@@ -141,9 +142,10 @@ nav:
               - OAuth: services/azure/az-oauth.md
               - VNet: services/azure/az-vnet.md
               - Storage: services/azure/az-storage-account.md
+              - Key Vaults: services/azure/az-key-vaults.md
               - Database:
-                  - Auth: services/azure/database/az-db-auth.md
-                  - Monitoring: services/azure/database/az-db-monitoring.md
+                  - services/azure/sql/index.md
+                  - Auth: services/azure/sql/az-db-auth.md
               - Batch:
                   - services/azure/batch/index.md
                   - Start Task: services/azure/batch/az-ba-start-task.md
@@ -173,8 +175,7 @@ nav:
                   - Unity Catalog:
                       - Setup: services/azure/databricks/adb-uc-setup.md
                       - Privileges: services/azure/databricks/adb-uc-privileges.md
-              - Event Hubs:
-                  - services/azure/eventhubs/index.md
+              - Event Hubs: services/azure/az-eventhubs.md
               - Data Factory:
                   - Share IR: services/azure/data_factory/adf-ir-sharing.md
                   - Link Services: services/azure/data_factory/adf-link-services.md

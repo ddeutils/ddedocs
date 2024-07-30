@@ -2,6 +2,8 @@
 
 ## :material-arrow-down-right: Getting Started
 
+## Connection Code
+
 === "Python: Async"
 
     ```python

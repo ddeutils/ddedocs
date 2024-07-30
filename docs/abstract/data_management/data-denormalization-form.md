@@ -268,7 +268,7 @@ But you should to know that,
 
 ---
 
-## Conclusion
+## :material-source-commit-end: Conclusion
 
 De-normalization aims to add redundancy to your database for better performance,
 It also a great optimization technique that will help you to decrease query processing time.
@@ -277,6 +277,6 @@ and need more space for storing redundant data.
 
 ---
 
-## Read Mores
+## :material-playlist-plus: Read Mores
 
 - [DataValley: De-normalization When, Why, and How](https://datavalley.technology/denormalization-when-why-and-how/)

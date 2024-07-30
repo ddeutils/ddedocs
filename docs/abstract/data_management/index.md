@@ -4,10 +4,10 @@ icon: material/warehouse
 
 # Data Management
 
-!!! warning
+!!! quote
 
-    Data Management is the core point that a Data Engineer should to think about
-    it first when implement any Data Component.
+    Data Management is an umbrella term that covers everything put in place by
+    an organization to manage information and utilize it to make decisions.[^1]
 
 Data Management refers to the _Practices_, _Architectural Techniques_, _Strategies_,
 and _Tools_ that manage, store, and analyze data throughout its lifecycle.
@@ -28,11 +28,19 @@ Data management strategy can change everytime because it depend on technology.
     Modern Data Management involves a set of practices, techniques, and technologies
     used to handle data as a valuable resource.
     Its aim is to ensure the availability, integrity, security, and usability
-    of data within an organization.[^1]
+    of data within an organization.[^2]
 
 ---
 
 ## :material-arrow-down-right: Getting Started
+
+### 3 Pillars of a Strong Data Management Strategy
+
+1. Data Governance
+2. Data Architecture
+3. Data Quality
+
+## Components
 
 ### Data Governance
 
@@ -44,7 +52,7 @@ compliance with legal and regulatory requirements.
 - Policies and Standards: Establishing clear policies for data usage, privacy, and security.
 - Data Stewardship: Assigning responsibilities to ensure data quality and compliance.
 
-[Read More about Data Governance](../data_governance/index.md)
+Read More about [Data Governance](../data_governance/index.md)
 
 ### Data Quality and Consistency
 
@@ -66,6 +74,8 @@ replication protocols.
 - Batch and Stream Processing
 - Real-Time Data Integration
 - Data Transformation Techniques
+
+Read More about [Data Integration](./data-integration.md) & [Data Transformation](./data-transformation.md)
 
 ### Data Lifecycle Management
 
@@ -141,4 +151,5 @@ Overall, a Data Management strategy is a comprehensive approach to managing data
 that includes a range of components designed to ensure the effective use, management,
 and protection of data throughout its lifecycle.
 
-[^1]: [Modern Data Management: 8 Things You Can Gain From It](https://atlan.com/modern-data-management/)
+[^1]: [CNDI: What is Data Management](https://www.cndi.dev/post/what-is-data-management/)
+[^2]: [Modern Data Management: 8 Things You Can Gain From It](https://atlan.com/modern-data-management/)

@@ -52,7 +52,7 @@ their data and less time engineering their data processing pipelines.
 
 This services topic, I will focus with above contents:
 
-- Setting Connections
+- Setting Connections (Python API)
 - Hands-On its Services
 - Adjustment & Optimization Setting
 

@@ -1,6 +1,8 @@
-# Monitoring
+# Azure SQL
 
 ## :material-arrow-down-right: Getting Started
+
+## Observe & Monitoring
 
 ### Partition State
 

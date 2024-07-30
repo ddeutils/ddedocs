@@ -11,9 +11,9 @@ https://medium.com/@romina.elena.mendez/data-quality-f720fc56912a
 - [Layers of Data Quality](https://towardsdatascience.com/layers-of-data-quality-320bf3770db5)
 - [Why Data Quality Is Harder than Code Quality](https://towardsdatascience.com/why-data-quality-is-harder-than-code-quality-a7ab78c9d9e)
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
-## Read Mores
+## :material-playlist-plus: Read Mores
 
 - https://snowplow.io/blog/the-road-to-better-data-quality-your-questions-answered/
 - https://www.talend.com/resources/data-quality-best-practices/
