@@ -2,7 +2,7 @@
 
 !!! quote
 
-    “Data product” is a generic concept and “data as a product” is a subset of
+    "Data product" is a generic concept and “data as a product” is a subset of
     all possible data products. More specifically, if we use Simon’s categories,
     "data as a product" belongs to the raw or derived data type of “data product”.
 
@@ -28,7 +28,7 @@ and the interfaces used to access it:
 
 ## :material-arrow-down-right: Getting Started
 
-**Data as a Product** is the result of applying product thinking into datasets,
+**Data as a Product (DaaP)** is the result of applying product thinking into datasets,
 making sure they have a series of capabilities including discoverability, security,
 explorability, understandability, trustworthiness, etc.
 
@@ -147,3 +147,4 @@ like for example in Tableau dashboards.
 
 - [Data as a product vs data products. What are the differences?](https://towardsdatascience.com/data-as-a-product-vs-data-products-what-are-the-differences-b43ddbb0f123)
 - [Deliver Your Data as a Product, But Not as an Application](https://towardsdatascience.com/deliver-your-data-as-a-product-but-not-as-an-application-99c4af23c0fb)
+- [IBM: What is data as a product (DaaP)?](https://www.ibm.com/topics/data-as-a-product)

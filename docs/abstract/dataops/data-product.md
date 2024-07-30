@@ -12,15 +12,28 @@ information, or functionality that helps address specific needs or business chal
 Data products integrate data from source systems, process it, ensure compliance,
 and make it instantly available to consumers.
 
+!!! quote
+
+    A Data Product is a valuable data asset that your company uses to make decisions
+    and all the technologies and metadata associated with that asset.[^2]
+
+![Data Product](./img/data-product.png)
+
 ### Principles of an Enterprise-Grade Data Product
 
 1.  Inherently valuable: Complete and valuable without any other data required.
-2.  Product managed: A product owner manages each product through the entire lifecycle, like any other digital product.
-3.  Developable: Should be structured to allow an Agile and well-governed development process.
-4.  Backward compatible: Must be versioned, co-existent in multiple versions, and backward compatible.
-5.  Exclusive: End users can only access data through the product; there are no back doors.
-6.  Trustworthy: There must be commitments to consumers, including completeness, accuracy, and timeliness.
-7.  Interoperable and composable: Combining one data product with others must be easy, including creating new ones.
+2.  Product managed: A product owner manages each product through the entire lifecycle,
+    like any other digital product.
+3.  Developable: Should be structured to allow an Agile and well-governed development
+    process.
+4.  Backward compatible: Must be versioned, co-existent in multiple versions,
+    and backward compatible.
+5.  Exclusive: End users can only access data through the product; there are no
+    back doors.
+6.  Trustworthy: There must be commitments to consumers, including completeness,
+    accuracy, and timeliness.
+7.  Interoperable and composable: Combining one data product with others must be
+    easy, including creating new ones.
 8.  Secure: Must meet access, confidentiality, and compliance requirements.
 9.  Accessible: Must be accessible in a useful way for target consumers.
 10. Discoverable: Must be easy for target users to find.
@@ -79,3 +92,4 @@ and target internal or external audiences. Here are a few examples:
 6.  Data APIs: Application Programming Interfaces (APIs) that enable access to structured and unstructured data for developers to build their data products applications.
 
 [^1]: DataOps Live: [What is a Data Product?](https://www.dataops.live/what-are-data-products)
+[^2]: [CNDI: What is a Data Product?](https://www.cndi.dev/post/what-is-a-data-product)

@@ -34,11 +34,49 @@ Data management strategy can change everytime because it depend on technology.
 
 ## :material-arrow-down-right: Getting Started
 
+The buzz word that has taken over pretty much every industry and large organization
+in the last decade is “data-driven”. You can find millions of articles, studies
+or blogs out there on why you should adopt a data-driven culture in your organization.
+To sum it all up, being data-driven means you can open the hood on your organization
+and see how it’s operating.
+You can identify problems and opportunities faster than you could without data.
+You can analyze past and sometimes even real-time data to make informed decisions
+about the future.
+Ultimately when you're making an important decision, you want as much information
+and context as you can possibly get, so you can make the decision confidently.
+
+Being able to make data-driven decisions gives you an incredibly strong competitive
+advantage in the marketplace, because very few organizations are.
+Building a data-driven business is difficult but if you pull it off, it’s way easier
+to become a leader in your market because you can leverage information your competitors
+just don’t have.
+
+And on the flip side of that, if you lack any type of data management in your
+company - good luck staying competitive, it’s probably not going to happen.
+
+In this New Vantage Partners report from 2022 on The State of Corporate Data
+Initiatives, it states that only 26.5% of organizations have achieved their
+data-driven goals.
+So the majority of organizations out there are still struggling, while about a
+quarter of them have figured it out.
+
+So if you're looking to get ahead and stay ahead, becoming data-driven should 100%
+be part of your plan. But building an effective data-driven culture only works when
+it’s built on strong data management foundations.
+
 ### 3 Pillars of a Strong Data Management Strategy
 
 1. Data Governance
+   Data Governance refers to all the organizational rules that are put in place
+   around data, including roles and responsibilities of team members, access control, policies, procedures and standards. Everything that will enforce a high quality of data securely flowing through the organization. Governance is typically documented but looks different for every company depending on company size, what your systems are, and what types of data you're dealing with.
 2. Data Architecture
+   The next important pillar is Data Architecture. This is the actual design of
+   the systems involved in how data flows through your company and gets where it
+   needs to be, when it needs to be there. Broadly speaking this includes your infrastructure which could be in the cloud or big server rooms at your company and all the applications running on those servers which are responsible for making the data flow from place to place. It’s the hardware and software.
 3. Data Quality
+   The last pillar of a strong data management strategy is Data Quality.
+   Having accurate and up-to-date data is an essential part of being data-driven.
+   All systems need to be monitored and data needs to be cleaned very carefully. The data you receive in reports needs to reflect what reality is, which is the whole point of being data driven, so the quality of the data is super important.
 
 ## Components
 

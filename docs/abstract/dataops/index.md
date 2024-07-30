@@ -21,6 +21,12 @@ It aims to automate the delivery of the right and reliable data to appropriate
 teams through a much faster approach. And this leads to better data productivity
 and enhanced human communication.
 
+!!! quote
+
+    DataOps aims to bridge the gap between data engineering, data science, and
+    operations teams by promoting continuous integration and delivery, collaboration
+    and automation of data-related processes.[^2]
+
 <figure markdown="span">
   ![DataOps](img/dataops.png){ loading=lazy width="600" }
   <figcaption>DataOps</figcaption>
@@ -100,6 +106,29 @@ This cycle will repeat itself over and over again.
 However, by applying similar principles of DevOps to data pipelines, data teams
 can better collaborate to identify, resolve, and even prevent data quality issues
 from occurring in the first place.
+
+### Building Blocks
+
+1. **Collaboration**
+   DataOps promotes cross-functional collaboration and brings together different
+   data engineering, data science, analyst and operations personnel.
+   This collaboration helps streamline communication, align goals, and share
+   knowledge and expertise across different business domains.
+2. Automation
+   Automation plays a vital role in DataOps. It involves automating repetitive tasks, such as data ingestion, transformation and validation as well as deployment of infrastructure, applications and pipelines. This helps minimize manual errors, improve quality, and accelerate the overall data lifecycle.
+3. CICD
+   DataOps borrows from Agile and DevOps methodologies, making continuous integration and delivery a natural fit. CI/CD focuses on delivering data quickly and predictably while ensuring quality, reliability, and security. This approach enables organizations to respond rapidly to changing business needs and deliver insights in a timely manner.
+4. Monitoring
+   DataOps borrows from quality control approaches like Statistical Process Control and Total Quality Management. DataOps emphasizes the importance of monitoring data pipelines and processes to identify issues and bottlenecks. Monitoring tools and techniques help track data quality, performance, and availability, which enables proactive troubleshooting and timely response to any potential problems.
+5. Version Control
+   Similar to software development practices, DataOps promotes the use of version control systems like Git so you can manage changes to data infrastructure, application configurations, code, and sometimes data itself. This ensures auditability, while enabling teams to roll back to previous versions if needed and maintain a history of changes.
+6. Data Governance
+   DataOps emphasizes the need for proper data governance practices. It includes establishing data quality standards, data lineage, and data cataloging to boost data’s usability and value. Data governance ensures compliance with regulations, controls access, maintains data integrity, and enhances trust in the data being used for decision-making.
+
+!!! note
+
+    By adopting DataOps practices, organizations can accelerate data delivery,
+    improve data quality, and keep costs in check.
 
 ## Functions of a DataOps Platform
 
@@ -183,3 +212,4 @@ software, data, and other resources are available on demand.
 - [What is DataOps?](https://www.ibm.com/topics/dataops)
 
 [^1]: [:simple-medium: Data Engineering concepts: Part 7, DevOps, DataOps and MLOps](https://medium.com/@mudrapatel17/data-engineering-concepts-part-7-devops-dataops-and-mlops-afc6f432473c)
+[^2]: [CNDI: What is DataOps?](https://www.cndi.dev/post/what-is-dataops)
