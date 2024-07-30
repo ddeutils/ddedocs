@@ -49,7 +49,6 @@ Software observability consists of three pillars:
 
 ![DataOps vs. DevOps—similarities and differences](./img/dataops-vs-devops.png)
 
-
 **Data Observability** is an organization’s ability to fully understand the health
 of the data in their systems. It reduces the frequency and impact of data downtime
 (periods of time when your data is partial, erroneous, missing or otherwise inaccurate)

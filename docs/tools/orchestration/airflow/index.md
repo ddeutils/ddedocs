@@ -4,19 +4,38 @@ icon: material/pinwheel-outline
 
 # Apache Airflow
 
-**Airflow** was developed by **Airbnb** in 2014 and later open-sourced.
+An **Airflow** was developed by **Airbnb** in 2014 and later open-sourced.
 It joined Apache Software Foundation’s incubation in 2016.
 
-You can think of Airflow as a cook/chef following a recipe where the recipe is
-the data pipeline. The chef will follow this recipe by putting the right
-ingredients in the right quantity in the right order.
+!!! quote
+
+    You can think of ^^Airflow as a cook/chef following a recipe where the recipe
+    is the data pipeline.^^ The chef will follow this recipe by putting the right
+    ingredients in the right quantity in the right order.[^1]
+
+## :material-arrow-down-right: Getting Started
+
+Airflow doesn't expect that you process your data in Airflow, in your tasks.
+Instead, you should use Airflow as a way to trigger the tool that will process
+your data.
+
+Airflow is just a tool to manage workflow, and definitely, it is not:
+
+- Data Streaming solution
+- Data Processing framework like Spark or Apache Nifi
 
 Airflow can be used for a wide variety of workflows:
 
-- ETL pipelines: extract data from a variety of sources, transform data in various ways
-- Machine Learning workflows: automate the process of building, training, and deploying machine learning models. This might involve tasks such as data preparation, model training, model evaluation, and model deployment.
-- Data Engineering: automate data engineering tasks such as data ingestion, data transformation, and data integration.
-- Schedule tasks: schedule tasks to run at regular intervals, such as daily or weekly. This might include tasks such as running backups, sending emails, or updating data.
+- **ETL Pipelines**: extract data from a variety of sources, transform data in various
+  ways
+- **Machine Learning Workflows**: automate the process of building, training, and
+  deploying machine learning models. This might involve tasks such as data preparation,
+  model training, model evaluation, and model deployment.
+- **Data Engineering**: automate data engineering tasks such as data ingestion, data
+  transformation, and data integration.
+- **Schedule Tasks**: schedule tasks to run at regular intervals, such as daily or weekly.
+  This might include tasks such as running backups, sending emails, or updating
+  data.
 
 Airflow is a workflow management tool, an orchestrator, that allows executing
 your tasks in the right way, right order, right time.
@@ -35,15 +54,23 @@ your tasks in the right way, right order, right time.
 - Google - Cloud Composer
 - AWS - Amazon Manged Workflows for Apache Airflow (NWAA)
 
-## Components
+---
 
-![Airflow Components](img/airflow-components-high-level.png){ loading=lazy }
+### Components
 
-- **Airflow Scheduler** — the "heart" of Airflow, that parses the DAGs,
+<figure markdown="span">
+  ![Airflow Components](img/airflow-components-high-level.png){ loading=lazy width="600" }
+  <figcaption>Airflow Components</figcaption>
+</figure>
+
+- **Airflow Scheduler**: the "heart" of Airflow, that parses the DAGs,
   checks the scheduled intervals, and passes the tasks over to the workers.
-- **Airflow Worker** — picks up the tasks and actually performs the work.
-- **Airflow Webserver** — provides the main user interface to visualize and
+- **Airflow Worker**: picks up the tasks and actually performs the work.
+- **Airflow Webserver**: provides the main user interface to visualize and
   monitor the DAGs and their results.
+- **Metadata Database**: store state of workflows and tasks
+- **DAG files**: A storage that keep all DAG file
+---
 
 ## Architecture
 
@@ -71,10 +98,11 @@ where many tasks are running concurrently.
 - https://medium.com/@datasmiles/over-4-years-with-airflow-our-top-10-make-life-easier-tricks-dc65be6baf66
 - https://medium.com/@datasmiles/mastering-apache-airflow-myessential-best-practices-for-robust-data-orchestration-095460505843
 - https://towardsdatascience.com/getting-started-with-astronomer-airflow-the-data-engineering-workhorse-d5a5cf543c2c
+- [:simple-medium: Apache Airflow Cookbook — Part.1](https://medium.com/towardsdev/apache-airflow-cookbook-part-1-1444bb7047b6)
 
-- [Apache Airflow Cookbook — Part.1](https://medium.com/towardsdev/apache-airflow-cookbook-part-1-1444bb7047b6)
+## Read Mores
 
-## References
-
-- [Getting Started with Airflow - Why Backend Engineers Should Use It](https://levelup.gitconnected.com/getting-started-with-airflow-why-backend-engineers-should-use-it-731a68e3c05f)
+- [:simple-medium: Getting Started with Airflow - Why Backend Engineers Should Use It](https://levelup.gitconnected.com/getting-started-with-airflow-why-backend-engineers-should-use-it-731a68e3c05f)
 - https://github.com/zkan/data-pipelines-with-airflow
+
+[^1]: [:simple-medium: Getting Started with Airflow - Why Backend Engineers Should Use It](https://levelup.gitconnected.com/getting-started-with-airflow-why-backend-engineers-should-use-it-731a68e3c05f)

@@ -24,7 +24,7 @@ However, in most practical applications, normalization achieves its best in
 
     [By Wiki Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
 !!! abstract
 

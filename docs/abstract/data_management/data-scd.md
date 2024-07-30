@@ -1,10 +1,12 @@
 # Slowly Changing Dimension
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
 **Slowly Changing Dimension (SCD)**
 
-## Types of SCD
+## Types
+
+### Type 1
 
 ### Type 2
 
@@ -18,6 +20,12 @@ in order to track changes:
 | `valid_from` | The timestamp from which the record was/is current.                                   |
 | `valid_to`   | The timestamp until which the record was/is current.                                  |
 | `is_deleted` | Whether the product code no longer exists in the source data.                         |
+
+### Type 3
+
+### Type 4
+
+### Type 5
 
 ## Read Mores
 
