@@ -121,7 +121,7 @@ The wall-clock duration time on a Databricks SQL Serverless XS Warehouse was
 
 Looking at the query profile in the Query History provides further insights:
 
-![Query Profile with OBT](../img/obt-query-profile.png)
+![Query Profile with OBT](../../data_architecture/img/obt-query-profile.png)
 
 Note that 7 files were scanned and the total task time was 9.7 seconds.
 
@@ -141,7 +141,7 @@ WHERE
 
 Looking at the query history reveals further details:
 
-![Relational Model Profile](../img/obt-relational-query-profile.png)
+![Relational Model Profile](../../data_architecture/img/obt-relational-query-profile.png)
 
 Despite the latter query requiring a join, it’s faster as fewer files have to be
 scanned.
@@ -167,7 +167,7 @@ speed up and >3x wall-clock duration, bringing the latter down to 1.13 seconds.
 The optimized data layout by liquid clustering effectively reduced the number of
 files to read from 7 to 2.
 
-![Optimize query performance using Liquid Clustering](../img/obt-optimize-perf-using-liquid-cluster.png)
+![Optimize query performance using Liquid Clustering](../../data_architecture/img/obt-optimize-perf-using-liquid-cluster.png)
 
 As datasets increase in size, this effect becomes even more prominent in the
 absolute speedup time.

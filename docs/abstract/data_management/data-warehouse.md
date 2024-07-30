@@ -186,7 +186,7 @@ data marts.
     model, which is optimized for querying and analysis, and building a star or snowflake
     schema that supports specific business functions.
 
-    See more, [Kimball Approach](../data_architecture/data_modeling/dwh-kimball-approach.md)
+    See more, [Kimball Approach](../data_management/data_modeling/dwh-kimball-approach.md)
 
 ### Top-down
 
@@ -208,7 +208,7 @@ to accommodate the specific business requirements.
     data model, which is then used to build data marts that support specific business
     functions.
 
-    See more, [Inmon Approach](../data_architecture/data_modeling/dwh-inmon-approach.md)
+    See more, [Inmon Approach](../data_management/data_modeling/dwh-inmon-approach.md)
 
 ### Hybrid
 
@@ -232,9 +232,9 @@ data warehouse.
     into three types of tables (Hub, Link, and Satellite), which can then be used to
     build data marts that support specific business functions.
 
-    See more, [Data Vault Model](../data_architecture/data_modeling/dwh-data-vault-approach.md)
+    See more, [Data Vault Model](../data_management/data_modeling/dwh-data-vault-approach.md)
 
-[Read more about **Data Modeling**](../data_architecture/data_modeling/index.md)
+[Read more about **Data Modeling**](data_modeling/index.md)
 
 ---
 

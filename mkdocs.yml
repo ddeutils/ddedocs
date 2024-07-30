@@ -65,6 +65,22 @@ nav:
           - Data Management:
               - abstract/data_management/index.md
               - Data Model: abstract/data_management/data-model.md
+              - Modeling Technique:
+                  - abstract/data_management/data_modeling/index.md
+                  - Inmon:
+                      - Abstract: abstract/data_management/data_modeling/dwh-inmon-approach.md
+                  - Kimball:
+                      - Abstract: abstract/data_management/data_modeling/dwh-kimball-approach.md
+                      - Implement: abstract/data_management/data_modeling/dwh-dim-implement.md
+                      - Slowly Changing Dim: abstract/data_management/data_modeling/dwh-dim-slowly-changing-dimension.md
+                      - Rapidly Changing Dim: abstract/data_management/data_modeling/dwh-dim-rapidly-changing-dimension.md
+                      - Techniques: abstract/data_management/data_modeling/dwh-dim-techniques.md
+                  - Data Vault:
+                      - Abstract: abstract/data_management/data_modeling/dwh-data-vault-approach.md
+                      - Implement: abstract/data_management/data_modeling/dwh-data-vault-implement.md
+                      - Buzz Act Schema: abstract/data_management/data_modeling/dwh-data-vault-business-vault-act-schema.md
+                  - Anchor: abstract/data_management/data_modeling/dwh-anchor-approach.md
+                  - One Big Table: abstract/data_management/data_modeling/dwh-obt-approach.md
               - Data Integration: abstract/data_management/data-integration.md
               - Data Transformation: abstract/data_management/data-transformation.md
               - Data Quality: abstract/data_management/data-quality.md
@@ -84,24 +100,9 @@ nav:
               - Data Lakehouse:
                   - abstract/data_architecture/data_lakehouse/index.md
                   - PBAC: abstract/data_architecture/data_lakehouse/data-lakehouse-policy-based-access-control.md
+              - Modern Data Stack: abstract/data_architecture/modern-data-stack.md
               - Secure Data Platform: abstract/data_architecture/data-architecture-secure-data-platform.md
               - Event-Driven Data Architect: abstract/data_architecture/event-driven-data-architecture.md
-              - Modeling Technique:
-                  - abstract/data_architecture/data_modeling/index.md
-                  - Inmon:
-                      - Abstract: abstract/data_architecture/data_modeling/dwh-inmon-approach.md
-                  - Kimball:
-                      - Abstract: abstract/data_architecture/data_modeling/dwh-kimball-approach.md
-                      - Implement: abstract/data_architecture/data_modeling/dwh-dim-implement.md
-                      - Slowly Changing Dim: abstract/data_architecture/data_modeling/dwh-dim-slowly-changing-dimension.md
-                      - Rapidly Changing Dim: abstract/data_architecture/data_modeling/dwh-dim-rapidly-changing-dimension.md
-                      - Techniques: abstract/data_architecture/data_modeling/dwh-dim-techniques.md
-                  - Data Vault:
-                      - Abstract: abstract/data_architecture/data_modeling/dwh-data-vault-approach.md
-                      - Implement: abstract/data_architecture/data_modeling/dwh-data-vault-implement.md
-                      - Buzz Act Schema: abstract/data_architecture/data_modeling/dwh-data-vault-business-vault-act-schema.md
-                  - Anchor: abstract/data_architecture/data_modeling/dwh-anchor-approach.md
-                  - One Big Table: abstract/data_architecture/data_modeling/dwh-obt-approach.md
           - Data Mesh:
               - abstract/data_mesh/index.md
               - Data as a Product: abstract/data_mesh/data-as-a-product.md
@@ -112,6 +113,7 @@ nav:
               - Data CICD: abstract/dataops/data-cicd.md
           - Data Pipeline:
               - abstract/data_pipeline/index.md
+              - Declarative: abstract/data_pipeline/declarative-data-pipeline.md
           - Data Observability:
               - abstract/data_observability/index.md
               - Data Orchestration: abstract/data_observability/dobs-data-orchestration.md

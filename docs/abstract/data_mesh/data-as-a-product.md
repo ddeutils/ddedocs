@@ -2,9 +2,16 @@
 
 !!! quote
 
-    "Data product" is a generic concept and “data as a product” is a subset of
-    all possible data products. More specifically, if we use Simon’s categories,
-    "data as a product" belongs to the raw or derived data type of “data product”.
+    "Data product" is a generic concept and "data as a product" is a subset of
+    all possible data products.
+
+    "Data as a product", by contrast, is a mindset or approach that applies
+    product-like thinking to a dataset.
+    In other words, it ensures that a dataset has all the properties of discoverability,
+    accessibility, self-description, and so on.
+    Furthermore, it fosters thinking about "data product releases" much like how
+    software developers approach software releases - i.e., as discrete, shipped
+    products with distinct versions.[^1]
 
 ## Data as a Product vs. Data Product
 
@@ -19,7 +26,7 @@ and the interfaces used to access it:
 - **A list of recommended restaurants nearby**. Since the list is curated specifically
   for you, this data product is an automated decision-making one. The interface
   to access it is an app or website.
-- **A “faster route now available” notification on Google Maps** is a decision
+- **A "faster route now available" notification on Google Maps** is a decision
   support data product (as you are the one making the decision) and its interface
   is a web/app.
 - **A self-driving car** is a data product too. Since it drives automatically,
@@ -33,12 +40,13 @@ making sure they have a series of capabilities including discoverability, securi
 explorability, understandability, trustworthiness, etc.
 
 The vast majority of articles on the concept of data products describe the
-“Data as an Application” approach.
+"Data as an Application" approach.
 This is unfortunate, as this method has significant drawbacks compared to the
-“Data as a Pure Structure” approach.
-Independently from the concept of data products, Yehonathan Sharvit described
+"Data as a Pure Structure" approach.
+
+Independently from the concept of data products, _Yehonathan Sharvit_ described
 the principles of using pure data structures in his book called
-“Data-Oriented Programming” (DOP):
+"Data-Oriented Programming" (DOP):
 
 - Separating code (behavior) from data.
 - Treating data as immutable.
@@ -55,7 +63,7 @@ that allows clients to retrieve data by making API calls to an application insta
 This application instance can be a bespoke enterprise application delivering specific
 data or even a full-fledged database or AI model (LLMs are increasingly popular)
 offering a rather generic data abstraction. Regardless, a running application
-instance (the “server”) is required for client access to the data.
+instance (the "server") is required for client access to the data.
 This instance manages the data stored in the underlying files, prohibiting direct
 file access through operating system calls or custom library functions.
 
@@ -68,7 +76,7 @@ pure data structures.
 
 ![Data and metadata are packaged in a file and separated from applications](./img/data-as-a-pure-structure.png)
 
-“Data as a Pure Structure” refers to data that exists independently and outside
+"Data as a Pure Structure" refers to data that exists independently and outside
 of any application. It includes all necessary metadata to transform raw data into
 a product, but remains pure data structures independent of an accompanying application.
 This data structure can be accessed without making API calls to an application instance.
@@ -115,7 +123,7 @@ On one side, Data Analysts and Data Scientists are autonomous in finding and usi
 the data they need. On the other side, Data Engineers have far less interruptions
 from people asking where they can find data about X.
 
-![Metadata for “data as a product” that makes the dataset addressable](./img/example-addressable.png)
+![Metadata for "data as a product" that makes the dataset addressable](./img/example-addressable.png)
 
 ### Self-describing and interoperable
 
@@ -148,3 +156,5 @@ like for example in Tableau dashboards.
 - [Data as a product vs data products. What are the differences?](https://towardsdatascience.com/data-as-a-product-vs-data-products-what-are-the-differences-b43ddbb0f123)
 - [Deliver Your Data as a Product, But Not as an Application](https://towardsdatascience.com/deliver-your-data-as-a-product-but-not-as-an-application-99c4af23c0fb)
 - [IBM: What is data as a product (DaaP)?](https://www.ibm.com/topics/data-as-a-product)
+
+[^1]: [GetDBT: Data products vs. data as a product](https://www.getdbt.com/blog/data-product-data-as-product)
