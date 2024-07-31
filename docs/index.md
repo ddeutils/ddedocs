@@ -31,6 +31,11 @@ and ensure that their data is managed _Consistently_ and _Reliably_.
     of **Data Infrastructure**, either On-Premises or Clouds, comprising databases,
     storages, compute engines, and pipelines.[^1]
 
+<figure markdown="span">
+  ![Life Cycle of Data Engineering](img/life-cycle-of-data-engineering.png){ loading=lazy width="650" }
+  <figcaption><a href="https://www.techment.com/unlocking-the-power-of-data-a-beginners-guide-to-data-engineering/">Life Cycle of Data Engineering</a></figcaption>
+</figure>
+
 !!! quote "Fundamentals of Data Engineering"
 
     Data Engineering is the development, implementation, and maintenance of systems
@@ -44,11 +49,6 @@ and ensure that their data is managed _Consistently_ and _Reliably_.
     such as analysis or machine learning.
 
     — Joe Reis and Matt Housley in [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/)
-
-<figure markdown="span">
-  ![Life Cycle of Data Engineering](img/life-cycle-of-data-engineering.png){ loading=lazy width="650" }
-  <figcaption><a href="https://www.techment.com/unlocking-the-power-of-data-a-beginners-guide-to-data-engineering/">Life Cycle of Data Engineering</a></figcaption>
-</figure>
 
 You will see that stages of the cycle include Data Ingestion, Data Transformation,
 Data Serving, and Data Storage.
@@ -82,7 +82,7 @@ When data engineering tools change very quickly, The focus of data engineers has
 changed as well.
 
 <figure markdown="span">
-  ![Data Engineering Shift](img/data-engineering-shift.png){ loading=lazy width="650" }
+  ![Data Engineering Shift](img/data-engineering-shift.png){ loading=lazy width="700" }
   <figcaption><a href="https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be">Data Engineering Shift</a></figcaption>
 </figure>
 
@@ -110,8 +110,12 @@ to interact the Data in the **Data Platform** that make less of SLA to require
 
 You can follow the Modern Data Stack on this topics:
 
+<div class="grid cards" markdown>
+
 - [Services](./services/index.md)
 - [Tools](./tools/index.md)
+
+</div>
 
 ---
 

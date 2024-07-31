@@ -17,15 +17,23 @@ flexibility, and scalability to accommodate changes in business needs.
 - https://medium.com/@dnyanesh.bandbe88/the-3-brothers-of-data-modelling-kimball-inmon-data-vault-5788863e98c8
 - https://medium.com/@khedekarpratik123/data-vault-2-0-modern-data-modelling-methodology-part-1-ed91ed408d48
 
-## Types of Data Modeling
+---
+
+## Types
+
+### Kimbal
+
+### Inmon
+
+### Data Vault
+
+- https://patrickcuba.medium.com/data-vault-is-not-a-monolith-3ea2014ffedc
 
 ### One Big-Tabel
 
 - [What is One Big Table?](https://gbamezai.medium.com/what-is-one-big-table-exploring-when-to-use-it-when-not-to-use-it-and-my-personal-experience-3f740f56529d)
 
-### Data Vault
-
-https://patrickcuba.medium.com/data-vault-is-not-a-monolith-3ea2014ffedc
+---
 
 ## Read Mores
 

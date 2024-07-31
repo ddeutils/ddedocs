@@ -65,7 +65,7 @@ nav:
           - Data Management:
               - abstract/data_management/index.md
               - Data Model: abstract/data_management/data-model.md
-              - Modeling Technique:
+              - Data Modeling:
                   - abstract/data_management/data_modeling/index.md
                   - Inmon:
                       - Abstract: abstract/data_management/data_modeling/dwh-inmon-approach.md
@@ -84,9 +84,11 @@ nav:
               - Data Integration: abstract/data_management/data-integration.md
               - Data Transformation: abstract/data_management/data-transformation.md
               - Data Quality: abstract/data_management/data-quality.md
-              - Data Warehouse: abstract/data_management/data-warehouse.md
-              - Data Mart: abstract/data_management/data-mart.md
-              - ODS: abstract/data_management/data-ods.md
+              - Data Storage:
+                  - Data Warehouse: abstract/data_management/data-warehouse.md
+                  - Data Mart: abstract/data_management/data-mart.md
+                  - ODS: abstract/data_management/data-ods.md
+              - Data Lifecycle: abstract/data_management/data-lifecycle-management.md
               - Normalization: abstract/data_management/data-normalization-form.md
               - De-Normalization: abstract/data_management/data-denormalization-form.md
               - SCD: abstract/data_management/data-scd.md

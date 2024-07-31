@@ -9,24 +9,27 @@ icon: material/warehouse
     Data Management is an umbrella term that covers everything put in place by
     an organization to manage information and utilize it to make decisions.[^1]
 
-Data Management refers to the _Practices_, _Architectural Techniques_, _Strategies_,
-and _Tools_ that manage, store, and analyze data throughout its lifecycle.
+:material-page-last: A Data Management refers to the _Practices_, _Architectural
+Techniques_, _Strategies_, and _Tools_ that manage, store, and analyze data throughout
+its lifecycle.
 Effective data management ensures that data is accurate, available, and accessible
 when needed while maintaining security and compliance with relevant regulations.
 
-For trend of **Data Management**, We should follow the sharing knowledge from the
-**[:material-chart-bell-curve: Gartner Hype Cycle for Data Management](https://www.gartner.com/en)**.
-Data management strategy can change everytime because it depend on technology.
+For the trend of a **Data Management** that we should follow the sharing knowledge
+and research from the **[:material-chart-bell-curve: Gartner Hype Cycle for Data Management](https://www.gartner.com/en)**.
+You should to know that a data management strategy can change and shift everytime
+because it depend on a data service or technology that was implemented by your
+organize.
 
 <figure markdown="span">
-  ![Gartner Hype Cycle for Data Management 2023](img/gartner-hype-cycle-graphic.png){ loading=lazy width="600" }
+  ![Gartner Hype Cycle for Data Management 2023](img/gartner-hype-cycle-graphic.png){ loading=lazy width="650" }
   <figcaption><a href="https://www.gartner.com/en/documents/4573399">Gartner Hype Cycle for Data Management 2023</a></figcaption>
 </figure>
 
 !!! note
 
-    Modern Data Management involves a set of practices, techniques, and technologies
-    used to handle data as a valuable resource.
+    A ^^Modern Data Management^^ involves a set of practices, techniques, and
+    technologies used to handle data as a valuable resource.
     Its aim is to ensure the availability, integrity, security, and usability
     of data within an organization.[^2]
 
@@ -34,11 +37,10 @@ Data management strategy can change everytime because it depend on technology.
 
 ## :material-arrow-down-right: Getting Started
 
-The buzz word that has taken over pretty much every industry and large organization
-in the last decade is “data-driven”. You can find millions of articles, studies
-or blogs out there on why you should adopt a data-driven culture in your organization.
-To sum it all up, being data-driven means you can open the hood on your organization
-and see how it’s operating.
+:material-page-last: The buzz word that has taken over pretty much every industry
+and large organization in the last decade is **"Data-Driven"**.
+You can find millions of articles, studies or blogs out there on why you should
+adopt a data-driven culture in your organization.
 You can identify problems and opportunities faster than you could without data.
 You can analyze past and sometimes even real-time data to make informed decisions
 about the future.
@@ -54,33 +56,37 @@ just don’t have.
 And on the flip side of that, if you lack any type of data management in your
 company - good luck staying competitive, it’s probably not going to happen.
 
-In this New Vantage Partners report from 2022 on The State of Corporate Data
-Initiatives, it states that only 26.5% of organizations have achieved their
-data-driven goals.
-So the majority of organizations out there are still struggling, while about a
-quarter of them have figured it out.
+!!! note
 
-So if you're looking to get ahead and stay ahead, becoming data-driven should 100%
-be part of your plan. But building an effective data-driven culture only works when
-it’s built on strong data management foundations.
+    In this New Vantage Partners report from 2022 on The State of Corporate Data
+    Initiatives, it states that ==only 26.5% of organizations have achieved their
+    data-driven goals==.
 
-### 3 Pillars of a Strong Data Management Strategy
+:material-page-last: So if you're looking to get ahead and stay ahead, becoming
+data-driven should 100% be part of your plan.
+But building an effective data-driven culture only works when it’s built on strong
+data management foundations.
 
-1. Data Governance
-   Data Governance refers to all the organizational rules that are put in place
-   around data, including roles and responsibilities of team members, access control, policies, procedures and standards. Everything that will enforce a high quality of data securely flowing through the organization. Governance is typically documented but looks different for every company depending on company size, what your systems are, and what types of data you're dealing with.
-2. Data Architecture
-   The next important pillar is Data Architecture. This is the actual design of
-   the systems involved in how data flows through your company and gets where it
-   needs to be, when it needs to be there. Broadly speaking this includes your infrastructure which could be in the cloud or big server rooms at your company and all the applications running on those servers which are responsible for making the data flow from place to place. It’s the hardware and software.
-3. Data Quality
-   The last pillar of a strong data management strategy is Data Quality.
-   Having accurate and up-to-date data is an essential part of being data-driven.
-   All systems need to be monitored and data needs to be cleaned very carefully. The data you receive in reports needs to reflect what reality is, which is the whole point of being data driven, so the quality of the data is super important.
+**3 Pillars of a Strong Data Management Strategy**:
 
-## Components
+1. [Data Governance](#data-governance)
+2. [Data Architecture](#data-architecture)
+3. [Data Quality](#data-quality-and-consistency)
+
+---
+
+## Strategies
 
 ### Data Governance
+
+Data Governance refers to all the organizational rules that are put in place
+around data, including roles and responsibilities of team members, access control,
+policies, procedures and standards.
+
+Everything that will enforce a high quality of data securely flowing through the
+organization. Governance is typically documented but looks different for every
+company depending on company size, what your systems are, and what types of data
+you're dealing with.
 
 Includes policies, procedures, and standards that ensure the appropriate use,
 management, and protection of data throughout its lifecycle. It also involves
@@ -93,6 +99,11 @@ compliance with legal and regulatory requirements.
 Read More about [Data Governance](../data_governance/index.md)
 
 ### Data Quality and Consistency
+
+Having accurate and up-to-date data is an essential part of being data-driven.
+All systems need to be monitored and data needs to be cleaned very carefully.
+The data you receive in reports needs to reflect what reality is, which is the
+whole point of being data driven, so the quality of the data is super important.
 
 Ensuring that data is accurate, complete, and consistent. It includes
 defining data quality metrics, establishing data quality rules, and implementing
@@ -138,6 +149,18 @@ controls and encryption, and complying with legal and regulatory requirements.
 - Compliance and Regulatory Requirements
 - Privacy-Preserving Data Processing
 
+### Data Architecture
+
+The next important pillar is Data Architecture. This is the actual design of
+the systems involved in how data flows through your company and gets where it
+needs to be, when it needs to be there. Broadly speaking this includes your
+infrastructure which could be in the cloud or big server rooms at your company
+and all the applications running on those servers which are responsible for making
+the data flow from place to place.
+It’s the hardware and software.
+
+Read More about [Data Architecture](../data_architecture/index.md)
+
 ### Data Democratization
 
 - Self-service Analytics: Providing tools and platforms that enable non-technical
@@ -147,13 +170,12 @@ controls and encryption, and complying with legal and regulatory requirements.
 
 ### Data Storage
 
-- Data Warehouse
-- Data Mart
-- Operation Data Store
-- Data Lake
+Data Storage on this part we will focus on below list:
 
-Data Storage on this part we will focus on Data Warehouse, Data Mart, and Operational
-Data Store (ODS).
+- [Data Warehouse](./data-warehouse.md)
+- [Data Mart](./data-mart.md)
+- [Operation Data Store](./data-ods.md)
+- Data Lake
 
 |                    | EDW                                                     | ODS                                                  | DM                                                              |
 |--------------------|---------------------------------------------------------|------------------------------------------------------|-----------------------------------------------------------------|
