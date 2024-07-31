@@ -165,7 +165,10 @@ cython_debug/
 
 # Local Keeper
 .local/
-.cache/
 
 # Backup files
 backup/
+
+# Draw IO backup file
+*.bkp
+*.dtmp
