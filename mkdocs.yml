@@ -181,6 +181,7 @@ nav:
                       - Privileges: services/azure/databricks/adb-uc-privileges.md
               - Event Hubs: services/azure/az-eventhubs.md
               - Data Factory:
+                  - services/azure/data_factory/index.md
                   - Share IR: services/azure/data_factory/adf-ir-sharing.md
                   - Link Services: services/azure/data_factory/adf-link-services.md
               - Synapse:
