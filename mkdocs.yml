@@ -105,6 +105,7 @@ nav:
               - Modern Data Stack: abstract/data_architecture/modern-data-stack.md
               - Secure Data Platform: abstract/data_architecture/data-architecture-secure-data-platform.md
               - Event-Driven Data Architect: abstract/data_architecture/event-driven-data-architecture.md
+              - Lambda & Kappa: abstract/data_architecture/lambda-and-kappa-architecture.md
           - Data Mesh:
               - abstract/data_mesh/index.md
               - Data as a Product: abstract/data_mesh/data-as-a-product.md
