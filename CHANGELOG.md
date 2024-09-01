@@ -2,6 +2,33 @@
 
 ## Latest Changes
 
+## 20240902
+
+### :tada: Features
+
+- :dart: feat: update ignore backup file on gitignore. (_2024-07-31_)
+
+### :scissors: References
+
+- :clipboard: refs: add lambda kappa data architecture. (_2024-09-02_)
+- :clipboard: refs: update refs for python sqlalchemy. (_2024-09-01_)
+
+### :book: Documents
+
+- :page_facing_up: docs: update data factory docs. (_2024-08-06_)
+- :page_facing_up: docs: update modern data stack docs. (_2024-07-31_)
+- :page_facing_up: docs: refactored docs structure on abstract session. (_2024-07-31_)
+- :page_facing_up: docs: update dataops and data as a product docs. (_2024-07-30_)
+- :page_facing_up: docs: update dataops docs. (_2024-07-30_)
+- :page_facing_up: docs: update airflow docs. (_2024-07-30_)
+- :page_facing_up: docs: update docs on data management topic. (_2024-07-29_)
+- :page_facing_up: docs: update opentofu docs on iac services. (_2024-07-28_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: 📦 bump mkdocs-material from 9.5.30 to 9.5.34 (_2024-09-01_)
+- :construction: refactored: deps. (_2024-08-21_)
+
 ## 20240728
 
 ### :book: Documents
