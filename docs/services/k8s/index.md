@@ -206,6 +206,7 @@ Kubernetes (K8s)
 ## Practices
 
 - [Most common mistakes to avoid when using Kubernetes: Anti-Patterns](https://medium.com/@seifeddinerajhi/most-common-mistakes-to-avoid-when-using-kubernetes-anti-patterns-%EF%B8%8F-f4d37586528d)
+- [Modern Data Engineering with Kubernetes: End-to-End Data Pipeline](https://towardsdev.com/data-engineering-with-kubernetes-end-to-end-data-pipeline-6339bb24b0f7)
 
 ## References
 
