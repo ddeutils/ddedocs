@@ -22,6 +22,8 @@ capture the modifications in the source data store and propagate them to downstr
 systems. CDC can be applied in various scenarios, including data replication,
 data warehousing, real-time analytics, and more.
 
+<!-- more -->
+
 ## Implementing Change Data Capture
 
 CDC can be implemented using different approaches based on the source system and

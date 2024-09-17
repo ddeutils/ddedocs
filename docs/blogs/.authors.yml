@@ -1,7 +1,7 @@
 authors:
   admin:
-    name: Korawich Anuttra       # Author name
-    description: Admin           # Author description
-    avatar: /img/dde.png         # Author avatar
+    name: Korawich Anuttra
+    description: Admin
+    avatar: https://github.com/ddeutils/ddedocs/tree/main/assets/img/dde.png
 #    slug: url           # Author profile slug
 #    url: url            # Author website URL
