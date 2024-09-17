@@ -1,4 +1,4 @@
-# Docs: _Data Developer & Engineer_
+# Data Developer & Engineer Documents
 
 [![size](https://img.shields.io/github/languages/code-size/ddeutils/ddedocs)](https://github.com/ddeutils/ddedocs)
 [![gh license](https://img.shields.io/github/license/ddeutils/ddedocs)](https://github.com/ddeutils/ddedocs/blob/main/LICENSE)
@@ -15,13 +15,13 @@ and editing.
 For additional, it can deploy and plug-in with **GitHub** action to hosting on
 **GitHub Page** domain.
 
-## Page
+## :book: Page
 
 ```url
 https://ddeutils.github.io/ddedocs/
 ```
 
-## Noted
+## :warning: Noted
 
 I will update this project by **Weekly frequency**. (This statement warn to me
 when I come back to develop this project again :sweat_smile:)
@@ -38,4 +38,4 @@ documents.
 > For more extension that I use for this project, able to research from
 > [MkDocs Catalogs](https://github.com/mkdocs/catalog).
 
-[Read more about start-up this docs on the Local](NOTED.md)
+[:fast_forward: Read more about start-up this docs on the Local](NOTED.md)
