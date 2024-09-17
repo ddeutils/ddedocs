@@ -2,6 +2,17 @@
 
 ## Latest Changes
 
+## 20240917
+
+### :book: Documents
+
+- :page_facing_up: docs: update post cdc. (_2024-09-17_)
+- :page_facing_up: docs: update emoji on readme. (_2024-09-17_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update version of clishelf==0.2.6 mkdocs-git-revision-date-localized-plugin==1.2.9. (_2024-09-17_)
+
 ## 20240902
 
 ### :tada: Features
