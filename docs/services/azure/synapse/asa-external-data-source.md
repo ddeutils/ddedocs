@@ -39,12 +39,6 @@ CLOSE MASTER KEY;
     CREATE DATABASE SCOPED CREDENTIAL <credential-name>
     WITH IDENTITY = 'Managed Identity'
     GO
-
-    CREATE EXTERNAL DATA SOURCE <external-data-source>
-    WITH (
-        LOCATION   = 'https://<storage_account>.dfs.core.windows.net/<container>/<path>',
-        CREDENTIAL = <credential-name>
-    )
     ```
 
 === "Service Principle"
@@ -55,12 +49,6 @@ CLOSE MASTER KEY;
     WITH IDENTITY = '<client-id>@<authority-url>',
         SECRET = '<client-secret>'
     GO
-
-    CREATE EXTERNAL DATA SOURCE <external-data-source>
-    WITH (
-        LOCATION   = 'https://<storage_account>.dfs.core.windows.net/<container>/<path>',
-        CREDENTIAL = <credential-name>
-    )
     ```
 
 === "Shared Access Signature"
@@ -71,60 +59,12 @@ CLOSE MASTER KEY;
     WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
         SECRET = 'sv=2018-03-28&ss=bfqt&...&sig=lQHczN...'
     GO
-
-    CREATE EXTERNAL DATA SOURCE <external-data-source>
-    WITH (
-        LOCATION   = 'https://<storage_account>.dfs.core.windows.net/<container>/<path>',
-        CREDENTIAL = <credential-name>
-    )
     ```
 
 And the permission of **User**, **Managed Identity**, or **Service Principle** that want to
 access data on target external data source should be any role in
 `Storage Blob Data Owner/Contributor/Reader` roles in order for the application
 to access the data via RBAC in **Azure Portal**.
-
-!!! example
-
-    ```sql
-    USE [master];
-    CREATE LOGIN [username] WITH PASSWORD = 'P@ssW0rd';
-    GO
-
-    USE [database];
-    CREATE USER [username] FROM LOGIN [username];
-    GRANT REFERENCES ON DATABASE SCOPED CREDENTIAL::[credential-name] TO [username];
-    GO
-    ```
-
-    ```sql
-    IF NOT EXISTS (
-        SELECT *
-        FROM [sys].[external_data_sources]
-        WHERE [name] = '<external-data-source-name>'
-    )
-        CREATE EXTERNAL DATA SOURCE <external-data-source-name>
-        WITH (
-            CREDENTIAL = <credential-name>,
-            LOCATION = 'abfss://<container>@<storage-account>.dfs.core.windows.net'
-        )
-    GO
-    ```
-
-    ```sql
-    CREATE OR ALTER VIEW [CURATED].[<view-name>]
-    AS
-        SELECT *
-        FROM OPENROWSET(
-            BULK '/delta_silver/<delta-table-name>',
-            DATA_SOURCE = '<external-data-source-name>',
-            FORMAT = 'DELTA'
-    ) AS [r]
-    GO
-
-    GRANT SELECT ON OBJECT::[CURATED].[<view-name>] TO <user-name>
-    GO
-    ```
 
 ---
 
@@ -240,12 +180,12 @@ WITH (
 
 ---
 
-## :material-arrow-right-bottom: External Table
+## Examples
 
-=== "Serverless SQL Pool"
+=== ":material-database-off-outline: Serverless SQL Pool"
 
     ```sql
-    CREATE EXTERNAL TABLE [CURATED].[<external-table-name>]
+    CREATE EXTERNAL TABLE [<schema-name>].[<external-table-name>]
     (
         [PurposeId] [varchar](max),
         [RetireOnDate] [datetime],
@@ -256,6 +196,48 @@ WITH (
         FILE_FORMAT = [<external-file-format>],
         LOCATION = N'/path/of/data/date=20240708'
     )
+    GO
+    ```
+
+!!! example
+
+    ```sql
+    USE [master];
+    CREATE LOGIN [username] WITH PASSWORD = 'P@ssW0rd';
+    GO
+
+    USE [database];
+    CREATE USER [username] FROM LOGIN [username];
+    GRANT REFERENCES ON DATABASE SCOPED CREDENTIAL::[credential-name] TO [username];
+    GO
+    ```
+
+    ```sql
+    IF NOT EXISTS (
+        SELECT *
+        FROM [sys].[external_data_sources]
+        WHERE [name] = '<external-data-source-name>'
+    )
+        CREATE EXTERNAL DATA SOURCE <external-data-source-name>
+        WITH (
+            CREDENTIAL = <credential-name>,
+            LOCATION = 'abfss://<container>@<storage-account>.dfs.core.windows.net'
+        )
+    GO
+    ```
+
+    ```sql
+    CREATE OR ALTER VIEW [CURATED].[<view-name>]
+    AS
+        SELECT *
+        FROM OPENROWSET(
+            BULK '/delta_silver/<delta-table-name>',
+            DATA_SOURCE = '<external-data-source-name>',
+            FORMAT = 'DELTA'
+    ) AS [r]
+    GO
+
+    GRANT SELECT ON OBJECT::[CURATED].[<view-name>] TO <user-name>
     GO
     ```
 
