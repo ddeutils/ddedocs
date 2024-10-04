@@ -375,6 +375,7 @@ nav:
               - Pyspark:
                   - Select & SelectExpr: tools/etl/spark/pyspark-select-and-selectexpr.md
                   - Data Wrangling Functions: tools/etl/spark/pyspark-data-wrangling-functions.md
+                  - Dynamic Json: tools/etl/spark/spark-dynamic-json.md
                   - SCD2: tools/etl/spark/pyspark-scd2.md
                   - RegExp: tools/etl/spark/pyspark-regexp.md
                   - Media Files: tools/etl/spark/pyspark-media-files.md

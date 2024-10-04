@@ -243,7 +243,7 @@ WITH (
 
 ## :material-playlist-plus: Read Mores
 
-- [Microsoft: Develop Storage Files Access Control](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity)
-- [Microsoft: TSQL - Create External Data Source](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=azure-sqldw-latest&preserve-view=true&tabs=dedicated)
-- [Microsoft: TSQL - Create External File Format](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-file-format-transact-sql)
-- [Medium: Query Azure Data Lake via Synapse Serverless Security](https://medium.com/@diangermishuizen/query-azure-data-lake-via-synapse-serverless-security-credentials-setup-eedb5175d5da)
+- [:material-microsoft: Microsoft: Develop Storage Files Access Control](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity)
+- [:material-microsoft: Microsoft: TSQL - Create External Data Source](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=azure-sqldw-latest&preserve-view=true&tabs=dedicated)
+- [:material-microsoft: Microsoft: TSQL - Create External File Format](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-file-format-transact-sql)
+- [:simple-medium: Medium: Query Azure Data Lake via Synapse Serverless Security](https://medium.com/@diangermishuizen/query-azure-data-lake-via-synapse-serverless-security-credentials-setup-eedb5175d5da)
