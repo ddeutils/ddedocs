@@ -450,6 +450,7 @@ nav:
               - tools/cicd/jenkins/index.md
           - Jira:
               - tools/cicd/jira/index.md
+              - JQL: tools/cicd/jira/jira-jql.md
           - Vault:
               - tools/cicd/vault/index.md
       - ML & BI:
@@ -459,6 +460,10 @@ nav:
               - tools/bi/pinot/index.md
           - Trino:
               - tools/bi/trino/index.md
+          - Superset:
+              - tools/bi/superset/index.md
+              - Deploy:
+                  - Kubernetes: tools/bi/superset/superset-k8s.md
       - Programing Languages:
           - Shell:
               - tools/lang/shell/index.md
