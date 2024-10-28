@@ -147,10 +147,11 @@ nav:
               - OAuth: services/azure/az-oauth.md
               - VNet: services/azure/az-vnet.md
               - Storage: services/azure/az-storage-account.md
-              - Key Vaults: services/azure/az-key-vaults.md
+              - KeyVaults: services/azure/az-keyvaults.md
+              - ServiceBus: services/azure/az-servicebus.md
               - Database:
-                  - services/azure/sql/index.md
                   - Auth: services/azure/sql/az-db-auth.md
+                  - Monitoring: services/azure/sql/az-db-monitoring.md
               - Batch:
                   - services/azure/batch/index.md
                   - Start Task: services/azure/batch/az-ba-start-task.md

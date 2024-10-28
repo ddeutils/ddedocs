@@ -375,7 +375,7 @@ you will find there a staging table and a second-level staging table that will
 load the raw data from the staging table and add all required attributes like
 a hash key, load times or hash difference key)
 
-## Types of Data Vault
+## :material-format-list-bulleted: Types of Data Vault
 
 ### Raw Vault
 

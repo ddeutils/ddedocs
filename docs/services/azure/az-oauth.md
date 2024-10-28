@@ -1,4 +1,4 @@
-# OAuth
+# Azure OAuth
 
 <figure markdown="span">
   ![Access Scenarios](img/az-access-scenarios.png){ loading=lazy width="700" }
@@ -11,8 +11,8 @@
 and API Security. They are used in conjunction with each other and both sound
 similar, but they refer to entirely different security processes.
 
-- **Authentication** answers the question: Who are you?
-- **Authorization** answers the question: What are you allowed to do?
+- **Authentication** answers the question: _Who are you?_
+- **Authorization** answers the question: _What are you allowed to do?_
 
 ## :material-arrow-down-right: Getting Started
 
@@ -70,6 +70,6 @@ grant_type=refresh_token
 
 ## :material-playlist-plus: Read Mores
 
-- [:material-microsoft: Microsoft -- Get access and refresh tokens](https://learn.microsoft.com/en-us/advertising/guides/authentication-oauth-get-tokens)
-- [:material-microsoft: Microsoft -- identity platform and OAuth 2.0 authorization code flow](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow#refreshing-the-access-tokens)
-- [:material-microsoft: Microsoft Graph -- Permissions Reference](https://learn.microsoft.com/en-us/graph/permissions-reference)
+- [:material-microsoft: Microsoft - Get access and refresh tokens](https://learn.microsoft.com/en-us/advertising/guides/authentication-oauth-get-tokens)
+- [:material-microsoft: Microsoft - identity platform and OAuth 2.0 authorization code flow](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow#refreshing-the-access-tokens)
+- [:material-microsoft: Microsoft Graph - Permissions Reference](https://learn.microsoft.com/en-us/graph/permissions-reference)

@@ -72,7 +72,7 @@ the company.
 
 ---
 
-## Types
+## :material-format-list-bulleted: Types
 
 :material-page-last: There are three types of data marts that differ based on their
 relationship to the data warehouse and the respective data sources of each system.

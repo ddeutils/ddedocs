@@ -19,7 +19,7 @@ flexibility, and scalability to accommodate changes in business needs.
 
 ---
 
-## Types
+## :material-format-list-bulleted: Types
 
 ### Kimbal
 

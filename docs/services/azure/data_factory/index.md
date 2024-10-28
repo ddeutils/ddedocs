@@ -1,23 +1,53 @@
 # Azure Data Factory
 
-## Getting Started
+## :material-arrow-down-right: Getting Started
 
-## Syntax
+## :material-code-tags: Syntax
 
 ### Coalesce
 
-If an incoming value that you want to extract;
+=== "Exists"
 
-```json title="P_EXTRACT"
-{
-    "parent": {
-      "child": {
-        "key": "value"
-      }
+    ```json title="P_EXTRACT"
+    {
+        "parent": {
+          "child": {
+            "key": "value"
+          }
+        }
     }
-}
-```
+    ```
 
-```text
-@coalesce(parameters.P_EXTRACT.parent.child?.key, 'default')
-```
+    ```cs
+    @coalesce(parameters.P_EXTRACT.parent.child?.key, 'default')
+    ```
+
+    Output:
+
+    ```text
+    value
+    ```
+
+=== "Not Exists"
+
+    ```json title="P_EXTRACT"
+    {
+        "parent": {
+          "child": {
+            "foo": "bar"
+          }
+        }
+    }
+    ```
+
+    ```cs
+    @coalesce(parameters.P_EXTRACT.parent.child?.key, 'default')
+    ```
+
+    Output:
+
+    ```text
+    default
+    ```
+
+## :material-playlist-plus: Read Mores
