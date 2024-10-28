@@ -2,6 +2,38 @@
 
 ## Latest Changes
 
+## 20241028
+
+### :scissors: References
+
+- :clipboard: refs: iceberg - add solving small files. (_2024-10-05_)
+- :clipboard: refs: add spark dynamic json parsing reference. (_2024-10-05_)
+
+### :book: Documents
+
+- :page_facing_up: docs: update index page. (_2024-10-28_)
+- :page_facing_up: docs: update jql on jira content. (_2024-10-10_)
+- :page_facing_up: docs: update external data source of synapse. (_2024-10-04_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: 📦 bump clishelf from 0.2.6 to 0.2.8 (_2024-10-01_)
+- :construction: refactored: 📦 bump mkdocs-material from 9.5.34 to 9.5.39 (_2024-10-01_)
+- :art: styled: add avatar url for blogs. (_2024-09-17_)
+
+### :bug: Fix Bugs
+
+- :gear: fixed: change url of avatar image that store on this repo. (_2024-09-17_)
+
+### :package: Build & Workflow
+
+- :toolbox: build: migrate pre-commit config file support major version. (_2024-10-28_)
+- :toolbox: build: ignore gitleak on pull request trigger. (_2024-10-05_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs-material==9.5.42, mkdocs-git-committers-plugin-2==2.4.1, mkdocs-git-revision-date-localized-plugin==1.3.0. (_2024-10-28_)
+
 ## 20240917
 
 ### :book: Documents
