@@ -21,14 +21,16 @@ area.
 :material-page-last: First, ^^**Data Engineering** is a critical part of the
 ==Data Lifecycle== that enables organizations to manage and process large volumes
 of data efficiently and reliably^^[^3].
+
 By these concepts, **Data Engineer** should design and implement **Data Pipeline**
-and **Data Management Strategy** that meet the requirements of their organizations
-and ensure that their data is managed _Consistently_ and _Reliably_.
+and **Data Management Strategy** that meet the requirements and KPI of their
+organizations and ensure that your data was managed _Consistently_ and _Reliably_.
 
 !!! quote "What is DE do?"
 
-    **Data Engineer** is who able to ==_**Develop**_, _**Operate**_, and _**Maintain**_==
-    of **Data Infrastructure**, either On-Premises or Clouds, comprising databases,
+    **Data Engineer** is who able to ==_**Develop**_, _**Implement**_, _**Operate**_,
+    and _**Maintain**_== any tools on the current **Data Infrastructure** that
+    your organization use, either On-premises or Cloud providers, comprising databases,
     storages, compute engines, and pipelines.[^1]
 
 <figure markdown="span">
@@ -38,20 +40,22 @@ and ensure that their data is managed _Consistently_ and _Reliably_.
 
 !!! quote "Fundamentals of Data Engineering"
 
-    Data Engineering is the development, implementation, and maintenance of systems
-    and processes that take in raw data and produce high-quality, consistent
+    **Data Engineering** is the development, implementation, and maintenance of
+    systems and processes that take in raw data and produce high-quality, consistent
     information that supports downstream use cases, such as analysis and machine
-    learning. Data engineering is the intersection of security, data management,
-    DataOps, data architecture, orchestration, and software engineering.
+    learning.
 
-    A Data Engineer manages the ^^Data Engineering Lifecycle^^, beginning with
+    **Data engineering** is the intersection of security, data management, DataOps,
+    data architecture, orchestration, and software engineering.
+
+    A **Data Engineer** manages the ^^Data Engineering Lifecycle^^, beginning with
     getting data from source systems and ending with serving data for use cases,
     such as analysis or machine learning.
 
     — Joe Reis and Matt Housley in [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/)
 
-You will see that stages of the cycle include Data Ingestion, Data Transformation,
-Data Serving, and Data Storage.
+You will see that stages of the cycle include _Data Ingestion_, _Data Transformation_,
+_Data Serving_, and _Data Storage_ components.
 
 | Best practice               | Importance                                                                                                                                      |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -61,14 +65,15 @@ Data Serving, and Data Storage.
 | Data security measures      | Controls and monitors access to data sources, enhancing security and compliance.                                                                |
 | Version control and backups | Tracks change to datasets over time, aiding in reproducibility and audit trails.                                                                |
 
-:material-page-last: When I started on this role, I got the idea about the future
-of my responsibilities. I know the Data Engineering tools will shift so fast because
-the last three year I start with the map-reduce processing on **Hadoop HDFS** but
-nowadays, it changes to in-memory processing like **Impala** or **Spark**.
+:material-page-last: Since I started on this role, I got the idea about the future
+of my responsibilities. I know the Data Engineering tools shifts so fast because
+the last three year I started with the Map-Reduce processing on the **Hadoop HDFS**
+but nowadays, it changes to In-Memory processing like **Impala** or **Spark**.
+The knowledge I gained from Map-Reduce will be wasted :boom:.
 
-![The 2023 MAD (ML/AI/DATA) Landscape](img/mad-data-landscape.png){ loading=lazy width="350" align=right }
+![The 2023 MAD (ML/AI/DATA) Landscape](img/mad-data-landscape.png){ loading=lazy width="370" align=right }
 
-You will see the right picture, the [**2023 MAD (ML/AI/Data) Landscape** :material-land-plots:](https://mad.firstmark.com/)[^2],
+The right picture, the [**2023 MAD (ML/AI/Data) Landscape** :material-land-plots:](https://mad.firstmark.com/)[^2],
 that show about how many possibility tools that able to use on your project.
 It has many area that you should to choose which one that match with the current
 architect or fit with your cost planing model.
@@ -82,7 +87,7 @@ When data engineering tools change very quickly, The focus of data engineers has
 changed as well.
 
 <figure markdown="span">
-  ![Data Engineering Shift](img/data-engineering-shift.png){ loading=lazy width="700" }
+  ![Data Engineering Shifting](img/data-engineering-shift.png){ loading=lazy width="700" }
   <figcaption><a href="https://medium.com/@AnalyticsAtMeta/the-future-of-the-data-engineer-part-i-32bd125465be">Data Engineering Shift</a></figcaption>
 </figure>
 
@@ -101,19 +106,20 @@ role:
 
 ---
 
-:material-page-last: Additional, the trend of ^^**Modern Data Stack**^^ will make
-the **Data Engineering** so easy and force you have the time to focus on
-**Business Problem**.
-In the another hand, **Business Users** able to use less of technical knowledge
-to interact the Data in the **Data Platform** that make less of SLA to require
-**Data Engineer** a lot! :partying_face:
+:material-page-last: The trend of ^^**Modern Data Stack**^^ will make a data
+engineering process so easy to implement and maintenance that making you have
+the time to focus on **business problem** instead technical problem.
 
-You can follow the Modern Data Stack on this topics:
+In the another side, **Business users** able to use less of technical knowledge
+to interact the serving data in their **data contract platform**.
+It decrease SLA to require the **data engineer** for need support a lot! :partying_face:
+
+You can follow the modern data stack on the below topics:
 
 <div class="grid cards" markdown>
 
-- [Services](./services/index.md)
-- [Tools](./tools/index.md)
+- [**Services**](./services/index.md)
+- [**Tools**](./tools/index.md)
 
 </div>
 
@@ -122,7 +128,7 @@ You can follow the Modern Data Stack on this topics:
 ## :material-account-arrow-right-outline: Roles
 
 :material-page-last: In the future, if I do not in love with communication or management
-level skill that make me be :material-face-agent: [**Lead Data Engineer**](lead-data-engineer.md),
+skill that make me be :material-face-agent: [**Lead Data Engineer**](lead-data-engineer.md),
 I will go to any specialize roles such as,
 
 <div class="grid cards" markdown>
@@ -130,25 +136,25 @@ I will go to any specialize roles such as,
 -   :material-face-man: **Data Platform Engineer**
 
     ---
-    **Data Platform Engineer**
+    Data Platform Engineer
 
     [Read More about **Data Architect**](./abstract/data_architecture/index.md)
 
 -   :material-face-man-shimmer: **DataOps Engineer**
 
     ---
-    **DataOps Engineer**
+    DataOps Engineer
 
     [Read More about **DataOps**](./abstract/dataops/index.md)
 
 -   :material-face-man-profile: **MLOps Engineer**
 
     ---
-    **MLOps Engineers** Build and Maintain a platform to enable the development
+    MLOps Engineers Build and Maintain a platform to enable the development
     and deployment of machine learning models. They typically do that
     through standardization, automation, and monitoring.
 
-    **MLOps Engineers** reiterate the platform and processes to make the machine
+    MLOps Engineers reiterate the platform and processes to make the machine
     learning model development and deployment quicker, more reliable, reproducible,
     and efficient.
 
@@ -157,7 +163,7 @@ I will go to any specialize roles such as,
 -   :material-face-woman: **Analytic Engineer**
 
     ---
-    **Analytic Engineer** is who make sure that companies can understand their data
+    Analytic Engineer is who make sure that companies can understand their data
     and use it to _Solve Problems_, _Answer Questions_, or _Make Decisions_.
 
     [Read More about **Analytic Engineer**](https://towardsdatascience.com/analytics-engineering-8b0ed0883379)
