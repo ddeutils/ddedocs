@@ -1,4 +1,4 @@
-# TO Database
+# To Database
 
 ##  Attaching to multiple databases at once
 
