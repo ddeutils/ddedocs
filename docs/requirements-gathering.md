@@ -24,11 +24,11 @@ who utilize the project's output.
 Understanding the capabilities and preferences of the end-user is crucial
 for designing an appropriate solution.
 
-End-users (& their preferences) for data projects are usually one of:
+End-users (& their preferences) for data projects are usually one of;
 
 <div class="grid cards" markdown>
 
--   **Data Analysts/Scientists**
+-   **Data Analysts/Data Scientists**
 
     _SQL, CSV files_
 
