@@ -7,22 +7,24 @@ icon: material/comment-search-outline
 One of the mistakes you’ll make as a Data Engineer is not truly understanding the
 ^^**Business Requirements**^^.
 
-!!! quote
+!!! example
 
-    The business will come to you and ask for a real-time dashboard.[^1]
+    !!! quote
 
-But they mean they want the data updated 3-4x a day, or maybe they only look at
-the report once a week; at that moment, the data should be as up-to-date as
-possible.
+        The business will come to you and ask for a real-time dashboard.[^1]
+
+    But they mean they want the data updated 3-4x a day, or maybe they only look at
+    the report once a week; at that moment, the data should be as up-to-date as
+    possible.
 
 ## :material-arrow-down-right: Getting Started
 
 ### Identify the End-Users
 
 :material-page-last: Begin by identifying the end-users, crucial stakeholders
-who utilize the project's output.
-Understanding the capabilities and preferences of the end-user is crucial
-for designing an appropriate solution.
+who utilize the project's output
+(Understanding the capabilities and preferences of the end-user is crucial
+for designing an appropriate solution).
 
 End-users (& their preferences) for data projects are usually one of;
 
@@ -30,7 +32,7 @@ End-users (& their preferences) for data projects are usually one of;
 
 -   **Data Analysts/Data Scientists**
 
-    _SQL, CSV files_
+    _SQL, No-SQL, CSV files_
 
 -   **Business Users**
 
@@ -42,9 +44,14 @@ End-users (& their preferences) for data projects are usually one of;
 
 -   **External Clients**
 
-    _Cloud storage, SFTP/FTP, APIs, Database_
+    _Cloud storage, SFTP/FTP, APIs, SQL_
 
 </div>
+
+!!! warning
+
+    If you do not know who is the end users, you can ask the Solution Architect
+    in that data project.
 
 ---
 
@@ -62,73 +69,68 @@ Use the following questions to refine requirements:
 
 -   **Business Impact**
 
-    How does having this data impact the business? What is the measurable improvement
-    in the bottom line, business OKR, etc? Knowing the business impact helps in
-    determining if this project is worth doing.
-
     Evaluate how the data impacts the business and quantify the improvements.
+
+    - ^^How does having this data impact the business?^^
+    - What is the measurable improvement in the bottom line, business OKR, etc?
+      Knowing the business impact helps in determining if this project is worth
+      doing.
 
 -   **Semantic Understanding**
 
-    What does the data represent? What business process generates this data?
-    Knowing this will help you model the data and understand its relation to other
-    tables in your warehouse.
+    - What does the data represent? What business process generates this data?
+      Knowing this will help you model the data and understand its relation to other
+      tables in your warehouse.
 
     Grasp the data's representation and its relation to other warehouse tables.
 
 -   **Data Source**
 
-    Where does the data originate? (an application DB, external vendor via SFTP/Cloud
-    store dumps, API data pull, manual upload, etc).
+    Where does the data originate?
+    (an application database, external vendor via SFTP/Cloud store dumps,
+    API data pull, manual upload, etc).
 
 -   **Frequency of Data Pipeline**
 
-    How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc).
-    Is there a business case for not allowing a higher frequency?
-    What is the highest frequency of data load acceptable by end-users?
-
--   **Historical Data**
-
-    Does historical data need to be stored? When loading data into a warehouse,
-    the answer is usually yes.
-
--   **Data Caveats**
-
-    Does the data have any caveats? (e.g. seasonality affecting size, data skew,
-    inability to join, or data unavailability).
-    Are there any known issues with upstream data sources, such as late arriving
-    data, or missing data?
-
--   **Access Pattern**
-
-    How will the end user access the data? Is access via SQL, dashboard tool,
-    APIs, or cloud storage? In the case of SQL or dashboard access, What are the
-    commonly used filter columns (e.g. date, some business entity)? What is the
-    expected access latency?
-
--   **Business Rules Check (QA)**
-
-    What data quality metrics do the end-users care about? What are business
-    logic-based data quality checks? Which numeric fields should be checked for
-    divergence (e.g. can’t differ by more than x%) across data pulls?
+    - How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc).
+    - Is there a business case for not allowing a higher frequency?
+    - What is the highest frequency of data load acceptable by end-users?
 
 -   **Data Output Requirements**
 
-    What is the data output schema? (column names, API field names, Cloud storage
-    file name/size, etc)
+    - What is the data output schema? (table name, column names, API field names,
+      Cloud storage file name/size, etc)
+
+-   **Historical Data**
+
+    - Does historical data need to be stored? When loading data into a warehouse,
+      the answer is usually yes.
+
+-   **Data Caveats**
+
+    - Does the data have any caveats? (e.g. seasonality affecting size, data skew,
+      inability to join, or data unavailability).
+    - Are there any known issues with upstream data sources, such as late arriving
+      data, or missing data?
+
+-   **Access Pattern**
+
+    - How will the end user access the data? Is access via SQL, dashboard tool,
+      APIs, or cloud storage? In the case of SQL or dashboard access, What are the
+      commonly used filter columns (e.g. date, some business entity)?
+    - What is the expected access latency?
+
+-   **Business Rules Check (QA)**
+
+    - What data quality metrics do the end-users care about?
+    - What are business logic-based data quality checks? Which numeric fields
+      should be checked for divergence (e.g. can’t differ by more than x%) across
+      data pulls?
 
 :material-page-last: Show appreciation to end-users for their time, keep them
 updated on progress, incorporate their feedback, suggest solutions for common
 issues, and acknowledge their expertise when presenting the project to a wider
 audience.
-
-Help the end-users feel invested in the project by following the steps below.
-
-- Thank end-users for their time/expertise
-- Update them on progress
-- Ask & incorporate their feedback
-- Recommend solutions(or different ways to do things) for their common issues
-- Acknowledge their help & expertise when presenting the project to a wider audience
 
 Clearly define the requirements, record them (e.g. JIRA, etc), and get sign-off
 from the stakeholders.
