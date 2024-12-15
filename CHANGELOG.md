@@ -2,6 +2,29 @@
 
 ## Latest Changes
 
+## 20241215
+
+### :scissors: References
+
+- :clipboard: refs: add docs for utils udf on google bigquery. (_2024-11-12_)
+
+### :book: Documents
+
+- :page_facing_up: docs: update requirement gathering content. (_2024-12-15_)
+- :page_facing_up: docs: update requirements gathering. (_2024-12-14_)
+- :page_facing_up: docs: update duckdb to load excel. (_2024-11-05_)
+- :page_facing_up: docs: update azure service bus topic. (_2024-10-28_)
+- :page_facing_up: docs: update docs on azure topic. (_2024-10-28_)
+
+### :black_nib: Code Changes
+
+- :construction: refactored: 📦 bump mkdocs-material from 9.5.44 to 9.5.47 (_2024-12-01_)
+- :construction: refactored: 📦 bump mkdocs-material from 9.5.42 to 9.5.43 (_2024-11-01_)
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs-material==9.5.44. (_2024-11-12_)
+
 ## 20241028
 
 ### :scissors: References
