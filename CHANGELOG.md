@@ -2,6 +2,25 @@
 
 ## Latest Changes
 
+## 20250130
+
+### :book: Documents
+
+- :page_facing_up: docs: update google oidc docs. at 2025-01-30
+
+### :black_nib: Code Changes
+
+- :package: refactored: bump mkdocs-material from 9.5.47 to 9.5.49 at 2025-01-01
+- :package: refactored: bump clishelf from 0.2.8 to 0.2.9 at 2025-01-01
+
+### :package: Build & Workflow
+
+- :toolbox: build: update config clishelf for make changelog. at 2025-01-30
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update version of clishelf from 0.2.9 to 0.2.16. at 2025-01-30
+
 ## 20241215
 
 ### :scissors: References
