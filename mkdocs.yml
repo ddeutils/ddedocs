@@ -240,7 +240,8 @@ nav:
                   - Across Account: services/aws/secrets/secrets-across-account.md
           - Google:
               - services/google/index.md
-              - OAuth: services/google/google-oauth.md
+              - OAuth: services/google/oauth.md
+              - OIDC: services/google/oidc.md
               - Cloud Functions:
                   - To Managing Secrets: services/google/functions/gcf-to-managing-secrets.md
               - BigQuery:
