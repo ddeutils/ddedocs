@@ -1,18 +1,23 @@
 name: gitleaks
 
 on:
-#  pull_request:
-  push:
+  pull_request:
     branches:
       - main
   workflow_dispatch:
+  push:
+    branches:
+      - main
 #  schedule:
 #    - cron: "0 4 * * *"  # run once a day at 4 AM
 
 jobs:
-  gitleaks:
+
+  validate:
+
     runs-on: ubuntu-latest
     steps:
+
     - name: Code checkout
       uses: actions/checkout@v4
       with:
