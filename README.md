@@ -23,19 +23,27 @@ https://ddeutils.github.io/ddedocs/
 
 ## :warning: Noted
 
-I will update this project by **Weekly frequency**. (This statement warn to me
-when I come back to develop this project again :sweat_smile:)
+> [!NOTE]
+> I will update this project by **Weekly frequency**. (This statement warn to me
+> when I come back to develop this project again :sweat_smile:)
 
 This project will keep all good information for **Data Engineer** role, but you will
 see that it has a lot of knowledge do not summarize to my opinion. Because of
 shifting of the DE's technologies so fast and I do not have time to focus on it.
 
 I will find my core concept of this project as soon as possible. If I do not define
-the subjective of this way of this project must to go, it will have a lot of confusing
+the subjective of this way of this project must go, it will have a lot of confusing
 documents.
 
 > [!NOTE]
 > For more extension that I use for this project, able to research from
 > [MkDocs Catalogs](https://github.com/mkdocs/catalog).
 
-[:fast_forward: Read more about start-up this docs on the Local](NOTED.md)
+[:fast_forward: Read more about start-up these docs on the Local](NOTED.md)
+
+## :speech_balloon: Contribute
+
+I do not think this project will go around the world because it has specific propose,
+and you can create by your coding without this project dependency for long term
+solution. So, on this time, you can open [the GitHub issue on this project :raised_hands:](https://github.com/ddeutils/ddedocs/issues)
+for fix bug or request new feature if you want it.
