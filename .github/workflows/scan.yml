@@ -1,4 +1,4 @@
-name: gitleaks
+name: scan
 
 on:
   pull_request:
@@ -13,9 +13,11 @@ on:
 
 jobs:
 
-  validate:
+  gitleaks:
 
     runs-on: ubuntu-latest
+    continue-on-error: true
+
     steps:
 
     - name: Code checkout
@@ -27,3 +29,19 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+
+
+  trufflehog:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Code checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Secret Scanning
+      uses: trufflesecurity/trufflehog@main
+      with:
+        extra_args: --results=verified,unknown
