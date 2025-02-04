@@ -38,8 +38,6 @@ Techniques such as interviews, surveys, and workshops will help expose these
 differences so that we can work towards getting everyone on the same page.
 Mock-ups and wireframes can also help flush out requirements at this phase.
 
-[Read More about Requirements Gathering](./requirements-gathering.md)
-
 ### Design and Planning
 
 Data engineers should plan the architecture, data pipelines, and infrastructure
