@@ -1,18 +1,16 @@
 # Welcome to **Data Develop & Engineer**
 
-> **_Disclaimer_**: This docs add-on my opinion from Data Engineer experience
-> and experiment around ~5 years (_Since 2019_).
+> **_Disclaimer_**: This docs add-on my opinion from a data engineer experiences
+> and experiments around ~6 years (_Since 2019_).
 
 !!! warning "Important"
 
     I do not have much proper _English_ grammar because I am in the middle level
-    of trying to practice writing and reading.
-    Please understand this problem and open your mind before continue this
+    (I try to practice on writing and reading more and more).
+    Please understand this problem and open your mind before continue to read this
     documents :face_holding_back_tears:
 
-
-This project will deliver all Practice and Knowledge of **Data Developer and Engineer**
-area.
+This project will deliver all Practice and Knowledge in **Data Developer and Engineer**.
 
 ---
 

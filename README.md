@@ -12,7 +12,7 @@
 I will use this project be a co-pyrot for implement and serve [**MkDocs**](https://github.com/mkdocs/mkdocs)
 with the [**Material Extension**](https://squidfunk.github.io/mkdocs-material/)
 for generate static documents website from **Markdown** files that easy to readable
-and editing via hosting by GitHub page.
+and editing. This document hosts by GitHub page.
 
 ## :book: Page
 
