@@ -5,11 +5,11 @@ default_language_version:
 ci:
   skip: [shelf-commit-msg, compress-hook]
   autofix_commit_msg: |
-    🚧 [pre-commit.ci] auto fixes from pre-commit.com hooks
+    :construction: deps: [pre-commit.ci] auto fixes from pre-commit.com hooks
   autofix_prs: true
   autoupdate_schedule: weekly
   autoupdate_commit_msg: |
-    🚧 [pre-commit.ci] pre-commit autoupdate
+    :construction: deps: [pre-commit.ci] pre-commit autoupdate
   submodules: false
 
 repos:

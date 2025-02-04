@@ -1,4 +1,4 @@
-# Welcome to **Data Develop & Engineer**
+# **Data Develop & Engineer**
 
 > **_Disclaimer_**: This docs add-on my opinion from a data engineer experiences
 > and experiments around ~6 years (_Since 2019_).
