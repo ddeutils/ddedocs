@@ -2,7 +2,7 @@ version:
   version: "./scripts/__about__.py"
   changelog: "CHANGELOG.md"
   mode: "datetime"
-  commit_msg_format: "- {subject} at {datetime:%Y-%m-%d}"
+  commit_msg_format: "- {subject} at `{datetime:%Y-%m-%d}`"
 git:
   commit_prefix:
     - ["comment", "Documents", ":bulb:"] # 💡

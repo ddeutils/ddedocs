@@ -9,12 +9,10 @@
 > This project will deliver about **Data Developer & Engineer Documents and
 > Hands-On** from my experience and reference from public blogs only!!!
 
-I will use this project be a co-pyrot for implement and serve [`MkDocs`](https://github.com/mkdocs/mkdocs)
-with the [Material Extension](https://squidfunk.github.io/mkdocs-material/)
-for generate static web documents from a **Markdown** files that easy to readable
-and editing.
-For additional, it can deploy and plug-in with **GitHub** action to hosting on
-**GitHub Page** domain.
+I will use this project be a co-pyrot for implement and serve [**MkDocs**](https://github.com/mkdocs/mkdocs)
+with the [**Material Extension**](https://squidfunk.github.io/mkdocs-material/)
+for generate static documents website from **Markdown** files that easy to readable
+and editing via hosting by GitHub page.
 
 ## :book: Page
 
