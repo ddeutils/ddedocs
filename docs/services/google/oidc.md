@@ -98,6 +98,18 @@
         `${WORKLOAD_IDENTITY_POOL_ID}` is the full pool id, such as
         `projects/123456789/locations/global/workloadIdentityPools/github`.
 
+    !!! abstract
+
+        If you want to admit all repos in an organization, map on `attribute.repository_owner`
+        (which will be the org name):
+
+        ```shell
+        gcloud iam service-accounts add-iam-policy-binding "my-service-account@${PROJECT_ID}.iam.gserviceaccount.com" \
+          --project "${PROJECT_ID}" \
+          --role="roles/iam.workloadIdentityUser" \
+          --member="principalSet://iam.googleapis.com/${WORKLOAD_IDENTITY_POOL_ID}/attribute.repository_owner/${ORG_NAME}"
+        ```
+
 6. Extract the Workload Identity Provider resource name:
 
     ```shell
