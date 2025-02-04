@@ -2,6 +2,31 @@
 
 ## Latest Changes
 
+## 20250204
+
+### :scissors: References
+
+- :clipboard: refs: add refs docs about open id connect on google cloud. at `2025-02-03`
+- :clipboard: refs: add oidc on services/google. at `2025-01-31`
+
+### :book: Documents
+
+- :page_facing_up: docs: update readme file. at `2025-02-04`
+- :page_facing_up: docs: update oidc on google service. at `2025-02-04`
+- :page_facing_up: docs: update readme file. at `2025-02-02`
+- :page_facing_up: docs: update readme file. at `2025-01-31`
+
+### :black_nib: Code Changes
+
+- :package: refactored: bump mkdocs-material from 9.5.49 to 9.6.1 (#74) at `2025-02-02`
+- :package: refactored: bump mkdocs-git-committers-plugin-2 from 2.4.1 to 2.5.0 (#73) at `2025-02-02`
+
+### :package: Build & Workflow
+
+- :toolbox: build: add types close when pull-request trigger action. at `2025-02-02`
+- :toolbox: build: remove gitleaks and use scan workflow instead. at `2025-02-02`
+- :toolbox: build: rename job in gitleak workflow. at `2025-01-31`
+
 ## 20250130
 
 ### :book: Documents
