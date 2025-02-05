@@ -2,6 +2,10 @@
 
 ## Workload Identity Federation through a Service Account
 
+!!! warning
+
+   You should enable **IAM Service Account Credentials API** before.
+
 1. (Optional) Create a Google Cloud Service Account. If you already have a
     Service Account, take note of the email address and skip this step.
 

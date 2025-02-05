@@ -1,5 +1,7 @@
 # Dockerize inside Node
 
+This feature is running a Docker image before start provision the Azure Batch Node.
+
 ## :material-arrow-down-right: Getting Started
 
 ### Create Pool with Dockerize start task
