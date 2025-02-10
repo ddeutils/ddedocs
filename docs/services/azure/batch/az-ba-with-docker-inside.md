@@ -10,6 +10,7 @@ Create Ubuntu pool and set start task command line:
 
 ```shell
 /bin/bash -c
+
 "sudo apt-get update &&
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common &&
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - &&

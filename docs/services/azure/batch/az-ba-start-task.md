@@ -18,14 +18,32 @@ it will execute the start task file with `bash`.
     ```shell title="start_task.sh"
     #!/bin/bash
 
-    echo 'Update Ubuntu' &&
-    sudo apt update &&
-    echo 'Import Python 3.8 PPA on Ubuntu' &&
-    sudo add-apt-repository ppa:deadsnakes/ppa -y &&
-    sudo apt update &&
-    sudo apt -y install python3.8 &&
-    sudo update-alternatives --set python3 /usr/bin/python3.8 &&
+    echo 'Update Ubuntu'
+    sudo apt update
+    echo 'Import Python 3.8 PPA on Ubuntu'
+    sudo add-apt-repository ppa:deadsnakes/ppa -y
+    sudo apt update
+    sudo apt -y install python3.8
+    sudo update-alternatives --set python3 /usr/bin/python3.8
     python3 --version
+    ```
+
+=== "Python 3.11"
+
+    ```shell title="start_task.sh"
+    sudo export DEBIAN_FRONTEND=noninteractive
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt update -y
+    sudo apt -y install python3.11 python3-pip
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1
+    python --version
+    echo $(date -u) '########## INSTALL python3.11-full DONE ##########'
+    sudo systemctl restart walinuxagent.service
+    sudo systemctl restart networkd-dispatcher.service
+    sudo systemctl restart unattended-upgrades.service
+    echo "########## INSTALL python3-pip DONE ##########"
+    sudo python -m pip install --upgrade pip
     ```
 
 ---
@@ -151,3 +169,73 @@ it will execute the start task file with `bash`.
         ```
 
         Reference from [How to Install Microsoft ODBC Driver for SQL Server on Ubuntu](https://medium.com/@hoon33710/how-to-install-microsoft-odbc-driver-for-sql-server-on-ubuntu-6e6e2ec2f561)
+
+=== "Docker"
+
+    ```shell
+    sudo apt-get update
+    sudo apt -y install curl apt-transport-https ca-certificates software-properties-common
+    sudo mkdir -p /etc/apt/keyrings
+    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    sudo chmod 755 /etc/apt/keyrings
+    sudo chmod a+r /etc/apt/keyrings/docker.gpg
+    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg ] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+        | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    sudo apt-get update
+    sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    sudo usermod -aG docker $USER
+    sudo chmod 666 /var/run/docker.sock
+    docker ps
+    ```
+
+=== "GCloud"
+
+    ```shell
+    sudo mkdir -p /etc/apt/keyrings
+    sudo curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
+    sudo chmod 755 /etc/apt/keyrings
+    sudo chmod a+r /etc/apt/keyrings/cloud.google.gpg
+    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" \
+        | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    sudo apt-get update
+    sudo apt-get -y install google-cloud-cli
+    ```
+
+## Advance
+
+### Wrapped Start Task
+
+```shell
+/bin/bash -c "sed -i 's/\r$//' start_task.sh && bash ./start_task.sh"
+```
+
+```shell
+#!/bin/bash
+
+cnt_startup=$( cat /root/cnt_startup.txt ) || echo "0" > /root/cnt_startup.txt
+cnt_startup=$( cat /root/cnt_startup.txt )
+((cnt_startup++))
+echo "########## Start up count = [$cnt_startup] ##########"
+echo "$cnt_startup" > /root/cnt_startup.txt
+
+echo '########## Install Azure CLI for calling Azure function ##########'
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+az login --identity
+FUNC_APP=$( az keyvault secret show --name "FUNCAPP" --vault-name "$KEYVAULT_NM" --query "value" )
+# NOTE: Convert secret to percent encoding
+FUNC_APP=$( python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.argv[1]))" "$FUNCAPP" )
+
+/bin/bash -c "sed -i 's/\r$//' start_task.sh && bash ./start_task.sh"
+if [ $? -eq 0 ]
+then
+    echo "########## Successfully start up task. ##########"
+else
+    echo "########## Startup task fail, calling Azure function. ########## "
+    # NOTE: Creating Azure function to check API Azure batch
+    curl --location "$FUNC_URL?code=$FUNC_APP" \
+        --header 'Content-Type: application/json' \
+        --data "{\"pool_id\": \"$AZ_BATCH_POOL_ID\", \"node_id\": \"$AZ_BATCH_NODE_ID\", \"reboot_cnt\": $cnt_startup}"
+    exit 1
+fi
+```
