@@ -2,6 +2,33 @@
 
 ## Latest Changes
 
+## 20250305
+
+### :bug: Bug fixes
+
+- :gear: fixed: remove requirement gathering to data-modeling project. at `2025-02-04`
+
+### :black_nib: Code Changes
+
+- :construction: refactored: migrate great expectation docs to self-gx. at `2025-03-05`
+
+### :book: Documents
+
+- :page_facing_up: docs: update azure batch start task and run docker. at `2025-02-10`
+- :page_facing_up: docs: update run docker on azure batch. at `2025-02-05`
+- :page_facing_up: docs: update readme and index page. at `2025-02-04`
+
+### :package: Build & Workflow
+
+- :toolbox: build: update prefix of pre-commit auto update and dependabot. at `2025-02-04`
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update version of clishelf from 0.2.19 to 0.2.20. at `2025-03-05`
+- :package: deps: bump clishelf from 0.2.16 to 0.2.19 (#77) at `2025-03-01`
+- :package: deps: bump mkdocs-material from 9.6.2 to 9.6.6 (#76) at `2025-03-01`
+- :package: deps: bump mkdocs-material from 9.6.1 to 9.6.2 (#75) at `2025-02-05`
+
 ## 20250204
 
 ### :scissors: References
