@@ -326,8 +326,6 @@ nav:
               - Dynamic Partition: tools/orchestration/dagster/dagster-dynamic-partition.md
               - Connections:
                   - To DLT: tools/orchestration/dagster/dagster-to-dlt.md
-          - Bacalhau:
-              - tools/orchestration/bacalhau/index.md
       - Ingestion:
           - Airbyte:
               - tools/ingestion/airbyte/index.md
@@ -411,38 +409,14 @@ nav:
               - tools/stream/flink/index.md
       - Open Table:
           - tools/open_table/index.md
-          - DeltaLake:
-              - tools/open_table/deltalake/index.md
-              - Deletion Vector: tools/open_table/deltalake/deltalake-deletion-vector.md
-              - Liquid Clustering: tools/open_table/deltalake/deltalake-liquid-clustering.md
-              - Partition Z-Order Cluster: tools/open_table/deltalake/deltalake-partition-zorder-cluster.md
-              - Universal Format: tools/open_table/deltalake/deltalake-universal-format.md
-              - Merge: tools/open_table/deltalake/deltalake-merge.md
-              - Pyspark API:
-                  - Auto Schema Evolution: tools/open_table/deltalake/pyspark/pyspark-delta-auto-schema-evolution.md
-                  - Image Files: tools/open_table/deltalake/pyspark/pyspark-delta-image-files.md
-                  - SCD2: tools/open_table/deltalake/pyspark/pyspark-delta-scd2.md
-                  - Star Schema: tools/open_table/deltalake/pyspark/pyspark-delta-star-schema.md
-                  - Keeping Fast & Clean: tools/open_table/deltalake/pyspark/pyspark-delta-keeping-it-fast-and-clean.md
-                  - Best Practice: tools/open_table/deltalake/pyspark/pyspark-delta-best-practice.md
-                  - Handling Concurrent Write: tools/open_table/deltalake/pyspark/pyspark-delta-handling-concurrent-write.md
-                  - Stream Data: tools/open_table/deltalake/pyspark/pyspark-delta-stream-data-with-spark-stream.md
-          - Iceberg:
-              - tools/open_table/iceberg/index.md
-              - Reduce Full Scan: tools/open_table/iceberg/icb-reduce-full-scan.md
-              - Small Files: tools/open_table/iceberg/icb-small-files.md
-              - Concurrent Write: tools/open_table/iceberg/icb-concurrent-write.md
-              - With Pyspark: tools/open_table/iceberg/icb-with-pyspark.md
-          - Hudi:
-              - tools/open_table/hudi/index.md
+          - DeltaLake: tools/open_table/deltalake.md
+          - Iceberg: tools/open_table/iceberg.md
+          - Hudi: tools/open_table/hudi.md
       - Storage:
-          - Hadoop:
-              - tools/storage/hadoop/index.md
-              - On Mac: tools/storage/hadoop/hadoop-on-mac.md
-          - MinIO:
-              - tools/storage/minio/index.md
+          - Hadoop: tools/hadoop.md
+          - MinIO: tools/minio.md
       - Quality:
-          - Great Expectations: tools/quality/great_expectations.md
+          - Great Expectations: tools/great-expectations.md
       - CICD & Monitoring:
           - Jenkins:
               - tools/cicd/jenkins/index.md
