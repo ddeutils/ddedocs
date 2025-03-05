@@ -442,10 +442,7 @@ nav:
           - MinIO:
               - tools/storage/minio/index.md
       - Quality:
-          - Great Expectations:
-              - tools/quality/great_expectations/index.md
-              - With Databricks: tools/quality/great_expectations/gexp-with-databricks.md
-              - With Spark: tools/quality/great_expectations/gexp-with-spark.md
+          - Great Expectations: tools/quality/great_expectations.md
       - CICD & Monitoring:
           - Jenkins:
               - tools/cicd/jenkins/index.md
