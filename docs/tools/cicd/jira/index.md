@@ -1,5 +1,0 @@
----
-icon: material/jira
----
-
-# Jira
