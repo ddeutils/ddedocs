@@ -20,11 +20,11 @@ and editing. This document hosts by GitHub page.
 https://ddeutils.github.io/ddedocs/
 ```
 
-## :warning: Noted
-
 > [!NOTE]
 > I will update this project by **Weekly frequency**. (This statement warn to me
 > when I come back to develop this project again :sweat_smile:)
+
+## :warning: Noted
 
 This project will keep all good information for **Data Engineer** role, but you will
 see that it has a lot of knowledge do not summarize to my opinion. Because of
