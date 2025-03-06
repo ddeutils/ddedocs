@@ -2,6 +2,21 @@
 
 ## Latest Changes
 
+## 20250306
+
+### :black_nib: Code Changes
+
+- :construction: refactored: move airflow docs to self-airflow. at `2025-03-05`
+- :construction: refactored: move necessary docs to self-lake. at `2025-03-05`
+
+### :broom: Deprecate & Clean
+
+- :recycle: clean: remove tools that was migrated to labs. at `2025-03-06`
+
+### :package: Build & Workflow
+
+- :toolbox: build: fixed tags regex string that not valid. at `2025-03-05`
+
 ## 20250305
 
 ### :bug: Bug fixes
