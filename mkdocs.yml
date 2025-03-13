@@ -58,6 +58,8 @@ nav:
   - Home:
       - index.md
       - Methodology: methodology.md
+      - Requirement Gathering: requirement-gathering.md
+      - Transform Spec: transform-spec.md
       - Daily Work: daily-work.md
       - Data Storytelling: data-storytelling.md
       - Abstraction:
@@ -138,6 +140,16 @@ nav:
               - abstract/emerging_trends/index.md
       - Roles:
           - Lead Data Engineer: lead-data-engineer.md
+      - Implement:
+          - Data Framework:
+              - Pipeline Strategy:
+                  - implement/framework/pipeline-strategy/index.md
+                  - Metadata: implement/framework/pipeline-strategy/metadata.md
+          - Metadata:
+              - Structures:
+                  - ETL: implement/metadata/structures/etl.md
+                  - Master: implement/metadata/structures/master.md
+                  - Transaction: implement/metadata/structures/transaction.md
   - Services:
       - services/index.md
       - Cloud Provider:
