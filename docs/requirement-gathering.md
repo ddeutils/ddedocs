@@ -1,3 +1,7 @@
+---
+icon: material/comment-search-outline
+---
+
 # Requirement Gathering
 
 One of the mistakes you’ll make as a Data Engineer is not truly understanding the
