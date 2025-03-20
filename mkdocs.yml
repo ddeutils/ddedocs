@@ -1,46 +1,46 @@
 site_name: Data Developer & Engineer
 theme:
-  name: material
-  features:
-    - navigation.indexes
-    - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.tabs
-    - navigation.sections
-    - navigation.footer
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - search.share
-    - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
-    - content.code.select
-    - content.footnote.tooltips
-    - content.tooltips
-  language: en
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-      primary: black
-      accent: purple
-    - scheme: slate
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-      primary: blue grey
-      accent: lime
-  font:
-    text: Work Sans
-    code: Roboto Mono
-  icon:
-    repo: fontawesome/brands/github-alt
-    admonition:
-        warning: material/alert-decagram-outline
-  logo: img/favicon.png
-  favicon: img/favicon.png
+    name: material
+    features:
+        - navigation.indexes
+        - navigation.instant
+        - navigation.instant.prefetch
+        - navigation.tabs
+        - navigation.sections
+        - navigation.footer
+        - navigation.top
+        - search.suggest
+        - search.highlight
+        - search.share
+        - content.tabs.link
+        - content.code.annotation
+        - content.code.copy
+        - content.code.select
+        - content.footnote.tooltips
+        - content.tooltips
+    language: en
+    palette:
+        - scheme: default
+          toggle:
+            icon: material/toggle-switch-off-outline
+            name: Switch to dark mode
+          primary: black
+          accent: purple
+        - scheme: slate
+          toggle:
+            icon: material/toggle-switch
+            name: Switch to light mode
+          primary: blue grey
+          accent: lime
+    font:
+        text: Work Sans
+        code: Roboto Mono
+    icon:
+        repo: fontawesome/brands/github-alt
+        admonition:
+            warning: material/alert-decagram-outline
+    logo: img/favicon.png
+    favicon: img/favicon.png
 
 repo_name: korawica/ddedocs
 repo_url: https://github.com/korawica/ddedocs
@@ -55,326 +55,329 @@ extra:
       link: https://x.com/korawica
 
 nav:
-  - Home:
-      - index.md
-      - Methodology: methodology.md
-      - Requirement Gathering: requirement-gathering.md
-      - Transform Spec: transform-spec.md
-      - Daily Work: daily-work.md
-      - Data Storytelling: data-storytelling.md
-      - Abstraction:
-          - Data Management:
-              - abstract/data_management/index.md
-              - Data Model: abstract/data_management/data-model.md
-              - Data Modeling:
-                  - abstract/data_management/data_modeling/index.md
-                  - Inmon:
-                      - Abstract: abstract/data_management/data_modeling/dwh-inmon-approach.md
-                  - Kimball:
-                      - Abstract: abstract/data_management/data_modeling/dwh-kimball-approach.md
-                      - Implement: abstract/data_management/data_modeling/dwh-dim-implement.md
-                      - Slowly Changing Dim: abstract/data_management/data_modeling/dwh-dim-slowly-changing-dimension.md
-                      - Rapidly Changing Dim: abstract/data_management/data_modeling/dwh-dim-rapidly-changing-dimension.md
-                      - Techniques: abstract/data_management/data_modeling/dwh-dim-techniques.md
-                  - Data Vault:
-                      - Abstract: abstract/data_management/data_modeling/dwh-data-vault-approach.md
-                      - Implement: abstract/data_management/data_modeling/dwh-data-vault-implement.md
-                      - Buzz Act Schema: abstract/data_management/data_modeling/dwh-data-vault-business-vault-act-schema.md
-                  - Anchor: abstract/data_management/data_modeling/dwh-anchor-approach.md
-                  - One Big Table: abstract/data_management/data_modeling/dwh-obt-approach.md
-              - Data Integration: abstract/data_management/data-integration.md
-              - Data Transformation: abstract/data_management/data-transformation.md
-              - Data Quality: abstract/data_management/data-quality.md
-              - Data Storage:
-                  - Data Warehouse: abstract/data_management/data-warehouse.md
-                  - Data Mart: abstract/data_management/data-mart.md
-                  - ODS: abstract/data_management/data-ods.md
-              - Data Lifecycle: abstract/data_management/data-lifecycle-management.md
-              - Normalization: abstract/data_management/data-normalization-form.md
-              - De-Normalization: abstract/data_management/data-denormalization-form.md
-              - SCD: abstract/data_management/data-scd.md
-          - Data Governance:
-              - abstract/data_governance/index.md
-              - Implement: abstract/data_governance/dgn-data-quality-framework-for-scale.md
-              - Data Quality Framework: abstract/data_governance/dgn-implement-process.md
-              - Modern Team: abstract/data_governance/dgn-with-modern-data-team.md
-          - Data Architecture:
-              - abstract/data_architecture/index.md
-              - Data Lakehouse:
-                  - abstract/data_architecture/data_lakehouse/index.md
-                  - PBAC: abstract/data_architecture/data_lakehouse/data-lakehouse-policy-based-access-control.md
-              - Modern Data Stack: abstract/data_architecture/modern-data-stack.md
-              - Secure Data Platform: abstract/data_architecture/data-architecture-secure-data-platform.md
-              - Event-Driven Data Architect: abstract/data_architecture/event-driven-data-architecture.md
-              - Lambda & Kappa: abstract/data_architecture/lambda-and-kappa-architecture.md
-          - Data Mesh:
-              - abstract/data_mesh/index.md
-              - Data as a Product: abstract/data_mesh/data-as-a-product.md
-              - Data Domain Usage Monitoring: abstract/data_mesh/data-domain-usage-monitoring.md
-          - DataOps:
-              - abstract/dataops/index.md
-              - Data Product: abstract/dataops/data-product.md
-              - Data CICD: abstract/dataops/data-cicd.md
-          - Data Pipeline:
-              - abstract/data_pipeline/index.md
-              - Declarative: abstract/data_pipeline/declarative-data-pipeline.md
-          - Data Observability:
-              - abstract/data_observability/index.md
-              - Data Orchestration: abstract/data_observability/dobs-data-orchestration.md
-              - Data Quality Metric: abstract/data_observability/dobs-data-quality-metrics.md
-              - Data Quality Pyramid: abstract/data_observability/dobs-data-quality-pyramid.md
-              - Data Lineage: abstract/data_observability/dobs-data-lineage.md
-              - Data Consistency: abstract/data_observability/dobs-data-consistency.md
-              - Viable Monitoring System: abstract/data_observability/dobs-maintaining-a-viable-monitoring-sys.md
-          - Data Strategy:
-              - abstract/data_strategy/index.md
-              - Semantic Layer: abstract/data_strategy/strategy-semantic-layer.md
-              - Data Driven: abstract/data_strategy/strategy-data-driven.md
-              - Sensitive Data: abstract/data_strategy/strategy-sensitive-data.md
-      - Advance:
-          - MLOps:
-              - abstract/mlops/index.md
-              - Challenge: abstract/mlops/mlops-challenge.md
-              - CICD: abstract/mlops/mlops-cicd.md
-          - Emerging Trends:
-              - abstract/emerging_trends/index.md
-      - Roles:
-          - Lead Data Engineer: lead-data-engineer.md
-      - Implement:
-          - Data Framework:
-              - Pipeline Strategy:
-                  - implement/framework/pipeline-strategy/index.md
-                  - Metadata: implement/framework/pipeline-strategy/metadata.md
-          - Metadata:
-              - Structures:
-                  - ETL: implement/metadata/structures/etl.md
-                  - Master: implement/metadata/structures/master.md
-                  - Transaction: implement/metadata/structures/transaction.md
-  - Services:
-      - services/index.md
-      - Cloud Provider:
-          - Azure:
-              - services/azure/index.md
-              - OAuth: services/azure/az-oauth.md
-              - VNet: services/azure/az-vnet.md
-              - Storage: services/azure/az-storage-account.md
-              - KeyVaults: services/azure/az-keyvaults.md
-              - ServiceBus: services/azure/az-servicebus.md
-              - Database:
-                  - Auth: services/azure/sql/az-db-auth.md
-                  - Monitoring: services/azure/sql/az-db-monitoring.md
-              - Batch:
-                  - services/azure/batch/index.md
-                  - Start Task: services/azure/batch/az-ba-start-task.md
-                  - Auto Scalable: services/azure/batch/az-ba-auto-scalable.md
-                  - Run Pyspark: services/azure/batch/az-ba-run-pyspark.md
-                  - Connections:
-                      - Azure: services/azure/batch/az-ba-to-az.md
-                      - Google: services/azure/batch/az-ba-to-google.md
-                  - Dockerize:
-                      - Docker: services/azure/batch/az-ba-with-docker.md
-                      - Docker inside Node: services/azure/batch/az-ba-with-docker-inside.md
-              - Function App:
-                  - Function V2: services/azure/functions/az-func-v2.md
-                  - Dockerize: services/azure/functions/az-func-with-docker.md
-                  - Connections:
-                      - Azure: services/azure/functions/az-func-to-az.md
-              - Databricks:
-                  - services/azure/databricks/index.md
-                  - Init Script: services/azure/databricks/adb-init-script.md
-                  - Mount Storage: services/azure/databricks/adb-mount-storage.md
-                  - Secrets: services/azure/databricks/adb-secrets.md
-                  - Connections:
-                      - To Azure: services/azure/databricks/adb-to-az.md
-                      - To Synapse: services/azure/databricks/adb-to-synapse.md
-                      - To Google: services/azure/databricks/adb-to-google.md
-                      - To AWS: services/azure/databricks/adb-to-aws.md
-                  - Unity Catalog:
-                      - Setup: services/azure/databricks/adb-uc-setup.md
-                      - Privileges: services/azure/databricks/adb-uc-privileges.md
-              - Event Hubs: services/azure/az-eventhubs.md
-              - Data Factory:
-                  - services/azure/data_factory/index.md
-                  - Share IR: services/azure/data_factory/adf-ir-sharing.md
-                  - Link Services: services/azure/data_factory/adf-link-services.md
-              - Synapse:
-                  - Auth: services/azure/synapse/asa-auth.md
-                  - External Data Source: services/azure/synapse/asa-external-data-source.md
-                  - Partition View: services/azure/synapse/asa-partition-view.md
-                  - Monitoring: services/azure/synapse/asa-monitoring.md
-                  - Low-Level Security: services/azure/synapse/asa-low-level-security.md
-                  - Date & Timezone: services/azure/synapse/asa-date-timezone.md
-              - DevOps:
-                  - For Loop: services/azure/devops/devops-for-loop.md
-                  - Multi Repo: services/azure/devops/devops-multi-repo.md
-                  - Self Hosted: services/azure/devops/devops-self-hosted.md
-              - Fabric:
-                  - services/azure/fabric/index.md
-          - AWS:
-              - services/aws/index.md
-              - IAM: services/aws/aws-iam.md
-              - VPC: services/aws/aws-vpc.md
-              - IoT Core:
-                  - Rules:
-                      - to S3: services/aws/iot_core/iot-rule-to-s3.md
-                      - to Kinesis: services/aws/iot_core/iot-rule-to-kinesis.md
-                      - to Timestream Grafana: services/aws/iot_core/iot-rule-timestream-grafana.md
-              - S3:
-                  - Filter Content: services/aws/s3/s3-filter-content.md
-                  - Trigger Lambda: services/aws/s3/s3-trigger-lambda.md
-                  - Transform Lambda: services/aws/s3/s3-transform-lambda.md
-              - EC2:
-                  - Domain with Route53: services/aws/ec2/ec2-domain-with-route53.md
-              - ECS:
-                  - With Fargate: services/aws/ecs/ecs-deploy-with-fargate.md
-              - Lambda:
-                  - services/aws/lambda/index.md
-                  - With Docker: services/aws/lambda/lambda-with-docker.md
-                  - CICD: services/aws/lambda/lambda-cicd.md
-              - Step Functions:
-                  - Getting Started: services/aws/step_functions/stfn-getting-started.md
-                  - State Machine Language: services/aws/step_functions/stfn-state-machine-language.md
-                  - Combine Parallel Results: services/aws/step_functions/stfn-combine-data-parallel-state.md
-              - Glue:
-                  - services/aws/glue/index.md
-                  - Data Quality: services/aws/glue/glue-data-quality.md
-                  - With Iceberg: services/aws/glue/glue-with-iceberg.md
-                  - Local Env: services/aws/glue/glue-local-env.md
-              - Athena:
-                  - With DeltaLake: services/aws/athena/athena-with-delta-lake.md
-              - EMR:
-                  - Compare Databricks: services/aws/emr/emr-compare-with-databricks.md
-              - Kinesis:
-                  - Data Streams: services/aws/kinesis/kinesis-data-streams.md
-                  - Data Firehose: services/aws/kinesis/kinesis-data-firehose.md
-              - Secret:
-                  - Across Account: services/aws/secrets/secrets-across-account.md
-          - Google:
-              - services/google/index.md
-              - OAuth: services/google/oauth.md
-              - OIDC: services/google/oidc.md
-              - Cloud Functions:
-                  - To Managing Secrets: services/google/functions/gcf-to-managing-secrets.md
-              - BigQuery:
-                  - Getting Started: services/google/bigquery/getting-started.md
-      - Data Processing:
-          - Databricks:
-              - services/databricks/index.md
-              - Dynamically Workflow: services/databricks/databricks-dynamically-workflow.md
-              - With FastAPI to Serverless: services/databricks/databricks-fastapi-to-serverless.md
-              - Custom Python Docker: services/databricks/databricks-custom-python-docker.md
-              - AWS Orchestration: services/databricks/databricks-aws-orchestration.md
-              - Deploy with AWS: services/databricks/databricks-deploy-with-aws.md
-              - Custom Policy: services/databricks/databricks-custom-policy.md
-              - Row & Column Level Filter: services/databricks/databricks-row-and-column-level-filter.md
-              - Data Quality: services/databricks/databricks-data-quality.md
-              - Workspace:
-                  - Migration Workspace: services/databricks/databricks-migration-workspace.md
-                  - Functional Workspace Organization: services/databricks/databricks-func-workspace-organize.md
-          - Snowflake:
-              - services/snowflake/index.md
-              - Data Wash: services/snowflake/snf-data-wash.md
-      - IaC & Infra:
-          - Ansible:
-              - services/ansible/index.md
-          - Terraform:
-              - services/terraform/index.md
-              - Manage Secret: services/terraform/tf-manage-secret.md
-              - Providers:
-                  - Databricks: services/terraform/tf-databricks.md
-                  - Azure Databricks: services/terraform/tf-azure-databricks.md
-                  - AWS Glue: services/terraform/tf-aws-glue.md
-          - OpenTofu:
-              - services/opentofu/index.md
-          - Infisical:
-              - services/infisical/index.md
-      - Server & Container:
-          - Server:
-              - services/server/index.md
-              - SSH: services/server/edge-ssh.md
-              - SSL/TSL: services/server/edge-ssl.md
-              - SFTP: services/server/edge-sftp.md
-          - Docker:
-              - services/docker/index.md
-              - Dockerfile: services/docker/docker-file.md
-              - Commands:
-                  - Management: services/docker/docker-cmd-management.md
-              - Composes:
-                  - Postgres: services/docker/docker-compose-postgresql.md
-          - Kubernetes:
-              - services/k8s/index.md
-              - Pod Scheduling: services/k8s/k8s-pod-scheduling.md
-              - Networking: services/k8s/k8s-networking.md
-              - RBAC: services/k8s/k8s-rbac.md
-              - State Phase: services/k8s/k8s-state-phase.md
-  - Tools:
-      - tools/index.md
-      - Common:
-          - Git:
-              - tools/git/index.md
-              - Scenarios: tools/git/git-scenarios.md
-              - Branching Strategies: tools/git/git-branching-strategies.md
-              - Commit Release: tools/git/git-commit-release.md
-              - Hooks: tools/git/git-hooks.md
-      - Programing Langs:
-          - Shell:
-              - tools/lang/shell/index.md
-              - App: tools/lang/shell/ubt-sh-common-file.md
-          - PowerShell:
-              - tools/lang/powershell/index.md
-              - Batch File: tools/lang/powershell/win-bat-file.md
-              - RestAPI: tools/lang/powershell/win-bat-restapi.md
-          - SQL:
-              - tools/lang/sql/index.md
-              - Optimizing SQL Queries: tools/lang/sql/sql-optimizing-sql-queries.md
-          - Python:
-              - tools/lang/python/index.md
-              - Wheel: tools/lang/python/py-dependency-wheel.md
-              - Sync Multi-processes: tools/lang/python/py-sync-multi-processes.md
-              - Data Structure for DE: tools/lang/python/py-data-structure-for-data-engineer.md
-              - Threading: tools/lang/python/py-threading.md
-              - Libraries:
-                  - Pytest: tools/lang/python/libs/py-pytest.md
-                  - Pre-Commit: tools/lang/python/libs/py-pre-commit.md
-                  - Joblib: tools/lang/python/libs/py-joblib.md
-                  - Pydantic: tools/lang/python/libs/py-pydantic.md
-                  - SQLAlchemy: tools/lang/python/libs/py-sqlalchemy.md
-              - Functional Programing:
-                  - Monad: tools/lang/python/functional/py-func-monad.md
-                  - Toolz: tools/lang/python/functional/py-func-toolz.md
-              - Rust:
-                  - With Rust: tools/lang/python/py-with-rust.md
-                  - Migration: tools/lang/python/py-rust-migrate.md
-              - Versions:
-                  - Python 3.12: tools/lang/python/updates/py-py312.md
-          - GO:
-              - tools/lang/go/index.md
-              - Command: tools/lang/go/go-command.md
-              - Unittest: tools/lang/go/go-unittest.md
-              - Connect Database: tools/lang/go/go-database.md
-              - Tools:
-                  - Connect Kafka: tools/lang/go/go-connect-kafka.md
-                  - Connect Redis: tools/lang/go/go-connect-redis.md
-                  - Hexagonal Architect: tools/lang/go/go-hexagonal-architecture.md
-          - Scala:
-              - tools/lang/scala/index.md
-              - Command: tools/lang/scala/scala-basic-command.md
-              - Advance Feature: tools/lang/scala/scala-advance-feature.md
-              - Collection: tools/lang/scala/scala-collection.md
-              - OOP Concept: tools/lang/scala/scala-oop-concepts.md
-          - Rust:
-              - tools/lang/rust/index.md
-              - Learning: tools/lang/rust/rust-learning.md
-              - From Python: tools/lang/rust/rust-from-python.md
-              - CLI Application: tools/lang/rust/rust-cli-app.md
-  - Blogs:
-      - blogs/index.md
+    - Home:
+        - index.md
+        - Methodology: methodology.md
+        - Requirement Gathering: requirement-gathering.md
+        - Transform Spec: transform-spec.md
+        - Daily Work: daily-work.md
+        - Data Storytelling: data-storytelling.md
+        - Abstraction:
+            - Data Management:
+                - abstract/data_management/index.md
+                - Data Model: abstract/data_management/data-model.md
+                - Data Modeling:
+                    - abstract/data_management/data_modeling/index.md
+                    - Inmon:
+                        - Abstract: abstract/data_management/data_modeling/dwh-inmon-approach.md
+                    - Kimball:
+                        - Abstract: abstract/data_management/data_modeling/dwh-kimball-approach.md
+                        - Implement: abstract/data_management/data_modeling/dwh-dim-implement.md
+                        - Slowly Changing Dim: abstract/data_management/data_modeling/dwh-dim-slowly-changing-dimension.md
+                        - Rapidly Changing Dim: abstract/data_management/data_modeling/dwh-dim-rapidly-changing-dimension.md
+                        - Techniques: abstract/data_management/data_modeling/dwh-dim-techniques.md
+                    - Data Vault:
+                        - Abstract: abstract/data_management/data_modeling/dwh-data-vault-approach.md
+                        - Implement: abstract/data_management/data_modeling/dwh-data-vault-implement.md
+                        - Buzz Act Schema: abstract/data_management/data_modeling/dwh-data-vault-business-vault-act-schema.md
+                    - Anchor: abstract/data_management/data_modeling/dwh-anchor-approach.md
+                    - One Big Table: abstract/data_management/data_modeling/dwh-obt-approach.md
+                - Data Integration: abstract/data_management/data-integration.md
+                - Data Transformation: abstract/data_management/data-transformation.md
+                - Data Quality: abstract/data_management/data-quality.md
+                - Data Storage:
+                    - Data Warehouse: abstract/data_management/data-warehouse.md
+                    - Data Mart: abstract/data_management/data-mart.md
+                    - ODS: abstract/data_management/data-ods.md
+                - Data Lifecycle: abstract/data_management/data-lifecycle-management.md
+                - Normalization: abstract/data_management/data-normalization-form.md
+                - De-Normalization: abstract/data_management/data-denormalization-form.md
+                - SCD: abstract/data_management/data-scd.md
+            - Data Governance:
+                - abstract/data_governance/index.md
+                - Implement: abstract/data_governance/dgn-data-quality-framework-for-scale.md
+                - Data Quality Framework: abstract/data_governance/dgn-implement-process.md
+                - Modern Team: abstract/data_governance/dgn-with-modern-data-team.md
+            - Data Architecture:
+                - abstract/data_architecture/index.md
+                - Data Lakehouse:
+                    - abstract/data_architecture/data_lakehouse/index.md
+                    - PBAC: abstract/data_architecture/data_lakehouse/data-lakehouse-policy-based-access-control.md
+                - Modern Data Stack: abstract/data_architecture/modern-data-stack.md
+                - Secure Data Platform: abstract/data_architecture/data-architecture-secure-data-platform.md
+                - Event-Driven Data Architect: abstract/data_architecture/event-driven-data-architecture.md
+                - Lambda & Kappa: abstract/data_architecture/lambda-and-kappa-architecture.md
+            - Data Mesh:
+                - abstract/data_mesh/index.md
+                - Data as a Product: abstract/data_mesh/data-as-a-product.md
+                - Data Domain Usage Monitoring: abstract/data_mesh/data-domain-usage-monitoring.md
+            - DataOps:
+                - abstract/dataops/index.md
+                - Data Product: abstract/dataops/data-product.md
+                - Data CICD: abstract/dataops/data-cicd.md
+            - Data Pipeline:
+                - abstract/data_pipeline/index.md
+                - Declarative: abstract/data_pipeline/declarative-data-pipeline.md
+            - Data Observability:
+                - abstract/data_observability/index.md
+                - Data Orchestration: abstract/data_observability/dobs-data-orchestration.md
+                - Data Quality Metric: abstract/data_observability/dobs-data-quality-metrics.md
+                - Data Quality Pyramid: abstract/data_observability/dobs-data-quality-pyramid.md
+                - Data Lineage: abstract/data_observability/dobs-data-lineage.md
+                - Data Consistency: abstract/data_observability/dobs-data-consistency.md
+                - Viable Monitoring System: abstract/data_observability/dobs-maintaining-a-viable-monitoring-sys.md
+            - Data Strategy:
+                - abstract/data_strategy/index.md
+                - Semantic Layer: abstract/data_strategy/strategy-semantic-layer.md
+                - Data Driven: abstract/data_strategy/strategy-data-driven.md
+                - Sensitive Data: abstract/data_strategy/strategy-sensitive-data.md
+        - Advance:
+            - MLOps:
+                - abstract/mlops/index.md
+                - Challenge: abstract/mlops/mlops-challenge.md
+                - CICD: abstract/mlops/mlops-cicd.md
+            - Emerging Trends:
+                - abstract/emerging_trends/index.md
+        - Roles:
+            - Lead Data Engineer: lead-data-engineer.md
+        - Implement:
+            - Data Framework:
+                - Pipeline Strategy:
+                    - implement/framework/pipeline-strategy/index.md
+                    - Metadata: implement/framework/pipeline-strategy/metadata.md
+            - Metadata:
+                - Structures:
+                    - ETL: implement/metadata/structures/etl.md
+                    - Master: implement/metadata/structures/master.md
+                    - Transaction: implement/metadata/structures/transaction.md
+    - Services:
+        - services/index.md
+        - Cloud Provider:
+            - Azure:
+                - services/azure/index.md
+                - OAuth: services/azure/az-oauth.md
+                - VNet: services/azure/az-vnet.md
+                - Storage: services/azure/az-storage-account.md
+                - KeyVaults: services/azure/az-keyvaults.md
+                - ServiceBus: services/azure/az-servicebus.md
+                - Database:
+                    - Auth: services/azure/sql/az-db-auth.md
+                    - Monitoring: services/azure/sql/az-db-monitoring.md
+                - Batch:
+                    - services/azure/batch/index.md
+                    - Start Task: services/azure/batch/az-ba-start-task.md
+                    - Auto Scalable: services/azure/batch/az-ba-auto-scalable.md
+                    - Run Pyspark: services/azure/batch/az-ba-run-pyspark.md
+                    - Connections:
+                        - Azure: services/azure/batch/az-ba-to-az.md
+                        - Google: services/azure/batch/az-ba-to-google.md
+                    - Dockerize:
+                        - Docker: services/azure/batch/az-ba-with-docker.md
+                        - Docker inside Node: services/azure/batch/az-ba-with-docker-inside.md
+                - Function App:
+                    - Function V2: services/azure/functions/az-func-v2.md
+                    - Dockerize: services/azure/functions/az-func-with-docker.md
+                    - Connections:
+                        - Azure: services/azure/functions/az-func-to-az.md
+                - Databricks:
+                    - services/azure/databricks/index.md
+                    - Init Script: services/azure/databricks/adb-init-script.md
+                    - Mount Storage: services/azure/databricks/adb-mount-storage.md
+                    - Secrets: services/azure/databricks/adb-secrets.md
+                    - Connections:
+                        - To Azure: services/azure/databricks/adb-to-az.md
+                        - To Synapse: services/azure/databricks/adb-to-synapse.md
+                        - To Google: services/azure/databricks/adb-to-google.md
+                        - To AWS: services/azure/databricks/adb-to-aws.md
+                    - Unity Catalog:
+                        - Setup: services/azure/databricks/adb-uc-setup.md
+                        - Privileges: services/azure/databricks/adb-uc-privileges.md
+                - Event Hubs: services/azure/az-eventhubs.md
+                - Data Factory:
+                    - services/azure/data_factory/index.md
+                    - Share IR: services/azure/data_factory/adf-ir-sharing.md
+                    - Link Services: services/azure/data_factory/adf-link-services.md
+                - Synapse:
+                    - Auth: services/azure/synapse/asa-auth.md
+                    - External Data Source: services/azure/synapse/asa-external-data-source.md
+                    - Partition View: services/azure/synapse/asa-partition-view.md
+                    - Monitoring: services/azure/synapse/asa-monitoring.md
+                    - Low-Level Security: services/azure/synapse/asa-low-level-security.md
+                    - Date & Timezone: services/azure/synapse/asa-date-timezone.md
+                - DevOps:
+                    - For Loop: services/azure/devops/devops-for-loop.md
+                    - Multi Repo: services/azure/devops/devops-multi-repo.md
+                    - Self Hosted: services/azure/devops/devops-self-hosted.md
+                - Fabric:
+                    - services/azure/fabric/index.md
+            - AWS:
+                - services/aws/index.md
+                - IAM: services/aws/aws-iam.md
+                - VPC: services/aws/aws-vpc.md
+                - IoT Core:
+                    - Rules:
+                        - to S3: services/aws/iot_core/iot-rule-to-s3.md
+                        - to Kinesis: services/aws/iot_core/iot-rule-to-kinesis.md
+                        - to Timestream Grafana: services/aws/iot_core/iot-rule-timestream-grafana.md
+                - S3:
+                    - Filter Content: services/aws/s3/s3-filter-content.md
+                    - Trigger Lambda: services/aws/s3/s3-trigger-lambda.md
+                    - Transform Lambda: services/aws/s3/s3-transform-lambda.md
+                - EC2:
+                    - Domain with Route53: services/aws/ec2/ec2-domain-with-route53.md
+                - ECS:
+                    - With Fargate: services/aws/ecs/ecs-deploy-with-fargate.md
+                - Lambda:
+                    - services/aws/lambda/index.md
+                    - With Docker: services/aws/lambda/lambda-with-docker.md
+                    - CICD: services/aws/lambda/lambda-cicd.md
+                - Step Functions:
+                    - Getting Started: services/aws/step_functions/stfn-getting-started.md
+                    - State Machine Language: services/aws/step_functions/stfn-state-machine-language.md
+                    - Combine Parallel Results: services/aws/step_functions/stfn-combine-data-parallel-state.md
+                - Glue:
+                    - services/aws/glue/index.md
+                    - Data Quality: services/aws/glue/glue-data-quality.md
+                    - With Iceberg: services/aws/glue/glue-with-iceberg.md
+                    - Local Env: services/aws/glue/glue-local-env.md
+                - Athena:
+                    - With DeltaLake: services/aws/athena/athena-with-delta-lake.md
+                - EMR:
+                    - Compare Databricks: services/aws/emr/emr-compare-with-databricks.md
+                - Kinesis:
+                    - Data Streams: services/aws/kinesis/kinesis-data-streams.md
+                    - Data Firehose: services/aws/kinesis/kinesis-data-firehose.md
+                - Secret:
+                    - Across Account: services/aws/secrets/secrets-across-account.md
+            - Google:
+                - services/google/index.md
+                - OAuth: services/google/oauth.md
+                - OIDC: services/google/oidc.md
+                - Cloud Functions:
+                    - To Managing Secrets: services/google/functions/gcf-to-managing-secrets.md
+                - BigQuery:
+                    - Getting Started: services/google/bigquery/getting-started.md
+                    - With Iceberg: services/google/bigquery/with-iceberg.md
+                    - Utility Funcs: services/google/bigquery/utils-func.md
+
+        - Data Processing:
+            - Databricks:
+                - services/databricks/index.md
+                - Dynamically Workflow: services/databricks/databricks-dynamically-workflow.md
+                - With FastAPI to Serverless: services/databricks/databricks-fastapi-to-serverless.md
+                - Custom Python Docker: services/databricks/databricks-custom-python-docker.md
+                - AWS Orchestration: services/databricks/databricks-aws-orchestration.md
+                - Deploy with AWS: services/databricks/databricks-deploy-with-aws.md
+                - Custom Policy: services/databricks/databricks-custom-policy.md
+                - Row & Column Level Filter: services/databricks/databricks-row-and-column-level-filter.md
+                - Data Quality: services/databricks/databricks-data-quality.md
+                - Workspace:
+                    - Migration Workspace: services/databricks/databricks-migration-workspace.md
+                    - Functional Workspace Organization: services/databricks/databricks-func-workspace-organize.md
+            - Snowflake:
+                - services/snowflake/index.md
+                - Data Wash: services/snowflake/snf-data-wash.md
+        - IaC & Infra:
+            - Ansible:
+                - services/ansible/index.md
+            - Terraform:
+                - services/terraform/index.md
+                - Manage Secret: services/terraform/tf-manage-secret.md
+                - Providers:
+                    - Databricks: services/terraform/tf-databricks.md
+                    - Azure Databricks: services/terraform/tf-azure-databricks.md
+                    - AWS Glue: services/terraform/tf-aws-glue.md
+            - OpenTofu:
+                - services/opentofu/index.md
+            - Infisical:
+                - services/infisical/index.md
+        - Server & Container:
+            - Server:
+                - services/server/index.md
+                - SSH: services/server/edge-ssh.md
+                - SSL/TSL: services/server/edge-ssl.md
+                - SFTP: services/server/edge-sftp.md
+            - Docker:
+                - services/docker/index.md
+                - Dockerfile: services/docker/docker-file.md
+                - Commands:
+                    - Management: services/docker/docker-cmd-management.md
+                - Composes:
+                    - Postgres: services/docker/docker-compose-postgresql.md
+            - Kubernetes:
+                - services/k8s/index.md
+                - Pod Scheduling: services/k8s/k8s-pod-scheduling.md
+                - Networking: services/k8s/k8s-networking.md
+                - RBAC: services/k8s/k8s-rbac.md
+                - State Phase: services/k8s/k8s-state-phase.md
+    - Tools:
+        - tools/index.md
+        - Common:
+            - Git:
+                - tools/git/index.md
+                - Scenarios: tools/git/git-scenarios.md
+                - Branching Strategies: tools/git/git-branching-strategies.md
+                - Commit Release: tools/git/git-commit-release.md
+                - Hooks: tools/git/git-hooks.md
+        - Programing Langs:
+            - Shell:
+                - tools/lang/shell/index.md
+                - App: tools/lang/shell/ubt-sh-common-file.md
+            - PowerShell:
+                - tools/lang/powershell/index.md
+                - Batch File: tools/lang/powershell/win-bat-file.md
+                - RestAPI: tools/lang/powershell/win-bat-restapi.md
+            - SQL:
+                - tools/lang/sql/index.md
+                - Optimizing SQL Queries: tools/lang/sql/sql-optimizing-sql-queries.md
+            - Python:
+                - tools/lang/python/index.md
+                - Wheel: tools/lang/python/py-dependency-wheel.md
+                - Sync Multi-processes: tools/lang/python/py-sync-multi-processes.md
+                - Data Structure for DE: tools/lang/python/py-data-structure-for-data-engineer.md
+                - Threading: tools/lang/python/py-threading.md
+                - Libraries:
+                    - Pytest: tools/lang/python/libs/py-pytest.md
+                    - Pre-Commit: tools/lang/python/libs/py-pre-commit.md
+                    - Joblib: tools/lang/python/libs/py-joblib.md
+                    - Pydantic: tools/lang/python/libs/py-pydantic.md
+                    - SQLAlchemy: tools/lang/python/libs/py-sqlalchemy.md
+                - Functional Programing:
+                    - Monad: tools/lang/python/functional/py-func-monad.md
+                    - Toolz: tools/lang/python/functional/py-func-toolz.md
+                - Rust:
+                    - With Rust: tools/lang/python/py-with-rust.md
+                    - Migration: tools/lang/python/py-rust-migrate.md
+                - Versions:
+                    - Python 3.12: tools/lang/python/updates/py-py312.md
+            - GO:
+                - tools/lang/go/index.md
+                - Command: tools/lang/go/go-command.md
+                - Unittest: tools/lang/go/go-unittest.md
+                - Connect Database: tools/lang/go/go-database.md
+                - Tools:
+                    - Connect Kafka: tools/lang/go/go-connect-kafka.md
+                    - Connect Redis: tools/lang/go/go-connect-redis.md
+                    - Hexagonal Architect: tools/lang/go/go-hexagonal-architecture.md
+            - Scala:
+                - tools/lang/scala/index.md
+                - Command: tools/lang/scala/scala-basic-command.md
+                - Advance Feature: tools/lang/scala/scala-advance-feature.md
+                - Collection: tools/lang/scala/scala-collection.md
+                - OOP Concept: tools/lang/scala/scala-oop-concepts.md
+            - Rust:
+                - tools/lang/rust/index.md
+                - Learning: tools/lang/rust/rust-learning.md
+                - From Python: tools/lang/rust/rust-from-python.md
+                - CLI Application: tools/lang/rust/rust-cli-app.md
+    - Blogs:
+        - blogs/index.md
 
 plugins:
-  - tags
-  - search
-  - glightbox
-  - blog:
+    - tags
+    - search
+    - glightbox
+    - blog:
       blog_dir: blogs
       blog_toc: true
       post_dir: "{blog}/posts"
@@ -388,47 +391,47 @@ plugins:
       archive_url_date_format: yyyy/MM
       archive_toc: true
       categories_toc: true
-  - git-revision-date-localized:
+    - git-revision-date-localized:
       enabled: !ENV [CI, false]
       enable_creation_date: true
       type: datetime
-  - git-committers:
+    - git-committers:
       enabled: !ENV [CI, false]
       repository: korawica/ddedocs
       branch: main
 
 markdown_extensions:
-  - attr_list
-  - md_in_html
-  - def_list
-  - admonition
-  - footnotes
-  - tables
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.highlight:
+    - attr_list
+    - md_in_html
+    - def_list
+    - admonition
+    - footnotes
+    - tables
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences:
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
+    - pymdownx.tabbed:
       alternate_style: true
       combine_header_slug: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
-  - pymdownx.arithmatex:
+    - pymdownx.arithmatex:
       generic: true
-  - pymdownx.details
-  - pymdownx.emoji:
+    - pymdownx.details
+    - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
