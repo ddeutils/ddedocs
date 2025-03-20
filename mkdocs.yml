@@ -271,6 +271,7 @@ nav:
                 - Custom Policy: services/databricks/databricks-custom-policy.md
                 - Row & Column Level Filter: services/databricks/databricks-row-and-column-level-filter.md
                 - Data Quality: services/databricks/databricks-data-quality.md
+                - Custom Spark Connector: services/databricks/custom-spark-connector.md
                 - Workspace:
                     - Migration Workspace: services/databricks/databricks-migration-workspace.md
                     - Functional Workspace Organization: services/databricks/databricks-func-workspace-organize.md
