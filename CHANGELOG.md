@@ -2,6 +2,33 @@
 
 ## Latest Changes
 
+## 20250320
+
+### :bug: Bug fixes
+
+- :gear: fixed: change regex tag of publish. at `2025-03-06`
+
+### :black_nib: Code Changes
+
+- :art: styled: add icon on main docs. at `2025-03-13`
+
+### :broom: Deprecate & Clean
+
+- :recycle: clean: remove tools. at `2025-03-06`
+
+### :book: Documents
+
+- :page_facing_up: docs: migrate data-modeling docs to this proj. at `2025-03-13`
+- :page_facing_up: docs: update readme file. at `2025-03-06`
+
+### :scissors: References
+
+- :clipboard: refs: update google docs for utils func and iceberg table. at `2025-03-20`
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs-material from 9.6.6 to 9.6.9 and mkdocs-git-revision-date-localized-plugin from 1.3.0 to 1.4.5. at `2025-03-20`
+
 ## 20250306
 
 ### :black_nib: Code Changes
