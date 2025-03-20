@@ -378,27 +378,27 @@ plugins:
     - search
     - glightbox
     - blog:
-      blog_dir: blogs
-      blog_toc: true
-      post_dir: "{blog}/posts"
-      post_date_format: medium
-      post_url_date_format: yyyy/MM/dd
-      post_readtime_words_per_minute: 300
-      authors_file: "{blog}/.authors.yml"
-      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
-      archive_name: Datetime
-      archive_date_format: MMMM yyyy
-      archive_url_date_format: yyyy/MM
-      archive_toc: true
-      categories_toc: true
+        blog_dir: blogs
+        blog_toc: true
+        post_dir: "{blog}/posts"
+        post_date_format: medium
+        post_url_date_format: yyyy/MM/dd
+        post_readtime_words_per_minute: 300
+        authors_file: "{blog}/.authors.yml"
+        pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+        archive_name: Datetime
+        archive_date_format: MMMM yyyy
+        archive_url_date_format: yyyy/MM
+        archive_toc: true
+        categories_toc: true
     - git-revision-date-localized:
-      enabled: !ENV [CI, false]
-      enable_creation_date: true
-      type: datetime
+        enabled: !ENV [CI, false]
+        enable_creation_date: true
+        type: datetime
     - git-committers:
-      enabled: !ENV [CI, false]
-      repository: korawica/ddedocs
-      branch: main
+        enabled: !ENV [CI, false]
+        repository: korawica/ddedocs
+        branch: main
 
 markdown_extensions:
     - attr_list
@@ -412,28 +412,28 @@ markdown_extensions:
     - pymdownx.mark
     - pymdownx.tilde
     - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
     - pymdownx.inlinehilite
     - pymdownx.snippets
     - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
     - pymdownx.tabbed:
-      alternate_style: true
-      combine_header_slug: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
+        alternate_style: true
+        combine_header_slug: true
+        slugify: !!python/object/apply:pymdownx.slugs.slugify
+          kwds:
+            case: lower
     - pymdownx.arithmatex:
-      generic: true
+        generic: true
     - pymdownx.details
     - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: |
-  Copyright &copy; 2023 <a href="https://github.com/korawica/ddedocs" target="_blank" rel="noopener">Korawich Anuttra</a>
+    Copyright &copy; 2023 <a href="https://github.com/korawica/ddedocs" target="_blank" rel="noopener">Korawich Anuttra</a>
