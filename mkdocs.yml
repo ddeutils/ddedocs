@@ -175,6 +175,7 @@ nav:
                         - Docker: services/azure/batch/az-ba-with-docker.md
                         - Docker inside Node: services/azure/batch/az-ba-with-docker-inside.md
                 - Function App:
+                    - Introduction: services/azure/functions/introduction.md
                     - Function V2: services/azure/functions/az-func-v2.md
                     - Dockerize: services/azure/functions/az-func-with-docker.md
                     - Connections:
