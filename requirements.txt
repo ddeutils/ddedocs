@@ -1,4 +1,4 @@
-clishelf==0.2.20
+clishelf==0.2.21
 mkdocs-git-committers-plugin-2==2.5.0
 mkdocs-git-revision-date-localized-plugin==1.4.5
 mkdocs-glightbox==0.4.0
