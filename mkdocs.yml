@@ -59,7 +59,7 @@ extra:
       link: /
       lang: en
     - name: Thai
-      link: /lang/th/
+      link: !ENV [CI, /lang/th/]
       lang: th
 
 nav:
