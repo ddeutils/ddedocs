@@ -2,6 +2,31 @@
 
 ## Latest Changes
 
+## 20250401
+
+### :stars: Highlight Features
+
+- :star: hl: add thai lang. at `2025-04-01`
+
+### :bug: Bug fixes
+
+- :gear: fixed: revert mkdocs extension config file. at `2025-03-20`
+
+### :book: Documents
+
+- :page_facing_up: docs: update metadata docs for master and trans table. at `2025-03-20`
+
+### :scissors: References
+
+- :clipboard: refs: add sql params content on databricks service. at `2025-04-01`
+- :clipboard: refs: update intro docs on azure functions service. at `2025-03-25`
+- :clipboard: refs: add custom spark connector on databricks service content. at `2025-03-20`
+
+### :postbox: Dependencies
+
+- :pushpin: deps: update mkdocs-material from 9.6.9 to 9.6.10. at `2025-03-31`
+- :pushpin: deps: update clishelf version from 0.2.20 to 0.2.21. at `2025-03-25`
+
 ## 20250320
 
 ### :bug: Bug fixes
