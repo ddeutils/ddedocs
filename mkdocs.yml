@@ -58,10 +58,8 @@ extra:
   alternate:
     - name: English
       link: /
-      lang: en
     - name: Thai
       link: /lang/th/
-      lang: th
 
 nav:
     - Home:
@@ -389,7 +387,8 @@ nav:
 
 plugins:
     - tags
-    - search
+    - search:
+        lang: en
     - glightbox
     - blog:
         blog_dir: blogs
