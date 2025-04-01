@@ -284,6 +284,9 @@ nav:
                 - Workspace:
                     - Migration Workspace: services/databricks/databricks-migration-workspace.md
                     - Functional Workspace Organization: services/databricks/databricks-func-workspace-organize.md
+                - UDF: services/databricks/udf.md
+                - SQL Params: services/databricks/sql-parameter.md
+                - SQL Script: services/databricks/sql-script.md
             - Snowflake:
                 - services/snowflake/index.md
                 - Data Wash: services/snowflake/snf-data-wash.md
