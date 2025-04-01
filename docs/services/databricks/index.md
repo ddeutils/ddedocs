@@ -12,6 +12,10 @@ for analytics and machine learning.
 !!! note
 
     It is widely used in clouds such as **AWS**, **Google**, and
-    **Microsoft Azure**
+    **Microsoft Azure**.
+
+!!! note
+
+    **Azure Databricks** hands-on SSO via Azure user.
 
 Read more any information on the [Databricks Blog](https://www.databricks.com/blog)
