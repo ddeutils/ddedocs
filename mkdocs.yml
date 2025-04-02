@@ -57,9 +57,9 @@ extra:
 
   alternate:
     - name: English
-      link: /
+      link: !ENV [LANG_EN, "/"]
     - name: Thai
-      link: /lang/th/
+      link: !ENV [LANG_TH, "/lang/th/"]
 
 nav:
     - Home:

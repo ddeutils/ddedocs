@@ -36,5 +36,7 @@ jobs:
       - name: Deploy GitHub Page
         env:
           CI: true
+          LANG_EN: /ddedocs/
+          LANG_TH: /ddedocs/lang/th/
         run: |
           mkdocs gh-deploy --force
