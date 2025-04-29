@@ -3,14 +3,7 @@
 > **_ต้องขอบอกไว้ก่อนว่า_**: เรื่องราวทั้งหมดเกิดจากความคิดเห็นส่วนและมุมมองตัวของผมเองเกือบทั้งหมดที่ได้
 > เริ่มทำงานและเรียนรู้ในสายงาน data engineer ประมาณ 6 ปี (ตั้งแต่ปี 2019)
 
-!!! warning "Important"
-
-    I do not have much proper _English_ grammar because I am in the middle level
-    (I try to practice on writing and reading more and more).
-    Please understand this problem and open your mind before continue to read this
-    documents :face_holding_back_tears:
-
-This project will deliver all Practice and Knowledge in **Data Developer and Engineer**.
+โปรเจคนี้จะเป็นการสรุปและแนะนำหลักการและความรู้ทั้งหมดในสายงาน **Data Developer and Engineer**.
 
 ---
 

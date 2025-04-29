@@ -6,12 +6,12 @@ icon: material/tray-arrow-down
 
 !!! quote
 
-    Let’s journey through a typical day, highlighting the myriad tasks, challenges,
+    Let's journey through a typical day, highlighting the myriad tasks, challenges,
     and collaborations that define this pivotal role.[^1]
 
 ## :material-arrow-down-right: Getting Started
 
-:material-page-last: The role of a Data Engineer is fundamental in today’s data-driven
+:material-page-last: The role of a Data Engineer is fundamental in today's data-driven
 decision-making landscape, embodying a unique amalgamation of technical acumen,
 strategic foresight, and collaborative dynamism.
 
@@ -23,10 +23,10 @@ strategic foresight, and collaborative dynamism.
 
 #### Reviewing System Health and Performance
 
-The day begins with a critical review of the data systems’ health.
+The day begins with a critical review of the data systems' health.
 Monitoring dashboards for alerts on data ingestion or processing issues ensures
 that any potential bottlenecks are identified and addressed early, safeguarding
-the data pipeline’s integrity.
+the data pipeline's integrity.
 
 #### Stand-up Meetings
 
@@ -48,7 +48,7 @@ ongoing projects, and strategizing solutions for any emerging challenges.
 Data engineers meticulously address data
 discrepancies, ensuring accuracy and consistency. This includes cleansing data,
 resolving duplicate records, and rectifying format discrepancies,
-thereby upholding the data’s integrity for reliable analysis.
+thereby upholding the data's integrity for reliable analysis.
 
 #### Aligning with Business Requirements
 
@@ -115,8 +115,8 @@ data operation.
 #### Learning New Technologies
 
 Staying abreast of emerging technologies and tools is essential.
-Dedicating time to learning enhances a data engineer’s ability to implement
-innovative solutions, driving the organization’s data capabilities forward.
+Dedicating time to learning enhances a data engineer's ability to implement
+innovative solutions, driving the organization's data capabilities forward.
 
 ---
 
@@ -125,7 +125,7 @@ innovative solutions, driving the organization’s data capabilities forward.
 ### Prioritizing Deep Work - Data Issue Resolution and Development Blocks
 
 :material-page-last: In the dynamic field of data engineering, amidst the array
-of daily tasks and responsibilities, it’s crucial to carve out substantial,
+of daily tasks and responsibilities, it's crucial to carve out substantial,
 uninterrupted periods dedicated solely to either resolving data issues or focusing
 on development projects.
 This practice of setting aside larger blocks of time is not merely a scheduling
@@ -162,15 +162,15 @@ pipelines, optimizing existing processes, or developing custom tools, require
 uninterrupted attention.
 These blocks of time are earmarked for deep work, where data engineers can engage
 in complex coding tasks, architectural design, and testing. By isolating these
-development periods from the day’s operational demands, engineers can innovate
-and build solutions that enhance the data infrastructure’s scalability, efficiency,
+development periods from the day's operational demands, engineers can innovate
+and build solutions that enhance the data infrastructure's scalability, efficiency,
 and robustness.
 
 !!! example
 
     Planning a session to develop a new ETL process for integrating a recently
     acquired data source involves uninterrupted hours where the engineer can design,
-    code, and iteratively test the pipeline, ensuring it meets the organization’s data
+    code, and iteratively test the pipeline, ensuring it meets the organization's data
     standards and performance criteria.
 
 ---
@@ -183,7 +183,7 @@ Data engineers, in collaboration with their teams and management, identify
 priorities and deadlines to determine the best times for these deep work
 sessions. This might involve scheduling data issue resolution early in the week
 when data loads are typically lower, or blocking development time post stand-up
-meetings when the day’s objectives are clear.
+meetings when the day's objectives are clear.
 
 ---
 
@@ -203,6 +203,99 @@ integrity and accessibility of organizational data.
 
 ---
 
+## 10 Hard Truths About Data Engineering
+
+1. **Your Data Is Always Messier Than You Expect**
+
+    No matter how advanced your ETL pipeline is, you will spend 80% of your time
+    cleaning, transforming and validating data. Typos, missing values, incorrect
+    formats and duplicate records will haunt you daily.
+
+    👉 Reality check: The best data pipeline won't fix bad source data. Garbage in, garbage out.
+
+2. **Stakeholders Expect Magic, Not Engineering**
+
+    Non-technical stakeholders believe Data Engineers are wizards. They think you
+    can snap your fingers and fix broken reports, accelerate queries or build
+    real-time dashboards overnight.
+
+    👉 Reality check: Managing expectations is part of the job. If you don't push
+    back, you'll be trapped in an endless cycle of firefighting.
+
+3. **Scaling Is 10x Harder Than Building**
+
+    It's one thing to write an elegant data pipeline for 10,000 records per day.
+    It's a different beast when that scales to millions or billions.
+
+    Latency spikes, unexpected bottlenecks and exploding storage costs will become
+    your daily battle.
+
+    👉 Reality check: You don't just need efficient pipelines, you need resilient ones.
+
+4. **Data Governance Is Boring But Critical**
+
+    Everyone wants real-time analytics and AI-driven insights, until a bad data update
+    wipes out mission-critical dashboards or regulatory compliance comes knocking.
+
+    👉 Reality check: Metadata management, lineage tracking and access control
+    aren't sexy, but they will save your job.
+
+5. **Batch vs. Streaming? The Answer Is "It Depends"**
+
+    Tech blogs love hyping streaming pipelines, but 90% of business use cases can
+    be solved with batch processing. Yet, everyone wants to jump on the "real-time"
+    bandwagon without considering costs and complexity.
+
+    👉 Reality check: Batch is cheaper, simpler and more reliable for most use cases.
+    Only build streaming when it's truly needed.
+
+6. **Your Job Will Be Repetitive (And That's Okay)**
+
+    You're not always working on cutting-edge projects. Sometimes, you're just
+    maintaining the same pipelines, fixing failed jobs or rewriting slow queries
+    for the tenth time.
+
+    👉 Reality check: The best Data Engineers embrace boring work because
+    reliability is more valuable than novelty.
+
+7. **Everyone Blames Data Engineers for Bad Data**
+
+    If a dashboard is wrong, Data Engineers get the blame first. No one questions
+    whether the source data was bad, a transformation was misconfigured or an
+    analyst misinterpreted the results.
+
+    👉 Reality check: Be proactive. Build monitoring, set up alerts and document
+    your work.
+
+8. **No Tool Will Solve All Your Problems**
+
+    From Databricks to Snowflake, Airflow to dbt, tools promise automation and
+    simplicity. But at the end of the day, tools are only as good as the people using them.
+
+    👉 Reality check: Master fundamentals (SQL, distributed systems, data modeling)
+    instead of chasing every new tool.
+
+9. **Good Data Engineering Is Invisible**
+
+    When everything runs smoothly, no one notices. You only get attention when
+    things break. A successful Data Engineer is one whose work is so reliable,
+    people forget it exists.
+
+    👉 Reality check: If you want constant praise, Data Engineering isn't for you.
+
+10. **AI Won't Replace You, But Lazy Engineers Will Be Replaced**
+
+    With AI automating ETL tasks and generating SQL queries, some believe
+    Data Engineering jobs will vanish.
+
+    The truth?
+
+    Bad engineers will be replaced. Great engineers will thrive.
+
+    👉 Reality check: AI is a tool, not a threat. Learn how to use it to your advantage.
+
+---
+
 ## :material-source-commit-end: Conclusion
 
 :material-page-last: The daily routine of a data engineer is characterized by
@@ -215,5 +308,9 @@ insights.
 As the data landscape continues to evolve, the role of the data engineer will
 remain integral to unlocking the potential of data to drive decision-making
 and innovation in the digital age.
+
+## References
+
+- [10 Hard Truths About Data Engineering No One Tells You!](https://medium.com/@shenoy.shashwath/10-hard-truths-about-data-engineering-no-one-tells-you-a9e080ecfef1)
 
 [^1]: [Daily Work Routine as a Data Engineer](https://medium.com/@patrickwork0001/daily-work-routine-as-a-data-engineer-ee9e9cc2190c)
