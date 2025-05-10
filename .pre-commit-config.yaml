@@ -82,15 +82,15 @@ repos:
 #        files: \.md$
 #        args: ["-q", "--config", ".markdown-link-check.json"]
 #        stages: [commit]
-  - repo: local
-    hooks:
-      - id: compress-hook
-        name: compress files on assets
-        stages: [pre-commit]
-        types: [python]
-        entry: venv/Scripts/python.exe scripts/compress.py
-        language: system
-        always_run: true
+#  - repo: local
+#    hooks:
+#      - id: compress-hook
+#        name: compress files on assets
+#        stages: [pre-commit]
+#        types: [python]
+#        entry: venv/Scripts/python.exe scripts/compress.py
+#        language: system
+#        always_run: true
 
 #      - id: auto-update-date
 #        name: auto update date
