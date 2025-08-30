@@ -1,7 +1,7 @@
 # **Data Develop & Engineer**
 
 > **_Disclaimer_**: This docs add-on my opinion from a data engineer experiences
-> and experiments around ~6 years (_Since 2019_).
+> and experiments since 2019.
 
 !!! warning "Important"
 
@@ -110,7 +110,7 @@ the time to focus on **business problem** instead technical problem.
 
 In the another side, **Business users** able to use less of technical knowledge
 to interact the serving data in their **data contract platform**.
-It decrease SLA to require the **data engineer** for need support a lot! :partying_face:
+It decreases SLA to require the **data engineer** for need support a lot! :partying_face:
 
 You can follow the modern data stack on the below topics:
 
