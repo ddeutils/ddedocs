@@ -43,8 +43,8 @@ theme:
     logo: img/favicon.png
     favicon: img/favicon.png
 
-repo_name: korawica/ddedocs
-repo_url: https://github.com/korawica/ddedocs
+repo_name: ddeutils/ddedocs
+repo_url: https://github.com/ddeutils/ddedocs
 
 extra:
   social:
@@ -54,12 +54,6 @@ extra:
       link: https://www.linkedin.com/in/korawica
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/korawica
-
-  alternate:
-    - name: English
-      link: !ENV [LANG_EN, "/"]
-    - name: Thai
-      link: !ENV [LANG_TH, "/lang/th/"]
 
 nav:
     - Home:
