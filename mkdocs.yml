@@ -139,8 +139,6 @@ nav:
                 - CICD: abstract/mlops/mlops-cicd.md
             - Emerging Trends:
                 - abstract/emerging_trends/index.md
-        - Roles:
-            - Lead Data Engineer: lead-data-engineer.md
     - Services:
         - services/index.md
         - Cloud Provider:
