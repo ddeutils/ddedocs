@@ -2,6 +2,50 @@
 
 ## Latest Changes
 
+## 20250830
+
+### :bug: Bug fixes
+
+- :gear: fixed: change link lang dynamic when deploy to gh page. at `2025-04-01`
+
+### :black_nib: Code Changes
+
+- :fast_forward: merge: branch 'main' of https://github.com/ddeutils/ddedocs. at `2025-04-02`
+
+### :broom: Deprecate & Clean
+
+- :recycle: clean: remove thai lang. at `2025-08-30`
+- :recycle: clean: remove implement content. at `2025-04-03`
+
+### :tada: Features
+
+- :dart: feat: add site url. at `2025-04-01`
+- :dart: feat: add site url for gh page. at `2025-04-01`
+
+### :scissors: References
+
+- :clipboard: refs: add system tables content on services/databricks. at `2025-08-22`
+- :clipboard: refs: update 10 hard truths aboud de doc. at `2025-04-29`
+- :clipboard: refs: update bulk load doc on snowflake service. at `2025-04-21`
+- :clipboard: refs: add connect snowflake via adbc. at `2025-04-16`
+
+### :package: Build & Workflow
+
+- :toolbox: build: dynamic link for multi-langs. at `2025-04-02`
+
+### :postbox: Dependencies
+
+- :package: deps: bump mkdocs-material from 9.6.16 to 9.6.17 (#82) at `2025-08-20`
+- :package: deps: bump mkdocs-material from 9.6.14 to 9.6.16 (#81) at `2025-08-01`
+- :package: deps: bump mkdocs-git-revision-date-localized-plugin (#80) at `2025-06-03`
+- :package: deps: bump mkdocs-material from 9.6.12 to 9.6.14 (#79) at `2025-06-03`
+- :pushpin: deps: update version mkdocs-material to 9.6.12. at `2025-04-21`
+- :package: deps: bump mkdocs-material from 9.6.10 to 9.6.11 (#78) at `2025-04-01`
+
+### :book: Documentations
+
+- :page_facing_up: docs: update cloud pubsub. at `2025-08-30`
+
 ## 20250401
 
 ### :stars: Highlight Features
