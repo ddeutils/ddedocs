@@ -16,20 +16,21 @@ This project will deliver all Practice and Knowledge in **Data Developer and Eng
 
 ## :material-arrow-down-right: Getting Started
 
-:material-page-last: First, ^^**Data Engineering** is a critical part of the
-==Data Lifecycle== that enables organizations to manage and process large volumes
-of data efficiently and reliably^^[^3].
+&nbsp;&nbsp;&nbsp;&nbsp; :material-page-last: First, ^^**Data Engineering** is a
+crucial part of the ==Data Lifecycle==, enabling organizations to process and manage
+large volumes of data efficiently, reliably, and at scale.^^[^3]
 
-By these concepts, **Data Engineer** should design and implement **Data Pipeline**
-and **Data Management Strategy** that meet the requirements and KPI of their
-organizations and ensure that your data was managed _Consistently_ and _Reliably_.
+In this context, a **Data Engineer** is responsible for designing and implementing
+**Data Pipelines** and **Data Management Strategies** that align with organizational
+requirements and KPIs, ensuring data is handled _consistently_ and _reliably_.
 
-!!! quote "What is DE do?"
+!!! quote "What does a Data Engineer do?"
 
-    **Data Engineer** is who able to ==_**Develop**_, _**Implement**_, _**Operate**_,
-    and _**Maintain**_== any tools on the current **Data Infrastructure** that
-    your organization use, either On-premises or Cloud providers, comprising databases,
-    storages, compute engines, and pipelines.[^1]
+    A **Data Engineer** is someone who can ==_**Develop**_, _**Implement**_,
+    _**Operate**_, and _**Maintain**_== the tools and systems that form the
+    organization’s **Data Infrastructure**—whether on-premises or in the cloud.
+    This infrastructure includes databases, storage systems, compute engines,
+    and data pipelines that power data-driven operations.[^1]
 
 <figure markdown="span">
   ![Life Cycle of Data Engineering](img/life-cycle-of-data-engineering.png){ loading=lazy width="650" }
@@ -39,38 +40,41 @@ organizations and ensure that your data was managed _Consistently_ and _Reliably
 !!! quote "Fundamentals of Data Engineering"
 
     **Data Engineering** is the development, implementation, and maintenance of
-    systems and processes that take in raw data and produce high-quality, consistent
-    information that supports downstream use cases, such as analysis and machine
-    learning.
+    systems and processes that transform raw data into high-quality, consistent
+    information. This information then powers downstream use cases such as
+    analytics and machine learning.
 
-    **Data engineering** is the intersection of security, data management, DataOps,
-    data architecture, orchestration, and software engineering.
+    At its core, **data engineering** sits at the intersection of security,
+    data management, DataOps, data architecture, orchestration, and software
+    engineering.
 
-    A **Data Engineer** manages the ^^Data Engineering Lifecycle^^, beginning with
-    getting data from source systems and ending with serving data for use cases,
-    such as analysis or machine learning.
+    A **Data Engineer** manages the ^^Data Engineering Lifecycle^^, starting
+    with ingesting data from source systems and ending with serving it for
+    consumption—whether for reporting, analytics, or machine learning.
 
-    — Joe Reis and Matt Housley in [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/)
+    — Joe Reis and Matt Housley, [*Fundamentals of Data Engineering*](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/)
 
-You will see that stages of the cycle include _Data Ingestion_, _Data Transformation_,
-_Data Serving_, and _Data Storage_ components.
+The stages of this lifecycle typically include **Data Ingestion**,
+**Data Transformation**, **Data Storage**, and **Data Serving**.
 
-| Best practice               | Importance                                                                                                                                      |
-|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Proactive data monitoring   | Regularly checks datasets for anomalies to maintain data integrity. This includes identifying missing, duplicate, or inconsistent data entries. |
-| Schema drift management     | Detects and addresses changes in data structure, ensuring compatibility and reducing data pipeline breaks.                                      |
-| Continuous documentation    | Manages descriptive information about data, aiding in discoverability and comprehension.                                                        |
-| Data security measures      | Controls and monitors access to data sources, enhancing security and compliance.                                                                |
-| Version control and backups | Tracks change to datasets over time, aiding in reproducibility and audit trails.                                                                |
+| Best practice               | Why it matters                                                                                                 |
+|-----------------------------|----------------------------------------------------------------------------------------------------------------|
+| Proactive data monitoring   | Detects anomalies and ensures data integrity by flagging missing, duplicate, or inconsistent records.          |
+| Schema drift management     | Handles structural changes in data to prevent pipeline failures and maintain compatibility.                    |
+| Continuous documentation    | Improves discoverability and understanding by capturing descriptive information about data assets.             |
+| Data security measures      | Protects sensitive information by controlling access and enforcing compliance standards.                       |
+| Version control and backups | Preserves historical states of data for reproducibility, auditing, and recovery in case of corruption or loss. |
 
-:material-page-last: Since I started on this role, I got the idea about the future
-of my responsibilities. I know the Data Engineering tools shifts so fast because
-the last three year I started with the Map-Reduce processing on the **Hadoop HDFS**
-but nowadays, it changes to In-Memory processing like **Impala** or **Spark**.
-The knowledge I gained from Map-Reduce will be wasted :boom:.
+:material-page-last: As I’ve grown into this role, I’ve realized how quickly the
+**data engineering landscape evolves**. Just three years ago, I was working with
+MapReduce on **Hadoop HDFS**. Today, the focus has shifted toward in-memory
+processing engines like **Impala** and **Apache Spark**.
+
+The key takeaway? While tools may come and go, the fundamental skills and
+concepts—such as distributed processing, data modeling, and lifecycle management—
+remain invaluable :boom:.
 
 ![The 2023 MAD (ML/AI/DATA) Landscape](img/mad-data-landscape.png){ loading=lazy width="370" align=right }
-
 The right picture, the [**2023 MAD (ML/AI/Data) Landscape** :material-land-plots:](https://mad.firstmark.com/)[^2],
 that show about how many possibility tools that able to use on your project.
 It has many area that you should to choose which one that match with the current
