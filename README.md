@@ -5,6 +5,9 @@
 <img alt="gitleaks badge" src="https://img.shields.io/badge/protected%20by-gitleaks-blue">
 <img alt="gitleaks badge" src="https://img.shields.io/badge/protected%20by-trufflehog-blue">
 
+> [!CAUTION]
+> This project is no longer maintained. I will migrate to use [zensical](https://zensical.org/) instead and change the document propose.
+
 > [!WARNING]
 > This project will deliver about **Data Developer & Engineer Documents and
 > Hands-On** from my experience and reference from public blogs only!!!
